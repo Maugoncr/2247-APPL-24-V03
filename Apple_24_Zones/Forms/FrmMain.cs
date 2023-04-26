@@ -801,7 +801,7 @@ namespace Apple_24_Zones.Forms
 
         private void ResetearChart()
         {
-            if (ZonasSelecionadasChart == 1)
+            if (ZonasSelecionadasChart == 0)
             {
                 ChartMain.Series["TC-1"].Points.Clear(); ChartMain.Series["TC-2"].Points.Clear(); ChartMain.Series["TC-3"].Points.Clear(); ChartMain.Series["TC-4"].Points.Clear(); ChartMain.Series["TC-5"].Points.Clear(); ChartMain.Series["TC-6"].Points.Clear(); ChartMain.Series["TC-7"].Points.Clear(); ChartMain.Series["TC-8"].Points.Clear(); ChartMain.Series["TC-9"].Points.Clear(); ChartMain.Series["TC-10"].Points.Clear(); ChartMain.Series["TC-11"].Points.Clear(); ChartMain.Series["TC-12"].Points.Clear(); ChartMain.Series["TC-13"].Points.Clear(); ChartMain.Series["TC-14"].Points.Clear(); ChartMain.Series["TC-15"].Points.Clear(); ChartMain.Series["TC-16"].Points.Clear(); ChartMain.Series["TC-17"].Points.Clear(); ChartMain.Series["TC-18"].Points.Clear(); ChartMain.Series["TC-19"].Points.Clear(); ChartMain.Series["TC-20"].Points.Clear(); ChartMain.Series["TC-21"].Points.Clear(); ChartMain.Series["TC-22"].Points.Clear(); ChartMain.Series["TC-23"].Points.Clear(); ChartMain.Series["TC-24"].Points.Clear();
             }
