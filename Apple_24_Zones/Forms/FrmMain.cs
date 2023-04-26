@@ -109,8 +109,10 @@ namespace Apple_24_Zones.Forms
             cbZonesMode.SelectedIndex = -1;
 
             ledZ1.Image.Dispose();
+            ledZ2.Image.Dispose();
 
             ledZ1.Image = Properties.Resources.led_off;
+            ledZ2.Image = Properties.Resources.led_off;
 
             // Disable All buttoms
             cbZonesMode.Enabled = false;
@@ -166,7 +168,7 @@ namespace Apple_24_Zones.Forms
             txtSetTemp.ResetText();
             txtTCView1.Clear(); txtTCView2.Clear(); txtTCView3.Clear(); txtTCView4.Clear(); txtTCView5.Clear(); txtTCView6.Clear(); txtTCView7.Clear(); txtTCView8.Clear(); txtTCView9.Clear(); txtTCView10.Clear(); txtTCView11.Clear(); txtTCView12.Clear(); txtTCView13.Clear(); txtTCView14.Clear(); txtTCView15.Clear(); txtTCView16.Clear(); txtTCView17.Clear(); txtTCView18.Clear(); txtTCView19.Clear(); txtTCView20.Clear(); txtTCView21.Clear(); txtTCView22.Clear(); txtTCView23.Clear(); txtTCView24.Clear();
             txtTC1.Clear(); txtTC2.Clear(); txtTC3.Clear(); txtTC4.Clear(); txtTC5.Clear(); txtTC6.Clear(); txtTC7.Clear(); txtTC8.Clear(); txtTC9.Clear(); txtTC10.Clear(); txtTC11.Clear(); txtTC12.Clear(); txtTC13.Clear(); txtTC14.Clear(); txtTC15.Clear(); txtTC16.Clear(); txtTC17.Clear(); txtTC18.Clear(); txtTC19.Clear(); txtTC20.Clear(); txtTC21.Clear(); txtTC22.Clear(); txtTC23.Clear(); txtTC24.Clear();
-            txtSetPointZone1.Clear();
+            txtSetPointZone1.Clear(); txtSetPointZone2.Clear();
 
 
             // Reset variables
@@ -175,9 +177,9 @@ namespace Apple_24_Zones.Forms
             TC1Num = 0; TC2Num = 0; TC3Num = 0; TC4Num = 0; TC5Num = 0; TC6Num = 0; TC7Num = 0; TC8Num = 0; TC9Num = 0; TC10Num = 0; TC11Num = 0; TC12Num = 0; TC13Num = 0; TC14Num = 0; TC15Num = 0; TC16Num = 0; TC17Num = 0; TC18Num = 0; TC19Num = 0; TC20Num = 0; TC21Num = 0; TC22Num = 0; TC23Num = 0; TC24Num = 0;
 
 
-            ZonasSelecionadasChart = 1;
-            ZonasSelecionadasTXT = 1;
-            ZonasSelecionadasSendTCSETPOINT = 1;
+            ZonasSelecionadasChart = 0;
+            ZonasSelecionadasTXT = 0;
+            ZonasSelecionadasSendTCSETPOINT = 0;
             i = false;
 
             led1.Image.Dispose();
@@ -403,11 +405,13 @@ namespace Apple_24_Zones.Forms
                     // Se debe elegir Zona para trabajar / la pongo por defecto en todas
                     cbSelect.Enabled = true;
                     cbZonesMode.Enabled = true;
-                    cbZonesMode.SelectedIndex = 1;
-                    ZonasSelecionadasSendTCSETPOINT = 1;
+                    cbZonesMode.SelectedIndex = 0;
+                    ZonasSelecionadasSendTCSETPOINT = 0;
 
                     ledZ1.Image.Dispose();
                     ledZ1.Image = Properties.Resources.led_on_green;
+                    ledZ2.Image.Dispose();
+                    ledZ2.Image = Properties.Resources.led_on_green;
 
 
                     btnTypeTime.Enabled = true;
@@ -497,11 +501,25 @@ namespace Apple_24_Zones.Forms
             ChartMain.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
             ChartMain.ChartAreas[0].RecalculateAxesScale();
 
-            if (ZonasSelecionadasChart == 1)
+            if (ZonasSelecionadasChart == 0)
             {
                 if (ChartMain.Series["TC-1"].Points.Count >= 100)
                 {
                     ChartMain.Series["TC-1"].Points.RemoveAt(0); ChartMain.Series["TC-2"].Points.RemoveAt(0); ChartMain.Series["TC-3"].Points.RemoveAt(0); ChartMain.Series["TC-4"].Points.RemoveAt(0); ChartMain.Series["TC-5"].Points.RemoveAt(0); ChartMain.Series["TC-6"].Points.RemoveAt(0); ChartMain.Series["TC-7"].Points.RemoveAt(0); ChartMain.Series["TC-8"].Points.RemoveAt(0); ChartMain.Series["TC-9"].Points.RemoveAt(0); ChartMain.Series["TC-10"].Points.RemoveAt(0); ChartMain.Series["TC-11"].Points.RemoveAt(0); ChartMain.Series["TC-12"].Points.RemoveAt(0); ChartMain.Series["TC-13"].Points.RemoveAt(0); ChartMain.Series["TC-14"].Points.RemoveAt(0); ChartMain.Series["TC-15"].Points.RemoveAt(0); ChartMain.Series["TC-16"].Points.RemoveAt(0); ChartMain.Series["TC-17"].Points.RemoveAt(0); ChartMain.Series["TC-18"].Points.RemoveAt(0); ChartMain.Series["TC-19"].Points.RemoveAt(0); ChartMain.Series["TC-20"].Points.RemoveAt(0); ChartMain.Series["TC-21"].Points.RemoveAt(0); ChartMain.Series["TC-22"].Points.RemoveAt(0); ChartMain.Series["TC-23"].Points.RemoveAt(0); ChartMain.Series["TC-24"].Points.RemoveAt(0);
+                }
+            }
+            else if (ZonasSelecionadasChart == 1)
+            {
+                if (ChartMain.Series["TC-1"].Points.Count >= 100)
+                {
+                    ChartMain.Series["TC-1"].Points.RemoveAt(0); ChartMain.Series["TC-2"].Points.RemoveAt(0); ChartMain.Series["TC-3"].Points.RemoveAt(0); ChartMain.Series["TC-4"].Points.RemoveAt(0); ChartMain.Series["TC-5"].Points.RemoveAt(0); ChartMain.Series["TC-6"].Points.RemoveAt(0); ChartMain.Series["TC-7"].Points.RemoveAt(0); ChartMain.Series["TC-8"].Points.RemoveAt(0); ChartMain.Series["TC-9"].Points.RemoveAt(0); ChartMain.Series["TC-10"].Points.RemoveAt(0); ChartMain.Series["TC-11"].Points.RemoveAt(0); ChartMain.Series["TC-12"].Points.RemoveAt(0);
+                }
+            }
+            else if (ZonasSelecionadasChart == 2)
+            {
+                if (ChartMain.Series["TC-13"].Points.Count >= 100)
+                {
+                    ChartMain.Series["TC-13"].Points.RemoveAt(0); ChartMain.Series["TC-14"].Points.RemoveAt(0); ChartMain.Series["TC-15"].Points.RemoveAt(0); ChartMain.Series["TC-16"].Points.RemoveAt(0); ChartMain.Series["TC-17"].Points.RemoveAt(0); ChartMain.Series["TC-18"].Points.RemoveAt(0); ChartMain.Series["TC-19"].Points.RemoveAt(0); ChartMain.Series["TC-20"].Points.RemoveAt(0); ChartMain.Series["TC-21"].Points.RemoveAt(0); ChartMain.Series["TC-22"].Points.RemoveAt(0); ChartMain.Series["TC-23"].Points.RemoveAt(0); ChartMain.Series["TC-24"].Points.RemoveAt(0);
                 }
             }
 
@@ -509,8 +527,8 @@ namespace Apple_24_Zones.Forms
 
         double tiempo = 0;
         //ZonasSeleccionadas 0 = Todas 1 = Zona 1 2 = Zona 2 3 = Zona 3 4 = Zona 4
-        int ZonasSelecionadasChart = 1;
-        int ZonasSelecionadasTXT = 1;
+        int ZonasSelecionadasChart = 0;
+        int ZonasSelecionadasTXT = 0;
         int ZonasSelecionadasSendTCSETPOINT = 0;
 
         private void GraficarChart()
@@ -520,17 +538,33 @@ namespace Apple_24_Zones.Forms
             if (TimeEnSegundosChart)
             {
                 double temp = tiempo / 1000;
-                if (ZonasSelecionadasChart == 1)
+                if (ZonasSelecionadasChart == 0)
                 {
                     ChartMain.Series["TC-1"].Points.AddXY(temp.ToString(), TC1Num.ToString()); ChartMain.Series["TC-2"].Points.AddXY(temp.ToString(), TC2Num.ToString()); ChartMain.Series["TC-3"].Points.AddXY(temp.ToString(), TC3Num.ToString()); ChartMain.Series["TC-4"].Points.AddXY(temp.ToString(), TC4Num.ToString()); ChartMain.Series["TC-5"].Points.AddXY(temp.ToString(), TC5Num.ToString()); ChartMain.Series["TC-6"].Points.AddXY(temp.ToString(), TC6Num.ToString()); ChartMain.Series["TC-7"].Points.AddXY(temp.ToString(), TC7Num.ToString()); ChartMain.Series["TC-8"].Points.AddXY(temp.ToString(), TC8Num.ToString()); ChartMain.Series["TC-9"].Points.AddXY(temp.ToString(), TC9Num.ToString()); ChartMain.Series["TC-10"].Points.AddXY(temp.ToString(), TC10Num.ToString()); ChartMain.Series["TC-11"].Points.AddXY(temp.ToString(), TC11Num.ToString()); ChartMain.Series["TC-12"].Points.AddXY(temp.ToString(), TC12Num.ToString()); ChartMain.Series["TC-13"].Points.AddXY(temp.ToString(), TC13Num.ToString()); ChartMain.Series["TC-14"].Points.AddXY(temp.ToString(), TC14Num.ToString()); ChartMain.Series["TC-15"].Points.AddXY(temp.ToString(), TC15Num.ToString()); ChartMain.Series["TC-16"].Points.AddXY(temp.ToString(), TC16Num.ToString()); ChartMain.Series["TC-17"].Points.AddXY(temp.ToString(), TC17Num.ToString()); ChartMain.Series["TC-18"].Points.AddXY(temp.ToString(), TC18Num.ToString()); ChartMain.Series["TC-19"].Points.AddXY(temp.ToString(), TC19Num.ToString()); ChartMain.Series["TC-20"].Points.AddXY(temp.ToString(), TC20Num.ToString()); ChartMain.Series["TC-21"].Points.AddXY(temp.ToString(), TC21Num.ToString()); ChartMain.Series["TC-22"].Points.AddXY(temp.ToString(), TC22Num.ToString()); ChartMain.Series["TC-23"].Points.AddXY(temp.ToString(), TC23Num.ToString()); ChartMain.Series["TC-24"].Points.AddXY(temp.ToString(), TC24Num.ToString());
+                }
+                else if (ZonasSelecionadasChart == 1)
+                {
+                    ChartMain.Series["TC-1"].Points.AddXY(temp.ToString(), TC1Num.ToString()); ChartMain.Series["TC-2"].Points.AddXY(temp.ToString(), TC2Num.ToString()); ChartMain.Series["TC-3"].Points.AddXY(temp.ToString(), TC3Num.ToString()); ChartMain.Series["TC-4"].Points.AddXY(temp.ToString(), TC4Num.ToString()); ChartMain.Series["TC-5"].Points.AddXY(temp.ToString(), TC5Num.ToString()); ChartMain.Series["TC-6"].Points.AddXY(temp.ToString(), TC6Num.ToString()); ChartMain.Series["TC-7"].Points.AddXY(temp.ToString(), TC7Num.ToString()); ChartMain.Series["TC-8"].Points.AddXY(temp.ToString(), TC8Num.ToString()); ChartMain.Series["TC-9"].Points.AddXY(temp.ToString(), TC9Num.ToString()); ChartMain.Series["TC-10"].Points.AddXY(temp.ToString(), TC10Num.ToString()); ChartMain.Series["TC-11"].Points.AddXY(temp.ToString(), TC11Num.ToString()); ChartMain.Series["TC-12"].Points.AddXY(temp.ToString(), TC12Num.ToString());
+                }
+                else if (ZonasSelecionadasChart == 2)
+                {
+                    ChartMain.Series["TC-13"].Points.AddXY(temp.ToString(), TC13Num.ToString()); ChartMain.Series["TC-14"].Points.AddXY(temp.ToString(), TC14Num.ToString()); ChartMain.Series["TC-15"].Points.AddXY(temp.ToString(), TC15Num.ToString()); ChartMain.Series["TC-16"].Points.AddXY(temp.ToString(), TC16Num.ToString()); ChartMain.Series["TC-17"].Points.AddXY(temp.ToString(), TC17Num.ToString()); ChartMain.Series["TC-18"].Points.AddXY(temp.ToString(), TC18Num.ToString()); ChartMain.Series["TC-19"].Points.AddXY(temp.ToString(), TC19Num.ToString()); ChartMain.Series["TC-20"].Points.AddXY(temp.ToString(), TC20Num.ToString()); ChartMain.Series["TC-21"].Points.AddXY(temp.ToString(), TC21Num.ToString()); ChartMain.Series["TC-22"].Points.AddXY(temp.ToString(), TC22Num.ToString()); ChartMain.Series["TC-23"].Points.AddXY(temp.ToString(), TC23Num.ToString()); ChartMain.Series["TC-24"].Points.AddXY(temp.ToString(), TC24Num.ToString());
                 }
             }
             else
             {
                 string HoraMinSeg = DateTime.Now.ToString("hh:mm:ss");
-                if (ZonasSelecionadasChart == 1)
+                if (ZonasSelecionadasChart == 0)
                 {
                     ChartMain.Series["TC-1"].Points.AddXY(HoraMinSeg.ToString(), TC1Num.ToString()); ChartMain.Series["TC-2"].Points.AddXY(HoraMinSeg.ToString(), TC2Num.ToString()); ChartMain.Series["TC-3"].Points.AddXY(HoraMinSeg.ToString(), TC3Num.ToString()); ChartMain.Series["TC-4"].Points.AddXY(HoraMinSeg.ToString(), TC4Num.ToString()); ChartMain.Series["TC-5"].Points.AddXY(HoraMinSeg.ToString(), TC5Num.ToString()); ChartMain.Series["TC-6"].Points.AddXY(HoraMinSeg.ToString(), TC6Num.ToString()); ChartMain.Series["TC-7"].Points.AddXY(HoraMinSeg.ToString(), TC7Num.ToString()); ChartMain.Series["TC-8"].Points.AddXY(HoraMinSeg.ToString(), TC8Num.ToString()); ChartMain.Series["TC-9"].Points.AddXY(HoraMinSeg.ToString(), TC9Num.ToString()); ChartMain.Series["TC-10"].Points.AddXY(HoraMinSeg.ToString(), TC10Num.ToString()); ChartMain.Series["TC-11"].Points.AddXY(HoraMinSeg.ToString(), TC11Num.ToString()); ChartMain.Series["TC-12"].Points.AddXY(HoraMinSeg.ToString(), TC12Num.ToString()); ChartMain.Series["TC-13"].Points.AddXY(HoraMinSeg.ToString(), TC13Num.ToString()); ChartMain.Series["TC-14"].Points.AddXY(HoraMinSeg.ToString(), TC14Num.ToString()); ChartMain.Series["TC-15"].Points.AddXY(HoraMinSeg.ToString(), TC15Num.ToString()); ChartMain.Series["TC-16"].Points.AddXY(HoraMinSeg.ToString(), TC16Num.ToString()); ChartMain.Series["TC-17"].Points.AddXY(HoraMinSeg.ToString(), TC17Num.ToString()); ChartMain.Series["TC-18"].Points.AddXY(HoraMinSeg.ToString(), TC18Num.ToString()); ChartMain.Series["TC-19"].Points.AddXY(HoraMinSeg.ToString(), TC19Num.ToString()); ChartMain.Series["TC-20"].Points.AddXY(HoraMinSeg.ToString(), TC20Num.ToString()); ChartMain.Series["TC-21"].Points.AddXY(HoraMinSeg.ToString(), TC21Num.ToString()); ChartMain.Series["TC-22"].Points.AddXY(HoraMinSeg.ToString(), TC22Num.ToString()); ChartMain.Series["TC-23"].Points.AddXY(HoraMinSeg.ToString(), TC23Num.ToString()); ChartMain.Series["TC-24"].Points.AddXY(HoraMinSeg.ToString(), TC24Num.ToString());
+                }
+                else if (ZonasSelecionadasChart == 1)
+                {
+                    ChartMain.Series["TC-1"].Points.AddXY(HoraMinSeg.ToString(), TC1Num.ToString()); ChartMain.Series["TC-2"].Points.AddXY(HoraMinSeg.ToString(), TC2Num.ToString()); ChartMain.Series["TC-3"].Points.AddXY(HoraMinSeg.ToString(), TC3Num.ToString()); ChartMain.Series["TC-4"].Points.AddXY(HoraMinSeg.ToString(), TC4Num.ToString()); ChartMain.Series["TC-5"].Points.AddXY(HoraMinSeg.ToString(), TC5Num.ToString()); ChartMain.Series["TC-6"].Points.AddXY(HoraMinSeg.ToString(), TC6Num.ToString()); ChartMain.Series["TC-7"].Points.AddXY(HoraMinSeg.ToString(), TC7Num.ToString()); ChartMain.Series["TC-8"].Points.AddXY(HoraMinSeg.ToString(), TC8Num.ToString()); ChartMain.Series["TC-9"].Points.AddXY(HoraMinSeg.ToString(), TC9Num.ToString()); ChartMain.Series["TC-10"].Points.AddXY(HoraMinSeg.ToString(), TC10Num.ToString()); ChartMain.Series["TC-11"].Points.AddXY(HoraMinSeg.ToString(), TC11Num.ToString()); ChartMain.Series["TC-12"].Points.AddXY(HoraMinSeg.ToString(), TC12Num.ToString());
+                }
+                else if (ZonasSelecionadasChart == 2)
+                {
+                    ChartMain.Series["TC-13"].Points.AddXY(HoraMinSeg.ToString(), TC13Num.ToString()); ChartMain.Series["TC-14"].Points.AddXY(HoraMinSeg.ToString(), TC14Num.ToString()); ChartMain.Series["TC-15"].Points.AddXY(HoraMinSeg.ToString(), TC15Num.ToString()); ChartMain.Series["TC-16"].Points.AddXY(HoraMinSeg.ToString(), TC16Num.ToString()); ChartMain.Series["TC-17"].Points.AddXY(HoraMinSeg.ToString(), TC17Num.ToString()); ChartMain.Series["TC-18"].Points.AddXY(HoraMinSeg.ToString(), TC18Num.ToString()); ChartMain.Series["TC-19"].Points.AddXY(HoraMinSeg.ToString(), TC19Num.ToString()); ChartMain.Series["TC-20"].Points.AddXY(HoraMinSeg.ToString(), TC20Num.ToString()); ChartMain.Series["TC-21"].Points.AddXY(HoraMinSeg.ToString(), TC21Num.ToString()); ChartMain.Series["TC-22"].Points.AddXY(HoraMinSeg.ToString(), TC22Num.ToString()); ChartMain.Series["TC-23"].Points.AddXY(HoraMinSeg.ToString(), TC23Num.ToString()); ChartMain.Series["TC-24"].Points.AddXY(HoraMinSeg.ToString(), TC24Num.ToString());
                 }
             }
         }
@@ -600,7 +634,20 @@ namespace Apple_24_Zones.Forms
 
         private void btnSetTemperature_Click(object sender, EventArgs e)
         {
-            txtSetPointZone1.Text = txtSetTemp.Value.ToString();
+            if (ZonasSelecionadasSendTCSETPOINT == 0)
+            {
+                txtSetPointZone1.Text = txtSetTemp.Value.ToString();
+                txtSetPointZone2.Text = txtSetTemp.Value.ToString();
+            }
+            else if (ZonasSelecionadasSendTCSETPOINT == 1)
+            {
+                txtSetPointZone1.Text = txtSetTemp.Value.ToString();
+            }
+            else if (ZonasSelecionadasSendTCSETPOINT == 2)
+            {
+                txtSetPointZone2.Text = txtSetTemp.Value.ToString();
+            }
+            
         }
 
         private void btnStartStopChart_Click(object sender, EventArgs e)
@@ -798,6 +845,35 @@ namespace Apple_24_Zones.Forms
             //t.Start();
         }
 
-        
+        private void cbZonesMode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbZonesMode.SelectedIndex == 0)
+            {
+                ledZ1.Image.Dispose();
+                ledZ2.Image.Dispose();
+                ledZ1.Image = Properties.Resources.led_on_green;
+                ledZ2.Image = Properties.Resources.led_on_green;
+                ZonasSelecionadasSendTCSETPOINT = 0;
+
+            }
+            else if (cbZonesMode.SelectedIndex == 1)
+            {
+                ledZ1.Image.Dispose();
+                ledZ2.Image.Dispose();
+                ledZ1.Image = Properties.Resources.led_on_green;
+                ledZ2.Image = Properties.Resources.led_off;
+                ZonasSelecionadasSendTCSETPOINT = 1;
+
+            }
+            else if (cbZonesMode.SelectedIndex == 2)
+            {
+                ledZ1.Image.Dispose();
+                ledZ2.Image.Dispose();
+                ledZ1.Image = Properties.Resources.led_off;
+                ledZ2.Image = Properties.Resources.led_on_green;
+                ZonasSelecionadasSendTCSETPOINT = 2;
+
+            }
+        }
     }
 }
