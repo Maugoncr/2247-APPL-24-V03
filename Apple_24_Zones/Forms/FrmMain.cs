@@ -251,7 +251,7 @@ namespace Apple_24_Zones.Forms
             panelSubMenu3.Visible = true;
             panelSubMenu4.Visible = true;
             panelSubMenu5.Visible = true;
-            panelSubMenu6.Visible = true;
+           // panelSubMenu6.Visible = true;
             btnDownUpMenu.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleUp;
         }
 
@@ -262,7 +262,7 @@ namespace Apple_24_Zones.Forms
             panelSubMenu3.Visible = false;
             panelSubMenu4.Visible = false;
             panelSubMenu5.Visible = false;
-            panelSubMenu6.Visible = false;
+           // panelSubMenu6.Visible = false;
             btnDownUpMenu.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleDown;
         }
 
@@ -419,6 +419,33 @@ namespace Apple_24_Zones.Forms
                     btnStartStopChart.Enabled = true;
                     btnChartMode.Enabled = true;
                     btnRecordDataChart.Enabled = true;
+
+
+                    //ChartMain.ChartAreas.Clear();
+
+                    btnTypeTime.Visible = false;
+                    btnClearChart.Visible = false;
+                    btnStartStopChart.Visible = false;
+                    btnChartMode.Visible = false;
+                    btnRecordDataChart.Visible = false;
+
+                    picGREEN.Dispose();
+                    picYELLOW.Dispose();
+                    picRED.Dispose();
+
+                    lbRecord.Visible = false;
+                    lbCharMode.Visible = false;
+                    label32.Visible = false;
+
+                    ChartMain.ChartAreas[0].AxisX.Minimum = 0;
+                    ChartMain.Series["TC-1"].Points.AddXY(0, 20);
+                    ChartMain.Series["TC-1"].Points.AddXY(1, 21);
+                    ChartMain.Series["TC-1"].Points.AddXY(2, 23);
+                    ChartMain.Series["TC-1"].Points.AddXY(3, 23);
+                    ChartMain.Series["TC-1"].Points.AddXY(4, 21);
+                    ChartMain.Series["TC-1"].Points.AddXY(5, 24);
+                    ChartMain.Series["TC-1"].Points.AddXY(6, 20);
+
 
                 }
             }
@@ -828,13 +855,13 @@ namespace Apple_24_Zones.Forms
             {
                 btnOnOff.Text = "         Turn Off";
                 btnReportes.Text = "Status: " + "ON";
-                btnOnOff.IconColor = Color.Red;
+                btnOnOff.IconColor = Color.White;
             }
             else if (btnOnOff.Text.Trim() == "Turn Off")
             {
                 btnOnOff.Text = "         Turn On";
                 btnReportes.Text = "Status: OFF";
-                btnOnOff.IconColor = Color.LightGreen;
+                btnOnOff.IconColor = Color.White;
             }
         }
 
@@ -874,6 +901,16 @@ namespace Apple_24_Zones.Forms
                 ZonasSelecionadasSendTCSETPOINT = 2;
 
             }
+        }
+
+        private void btnRefreshCOM_Click(object sender, EventArgs e)
+        {
+            cbSelect.SelectedIndex = -1;
+            btnConnectCOM.Enabled = false;
+            cbCOMSelect.Enabled = true;
+            string[] ports = SerialPort.GetPortNames();
+            cbCOMSelect.Items.Clear();
+            cbCOMSelect.Items.AddRange(ports);
         }
     }
 }
