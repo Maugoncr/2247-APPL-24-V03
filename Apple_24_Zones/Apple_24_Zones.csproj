@@ -54,6 +54,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FrmFilterCSVFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFilterCSVFile.Designer.cs">
+      <DependentUpon>FrmFilterCSVFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmFilterCSVFile.resx">
+      <DependentUpon>FrmFilterCSVFile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>

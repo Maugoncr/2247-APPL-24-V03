@@ -29,66 +29,56 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series25 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series76 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series77 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series78 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series79 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series80 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series81 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series82 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series83 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series84 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series85 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series86 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series87 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series88 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series89 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series90 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series91 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series92 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series93 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series94 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series95 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series96 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series97 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series98 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series99 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series100 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.btnDownUpMenu = new FontAwesome.Sharp.IconButton();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panelSubMenu6 = new System.Windows.Forms.Panel();
             this.cbSelectViewChartZone = new System.Windows.Forms.ComboBox();
             this.label105 = new System.Windows.Forms.Label();
             this.label104 = new System.Windows.Forms.Label();
             this.cbSelectViewZone = new System.Windows.Forms.ComboBox();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.btnGestionArchivos = new FontAwesome.Sharp.IconButton();
             this.panelSubMenu5 = new System.Windows.Forms.Panel();
-            this.btnOnOff = new FontAwesome.Sharp.IconButton();
-            this.btnReportes = new FontAwesome.Sharp.IconButton();
             this.panelSubMenu4 = new System.Windows.Forms.Panel();
             this.txtSetTemp = new System.Windows.Forms.NumericUpDown();
-            this.btnSetTemperature = new FontAwesome.Sharp.IconButton();
-            this.btnMantenimientos = new FontAwesome.Sharp.IconButton();
             this.panelSubMenu3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.led1 = new System.Windows.Forms.PictureBox();
-            this.led2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbSelect = new System.Windows.Forms.ComboBox();
-            this.btnRegistro = new FontAwesome.Sharp.IconButton();
             this.panelSubMenu2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.cbZonesMode = new System.Windows.Forms.ComboBox();
-            this.btnInformacion = new FontAwesome.Sharp.IconButton();
             this.panelSubMenuGestion = new System.Windows.Forms.Panel();
-            this.btnRefreshCOM = new FontAwesome.Sharp.IconButton();
-            this.btnConnectCOM = new FontAwesome.Sharp.IconButton();
-            this.cbCOMSelect = new System.Windows.Forms.ComboBox();
-            this.btnGestiones = new FontAwesome.Sharp.IconButton();
+            this.cbCOMSelect2 = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.cbCOMSelect1 = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -149,18 +139,9 @@
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
             this.ChartMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.btnTypeTime = new FontAwesome.Sharp.IconButton();
-            this.btnClearChart = new FontAwesome.Sharp.IconButton();
             this.lbRecord = new System.Windows.Forms.Label();
-            this.btnRecordDataChart = new FontAwesome.Sharp.IconButton();
             this.lbCharMode = new System.Windows.Forms.Label();
-            this.btnChartMode = new FontAwesome.Sharp.IconButton();
             this.label32 = new System.Windows.Forms.Label();
-            this.btnStartStopChart = new FontAwesome.Sharp.IconButton();
-            this.btnEMO = new System.Windows.Forms.PictureBox();
-            this.picRED = new System.Windows.Forms.PictureBox();
-            this.picYELLOW = new System.Windows.Forms.PictureBox();
-            this.picGREEN = new System.Windows.Forms.PictureBox();
             this.TimerHoraFecha = new System.Windows.Forms.Timer(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timerRequestData = new System.Windows.Forms.Timer(this.components);
@@ -168,10 +149,8 @@
             this.panelZone1 = new System.Windows.Forms.Panel();
             this.lbDivisor = new System.Windows.Forms.Label();
             this.txtSetPointZone2 = new System.Windows.Forms.TextBox();
-            this.ledZ2 = new System.Windows.Forms.PictureBox();
             this.label30 = new System.Windows.Forms.Label();
             this.txtSetPointZone1 = new System.Windows.Forms.TextBox();
-            this.ledZ1 = new System.Windows.Forms.PictureBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -223,15 +202,42 @@
             this.lbZone1 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
+            this.ledZ2 = new System.Windows.Forms.PictureBox();
+            this.ledZ1 = new System.Windows.Forms.PictureBox();
+            this.btnEMO = new System.Windows.Forms.PictureBox();
+            this.btnTypeTime = new FontAwesome.Sharp.IconButton();
+            this.btnClearChart = new FontAwesome.Sharp.IconButton();
+            this.btnRecordDataChart = new FontAwesome.Sharp.IconButton();
+            this.btnChartMode = new FontAwesome.Sharp.IconButton();
+            this.btnStartStopChart = new FontAwesome.Sharp.IconButton();
+            this.btnDownUpMenu = new FontAwesome.Sharp.IconButton();
+            this.picGREEN = new System.Windows.Forms.PictureBox();
+            this.picYELLOW = new System.Windows.Forms.PictureBox();
+            this.picRED = new System.Windows.Forms.PictureBox();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.btnGestionArchivos = new FontAwesome.Sharp.IconButton();
+            this.btnOnOff = new FontAwesome.Sharp.IconButton();
+            this.btnReportes = new FontAwesome.Sharp.IconButton();
+            this.btnSetTemperature = new FontAwesome.Sharp.IconButton();
+            this.btnMantenimientos = new FontAwesome.Sharp.IconButton();
+            this.led1 = new System.Windows.Forms.PictureBox();
+            this.led2 = new System.Windows.Forms.PictureBox();
+            this.btnRegistro = new FontAwesome.Sharp.IconButton();
+            this.btnInformacion = new FontAwesome.Sharp.IconButton();
+            this.btnRefreshCOM2 = new FontAwesome.Sharp.IconButton();
+            this.btnConnectCOM2 = new FontAwesome.Sharp.IconButton();
+            this.btnRefreshCOM1 = new FontAwesome.Sharp.IconButton();
+            this.btnConnectCOM1 = new FontAwesome.Sharp.IconButton();
+            this.btnGestiones = new FontAwesome.Sharp.IconButton();
+            this.btnCSVFileFilter = new FontAwesome.Sharp.IconButton();
             this.panelSideMenu.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panelSubMenu6.SuspendLayout();
             this.panelSubMenu5.SuspendLayout();
             this.panelSubMenu4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSetTemp)).BeginInit();
             this.panelSubMenu3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.led1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led2)).BeginInit();
             this.panelSubMenu2.SuspendLayout();
             this.panelSubMenuGestion.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -241,19 +247,22 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChartMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEMO)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRED)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picYELLOW)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGREEN)).BeginInit();
             this.panelZone1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ledZ2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledZ1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEMO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGREEN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picYELLOW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRED)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
             // 
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
             this.panelSideMenu.Controls.Add(this.btnDownUpMenu);
+            this.panelSideMenu.Controls.Add(this.panel7);
             this.panelSideMenu.Controls.Add(this.panelSubMenu6);
             this.panelSideMenu.Controls.Add(this.btnClose);
             this.panelSideMenu.Controls.Add(this.btnGestionArchivos);
@@ -274,24 +283,17 @@
             this.panelSideMenu.Size = new System.Drawing.Size(250, 1080);
             this.panelSideMenu.TabIndex = 200;
             // 
-            // btnDownUpMenu
+            // panel7
             // 
-            this.btnDownUpMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDownUpMenu.FlatAppearance.BorderSize = 0;
-            this.btnDownUpMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDownUpMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDownUpMenu.ForeColor = System.Drawing.Color.White;
-            this.btnDownUpMenu.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleDown;
-            this.btnDownUpMenu.IconColor = System.Drawing.Color.White;
-            this.btnDownUpMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDownUpMenu.IconSize = 25;
-            this.btnDownUpMenu.Location = new System.Drawing.Point(0, 816);
-            this.btnDownUpMenu.Name = "btnDownUpMenu";
-            this.btnDownUpMenu.Size = new System.Drawing.Size(250, 29);
-            this.btnDownUpMenu.TabIndex = 177;
-            this.btnDownUpMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDownUpMenu.UseVisualStyleBackColor = true;
-            this.btnDownUpMenu.Click += new System.EventHandler(this.btnDownUpMenu_Click);
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.panel7.Controls.Add(this.picGREEN);
+            this.panel7.Controls.Add(this.picYELLOW);
+            this.panel7.Controls.Add(this.picRED);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 975);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(250, 41);
+            this.panel7.TabIndex = 178;
             // 
             // panelSubMenu6
             // 
@@ -301,7 +303,7 @@
             this.panelSubMenu6.Controls.Add(this.label104);
             this.panelSubMenu6.Controls.Add(this.cbSelectViewZone);
             this.panelSubMenu6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenu6.Location = new System.Drawing.Point(0, 702);
+            this.panelSubMenu6.Location = new System.Drawing.Point(0, 861);
             this.panelSubMenu6.Name = "panelSubMenu6";
             this.panelSubMenu6.Size = new System.Drawing.Size(250, 114);
             this.panelSubMenu6.TabIndex = 14;
@@ -364,94 +366,15 @@
             this.cbSelectViewZone.Size = new System.Drawing.Size(250, 26);
             this.cbSelectViewZone.TabIndex = 110;
             // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 30;
-            this.btnClose.Location = new System.Drawing.Point(0, 1036);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 44);
-            this.btnClose.TabIndex = 176;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnGestionArchivos
-            // 
-            this.btnGestionArchivos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGestionArchivos.FlatAppearance.BorderSize = 0;
-            this.btnGestionArchivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGestionArchivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionArchivos.ForeColor = System.Drawing.Color.White;
-            this.btnGestionArchivos.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnGestionArchivos.IconColor = System.Drawing.Color.Black;
-            this.btnGestionArchivos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGestionArchivos.Location = new System.Drawing.Point(0, 657);
-            this.btnGestionArchivos.Name = "btnGestionArchivos";
-            this.btnGestionArchivos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnGestionArchivos.Size = new System.Drawing.Size(250, 45);
-            this.btnGestionArchivos.TabIndex = 13;
-            this.btnGestionArchivos.Text = "View Options";
-            this.btnGestionArchivos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionArchivos.UseVisualStyleBackColor = true;
-            this.btnGestionArchivos.Visible = false;
-            this.btnGestionArchivos.Click += new System.EventHandler(this.btnGestionArchivos_Click);
-            // 
             // panelSubMenu5
             // 
             this.panelSubMenu5.BackColor = System.Drawing.Color.SteelBlue;
             this.panelSubMenu5.Controls.Add(this.btnOnOff);
             this.panelSubMenu5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenu5.Location = new System.Drawing.Point(0, 600);
+            this.panelSubMenu5.Location = new System.Drawing.Point(0, 759);
             this.panelSubMenu5.Name = "panelSubMenu5";
             this.panelSubMenu5.Size = new System.Drawing.Size(250, 57);
             this.panelSubMenu5.TabIndex = 12;
-            // 
-            // btnOnOff
-            // 
-            this.btnOnOff.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOnOff.FlatAppearance.BorderSize = 0;
-            this.btnOnOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOnOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOnOff.ForeColor = System.Drawing.Color.White;
-            this.btnOnOff.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.btnOnOff.IconColor = System.Drawing.Color.White;
-            this.btnOnOff.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnOnOff.IconSize = 30;
-            this.btnOnOff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOnOff.Location = new System.Drawing.Point(0, 0);
-            this.btnOnOff.Name = "btnOnOff";
-            this.btnOnOff.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btnOnOff.Size = new System.Drawing.Size(250, 41);
-            this.btnOnOff.TabIndex = 0;
-            this.btnOnOff.Text = "         Turn On";
-            this.btnOnOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOnOff.UseVisualStyleBackColor = true;
-            this.btnOnOff.Click += new System.EventHandler(this.btnOnOff_Click);
-            // 
-            // btnReportes
-            // 
-            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnReportes.IconColor = System.Drawing.Color.Black;
-            this.btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReportes.Location = new System.Drawing.Point(0, 555);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnReportes.Size = new System.Drawing.Size(250, 45);
-            this.btnReportes.TabIndex = 11;
-            this.btnReportes.Text = "Status: OFF";
-            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // panelSubMenu4
             // 
@@ -459,7 +382,7 @@
             this.panelSubMenu4.Controls.Add(this.txtSetTemp);
             this.panelSubMenu4.Controls.Add(this.btnSetTemperature);
             this.panelSubMenu4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenu4.Location = new System.Drawing.Point(0, 475);
+            this.panelSubMenu4.Location = new System.Drawing.Point(0, 634);
             this.panelSubMenu4.Name = "panelSubMenu4";
             this.panelSubMenu4.Size = new System.Drawing.Size(250, 80);
             this.panelSubMenu4.TabIndex = 10;
@@ -477,55 +400,13 @@
             this.txtSetTemp.TabIndex = 2;
             this.txtSetTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnSetTemperature
-            // 
-            this.btnSetTemperature.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSetTemperature.FlatAppearance.BorderSize = 0;
-            this.btnSetTemperature.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetTemperature.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetTemperature.ForeColor = System.Drawing.Color.White;
-            this.btnSetTemperature.IconChar = FontAwesome.Sharp.IconChar.CheckSquare;
-            this.btnSetTemperature.IconColor = System.Drawing.Color.White;
-            this.btnSetTemperature.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSetTemperature.IconSize = 32;
-            this.btnSetTemperature.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetTemperature.Location = new System.Drawing.Point(0, 35);
-            this.btnSetTemperature.Name = "btnSetTemperature";
-            this.btnSetTemperature.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.btnSetTemperature.Size = new System.Drawing.Size(250, 45);
-            this.btnSetTemperature.TabIndex = 1;
-            this.btnSetTemperature.Text = "        Set";
-            this.btnSetTemperature.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetTemperature.UseVisualStyleBackColor = true;
-            this.btnSetTemperature.Click += new System.EventHandler(this.btnSetTemperature_Click);
-            // 
-            // btnMantenimientos
-            // 
-            this.btnMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMantenimientos.FlatAppearance.BorderSize = 0;
-            this.btnMantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantenimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMantenimientos.ForeColor = System.Drawing.Color.White;
-            this.btnMantenimientos.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnMantenimientos.IconColor = System.Drawing.Color.Black;
-            this.btnMantenimientos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMantenimientos.Location = new System.Drawing.Point(0, 430);
-            this.btnMantenimientos.Name = "btnMantenimientos";
-            this.btnMantenimientos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMantenimientos.Size = new System.Drawing.Size(250, 45);
-            this.btnMantenimientos.TabIndex = 9;
-            this.btnMantenimientos.Text = "Set Temperature";
-            this.btnMantenimientos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimientos.UseVisualStyleBackColor = true;
-            this.btnMantenimientos.Click += new System.EventHandler(this.btnMantenimientos_Click);
-            // 
             // panelSubMenu3
             // 
             this.panelSubMenu3.BackColor = System.Drawing.Color.SteelBlue;
             this.panelSubMenu3.Controls.Add(this.panel2);
             this.panelSubMenu3.Controls.Add(this.cbSelect);
             this.panelSubMenu3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenu3.Location = new System.Drawing.Point(0, 363);
+            this.panelSubMenu3.Location = new System.Drawing.Point(0, 522);
             this.panelSubMenu3.Name = "panelSubMenu3";
             this.panelSubMenu3.Size = new System.Drawing.Size(250, 67);
             this.panelSubMenu3.TabIndex = 8;
@@ -555,28 +436,6 @@
             this.label1.Size = new System.Drawing.Size(71, 28);
             this.label1.TabIndex = 178;
             this.label1.Text = "Cooling";
-            // 
-            // led1
-            // 
-            this.led1.BackColor = System.Drawing.Color.Transparent;
-            this.led1.Image = global::Apple_24_Zones.Properties.Resources.led_off;
-            this.led1.Location = new System.Drawing.Point(77, 6);
-            this.led1.Name = "led1";
-            this.led1.Size = new System.Drawing.Size(26, 26);
-            this.led1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.led1.TabIndex = 180;
-            this.led1.TabStop = false;
-            // 
-            // led2
-            // 
-            this.led2.BackColor = System.Drawing.Color.Transparent;
-            this.led2.Image = global::Apple_24_Zones.Properties.Resources.led_off;
-            this.led2.Location = new System.Drawing.Point(172, 6);
-            this.led2.Name = "led2";
-            this.led2.Size = new System.Drawing.Size(26, 26);
-            this.led2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.led2.TabIndex = 181;
-            this.led2.TabStop = false;
             // 
             // label2
             // 
@@ -609,33 +468,13 @@
             this.cbSelect.TabIndex = 111;
             this.cbSelect.SelectionChangeCommitted += new System.EventHandler(this.cbSelect_SelectionChangeCommitted);
             // 
-            // btnRegistro
-            // 
-            this.btnRegistro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRegistro.FlatAppearance.BorderSize = 0;
-            this.btnRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistro.ForeColor = System.Drawing.Color.White;
-            this.btnRegistro.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnRegistro.IconColor = System.Drawing.Color.Black;
-            this.btnRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRegistro.Location = new System.Drawing.Point(0, 318);
-            this.btnRegistro.Name = "btnRegistro";
-            this.btnRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRegistro.Size = new System.Drawing.Size(250, 45);
-            this.btnRegistro.TabIndex = 7;
-            this.btnRegistro.Text = "Action Mode";
-            this.btnRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistro.UseVisualStyleBackColor = true;
-            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
-            // 
             // panelSubMenu2
             // 
             this.panelSubMenu2.BackColor = System.Drawing.Color.SteelBlue;
             this.panelSubMenu2.Controls.Add(this.label5);
             this.panelSubMenu2.Controls.Add(this.cbZonesMode);
             this.panelSubMenu2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenu2.Location = new System.Drawing.Point(0, 258);
+            this.panelSubMenu2.Location = new System.Drawing.Point(0, 417);
             this.panelSubMenu2.Name = "panelSubMenu2";
             this.panelSubMenu2.Size = new System.Drawing.Size(250, 60);
             this.panelSubMenu2.TabIndex = 6;
@@ -672,114 +511,73 @@
             this.cbZonesMode.TabIndex = 110;
             this.cbZonesMode.SelectedIndexChanged += new System.EventHandler(this.cbZonesMode_SelectedIndexChanged);
             // 
-            // btnInformacion
-            // 
-            this.btnInformacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInformacion.FlatAppearance.BorderSize = 0;
-            this.btnInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInformacion.ForeColor = System.Drawing.Color.White;
-            this.btnInformacion.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnInformacion.IconColor = System.Drawing.Color.Black;
-            this.btnInformacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInformacion.Location = new System.Drawing.Point(0, 213);
-            this.btnInformacion.Name = "btnInformacion";
-            this.btnInformacion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnInformacion.Size = new System.Drawing.Size(250, 45);
-            this.btnInformacion.TabIndex = 5;
-            this.btnInformacion.Text = "Zones mode";
-            this.btnInformacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInformacion.UseVisualStyleBackColor = true;
-            this.btnInformacion.Click += new System.EventHandler(this.btnInformacion_Click);
-            // 
             // panelSubMenuGestion
             // 
             this.panelSubMenuGestion.BackColor = System.Drawing.Color.SteelBlue;
-            this.panelSubMenuGestion.Controls.Add(this.btnRefreshCOM);
-            this.panelSubMenuGestion.Controls.Add(this.btnConnectCOM);
-            this.panelSubMenuGestion.Controls.Add(this.cbCOMSelect);
+            this.panelSubMenuGestion.Controls.Add(this.btnRefreshCOM2);
+            this.panelSubMenuGestion.Controls.Add(this.btnConnectCOM2);
+            this.panelSubMenuGestion.Controls.Add(this.cbCOMSelect2);
+            this.panelSubMenuGestion.Controls.Add(this.label35);
+            this.panelSubMenuGestion.Controls.Add(this.btnRefreshCOM1);
+            this.panelSubMenuGestion.Controls.Add(this.btnConnectCOM1);
+            this.panelSubMenuGestion.Controls.Add(this.cbCOMSelect1);
+            this.panelSubMenuGestion.Controls.Add(this.label31);
             this.panelSubMenuGestion.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuGestion.Location = new System.Drawing.Point(0, 99);
             this.panelSubMenuGestion.Name = "panelSubMenuGestion";
-            this.panelSubMenuGestion.Size = new System.Drawing.Size(250, 114);
+            this.panelSubMenuGestion.Size = new System.Drawing.Size(250, 273);
             this.panelSubMenuGestion.TabIndex = 4;
             // 
-            // btnRefreshCOM
+            // cbCOMSelect2
             // 
-            this.btnRefreshCOM.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRefreshCOM.FlatAppearance.BorderSize = 0;
-            this.btnRefreshCOM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefreshCOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshCOM.ForeColor = System.Drawing.Color.White;
-            this.btnRefreshCOM.IconChar = FontAwesome.Sharp.IconChar.Repeat;
-            this.btnRefreshCOM.IconColor = System.Drawing.Color.White;
-            this.btnRefreshCOM.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnRefreshCOM.IconSize = 30;
-            this.btnRefreshCOM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefreshCOM.Location = new System.Drawing.Point(0, 62);
-            this.btnRefreshCOM.Name = "btnRefreshCOM";
-            this.btnRefreshCOM.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btnRefreshCOM.Size = new System.Drawing.Size(250, 36);
-            this.btnRefreshCOM.TabIndex = 110;
-            this.btnRefreshCOM.Text = "          Refresh";
-            this.btnRefreshCOM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefreshCOM.UseVisualStyleBackColor = true;
-            this.btnRefreshCOM.Click += new System.EventHandler(this.btnRefreshCOM_Click);
+            this.cbCOMSelect2.BackColor = System.Drawing.Color.SteelBlue;
+            this.cbCOMSelect2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbCOMSelect2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCOMSelect2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCOMSelect2.ForeColor = System.Drawing.Color.White;
+            this.cbCOMSelect2.FormattingEnabled = true;
+            this.cbCOMSelect2.Location = new System.Drawing.Point(0, 168);
+            this.cbCOMSelect2.Name = "cbCOMSelect2";
+            this.cbCOMSelect2.Size = new System.Drawing.Size(250, 26);
+            this.cbCOMSelect2.TabIndex = 111;
             // 
-            // btnConnectCOM
+            // label35
             // 
-            this.btnConnectCOM.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConnectCOM.FlatAppearance.BorderSize = 0;
-            this.btnConnectCOM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnectCOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnectCOM.ForeColor = System.Drawing.Color.White;
-            this.btnConnectCOM.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
-            this.btnConnectCOM.IconColor = System.Drawing.Color.White;
-            this.btnConnectCOM.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConnectCOM.IconSize = 40;
-            this.btnConnectCOM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnectCOM.Location = new System.Drawing.Point(0, 26);
-            this.btnConnectCOM.Name = "btnConnectCOM";
-            this.btnConnectCOM.Size = new System.Drawing.Size(250, 36);
-            this.btnConnectCOM.TabIndex = 0;
-            this.btnConnectCOM.Text = "           Connect";
-            this.btnConnectCOM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnectCOM.UseVisualStyleBackColor = true;
-            this.btnConnectCOM.Click += new System.EventHandler(this.btnConnectCOM_Click);
+            this.label35.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.White;
+            this.label35.Location = new System.Drawing.Point(0, 133);
+            this.label35.Name = "label35";
+            this.label35.Padding = new System.Windows.Forms.Padding(30, 10, 0, 0);
+            this.label35.Size = new System.Drawing.Size(250, 35);
+            this.label35.TabIndex = 115;
+            this.label35.Text = "2#-Connection";
             // 
-            // cbCOMSelect
+            // cbCOMSelect1
             // 
-            this.cbCOMSelect.BackColor = System.Drawing.Color.SteelBlue;
-            this.cbCOMSelect.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbCOMSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCOMSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCOMSelect.ForeColor = System.Drawing.Color.White;
-            this.cbCOMSelect.FormattingEnabled = true;
-            this.cbCOMSelect.Location = new System.Drawing.Point(0, 0);
-            this.cbCOMSelect.Name = "cbCOMSelect";
-            this.cbCOMSelect.Size = new System.Drawing.Size(250, 26);
-            this.cbCOMSelect.TabIndex = 109;
-            this.cbCOMSelect.SelectionChangeCommitted += new System.EventHandler(this.cbCOMSelect_SelectionChangeCommitted);
+            this.cbCOMSelect1.BackColor = System.Drawing.Color.SteelBlue;
+            this.cbCOMSelect1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbCOMSelect1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCOMSelect1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCOMSelect1.ForeColor = System.Drawing.Color.White;
+            this.cbCOMSelect1.FormattingEnabled = true;
+            this.cbCOMSelect1.Location = new System.Drawing.Point(0, 35);
+            this.cbCOMSelect1.Name = "cbCOMSelect1";
+            this.cbCOMSelect1.Size = new System.Drawing.Size(250, 26);
+            this.cbCOMSelect1.TabIndex = 109;
+            this.cbCOMSelect1.SelectionChangeCommitted += new System.EventHandler(this.cbCOMSelect_SelectionChangeCommitted);
             // 
-            // btnGestiones
+            // label31
             // 
-            this.btnGestiones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGestiones.FlatAppearance.BorderSize = 0;
-            this.btnGestiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGestiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestiones.ForeColor = System.Drawing.Color.White;
-            this.btnGestiones.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnGestiones.IconColor = System.Drawing.Color.Black;
-            this.btnGestiones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGestiones.Location = new System.Drawing.Point(0, 54);
-            this.btnGestiones.Name = "btnGestiones";
-            this.btnGestiones.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnGestiones.Size = new System.Drawing.Size(250, 45);
-            this.btnGestiones.TabIndex = 3;
-            this.btnGestiones.Text = "Connection";
-            this.btnGestiones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestiones.UseVisualStyleBackColor = true;
-            this.btnGestiones.Click += new System.EventHandler(this.btnGestiones_Click);
+            this.label31.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(0, 0);
+            this.label31.Name = "label31";
+            this.label31.Padding = new System.Windows.Forms.Padding(30, 10, 0, 0);
+            this.label31.Size = new System.Drawing.Size(250, 35);
+            this.label31.TabIndex = 112;
+            this.label31.Text = "1#-Connection";
             // 
             // panel1
             // 
@@ -1455,172 +1253,140 @@
             this.ChartMain.BorderlineColor = System.Drawing.Color.SteelBlue;
             this.ChartMain.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.ChartMain.BorderlineWidth = 2;
-            chartArea1.Name = "ChartArea1";
-            this.ChartMain.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.ChartMain.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.ChartMain.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.ChartMain.Legends.Add(legend4);
             this.ChartMain.Location = new System.Drawing.Point(261, 3);
             this.ChartMain.Name = "ChartMain";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "TC-1";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "TC-2";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "TC-3";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Legend = "Legend1";
-            series4.Name = "TC-4";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Legend = "Legend1";
-            series5.Name = "TC-5";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Legend = "Legend1";
-            series6.Name = "TC-6";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series7.Legend = "Legend1";
-            series7.Name = "TC-7";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series8.Legend = "Legend1";
-            series8.Name = "TC-8";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series9.Legend = "Legend1";
-            series9.Name = "TC-9";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series10.Legend = "Legend1";
-            series10.Name = "TC-10";
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series11.Legend = "Legend1";
-            series11.Name = "TC-11";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series12.Legend = "Legend1";
-            series12.Name = "TC-12";
-            series13.ChartArea = "ChartArea1";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series13.Legend = "Legend1";
-            series13.Name = "TC-13";
-            series14.ChartArea = "ChartArea1";
-            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series14.Legend = "Legend1";
-            series14.Name = "TC-14";
-            series15.ChartArea = "ChartArea1";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series15.Legend = "Legend1";
-            series15.Name = "TC-15";
-            series16.ChartArea = "ChartArea1";
-            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series16.Legend = "Legend1";
-            series16.Name = "TC-16";
-            series17.ChartArea = "ChartArea1";
-            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series17.Legend = "Legend1";
-            series17.Name = "TC-17";
-            series18.ChartArea = "ChartArea1";
-            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series18.Legend = "Legend1";
-            series18.Name = "TC-18";
-            series19.ChartArea = "ChartArea1";
-            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series19.Legend = "Legend1";
-            series19.Name = "TC-19";
-            series20.ChartArea = "ChartArea1";
-            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series20.Legend = "Legend1";
-            series20.Name = "TC-20";
-            series21.ChartArea = "ChartArea1";
-            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series21.Legend = "Legend1";
-            series21.Name = "TC-21";
-            series22.ChartArea = "ChartArea1";
-            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series22.Legend = "Legend1";
-            series22.Name = "TC-22";
-            series23.ChartArea = "ChartArea1";
-            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series23.Legend = "Legend1";
-            series23.Name = "TC-23";
-            series24.ChartArea = "ChartArea1";
-            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series24.Legend = "Legend1";
-            series24.Name = "TC-24";
-            series25.ChartArea = "ChartArea1";
-            series25.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series25.Legend = "Legend1";
-            series25.Name = "TC-25";
-            this.ChartMain.Series.Add(series1);
-            this.ChartMain.Series.Add(series2);
-            this.ChartMain.Series.Add(series3);
-            this.ChartMain.Series.Add(series4);
-            this.ChartMain.Series.Add(series5);
-            this.ChartMain.Series.Add(series6);
-            this.ChartMain.Series.Add(series7);
-            this.ChartMain.Series.Add(series8);
-            this.ChartMain.Series.Add(series9);
-            this.ChartMain.Series.Add(series10);
-            this.ChartMain.Series.Add(series11);
-            this.ChartMain.Series.Add(series12);
-            this.ChartMain.Series.Add(series13);
-            this.ChartMain.Series.Add(series14);
-            this.ChartMain.Series.Add(series15);
-            this.ChartMain.Series.Add(series16);
-            this.ChartMain.Series.Add(series17);
-            this.ChartMain.Series.Add(series18);
-            this.ChartMain.Series.Add(series19);
-            this.ChartMain.Series.Add(series20);
-            this.ChartMain.Series.Add(series21);
-            this.ChartMain.Series.Add(series22);
-            this.ChartMain.Series.Add(series23);
-            this.ChartMain.Series.Add(series24);
-            this.ChartMain.Series.Add(series25);
+            series76.ChartArea = "ChartArea1";
+            series76.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series76.Legend = "Legend1";
+            series76.Name = "TC-1";
+            series77.ChartArea = "ChartArea1";
+            series77.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series77.Legend = "Legend1";
+            series77.Name = "TC-2";
+            series78.ChartArea = "ChartArea1";
+            series78.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series78.Legend = "Legend1";
+            series78.Name = "TC-3";
+            series79.ChartArea = "ChartArea1";
+            series79.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series79.Legend = "Legend1";
+            series79.Name = "TC-4";
+            series80.ChartArea = "ChartArea1";
+            series80.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series80.Legend = "Legend1";
+            series80.Name = "TC-5";
+            series81.ChartArea = "ChartArea1";
+            series81.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series81.Legend = "Legend1";
+            series81.Name = "TC-6";
+            series82.ChartArea = "ChartArea1";
+            series82.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series82.Legend = "Legend1";
+            series82.Name = "TC-7";
+            series83.ChartArea = "ChartArea1";
+            series83.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series83.Legend = "Legend1";
+            series83.Name = "TC-8";
+            series84.ChartArea = "ChartArea1";
+            series84.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series84.Legend = "Legend1";
+            series84.Name = "TC-9";
+            series85.ChartArea = "ChartArea1";
+            series85.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series85.Legend = "Legend1";
+            series85.Name = "TC-10";
+            series86.ChartArea = "ChartArea1";
+            series86.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series86.Legend = "Legend1";
+            series86.Name = "TC-11";
+            series87.ChartArea = "ChartArea1";
+            series87.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series87.Legend = "Legend1";
+            series87.Name = "TC-12";
+            series88.ChartArea = "ChartArea1";
+            series88.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series88.Legend = "Legend1";
+            series88.Name = "TC-13";
+            series89.ChartArea = "ChartArea1";
+            series89.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series89.Legend = "Legend1";
+            series89.Name = "TC-14";
+            series90.ChartArea = "ChartArea1";
+            series90.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series90.Legend = "Legend1";
+            series90.Name = "TC-15";
+            series91.ChartArea = "ChartArea1";
+            series91.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series91.Legend = "Legend1";
+            series91.Name = "TC-16";
+            series92.ChartArea = "ChartArea1";
+            series92.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series92.Legend = "Legend1";
+            series92.Name = "TC-17";
+            series93.ChartArea = "ChartArea1";
+            series93.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series93.Legend = "Legend1";
+            series93.Name = "TC-18";
+            series94.ChartArea = "ChartArea1";
+            series94.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series94.Legend = "Legend1";
+            series94.Name = "TC-19";
+            series95.ChartArea = "ChartArea1";
+            series95.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series95.Legend = "Legend1";
+            series95.Name = "TC-20";
+            series96.ChartArea = "ChartArea1";
+            series96.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series96.Legend = "Legend1";
+            series96.Name = "TC-21";
+            series97.ChartArea = "ChartArea1";
+            series97.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series97.Legend = "Legend1";
+            series97.Name = "TC-22";
+            series98.ChartArea = "ChartArea1";
+            series98.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series98.Legend = "Legend1";
+            series98.Name = "TC-23";
+            series99.ChartArea = "ChartArea1";
+            series99.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series99.Legend = "Legend1";
+            series99.Name = "TC-24";
+            series100.ChartArea = "ChartArea1";
+            series100.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series100.Legend = "Legend1";
+            series100.Name = "TC-25";
+            this.ChartMain.Series.Add(series76);
+            this.ChartMain.Series.Add(series77);
+            this.ChartMain.Series.Add(series78);
+            this.ChartMain.Series.Add(series79);
+            this.ChartMain.Series.Add(series80);
+            this.ChartMain.Series.Add(series81);
+            this.ChartMain.Series.Add(series82);
+            this.ChartMain.Series.Add(series83);
+            this.ChartMain.Series.Add(series84);
+            this.ChartMain.Series.Add(series85);
+            this.ChartMain.Series.Add(series86);
+            this.ChartMain.Series.Add(series87);
+            this.ChartMain.Series.Add(series88);
+            this.ChartMain.Series.Add(series89);
+            this.ChartMain.Series.Add(series90);
+            this.ChartMain.Series.Add(series91);
+            this.ChartMain.Series.Add(series92);
+            this.ChartMain.Series.Add(series93);
+            this.ChartMain.Series.Add(series94);
+            this.ChartMain.Series.Add(series95);
+            this.ChartMain.Series.Add(series96);
+            this.ChartMain.Series.Add(series97);
+            this.ChartMain.Series.Add(series98);
+            this.ChartMain.Series.Add(series99);
+            this.ChartMain.Series.Add(series100);
             this.ChartMain.Size = new System.Drawing.Size(1647, 483);
             this.ChartMain.TabIndex = 212;
             this.ChartMain.Text = "chart1";
-            // 
-            // btnTypeTime
-            // 
-            this.btnTypeTime.BackColor = System.Drawing.Color.White;
-            this.btnTypeTime.FlatAppearance.BorderSize = 0;
-            this.btnTypeTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTypeTime.IconChar = FontAwesome.Sharp.IconChar.Stopwatch;
-            this.btnTypeTime.IconColor = System.Drawing.Color.Black;
-            this.btnTypeTime.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnTypeTime.IconSize = 30;
-            this.btnTypeTime.Location = new System.Drawing.Point(1870, 339);
-            this.btnTypeTime.Name = "btnTypeTime";
-            this.btnTypeTime.Size = new System.Drawing.Size(38, 33);
-            this.btnTypeTime.TabIndex = 220;
-            this.btnTypeTime.UseVisualStyleBackColor = false;
-            this.btnTypeTime.Click += new System.EventHandler(this.btnTypeTime_Click);
-            // 
-            // btnClearChart
-            // 
-            this.btnClearChart.BackColor = System.Drawing.Color.White;
-            this.btnClearChart.FlatAppearance.BorderSize = 0;
-            this.btnClearChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearChart.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnClearChart.IconColor = System.Drawing.Color.Black;
-            this.btnClearChart.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnClearChart.IconSize = 30;
-            this.btnClearChart.Location = new System.Drawing.Point(1870, 300);
-            this.btnClearChart.Name = "btnClearChart";
-            this.btnClearChart.Size = new System.Drawing.Size(38, 33);
-            this.btnClearChart.TabIndex = 219;
-            this.btnClearChart.UseVisualStyleBackColor = false;
-            this.btnClearChart.Click += new System.EventHandler(this.btnClearChart_Click);
             // 
             // lbRecord
             // 
@@ -1628,26 +1394,13 @@
             this.lbRecord.BackColor = System.Drawing.Color.White;
             this.lbRecord.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRecord.ForeColor = System.Drawing.Color.Black;
-            this.lbRecord.Location = new System.Drawing.Point(1736, 448);
+            this.lbRecord.Location = new System.Drawing.Point(1736, 267);
             this.lbRecord.Name = "lbRecord";
             this.lbRecord.Size = new System.Drawing.Size(104, 19);
             this.lbRecord.TabIndex = 218;
             this.lbRecord.Text = "Record Data";
-            // 
-            // btnRecordDataChart
-            // 
-            this.btnRecordDataChart.BackColor = System.Drawing.Color.White;
-            this.btnRecordDataChart.FlatAppearance.BorderSize = 0;
-            this.btnRecordDataChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecordDataChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
-            this.btnRecordDataChart.IconColor = System.Drawing.Color.Black;
-            this.btnRecordDataChart.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnRecordDataChart.Location = new System.Drawing.Point(1860, 442);
-            this.btnRecordDataChart.Name = "btnRecordDataChart";
-            this.btnRecordDataChart.Size = new System.Drawing.Size(48, 33);
-            this.btnRecordDataChart.TabIndex = 217;
-            this.btnRecordDataChart.UseVisualStyleBackColor = false;
-            this.btnRecordDataChart.Click += new System.EventHandler(this.btnRecordDataChart_Click);
+            this.lbRecord.Visible = false;
+            this.lbRecord.Click += new System.EventHandler(this.lbRecord_Click);
             // 
             // lbCharMode
             // 
@@ -1660,21 +1413,8 @@
             this.lbCharMode.TabIndex = 216;
             this.lbCharMode.Text = "Chart Dinamic";
             this.lbCharMode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnChartMode
-            // 
-            this.btnChartMode.BackColor = System.Drawing.Color.White;
-            this.btnChartMode.FlatAppearance.BorderSize = 0;
-            this.btnChartMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChartMode.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
-            this.btnChartMode.IconColor = System.Drawing.Color.Black;
-            this.btnChartMode.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnChartMode.Location = new System.Drawing.Point(1860, 409);
-            this.btnChartMode.Name = "btnChartMode";
-            this.btnChartMode.Size = new System.Drawing.Size(48, 33);
-            this.btnChartMode.TabIndex = 215;
-            this.btnChartMode.UseVisualStyleBackColor = false;
-            this.btnChartMode.Click += new System.EventHandler(this.btnChartMode_Click);
+            this.lbCharMode.Visible = false;
+            this.lbCharMode.Click += new System.EventHandler(this.lbCharMode_Click);
             // 
             // label32
             // 
@@ -1687,66 +1427,8 @@
             this.label32.Size = new System.Drawing.Size(93, 19);
             this.label32.TabIndex = 214;
             this.label32.Text = "Start / Stop";
-            // 
-            // btnStartStopChart
-            // 
-            this.btnStartStopChart.BackColor = System.Drawing.Color.White;
-            this.btnStartStopChart.FlatAppearance.BorderSize = 0;
-            this.btnStartStopChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStartStopChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
-            this.btnStartStopChart.IconColor = System.Drawing.Color.Black;
-            this.btnStartStopChart.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnStartStopChart.Location = new System.Drawing.Point(1860, 378);
-            this.btnStartStopChart.Name = "btnStartStopChart";
-            this.btnStartStopChart.Size = new System.Drawing.Size(48, 33);
-            this.btnStartStopChart.TabIndex = 213;
-            this.btnStartStopChart.UseVisualStyleBackColor = false;
-            this.btnStartStopChart.Click += new System.EventHandler(this.btnStartStopChart_Click);
-            // 
-            // btnEMO
-            // 
-            this.btnEMO.BackColor = System.Drawing.Color.White;
-            this.btnEMO.Image = global::Apple_24_Zones.Properties.Resources.EMO2;
-            this.btnEMO.Location = new System.Drawing.Point(265, 421);
-            this.btnEMO.Name = "btnEMO";
-            this.btnEMO.Size = new System.Drawing.Size(59, 61);
-            this.btnEMO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnEMO.TabIndex = 221;
-            this.btnEMO.TabStop = false;
-            this.btnEMO.Click += new System.EventHandler(this.btnEMO_Click);
-            // 
-            // picRED
-            // 
-            this.picRED.BackColor = System.Drawing.Color.White;
-            this.picRED.Image = global::Apple_24_Zones.Properties.Resources.tc8off;
-            this.picRED.Location = new System.Drawing.Point(267, 378);
-            this.picRED.Name = "picRED";
-            this.picRED.Size = new System.Drawing.Size(40, 40);
-            this.picRED.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picRED.TabIndex = 222;
-            this.picRED.TabStop = false;
-            // 
-            // picYELLOW
-            // 
-            this.picYELLOW.BackColor = System.Drawing.Color.White;
-            this.picYELLOW.Image = global::Apple_24_Zones.Properties.Resources.tc3off;
-            this.picYELLOW.Location = new System.Drawing.Point(267, 318);
-            this.picYELLOW.Name = "picYELLOW";
-            this.picYELLOW.Size = new System.Drawing.Size(40, 40);
-            this.picYELLOW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picYELLOW.TabIndex = 223;
-            this.picYELLOW.TabStop = false;
-            // 
-            // picGREEN
-            // 
-            this.picGREEN.BackColor = System.Drawing.Color.White;
-            this.picGREEN.Image = global::Apple_24_Zones.Properties.Resources.tc1off;
-            this.picGREEN.Location = new System.Drawing.Point(267, 259);
-            this.picGREEN.Name = "picGREEN";
-            this.picGREEN.Size = new System.Drawing.Size(40, 40);
-            this.picGREEN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picGREEN.TabIndex = 224;
-            this.picGREEN.TabStop = false;
+            this.label32.Visible = false;
+            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // TimerHoraFecha
             // 
@@ -1846,17 +1528,6 @@
             this.txtSetPointZone2.TabIndex = 185;
             this.txtSetPointZone2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // ledZ2
-            // 
-            this.ledZ2.BackColor = System.Drawing.Color.Transparent;
-            this.ledZ2.Image = global::Apple_24_Zones.Properties.Resources.led_off;
-            this.ledZ2.Location = new System.Drawing.Point(947, 247);
-            this.ledZ2.Name = "ledZ2";
-            this.ledZ2.Size = new System.Drawing.Size(43, 39);
-            this.ledZ2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ledZ2.TabIndex = 184;
-            this.ledZ2.TabStop = false;
-            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -1877,17 +1548,6 @@
             this.txtSetPointZone1.Size = new System.Drawing.Size(109, 44);
             this.txtSetPointZone1.TabIndex = 182;
             this.txtSetPointZone1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // ledZ1
-            // 
-            this.ledZ1.BackColor = System.Drawing.Color.Transparent;
-            this.ledZ1.Image = global::Apple_24_Zones.Properties.Resources.led_off;
-            this.ledZ1.Location = new System.Drawing.Point(940, 37);
-            this.ledZ1.Name = "ledZ1";
-            this.ledZ1.Size = new System.Drawing.Size(43, 39);
-            this.ledZ1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ledZ1.TabIndex = 181;
-            this.ledZ1.TabStop = false;
             // 
             // label29
             // 
@@ -2426,17 +2086,486 @@
             this.label34.Text = "Temp C°";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ledZ2
+            // 
+            this.ledZ2.BackColor = System.Drawing.Color.Transparent;
+            this.ledZ2.Image = global::Apple_24_Zones.Properties.Resources.led_off;
+            this.ledZ2.Location = new System.Drawing.Point(947, 247);
+            this.ledZ2.Name = "ledZ2";
+            this.ledZ2.Size = new System.Drawing.Size(43, 39);
+            this.ledZ2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ledZ2.TabIndex = 184;
+            this.ledZ2.TabStop = false;
+            // 
+            // ledZ1
+            // 
+            this.ledZ1.BackColor = System.Drawing.Color.Transparent;
+            this.ledZ1.Image = global::Apple_24_Zones.Properties.Resources.led_off;
+            this.ledZ1.Location = new System.Drawing.Point(940, 37);
+            this.ledZ1.Name = "ledZ1";
+            this.ledZ1.Size = new System.Drawing.Size(43, 39);
+            this.ledZ1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ledZ1.TabIndex = 181;
+            this.ledZ1.TabStop = false;
+            // 
+            // btnEMO
+            // 
+            this.btnEMO.BackColor = System.Drawing.Color.White;
+            this.btnEMO.Image = global::Apple_24_Zones.Properties.Resources.EMO2;
+            this.btnEMO.Location = new System.Drawing.Point(265, 421);
+            this.btnEMO.Name = "btnEMO";
+            this.btnEMO.Size = new System.Drawing.Size(59, 61);
+            this.btnEMO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnEMO.TabIndex = 221;
+            this.btnEMO.TabStop = false;
+            this.btnEMO.Click += new System.EventHandler(this.btnEMO_Click);
+            // 
+            // btnTypeTime
+            // 
+            this.btnTypeTime.BackColor = System.Drawing.Color.White;
+            this.btnTypeTime.FlatAppearance.BorderSize = 0;
+            this.btnTypeTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTypeTime.IconChar = FontAwesome.Sharp.IconChar.Stopwatch;
+            this.btnTypeTime.IconColor = System.Drawing.Color.Black;
+            this.btnTypeTime.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnTypeTime.IconSize = 30;
+            this.btnTypeTime.Location = new System.Drawing.Point(1870, 339);
+            this.btnTypeTime.Name = "btnTypeTime";
+            this.btnTypeTime.Size = new System.Drawing.Size(38, 33);
+            this.btnTypeTime.TabIndex = 220;
+            this.btnTypeTime.UseVisualStyleBackColor = false;
+            this.btnTypeTime.Visible = false;
+            this.btnTypeTime.Click += new System.EventHandler(this.btnTypeTime_Click);
+            // 
+            // btnClearChart
+            // 
+            this.btnClearChart.BackColor = System.Drawing.Color.White;
+            this.btnClearChart.FlatAppearance.BorderSize = 0;
+            this.btnClearChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearChart.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnClearChart.IconColor = System.Drawing.Color.Black;
+            this.btnClearChart.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnClearChart.IconSize = 30;
+            this.btnClearChart.Location = new System.Drawing.Point(1870, 300);
+            this.btnClearChart.Name = "btnClearChart";
+            this.btnClearChart.Size = new System.Drawing.Size(38, 33);
+            this.btnClearChart.TabIndex = 219;
+            this.btnClearChart.UseVisualStyleBackColor = false;
+            this.btnClearChart.Visible = false;
+            this.btnClearChart.Click += new System.EventHandler(this.btnClearChart_Click);
+            // 
+            // btnRecordDataChart
+            // 
+            this.btnRecordDataChart.BackColor = System.Drawing.Color.White;
+            this.btnRecordDataChart.FlatAppearance.BorderSize = 0;
+            this.btnRecordDataChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecordDataChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            this.btnRecordDataChart.IconColor = System.Drawing.Color.Black;
+            this.btnRecordDataChart.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnRecordDataChart.Location = new System.Drawing.Point(1860, 261);
+            this.btnRecordDataChart.Name = "btnRecordDataChart";
+            this.btnRecordDataChart.Size = new System.Drawing.Size(48, 33);
+            this.btnRecordDataChart.TabIndex = 217;
+            this.btnRecordDataChart.UseVisualStyleBackColor = false;
+            this.btnRecordDataChart.Visible = false;
+            this.btnRecordDataChart.Click += new System.EventHandler(this.btnRecordDataChart_Click);
+            // 
+            // btnChartMode
+            // 
+            this.btnChartMode.BackColor = System.Drawing.Color.White;
+            this.btnChartMode.FlatAppearance.BorderSize = 0;
+            this.btnChartMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChartMode.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            this.btnChartMode.IconColor = System.Drawing.Color.Black;
+            this.btnChartMode.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnChartMode.Location = new System.Drawing.Point(1860, 409);
+            this.btnChartMode.Name = "btnChartMode";
+            this.btnChartMode.Size = new System.Drawing.Size(48, 33);
+            this.btnChartMode.TabIndex = 215;
+            this.btnChartMode.UseVisualStyleBackColor = false;
+            this.btnChartMode.Visible = false;
+            this.btnChartMode.Click += new System.EventHandler(this.btnChartMode_Click);
+            // 
+            // btnStartStopChart
+            // 
+            this.btnStartStopChart.BackColor = System.Drawing.Color.White;
+            this.btnStartStopChart.FlatAppearance.BorderSize = 0;
+            this.btnStartStopChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStartStopChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            this.btnStartStopChart.IconColor = System.Drawing.Color.Black;
+            this.btnStartStopChart.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnStartStopChart.Location = new System.Drawing.Point(1860, 378);
+            this.btnStartStopChart.Name = "btnStartStopChart";
+            this.btnStartStopChart.Size = new System.Drawing.Size(48, 33);
+            this.btnStartStopChart.TabIndex = 213;
+            this.btnStartStopChart.UseVisualStyleBackColor = false;
+            this.btnStartStopChart.Visible = false;
+            this.btnStartStopChart.Click += new System.EventHandler(this.btnStartStopChart_Click);
+            // 
+            // btnDownUpMenu
+            // 
+            this.btnDownUpMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDownUpMenu.FlatAppearance.BorderSize = 0;
+            this.btnDownUpMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownUpMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDownUpMenu.ForeColor = System.Drawing.Color.White;
+            this.btnDownUpMenu.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleDown;
+            this.btnDownUpMenu.IconColor = System.Drawing.Color.White;
+            this.btnDownUpMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDownUpMenu.IconSize = 25;
+            this.btnDownUpMenu.Location = new System.Drawing.Point(0, 1016);
+            this.btnDownUpMenu.Name = "btnDownUpMenu";
+            this.btnDownUpMenu.Size = new System.Drawing.Size(250, 29);
+            this.btnDownUpMenu.TabIndex = 177;
+            this.btnDownUpMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDownUpMenu.UseVisualStyleBackColor = true;
+            this.btnDownUpMenu.Click += new System.EventHandler(this.btnDownUpMenu_Click);
+            // 
+            // picGREEN
+            // 
+            this.picGREEN.BackColor = System.Drawing.Color.Transparent;
+            this.picGREEN.Image = global::Apple_24_Zones.Properties.Resources.tc1off;
+            this.picGREEN.Location = new System.Drawing.Point(21, 3);
+            this.picGREEN.Name = "picGREEN";
+            this.picGREEN.Size = new System.Drawing.Size(30, 30);
+            this.picGREEN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picGREEN.TabIndex = 224;
+            this.picGREEN.TabStop = false;
+            // 
+            // picYELLOW
+            // 
+            this.picYELLOW.BackColor = System.Drawing.Color.Transparent;
+            this.picYELLOW.Image = global::Apple_24_Zones.Properties.Resources.tc3off;
+            this.picYELLOW.Location = new System.Drawing.Point(110, 3);
+            this.picYELLOW.Name = "picYELLOW";
+            this.picYELLOW.Size = new System.Drawing.Size(30, 30);
+            this.picYELLOW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picYELLOW.TabIndex = 223;
+            this.picYELLOW.TabStop = false;
+            // 
+            // picRED
+            // 
+            this.picRED.BackColor = System.Drawing.Color.Transparent;
+            this.picRED.Image = global::Apple_24_Zones.Properties.Resources.tc8off;
+            this.picRED.Location = new System.Drawing.Point(207, 3);
+            this.picRED.Name = "picRED";
+            this.picRED.Size = new System.Drawing.Size(30, 30);
+            this.picRED.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRED.TabIndex = 222;
+            this.picRED.TabStop = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 30;
+            this.btnClose.Location = new System.Drawing.Point(0, 1036);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(40, 44);
+            this.btnClose.TabIndex = 176;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnGestionArchivos
+            // 
+            this.btnGestionArchivos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGestionArchivos.FlatAppearance.BorderSize = 0;
+            this.btnGestionArchivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionArchivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionArchivos.ForeColor = System.Drawing.Color.White;
+            this.btnGestionArchivos.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnGestionArchivos.IconColor = System.Drawing.Color.Black;
+            this.btnGestionArchivos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGestionArchivos.Location = new System.Drawing.Point(0, 816);
+            this.btnGestionArchivos.Name = "btnGestionArchivos";
+            this.btnGestionArchivos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnGestionArchivos.Size = new System.Drawing.Size(250, 45);
+            this.btnGestionArchivos.TabIndex = 13;
+            this.btnGestionArchivos.Text = "View Options";
+            this.btnGestionArchivos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionArchivos.UseVisualStyleBackColor = true;
+            this.btnGestionArchivos.Visible = false;
+            this.btnGestionArchivos.Click += new System.EventHandler(this.btnGestionArchivos_Click);
+            // 
+            // btnOnOff
+            // 
+            this.btnOnOff.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOnOff.FlatAppearance.BorderSize = 0;
+            this.btnOnOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOnOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOnOff.ForeColor = System.Drawing.Color.White;
+            this.btnOnOff.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.btnOnOff.IconColor = System.Drawing.Color.White;
+            this.btnOnOff.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnOnOff.IconSize = 30;
+            this.btnOnOff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOnOff.Location = new System.Drawing.Point(0, 0);
+            this.btnOnOff.Name = "btnOnOff";
+            this.btnOnOff.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnOnOff.Size = new System.Drawing.Size(250, 41);
+            this.btnOnOff.TabIndex = 0;
+            this.btnOnOff.Text = "         Turn On";
+            this.btnOnOff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOnOff.UseVisualStyleBackColor = true;
+            this.btnOnOff.Click += new System.EventHandler(this.btnOnOff_Click);
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnReportes.IconColor = System.Drawing.Color.Black;
+            this.btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReportes.Location = new System.Drawing.Point(0, 714);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReportes.Size = new System.Drawing.Size(250, 45);
+            this.btnReportes.TabIndex = 11;
+            this.btnReportes.Text = "Status: OFF";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
+            // btnSetTemperature
+            // 
+            this.btnSetTemperature.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSetTemperature.FlatAppearance.BorderSize = 0;
+            this.btnSetTemperature.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetTemperature.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetTemperature.ForeColor = System.Drawing.Color.White;
+            this.btnSetTemperature.IconChar = FontAwesome.Sharp.IconChar.CheckSquare;
+            this.btnSetTemperature.IconColor = System.Drawing.Color.White;
+            this.btnSetTemperature.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSetTemperature.IconSize = 32;
+            this.btnSetTemperature.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetTemperature.Location = new System.Drawing.Point(0, 35);
+            this.btnSetTemperature.Name = "btnSetTemperature";
+            this.btnSetTemperature.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
+            this.btnSetTemperature.Size = new System.Drawing.Size(250, 45);
+            this.btnSetTemperature.TabIndex = 1;
+            this.btnSetTemperature.Text = "        Set";
+            this.btnSetTemperature.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetTemperature.UseVisualStyleBackColor = true;
+            this.btnSetTemperature.Click += new System.EventHandler(this.btnSetTemperature_Click);
+            // 
+            // btnMantenimientos
+            // 
+            this.btnMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMantenimientos.FlatAppearance.BorderSize = 0;
+            this.btnMantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMantenimientos.ForeColor = System.Drawing.Color.White;
+            this.btnMantenimientos.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnMantenimientos.IconColor = System.Drawing.Color.Black;
+            this.btnMantenimientos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMantenimientos.Location = new System.Drawing.Point(0, 589);
+            this.btnMantenimientos.Name = "btnMantenimientos";
+            this.btnMantenimientos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMantenimientos.Size = new System.Drawing.Size(250, 45);
+            this.btnMantenimientos.TabIndex = 9;
+            this.btnMantenimientos.Text = "Set Temperature";
+            this.btnMantenimientos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimientos.UseVisualStyleBackColor = true;
+            this.btnMantenimientos.Click += new System.EventHandler(this.btnMantenimientos_Click);
+            // 
+            // led1
+            // 
+            this.led1.BackColor = System.Drawing.Color.Transparent;
+            this.led1.Image = global::Apple_24_Zones.Properties.Resources.led_off;
+            this.led1.Location = new System.Drawing.Point(77, 6);
+            this.led1.Name = "led1";
+            this.led1.Size = new System.Drawing.Size(26, 26);
+            this.led1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.led1.TabIndex = 180;
+            this.led1.TabStop = false;
+            // 
+            // led2
+            // 
+            this.led2.BackColor = System.Drawing.Color.Transparent;
+            this.led2.Image = global::Apple_24_Zones.Properties.Resources.led_off;
+            this.led2.Location = new System.Drawing.Point(172, 6);
+            this.led2.Name = "led2";
+            this.led2.Size = new System.Drawing.Size(26, 26);
+            this.led2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.led2.TabIndex = 181;
+            this.led2.TabStop = false;
+            // 
+            // btnRegistro
+            // 
+            this.btnRegistro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistro.FlatAppearance.BorderSize = 0;
+            this.btnRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistro.ForeColor = System.Drawing.Color.White;
+            this.btnRegistro.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnRegistro.IconColor = System.Drawing.Color.Black;
+            this.btnRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRegistro.Location = new System.Drawing.Point(0, 477);
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnRegistro.Size = new System.Drawing.Size(250, 45);
+            this.btnRegistro.TabIndex = 7;
+            this.btnRegistro.Text = "Action Mode";
+            this.btnRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
+            // 
+            // btnInformacion
+            // 
+            this.btnInformacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInformacion.FlatAppearance.BorderSize = 0;
+            this.btnInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformacion.ForeColor = System.Drawing.Color.White;
+            this.btnInformacion.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnInformacion.IconColor = System.Drawing.Color.Black;
+            this.btnInformacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInformacion.Location = new System.Drawing.Point(0, 372);
+            this.btnInformacion.Name = "btnInformacion";
+            this.btnInformacion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnInformacion.Size = new System.Drawing.Size(250, 45);
+            this.btnInformacion.TabIndex = 5;
+            this.btnInformacion.Text = "Zones mode";
+            this.btnInformacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInformacion.UseVisualStyleBackColor = true;
+            this.btnInformacion.Click += new System.EventHandler(this.btnInformacion_Click);
+            // 
+            // btnRefreshCOM2
+            // 
+            this.btnRefreshCOM2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRefreshCOM2.FlatAppearance.BorderSize = 0;
+            this.btnRefreshCOM2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefreshCOM2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshCOM2.ForeColor = System.Drawing.Color.White;
+            this.btnRefreshCOM2.IconChar = FontAwesome.Sharp.IconChar.Repeat;
+            this.btnRefreshCOM2.IconColor = System.Drawing.Color.White;
+            this.btnRefreshCOM2.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnRefreshCOM2.IconSize = 30;
+            this.btnRefreshCOM2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefreshCOM2.Location = new System.Drawing.Point(0, 230);
+            this.btnRefreshCOM2.Name = "btnRefreshCOM2";
+            this.btnRefreshCOM2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnRefreshCOM2.Size = new System.Drawing.Size(250, 36);
+            this.btnRefreshCOM2.TabIndex = 114;
+            this.btnRefreshCOM2.Text = "          Refresh";
+            this.btnRefreshCOM2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefreshCOM2.UseVisualStyleBackColor = true;
+            // 
+            // btnConnectCOM2
+            // 
+            this.btnConnectCOM2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConnectCOM2.FlatAppearance.BorderSize = 0;
+            this.btnConnectCOM2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnectCOM2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnectCOM2.ForeColor = System.Drawing.Color.White;
+            this.btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            this.btnConnectCOM2.IconColor = System.Drawing.Color.White;
+            this.btnConnectCOM2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConnectCOM2.IconSize = 40;
+            this.btnConnectCOM2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConnectCOM2.Location = new System.Drawing.Point(0, 194);
+            this.btnConnectCOM2.Name = "btnConnectCOM2";
+            this.btnConnectCOM2.Size = new System.Drawing.Size(250, 36);
+            this.btnConnectCOM2.TabIndex = 113;
+            this.btnConnectCOM2.Text = "           Connect";
+            this.btnConnectCOM2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConnectCOM2.UseVisualStyleBackColor = true;
+            // 
+            // btnRefreshCOM1
+            // 
+            this.btnRefreshCOM1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRefreshCOM1.FlatAppearance.BorderSize = 0;
+            this.btnRefreshCOM1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefreshCOM1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshCOM1.ForeColor = System.Drawing.Color.White;
+            this.btnRefreshCOM1.IconChar = FontAwesome.Sharp.IconChar.Repeat;
+            this.btnRefreshCOM1.IconColor = System.Drawing.Color.White;
+            this.btnRefreshCOM1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnRefreshCOM1.IconSize = 30;
+            this.btnRefreshCOM1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefreshCOM1.Location = new System.Drawing.Point(0, 97);
+            this.btnRefreshCOM1.Name = "btnRefreshCOM1";
+            this.btnRefreshCOM1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnRefreshCOM1.Size = new System.Drawing.Size(250, 36);
+            this.btnRefreshCOM1.TabIndex = 110;
+            this.btnRefreshCOM1.Text = "          Refresh";
+            this.btnRefreshCOM1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefreshCOM1.UseVisualStyleBackColor = true;
+            this.btnRefreshCOM1.Click += new System.EventHandler(this.btnRefreshCOM_Click);
+            // 
+            // btnConnectCOM1
+            // 
+            this.btnConnectCOM1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConnectCOM1.FlatAppearance.BorderSize = 0;
+            this.btnConnectCOM1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnectCOM1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnectCOM1.ForeColor = System.Drawing.Color.White;
+            this.btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            this.btnConnectCOM1.IconColor = System.Drawing.Color.White;
+            this.btnConnectCOM1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConnectCOM1.IconSize = 40;
+            this.btnConnectCOM1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConnectCOM1.Location = new System.Drawing.Point(0, 61);
+            this.btnConnectCOM1.Name = "btnConnectCOM1";
+            this.btnConnectCOM1.Size = new System.Drawing.Size(250, 36);
+            this.btnConnectCOM1.TabIndex = 0;
+            this.btnConnectCOM1.Text = "           Connect";
+            this.btnConnectCOM1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConnectCOM1.UseVisualStyleBackColor = true;
+            this.btnConnectCOM1.Click += new System.EventHandler(this.btnConnectCOM_Click);
+            // 
+            // btnGestiones
+            // 
+            this.btnGestiones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGestiones.FlatAppearance.BorderSize = 0;
+            this.btnGestiones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestiones.ForeColor = System.Drawing.Color.White;
+            this.btnGestiones.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnGestiones.IconColor = System.Drawing.Color.Black;
+            this.btnGestiones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGestiones.Location = new System.Drawing.Point(0, 54);
+            this.btnGestiones.Name = "btnGestiones";
+            this.btnGestiones.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnGestiones.Size = new System.Drawing.Size(250, 45);
+            this.btnGestiones.TabIndex = 3;
+            this.btnGestiones.Text = "Connection";
+            this.btnGestiones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestiones.UseVisualStyleBackColor = true;
+            this.btnGestiones.Click += new System.EventHandler(this.btnGestiones_Click);
+            // 
+            // btnCSVFileFilter
+            // 
+            this.btnCSVFileFilter.BackColor = System.Drawing.Color.White;
+            this.btnCSVFileFilter.FlatAppearance.BorderSize = 0;
+            this.btnCSVFileFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCSVFileFilter.IconChar = FontAwesome.Sharp.IconChar.FileCsv;
+            this.btnCSVFileFilter.IconColor = System.Drawing.Color.SteelBlue;
+            this.btnCSVFileFilter.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnCSVFileFilter.IconSize = 35;
+            this.btnCSVFileFilter.Location = new System.Drawing.Point(1870, 446);
+            this.btnCSVFileFilter.Name = "btnCSVFileFilter";
+            this.btnCSVFileFilter.Size = new System.Drawing.Size(26, 36);
+            this.btnCSVFileFilter.TabIndex = 229;
+            this.btnCSVFileFilter.UseVisualStyleBackColor = false;
+            this.btnCSVFileFilter.Click += new System.EventHandler(this.btnCSVFileFilter_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.btnCSVFileFilter);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.panelZone1);
-            this.Controls.Add(this.picRED);
-            this.Controls.Add(this.picYELLOW);
-            this.Controls.Add(this.picGREEN);
             this.Controls.Add(this.btnEMO);
             this.Controls.Add(this.btnTypeTime);
             this.Controls.Add(this.btnClearChart);
@@ -2457,6 +2586,7 @@
             this.Text = "ELEN II";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.panelSideMenu.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.panelSubMenu6.ResumeLayout(false);
             this.panelSubMenu6.PerformLayout();
             this.panelSubMenu5.ResumeLayout(false);
@@ -2465,8 +2595,6 @@
             this.panelSubMenu3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.led1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led2)).EndInit();
             this.panelSubMenu2.ResumeLayout(false);
             this.panelSubMenu2.PerformLayout();
             this.panelSubMenuGestion.ResumeLayout(false);
@@ -2481,14 +2609,16 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChartMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEMO)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRED)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picYELLOW)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picGREEN)).EndInit();
             this.panelZone1.ResumeLayout(false);
             this.panelZone1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ledZ2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledZ1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEMO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGREEN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picYELLOW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRED)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.led2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2522,9 +2652,9 @@
         private FontAwesome.Sharp.IconButton btnRegistro;
         private System.Windows.Forms.Panel panelSubMenu2;
         private System.Windows.Forms.Panel panelSubMenuGestion;
-        private FontAwesome.Sharp.IconButton btnRefreshCOM;
-        private FontAwesome.Sharp.IconButton btnConnectCOM;
-        private System.Windows.Forms.ComboBox cbCOMSelect;
+        private FontAwesome.Sharp.IconButton btnRefreshCOM1;
+        private FontAwesome.Sharp.IconButton btnConnectCOM1;
+        private System.Windows.Forms.ComboBox cbCOMSelect1;
         private FontAwesome.Sharp.IconButton btnGestiones;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
@@ -2663,5 +2793,12 @@
         private System.Windows.Forms.Label lbDivisor;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ComboBox cbCOMSelect2;
+        private System.Windows.Forms.Label label31;
+        private FontAwesome.Sharp.IconButton btnRefreshCOM2;
+        private FontAwesome.Sharp.IconButton btnConnectCOM2;
+        private System.Windows.Forms.Label label35;
+        private FontAwesome.Sharp.IconButton btnCSVFileFilter;
     }
 }

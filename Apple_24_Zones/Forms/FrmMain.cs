@@ -85,13 +85,13 @@ namespace Apple_24_Zones.Forms
         {
             // Reset Seccion Conection
             cbSelect.SelectedIndex = -1;
-            btnRefreshCOM.Enabled = true;
-            btnConnectCOM.Enabled = false;
-            cbCOMSelect.Enabled = true;
+            btnRefreshCOM1.Enabled = true;
+            btnConnectCOM1.Enabled = false;
+            cbCOMSelect1.Enabled = true;
             string[] ports = SerialPort.GetPortNames();
-            cbCOMSelect.Items.Clear();
-            cbCOMSelect.Items.AddRange(ports);
-            btnConnectCOM.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            cbCOMSelect1.Items.Clear();
+            cbCOMSelect1.Items.AddRange(ports);
+            btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
 
             if (serialPort1.IsOpen)
             {
@@ -153,7 +153,7 @@ namespace Apple_24_Zones.Forms
             GenerarChart24();
 
 
-            ChartMain.Series["TC-1"].Points.Clear(); ChartMain.Series["TC-2"].Points.Clear(); ChartMain.Series["TC-3"].Points.Clear(); ChartMain.Series["TC-4"].Points.Clear(); ChartMain.Series["TC-5"].Points.Clear(); ChartMain.Series["TC-6"].Points.Clear(); ChartMain.Series["TC-7"].Points.Clear(); ChartMain.Series["TC-8"].Points.Clear(); ChartMain.Series["TC-9"].Points.Clear(); ChartMain.Series["TC-10"].Points.Clear(); ChartMain.Series["TC-11"].Points.Clear(); ChartMain.Series["TC-12"].Points.Clear(); ChartMain.Series["TC-13"].Points.Clear(); ChartMain.Series["TC-14"].Points.Clear(); ChartMain.Series["TC-15"].Points.Clear(); ChartMain.Series["TC-16"].Points.Clear(); ChartMain.Series["TC-17"].Points.Clear(); ChartMain.Series["TC-18"].Points.Clear(); ChartMain.Series["TC-19"].Points.Clear(); ChartMain.Series["TC-20"].Points.Clear(); ChartMain.Series["TC-21"].Points.Clear(); ChartMain.Series["TC-22"].Points.Clear(); ChartMain.Series["TC-23"].Points.Clear(); ChartMain.Series["TC-24"].Points.Clear();
+            ChartMain.Series["T-1"].Points.Clear(); ChartMain.Series["T-2"].Points.Clear(); ChartMain.Series["T-3"].Points.Clear(); ChartMain.Series["T-4"].Points.Clear(); ChartMain.Series["T-5"].Points.Clear(); ChartMain.Series["T-6"].Points.Clear(); ChartMain.Series["T-7"].Points.Clear(); ChartMain.Series["T-8"].Points.Clear(); ChartMain.Series["T-9"].Points.Clear(); ChartMain.Series["T-10"].Points.Clear(); ChartMain.Series["T-11"].Points.Clear(); ChartMain.Series["T-12"].Points.Clear(); ChartMain.Series["T-13"].Points.Clear(); ChartMain.Series["T-14"].Points.Clear(); ChartMain.Series["T-15"].Points.Clear(); ChartMain.Series["T-16"].Points.Clear(); ChartMain.Series["T-17"].Points.Clear(); ChartMain.Series["T-18"].Points.Clear(); ChartMain.Series["T-19"].Points.Clear(); ChartMain.Series["T-20"].Points.Clear(); ChartMain.Series["T-21"].Points.Clear(); ChartMain.Series["T-22"].Points.Clear(); ChartMain.Series["T-23"].Points.Clear(); ChartMain.Series["T-24"].Points.Clear();
 
             timerForChartTC.Stop();
 
@@ -311,64 +311,64 @@ namespace Apple_24_Zones.Forms
 
         private void cbCOMSelect_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if (cbCOMSelect.SelectedIndex >= 0)
+            if (cbCOMSelect1.SelectedIndex >= 0)
             {
-                btnConnectCOM.Enabled = true;
+                btnConnectCOM1.Enabled = true;
             }
         }
 
         private void GenerarChart24()
         {
 
-            ChartMain.Series.Add("TC-1");
-            ChartMain.Series.Add("TC-2");
-            ChartMain.Series.Add("TC-3");
-            ChartMain.Series.Add("TC-4");
-            ChartMain.Series.Add("TC-5");
-            ChartMain.Series.Add("TC-6");
-            ChartMain.Series.Add("TC-7");
-            ChartMain.Series.Add("TC-8");
-            ChartMain.Series.Add("TC-9");
-            ChartMain.Series.Add("TC-10");
-            ChartMain.Series.Add("TC-11");
-            ChartMain.Series.Add("TC-12");
-            ChartMain.Series.Add("TC-13");
-            ChartMain.Series.Add("TC-14");
-            ChartMain.Series.Add("TC-15");
-            ChartMain.Series.Add("TC-16");
-            ChartMain.Series.Add("TC-17");
-            ChartMain.Series.Add("TC-18");
-            ChartMain.Series.Add("TC-19");
-            ChartMain.Series.Add("TC-20");
-            ChartMain.Series.Add("TC-21");
-            ChartMain.Series.Add("TC-22");
-            ChartMain.Series.Add("TC-23");
-            ChartMain.Series.Add("TC-24");
+            ChartMain.Series.Add("T-1");
+            ChartMain.Series.Add("T-2");
+            ChartMain.Series.Add("T-3");
+            ChartMain.Series.Add("T-4");
+            ChartMain.Series.Add("T-5");
+            ChartMain.Series.Add("T-6");
+            ChartMain.Series.Add("T-7");
+            ChartMain.Series.Add("T-8");
+            ChartMain.Series.Add("T-9");
+            ChartMain.Series.Add("T-10");
+            ChartMain.Series.Add("T-11");
+            ChartMain.Series.Add("T-12");
+            ChartMain.Series.Add("T-13");
+            ChartMain.Series.Add("T-14");
+            ChartMain.Series.Add("T-15");
+            ChartMain.Series.Add("T-16");
+            ChartMain.Series.Add("T-17");
+            ChartMain.Series.Add("T-18");
+            ChartMain.Series.Add("T-19");
+            ChartMain.Series.Add("T-20");
+            ChartMain.Series.Add("T-21");
+            ChartMain.Series.Add("T-22");
+            ChartMain.Series.Add("T-23");
+            ChartMain.Series.Add("T-24");
 
-            ChartMain.Series["TC-1"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-2"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-3"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-4"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-5"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-6"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-7"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-8"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-9"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-10"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-11"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-12"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-13"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-14"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-15"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-16"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-17"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-18"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-19"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-20"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-21"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-22"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-23"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["TC-24"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-1"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-2"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-3"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-4"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-5"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-6"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-7"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-8"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-9"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-10"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-11"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-12"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-13"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-14"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-15"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-16"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-17"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-18"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-19"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-20"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-21"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-22"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-23"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["T-24"].ChartType = SeriesChartType.Spline;
 
         }
         private bool reconocerCOM(string COM)
@@ -394,13 +394,13 @@ namespace Apple_24_Zones.Forms
 
         private void btnConnectCOM_Click(object sender, EventArgs e)
         {
-            if (btnConnectCOM.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
+            if (btnConnectCOM1.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
             {
-                if (reconocerCOM(cbCOMSelect.SelectedItem.ToString()))
+                if (reconocerCOM(cbCOMSelect1.SelectedItem.ToString()))
                 {
-                    btnConnectCOM.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
-                    cbCOMSelect.Enabled = false;
-                    btnRefreshCOM.Enabled = false;
+                    btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+                    cbCOMSelect1.Enabled = false;
+                    btnRefreshCOM1.Enabled = false;
 
                     // Se debe elegir Zona para trabajar / la pongo por defecto en todas
                     cbSelect.Enabled = true;
@@ -429,29 +429,30 @@ namespace Apple_24_Zones.Forms
                     btnChartMode.Visible = false;
                     btnRecordDataChart.Visible = false;
 
-                    picGREEN.Dispose();
-                    picYELLOW.Dispose();
-                    picRED.Dispose();
+                    //picGREEN.Dispose();
+                    //picYELLOW.Dispose();
+                    //picRED.Dispose();
 
                     lbRecord.Visible = false;
                     lbCharMode.Visible = false;
                     label32.Visible = false;
 
+                    //SIMULATION...
                     ChartMain.ChartAreas[0].AxisX.Minimum = 0;
-                    ChartMain.Series["TC-1"].Points.AddXY(0, 20);
-                    ChartMain.Series["TC-1"].Points.AddXY(1, 21);
-                    ChartMain.Series["TC-1"].Points.AddXY(2, 23);
-                    ChartMain.Series["TC-1"].Points.AddXY(3, 23);
-                    ChartMain.Series["TC-1"].Points.AddXY(4, 21);
-                    ChartMain.Series["TC-1"].Points.AddXY(5, 24);
-                    ChartMain.Series["TC-1"].Points.AddXY(6, 20);
+                    ChartMain.Series["T-1"].Points.AddXY(0, 20);
+                    ChartMain.Series["T-1"].Points.AddXY(1, 21);
+                    ChartMain.Series["T-1"].Points.AddXY(2, 23);
+                    ChartMain.Series["T-1"].Points.AddXY(3, 23);
+                    ChartMain.Series["T-1"].Points.AddXY(4, 21);
+                    ChartMain.Series["T-1"].Points.AddXY(5, 24);
+                    ChartMain.Series["T-1"].Points.AddXY(6, 20);
 
 
                 }
             }
-            else if (btnConnectCOM.IconChar == FontAwesome.Sharp.IconChar.ToggleOn)
+            else if (btnConnectCOM1.IconChar == FontAwesome.Sharp.IconChar.ToggleOn)
             {
-                btnConnectCOM.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+                btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
             }
         }
         string TC1S = "";
@@ -530,23 +531,23 @@ namespace Apple_24_Zones.Forms
 
             if (ZonasSelecionadasChart == 0)
             {
-                if (ChartMain.Series["TC-1"].Points.Count >= 100)
+                if (ChartMain.Series["T-1"].Points.Count >= 100)
                 {
-                    ChartMain.Series["TC-1"].Points.RemoveAt(0); ChartMain.Series["TC-2"].Points.RemoveAt(0); ChartMain.Series["TC-3"].Points.RemoveAt(0); ChartMain.Series["TC-4"].Points.RemoveAt(0); ChartMain.Series["TC-5"].Points.RemoveAt(0); ChartMain.Series["TC-6"].Points.RemoveAt(0); ChartMain.Series["TC-7"].Points.RemoveAt(0); ChartMain.Series["TC-8"].Points.RemoveAt(0); ChartMain.Series["TC-9"].Points.RemoveAt(0); ChartMain.Series["TC-10"].Points.RemoveAt(0); ChartMain.Series["TC-11"].Points.RemoveAt(0); ChartMain.Series["TC-12"].Points.RemoveAt(0); ChartMain.Series["TC-13"].Points.RemoveAt(0); ChartMain.Series["TC-14"].Points.RemoveAt(0); ChartMain.Series["TC-15"].Points.RemoveAt(0); ChartMain.Series["TC-16"].Points.RemoveAt(0); ChartMain.Series["TC-17"].Points.RemoveAt(0); ChartMain.Series["TC-18"].Points.RemoveAt(0); ChartMain.Series["TC-19"].Points.RemoveAt(0); ChartMain.Series["TC-20"].Points.RemoveAt(0); ChartMain.Series["TC-21"].Points.RemoveAt(0); ChartMain.Series["TC-22"].Points.RemoveAt(0); ChartMain.Series["TC-23"].Points.RemoveAt(0); ChartMain.Series["TC-24"].Points.RemoveAt(0);
+                    ChartMain.Series["T-1"].Points.RemoveAt(0); ChartMain.Series["T-2"].Points.RemoveAt(0); ChartMain.Series["T-3"].Points.RemoveAt(0); ChartMain.Series["T-4"].Points.RemoveAt(0); ChartMain.Series["T-5"].Points.RemoveAt(0); ChartMain.Series["T-6"].Points.RemoveAt(0); ChartMain.Series["T-7"].Points.RemoveAt(0); ChartMain.Series["T-8"].Points.RemoveAt(0); ChartMain.Series["T-9"].Points.RemoveAt(0); ChartMain.Series["T-10"].Points.RemoveAt(0); ChartMain.Series["T-11"].Points.RemoveAt(0); ChartMain.Series["T-12"].Points.RemoveAt(0); ChartMain.Series["T-13"].Points.RemoveAt(0); ChartMain.Series["T-14"].Points.RemoveAt(0); ChartMain.Series["T-15"].Points.RemoveAt(0); ChartMain.Series["T-16"].Points.RemoveAt(0); ChartMain.Series["T-17"].Points.RemoveAt(0); ChartMain.Series["T-18"].Points.RemoveAt(0); ChartMain.Series["T-19"].Points.RemoveAt(0); ChartMain.Series["T-20"].Points.RemoveAt(0); ChartMain.Series["T-21"].Points.RemoveAt(0); ChartMain.Series["T-22"].Points.RemoveAt(0); ChartMain.Series["T-23"].Points.RemoveAt(0); ChartMain.Series["T-24"].Points.RemoveAt(0);
                 }
             }
             else if (ZonasSelecionadasChart == 1)
             {
-                if (ChartMain.Series["TC-1"].Points.Count >= 100)
+                if (ChartMain.Series["T-1"].Points.Count >= 100)
                 {
-                    ChartMain.Series["TC-1"].Points.RemoveAt(0); ChartMain.Series["TC-2"].Points.RemoveAt(0); ChartMain.Series["TC-3"].Points.RemoveAt(0); ChartMain.Series["TC-4"].Points.RemoveAt(0); ChartMain.Series["TC-5"].Points.RemoveAt(0); ChartMain.Series["TC-6"].Points.RemoveAt(0); ChartMain.Series["TC-7"].Points.RemoveAt(0); ChartMain.Series["TC-8"].Points.RemoveAt(0); ChartMain.Series["TC-9"].Points.RemoveAt(0); ChartMain.Series["TC-10"].Points.RemoveAt(0); ChartMain.Series["TC-11"].Points.RemoveAt(0); ChartMain.Series["TC-12"].Points.RemoveAt(0);
+                    ChartMain.Series["T-1"].Points.RemoveAt(0); ChartMain.Series["T-2"].Points.RemoveAt(0); ChartMain.Series["T-3"].Points.RemoveAt(0); ChartMain.Series["T-4"].Points.RemoveAt(0); ChartMain.Series["T-5"].Points.RemoveAt(0); ChartMain.Series["T-6"].Points.RemoveAt(0); ChartMain.Series["T-7"].Points.RemoveAt(0); ChartMain.Series["T-8"].Points.RemoveAt(0); ChartMain.Series["T-9"].Points.RemoveAt(0); ChartMain.Series["T-10"].Points.RemoveAt(0); ChartMain.Series["T-11"].Points.RemoveAt(0); ChartMain.Series["T-12"].Points.RemoveAt(0);
                 }
             }
             else if (ZonasSelecionadasChart == 2)
             {
-                if (ChartMain.Series["TC-13"].Points.Count >= 100)
+                if (ChartMain.Series["T-13"].Points.Count >= 100)
                 {
-                    ChartMain.Series["TC-13"].Points.RemoveAt(0); ChartMain.Series["TC-14"].Points.RemoveAt(0); ChartMain.Series["TC-15"].Points.RemoveAt(0); ChartMain.Series["TC-16"].Points.RemoveAt(0); ChartMain.Series["TC-17"].Points.RemoveAt(0); ChartMain.Series["TC-18"].Points.RemoveAt(0); ChartMain.Series["TC-19"].Points.RemoveAt(0); ChartMain.Series["TC-20"].Points.RemoveAt(0); ChartMain.Series["TC-21"].Points.RemoveAt(0); ChartMain.Series["TC-22"].Points.RemoveAt(0); ChartMain.Series["TC-23"].Points.RemoveAt(0); ChartMain.Series["TC-24"].Points.RemoveAt(0);
+                    ChartMain.Series["T-13"].Points.RemoveAt(0); ChartMain.Series["T-14"].Points.RemoveAt(0); ChartMain.Series["T-15"].Points.RemoveAt(0); ChartMain.Series["T-16"].Points.RemoveAt(0); ChartMain.Series["T-17"].Points.RemoveAt(0); ChartMain.Series["T-18"].Points.RemoveAt(0); ChartMain.Series["T-19"].Points.RemoveAt(0); ChartMain.Series["T-20"].Points.RemoveAt(0); ChartMain.Series["T-21"].Points.RemoveAt(0); ChartMain.Series["T-22"].Points.RemoveAt(0); ChartMain.Series["T-23"].Points.RemoveAt(0); ChartMain.Series["T-24"].Points.RemoveAt(0);
                 }
             }
 
@@ -906,11 +907,43 @@ namespace Apple_24_Zones.Forms
         private void btnRefreshCOM_Click(object sender, EventArgs e)
         {
             cbSelect.SelectedIndex = -1;
-            btnConnectCOM.Enabled = false;
-            cbCOMSelect.Enabled = true;
+            btnConnectCOM1.Enabled = false;
+            cbCOMSelect1.Enabled = true;
             string[] ports = SerialPort.GetPortNames();
-            cbCOMSelect.Items.Clear();
-            cbCOMSelect.Items.AddRange(ports);
+            cbCOMSelect1.Items.Clear();
+            cbCOMSelect1.Items.AddRange(ports);
+        }
+
+        private void lbCharMode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbRecord_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCSVFileFilter_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmFilterCSVFile);
+
+            if (frm == null)
+            {
+                FrmFilterCSVFile nt = new FrmFilterCSVFile();
+
+                nt.Show();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
         }
     }
 }
