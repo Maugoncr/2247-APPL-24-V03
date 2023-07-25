@@ -74,6 +74,7 @@
             this.IconClose.Size = new System.Drawing.Size(37, 27);
             this.IconClose.TabIndex = 1;
             this.IconClose.UseVisualStyleBackColor = true;
+            this.IconClose.Click += new System.EventHandler(this.IconClose_Click);
             // 
             // panel2
             // 

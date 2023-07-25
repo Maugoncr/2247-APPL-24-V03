@@ -6,21 +6,24 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Forms;
 
 namespace Apple_24_Zones.Forms
 {
-    public partial class FrmFilterCSVFile : Form
+    public partial class FrmConnect : Form
     {
-        public FrmFilterCSVFile()
+        public FrmConnect()
         {
             InitializeComponent();
         }
 
-        private void IconClose_Click(object sender, EventArgs e)
+        private void FrmConnect_Load(object sender, EventArgs e)
         {
-           this.Close();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

@@ -16,11 +16,19 @@ using System.Windows.Media.Media3D;
 namespace Apple_24_Zones.Forms
 {
     public partial class FrmMain : Form
+         
     {
+        
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+         private MainMenu mainMenu;
+
+        //
+        //Panel swap status
+        //
+        List<Panel> listPanel = new List<Panel>();
 
         public FrmMain()
         {
@@ -40,11 +48,60 @@ namespace Apple_24_Zones.Forms
             //}
             Application.Exit();
         }
+
+
+        /*
+        private void MenuItemExport_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmFilterCSVFile);
+
+            if (frm == null)
+            {
+                FrmFilterCSVFile nt = new FrmFilterCSVFile();
+
+                nt.Show();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
+        }
+        */
+        /*
+        private void MenuItemConnect_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmConnect);
+
+            if(frm==null)
+            {
+                FrmConnect nt = new FrmConnect();
+                nt.Show();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
+
+
+        }
+        */
+
+        private void MenuItemExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+        
+
+
+
         private void ShowSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
             {
-                btnDownUpMenu.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleUp;
+               // btnDownUpMenu.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleUp;
                 subMenu.Visible = true;
             }
             else
@@ -55,10 +112,11 @@ namespace Apple_24_Zones.Forms
 
         private void hideSubMenu()
         {
-            if (panelSubMenuGestion.Visible == true)
-            {
-                panelSubMenuGestion.Visible = false;
-            }
+           // if (panelSubMenuGestion.Visible == true)
+           // {
+           //     panelSubMenuGestion.Visible = false;
+           // }
+           /*
             if (panelSubMenu2.Visible == true)
             {
                 panelSubMenu2.Visible = false;
@@ -79,19 +137,20 @@ namespace Apple_24_Zones.Forms
             {
                 panelSubMenu6.Visible = false;
             }
+           */
         }
 
         private void ResetAllDefault()
         {
             // Reset Seccion Conection
-            cbSelect.SelectedIndex = -1;
-            btnRefreshCOM1.Enabled = true;
-            btnConnectCOM1.Enabled = false;
-            cbCOMSelect1.Enabled = true;
+           // cbSelect.SelectedIndex = -1;
+            //btnRefreshCOM1.Enabled = true;
+            //btnConnectCOM1.Enabled = false;
+           // cbCOMSelect1.Enabled = true;
             string[] ports = SerialPort.GetPortNames();
-            cbCOMSelect1.Items.Clear();
-            cbCOMSelect1.Items.AddRange(ports);
-            btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            //cbCOMSelect1.Items.Clear();
+            //cbCOMSelect1.Items.AddRange(ports);
+            //btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
 
             if (serialPort1.IsOpen)
             {
@@ -103,18 +162,19 @@ namespace Apple_24_Zones.Forms
             //BanderaRespuestaParaTCS = false;
 
             //Reset View Options
-            panelGhost.Visible = false;
-            cbSelectViewZone.SelectedIndex = -1;
-            cbSelectViewChartZone.SelectedIndex = -1;
-            cbZonesMode.SelectedIndex = -1;
+           // panelGhost.Visible = false;
+           // cbSelectViewZone.SelectedIndex = -1;
+           // cbSelectViewChartZone.SelectedIndex = -1;
+            //cbZonesMode.SelectedIndex = -1;
 
-            ledZ1.Image.Dispose();
-            ledZ2.Image.Dispose();
+            //ledZ1.Image.Dispose();
+            //ledZ2.Image.Dispose();
 
-            ledZ1.Image = Properties.Resources.led_off;
-            ledZ2.Image = Properties.Resources.led_off;
+            //ledZ1.Image = Properties.Resources.led_off;
+            //ledZ2.Image = Properties.Resources.led_off;
 
             // Disable All buttoms
+            /*
             cbZonesMode.Enabled = false;
             cbSelect.Enabled = false;
             txtSetTemp.Enabled = false;
@@ -125,9 +185,11 @@ namespace Apple_24_Zones.Forms
             btnRecordDataChart.Enabled = false;
             btnClearChart.Enabled = false;
             btnTypeTime.Enabled = false;
+            
 
             btnReportes.Text = "Status: OFF";
             btnOnOff.Text = "         Turn On";
+            */
 
             //Chart things
 
@@ -137,6 +199,11 @@ namespace Apple_24_Zones.Forms
             ChartMain.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.LightGray;
             ChartMain.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
             ChartMain.ChartAreas[0].AxisY.MajorGrid.LineDashStyle = ChartDashStyle.Solid;
+
+            CA.AxisY.MinorTickMark.Enabled = true;
+            CA.AxisY.MinorGrid.Enabled = true;
+
+      
 
             //Record things
             DATETIMES.Clear();
@@ -150,10 +217,13 @@ namespace Apple_24_Zones.Forms
             lbRecord.ForeColor = Color.Black;
 
             ChartMain.Series.Clear();
+            chart1.Series.Clear();
+            GenerarChart12();
             GenerarChart24();
 
 
-            ChartMain.Series["T-1"].Points.Clear(); ChartMain.Series["T-2"].Points.Clear(); ChartMain.Series["T-3"].Points.Clear(); ChartMain.Series["T-4"].Points.Clear(); ChartMain.Series["T-5"].Points.Clear(); ChartMain.Series["T-6"].Points.Clear(); ChartMain.Series["T-7"].Points.Clear(); ChartMain.Series["T-8"].Points.Clear(); ChartMain.Series["T-9"].Points.Clear(); ChartMain.Series["T-10"].Points.Clear(); ChartMain.Series["T-11"].Points.Clear(); ChartMain.Series["T-12"].Points.Clear(); ChartMain.Series["T-13"].Points.Clear(); ChartMain.Series["T-14"].Points.Clear(); ChartMain.Series["T-15"].Points.Clear(); ChartMain.Series["T-16"].Points.Clear(); ChartMain.Series["T-17"].Points.Clear(); ChartMain.Series["T-18"].Points.Clear(); ChartMain.Series["T-19"].Points.Clear(); ChartMain.Series["T-20"].Points.Clear(); ChartMain.Series["T-21"].Points.Clear(); ChartMain.Series["T-22"].Points.Clear(); ChartMain.Series["T-23"].Points.Clear(); ChartMain.Series["T-24"].Points.Clear();
+            ChartMain.Series["T-1"].Points.Clear(); ChartMain.Series["T-2"].Points.Clear(); ChartMain.Series["T-3"].Points.Clear(); ChartMain.Series["T-4"].Points.Clear(); ChartMain.Series["T-5"].Points.Clear(); ChartMain.Series["T-6"].Points.Clear(); ChartMain.Series["T-7"].Points.Clear(); ChartMain.Series["T-8"].Points.Clear(); ChartMain.Series["T-9"].Points.Clear(); ChartMain.Series["T-10"].Points.Clear(); ChartMain.Series["T-11"].Points.Clear(); ChartMain.Series["T-12"].Points.Clear();
+            chart1.Series["T-13"].Points.Clear(); chart1.Series["T-14"].Points.Clear(); chart1.Series["T-15"].Points.Clear(); chart1.Series["T-16"].Points.Clear(); chart1.Series["T-17"].Points.Clear(); chart1.Series["T-18"].Points.Clear(); chart1.Series["T-19"].Points.Clear(); chart1.Series["T-20"].Points.Clear(); chart1.Series["T-21"].Points.Clear(); chart1.Series["T-22"].Points.Clear(); chart1.Series["T-23"].Points.Clear(); chart1.Series["T-24"].Points.Clear();
 
             timerForChartTC.Stop();
 
@@ -165,10 +235,10 @@ namespace Apple_24_Zones.Forms
 
             // Limpiar todos txt's
 
-            txtSetTemp.ResetText();
-            txtTCView1.Clear(); txtTCView2.Clear(); txtTCView3.Clear(); txtTCView4.Clear(); txtTCView5.Clear(); txtTCView6.Clear(); txtTCView7.Clear(); txtTCView8.Clear(); txtTCView9.Clear(); txtTCView10.Clear(); txtTCView11.Clear(); txtTCView12.Clear(); txtTCView13.Clear(); txtTCView14.Clear(); txtTCView15.Clear(); txtTCView16.Clear(); txtTCView17.Clear(); txtTCView18.Clear(); txtTCView19.Clear(); txtTCView20.Clear(); txtTCView21.Clear(); txtTCView22.Clear(); txtTCView23.Clear(); txtTCView24.Clear();
+            //txtSetTemp.ResetText();
+            //txtTCView1.Clear(); txtTCView2.Clear(); txtTCView3.Clear(); txtTCView4.Clear(); txtTCView5.Clear(); txtTCView6.Clear(); txtTCView7.Clear(); txtTCView8.Clear(); txtTCView9.Clear(); txtTCView10.Clear(); txtTCView11.Clear(); txtTCView12.Clear(); txtTCView13.Clear(); txtTCView14.Clear(); txtTCView15.Clear(); txtTCView16.Clear(); txtTCView17.Clear(); txtTCView18.Clear(); txtTCView19.Clear(); txtTCView20.Clear(); txtTCView21.Clear(); txtTCView22.Clear(); txtTCView23.Clear(); txtTCView24.Clear();
             txtTC1.Clear(); txtTC2.Clear(); txtTC3.Clear(); txtTC4.Clear(); txtTC5.Clear(); txtTC6.Clear(); txtTC7.Clear(); txtTC8.Clear(); txtTC9.Clear(); txtTC10.Clear(); txtTC11.Clear(); txtTC12.Clear(); txtTC13.Clear(); txtTC14.Clear(); txtTC15.Clear(); txtTC16.Clear(); txtTC17.Clear(); txtTC18.Clear(); txtTC19.Clear(); txtTC20.Clear(); txtTC21.Clear(); txtTC22.Clear(); txtTC23.Clear(); txtTC24.Clear();
-            txtSetPointZone1.Clear(); txtSetPointZone2.Clear();
+            txtSetPointZone2.Clear();
 
 
             // Reset variables
@@ -182,12 +252,13 @@ namespace Apple_24_Zones.Forms
             ZonasSelecionadasSendTCSETPOINT = 0;
             i = false;
 
-            led1.Image.Dispose();
-            led2.Image.Dispose();
-            led1.Image = Properties.Resources.led_off;
-            led2.Image = Properties.Resources.led_off;
+           // led1.Image.Dispose();
+           // led2.Image.Dispose();
+           // led1.Image = Properties.Resources.led_off;
+           // led2.Image = Properties.Resources.led_off;
 
         }
+
 
         private void CiclosEnOtroHilo()
         {
@@ -212,13 +283,18 @@ namespace Apple_24_Zones.Forms
             hideSubMenu();
             TimerHoraFecha.Start();
             ResetAllDefault();
+
+            listPanel.Add(panel10);
+            listPanel.Add(panel11);
+            listPanel.Add(panel13);
+            listPanel.Add(panel14);
+            listPanel[2].BringToFront();
+
+
         }
 
-        private void btnGestiones_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(panelSubMenuGestion);
-        }
 
+        /*
         private void btnInformacion_Click(object sender, EventArgs e)
         {
             ShowSubMenu(panelSubMenu2);
@@ -243,10 +319,12 @@ namespace Apple_24_Zones.Forms
         {
             ShowSubMenu(panelSubMenu6);
         }
+        */
 
+        /*
         private void AbrirMenu()
         {
-            panelSubMenuGestion.Visible = true;
+            //panelSubMenuGestion.Visible = true;
             panelSubMenu2.Visible = true;
             panelSubMenu3.Visible = true;
             panelSubMenu4.Visible = true;
@@ -257,7 +335,7 @@ namespace Apple_24_Zones.Forms
 
         private void CerrarMenu()
         {
-            panelSubMenuGestion.Visible = false;
+            //panelSubMenuGestion.Visible = false;
             panelSubMenu2.Visible = false;
             panelSubMenu3.Visible = false;
             panelSubMenu4.Visible = false;
@@ -301,6 +379,7 @@ namespace Apple_24_Zones.Forms
                 led1.Image = Properties.Resources.led_off;
             }
         }
+        */
 
         private void TimerHoraFecha_Tick(object sender, EventArgs e)
         {
@@ -311,13 +390,14 @@ namespace Apple_24_Zones.Forms
 
         private void cbCOMSelect_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if (cbCOMSelect1.SelectedIndex >= 0)
+           // if (cbCOMSelect1.SelectedIndex >= 0)
             {
-                btnConnectCOM1.Enabled = true;
+               // btnConnectCOM1.Enabled = true;
             }
         }
 
-        private void GenerarChart24()
+
+        private void GenerarChart12()
         {
 
             ChartMain.Series.Add("T-1");
@@ -332,18 +412,7 @@ namespace Apple_24_Zones.Forms
             ChartMain.Series.Add("T-10");
             ChartMain.Series.Add("T-11");
             ChartMain.Series.Add("T-12");
-            ChartMain.Series.Add("T-13");
-            ChartMain.Series.Add("T-14");
-            ChartMain.Series.Add("T-15");
-            ChartMain.Series.Add("T-16");
-            ChartMain.Series.Add("T-17");
-            ChartMain.Series.Add("T-18");
-            ChartMain.Series.Add("T-19");
-            ChartMain.Series.Add("T-20");
-            ChartMain.Series.Add("T-21");
-            ChartMain.Series.Add("T-22");
-            ChartMain.Series.Add("T-23");
-            ChartMain.Series.Add("T-24");
+           
 
             ChartMain.Series["T-1"].ChartType = SeriesChartType.Spline;
             ChartMain.Series["T-2"].ChartType = SeriesChartType.Spline;
@@ -357,20 +426,41 @@ namespace Apple_24_Zones.Forms
             ChartMain.Series["T-10"].ChartType = SeriesChartType.Spline;
             ChartMain.Series["T-11"].ChartType = SeriesChartType.Spline;
             ChartMain.Series["T-12"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-13"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-14"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-15"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-16"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-17"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-18"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-19"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-20"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-21"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-22"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-23"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-24"].ChartType = SeriesChartType.Spline;
+           
 
         }
+
+        private void GenerarChart24()
+        {
+            chart1.Series.Add("T-13");
+            chart1.Series.Add("T-14");
+            chart1.Series.Add("T-15");
+            chart1.Series.Add("T-16");
+            chart1.Series.Add("T-17");
+            chart1.Series.Add("T-18");
+            chart1.Series.Add("T-19");
+            chart1.Series.Add("T-20");
+            chart1.Series.Add("T-21");
+            chart1.Series.Add("T-22");
+            chart1.Series.Add("T-23");
+            chart1.Series.Add("T-24");
+
+            chart1.Series["T-13"].ChartType = SeriesChartType.Spline;
+            chart1.Series["T-14"].ChartType = SeriesChartType.Spline;
+            chart1.Series["T-15"].ChartType = SeriesChartType.Spline;
+            chart1.Series["T-16"].ChartType = SeriesChartType.Spline;
+            chart1.Series["T-17"].ChartType = SeriesChartType.Spline;
+            chart1.Series["T-18"].ChartType = SeriesChartType.Spline;
+            chart1.Series["T-19"].ChartType = SeriesChartType.Spline;
+            chart1.Series["T-20"].ChartType = SeriesChartType.Spline;
+            chart1.Series["T-21"].ChartType = SeriesChartType.Spline;
+            chart1.Series["T-22"].ChartType = SeriesChartType.Spline;
+            chart1.Series["T-23"].ChartType = SeriesChartType.Spline;
+            chart1.Series["T-24"].ChartType = SeriesChartType.Spline;
+        }
+
+
+
         private bool reconocerCOM(string COM)
         {
             try
@@ -394,22 +484,22 @@ namespace Apple_24_Zones.Forms
 
         private void btnConnectCOM_Click(object sender, EventArgs e)
         {
-            if (btnConnectCOM1.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
+           // if (btnConnectCOM1.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
             {
-                if (reconocerCOM(cbCOMSelect1.SelectedItem.ToString()))
+               // if (reconocerCOM(cbCOMSelect1.SelectedItem.ToString()))
                 {
-                    btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
-                    cbCOMSelect1.Enabled = false;
-                    btnRefreshCOM1.Enabled = false;
+                   // btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+                   // cbCOMSelect1.Enabled = false;
+                    //btnRefreshCOM1.Enabled = false;
 
                     // Se debe elegir Zona para trabajar / la pongo por defecto en todas
-                    cbSelect.Enabled = true;
-                    cbZonesMode.Enabled = true;
-                    cbZonesMode.SelectedIndex = 0;
+                   // cbSelect.Enabled = true;
+                   // cbZonesMode.Enabled = true;
+                   // cbZonesMode.SelectedIndex = 0;
                     ZonasSelecionadasSendTCSETPOINT = 0;
 
-                    ledZ1.Image.Dispose();
-                    ledZ1.Image = Properties.Resources.led_on_green;
+                   // ledZ1.Image.Dispose();
+                   // ledZ1.Image = Properties.Resources.led_on_green;
                     ledZ2.Image.Dispose();
                     ledZ2.Image = Properties.Resources.led_on_green;
 
@@ -450,9 +540,9 @@ namespace Apple_24_Zones.Forms
 
                 }
             }
-            else if (btnConnectCOM1.IconChar == FontAwesome.Sharp.IconChar.ToggleOn)
+           // else if (btnConnectCOM1.IconChar == FontAwesome.Sharp.IconChar.ToggleOn)
             {
-                btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+               // btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
             }
         }
         string TC1S = "";
@@ -541,7 +631,7 @@ namespace Apple_24_Zones.Forms
                 if (ChartMain.Series["T-1"].Points.Count >= 100)
                 {
                     ChartMain.Series["T-1"].Points.RemoveAt(0); ChartMain.Series["T-2"].Points.RemoveAt(0); ChartMain.Series["T-3"].Points.RemoveAt(0); ChartMain.Series["T-4"].Points.RemoveAt(0); ChartMain.Series["T-5"].Points.RemoveAt(0); ChartMain.Series["T-6"].Points.RemoveAt(0); ChartMain.Series["T-7"].Points.RemoveAt(0); ChartMain.Series["T-8"].Points.RemoveAt(0); ChartMain.Series["T-9"].Points.RemoveAt(0); ChartMain.Series["T-10"].Points.RemoveAt(0); ChartMain.Series["T-11"].Points.RemoveAt(0); ChartMain.Series["T-12"].Points.RemoveAt(0);
-                }
+                } 
             }
             else if (ZonasSelecionadasChart == 2)
             {
@@ -664,16 +754,16 @@ namespace Apple_24_Zones.Forms
         {
             if (ZonasSelecionadasSendTCSETPOINT == 0)
             {
-                txtSetPointZone1.Text = txtSetTemp.Value.ToString();
-                txtSetPointZone2.Text = txtSetTemp.Value.ToString();
+               // txtSetPointZone1.Text = txtSetTemp.Value.ToString();
+               // txtSetPointZone2.Text = txtSetTemp.Value.ToString();
             }
             else if (ZonasSelecionadasSendTCSETPOINT == 1)
             {
-                txtSetPointZone1.Text = txtSetTemp.Value.ToString();
+               // txtSetPointZone1.Text = txtSetTemp.Value.ToString();
             }
             else if (ZonasSelecionadasSendTCSETPOINT == 2)
             {
-                txtSetPointZone2.Text = txtSetTemp.Value.ToString();
+               // txtSetPointZone2.Text = txtSetTemp.Value.ToString();
             }
             
         }
@@ -812,7 +902,7 @@ namespace Apple_24_Zones.Forms
 
             if (ZonasSelecionadasTXT == 1)
             {
-                txtTCView1.Text = TC1S; txtTCView2.Text = TC2S; txtTCView3.Text = TC3S; txtTCView4.Text = TC4S; txtTCView5.Text = TC5S; txtTCView6.Text = TC6S; txtTCView7.Text = TC7S; txtTCView8.Text = TC8S; txtTCView9.Text = TC9S; txtTCView10.Text = TC10S; txtTCView11.Text = TC11S; txtTCView12.Text = TC12S; txtTCView13.Text = TC13S; txtTCView14.Text = TC14S; txtTCView15.Text = TC15S; txtTCView16.Text = TC16S; txtTCView17.Text = TC17S; txtTCView18.Text = TC18S; txtTCView19.Text = TC19S; txtTCView20.Text = TC20S; txtTCView21.Text = TC21S; txtTCView22.Text = TC22S; txtTCView23.Text = TC23S; txtTCView24.Text = TC24S;
+               // txtTCView1.Text = TC1S; txtTCView2.Text = TC2S; txtTCView3.Text = TC3S; txtTCView4.Text = TC4S; txtTCView5.Text = TC5S; txtTCView6.Text = TC6S; txtTCView7.Text = TC7S; txtTCView8.Text = TC8S; txtTCView9.Text = TC9S; txtTCView10.Text = TC10S; txtTCView11.Text = TC11S; txtTCView12.Text = TC12S; txtTCView13.Text = TC13S; txtTCView14.Text = TC14S; txtTCView15.Text = TC15S; txtTCView16.Text = TC16S; txtTCView17.Text = TC17S; txtTCView18.Text = TC18S; txtTCView19.Text = TC19S; txtTCView20.Text = TC20S; txtTCView21.Text = TC21S; txtTCView22.Text = TC22S; txtTCView23.Text = TC23S; txtTCView24.Text = TC24S;
             }
         }
 
@@ -850,6 +940,7 @@ namespace Apple_24_Zones.Forms
 
         }
 
+        /*
         private void btnOnOff_Click(object sender, EventArgs e)
         {
             if (btnOnOff.Text.Trim() == "Turn On")
@@ -865,6 +956,9 @@ namespace Apple_24_Zones.Forms
                 btnOnOff.IconColor = Color.White;
             }
         }
+        */
+
+
 
         private void btnEMO_Click(object sender, EventArgs e)
         {
@@ -873,45 +967,47 @@ namespace Apple_24_Zones.Forms
             //t.Start();
         }
 
+        /*
         private void cbZonesMode_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbZonesMode.SelectedIndex == 0)
             {
-                ledZ1.Image.Dispose();
-                ledZ2.Image.Dispose();
-                ledZ1.Image = Properties.Resources.led_on_green;
-                ledZ2.Image = Properties.Resources.led_on_green;
+               // ledZ1.Image.Dispose();
+               // ledZ2.Image.Dispose();
+               // ledZ1.Image = Properties.Resources.led_on_green;
+               // ledZ2.Image = Properties.Resources.led_on_green;
                 ZonasSelecionadasSendTCSETPOINT = 0;
 
             }
             else if (cbZonesMode.SelectedIndex == 1)
             {
-                ledZ1.Image.Dispose();
+              //  ledZ1.Image.Dispose();
                 ledZ2.Image.Dispose();
-                ledZ1.Image = Properties.Resources.led_on_green;
+               // ledZ1.Image = Properties.Resources.led_on_green;
                 ledZ2.Image = Properties.Resources.led_off;
                 ZonasSelecionadasSendTCSETPOINT = 1;
 
             }
             else if (cbZonesMode.SelectedIndex == 2)
             {
-                ledZ1.Image.Dispose();
+              //  ledZ1.Image.Dispose();
                 ledZ2.Image.Dispose();
-                ledZ1.Image = Properties.Resources.led_off;
+                //ledZ1.Image = Properties.Resources.led_off;
                 ledZ2.Image = Properties.Resources.led_on_green;
                 ZonasSelecionadasSendTCSETPOINT = 2;
 
             }
         }
+        */
 
         private void btnRefreshCOM_Click(object sender, EventArgs e)
         {
-            cbSelect.SelectedIndex = -1;
-            btnConnectCOM1.Enabled = false;
-            cbCOMSelect1.Enabled = true;
+           // cbSelect.SelectedIndex = -1;
+           // btnConnectCOM1.Enabled = false;
+           // cbCOMSelect1.Enabled = true;
             string[] ports = SerialPort.GetPortNames();
-            cbCOMSelect1.Items.Clear();
-            cbCOMSelect1.Items.AddRange(ports);
+           // cbCOMSelect1.Items.Clear();
+           // cbCOMSelect1.Items.AddRange(ports);
         }
 
         private void lbCharMode_Click(object sender, EventArgs e)
@@ -944,6 +1040,221 @@ namespace Apple_24_Zones.Forms
                 frm.BringToFront();
                 return;
             }
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbZone1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox29_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void zone2label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void zone2label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void zone2label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listPanel[0].BringToFront();
+
+        }
+
+        private void textBox41_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox40_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label67_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void manualControlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listPanel[1].BringToFront();
+        }
+
+        private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            listPanel[2].BringToFront();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            listPanel[3].BringToFront();
+        }
+
+        private void panel13_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelZone1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTC12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void led1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void connectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmConnect);
+
+            if (frm == null)
+            {
+                FrmConnect nt = new FrmConnect();
+                nt.Show();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
+        }
+
+        private void exportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmFilterCSVFile);
+
+            if (frm == null)
+            {
+                FrmFilterCSVFile nt = new FrmFilterCSVFile();
+
+                nt.Show();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
+
+        }
+
+        private void textBox46_TextChanged(object sender, EventArgs e) { }
+
+        private void textBox46_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verify that the pressed key isn't CTRL or any non-numeric digit
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) e.Handled = true;
+                
+            
+
+         
+        }
+
+        private void textBox49_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verify that the pressed key isn't CTRL or any non-numeric digit
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) e.Handled = true;
+        }
+
+        private void ChartMain_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbTCView7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
