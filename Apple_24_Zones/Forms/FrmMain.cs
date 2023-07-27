@@ -5,13 +5,18 @@ using System.Data;
 using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Runtime.Serialization.Formatters;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Media.Media3D;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace Apple_24_Zones.Forms
 {
@@ -33,6 +38,8 @@ namespace Apple_24_Zones.Forms
         public FrmMain()
         {
             InitializeComponent();
+            
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -46,7 +53,7 @@ namespace Apple_24_Zones.Forms
             //    BanderaRespuestaParaTCS = false;
             //    serialPort1.Close();
             //}
-            Application.Exit();
+           // Application.Exit();
         }
 
 
@@ -68,7 +75,7 @@ namespace Apple_24_Zones.Forms
             }
         }
         */
-        /*
+        
         private void MenuItemConnect_Click(object sender, EventArgs e)
         {
             Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmConnect);
@@ -86,7 +93,7 @@ namespace Apple_24_Zones.Forms
 
 
         }
-        */
+        
 
         private void MenuItemExit_Click(object sender, EventArgs e)
         {
@@ -203,7 +210,7 @@ namespace Apple_24_Zones.Forms
             CA.AxisY.MinorTickMark.Enabled = true;
             CA.AxisY.MinorGrid.Enabled = true;
 
-      
+
 
             //Record things
             DATETIMES.Clear();
@@ -252,10 +259,11 @@ namespace Apple_24_Zones.Forms
             ZonasSelecionadasSendTCSETPOINT = 0;
             i = false;
 
-           // led1.Image.Dispose();
-           // led2.Image.Dispose();
-           // led1.Image = Properties.Resources.led_off;
-           // led2.Image = Properties.Resources.led_off;
+            // led1.Image.Dispose();
+            // led2.Image.Dispose();
+            // led1.Image = Properties.Resources.led_off;
+            // led2.Image = Properties.Resources.led_off;
+            
 
         }
 
@@ -289,6 +297,14 @@ namespace Apple_24_Zones.Forms
             listPanel.Add(panel13);
             listPanel.Add(panel14);
             listPanel[2].BringToFront();
+
+            updateChart(chart1);
+            updateChart(ChartMain);
+            timer1.Interval = 30;
+            timerForChartTC.Start();
+
+            
+
 
 
         }
@@ -598,6 +614,9 @@ namespace Apple_24_Zones.Forms
 
         private void timerForChartTC_Tick(object sender, EventArgs e)
         {
+
+            Random rnd = new Random();
+            /*
             if (ModoAntiguo)
             {
                 ChartModeAutoScrollLosingInfo();
@@ -606,6 +625,101 @@ namespace Apple_24_Zones.Forms
             {
                 //ChartModeNewZoomWithLimits();
             }
+            */
+
+
+            //Test points random generated
+            chart1.Series["T-13"].Points.AddY(rnd.Next(90));
+            chart1.Series["T-14"].Points.AddY(rnd.Next(90));
+            chart1.Series["T-15"].Points.AddY(rnd.Next(90));
+            chart1.Series["T-16"].Points.AddY(rnd.Next(90));
+            chart1.Series["T-17"].Points.AddY(rnd.Next(90));
+            chart1.Series["T-18"].Points.AddY(rnd.Next(90));
+            chart1.Series["T-19"].Points.AddY(rnd.Next(90));
+            chart1.Series["T-20"].Points.AddY(rnd.Next(90));
+            chart1.Series["T-21"].Points.AddY(rnd.Next(90));
+            chart1.Series["T-22"].Points.AddY(rnd.Next(90));
+            chart1.Series["T-23"].Points.AddY(rnd.Next(90));
+            chart1.Series["T-24"].Points.AddY(rnd.Next(90));
+
+            ChartMain.Series["T-1"].Points.AddY( rnd.Next(90));
+            ChartMain.Series["T-2"].Points.AddY(rnd.Next(90));
+            ChartMain.Series["T-3"].Points.AddY(rnd.Next(90));
+            ChartMain.Series["T-4"].Points.AddY(rnd.Next(90));
+            ChartMain.Series["T-5"].Points.AddY(rnd.Next(90));
+            ChartMain.Series["T-6"].Points.AddY(rnd.Next(90));
+            ChartMain.Series["T-7"].Points.AddY(rnd.Next(90));
+            ChartMain.Series["T-8"].Points.AddY(rnd.Next(90));
+            ChartMain.Series["T-9"].Points.AddY(rnd.Next(90));
+            ChartMain.Series["T-10"].Points.AddY(rnd.Next(90));
+            ChartMain.Series["T-11"].Points.AddY(rnd.Next(90));
+            ChartMain.Series["T-12"].Points.AddY(rnd.Next(90));
+
+            DataPoint[] points = new DataPoint[24];
+            points[0] = ChartMain.Series["T-1"].Points.Last();
+            points[1] = ChartMain.Series["T-2"].Points.Last();
+            points[2] = ChartMain.Series["T-3"].Points.Last();
+            points[3] = ChartMain.Series["T-4"].Points.Last();
+            points[4] = ChartMain.Series["T-5"].Points.Last();
+            points[5] = ChartMain.Series["T-6"].Points.Last();
+            points[6] = ChartMain.Series["T-7"].Points.Last();
+            points[7] = ChartMain.Series["T-8"].Points.Last();
+            points[8] = ChartMain.Series["T-9"].Points.Last();
+            points[9] = ChartMain.Series["T-10"].Points.Last();
+            points[10] = ChartMain.Series["T-11"].Points.Last();
+            points[11] = ChartMain.Series["T-12"].Points.Last();
+           
+            points[12] = chart1.Series["T-13"].Points.Last();
+            points[13] = chart1.Series["T-14"].Points.Last();
+            points[14] = chart1.Series["T-15"].Points.Last();
+            points[15] = chart1.Series["T-16"].Points.Last();
+            points[16] = chart1.Series["T-17"].Points.Last();
+            points[17] = chart1.Series["T-18"].Points.Last();
+            points[18] = chart1.Series["T-19"].Points.Last();
+            points[19] = chart1.Series["T-20"].Points.Last();
+            points[20] = chart1.Series["T-21"].Points.Last();
+            points[21] = chart1.Series["T-22"].Points.Last();
+            points[22] = chart1.Series["T-23"].Points.Last();
+            points[23] = chart1.Series["T-24"].Points.Last();
+            
+
+
+            
+            Double[] values = new Double[24];
+
+            for(int i = 0; i < values.Length; i++)
+            {
+                values[i] = points[i].YValues[0];
+            }
+            textBox28.Text = values[0].ToString() + "°C";
+            textBox29.Text = values[1].ToString() + "°C";
+            textBox30.Text = values[2].ToString() + "°C";
+            textBox31.Text = values[3].ToString() + "°C";
+            textBox32.Text = values[4].ToString() + "°C";
+            textBox33.Text = values[5].ToString() + "°C";
+            textBox34.Text = values[6].ToString() + "°C";
+            textBox35.Text = values[7].ToString() + "°C";
+            textBox36.Text = values[8].ToString() + "°C";
+            textBox37.Text = values[9].ToString() + "°C";
+            textBox38.Text = values[10].ToString() + "°C";
+            textBox39.Text = values[11].ToString() + "°C";
+
+            txtTC1.Text = values[12].ToString() + "°C";
+            txtTC2.Text = values[13].ToString() + "°C";
+            txtTC3.Text = values[14].ToString() + "°C";
+            txtTC4.Text = values[15].ToString() + "°C";
+            txtTC5.Text = values[16].ToString() + "°C";
+            txtTC6.Text = values[17].ToString() + "°C";
+            txtTC7.Text = values[18].ToString() + "°C";
+            txtTC8.Text = values[19].ToString() + "°C";
+            txtTC9.Text = values[20].ToString() + "°C";
+            txtTC10.Text = values[21].ToString() + "°C";
+            txtTC11.Text = values[22].ToString() + "°C";
+            txtTC12.Text = values[23].ToString() + "°C";
+
+
+            //Thread.Sleep(1000);
+
         }
 
         private void ChartModeAutoScrollLosingInfo()
@@ -1211,6 +1325,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+
         private void exportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmFilterCSVFile);
@@ -1255,6 +1370,333 @@ namespace Apple_24_Zones.Forms
         private void lbTCView7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int setPoint;
+            if(!String.IsNullOrEmpty(textBox46.Text))
+            {
+                setPoint = Int32.Parse(textBox46.Text);
+
+                
+                ChartMain.ChartAreas["ChartArea1"].AxisX.Minimum = 0;
+                ChartMain.ChartAreas["ChartArea1"].AxisX.Maximum = 120;
+                ChartMain.ChartAreas["ChartArea1"].AxisX.Interval = 15;
+                ChartMain.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = true;
+
+
+                ChartMain.ChartAreas["ChartArea1"].AxisY.Minimum = 0;
+                ChartMain.ChartAreas["ChartArea1"].AxisY.Maximum = 100;
+                ChartMain.ChartAreas["ChartArea1"].AxisY.Interval = 10;
+                ChartMain.ChartAreas["ChartArea1"].AxisY.MinorTickMark.Enabled = false;
+                ChartMain.ChartAreas["ChartArea1"].AxisY.MinorTickMark.LineColor = Color.LightGray;
+
+                ChartMain.ChartAreas["ChartArea1"].AxisY.MinorGrid.Enabled = true;
+                ChartMain.ChartAreas["ChartArea1"].AxisY.MinorGrid.LineColor = Color.LightGray;
+
+                ChartMain.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Black;
+
+
+
+
+                ChartMain.Series["T-1"].Points.AddXY(0, setPoint);
+                ChartMain.Series["T-1"].Points.AddXY(30, 70);
+                ChartMain.Series["T-1"].Points.AddXY(60, 0);
+
+                ChartMain.Series["T-3"].Points.AddXY(0, setPoint);
+                ChartMain.Series["T-3"].Points.AddXY(50, 50);
+                ChartMain.Series["T-3"].Points.AddXY(90, 90);
+            }
+         
+        }
+
+
+        private void updateChart(Chart chart) 
+        {
+           
+
+
+            chart.ChartAreas["ChartArea1"].AxisX.Minimum = 0;
+           // chart.ChartAreas["ChartArea1"].AxisX.Maximum = 300;
+            chart.ChartAreas["ChartArea1"].AxisX.Interval = 15;
+            chart.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = true;
+
+
+            chart.ChartAreas["ChartArea1"].AxisY.Minimum = 0;
+            chart.ChartAreas["ChartArea1"].AxisY.Maximum = 100;
+            chart.ChartAreas["ChartArea1"].AxisY.Interval = 10;
+            chart.ChartAreas["ChartArea1"].AxisY.MinorTickMark.Enabled = false;
+            chart.ChartAreas["ChartArea1"].AxisY.MinorTickMark.LineColor = Color.LightGray;
+
+            chart.ChartAreas["ChartArea1"].AxisY.MinorGrid.Enabled = true;
+            chart.ChartAreas["ChartArea1"].AxisY.MinorGrid.LineColor = Color.LightGray;
+
+            chart.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Black;
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int setPoint;
+            if (!String.IsNullOrEmpty(textBox49.Text))
+            {
+                setPoint = Int32.Parse(textBox49.Text);
+
+
+                chart1.ChartAreas["ChartArea1"].AxisX.Minimum = 0;
+                chart1.ChartAreas["ChartArea1"].AxisX.Maximum = 120;
+                chart1.ChartAreas["ChartArea1"].AxisX.Interval = 15;
+
+
+               chart1.ChartAreas["ChartArea1"].AxisY.Minimum = 0;
+                chart1.ChartAreas["ChartArea1"].AxisY.Maximum = 100;
+                chart1.ChartAreas["ChartArea1"].AxisY.Interval = 10;
+                chart1.ChartAreas["ChartArea1"].AxisY.MinorTickMark.Enabled = false;
+                chart1.ChartAreas["ChartArea1"].AxisY.MinorTickMark.LineColor = Color.LightGray;
+
+                chart1.ChartAreas["ChartArea1"].AxisY.MinorGrid.Enabled = true;
+                chart1.ChartAreas["ChartArea1"].AxisY.MinorGrid.LineColor = Color.LightGray;
+
+                chart1.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Black;
+
+
+
+
+                //Temporary points
+                chart1.Series["T-13"].Points.AddXY(0, setPoint);
+                chart1.Series["T-13"].Points.AddXY(80, 40);
+                chart1.Series["T-13"].Points.AddXY(120, 10);
+
+                chart1.Series["T-14"].Points.AddXY(0, setPoint);
+                chart1.Series["T-14"].Points.AddXY(60, 470);
+                chart1.Series["T-14"].Points.AddXY(120, 90);
+
+
+
+            }
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+            
+
+         
+        }
+
+        private void none(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox28_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked) ChartMain.Series["T-1"].Enabled = true;
+            else ChartMain.Series["T-1"].Enabled = false;
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked) ChartMain.Series["T-2"].Enabled = true;
+            else ChartMain.Series["T-2"].Enabled = false;
+        }
+
+        private void ChartMain_CustomizeLegend(object sender, CustomizeLegendEventArgs e)
+        {
+            e.LegendItems.Clear();
+            foreach (var series in this.ChartMain.Series)
+            {
+                var legendItem = new LegendItem();
+                legendItem.SeriesName = series.Name;
+                legendItem.ImageStyle = LegendImageStyle.Rectangle;
+                legendItem.BorderColor = Color.Transparent;
+                legendItem.Name = series.Name + "_legend_item";
+
+                int i = legendItem.Cells.Add(LegendCellType.SeriesSymbol, "", ContentAlignment.MiddleCenter);
+                legendItem.Cells.Add(LegendCellType.Text, series.Name, ContentAlignment.MiddleCenter);
+
+                if (series.Enabled)
+                    legendItem.Color = series.Color;
+                else
+                    legendItem.Color = Color.FromArgb(100, series.Color);
+                e.LegendItems.Add(legendItem);
+            }
+
+            foreach (LegendItem lit in e.LegendItems)
+            {
+                var cells = lit.Cells;
+                cells[0].Margins = new Margins(30, 0, 400, 100);
+                cells[1].Margins = new Margins(30, 0, 0, 200);
+            }
+
+        }
+
+        private void checkBox4_Click(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked) ChartMain.Series["T-3"].Enabled = true;
+            else ChartMain.Series["T-3"].Enabled = false;
+        }
+
+        private void checkBox5_Click(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked) ChartMain.Series["T-4"].Enabled = true;
+            else ChartMain.Series["T-4"].Enabled = false;
+        }
+
+        private void checkBox6_Click(object sender, EventArgs e)
+        {
+            if (checkBox6.Checked) ChartMain.Series["T-5"].Enabled = true;
+            else ChartMain.Series["T-5"].Enabled = false;
+        }
+
+        private void checkBox7_Click(object sender, EventArgs e)
+        {
+            if (checkBox7.Checked) ChartMain.Series["T-6"].Enabled = true;
+            else ChartMain.Series["T-6"].Enabled = false;
+        }
+
+        private void checkBox8_Click(object sender, EventArgs e)
+        {
+            if (checkBox8.Checked) ChartMain.Series["T-7"].Enabled = true;
+            else ChartMain.Series["T-7"].Enabled = false;
+        }
+
+        private void checkBox9_Click(object sender, EventArgs e)
+        {
+            if (checkBox9.Checked) ChartMain.Series["T-8"].Enabled = true;
+            else ChartMain.Series["T-8"].Enabled = false;
+        }
+
+        private void checkBox10_Click(object sender, EventArgs e)
+        {
+            if (checkBox10.Checked) ChartMain.Series["T-9"].Enabled = true;
+            else ChartMain.Series["T-9"].Enabled = false;
+        }
+
+        private void checkBox11_Click(object sender, EventArgs e)
+        {
+            if (checkBox11.Checked) ChartMain.Series["T-10"].Enabled = true;
+            else ChartMain.Series["T-10"].Enabled = false;
+        }
+
+        private void checkBox12_Click(object sender, EventArgs e)
+        {
+            if (checkBox12.Checked) ChartMain.Series["T-11"].Enabled = true;
+            else ChartMain.Series["T-11"].Enabled = false;
+        }
+
+        private void checkBox13_Click(object sender, EventArgs e)
+        {
+            if (checkBox13.Checked) ChartMain.Series["T-12"].Enabled = true;
+            else ChartMain.Series["T-12"].Enabled = false;
+        }
+
+        private void chart1_CustomizeLegend(object sender, CustomizeLegendEventArgs e)
+        {
+            e.LegendItems.Clear();
+            foreach (var series in this.chart1.Series)
+            {
+                var legendItem = new LegendItem();
+                legendItem.SeriesName = series.Name;
+                legendItem.ImageStyle = LegendImageStyle.Rectangle;
+                legendItem.BorderColor = Color.Transparent;
+                legendItem.Name = series.Name + "_legend_item";
+
+                int i = legendItem.Cells.Add(LegendCellType.SeriesSymbol, "", ContentAlignment.MiddleCenter);
+                legendItem.Cells.Add(LegendCellType.Text, series.Name, ContentAlignment.MiddleCenter);
+
+                if (series.Enabled)
+                    legendItem.Color = series.Color;
+                else
+                    legendItem.Color = Color.FromArgb(100, series.Color);
+                e.LegendItems.Add(legendItem);
+            }
+
+            foreach (LegendItem lit in e.LegendItems)
+            {
+                var cells = lit.Cells;
+                cells[0].Margins = new Margins(30, 0, 400, 100);
+                cells[1].Margins = new Margins(30, 0, 0, 200);
+            }
+        }
+
+        private void checkBox25_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox25.Checked) chart1.Series["T-13"].Enabled = true;
+            else chart1.Series["T-13"].Enabled = false;
+        }
+
+        private void checkBox24_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox24.Checked) chart1.Series["T-14"].Enabled = true;
+            else chart1.Series["T-14"].Enabled = false;
+        }
+
+        private void checkBox23_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox23.Checked) chart1.Series["T-15"].Enabled = true;
+            else chart1.Series["T-15"].Enabled = false;
+        }
+
+        private void checkBox22_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox22.Checked) chart1.Series["T-16"].Enabled = true;
+            else chart1.Series["T-16"].Enabled = false;
+        }
+
+        private void checkBox21_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox21.Checked) chart1.Series["T-17"].Enabled = true;
+            else chart1.Series["T-17"].Enabled = false;
+        }
+
+        private void checkBox20_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox20.Checked) chart1.Series["T-18"].Enabled = true;
+            else chart1.Series["T-18"].Enabled = false;
+        }
+
+        private void checkBox19_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox19.Checked) chart1.Series["T-19"].Enabled = true;
+            else chart1.Series["T-19"].Enabled = false;
+        }
+
+        private void checkBox18_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox18.Checked) chart1.Series["T-20"].Enabled = true;
+            else chart1.Series["T-20"].Enabled = false;
+        }
+
+        private void checkBox17_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox17.Checked) chart1.Series["T-21"].Enabled = true;
+            else chart1.Series["T-21"].Enabled = false;
+        }
+
+        private void checkBox16_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox16.Checked) chart1.Series["T-22"].Enabled = true;
+            else chart1.Series["T-22"].Enabled = false;
+        }
+
+        private void checkBox15_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox15.Checked) chart1.Series["T-23"].Enabled = true;
+            else chart1.Series["T-23"].Enabled = false;
+        }
+
+        private void checkBox14_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox14.Checked) chart1.Series["T-24"].Enabled = true;
+            else chart1.Series["T-24"].Enabled = false;
         }
     }
 }

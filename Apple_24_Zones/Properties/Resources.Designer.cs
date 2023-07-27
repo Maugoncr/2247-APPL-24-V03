@@ -93,6 +93,16 @@ namespace Apple_24_Zones.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SSNE {
+            get {
+                object obj = ResourceManager.GetObject("SSNE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tc1off {
             get {
                 object obj = ResourceManager.GetObject("tc1off", resourceCulture);
