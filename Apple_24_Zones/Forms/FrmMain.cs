@@ -1,7 +1,10 @@
-﻿using System;
+﻿using AppleSoftware.Forms;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
@@ -31,15 +34,19 @@ namespace Apple_24_Zones.Forms
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-         private MainMenu mainMenu;
         private double runningCount = 0;
         private double timeCs = 0;
+        private Stopwatch stopwatch = new Stopwatch();
         private Boolean freeze = false;
+        private List<Point> points = new List<Point>();
 
         //
         //Panel swap status
         //
         List<Panel> listPanel = new List<Panel>();
+
+        //LED on and off
+        List<PictureBox> leds = new List<PictureBox>();
 
         public FrmMain()
         {
@@ -81,7 +88,7 @@ namespace Apple_24_Zones.Forms
             }
         }
         */
-        
+            
         private void MenuItemConnect_Click(object sender, EventArgs e)
         {
             Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmConnect);
@@ -272,7 +279,7 @@ namespace Apple_24_Zones.Forms
             
 
         }
-
+                                                                                                      
 
         private void CiclosEnOtroHilo()
         {
@@ -302,10 +309,28 @@ namespace Apple_24_Zones.Forms
             listPanel.Add(panel11);
             listPanel.Add(panel13);
             listPanel.Add(panel14);
+            listPanel[0].BringToFront();
             listPanel[2].BringToFront();
+
+            //LED on
+            leds.Add(pictureBox15);// red on top
+            leds.Add(pictureBox14);// green on top
+            leds.Add(pictureBox16);//green on bot
+            leds.Add(pictureBox17);//red on bot;
+
+            //LED off
+            leds.Add(pictureBox11);
+            leds.Add(pictureBox10);
+            leds.Add(pictureBox13);
+            leds.Add(pictureBox12);
+
+            leds[4].BringToFront();
+            leds[6].BringToFront();
 
             updateChart(chart1);
             updateChart(ChartMain);
+
+            timerForChartTC.Interval = 250;
             timerForChartTC.Start();
 
             
@@ -433,6 +458,7 @@ namespace Apple_24_Zones.Forms
             ChartMain.Series.Add("T-22");
             ChartMain.Series.Add("T-23");
             ChartMain.Series.Add("T-24");
+            ChartMain.Series.Add("End");
            
 
             ChartMain.Series["T-13"].ChartType = SeriesChartType.Spline;
@@ -447,6 +473,7 @@ namespace Apple_24_Zones.Forms
             ChartMain.Series["T-22"].ChartType = SeriesChartType.Spline;
             ChartMain.Series["T-23"].ChartType = SeriesChartType.Spline;
             ChartMain.Series["T-24"].ChartType = SeriesChartType.Spline;
+            ChartMain.Series["End"].ChartType = SeriesChartType.Spline;
            
 
         }
@@ -617,18 +644,13 @@ namespace Apple_24_Zones.Forms
 
         bool ModoAntiguo = true;
 
+
         private void timerForChartTC_Tick(object sender, EventArgs e)
         {
-            timer1.Interval = 1000;
-            timeCs+=0.10;
-
-            if (timeCs > 1.0)
-            {
-                ++runningCount;
-                timeCs = 0;
-            }
-            
+            stopwatch.Start();
+            ChartMain.Series["End"].IsVisibleInLegend = false;
             Random rnd = new Random();
+            
             /*
             if (ModoAntiguo)
             {
@@ -654,79 +676,103 @@ namespace Apple_24_Zones.Forms
             */
 
            //Test points random generated
-           if (runningCount < 30 && freeze != true)
+           if ((stopwatch.ElapsedMilliseconds / 1000.0) < 30 && freeze != true)
            {
-               chart1.Series["T-1"].Points.AddXY(runningCount + timeCs, rnd.Next(80, 90));
-               chart1.Series["T-2"].Points.AddXY(runningCount + timeCs, rnd.Next(70, 80));
-               chart1.Series["T-3"].Points.AddXY(runningCount + timeCs, rnd.Next(60, 70));
-               chart1.Series["T-4"].Points.AddXY(runningCount + timeCs, rnd.Next(50, 60));
-               chart1.Series["T-5"].Points.AddXY(runningCount + timeCs, rnd.Next(40, 50));
-               chart1.Series["T-6"].Points.AddXY(runningCount + timeCs, rnd.Next(30, 40));
-               chart1.Series["T-7"].Points.AddXY(runningCount + timeCs, rnd.Next(20, 30));
-               chart1.Series["T-8"].Points.AddXY(runningCount + timeCs, rnd.Next(10, 20));
-               chart1.Series["T-9"].Points.AddXY(runningCount + timeCs, rnd.Next(0, 10));
-               chart1.Series["T-10"].Points.AddXY(runningCount + timeCs, rnd.Next(0));
-               chart1.Series["T-11"].Points.AddXY(runningCount + timeCs, rnd.Next(0));
-               chart1.Series["T-12"].Points.AddXY(runningCount + timeCs, rnd.Next(0));
+               chart1.Series["T-1"].Points.AddXY((stopwatch.ElapsedMilliseconds/1000.0), rnd.Next(90, 100));
+               chart1.Series["T-2"].Points.AddXY((stopwatch.ElapsedMilliseconds/1000.0), rnd.Next(80, 90));
+               chart1.Series["T-3"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(70, 80));
+               chart1.Series["T-4"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(60, 70));
+               chart1.Series["T-5"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(50, 60));
+               chart1.Series["T-6"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(40, 50));
+               chart1.Series["T-7"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(30, 40));
+               chart1.Series["T-8"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(20, 30));
+               chart1.Series["T-9"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(10, 20));
+               chart1.Series["T-10"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
+               chart1.Series["T-11"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
+               chart1.Series["T-12"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
 
            }
 
-           ChartArea ca = chart1.ChartAreas[0];
+           ChartArea ca = chart1.ChartAreas["ChartArea1"];
            Series s = chart1.Series["T-1"];
 
 
 
-           if(runningCount>=30 && !freeze)
+           if((stopwatch.ElapsedMilliseconds / 1000.0) > 30 && !freeze)
            {
-               int ix = s.Points.AddXY(runningCount + timeCs, rnd.Next(80, 90));
-                chart1.Series["T-2"].Points.AddXY(runningCount + timeCs, rnd.Next(70, 80));
-                chart1.Series["T-3"].Points.AddXY(runningCount + timeCs, rnd.Next(60, 70));
-                chart1.Series["T-4"].Points.AddXY(runningCount + timeCs, rnd.Next(50, 60));
-                chart1.Series["T-5"].Points.AddXY(runningCount + timeCs, rnd.Next(40, 50));
-                chart1.Series["T-6"].Points.AddXY(runningCount + timeCs, rnd.Next(30, 40));
-                chart1.Series["T-7"].Points.AddXY(runningCount + timeCs, rnd.Next(20, 30));
-                chart1.Series["T-8"].Points.AddXY(runningCount + timeCs, rnd.Next(10, 20));
-                chart1.Series["T-9"].Points.AddXY(runningCount + timeCs, rnd.Next(0, 10));
-                chart1.Series["T-10"].Points.AddXY(runningCount + timeCs, rnd.Next(0));
-                chart1.Series["T-11"].Points.AddXY(runningCount + timeCs, rnd.Next(0));
-                chart1.Series["T-12"].Points.AddXY(runningCount + timeCs, rnd.Next(0));
-
-                ca.AxisX.Maximum = s.Points[ix].XValue;
-               ca.AxisX.Minimum += s.Points[ix].XValue - s.Points[ix - 1].XValue;
-               ca.RecalculateAxesScale();
-           }
-
-
-           if (runningCount < 30 && freeze != true)
-           {
-               ChartMain.Series["T-13"].Points.AddY(rnd.Next(90, 100));
-               ChartMain.Series["T-14"].Points.AddY(rnd.Next(80, 90));
-               ChartMain.Series["T-15"].Points.AddY(rnd.Next(70, 80));
-               ChartMain.Series["T-16"].Points.AddY(rnd.Next(60, 70));
-               ChartMain.Series["T-17"].Points.AddY(rnd.Next(50, 60));
-               ChartMain.Series["T-18"].Points.AddY(rnd.Next(40, 50));
-               ChartMain.Series["T-19"].Points.AddY(rnd.Next(30, 40));
-               ChartMain.Series["T-20"].Points.AddY(rnd.Next(20, 30));
-               ChartMain.Series["T-21"].Points.AddY(rnd.Next(10, 20));
-               ChartMain.Series["T-22"].Points.AddY(rnd.Next(0, 10));
-               ChartMain.Series["T-23"].Points.AddY(rnd.Next(0));
-               ChartMain.Series["T-24"].Points.AddY(rnd.Next(0));
+               int ix = s.Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(80, 90));
+               chart1.Series["T-1"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(90, 100));
+                chart1.Series["T-2"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(80, 90));
+                chart1.Series["T-3"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(70, 80));
+                chart1.Series["T-4"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(60, 70));
+                chart1.Series["T-5"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(50, 60));
+                chart1.Series["T-6"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(40, 50));
+                chart1.Series["T-7"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(30, 40));
+                chart1.Series["T-8"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(20, 30));
+                chart1.Series["T-9"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(10, 20));
+                chart1.Series["T-10"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
+                chart1.Series["T-11"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
+                chart1.Series["T-12"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
+              
+                double temper = s.Points[ix].XValue;
+                ca.AxisX.Maximum = Math.Round(s.Points[ix].XValue, 1);
+                ca.AxisX.Minimum += Math.Round(s.Points[ix].XValue - s.Points[ix-1].XValue, 1);
+                ca.RecalculateAxesScale();
+                txtTC1.Text = temper.ToString();
+               
             }
 
+/*
+           if (runningCount < 30 && freeze != true)
+           {
+               ChartMain.Series["T-13"].Points.AddXY(runningCount + timeCs, rnd.Next(90, 100));
+               ChartMain.Series["T-14"].Points.AddXY(runningCount + timeCs, rnd.Next(80, 90));
+               ChartMain.Series["T-15"].Points.AddXY(runningCount + timeCs, rnd.Next(70, 80));
+               ChartMain.Series["T-16"].Points.AddXY(runningCount + timeCs, rnd.Next(60, 70));
+               ChartMain.Series["T-17"].Points.AddXY(runningCount + timeCs, rnd.Next(50, 60));
+               ChartMain.Series["T-18"].Points.AddXY(runningCount + timeCs, rnd.Next(40, 50));
+               ChartMain.Series["T-19"].Points.AddXY(runningCount + timeCs, rnd.Next(30, 40));
+               ChartMain.Series["T-20"].Points.AddXY(runningCount + timeCs, rnd.Next(20, 30));
+               ChartMain.Series["T-21"].Points.AddXY(runningCount + timeCs, rnd.Next(10, 20));
+               ChartMain.Series["T-22"].Points.AddXY(runningCount + timeCs, rnd.Next(0, 10));
+               ChartMain.Series["T-23"].Points.AddXY(runningCount + timeCs, rnd.Next(0));
+               ChartMain.Series["T-24"].Points.AddXY(runningCount + timeCs,rnd.Next(0));
+               ChartMain.Series["End"].Points.AddXY(runningCount + 3, 0);
+            }
+*/
 
 
-           ChartArea ca2 = chart1.ChartAreas[0];
+
+           ChartArea ca2 = ChartMain.ChartAreas[0];
            Series s2 = ChartMain.Series["T-13"];
 
+            /*
+            if (runningCount >= 30 && !freeze)
+            {
+                int ix = s2.Points.AddXY(runningCount + timeCs, rnd.Next(90, 100));
+                ChartMain.Series["T-14"].Points.AddXY(runningCount + timeCs, rnd.Next(70, 80));
+                ChartMain.Series["T-15"].Points.AddXY(runningCount + timeCs, rnd.Next(60, 70));
+                ChartMain.Series["T-16"].Points.AddXY(runningCount + timeCs, rnd.Next(50, 60));
+                ChartMain.Series["T-17"].Points.AddXY(runningCount + timeCs, rnd.Next(40, 50));
+                ChartMain.Series["T-18"].Points.AddXY(runningCount + timeCs, rnd.Next(30, 40));
+                ChartMain.Series["T-19"].Points.AddXY(runningCount + timeCs, rnd.Next(20, 30));
+                ChartMain.Series["T-20"].Points.AddXY(runningCount + timeCs, rnd.Next(10, 20));
+                ChartMain.Series["T-21"].Points.AddXY(runningCount + timeCs, rnd.Next(0, 10));
+                ChartMain.Series["T-22"].Points.AddXY(runningCount + timeCs, rnd.Next(0));
+                ChartMain.Series["T-23"].Points.AddXY(runningCount + timeCs, rnd.Next(0));
+                ChartMain.Series["T-24"].Points.AddXY(runningCount + timeCs, rnd.Next(0));
+                ChartMain.Series["End"].Points.AddXY(runningCount + 3, 0);
 
+                // ca2.AxisX.Maximum = s.Points[ix].XValue;
+                // ca2.AxisX.Minimum += s.Points[ix].XValue - s.Points[ix - 1].XValue;
+                // ca2.RecalculateAxesScale();
+            }
+            */
 
-
-
-           
 
             DataPoint[] points = new DataPoint[12];
             DataPoint[] points2 = new DataPoint[12];
-            
+           /* 
             points[0] = ChartMain.Series["T-13"].Points.Last();
             points[1] = ChartMain.Series["T-14"].Points.Last();
             points[2] = ChartMain.Series["T-15"].Points.Last();
@@ -739,7 +785,7 @@ namespace Apple_24_Zones.Forms
             points[9] = ChartMain.Series["T-22"].Points.Last();
             points[10] = ChartMain.Series["T-23"].Points.Last();
             points[11] = ChartMain.Series["T-24"].Points.Last();
-           
+           */
             points2[0] = chart1.Series["T-1"].Points.Last();
             points2[1] = chart1.Series["T-2"].Points.Last();
             points2[2] = chart1.Series["T-3"].Points.Last();     
@@ -752,18 +798,19 @@ namespace Apple_24_Zones.Forms
             points2[9] = chart1.Series["T-10"].Points.Last();
             points2[10] = chart1.Series["T-11"].Points.Last();
             points2[11] = chart1.Series["T-12"].Points.Last();
+            
 
 
             
             Double[] values = new Double[12];
             Double[] values2 = new Double[12];
 
-            for(int i = 0; i < values.Length; i++)   values[i] = points[i].YValues[0];
+            //for(int i = 0; i < values.Length; i++)   values[i] = points[i].YValues[0];
             
 
             for(int i=0; i < values2.Length;i++) values2[i] = points2[i].YValues[0];
 
-            
+            /*
             textBox28.Text = values[0].ToString() + "°C";
             textBox29.Text = values[1].ToString() + "°C";
             textBox30.Text = values[2].ToString() + "°C";
@@ -776,10 +823,12 @@ namespace Apple_24_Zones.Forms
             textBox37.Text = values[9].ToString() + "°C";
             textBox38.Text = values[10].ToString() + "°C";
             textBox39.Text = values[11].ToString() + "°C";
-            
+            */
 
-            txtTC1.Text = runningCount.ToString();//values[12].ToString() + "°C";  
-            txtTC2.Text = timeCs.ToString();//values[13].ToString() + "°C";
+            double temp = stopwatch.ElapsedMilliseconds/1000.0;
+
+            txtTC1.Text = temp.ToString();//values[12].ToString() + "°C";  
+            txtTC2.Text = values2[2].ToString() + "°C"; //temp.ToString();//timeCs.ToString();//values[13].ToString() + "°C";
             txtTC3.Text = values2[2].ToString() + "°C";     
             txtTC4.Text = values2[3].ToString() + "°C";
             txtTC5.Text = values2[4].ToString() + "°C";
@@ -791,9 +840,24 @@ namespace Apple_24_Zones.Forms
             txtTC11.Text = values2[10].ToString() + "°C";
             txtTC12.Text = values2[11].ToString() + "°C";
 
+            double average = 0;
+            for(int i = 0; i < values2.Length; i++)
+            {
+                average += values2[i];
+            }
 
+            average = Math.Truncate(average/ values2.Length);
+            textBox48.Text = average.ToString();
 
-            //Thread.Sleep(1000);
+            chart1.ChartAreas[0].AxisX.IsMarginVisible = true;
+            chart1.ChartAreas[0].AxisX.LabelStyle.IsEndLabelVisible = true;
+
+            if (textBox46.Text != null)
+            {
+               // if (average > Double.Parse(textBox46.Text)) leds[0].BringToFront();
+                //else if (average < Double.Parse(textBox46.Text)) leds[0].BringToFront();
+            }
+            
 
         }
 
@@ -1387,11 +1451,13 @@ namespace Apple_24_Zones.Forms
 
         private void connectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmConnect);
+
+            // Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmConnect);
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmModbus);
 
             if (frm == null)
             {
-                FrmConnect nt = new FrmConnect();
+                FrmModbus nt = new FrmModbus();
                 nt.Show();
             }
             else
@@ -1399,6 +1465,8 @@ namespace Apple_24_Zones.Forms
                 frm.BringToFront();
                 return;
             }
+            
+
         }
 
 
@@ -1454,35 +1522,6 @@ namespace Apple_24_Zones.Forms
             if(!String.IsNullOrEmpty(textBox46.Text))
             {
                 setPoint = Int32.Parse(textBox46.Text);
-
-                
-                ChartMain.ChartAreas["ChartArea1"].AxisX.Minimum = 0;
-                ChartMain.ChartAreas["ChartArea1"].AxisX.Maximum = 120;
-                ChartMain.ChartAreas["ChartArea1"].AxisX.Interval = 15;
-                ChartMain.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = true;
-
-
-                ChartMain.ChartAreas["ChartArea1"].AxisY.Minimum = 0;
-                ChartMain.ChartAreas["ChartArea1"].AxisY.Maximum = 100;
-                ChartMain.ChartAreas["ChartArea1"].AxisY.Interval = 10;
-                ChartMain.ChartAreas["ChartArea1"].AxisY.MinorTickMark.Enabled = false;
-                ChartMain.ChartAreas["ChartArea1"].AxisY.MinorTickMark.LineColor = Color.LightGray;
-
-                ChartMain.ChartAreas["ChartArea1"].AxisY.MinorGrid.Enabled = true;
-                ChartMain.ChartAreas["ChartArea1"].AxisY.MinorGrid.LineColor = Color.LightGray;
-
-                ChartMain.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Black;
-
-
-
-
-                ChartMain.Series["T-1"].Points.AddXY(0, setPoint);
-                ChartMain.Series["T-1"].Points.AddXY(30, 70);
-                ChartMain.Series["T-1"].Points.AddXY(60, 0);
-
-                ChartMain.Series["T-3"].Points.AddXY(0, setPoint);
-                ChartMain.Series["T-3"].Points.AddXY(50, 50);
-                ChartMain.Series["T-3"].Points.AddXY(90, 90);
             }
          
         }
@@ -1494,11 +1533,14 @@ namespace Apple_24_Zones.Forms
 
             chart.ChartAreas["ChartArea1"].AxisX.Minimum = 0;
             chart.ChartAreas["ChartArea1"].AxisX.Maximum = 30;
-            chart.ChartAreas["ChartArea1"].AxisX.Interval = 15;
+            chart.ChartAreas["ChartArea1"].AxisX.Interval = 5;
             chart.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = true;
+            chart.ChartAreas["ChartArea1"].AxisX.IsMarginVisible = true;
             //chart.ChartAreas["ChartArea1"].AxisX.MinorGrid.Enabled = true;
-
+            chart.ChartAreas["ChartArea1"].AxisX.LabelStyle.Format = "0.00";
+           // chart.ChartAreas["ChartArea1"].AxisX.MajorGrid.Interval = 15;
             chart.ChartAreas["ChartArea1"].AxisX.MinorGrid.LineWidth = 1;
+            chart.ChartAreas["ChartArea1"].AxisX.IntervalAutoMode = IntervalAutoMode.FixedCount;
 
 
             ChartArea CA = chart.ChartAreas[0];  // quick reference
@@ -1527,39 +1569,16 @@ namespace Apple_24_Zones.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             int setPoint;
+            String value;
+            String checkSum;
             if (!String.IsNullOrEmpty(textBox49.Text))
             {
-                setPoint = Int32.Parse(textBox49.Text);
+               setPoint = Int32.Parse(textBox49.Text);
+               value = FrmModbus.decimalHexadecimal(setPoint);
 
-
-                chart1.ChartAreas["ChartArea1"].AxisX.Minimum = 0;
-                chart1.ChartAreas["ChartArea1"].AxisX.Maximum = 120;
-                chart1.ChartAreas["ChartArea1"].AxisX.Interval = 15;
-
-
-               chart1.ChartAreas["ChartArea1"].AxisY.Minimum = 0;
-                chart1.ChartAreas["ChartArea1"].AxisY.Maximum = 100;
-                chart1.ChartAreas["ChartArea1"].AxisY.Interval = 10;
-                chart1.ChartAreas["ChartArea1"].AxisY.MinorTickMark.Enabled = false;
-                chart1.ChartAreas["ChartArea1"].AxisY.MinorTickMark.LineColor = Color.LightGray;
-
-                chart1.ChartAreas["ChartArea1"].AxisY.MinorGrid.Enabled = true;
-                chart1.ChartAreas["ChartArea1"].AxisY.MinorGrid.LineColor = Color.LightGray;
-
-                chart1.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Black;
-
-
-
-
-                //Temporary points
-                chart1.Series["T-13"].Points.AddXY(0, setPoint);
-                chart1.Series["T-13"].Points.AddXY(80, 40);
-                chart1.Series["T-13"].Points.AddXY(120, 10);
-
-                chart1.Series["T-14"].Points.AddXY(0, setPoint);
-                chart1.Series["T-14"].Points.AddXY(60, 470);
-                chart1.Series["T-14"].Points.AddXY(120, 90);
-
+                checkSum = "CC 00 01 F0 02 00 " + value + " 12";
+             
+                textBox47.Text = checkSum;
 
 
             }
@@ -1794,6 +1813,31 @@ namespace Apple_24_Zones.Forms
         private void chart1_AxisScrollBarClicked(object sender, ScrollBarEventArgs e)
         {
            
+        }
+
+        private void textBox48_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void chart1_MarginChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Resize(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

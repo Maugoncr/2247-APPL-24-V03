@@ -43,3 +43,6 @@ C:\Users\ktran\source\repos\2247-APPL-24\Apple_24_Zones\obj\Debug\Apple_24_Zones
 C:\Users\ktran\source\repos\2247-APPL-24\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.CopyComplete
 C:\Users\ktran\source\repos\2247-APPL-24\Apple_24_Zones\obj\Debug\Apple_24_Zones.exe
 C:\Users\ktran\source\repos\2247-APPL-24\Apple_24_Zones\obj\Debug\Apple_24_Zones.pdb
+C:\Users\ktran\source\repos\2247-APPL-24\Apple_24_Zones\bin\Debug\EasyModbus.dll
+C:\Users\ktran\source\repos\2247-APPL-24\Apple_24_Zones\bin\Debug\EasyModbus.xml
+C:\Users\ktran\source\repos\2247-APPL-24\Apple_24_Zones\obj\Debug\AppleSoftware.Forms.FrmModbus.resources
