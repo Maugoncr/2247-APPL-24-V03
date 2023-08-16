@@ -15,7 +15,7 @@ namespace Apple_24_Zones
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+           // Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMain());
         }

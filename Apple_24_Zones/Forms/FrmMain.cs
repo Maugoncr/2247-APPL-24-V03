@@ -330,7 +330,7 @@ namespace Apple_24_Zones.Forms
             updateChart(chart1);
             updateChart(ChartMain);
 
-            timerForChartTC.Interval = 250;
+            timerForChartTC.Interval = 100;
             timerForChartTC.Start();
 
             
@@ -458,7 +458,7 @@ namespace Apple_24_Zones.Forms
             ChartMain.Series.Add("T-22");
             ChartMain.Series.Add("T-23");
             ChartMain.Series.Add("T-24");
-            ChartMain.Series.Add("End");
+           
            
 
             ChartMain.Series["T-13"].ChartType = SeriesChartType.Spline;
@@ -473,7 +473,8 @@ namespace Apple_24_Zones.Forms
             ChartMain.Series["T-22"].ChartType = SeriesChartType.Spline;
             ChartMain.Series["T-23"].ChartType = SeriesChartType.Spline;
             ChartMain.Series["T-24"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["End"].ChartType = SeriesChartType.Spline;
+           
+
            
 
         }
@@ -648,7 +649,7 @@ namespace Apple_24_Zones.Forms
         private void timerForChartTC_Tick(object sender, EventArgs e)
         {
             stopwatch.Start();
-            ChartMain.Series["End"].IsVisibleInLegend = false;
+            //ChartMain.Series["End"].IsVisibleInLegend = false;
             Random rnd = new Random();
             
             /*
@@ -718,8 +719,7 @@ namespace Apple_24_Zones.Forms
                 ca.AxisX.Maximum = Math.Round(s.Points[ix].XValue, 1);
                 ca.AxisX.Minimum += Math.Round(s.Points[ix].XValue - s.Points[ix-1].XValue, 1);
                 ca.RecalculateAxesScale();
-                txtTC1.Text = temper.ToString();
-               
+                txtTC1.Text = temper.ToString();        
             }
 
 /*
@@ -1519,11 +1519,22 @@ namespace Apple_24_Zones.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             int setPoint;
-            if(!String.IsNullOrEmpty(textBox46.Text))
+            String value;
+            String checkSum;
+            if (!String.IsNullOrEmpty(textBox46.Text))
             {
                 setPoint = Int32.Parse(textBox46.Text);
+                value = FrmModbus.decimalHexadecimal(setPoint);
+
+                checkSum = "CC 00 01 F0 02 00 " + value + " 12";
+
+                textBox45.Text = checkSum;
             }
-         
+
+            textBox42.Text = textBox45.Text;
+            textBox46.Text = "";
+            listPanel[0].BringToFront();
+
         }
 
 
@@ -1578,10 +1589,12 @@ namespace Apple_24_Zones.Forms
 
                 checkSum = "CC 00 01 F0 02 00 " + value + " 12";
              
-                textBox47.Text = checkSum;
-
-
+                textBox45.Text = checkSum;
             }
+
+            textBox47.Text = textBox49.Text;
+            textBox49.Text = "";
+            listPanel[2].BringToFront();
         }
 
         private void panel9_Paint(object sender, PaintEventArgs e)
@@ -1836,6 +1849,16 @@ namespace Apple_24_Zones.Forms
         }
 
         private void pictureBox15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
         {
 
         }

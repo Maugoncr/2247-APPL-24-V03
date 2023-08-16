@@ -76,11 +76,12 @@ namespace AppleSoftware.Forms
 
                     byte[] bytes = { 4, 6, 33, 3, 1, 254, 243, 179 };
 
-                  //  int holamundo = 20;
-                  //  byte[] bytes = { 4, 6, (byte)holamundo };
+                    //  int holamundo = 20;
+                    //  byte[] bytes = { 4, 6, (byte)holamundo };
 
 
-                    serialPort1.Write(bytes, 0, bytes.Length);
+                    // serialPort1.Write(bytes, 0, bytes.Length);
+                    serialPort1.Write("CC 00 01 F0 02 00 FA 12");
                  
 
                 }
