@@ -2794,7 +2794,7 @@ namespace Apple_24_Zones.Forms
             this.panel9.Controls.Add(this.zone2label10);
             this.panel9.Controls.Add(this.zone2label11);
             this.panel9.Controls.Add(this.zone2label12);
-            this.panel9.Location = new System.Drawing.Point(591, 510);
+            this.panel9.Location = new System.Drawing.Point(600, 34);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1200, 70);
             this.panel9.TabIndex = 239;
@@ -3170,7 +3170,7 @@ namespace Apple_24_Zones.Forms
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(226)))), ((int)(((byte)(220)))));
-            this.ClientSize = new System.Drawing.Size(1905, 1118);
+            this.ClientSize = new System.Drawing.Size(1905, 1061);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox14);
             this.Controls.Add(this.checkBox15);
@@ -3277,7 +3277,6 @@ namespace Apple_24_Zones.Forms
         #endregion
         private System.Windows.Forms.Label lbFecha;
         private System.Windows.Forms.Label lbHora;
-        private System.Windows.Forms.DataVisualization.Charting.Chart ChartMain;
         private FontAwesome.Sharp.IconButton btnTypeTime;
         private FontAwesome.Sharp.IconButton btnClearChart;
         private System.Windows.Forms.Label lbRecord;
@@ -3514,5 +3513,6 @@ namespace Apple_24_Zones.Forms
         private Label label1;
         private PictureBox pictureBox18;
         private PictureBox pictureBox19;
+        public System.Windows.Forms.DataVisualization.Charting.Chart ChartMain;
     }
 }
