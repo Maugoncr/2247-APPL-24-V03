@@ -38,6 +38,7 @@ namespace Apple_24_Zones.Forms
         private double timeCs = 0;
         private Stopwatch stopwatch = new Stopwatch();
         private Boolean freeze = false;
+        private Boolean running = true;
         private List<Point> points = new List<Point>();
 
         //
@@ -50,6 +51,7 @@ namespace Apple_24_Zones.Forms
 
         public FrmMain()
         {
+            
             InitializeComponent();
             
 
@@ -312,17 +314,25 @@ namespace Apple_24_Zones.Forms
             listPanel[0].BringToFront();
             listPanel[2].BringToFront();
 
-            //LED on
-            leds.Add(pictureBox15);// red on top
-            leds.Add(pictureBox14);// green on top
-            leds.Add(pictureBox16);//green on bot
-            leds.Add(pictureBox17);//red on bot;
+            //LED on Manual Control
+            leds.Add(pictureBox15);// red on top ->id:0
+            leds.Add(pictureBox14);// green on top ->id:1
+            leds.Add(pictureBox16);//green on bot ->id:2
+            leds.Add(pictureBox17);//red on bot; ->id:3
 
-            //LED off
-            leds.Add(pictureBox11);
-            leds.Add(pictureBox10);
-            leds.Add(pictureBox13);
-            leds.Add(pictureBox12);
+            //LED off Manual Control
+            leds.Add(pictureBox11);//red on top ->id:4
+            leds.Add(pictureBox10);// green on top ->id:5
+            leds.Add(pictureBox13);//green on bot ->id:6
+            leds.Add(pictureBox12);//red on bot; ->id:7
+
+            //LED Status Bottom
+            leds.Add(pictureBox18);//Green on -> id:8
+            leds.Add(pictureBox5);// Green off -> id:9
+
+            //LED status Top
+            leds.Add(pictureBox19); //Green on -> id:10
+            leds.Add(pictureBox8);// Green off -> id:11
 
             leds[4].BringToFront();
             leds[6].BringToFront();
@@ -332,9 +342,6 @@ namespace Apple_24_Zones.Forms
 
             timerForChartTC.Interval = 100;
             timerForChartTC.Start();
-
-            
-
 
 
         }
@@ -459,7 +466,6 @@ namespace Apple_24_Zones.Forms
             ChartMain.Series.Add("T-23");
             ChartMain.Series.Add("T-24");
            
-           
 
             ChartMain.Series["T-13"].ChartType = SeriesChartType.Spline;
             ChartMain.Series["T-14"].ChartType = SeriesChartType.Spline;
@@ -474,9 +480,6 @@ namespace Apple_24_Zones.Forms
             ChartMain.Series["T-23"].ChartType = SeriesChartType.Spline;
             ChartMain.Series["T-24"].ChartType = SeriesChartType.Spline;
            
-
-           
-
         }
 
         private void GenerarChart24()
@@ -692,7 +695,9 @@ namespace Apple_24_Zones.Forms
                chart1.Series["T-11"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
                chart1.Series["T-12"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
 
-           }
+                
+
+            }
 
            ChartArea ca = chart1.ChartAreas["ChartArea1"];
            Series s = chart1.Series["T-1"];
@@ -718,7 +723,7 @@ namespace Apple_24_Zones.Forms
                 double temper = s.Points[ix].XValue;
                 ca.AxisX.Maximum = Math.Round(s.Points[ix].XValue, 1);
                 ca.AxisX.Minimum += Math.Round(s.Points[ix].XValue - s.Points[ix-1].XValue, 1);
-                ca.RecalculateAxesScale();
+               //  ca.RecalculateAxesScale();
                 txtTC1.Text = temper.ToString();        
             }
 
@@ -798,7 +803,6 @@ namespace Apple_24_Zones.Forms
             points2[9] = chart1.Series["T-10"].Points.Last();
             points2[10] = chart1.Series["T-11"].Points.Last();
             points2[11] = chart1.Series["T-12"].Points.Last();
-            
 
 
             
@@ -856,6 +860,20 @@ namespace Apple_24_Zones.Forms
             {
                // if (average > Double.Parse(textBox46.Text)) leds[0].BringToFront();
                 //else if (average < Double.Parse(textBox46.Text)) leds[0].BringToFront();
+            }
+
+            if (running)
+            {
+                if ((stopwatch.ElapsedMilliseconds / 1000) % 2 == 0)
+                {
+                    leds[8].BringToFront();
+                    leds[10].BringToFront();
+                }
+                else { 
+                    leds[9].BringToFront();
+                    leds[11].BringToFront();
+                }
+
             }
             
 
@@ -1531,6 +1549,7 @@ namespace Apple_24_Zones.Forms
                 textBox45.Text = checkSum;
             }
 
+            textBox41.Text = textBox46.Text;
             textBox42.Text = textBox45.Text;
             textBox46.Text = "";
             listPanel[0].BringToFront();

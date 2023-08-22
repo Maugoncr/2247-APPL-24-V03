@@ -37,7 +37,7 @@ namespace AppleSoftware.Forms
         {
             string[] puertos = SerialPort.GetPortNames();
             cboxPort.Items.AddRange(puertos);
-           // cboxPort.SelectedIndex = 0;
+            cboxPort.SelectedIndex = 0;
             btnClose.Enabled = false;
         }
 
@@ -81,8 +81,8 @@ namespace AppleSoftware.Forms
 
 
                     // serialPort1.Write(bytes, 0, bytes.Length);
-                    serialPort1.Write("CC 00 01 F0 02 00 FA 12");
-                 
+                    //serialPort1.Write("CC 00 01 F0 02 00 FA 12");
+                    serialPort1.Write("CC 00 01 70 00 8E");
 
                 }
             }
