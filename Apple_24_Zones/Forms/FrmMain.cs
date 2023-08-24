@@ -663,11 +663,16 @@ namespace Apple_24_Zones.Forms
             rt = rt + 100;
             tempa = rt / 1000;
 
+            chartZone1.Series["T-1"].IsVisibleInLegend = true;
+
             chartZone2.Series["T-13"].Points.AddXY(tempa.ToString("0.0"), "20");
 
             chartZone2.ChartAreas[0].AxisY2.Maximum = Double.NaN;
             chartZone2.ChartAreas[0].AxisY2.Minimum = Double.NaN;
             chartZone2.ChartAreas[0].RecalculateAxesScale();
+            
+           
+            
 
             if (chartZone2.Series["T-13"].Points.Count == 31)
             {
@@ -1650,35 +1655,20 @@ namespace Apple_24_Zones.Forms
             listPanel[2].BringToFront();
         }
 
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-            
+        
 
-         
-        }
+        //private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox1.Checked) chartZone2.Series["T-13"].Enabled = true;
+        //    else chartZone2.Series["T-13"].Enabled = false;
 
-        private void none(object sender, EventArgs e)
-        {
+        //}
 
-        }
-
-        private void textBox28_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked) chartZone2.Series["T-13"].Enabled = true;
-            else chartZone2.Series["T-13"].Enabled = false;
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox2.Checked) chartZone2.Series["T-14"].Enabled = true;
-            else chartZone2.Series["T-14"].Enabled = false;
-        }
+        //private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox2.Checked) chartZone2.Series["T-14"].Enabled = true;
+        //    else chartZone2.Series["T-14"].Enabled = false;
+        //}
 
         private void ChartMain_CustomizeLegend(object sender, CustomizeLegendEventArgs e)
         {
@@ -1710,65 +1700,7 @@ namespace Apple_24_Zones.Forms
 
         }
 
-        private void checkBox4_Click(object sender, EventArgs e)
-        {
-            if (checkBox4.Checked) chartZone2.Series["T-15"].Enabled = true;
-            else chartZone2.Series["T-15"].Enabled = false;
-        }
 
-        private void checkBox5_Click(object sender, EventArgs e)
-        {
-            if (checkBox5.Checked) chartZone2.Series["T-16"].Enabled = true;
-            else chartZone2.Series["T-16"].Enabled = false;
-        }
-
-        private void checkBox6_Click(object sender, EventArgs e)
-        {
-            if (checkBox6.Checked) chartZone2.Series["T-17"].Enabled = true;
-            else chartZone2.Series["T-17"].Enabled = false;
-        }
-
-        private void checkBox7_Click(object sender, EventArgs e)
-        {
-            if (checkBox7.Checked) chartZone2.Series["T-18"].Enabled = true;
-            else chartZone2.Series["T-18"].Enabled = false;
-        }
-
-        private void checkBox8_Click(object sender, EventArgs e)
-        {
-            if (checkBox8.Checked) chartZone2.Series["T-19"].Enabled = true;
-            else chartZone2.Series["T-19"].Enabled = false;
-        }
-
-        private void checkBox9_Click(object sender, EventArgs e)
-        {
-            if (checkBox9.Checked) chartZone2.Series["T-20"].Enabled = true;
-            else chartZone2.Series["T-20"].Enabled = false;
-        }
-
-        private void checkBox10_Click(object sender, EventArgs e)
-        {
-            if (checkBox10.Checked) chartZone2.Series["T-21"].Enabled = true;
-            else chartZone2.Series["T-21"].Enabled = false;
-        }
-
-        private void checkBox11_Click(object sender, EventArgs e)
-        {
-            if (checkBox11.Checked) chartZone2.Series["T-22"].Enabled = true;
-            else chartZone2.Series["T-22"].Enabled = false;
-        }
-
-        private void checkBox12_Click(object sender, EventArgs e)
-        {
-            if (checkBox12.Checked) chartZone2.Series["T-23"].Enabled = true;
-            else chartZone2.Series["T-23"].Enabled = false;
-        }
-
-        private void checkBox13_Click(object sender, EventArgs e)
-        {
-            if (checkBox13.Checked) chartZone2.Series["T-24"].Enabled = true;
-            else chartZone2.Series["T-24"].Enabled = false;
-        }
 
         private void chart1_CustomizeLegend(object sender, CustomizeLegendEventArgs e)
         {
@@ -1799,122 +1731,77 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        private void checkBox25_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox25.Checked) chartZone1.Series["T-1"].Enabled = true;
-            else chartZone1.Series["T-1"].Enabled = false;
-        }
+        //private void checkBox25_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox25.Checked) chartZone1.Series["T-1"].Enabled = true;
+        //    else chartZone1.Series["T-1"].Enabled = false;
+        //}
 
-        private void checkBox24_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox24.Checked) chartZone1.Series["T-2"].Enabled = true;
-            else chartZone1.Series["T-2"].Enabled = false;
-        }
+        //private void checkBox24_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox24.Checked) chartZone1.Series["T-2"].Enabled = true;
+        //    else chartZone1.Series["T-2"].Enabled = false;
+        //}
 
-        private void checkBox23_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox23.Checked) chartZone1.Series["T-3"].Enabled = true;
-            else chartZone1.Series["T-3"].Enabled = false;
-        }
+        //private void checkBox23_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox23.Checked) chartZone1.Series["T-3"].Enabled = true;
+        //    else chartZone1.Series["T-3"].Enabled = false;
+        //}
 
-        private void checkBox22_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox22.Checked) chartZone1.Series["T-4"].Enabled = true;
-            else chartZone1.Series["T-4"].Enabled = false;
-        }
+        //private void checkBox22_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox22.Checked) chartZone1.Series["T-4"].Enabled = true;
+        //    else chartZone1.Series["T-4"].Enabled = false;
+        //}
 
-        private void checkBox21_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox21.Checked) chartZone1.Series["T-5"].Enabled = true;
-            else chartZone1.Series["T-5"].Enabled = false;
-        }
+        //private void checkBox21_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox21.Checked) chartZone1.Series["T-5"].Enabled = true;
+        //    else chartZone1.Series["T-5"].Enabled = false;
+        //}
 
-        private void checkBox20_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox20.Checked) chartZone1.Series["T-6"].Enabled = true;
-            else chartZone1.Series["T-6"].Enabled = false;
-        }
+        //private void checkBox20_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox20.Checked) chartZone1.Series["T-6"].Enabled = true;
+        //    else chartZone1.Series["T-6"].Enabled = false;
+        //}
 
-        private void checkBox19_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox19.Checked) chartZone1.Series["T-7"].Enabled = true;
-            else chartZone1.Series["T-7"].Enabled = false;
-        }
+        //private void checkBox19_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox19.Checked) chartZone1.Series["T-7"].Enabled = true;
+        //    else chartZone1.Series["T-7"].Enabled = false;
+        //}
 
-        private void checkBox18_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox18.Checked) chartZone1.Series["T-8"].Enabled = true;
-            else chartZone1.Series["T-8"].Enabled = false;
-        }
+        //private void checkBox18_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox18.Checked) chartZone1.Series["T-8"].Enabled = true;
+        //    else chartZone1.Series["T-8"].Enabled = false;
+        //}
 
-        private void checkBox17_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox17.Checked) chartZone1.Series["T-9"].Enabled = true;
-            else chartZone1.Series["T-9"].Enabled = false;
-        }
+        //private void checkBox17_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox17.Checked) chartZone1.Series["T-9"].Enabled = true;
+        //    else chartZone1.Series["T-9"].Enabled = false;
+        //}
 
-        private void checkBox16_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox16.Checked) chartZone1.Series["T-10"].Enabled = true;
-            else chartZone1.Series["T-10"].Enabled = false;
-        }
+        //private void checkBox16_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox16.Checked) chartZone1.Series["T-10"].Enabled = true;
+        //    else chartZone1.Series["T-10"].Enabled = false;
+        //}
 
-        private void checkBox15_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox15.Checked) chartZone1.Series["T-11"].Enabled = true;
-            else chartZone1.Series["T-11"].Enabled = false;
-        }
+        //private void checkBox15_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox15.Checked) chartZone1.Series["T-11"].Enabled = true;
+        //    else chartZone1.Series["T-11"].Enabled = false;
+        //}
 
-        private void checkBox14_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox14.Checked) chartZone1.Series["T-12"].Enabled = true;
-            else chartZone1.Series["T-12"].Enabled = false;
-        }
-
-        private void textBox33_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chart1_AxisScrollBarClicked(object sender, ScrollBarEventArgs e)
-        {
-           
-        }
-
-        private void textBox48_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void chart1_MarginChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chart1_Resize(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel14_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        //private void checkBox14_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBox14.Checked) chartZone1.Series["T-12"].Enabled = true;
+        //    else chartZone1.Series["T-12"].Enabled = false;
+        //}
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -1931,5 +1818,283 @@ namespace Apple_24_Zones.Forms
                 return;
             }
         }
+
+        private void IconClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void IconMaxin_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void IconMinima_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+            else if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void ChangeViewChartZone(int index = 0)
+        {
+            if (index == 0)
+            {
+                panelGhost.Location = new Point(579, 1020);
+                panelGhost.Visible = false;
+                panelBoth.Visible = true;
+            }
+            else if (index ==1)
+            {
+                panelBoth.Visible = false;
+
+                // Chart
+
+                chartView.Series.Clear();
+                chartView.Series.Add("T-1");
+                chartView.Series.Add("T-2");
+                chartView.Series.Add("T-3");
+                chartView.Series.Add("T-4");
+                chartView.Series.Add("T-5");
+                chartView.Series.Add("T-6");
+                chartView.Series.Add("T-7");
+                chartView.Series.Add("T-8");
+                chartView.Series.Add("T-9");
+                chartView.Series.Add("T-10");
+                chartView.Series.Add("T-11");
+                chartView.Series.Add("T-12");
+
+                chartView.Series["T-1"].IsVisibleInLegend = false;
+                chartView.Series["T-2"].IsVisibleInLegend = false;
+                chartView.Series["T-3"].IsVisibleInLegend = false;
+                chartView.Series["T-4"].IsVisibleInLegend = false;
+                chartView.Series["T-5"].IsVisibleInLegend = false;
+                chartView.Series["T-6"].IsVisibleInLegend = false;
+                chartView.Series["T-7"].IsVisibleInLegend = false;
+                chartView.Series["T-8"].IsVisibleInLegend = false;
+                chartView.Series["T-9"].IsVisibleInLegend = false;
+                chartView.Series["T-10"].IsVisibleInLegend = false;
+                chartView.Series["T-11"].IsVisibleInLegend = false;
+                chartView.Series["T-12"].IsVisibleInLegend = false;
+
+                chartView.Series["T-1"].Color = Color.Red;
+                chartView.Series["T-2"].Color = Color.Blue;
+                chartView.Series["T-3"].Color = Color.Yellow;
+                chartView.Series["T-4"].Color = Color.Green;
+                chartView.Series["T-5"].Color = Color.Purple;
+                chartView.Series["T-6"].Color = Color.Cyan;
+                chartView.Series["T-7"].Color = Color.Orange;
+                chartView.Series["T-8"].Color = Color.Maroon;
+                chartView.Series["T-9"].Color = Color.Lime;
+                chartView.Series["T-10"].Color = Color.Magenta;
+                chartView.Series["T-11"].Color = Color.Olive;
+                chartView.Series["T-12"].Color = Color.Black;
+
+                
+                chartView.Series["T-1"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-2"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-3"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-4"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-5"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-6"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-7"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-8"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-9"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-10"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-11"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-12"].ChartType = SeriesChartType.Spline;
+
+                chartView.Series["T-1"].BorderWidth = 2;
+
+
+                // Labels
+
+                lbZoneView.Text = "ZONE #1";
+
+                lbView1.Text = "T-1";
+                lbView2.Text = "T-2";
+                lbView3.Text = "T-3";
+                lbView4.Text = "T-4";
+                lbView5.Text = "T-5";
+                lbView6.Text = "T-6";
+                lbView7.Text = "T-7";
+                lbView8.Text = "T-8";
+                lbView9.Text = "T-9";
+                lbView10.Text = "T-10";
+                lbView11.Text = "T-11";
+                lbView12.Text = "T-12";
+
+                checkView1.Text = "T-1";
+                checkView2.Text = "T-2";
+                checkView3.Text = "T-3";
+                checkView4.Text = "T-4";
+                checkView5.Text = "T-5";
+                checkView6.Text = "T-6";
+                checkView7.Text = "T-7";
+                checkView8.Text = "T-8";
+                checkView9.Text = "T-9";
+                checkView10.Text = "T-10";
+                checkView11.Text = "T-11";
+                checkView12.Text = "T-12";
+
+                panelGhost.Location = new Point(572, 311);
+                panelGhost.Visible = true;
+            }
+            else if(index == 2)
+            {
+                panelBoth.Visible = false;
+
+                // Chart
+
+                chartView.Series.Clear();
+
+                chartView.Series.Add("T-13");
+                chartView.Series.Add("T-14");
+                chartView.Series.Add("T-15");
+                chartView.Series.Add("T-16");
+                chartView.Series.Add("T-17");
+                chartView.Series.Add("T-18");
+                chartView.Series.Add("T-19");
+                chartView.Series.Add("T-20");
+                chartView.Series.Add("T-21");
+                chartView.Series.Add("T-22");
+                chartView.Series.Add("T-23");
+                chartView.Series.Add("T-24");
+
+                chartView.Series["T-13"].IsVisibleInLegend = false;
+                chartView.Series["T-14"].IsVisibleInLegend = false;
+                chartView.Series["T-15"].IsVisibleInLegend = false;
+                chartView.Series["T-16"].IsVisibleInLegend = false;
+                chartView.Series["T-17"].IsVisibleInLegend = false;
+                chartView.Series["T-18"].IsVisibleInLegend = false;
+                chartView.Series["T-19"].IsVisibleInLegend = false;
+                chartView.Series["T-20"].IsVisibleInLegend = false;
+                chartView.Series["T-21"].IsVisibleInLegend = false;
+                chartView.Series["T-22"].IsVisibleInLegend = false;
+                chartView.Series["T-23"].IsVisibleInLegend = false;
+                chartView.Series["T-24"].IsVisibleInLegend = false;
+
+                chartView.Series["T-13"].Color = Color.Red;
+                chartView.Series["T-14"].Color = Color.Blue;
+                chartView.Series["T-15"].Color = Color.Yellow;
+                chartView.Series["T-16"].Color = Color.Green;
+                chartView.Series["T-17"].Color = Color.Purple;
+                chartView.Series["T-18"].Color = Color.Cyan;
+                chartView.Series["T-19"].Color = Color.Orange;
+                chartView.Series["T-20"].Color = Color.Maroon;
+                chartView.Series["T-21"].Color = Color.Lime;
+                chartView.Series["T-22"].Color = Color.Magenta;
+                chartView.Series["T-23"].Color = Color.Olive;
+                chartView.Series["T-24"].Color = Color.Black;
+
+                // Labels
+
+                lbZoneView.Text = "ZONE #2";
+
+                lbView1.Text = "T-13";
+                lbView2.Text = "T-14";
+                lbView3.Text = "T-15";
+                lbView4.Text = "T-16";
+                lbView5.Text = "T-17";
+                lbView6.Text = "T-18";
+                lbView7.Text = "T-19";
+                lbView8.Text = "T-20";
+                lbView9.Text = "T-21";
+                lbView10.Text = "T-22";
+                lbView11.Text = "T-23";
+                lbView12.Text = "T-24";
+
+                checkView1.Text = "T-13";
+                checkView2.Text = "T-14";
+                checkView3.Text = "T-15";
+                checkView4.Text = "T-16";
+                checkView5.Text = "T-17";
+                checkView6.Text = "T-18";
+                checkView7.Text = "T-19";
+                checkView8.Text = "T-20";
+                checkView9.Text = "T-21";
+                checkView10.Text = "T-22";
+                checkView11.Text = "T-23";
+                checkView12.Text = "T-24";
+
+                panelGhost.Location = new Point(572, 311);
+                panelGhost.Visible = true;
+            }
+        
+        
+        
+        }
+
+        private void bothZonesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeViewChartZone();
+        }
+
+        private void zone1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeViewChartZone(1);
+            timerGhost.Start();
+        }
+
+        private void zone2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeViewChartZone(2);
+        }
+
+
+
+        double rt2 = 0;                              // Time X from chart
+        double tempa2 = 0;
+        private void timerGhost_Tick(object sender, EventArgs e)
+        {
+            ChartArea CA = chartZone2.ChartAreas[0];
+            CA.CursorX.AutoScroll = true;
+
+            rt2 = rt + 100;
+            tempa2 = rt / 1000;
+
+
+            chartView.Series["T-1"].Points.AddXY(tempa.ToString("0.0"), "20");
+
+            chartView.ChartAreas[0].AxisY2.Maximum = Double.NaN;
+            chartView.ChartAreas[0].AxisY2.Minimum = Double.NaN;
+            chartView.ChartAreas[0].RecalculateAxesScale();
+
+
+
+
+            if (chartView.Series["T-1"].Points.Count == 31)
+            {
+
+                chartView.Series["T-1"].Points.RemoveAt(0);
+            }
+        }
+
+
+        
+
+
+
+      
+            
+
+        }
     }
-}

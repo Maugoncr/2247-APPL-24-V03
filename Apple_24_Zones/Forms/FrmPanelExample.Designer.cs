@@ -70,19 +70,46 @@
             this.lbView11 = new System.Windows.Forms.Label();
             this.lbView12 = new System.Windows.Forms.Label();
             this.chartView = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panelCheckView = new System.Windows.Forms.Panel();
+            this.lbRed = new System.Windows.Forms.Label();
+            this.checkView12 = new System.Windows.Forms.CheckBox();
+            this.lbPurple = new System.Windows.Forms.Label();
+            this.checkView11 = new System.Windows.Forms.CheckBox();
+            this.lbGreen = new System.Windows.Forms.Label();
+            this.checkView10 = new System.Windows.Forms.CheckBox();
+            this.lbYellow = new System.Windows.Forms.Label();
+            this.checkView9 = new System.Windows.Forms.CheckBox();
+            this.lbSky = new System.Windows.Forms.Label();
+            this.checkView8 = new System.Windows.Forms.CheckBox();
+            this.lbBlue = new System.Windows.Forms.Label();
+            this.checkView7 = new System.Windows.Forms.CheckBox();
+            this.lbOrange = new System.Windows.Forms.Label();
+            this.checkView6 = new System.Windows.Forms.CheckBox();
+            this.lbLightGreen = new System.Windows.Forms.Label();
+            this.checkView5 = new System.Windows.Forms.CheckBox();
+            this.lbMaroon = new System.Windows.Forms.Label();
+            this.checkView4 = new System.Windows.Forms.CheckBox();
+            this.lbMag = new System.Windows.Forms.Label();
+            this.checkView3 = new System.Windows.Forms.CheckBox();
+            this.lbBlack = new System.Windows.Forms.Label();
+            this.checkView2 = new System.Windows.Forms.CheckBox();
+            this.lbOlive = new System.Windows.Forms.Label();
+            this.checkView1 = new System.Windows.Forms.CheckBox();
             this.panelBoth.SuspendLayout();
             this.panelViewZone.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartView)).BeginInit();
+            this.panelCheckView.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBoth
             // 
             this.panelBoth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(255)))));
+            this.panelBoth.Controls.Add(this.panelCheckView);
             this.panelBoth.Controls.Add(this.panelViewZone);
             this.panelBoth.Controls.Add(this.chartView);
             this.panelBoth.Location = new System.Drawing.Point(23, 12);
             this.panelBoth.Name = "panelBoth";
-            this.panelBoth.Size = new System.Drawing.Size(1283, 491);
+            this.panelBoth.Size = new System.Drawing.Size(1320, 491);
             this.panelBoth.TabIndex = 272;
             // 
             // panelViewZone
@@ -457,6 +484,302 @@
             this.chartView.TabIndex = 212;
             this.chartView.Text = "chart1";
             // 
+            // panelCheckView
+            // 
+            this.panelCheckView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(226)))), ((int)(((byte)(220)))));
+            this.panelCheckView.Controls.Add(this.lbRed);
+            this.panelCheckView.Controls.Add(this.checkView12);
+            this.panelCheckView.Controls.Add(this.lbPurple);
+            this.panelCheckView.Controls.Add(this.checkView11);
+            this.panelCheckView.Controls.Add(this.lbGreen);
+            this.panelCheckView.Controls.Add(this.checkView10);
+            this.panelCheckView.Controls.Add(this.lbYellow);
+            this.panelCheckView.Controls.Add(this.checkView9);
+            this.panelCheckView.Controls.Add(this.lbSky);
+            this.panelCheckView.Controls.Add(this.checkView8);
+            this.panelCheckView.Controls.Add(this.lbBlue);
+            this.panelCheckView.Controls.Add(this.checkView7);
+            this.panelCheckView.Controls.Add(this.lbOrange);
+            this.panelCheckView.Controls.Add(this.checkView6);
+            this.panelCheckView.Controls.Add(this.lbLightGreen);
+            this.panelCheckView.Controls.Add(this.checkView5);
+            this.panelCheckView.Controls.Add(this.lbMaroon);
+            this.panelCheckView.Controls.Add(this.checkView4);
+            this.panelCheckView.Controls.Add(this.lbMag);
+            this.panelCheckView.Controls.Add(this.checkView3);
+            this.panelCheckView.Controls.Add(this.lbBlack);
+            this.panelCheckView.Controls.Add(this.checkView2);
+            this.panelCheckView.Controls.Add(this.lbOlive);
+            this.panelCheckView.Controls.Add(this.checkView1);
+            this.panelCheckView.Location = new System.Drawing.Point(1223, 17);
+            this.panelCheckView.Name = "panelCheckView";
+            this.panelCheckView.Size = new System.Drawing.Size(90, 360);
+            this.panelCheckView.TabIndex = 267;
+            // 
+            // lbRed
+            // 
+            this.lbRed.AutoSize = true;
+            this.lbRed.BackColor = System.Drawing.Color.Red;
+            this.lbRed.Location = new System.Drawing.Point(7, 5);
+            this.lbRed.Name = "lbRed";
+            this.lbRed.Size = new System.Drawing.Size(19, 13);
+            this.lbRed.TabIndex = 241;
+            this.lbRed.Text = "    ";
+            // 
+            // checkView12
+            // 
+            this.checkView12.AutoSize = true;
+            this.checkView12.Checked = true;
+            this.checkView12.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkView12.Location = new System.Drawing.Point(30, 330);
+            this.checkView12.Name = "checkView12";
+            this.checkView12.Size = new System.Drawing.Size(48, 17);
+            this.checkView12.TabIndex = 264;
+            this.checkView12.Text = "T-24";
+            this.checkView12.UseVisualStyleBackColor = true;
+            // 
+            // lbPurple
+            // 
+            this.lbPurple.AutoSize = true;
+            this.lbPurple.BackColor = System.Drawing.Color.Purple;
+            this.lbPurple.Location = new System.Drawing.Point(7, 119);
+            this.lbPurple.Name = "lbPurple";
+            this.lbPurple.Size = new System.Drawing.Size(19, 13);
+            this.lbPurple.TabIndex = 245;
+            this.lbPurple.Text = "    ";
+            // 
+            // checkView11
+            // 
+            this.checkView11.AutoSize = true;
+            this.checkView11.Checked = true;
+            this.checkView11.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkView11.Location = new System.Drawing.Point(30, 299);
+            this.checkView11.Name = "checkView11";
+            this.checkView11.Size = new System.Drawing.Size(48, 17);
+            this.checkView11.TabIndex = 263;
+            this.checkView11.Text = "T-23";
+            this.checkView11.UseVisualStyleBackColor = true;
+            // 
+            // lbGreen
+            // 
+            this.lbGreen.AutoSize = true;
+            this.lbGreen.BackColor = System.Drawing.Color.Green;
+            this.lbGreen.Location = new System.Drawing.Point(7, 92);
+            this.lbGreen.Name = "lbGreen";
+            this.lbGreen.Size = new System.Drawing.Size(19, 13);
+            this.lbGreen.TabIndex = 244;
+            this.lbGreen.Text = "    ";
+            // 
+            // checkView10
+            // 
+            this.checkView10.AutoSize = true;
+            this.checkView10.Checked = true;
+            this.checkView10.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkView10.Location = new System.Drawing.Point(30, 272);
+            this.checkView10.Name = "checkView10";
+            this.checkView10.Size = new System.Drawing.Size(48, 17);
+            this.checkView10.TabIndex = 262;
+            this.checkView10.Text = "T-22";
+            this.checkView10.UseVisualStyleBackColor = true;
+            // 
+            // lbYellow
+            // 
+            this.lbYellow.AutoSize = true;
+            this.lbYellow.BackColor = System.Drawing.Color.Yellow;
+            this.lbYellow.Location = new System.Drawing.Point(7, 62);
+            this.lbYellow.Name = "lbYellow";
+            this.lbYellow.Size = new System.Drawing.Size(19, 13);
+            this.lbYellow.TabIndex = 243;
+            this.lbYellow.Text = "    ";
+            // 
+            // checkView9
+            // 
+            this.checkView9.AutoSize = true;
+            this.checkView9.Checked = true;
+            this.checkView9.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkView9.Location = new System.Drawing.Point(30, 241);
+            this.checkView9.Name = "checkView9";
+            this.checkView9.Size = new System.Drawing.Size(48, 17);
+            this.checkView9.TabIndex = 261;
+            this.checkView9.Text = "T-21";
+            this.checkView9.UseVisualStyleBackColor = true;
+            // 
+            // lbSky
+            // 
+            this.lbSky.AutoSize = true;
+            this.lbSky.BackColor = System.Drawing.Color.Cyan;
+            this.lbSky.Location = new System.Drawing.Point(7, 148);
+            this.lbSky.Name = "lbSky";
+            this.lbSky.Size = new System.Drawing.Size(19, 13);
+            this.lbSky.TabIndex = 246;
+            this.lbSky.Text = "    ";
+            // 
+            // checkView8
+            // 
+            this.checkView8.AutoSize = true;
+            this.checkView8.Checked = true;
+            this.checkView8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkView8.Location = new System.Drawing.Point(30, 210);
+            this.checkView8.Name = "checkView8";
+            this.checkView8.Size = new System.Drawing.Size(48, 17);
+            this.checkView8.TabIndex = 260;
+            this.checkView8.Text = "T-20";
+            this.checkView8.UseVisualStyleBackColor = true;
+            // 
+            // lbBlue
+            // 
+            this.lbBlue.AutoSize = true;
+            this.lbBlue.BackColor = System.Drawing.Color.Blue;
+            this.lbBlue.Location = new System.Drawing.Point(7, 32);
+            this.lbBlue.Name = "lbBlue";
+            this.lbBlue.Size = new System.Drawing.Size(19, 13);
+            this.lbBlue.TabIndex = 242;
+            this.lbBlue.Text = "    ";
+            // 
+            // checkView7
+            // 
+            this.checkView7.AutoSize = true;
+            this.checkView7.Checked = true;
+            this.checkView7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkView7.Location = new System.Drawing.Point(30, 178);
+            this.checkView7.Name = "checkView7";
+            this.checkView7.Size = new System.Drawing.Size(48, 17);
+            this.checkView7.TabIndex = 259;
+            this.checkView7.Text = "T-19";
+            this.checkView7.UseVisualStyleBackColor = true;
+            // 
+            // lbOrange
+            // 
+            this.lbOrange.AutoSize = true;
+            this.lbOrange.BackColor = System.Drawing.Color.Orange;
+            this.lbOrange.Location = new System.Drawing.Point(7, 179);
+            this.lbOrange.Name = "lbOrange";
+            this.lbOrange.Size = new System.Drawing.Size(19, 13);
+            this.lbOrange.TabIndex = 247;
+            this.lbOrange.Text = "    ";
+            // 
+            // checkView6
+            // 
+            this.checkView6.AutoSize = true;
+            this.checkView6.Checked = true;
+            this.checkView6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkView6.Location = new System.Drawing.Point(30, 147);
+            this.checkView6.Name = "checkView6";
+            this.checkView6.Size = new System.Drawing.Size(48, 17);
+            this.checkView6.TabIndex = 258;
+            this.checkView6.Text = "T-18";
+            this.checkView6.UseVisualStyleBackColor = true;
+            // 
+            // lbLightGreen
+            // 
+            this.lbLightGreen.AutoSize = true;
+            this.lbLightGreen.BackColor = System.Drawing.Color.Lime;
+            this.lbLightGreen.Location = new System.Drawing.Point(7, 242);
+            this.lbLightGreen.Name = "lbLightGreen";
+            this.lbLightGreen.Size = new System.Drawing.Size(19, 13);
+            this.lbLightGreen.TabIndex = 248;
+            this.lbLightGreen.Text = "    ";
+            // 
+            // checkView5
+            // 
+            this.checkView5.AutoSize = true;
+            this.checkView5.Checked = true;
+            this.checkView5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkView5.Location = new System.Drawing.Point(30, 118);
+            this.checkView5.Name = "checkView5";
+            this.checkView5.Size = new System.Drawing.Size(48, 17);
+            this.checkView5.TabIndex = 257;
+            this.checkView5.Text = "T-17";
+            this.checkView5.UseVisualStyleBackColor = true;
+            // 
+            // lbMaroon
+            // 
+            this.lbMaroon.AutoSize = true;
+            this.lbMaroon.BackColor = System.Drawing.Color.Maroon;
+            this.lbMaroon.Location = new System.Drawing.Point(7, 211);
+            this.lbMaroon.Name = "lbMaroon";
+            this.lbMaroon.Size = new System.Drawing.Size(19, 13);
+            this.lbMaroon.TabIndex = 249;
+            this.lbMaroon.Text = "    ";
+            // 
+            // checkView4
+            // 
+            this.checkView4.AutoSize = true;
+            this.checkView4.Checked = true;
+            this.checkView4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkView4.Location = new System.Drawing.Point(30, 91);
+            this.checkView4.Name = "checkView4";
+            this.checkView4.Size = new System.Drawing.Size(48, 17);
+            this.checkView4.TabIndex = 256;
+            this.checkView4.Text = "T-16";
+            this.checkView4.UseVisualStyleBackColor = true;
+            // 
+            // lbMag
+            // 
+            this.lbMag.AutoSize = true;
+            this.lbMag.BackColor = System.Drawing.Color.Magenta;
+            this.lbMag.Location = new System.Drawing.Point(7, 272);
+            this.lbMag.Name = "lbMag";
+            this.lbMag.Size = new System.Drawing.Size(19, 13);
+            this.lbMag.TabIndex = 250;
+            this.lbMag.Text = "    ";
+            // 
+            // checkView3
+            // 
+            this.checkView3.AutoSize = true;
+            this.checkView3.Checked = true;
+            this.checkView3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkView3.Location = new System.Drawing.Point(30, 61);
+            this.checkView3.Name = "checkView3";
+            this.checkView3.Size = new System.Drawing.Size(48, 17);
+            this.checkView3.TabIndex = 255;
+            this.checkView3.Text = "T-15";
+            this.checkView3.UseVisualStyleBackColor = true;
+            // 
+            // lbBlack
+            // 
+            this.lbBlack.AutoSize = true;
+            this.lbBlack.BackColor = System.Drawing.Color.Black;
+            this.lbBlack.Location = new System.Drawing.Point(7, 331);
+            this.lbBlack.Name = "lbBlack";
+            this.lbBlack.Size = new System.Drawing.Size(19, 13);
+            this.lbBlack.TabIndex = 251;
+            this.lbBlack.Text = "    ";
+            // 
+            // checkView2
+            // 
+            this.checkView2.AutoSize = true;
+            this.checkView2.Checked = true;
+            this.checkView2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkView2.Location = new System.Drawing.Point(30, 32);
+            this.checkView2.Name = "checkView2";
+            this.checkView2.Size = new System.Drawing.Size(48, 17);
+            this.checkView2.TabIndex = 254;
+            this.checkView2.Text = "T-14";
+            this.checkView2.UseVisualStyleBackColor = true;
+            // 
+            // lbOlive
+            // 
+            this.lbOlive.AutoSize = true;
+            this.lbOlive.BackColor = System.Drawing.Color.Olive;
+            this.lbOlive.Location = new System.Drawing.Point(7, 300);
+            this.lbOlive.Name = "lbOlive";
+            this.lbOlive.Size = new System.Drawing.Size(19, 13);
+            this.lbOlive.TabIndex = 252;
+            this.lbOlive.Text = "    ";
+            // 
+            // checkView1
+            // 
+            this.checkView1.AutoSize = true;
+            this.checkView1.Checked = true;
+            this.checkView1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkView1.Location = new System.Drawing.Point(30, 4);
+            this.checkView1.Name = "checkView1";
+            this.checkView1.Size = new System.Drawing.Size(48, 17);
+            this.checkView1.TabIndex = 253;
+            this.checkView1.Text = "T-13";
+            this.checkView1.UseVisualStyleBackColor = true;
+            // 
             // FrmPanelExample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,6 +792,8 @@
             this.panelViewZone.ResumeLayout(false);
             this.panelViewZone.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartView)).EndInit();
+            this.panelCheckView.ResumeLayout(false);
+            this.panelCheckView.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -503,5 +828,30 @@
         private System.Windows.Forms.Label lbView11;
         private System.Windows.Forms.Label lbView12;
         public System.Windows.Forms.DataVisualization.Charting.Chart chartView;
+        private System.Windows.Forms.Panel panelCheckView;
+        private System.Windows.Forms.Label lbRed;
+        private System.Windows.Forms.CheckBox checkView12;
+        private System.Windows.Forms.Label lbPurple;
+        private System.Windows.Forms.CheckBox checkView11;
+        private System.Windows.Forms.Label lbGreen;
+        private System.Windows.Forms.CheckBox checkView10;
+        private System.Windows.Forms.Label lbYellow;
+        private System.Windows.Forms.CheckBox checkView9;
+        private System.Windows.Forms.Label lbSky;
+        private System.Windows.Forms.CheckBox checkView8;
+        private System.Windows.Forms.Label lbBlue;
+        private System.Windows.Forms.CheckBox checkView7;
+        private System.Windows.Forms.Label lbOrange;
+        private System.Windows.Forms.CheckBox checkView6;
+        private System.Windows.Forms.Label lbLightGreen;
+        private System.Windows.Forms.CheckBox checkView5;
+        private System.Windows.Forms.Label lbMaroon;
+        private System.Windows.Forms.CheckBox checkView4;
+        private System.Windows.Forms.Label lbMag;
+        private System.Windows.Forms.CheckBox checkView3;
+        private System.Windows.Forms.Label lbBlack;
+        private System.Windows.Forms.CheckBox checkView2;
+        private System.Windows.Forms.Label lbOlive;
+        private System.Windows.Forms.CheckBox checkView1;
     }
 }
