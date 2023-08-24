@@ -215,12 +215,12 @@ namespace Apple_24_Zones.Forms
 
             //Chart things
 
-            ChartArea CA = ChartMain.ChartAreas[0];
+            ChartArea CA = chartZone2.ChartAreas[0];
             CA.CursorX.AutoScroll = true;
 
-            ChartMain.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.LightGray;
-            ChartMain.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
-            ChartMain.ChartAreas[0].AxisY.MajorGrid.LineDashStyle = ChartDashStyle.Solid;
+            chartZone2.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.LightGray;
+            chartZone2.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+            chartZone2.ChartAreas[0].AxisY.MajorGrid.LineDashStyle = ChartDashStyle.Solid;
 
             CA.AxisY.MinorTickMark.Enabled = true;
             CA.AxisY.MinorGrid.Enabled = true;
@@ -238,14 +238,14 @@ namespace Apple_24_Zones.Forms
             lbRecord.Text = "Record Data";
             lbRecord.ForeColor = Color.Black;
 
-            ChartMain.Series.Clear();
-            chart1.Series.Clear();
+            chartZone2.Series.Clear();
+            chartZone1.Series.Clear();
             GenerarChart12();
             GenerarChart24();
 
 
-            ChartMain.Series["T-13"].Points.Clear(); ChartMain.Series["T-14"].Points.Clear(); ChartMain.Series["T-15"].Points.Clear(); ChartMain.Series["T-16"].Points.Clear(); ChartMain.Series["T-17"].Points.Clear(); ChartMain.Series["T-18"].Points.Clear(); ChartMain.Series["T-19"].Points.Clear(); ChartMain.Series["T-20"].Points.Clear(); ChartMain.Series["T-21"].Points.Clear(); ChartMain.Series["T-22"].Points.Clear(); ChartMain.Series["T-23"].Points.Clear(); ChartMain.Series["T-24"].Points.Clear();
-            chart1.Series["T-1"].Points.Clear(); chart1.Series["T-2"].Points.Clear(); chart1.Series["T-3"].Points.Clear(); chart1.Series["T-4"].Points.Clear(); chart1.Series["T-5"].Points.Clear(); chart1.Series["T-6"].Points.Clear(); chart1.Series["T-7"].Points.Clear(); chart1.Series["T-8"].Points.Clear(); chart1.Series["T-9"].Points.Clear(); chart1.Series["T-10"].Points.Clear(); chart1.Series["T-11"].Points.Clear(); chart1.Series["T-12"].Points.Clear();
+            chartZone2.Series["T-13"].Points.Clear(); chartZone2.Series["T-14"].Points.Clear(); chartZone2.Series["T-15"].Points.Clear(); chartZone2.Series["T-16"].Points.Clear(); chartZone2.Series["T-17"].Points.Clear(); chartZone2.Series["T-18"].Points.Clear(); chartZone2.Series["T-19"].Points.Clear(); chartZone2.Series["T-20"].Points.Clear(); chartZone2.Series["T-21"].Points.Clear(); chartZone2.Series["T-22"].Points.Clear(); chartZone2.Series["T-23"].Points.Clear(); chartZone2.Series["T-24"].Points.Clear();
+            chartZone1.Series["T-1"].Points.Clear(); chartZone1.Series["T-2"].Points.Clear(); chartZone1.Series["T-3"].Points.Clear(); chartZone1.Series["T-4"].Points.Clear(); chartZone1.Series["T-5"].Points.Clear(); chartZone1.Series["T-6"].Points.Clear(); chartZone1.Series["T-7"].Points.Clear(); chartZone1.Series["T-8"].Points.Clear(); chartZone1.Series["T-9"].Points.Clear(); chartZone1.Series["T-10"].Points.Clear(); chartZone1.Series["T-11"].Points.Clear(); chartZone1.Series["T-12"].Points.Clear();
 
             timerForChartTC.Stop();
 
@@ -337,8 +337,8 @@ namespace Apple_24_Zones.Forms
             leds[4].BringToFront();
             leds[6].BringToFront();
 
-            updateChart(chart1);
-            updateChart(ChartMain);
+            updateChart(chartZone1);
+            updateChart(chartZone2);
 
             timerForChartTC.Interval = 100;
             timerForChartTC.Start();
@@ -453,62 +453,62 @@ namespace Apple_24_Zones.Forms
         private void GenerarChart12()
         {
 
-            ChartMain.Series.Add("T-13");
-            ChartMain.Series.Add("T-14");
-            ChartMain.Series.Add("T-15");
-            ChartMain.Series.Add("T-16");
-            ChartMain.Series.Add("T-17");
-            ChartMain.Series.Add("T-18");
-            ChartMain.Series.Add("T-19");
-            ChartMain.Series.Add("T-20");
-            ChartMain.Series.Add("T-21");
-            ChartMain.Series.Add("T-22");
-            ChartMain.Series.Add("T-23");
-            ChartMain.Series.Add("T-24");
+            chartZone2.Series.Add("T-13");
+            chartZone2.Series.Add("T-14");
+            chartZone2.Series.Add("T-15");
+            chartZone2.Series.Add("T-16");
+            chartZone2.Series.Add("T-17");
+            chartZone2.Series.Add("T-18");
+            chartZone2.Series.Add("T-19");
+            chartZone2.Series.Add("T-20");
+            chartZone2.Series.Add("T-21");
+            chartZone2.Series.Add("T-22");
+            chartZone2.Series.Add("T-23");
+            chartZone2.Series.Add("T-24");
            
 
-            ChartMain.Series["T-13"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-14"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-15"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-16"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-17"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-18"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-19"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-20"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-21"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-22"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-23"].ChartType = SeriesChartType.Spline;
-            ChartMain.Series["T-24"].ChartType = SeriesChartType.Spline;
+            chartZone2.Series["T-13"].ChartType = SeriesChartType.Spline;
+            chartZone2.Series["T-14"].ChartType = SeriesChartType.Spline;
+            chartZone2.Series["T-15"].ChartType = SeriesChartType.Spline;
+            chartZone2.Series["T-16"].ChartType = SeriesChartType.Spline;
+            chartZone2.Series["T-17"].ChartType = SeriesChartType.Spline;
+            chartZone2.Series["T-18"].ChartType = SeriesChartType.Spline;
+            chartZone2.Series["T-19"].ChartType = SeriesChartType.Spline;
+            chartZone2.Series["T-20"].ChartType = SeriesChartType.Spline;
+            chartZone2.Series["T-21"].ChartType = SeriesChartType.Spline;
+            chartZone2.Series["T-22"].ChartType = SeriesChartType.Spline;
+            chartZone2.Series["T-23"].ChartType = SeriesChartType.Spline;
+            chartZone2.Series["T-24"].ChartType = SeriesChartType.Spline;
            
         }
 
         private void GenerarChart24()
         {
-            chart1.Series.Add("T-1");
-            chart1.Series.Add("T-2");
-            chart1.Series.Add("T-3");
-            chart1.Series.Add("T-4");
-            chart1.Series.Add("T-5");
-            chart1.Series.Add("T-6");
-            chart1.Series.Add("T-7");
-            chart1.Series.Add("T-8");
-            chart1.Series.Add("T-9");
-            chart1.Series.Add("T-10");
-            chart1.Series.Add("T-11");
-            chart1.Series.Add("T-12");
+            chartZone1.Series.Add("T-1");
+            chartZone1.Series.Add("T-2");
+            chartZone1.Series.Add("T-3");
+            chartZone1.Series.Add("T-4");
+            chartZone1.Series.Add("T-5");
+            chartZone1.Series.Add("T-6");
+            chartZone1.Series.Add("T-7");
+            chartZone1.Series.Add("T-8");
+            chartZone1.Series.Add("T-9");
+            chartZone1.Series.Add("T-10");
+            chartZone1.Series.Add("T-11");
+            chartZone1.Series.Add("T-12");
 
-            chart1.Series["T-1"].ChartType = SeriesChartType.Spline;
-            chart1.Series["T-2"].ChartType = SeriesChartType.Spline;
-            chart1.Series["T-3"].ChartType = SeriesChartType.Spline;
-            chart1.Series["T-4"].ChartType = SeriesChartType.Spline;
-            chart1.Series["T-5"].ChartType = SeriesChartType.Spline;
-            chart1.Series["T-6"].ChartType = SeriesChartType.Spline;
-            chart1.Series["T-7"].ChartType = SeriesChartType.Spline;
-            chart1.Series["T-8"].ChartType = SeriesChartType.Spline;
-            chart1.Series["T-9"].ChartType = SeriesChartType.Spline;
-            chart1.Series["T-10"].ChartType = SeriesChartType.Spline;
-            chart1.Series["T-11"].ChartType = SeriesChartType.Spline;
-            chart1.Series["T-12"].ChartType = SeriesChartType.Spline;
+            chartZone1.Series["T-1"].ChartType = SeriesChartType.Spline;
+            chartZone1.Series["T-2"].ChartType = SeriesChartType.Spline;
+            chartZone1.Series["T-3"].ChartType = SeriesChartType.Spline;
+            chartZone1.Series["T-4"].ChartType = SeriesChartType.Spline;
+            chartZone1.Series["T-5"].ChartType = SeriesChartType.Spline;
+            chartZone1.Series["T-6"].ChartType = SeriesChartType.Spline;
+            chartZone1.Series["T-7"].ChartType = SeriesChartType.Spline;
+            chartZone1.Series["T-8"].ChartType = SeriesChartType.Spline;
+            chartZone1.Series["T-9"].ChartType = SeriesChartType.Spline;
+            chartZone1.Series["T-10"].ChartType = SeriesChartType.Spline;
+            chartZone1.Series["T-11"].ChartType = SeriesChartType.Spline;
+            chartZone1.Series["T-12"].ChartType = SeriesChartType.Spline;
         }
 
 
@@ -580,14 +580,14 @@ namespace Apple_24_Zones.Forms
                     label32.Visible = false;
 
                     //SIMULATION...
-                    ChartMain.ChartAreas[0].AxisX.Minimum = 0;
-                    ChartMain.Series["T-1"].Points.AddXY(0, 20);
-                    ChartMain.Series["T-1"].Points.AddXY(1, 21);
-                    ChartMain.Series["T-1"].Points.AddXY(2, 23);
-                    ChartMain.Series["T-1"].Points.AddXY(3, 23);
-                    ChartMain.Series["T-1"].Points.AddXY(4, 21);
-                    ChartMain.Series["T-1"].Points.AddXY(5, 24);
-                    ChartMain.Series["T-1"].Points.AddXY(6, 20);
+                    chartZone2.ChartAreas[0].AxisX.Minimum = 0;
+                    chartZone2.Series["T-1"].Points.AddXY(0, 20);
+                    chartZone2.Series["T-1"].Points.AddXY(1, 21);
+                    chartZone2.Series["T-1"].Points.AddXY(2, 23);
+                    chartZone2.Series["T-1"].Points.AddXY(3, 23);
+                    chartZone2.Series["T-1"].Points.AddXY(4, 21);
+                    chartZone2.Series["T-1"].Points.AddXY(5, 24);
+                    chartZone2.Series["T-1"].Points.AddXY(6, 20);
 
 
                 }
@@ -657,32 +657,32 @@ namespace Apple_24_Zones.Forms
         {
             //ChartMain.Series.Add("T-13");
 
-            ChartArea CA = ChartMain.ChartAreas[0];
+            ChartArea CA = chartZone2.ChartAreas[0];
             CA.CursorX.AutoScroll = true;
 
             rt = rt + 100;
             tempa = rt / 1000;
 
-            ChartMain.Series["T-13"].Points.AddXY(tempa.ToString("0.0"), "20");
+            chartZone2.Series["T-13"].Points.AddXY(tempa.ToString("0.0"), "20");
 
-            ChartMain.ChartAreas[0].AxisY2.Maximum = Double.NaN;
-            ChartMain.ChartAreas[0].AxisY2.Minimum = Double.NaN;
-            ChartMain.ChartAreas[0].RecalculateAxesScale();
+            chartZone2.ChartAreas[0].AxisY2.Maximum = Double.NaN;
+            chartZone2.ChartAreas[0].AxisY2.Minimum = Double.NaN;
+            chartZone2.ChartAreas[0].RecalculateAxesScale();
 
-            if (ChartMain.Series["T-13"].Points.Count == 31)
+            if (chartZone2.Series["T-13"].Points.Count == 31)
             {
 
-                ChartMain.Series["T-13"].Points.RemoveAt(0);
+                chartZone2.Series["T-13"].Points.RemoveAt(0);
             }
 
 
 
 
 
-            chart1.ChartAreas[0].AxisX.Interval = 5;
+            chartZone1.ChartAreas[0].AxisX.Interval = 5;
             //chart1.ChartAreas[0].AxisY2.Maximum = Double.NaN;
             //chart1.ChartAreas[0].AxisY2.Minimum = Double.NaN;
-            chart1.ChartAreas[0].RecalculateAxesScale();
+            chartZone1.ChartAreas[0].RecalculateAxesScale();
             stopwatch.Start();
             //ChartMain.Series["End"].IsVisibleInLegend = false;
             Random rnd = new Random();
@@ -714,43 +714,43 @@ namespace Apple_24_Zones.Forms
            //Test points random generated
            if ((stopwatch.ElapsedMilliseconds / 1000.0) < 30 && freeze != true)
            {
-               chart1.Series["T-1"].Points.AddXY((stopwatch.ElapsedMilliseconds/1000.0), rnd.Next(90, 100));
-               chart1.Series["T-2"].Points.AddXY((stopwatch.ElapsedMilliseconds/1000.0), rnd.Next(80, 90));
-               chart1.Series["T-3"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(70, 80));
-               chart1.Series["T-4"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(60, 70));
-               chart1.Series["T-5"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(50, 60));
-               chart1.Series["T-6"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(40, 50));
-               chart1.Series["T-7"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(30, 40));
-               chart1.Series["T-8"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(20, 30));
-               chart1.Series["T-9"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(10, 20));
-               chart1.Series["T-10"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
-               chart1.Series["T-11"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
-               chart1.Series["T-12"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
+               chartZone1.Series["T-1"].Points.AddXY((stopwatch.ElapsedMilliseconds/1000.0), rnd.Next(90, 100));
+               chartZone1.Series["T-2"].Points.AddXY((stopwatch.ElapsedMilliseconds/1000.0), rnd.Next(80, 90));
+               chartZone1.Series["T-3"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(70, 80));
+               chartZone1.Series["T-4"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(60, 70));
+               chartZone1.Series["T-5"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(50, 60));
+               chartZone1.Series["T-6"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(40, 50));
+               chartZone1.Series["T-7"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(30, 40));
+               chartZone1.Series["T-8"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(20, 30));
+               chartZone1.Series["T-9"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(10, 20));
+               chartZone1.Series["T-10"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
+               chartZone1.Series["T-11"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
+               chartZone1.Series["T-12"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
 
                 
 
             }
 
-           ChartArea ca = chart1.ChartAreas["ChartArea1"];
-           Series s = chart1.Series["T-1"];
+           ChartArea ca = chartZone1.ChartAreas["ChartArea1"];
+           Series s = chartZone1.Series["T-1"];
 
 
 
            if((stopwatch.ElapsedMilliseconds / 1000.0) > 30 && !freeze)
            {
                int ix = s.Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(80, 90));
-               chart1.Series["T-1"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(90, 100));
-                chart1.Series["T-2"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(80, 90));
-                chart1.Series["T-3"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(70, 80));
-                chart1.Series["T-4"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(60, 70));
-                chart1.Series["T-5"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(50, 60));
-                chart1.Series["T-6"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(40, 50));
-                chart1.Series["T-7"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(30, 40));
-                chart1.Series["T-8"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(20, 30));
-                chart1.Series["T-9"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(10, 20));
-                chart1.Series["T-10"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
-                chart1.Series["T-11"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
-                chart1.Series["T-12"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
+               chartZone1.Series["T-1"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(90, 100));
+                chartZone1.Series["T-2"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(80, 90));
+                chartZone1.Series["T-3"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(70, 80));
+                chartZone1.Series["T-4"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(60, 70));
+                chartZone1.Series["T-5"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(50, 60));
+                chartZone1.Series["T-6"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(40, 50));
+                chartZone1.Series["T-7"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(30, 40));
+                chartZone1.Series["T-8"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(20, 30));
+                chartZone1.Series["T-9"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(10, 20));
+                chartZone1.Series["T-10"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
+                chartZone1.Series["T-11"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
+                chartZone1.Series["T-12"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
               
                 double temper = s.Points[ix].XValue;
                 //ca.AxisX.Maximum = Math.Round(s.Points[ix].XValue, 1);
@@ -782,8 +782,8 @@ namespace Apple_24_Zones.Forms
 
 
 
-           ChartArea ca2 = ChartMain.ChartAreas[0];
-           Series s2 = ChartMain.Series["T-13"];
+           ChartArea ca2 = chartZone2.ChartAreas[0];
+           Series s2 = chartZone2.Series["T-13"];
 
             /*
             if (runningCount >= 30 && !freeze)
@@ -825,18 +825,18 @@ namespace Apple_24_Zones.Forms
             points[10] = ChartMain.Series["T-23"].Points.Last();
             points[11] = ChartMain.Series["T-24"].Points.Last();
            */
-            points2[0] = chart1.Series["T-1"].Points.Last();
-            points2[1] = chart1.Series["T-2"].Points.Last();
-            points2[2] = chart1.Series["T-3"].Points.Last();     
-            points2[3] = chart1.Series["T-4"].Points.Last();
-            points2[4] = chart1.Series["T-5"].Points.Last();
-            points2[5] = chart1.Series["T-6"].Points.Last();
-            points2[6] = chart1.Series["T-7"].Points.Last();
-            points2[7] = chart1.Series["T-8"].Points.Last();
-            points2[8] = chart1.Series["T-9"].Points.Last();
-            points2[9] = chart1.Series["T-10"].Points.Last();
-            points2[10] = chart1.Series["T-11"].Points.Last();
-            points2[11] = chart1.Series["T-12"].Points.Last();
+            points2[0] = chartZone1.Series["T-1"].Points.Last();
+            points2[1] = chartZone1.Series["T-2"].Points.Last();
+            points2[2] = chartZone1.Series["T-3"].Points.Last();     
+            points2[3] = chartZone1.Series["T-4"].Points.Last();
+            points2[4] = chartZone1.Series["T-5"].Points.Last();
+            points2[5] = chartZone1.Series["T-6"].Points.Last();
+            points2[6] = chartZone1.Series["T-7"].Points.Last();
+            points2[7] = chartZone1.Series["T-8"].Points.Last();
+            points2[8] = chartZone1.Series["T-9"].Points.Last();
+            points2[9] = chartZone1.Series["T-10"].Points.Last();
+            points2[10] = chartZone1.Series["T-11"].Points.Last();
+            points2[11] = chartZone1.Series["T-12"].Points.Last();
 
 
             
@@ -887,8 +887,8 @@ namespace Apple_24_Zones.Forms
             average = Math.Truncate(average/ values2.Length);
             textBox48.Text = average.ToString();
 
-            chart1.ChartAreas[0].AxisX.IsMarginVisible = true;
-            chart1.ChartAreas[0].AxisX.LabelStyle.IsEndLabelVisible = true;
+            chartZone1.ChartAreas[0].AxisX.IsMarginVisible = true;
+            chartZone1.ChartAreas[0].AxisX.LabelStyle.IsEndLabelVisible = true;
 
             if (textBox46.Text != null)
             {
@@ -917,32 +917,32 @@ namespace Apple_24_Zones.Forms
         {
             GraficarChart();
 
-            ChartMain.ChartAreas[0].AxisX.Minimum = double.NaN;
-            ChartMain.ChartAreas[0].AxisX.Maximum = double.NaN;
-            ChartMain.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
-            ChartMain.ChartAreas[0].CursorX.AutoScroll = true;
-            ChartMain.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
-            ChartMain.ChartAreas[0].RecalculateAxesScale();
+            chartZone2.ChartAreas[0].AxisX.Minimum = double.NaN;
+            chartZone2.ChartAreas[0].AxisX.Maximum = double.NaN;
+            chartZone2.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
+            chartZone2.ChartAreas[0].CursorX.AutoScroll = true;
+            chartZone2.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
+            chartZone2.ChartAreas[0].RecalculateAxesScale();
 
             if (ZonasSelecionadasChart == 0)
             {
-                if (ChartMain.Series["T-1"].Points.Count >= 100)
+                if (chartZone2.Series["T-1"].Points.Count >= 100)
                 {
-                    ChartMain.Series["T-1"].Points.RemoveAt(0); ChartMain.Series["T-2"].Points.RemoveAt(0); ChartMain.Series["T-3"].Points.RemoveAt(0); ChartMain.Series["T-4"].Points.RemoveAt(0); ChartMain.Series["T-5"].Points.RemoveAt(0); ChartMain.Series["T-6"].Points.RemoveAt(0); ChartMain.Series["T-7"].Points.RemoveAt(0); ChartMain.Series["T-8"].Points.RemoveAt(0); ChartMain.Series["T-9"].Points.RemoveAt(0); ChartMain.Series["T-10"].Points.RemoveAt(0); ChartMain.Series["T-11"].Points.RemoveAt(0); ChartMain.Series["T-12"].Points.RemoveAt(0); ChartMain.Series["T-13"].Points.RemoveAt(0); ChartMain.Series["T-14"].Points.RemoveAt(0); ChartMain.Series["T-15"].Points.RemoveAt(0); ChartMain.Series["T-16"].Points.RemoveAt(0); ChartMain.Series["T-17"].Points.RemoveAt(0); ChartMain.Series["T-18"].Points.RemoveAt(0); ChartMain.Series["T-19"].Points.RemoveAt(0); ChartMain.Series["T-20"].Points.RemoveAt(0); ChartMain.Series["T-21"].Points.RemoveAt(0); ChartMain.Series["T-22"].Points.RemoveAt(0); ChartMain.Series["T-23"].Points.RemoveAt(0); ChartMain.Series["T-24"].Points.RemoveAt(0);
+                    chartZone2.Series["T-1"].Points.RemoveAt(0); chartZone2.Series["T-2"].Points.RemoveAt(0); chartZone2.Series["T-3"].Points.RemoveAt(0); chartZone2.Series["T-4"].Points.RemoveAt(0); chartZone2.Series["T-5"].Points.RemoveAt(0); chartZone2.Series["T-6"].Points.RemoveAt(0); chartZone2.Series["T-7"].Points.RemoveAt(0); chartZone2.Series["T-8"].Points.RemoveAt(0); chartZone2.Series["T-9"].Points.RemoveAt(0); chartZone2.Series["T-10"].Points.RemoveAt(0); chartZone2.Series["T-11"].Points.RemoveAt(0); chartZone2.Series["T-12"].Points.RemoveAt(0); chartZone2.Series["T-13"].Points.RemoveAt(0); chartZone2.Series["T-14"].Points.RemoveAt(0); chartZone2.Series["T-15"].Points.RemoveAt(0); chartZone2.Series["T-16"].Points.RemoveAt(0); chartZone2.Series["T-17"].Points.RemoveAt(0); chartZone2.Series["T-18"].Points.RemoveAt(0); chartZone2.Series["T-19"].Points.RemoveAt(0); chartZone2.Series["T-20"].Points.RemoveAt(0); chartZone2.Series["T-21"].Points.RemoveAt(0); chartZone2.Series["T-22"].Points.RemoveAt(0); chartZone2.Series["T-23"].Points.RemoveAt(0); chartZone2.Series["T-24"].Points.RemoveAt(0);
                 }
             }
             else if (ZonasSelecionadasChart == 1)
             {
-                if (ChartMain.Series["T-1"].Points.Count >= 100)
+                if (chartZone2.Series["T-1"].Points.Count >= 100)
                 {
-                    ChartMain.Series["T-1"].Points.RemoveAt(0); ChartMain.Series["T-2"].Points.RemoveAt(0); ChartMain.Series["T-3"].Points.RemoveAt(0); ChartMain.Series["T-4"].Points.RemoveAt(0); ChartMain.Series["T-5"].Points.RemoveAt(0); ChartMain.Series["T-6"].Points.RemoveAt(0); ChartMain.Series["T-7"].Points.RemoveAt(0); ChartMain.Series["T-8"].Points.RemoveAt(0); ChartMain.Series["T-9"].Points.RemoveAt(0); ChartMain.Series["T-10"].Points.RemoveAt(0); ChartMain.Series["T-11"].Points.RemoveAt(0); ChartMain.Series["T-12"].Points.RemoveAt(0);
+                    chartZone2.Series["T-1"].Points.RemoveAt(0); chartZone2.Series["T-2"].Points.RemoveAt(0); chartZone2.Series["T-3"].Points.RemoveAt(0); chartZone2.Series["T-4"].Points.RemoveAt(0); chartZone2.Series["T-5"].Points.RemoveAt(0); chartZone2.Series["T-6"].Points.RemoveAt(0); chartZone2.Series["T-7"].Points.RemoveAt(0); chartZone2.Series["T-8"].Points.RemoveAt(0); chartZone2.Series["T-9"].Points.RemoveAt(0); chartZone2.Series["T-10"].Points.RemoveAt(0); chartZone2.Series["T-11"].Points.RemoveAt(0); chartZone2.Series["T-12"].Points.RemoveAt(0);
                 } 
             }
             else if (ZonasSelecionadasChart == 2)
             {
-                if (ChartMain.Series["T-13"].Points.Count >= 100)
+                if (chartZone2.Series["T-13"].Points.Count >= 100)
                 {
-                    ChartMain.Series["T-13"].Points.RemoveAt(0); ChartMain.Series["T-14"].Points.RemoveAt(0); ChartMain.Series["T-15"].Points.RemoveAt(0); ChartMain.Series["T-16"].Points.RemoveAt(0); ChartMain.Series["T-17"].Points.RemoveAt(0); ChartMain.Series["T-18"].Points.RemoveAt(0); ChartMain.Series["T-19"].Points.RemoveAt(0); ChartMain.Series["T-20"].Points.RemoveAt(0); ChartMain.Series["T-21"].Points.RemoveAt(0); ChartMain.Series["T-22"].Points.RemoveAt(0); ChartMain.Series["T-23"].Points.RemoveAt(0); ChartMain.Series["T-24"].Points.RemoveAt(0);
+                    chartZone2.Series["T-13"].Points.RemoveAt(0); chartZone2.Series["T-14"].Points.RemoveAt(0); chartZone2.Series["T-15"].Points.RemoveAt(0); chartZone2.Series["T-16"].Points.RemoveAt(0); chartZone2.Series["T-17"].Points.RemoveAt(0); chartZone2.Series["T-18"].Points.RemoveAt(0); chartZone2.Series["T-19"].Points.RemoveAt(0); chartZone2.Series["T-20"].Points.RemoveAt(0); chartZone2.Series["T-21"].Points.RemoveAt(0); chartZone2.Series["T-22"].Points.RemoveAt(0); chartZone2.Series["T-23"].Points.RemoveAt(0); chartZone2.Series["T-24"].Points.RemoveAt(0);
                 }
             }
 
@@ -963,15 +963,15 @@ namespace Apple_24_Zones.Forms
                 double temp = tiempo / 1000;
                 if (ZonasSelecionadasChart == 0)
                 {
-                    ChartMain.Series["TC-1"].Points.AddXY(temp.ToString(), TC1Num.ToString()); ChartMain.Series["TC-2"].Points.AddXY(temp.ToString(), TC2Num.ToString()); ChartMain.Series["TC-3"].Points.AddXY(temp.ToString(), TC3Num.ToString()); ChartMain.Series["TC-4"].Points.AddXY(temp.ToString(), TC4Num.ToString()); ChartMain.Series["TC-5"].Points.AddXY(temp.ToString(), TC5Num.ToString()); ChartMain.Series["TC-6"].Points.AddXY(temp.ToString(), TC6Num.ToString()); ChartMain.Series["TC-7"].Points.AddXY(temp.ToString(), TC7Num.ToString()); ChartMain.Series["TC-8"].Points.AddXY(temp.ToString(), TC8Num.ToString()); ChartMain.Series["TC-9"].Points.AddXY(temp.ToString(), TC9Num.ToString()); ChartMain.Series["TC-10"].Points.AddXY(temp.ToString(), TC10Num.ToString()); ChartMain.Series["TC-11"].Points.AddXY(temp.ToString(), TC11Num.ToString()); ChartMain.Series["TC-12"].Points.AddXY(temp.ToString(), TC12Num.ToString()); ChartMain.Series["TC-13"].Points.AddXY(temp.ToString(), TC13Num.ToString()); ChartMain.Series["TC-14"].Points.AddXY(temp.ToString(), TC14Num.ToString()); ChartMain.Series["TC-15"].Points.AddXY(temp.ToString(), TC15Num.ToString()); ChartMain.Series["TC-16"].Points.AddXY(temp.ToString(), TC16Num.ToString()); ChartMain.Series["TC-17"].Points.AddXY(temp.ToString(), TC17Num.ToString()); ChartMain.Series["TC-18"].Points.AddXY(temp.ToString(), TC18Num.ToString()); ChartMain.Series["TC-19"].Points.AddXY(temp.ToString(), TC19Num.ToString()); ChartMain.Series["TC-20"].Points.AddXY(temp.ToString(), TC20Num.ToString()); ChartMain.Series["TC-21"].Points.AddXY(temp.ToString(), TC21Num.ToString()); ChartMain.Series["TC-22"].Points.AddXY(temp.ToString(), TC22Num.ToString()); ChartMain.Series["TC-23"].Points.AddXY(temp.ToString(), TC23Num.ToString()); ChartMain.Series["TC-24"].Points.AddXY(temp.ToString(), TC24Num.ToString());
+                    chartZone2.Series["TC-1"].Points.AddXY(temp.ToString(), TC1Num.ToString()); chartZone2.Series["TC-2"].Points.AddXY(temp.ToString(), TC2Num.ToString()); chartZone2.Series["TC-3"].Points.AddXY(temp.ToString(), TC3Num.ToString()); chartZone2.Series["TC-4"].Points.AddXY(temp.ToString(), TC4Num.ToString()); chartZone2.Series["TC-5"].Points.AddXY(temp.ToString(), TC5Num.ToString()); chartZone2.Series["TC-6"].Points.AddXY(temp.ToString(), TC6Num.ToString()); chartZone2.Series["TC-7"].Points.AddXY(temp.ToString(), TC7Num.ToString()); chartZone2.Series["TC-8"].Points.AddXY(temp.ToString(), TC8Num.ToString()); chartZone2.Series["TC-9"].Points.AddXY(temp.ToString(), TC9Num.ToString()); chartZone2.Series["TC-10"].Points.AddXY(temp.ToString(), TC10Num.ToString()); chartZone2.Series["TC-11"].Points.AddXY(temp.ToString(), TC11Num.ToString()); chartZone2.Series["TC-12"].Points.AddXY(temp.ToString(), TC12Num.ToString()); chartZone2.Series["TC-13"].Points.AddXY(temp.ToString(), TC13Num.ToString()); chartZone2.Series["TC-14"].Points.AddXY(temp.ToString(), TC14Num.ToString()); chartZone2.Series["TC-15"].Points.AddXY(temp.ToString(), TC15Num.ToString()); chartZone2.Series["TC-16"].Points.AddXY(temp.ToString(), TC16Num.ToString()); chartZone2.Series["TC-17"].Points.AddXY(temp.ToString(), TC17Num.ToString()); chartZone2.Series["TC-18"].Points.AddXY(temp.ToString(), TC18Num.ToString()); chartZone2.Series["TC-19"].Points.AddXY(temp.ToString(), TC19Num.ToString()); chartZone2.Series["TC-20"].Points.AddXY(temp.ToString(), TC20Num.ToString()); chartZone2.Series["TC-21"].Points.AddXY(temp.ToString(), TC21Num.ToString()); chartZone2.Series["TC-22"].Points.AddXY(temp.ToString(), TC22Num.ToString()); chartZone2.Series["TC-23"].Points.AddXY(temp.ToString(), TC23Num.ToString()); chartZone2.Series["TC-24"].Points.AddXY(temp.ToString(), TC24Num.ToString());
                 }
                 else if (ZonasSelecionadasChart == 1)
                 {
-                    ChartMain.Series["TC-1"].Points.AddXY(temp.ToString(), TC1Num.ToString()); ChartMain.Series["TC-2"].Points.AddXY(temp.ToString(), TC2Num.ToString()); ChartMain.Series["TC-3"].Points.AddXY(temp.ToString(), TC3Num.ToString()); ChartMain.Series["TC-4"].Points.AddXY(temp.ToString(), TC4Num.ToString()); ChartMain.Series["TC-5"].Points.AddXY(temp.ToString(), TC5Num.ToString()); ChartMain.Series["TC-6"].Points.AddXY(temp.ToString(), TC6Num.ToString()); ChartMain.Series["TC-7"].Points.AddXY(temp.ToString(), TC7Num.ToString()); ChartMain.Series["TC-8"].Points.AddXY(temp.ToString(), TC8Num.ToString()); ChartMain.Series["TC-9"].Points.AddXY(temp.ToString(), TC9Num.ToString()); ChartMain.Series["TC-10"].Points.AddXY(temp.ToString(), TC10Num.ToString()); ChartMain.Series["TC-11"].Points.AddXY(temp.ToString(), TC11Num.ToString()); ChartMain.Series["TC-12"].Points.AddXY(temp.ToString(), TC12Num.ToString());
+                    chartZone2.Series["TC-1"].Points.AddXY(temp.ToString(), TC1Num.ToString()); chartZone2.Series["TC-2"].Points.AddXY(temp.ToString(), TC2Num.ToString()); chartZone2.Series["TC-3"].Points.AddXY(temp.ToString(), TC3Num.ToString()); chartZone2.Series["TC-4"].Points.AddXY(temp.ToString(), TC4Num.ToString()); chartZone2.Series["TC-5"].Points.AddXY(temp.ToString(), TC5Num.ToString()); chartZone2.Series["TC-6"].Points.AddXY(temp.ToString(), TC6Num.ToString()); chartZone2.Series["TC-7"].Points.AddXY(temp.ToString(), TC7Num.ToString()); chartZone2.Series["TC-8"].Points.AddXY(temp.ToString(), TC8Num.ToString()); chartZone2.Series["TC-9"].Points.AddXY(temp.ToString(), TC9Num.ToString()); chartZone2.Series["TC-10"].Points.AddXY(temp.ToString(), TC10Num.ToString()); chartZone2.Series["TC-11"].Points.AddXY(temp.ToString(), TC11Num.ToString()); chartZone2.Series["TC-12"].Points.AddXY(temp.ToString(), TC12Num.ToString());
                 }
                 else if (ZonasSelecionadasChart == 2)
                 {
-                    ChartMain.Series["TC-13"].Points.AddXY(temp.ToString(), TC13Num.ToString()); ChartMain.Series["TC-14"].Points.AddXY(temp.ToString(), TC14Num.ToString()); ChartMain.Series["TC-15"].Points.AddXY(temp.ToString(), TC15Num.ToString()); ChartMain.Series["TC-16"].Points.AddXY(temp.ToString(), TC16Num.ToString()); ChartMain.Series["TC-17"].Points.AddXY(temp.ToString(), TC17Num.ToString()); ChartMain.Series["TC-18"].Points.AddXY(temp.ToString(), TC18Num.ToString()); ChartMain.Series["TC-19"].Points.AddXY(temp.ToString(), TC19Num.ToString()); ChartMain.Series["TC-20"].Points.AddXY(temp.ToString(), TC20Num.ToString()); ChartMain.Series["TC-21"].Points.AddXY(temp.ToString(), TC21Num.ToString()); ChartMain.Series["TC-22"].Points.AddXY(temp.ToString(), TC22Num.ToString()); ChartMain.Series["TC-23"].Points.AddXY(temp.ToString(), TC23Num.ToString()); ChartMain.Series["TC-24"].Points.AddXY(temp.ToString(), TC24Num.ToString());
+                    chartZone2.Series["TC-13"].Points.AddXY(temp.ToString(), TC13Num.ToString()); chartZone2.Series["TC-14"].Points.AddXY(temp.ToString(), TC14Num.ToString()); chartZone2.Series["TC-15"].Points.AddXY(temp.ToString(), TC15Num.ToString()); chartZone2.Series["TC-16"].Points.AddXY(temp.ToString(), TC16Num.ToString()); chartZone2.Series["TC-17"].Points.AddXY(temp.ToString(), TC17Num.ToString()); chartZone2.Series["TC-18"].Points.AddXY(temp.ToString(), TC18Num.ToString()); chartZone2.Series["TC-19"].Points.AddXY(temp.ToString(), TC19Num.ToString()); chartZone2.Series["TC-20"].Points.AddXY(temp.ToString(), TC20Num.ToString()); chartZone2.Series["TC-21"].Points.AddXY(temp.ToString(), TC21Num.ToString()); chartZone2.Series["TC-22"].Points.AddXY(temp.ToString(), TC22Num.ToString()); chartZone2.Series["TC-23"].Points.AddXY(temp.ToString(), TC23Num.ToString()); chartZone2.Series["TC-24"].Points.AddXY(temp.ToString(), TC24Num.ToString());
                 }
             }
             else
@@ -979,15 +979,15 @@ namespace Apple_24_Zones.Forms
                 string HoraMinSeg = DateTime.Now.ToString("hh:mm:ss");
                 if (ZonasSelecionadasChart == 0)
                 {
-                    ChartMain.Series["TC-1"].Points.AddXY(HoraMinSeg.ToString(), TC1Num.ToString()); ChartMain.Series["TC-2"].Points.AddXY(HoraMinSeg.ToString(), TC2Num.ToString()); ChartMain.Series["TC-3"].Points.AddXY(HoraMinSeg.ToString(), TC3Num.ToString()); ChartMain.Series["TC-4"].Points.AddXY(HoraMinSeg.ToString(), TC4Num.ToString()); ChartMain.Series["TC-5"].Points.AddXY(HoraMinSeg.ToString(), TC5Num.ToString()); ChartMain.Series["TC-6"].Points.AddXY(HoraMinSeg.ToString(), TC6Num.ToString()); ChartMain.Series["TC-7"].Points.AddXY(HoraMinSeg.ToString(), TC7Num.ToString()); ChartMain.Series["TC-8"].Points.AddXY(HoraMinSeg.ToString(), TC8Num.ToString()); ChartMain.Series["TC-9"].Points.AddXY(HoraMinSeg.ToString(), TC9Num.ToString()); ChartMain.Series["TC-10"].Points.AddXY(HoraMinSeg.ToString(), TC10Num.ToString()); ChartMain.Series["TC-11"].Points.AddXY(HoraMinSeg.ToString(), TC11Num.ToString()); ChartMain.Series["TC-12"].Points.AddXY(HoraMinSeg.ToString(), TC12Num.ToString()); ChartMain.Series["TC-13"].Points.AddXY(HoraMinSeg.ToString(), TC13Num.ToString()); ChartMain.Series["TC-14"].Points.AddXY(HoraMinSeg.ToString(), TC14Num.ToString()); ChartMain.Series["TC-15"].Points.AddXY(HoraMinSeg.ToString(), TC15Num.ToString()); ChartMain.Series["TC-16"].Points.AddXY(HoraMinSeg.ToString(), TC16Num.ToString()); ChartMain.Series["TC-17"].Points.AddXY(HoraMinSeg.ToString(), TC17Num.ToString()); ChartMain.Series["TC-18"].Points.AddXY(HoraMinSeg.ToString(), TC18Num.ToString()); ChartMain.Series["TC-19"].Points.AddXY(HoraMinSeg.ToString(), TC19Num.ToString()); ChartMain.Series["TC-20"].Points.AddXY(HoraMinSeg.ToString(), TC20Num.ToString()); ChartMain.Series["TC-21"].Points.AddXY(HoraMinSeg.ToString(), TC21Num.ToString()); ChartMain.Series["TC-22"].Points.AddXY(HoraMinSeg.ToString(), TC22Num.ToString()); ChartMain.Series["TC-23"].Points.AddXY(HoraMinSeg.ToString(), TC23Num.ToString()); ChartMain.Series["TC-24"].Points.AddXY(HoraMinSeg.ToString(), TC24Num.ToString());
+                    chartZone2.Series["TC-1"].Points.AddXY(HoraMinSeg.ToString(), TC1Num.ToString()); chartZone2.Series["TC-2"].Points.AddXY(HoraMinSeg.ToString(), TC2Num.ToString()); chartZone2.Series["TC-3"].Points.AddXY(HoraMinSeg.ToString(), TC3Num.ToString()); chartZone2.Series["TC-4"].Points.AddXY(HoraMinSeg.ToString(), TC4Num.ToString()); chartZone2.Series["TC-5"].Points.AddXY(HoraMinSeg.ToString(), TC5Num.ToString()); chartZone2.Series["TC-6"].Points.AddXY(HoraMinSeg.ToString(), TC6Num.ToString()); chartZone2.Series["TC-7"].Points.AddXY(HoraMinSeg.ToString(), TC7Num.ToString()); chartZone2.Series["TC-8"].Points.AddXY(HoraMinSeg.ToString(), TC8Num.ToString()); chartZone2.Series["TC-9"].Points.AddXY(HoraMinSeg.ToString(), TC9Num.ToString()); chartZone2.Series["TC-10"].Points.AddXY(HoraMinSeg.ToString(), TC10Num.ToString()); chartZone2.Series["TC-11"].Points.AddXY(HoraMinSeg.ToString(), TC11Num.ToString()); chartZone2.Series["TC-12"].Points.AddXY(HoraMinSeg.ToString(), TC12Num.ToString()); chartZone2.Series["TC-13"].Points.AddXY(HoraMinSeg.ToString(), TC13Num.ToString()); chartZone2.Series["TC-14"].Points.AddXY(HoraMinSeg.ToString(), TC14Num.ToString()); chartZone2.Series["TC-15"].Points.AddXY(HoraMinSeg.ToString(), TC15Num.ToString()); chartZone2.Series["TC-16"].Points.AddXY(HoraMinSeg.ToString(), TC16Num.ToString()); chartZone2.Series["TC-17"].Points.AddXY(HoraMinSeg.ToString(), TC17Num.ToString()); chartZone2.Series["TC-18"].Points.AddXY(HoraMinSeg.ToString(), TC18Num.ToString()); chartZone2.Series["TC-19"].Points.AddXY(HoraMinSeg.ToString(), TC19Num.ToString()); chartZone2.Series["TC-20"].Points.AddXY(HoraMinSeg.ToString(), TC20Num.ToString()); chartZone2.Series["TC-21"].Points.AddXY(HoraMinSeg.ToString(), TC21Num.ToString()); chartZone2.Series["TC-22"].Points.AddXY(HoraMinSeg.ToString(), TC22Num.ToString()); chartZone2.Series["TC-23"].Points.AddXY(HoraMinSeg.ToString(), TC23Num.ToString()); chartZone2.Series["TC-24"].Points.AddXY(HoraMinSeg.ToString(), TC24Num.ToString());
                 }
                 else if (ZonasSelecionadasChart == 1)
                 {
-                    ChartMain.Series["TC-1"].Points.AddXY(HoraMinSeg.ToString(), TC1Num.ToString()); ChartMain.Series["TC-2"].Points.AddXY(HoraMinSeg.ToString(), TC2Num.ToString()); ChartMain.Series["TC-3"].Points.AddXY(HoraMinSeg.ToString(), TC3Num.ToString()); ChartMain.Series["TC-4"].Points.AddXY(HoraMinSeg.ToString(), TC4Num.ToString()); ChartMain.Series["TC-5"].Points.AddXY(HoraMinSeg.ToString(), TC5Num.ToString()); ChartMain.Series["TC-6"].Points.AddXY(HoraMinSeg.ToString(), TC6Num.ToString()); ChartMain.Series["TC-7"].Points.AddXY(HoraMinSeg.ToString(), TC7Num.ToString()); ChartMain.Series["TC-8"].Points.AddXY(HoraMinSeg.ToString(), TC8Num.ToString()); ChartMain.Series["TC-9"].Points.AddXY(HoraMinSeg.ToString(), TC9Num.ToString()); ChartMain.Series["TC-10"].Points.AddXY(HoraMinSeg.ToString(), TC10Num.ToString()); ChartMain.Series["TC-11"].Points.AddXY(HoraMinSeg.ToString(), TC11Num.ToString()); ChartMain.Series["TC-12"].Points.AddXY(HoraMinSeg.ToString(), TC12Num.ToString());
+                    chartZone2.Series["TC-1"].Points.AddXY(HoraMinSeg.ToString(), TC1Num.ToString()); chartZone2.Series["TC-2"].Points.AddXY(HoraMinSeg.ToString(), TC2Num.ToString()); chartZone2.Series["TC-3"].Points.AddXY(HoraMinSeg.ToString(), TC3Num.ToString()); chartZone2.Series["TC-4"].Points.AddXY(HoraMinSeg.ToString(), TC4Num.ToString()); chartZone2.Series["TC-5"].Points.AddXY(HoraMinSeg.ToString(), TC5Num.ToString()); chartZone2.Series["TC-6"].Points.AddXY(HoraMinSeg.ToString(), TC6Num.ToString()); chartZone2.Series["TC-7"].Points.AddXY(HoraMinSeg.ToString(), TC7Num.ToString()); chartZone2.Series["TC-8"].Points.AddXY(HoraMinSeg.ToString(), TC8Num.ToString()); chartZone2.Series["TC-9"].Points.AddXY(HoraMinSeg.ToString(), TC9Num.ToString()); chartZone2.Series["TC-10"].Points.AddXY(HoraMinSeg.ToString(), TC10Num.ToString()); chartZone2.Series["TC-11"].Points.AddXY(HoraMinSeg.ToString(), TC11Num.ToString()); chartZone2.Series["TC-12"].Points.AddXY(HoraMinSeg.ToString(), TC12Num.ToString());
                 }
                 else if (ZonasSelecionadasChart == 2)
                 {
-                    ChartMain.Series["TC-13"].Points.AddXY(HoraMinSeg.ToString(), TC13Num.ToString()); ChartMain.Series["TC-14"].Points.AddXY(HoraMinSeg.ToString(), TC14Num.ToString()); ChartMain.Series["TC-15"].Points.AddXY(HoraMinSeg.ToString(), TC15Num.ToString()); ChartMain.Series["TC-16"].Points.AddXY(HoraMinSeg.ToString(), TC16Num.ToString()); ChartMain.Series["TC-17"].Points.AddXY(HoraMinSeg.ToString(), TC17Num.ToString()); ChartMain.Series["TC-18"].Points.AddXY(HoraMinSeg.ToString(), TC18Num.ToString()); ChartMain.Series["TC-19"].Points.AddXY(HoraMinSeg.ToString(), TC19Num.ToString()); ChartMain.Series["TC-20"].Points.AddXY(HoraMinSeg.ToString(), TC20Num.ToString()); ChartMain.Series["TC-21"].Points.AddXY(HoraMinSeg.ToString(), TC21Num.ToString()); ChartMain.Series["TC-22"].Points.AddXY(HoraMinSeg.ToString(), TC22Num.ToString()); ChartMain.Series["TC-23"].Points.AddXY(HoraMinSeg.ToString(), TC23Num.ToString()); ChartMain.Series["TC-24"].Points.AddXY(HoraMinSeg.ToString(), TC24Num.ToString());
+                    chartZone2.Series["TC-13"].Points.AddXY(HoraMinSeg.ToString(), TC13Num.ToString()); chartZone2.Series["TC-14"].Points.AddXY(HoraMinSeg.ToString(), TC14Num.ToString()); chartZone2.Series["TC-15"].Points.AddXY(HoraMinSeg.ToString(), TC15Num.ToString()); chartZone2.Series["TC-16"].Points.AddXY(HoraMinSeg.ToString(), TC16Num.ToString()); chartZone2.Series["TC-17"].Points.AddXY(HoraMinSeg.ToString(), TC17Num.ToString()); chartZone2.Series["TC-18"].Points.AddXY(HoraMinSeg.ToString(), TC18Num.ToString()); chartZone2.Series["TC-19"].Points.AddXY(HoraMinSeg.ToString(), TC19Num.ToString()); chartZone2.Series["TC-20"].Points.AddXY(HoraMinSeg.ToString(), TC20Num.ToString()); chartZone2.Series["TC-21"].Points.AddXY(HoraMinSeg.ToString(), TC21Num.ToString()); chartZone2.Series["TC-22"].Points.AddXY(HoraMinSeg.ToString(), TC22Num.ToString()); chartZone2.Series["TC-23"].Points.AddXY(HoraMinSeg.ToString(), TC23Num.ToString()); chartZone2.Series["TC-24"].Points.AddXY(HoraMinSeg.ToString(), TC24Num.ToString());
                 }
             }
         }
@@ -1226,10 +1226,10 @@ namespace Apple_24_Zones.Forms
         {
             if (ZonasSelecionadasChart == 0)
             {
-                ChartMain.Series["TC-1"].Points.Clear(); ChartMain.Series["TC-2"].Points.Clear(); ChartMain.Series["TC-3"].Points.Clear(); ChartMain.Series["TC-4"].Points.Clear(); ChartMain.Series["TC-5"].Points.Clear(); ChartMain.Series["TC-6"].Points.Clear(); ChartMain.Series["TC-7"].Points.Clear(); ChartMain.Series["TC-8"].Points.Clear(); ChartMain.Series["TC-9"].Points.Clear(); ChartMain.Series["TC-10"].Points.Clear(); ChartMain.Series["TC-11"].Points.Clear(); ChartMain.Series["TC-12"].Points.Clear(); ChartMain.Series["TC-13"].Points.Clear(); ChartMain.Series["TC-14"].Points.Clear(); ChartMain.Series["TC-15"].Points.Clear(); ChartMain.Series["TC-16"].Points.Clear(); ChartMain.Series["TC-17"].Points.Clear(); ChartMain.Series["TC-18"].Points.Clear(); ChartMain.Series["TC-19"].Points.Clear(); ChartMain.Series["TC-20"].Points.Clear(); ChartMain.Series["TC-21"].Points.Clear(); ChartMain.Series["TC-22"].Points.Clear(); ChartMain.Series["TC-23"].Points.Clear(); ChartMain.Series["TC-24"].Points.Clear();
+                chartZone2.Series["TC-1"].Points.Clear(); chartZone2.Series["TC-2"].Points.Clear(); chartZone2.Series["TC-3"].Points.Clear(); chartZone2.Series["TC-4"].Points.Clear(); chartZone2.Series["TC-5"].Points.Clear(); chartZone2.Series["TC-6"].Points.Clear(); chartZone2.Series["TC-7"].Points.Clear(); chartZone2.Series["TC-8"].Points.Clear(); chartZone2.Series["TC-9"].Points.Clear(); chartZone2.Series["TC-10"].Points.Clear(); chartZone2.Series["TC-11"].Points.Clear(); chartZone2.Series["TC-12"].Points.Clear(); chartZone2.Series["TC-13"].Points.Clear(); chartZone2.Series["TC-14"].Points.Clear(); chartZone2.Series["TC-15"].Points.Clear(); chartZone2.Series["TC-16"].Points.Clear(); chartZone2.Series["TC-17"].Points.Clear(); chartZone2.Series["TC-18"].Points.Clear(); chartZone2.Series["TC-19"].Points.Clear(); chartZone2.Series["TC-20"].Points.Clear(); chartZone2.Series["TC-21"].Points.Clear(); chartZone2.Series["TC-22"].Points.Clear(); chartZone2.Series["TC-23"].Points.Clear(); chartZone2.Series["TC-24"].Points.Clear();
             }
 
-            ChartArea CA = ChartMain.ChartAreas[0];
+            ChartArea CA = chartZone2.ChartAreas[0];
             CA.CursorX.AutoScroll = true;
             i = false;
             tiempo = 0;
@@ -1669,21 +1669,21 @@ namespace Apple_24_Zones.Forms
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked) ChartMain.Series["T-13"].Enabled = true;
-            else ChartMain.Series["T-13"].Enabled = false;
+            if (checkBox1.Checked) chartZone2.Series["T-13"].Enabled = true;
+            else chartZone2.Series["T-13"].Enabled = false;
 
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked) ChartMain.Series["T-14"].Enabled = true;
-            else ChartMain.Series["T-14"].Enabled = false;
+            if (checkBox2.Checked) chartZone2.Series["T-14"].Enabled = true;
+            else chartZone2.Series["T-14"].Enabled = false;
         }
 
         private void ChartMain_CustomizeLegend(object sender, CustomizeLegendEventArgs e)
         {
             e.LegendItems.Clear();
-            foreach (var series in this.ChartMain.Series)
+            foreach (var series in this.chartZone2.Series)
             {
                 var legendItem = new LegendItem();
                 legendItem.SeriesName = series.Name;
@@ -1712,68 +1712,68 @@ namespace Apple_24_Zones.Forms
 
         private void checkBox4_Click(object sender, EventArgs e)
         {
-            if (checkBox4.Checked) ChartMain.Series["T-15"].Enabled = true;
-            else ChartMain.Series["T-15"].Enabled = false;
+            if (checkBox4.Checked) chartZone2.Series["T-15"].Enabled = true;
+            else chartZone2.Series["T-15"].Enabled = false;
         }
 
         private void checkBox5_Click(object sender, EventArgs e)
         {
-            if (checkBox5.Checked) ChartMain.Series["T-16"].Enabled = true;
-            else ChartMain.Series["T-16"].Enabled = false;
+            if (checkBox5.Checked) chartZone2.Series["T-16"].Enabled = true;
+            else chartZone2.Series["T-16"].Enabled = false;
         }
 
         private void checkBox6_Click(object sender, EventArgs e)
         {
-            if (checkBox6.Checked) ChartMain.Series["T-17"].Enabled = true;
-            else ChartMain.Series["T-17"].Enabled = false;
+            if (checkBox6.Checked) chartZone2.Series["T-17"].Enabled = true;
+            else chartZone2.Series["T-17"].Enabled = false;
         }
 
         private void checkBox7_Click(object sender, EventArgs e)
         {
-            if (checkBox7.Checked) ChartMain.Series["T-18"].Enabled = true;
-            else ChartMain.Series["T-18"].Enabled = false;
+            if (checkBox7.Checked) chartZone2.Series["T-18"].Enabled = true;
+            else chartZone2.Series["T-18"].Enabled = false;
         }
 
         private void checkBox8_Click(object sender, EventArgs e)
         {
-            if (checkBox8.Checked) ChartMain.Series["T-19"].Enabled = true;
-            else ChartMain.Series["T-19"].Enabled = false;
+            if (checkBox8.Checked) chartZone2.Series["T-19"].Enabled = true;
+            else chartZone2.Series["T-19"].Enabled = false;
         }
 
         private void checkBox9_Click(object sender, EventArgs e)
         {
-            if (checkBox9.Checked) ChartMain.Series["T-20"].Enabled = true;
-            else ChartMain.Series["T-20"].Enabled = false;
+            if (checkBox9.Checked) chartZone2.Series["T-20"].Enabled = true;
+            else chartZone2.Series["T-20"].Enabled = false;
         }
 
         private void checkBox10_Click(object sender, EventArgs e)
         {
-            if (checkBox10.Checked) ChartMain.Series["T-21"].Enabled = true;
-            else ChartMain.Series["T-21"].Enabled = false;
+            if (checkBox10.Checked) chartZone2.Series["T-21"].Enabled = true;
+            else chartZone2.Series["T-21"].Enabled = false;
         }
 
         private void checkBox11_Click(object sender, EventArgs e)
         {
-            if (checkBox11.Checked) ChartMain.Series["T-22"].Enabled = true;
-            else ChartMain.Series["T-22"].Enabled = false;
+            if (checkBox11.Checked) chartZone2.Series["T-22"].Enabled = true;
+            else chartZone2.Series["T-22"].Enabled = false;
         }
 
         private void checkBox12_Click(object sender, EventArgs e)
         {
-            if (checkBox12.Checked) ChartMain.Series["T-23"].Enabled = true;
-            else ChartMain.Series["T-23"].Enabled = false;
+            if (checkBox12.Checked) chartZone2.Series["T-23"].Enabled = true;
+            else chartZone2.Series["T-23"].Enabled = false;
         }
 
         private void checkBox13_Click(object sender, EventArgs e)
         {
-            if (checkBox13.Checked) ChartMain.Series["T-24"].Enabled = true;
-            else ChartMain.Series["T-24"].Enabled = false;
+            if (checkBox13.Checked) chartZone2.Series["T-24"].Enabled = true;
+            else chartZone2.Series["T-24"].Enabled = false;
         }
 
         private void chart1_CustomizeLegend(object sender, CustomizeLegendEventArgs e)
         {
             e.LegendItems.Clear();
-            foreach (var series in this.chart1.Series)
+            foreach (var series in this.chartZone1.Series)
             {
                 var legendItem = new LegendItem();
                 legendItem.SeriesName = series.Name;
@@ -1801,74 +1801,74 @@ namespace Apple_24_Zones.Forms
 
         private void checkBox25_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox25.Checked) chart1.Series["T-1"].Enabled = true;
-            else chart1.Series["T-1"].Enabled = false;
+            if (checkBox25.Checked) chartZone1.Series["T-1"].Enabled = true;
+            else chartZone1.Series["T-1"].Enabled = false;
         }
 
         private void checkBox24_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox24.Checked) chart1.Series["T-2"].Enabled = true;
-            else chart1.Series["T-2"].Enabled = false;
+            if (checkBox24.Checked) chartZone1.Series["T-2"].Enabled = true;
+            else chartZone1.Series["T-2"].Enabled = false;
         }
 
         private void checkBox23_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox23.Checked) chart1.Series["T-3"].Enabled = true;
-            else chart1.Series["T-3"].Enabled = false;
+            if (checkBox23.Checked) chartZone1.Series["T-3"].Enabled = true;
+            else chartZone1.Series["T-3"].Enabled = false;
         }
 
         private void checkBox22_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox22.Checked) chart1.Series["T-4"].Enabled = true;
-            else chart1.Series["T-4"].Enabled = false;
+            if (checkBox22.Checked) chartZone1.Series["T-4"].Enabled = true;
+            else chartZone1.Series["T-4"].Enabled = false;
         }
 
         private void checkBox21_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox21.Checked) chart1.Series["T-5"].Enabled = true;
-            else chart1.Series["T-5"].Enabled = false;
+            if (checkBox21.Checked) chartZone1.Series["T-5"].Enabled = true;
+            else chartZone1.Series["T-5"].Enabled = false;
         }
 
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox20.Checked) chart1.Series["T-6"].Enabled = true;
-            else chart1.Series["T-6"].Enabled = false;
+            if (checkBox20.Checked) chartZone1.Series["T-6"].Enabled = true;
+            else chartZone1.Series["T-6"].Enabled = false;
         }
 
         private void checkBox19_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox19.Checked) chart1.Series["T-7"].Enabled = true;
-            else chart1.Series["T-7"].Enabled = false;
+            if (checkBox19.Checked) chartZone1.Series["T-7"].Enabled = true;
+            else chartZone1.Series["T-7"].Enabled = false;
         }
 
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox18.Checked) chart1.Series["T-8"].Enabled = true;
-            else chart1.Series["T-8"].Enabled = false;
+            if (checkBox18.Checked) chartZone1.Series["T-8"].Enabled = true;
+            else chartZone1.Series["T-8"].Enabled = false;
         }
 
         private void checkBox17_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox17.Checked) chart1.Series["T-9"].Enabled = true;
-            else chart1.Series["T-9"].Enabled = false;
+            if (checkBox17.Checked) chartZone1.Series["T-9"].Enabled = true;
+            else chartZone1.Series["T-9"].Enabled = false;
         }
 
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox16.Checked) chart1.Series["T-10"].Enabled = true;
-            else chart1.Series["T-10"].Enabled = false;
+            if (checkBox16.Checked) chartZone1.Series["T-10"].Enabled = true;
+            else chartZone1.Series["T-10"].Enabled = false;
         }
 
         private void checkBox15_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox15.Checked) chart1.Series["T-11"].Enabled = true;
-            else chart1.Series["T-11"].Enabled = false;
+            if (checkBox15.Checked) chartZone1.Series["T-11"].Enabled = true;
+            else chartZone1.Series["T-11"].Enabled = false;
         }
 
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox14.Checked) chart1.Series["T-12"].Enabled = true;
-            else chart1.Series["T-12"].Enabled = false;
+            if (checkBox14.Checked) chartZone1.Series["T-12"].Enabled = true;
+            else chartZone1.Series["T-12"].Enabled = false;
         }
 
         private void textBox33_TextChanged(object sender, EventArgs e)

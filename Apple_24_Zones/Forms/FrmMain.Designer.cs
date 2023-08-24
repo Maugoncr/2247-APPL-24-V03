@@ -32,38 +32,38 @@ namespace Apple_24_Zones.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series49 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series50 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series51 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series52 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series53 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series54 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series55 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series56 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series57 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series58 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series59 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series60 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series61 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series62 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series63 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series64 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series65 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series66 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series67 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series68 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series69 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series70 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series71 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series72 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
-            this.ChartMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartZone2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lbRecord = new System.Windows.Forms.Label();
             this.lbCharMode = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -74,7 +74,6 @@ namespace Apple_24_Zones.Forms
             this.panelZone1 = new System.Windows.Forms.Panel();
             this.lbDivisor = new System.Windows.Forms.Label();
             this.txtSetPointZone2 = new System.Windows.Forms.TextBox();
-            this.ledZ2 = new System.Windows.Forms.PictureBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -125,7 +124,7 @@ namespace Apple_24_Zones.Forms
             this.txtTC2 = new System.Windows.Forms.TextBox();
             this.txtTC1 = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartZone1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label39 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -184,19 +183,11 @@ namespace Apple_24_Zones.Forms
             this.manualControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label73 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.textBox46 = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label72 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
@@ -210,19 +201,11 @@ namespace Apple_24_Zones.Forms
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label81 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.textBox49 = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label74 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
@@ -260,40 +243,38 @@ namespace Apple_24_Zones.Forms
             this.textBox37 = new System.Windows.Forms.TextBox();
             this.textBox38 = new System.Windows.Forms.TextBox();
             this.textBox39 = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.panelZone2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
-            this.checkBox25 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.viewOptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bothZonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zone1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zone2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelBoth = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ledZ2 = new System.Windows.Forms.PictureBox();
             this.btnCSVFileFilter = new FontAwesome.Sharp.IconButton();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btnEMO = new System.Windows.Forms.PictureBox();
             this.btnTypeTime = new FontAwesome.Sharp.IconButton();
             this.btnClearChart = new FontAwesome.Sharp.IconButton();
@@ -302,41 +283,93 @@ namespace Apple_24_Zones.Forms
             this.btnStartStopChart = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartMain)).BeginInit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.checkT1 = new System.Windows.Forms.CheckBox();
+            this.checkT2 = new System.Windows.Forms.CheckBox();
+            this.checkT3 = new System.Windows.Forms.CheckBox();
+            this.checkT4 = new System.Windows.Forms.CheckBox();
+            this.checkT5 = new System.Windows.Forms.CheckBox();
+            this.checkT6 = new System.Windows.Forms.CheckBox();
+            this.checkT7 = new System.Windows.Forms.CheckBox();
+            this.checkT8 = new System.Windows.Forms.CheckBox();
+            this.checkT9 = new System.Windows.Forms.CheckBox();
+            this.checkT10 = new System.Windows.Forms.CheckBox();
+            this.checkT11 = new System.Windows.Forms.CheckBox();
+            this.checkT12 = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label87 = new System.Windows.Forms.Label();
+            this.checkT24 = new System.Windows.Forms.CheckBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.checkT23 = new System.Windows.Forms.CheckBox();
+            this.label89 = new System.Windows.Forms.Label();
+            this.checkT22 = new System.Windows.Forms.CheckBox();
+            this.label90 = new System.Windows.Forms.Label();
+            this.checkT21 = new System.Windows.Forms.CheckBox();
+            this.label91 = new System.Windows.Forms.Label();
+            this.checkT20 = new System.Windows.Forms.CheckBox();
+            this.label92 = new System.Windows.Forms.Label();
+            this.checkT19 = new System.Windows.Forms.CheckBox();
+            this.label93 = new System.Windows.Forms.Label();
+            this.checkT18 = new System.Windows.Forms.CheckBox();
+            this.label94 = new System.Windows.Forms.Label();
+            this.checkT17 = new System.Windows.Forms.CheckBox();
+            this.label95 = new System.Windows.Forms.Label();
+            this.checkT16 = new System.Windows.Forms.CheckBox();
+            this.label96 = new System.Windows.Forms.Label();
+            this.checkT15 = new System.Windows.Forms.CheckBox();
+            this.label97 = new System.Windows.Forms.Label();
+            this.checkT14 = new System.Windows.Forms.CheckBox();
+            this.label98 = new System.Windows.Forms.Label();
+            this.checkT13 = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.chartZone2)).BeginInit();
             this.panelZone1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ledZ2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
+            this.panelZone2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.menuStrip3.SuspendLayout();
+            this.panelBoth.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ledZ2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.menuStrip2.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.menuStrip3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEMO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbFecha
@@ -363,82 +396,82 @@ namespace Apple_24_Zones.Forms
             this.lbHora.Text = "hora";
             this.lbHora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ChartMain
+            // chartZone2
             // 
-            this.ChartMain.BorderlineColor = System.Drawing.Color.Gray;
-            this.ChartMain.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            this.ChartMain.BorderlineWidth = 2;
-            chartArea5.Name = "ChartArea1";
-            this.ChartMain.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.ChartMain.Legends.Add(legend5);
-            this.ChartMain.Location = new System.Drawing.Point(591, 45);
-            this.ChartMain.Name = "ChartMain";
-            series49.ChartArea = "ChartArea1";
-            series49.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series49.Legend = "Legend1";
-            series49.Name = "T-13";
-            series50.ChartArea = "ChartArea1";
-            series50.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series50.Legend = "Legend1";
-            series50.Name = "T-14";
-            series51.ChartArea = "ChartArea1";
-            series51.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series51.Legend = "Legend1";
-            series51.Name = "T-15";
-            series52.ChartArea = "ChartArea1";
-            series52.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series52.Legend = "Legend1";
-            series52.Name = "T-16";
-            series53.ChartArea = "ChartArea1";
-            series53.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series53.Legend = "Legend1";
-            series53.Name = "T-17";
-            series54.ChartArea = "ChartArea1";
-            series54.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series54.Legend = "Legend1";
-            series54.Name = "T-18";
-            series55.ChartArea = "ChartArea1";
-            series55.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series55.Legend = "Legend1";
-            series55.Name = "T-19";
-            series56.ChartArea = "ChartArea1";
-            series56.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series56.Legend = "Legend1";
-            series56.Name = "TC-20";
-            series57.ChartArea = "ChartArea1";
-            series57.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series57.Legend = "Legend1";
-            series57.Name = "TC-21";
-            series58.ChartArea = "ChartArea1";
-            series58.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series58.Legend = "Legend1";
-            series58.Name = "TC-22";
-            series59.ChartArea = "ChartArea1";
-            series59.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series59.Legend = "Legend1";
-            series59.Name = "TC-23";
-            series60.ChartArea = "ChartArea1";
-            series60.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series60.Legend = "Legend1";
-            series60.Name = "TC-24";
-            this.ChartMain.Series.Add(series49);
-            this.ChartMain.Series.Add(series50);
-            this.ChartMain.Series.Add(series51);
-            this.ChartMain.Series.Add(series52);
-            this.ChartMain.Series.Add(series53);
-            this.ChartMain.Series.Add(series54);
-            this.ChartMain.Series.Add(series55);
-            this.ChartMain.Series.Add(series56);
-            this.ChartMain.Series.Add(series57);
-            this.ChartMain.Series.Add(series58);
-            this.ChartMain.Series.Add(series59);
-            this.ChartMain.Series.Add(series60);
-            this.ChartMain.Size = new System.Drawing.Size(1212, 395);
-            this.ChartMain.TabIndex = 212;
-            this.ChartMain.Text = "chart1";
-            this.ChartMain.CustomizeLegend += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.CustomizeLegendEventArgs>(this.ChartMain_CustomizeLegend);
-            this.ChartMain.Click += new System.EventHandler(this.ChartMain_Click);
+            this.chartZone2.BorderlineColor = System.Drawing.Color.Gray;
+            this.chartZone2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.chartZone2.BorderlineWidth = 2;
+            chartArea1.Name = "ChartArea1";
+            this.chartZone2.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartZone2.Legends.Add(legend1);
+            this.chartZone2.Location = new System.Drawing.Point(5, 3);
+            this.chartZone2.Name = "chartZone2";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "T-13";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "T-14";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Legend = "Legend1";
+            series3.Name = "T-15";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Legend = "Legend1";
+            series4.Name = "T-16";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series5.Legend = "Legend1";
+            series5.Name = "T-17";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series6.Legend = "Legend1";
+            series6.Name = "T-18";
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Legend = "Legend1";
+            series7.Name = "T-19";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.Legend = "Legend1";
+            series8.Name = "T-20";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series9.Legend = "Legend1";
+            series9.Name = "T-21";
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series10.Legend = "Legend1";
+            series10.Name = "T-22";
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series11.Legend = "Legend1";
+            series11.Name = "T-23";
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series12.Legend = "Legend1";
+            series12.Name = "T-24";
+            this.chartZone2.Series.Add(series1);
+            this.chartZone2.Series.Add(series2);
+            this.chartZone2.Series.Add(series3);
+            this.chartZone2.Series.Add(series4);
+            this.chartZone2.Series.Add(series5);
+            this.chartZone2.Series.Add(series6);
+            this.chartZone2.Series.Add(series7);
+            this.chartZone2.Series.Add(series8);
+            this.chartZone2.Series.Add(series9);
+            this.chartZone2.Series.Add(series10);
+            this.chartZone2.Series.Add(series11);
+            this.chartZone2.Series.Add(series12);
+            this.chartZone2.Size = new System.Drawing.Size(1212, 395);
+            this.chartZone2.TabIndex = 212;
+            this.chartZone2.Text = "chart1";
+            this.chartZone2.CustomizeLegend += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.CustomizeLegendEventArgs>(this.ChartMain_CustomizeLegend);
+            this.chartZone2.Click += new System.EventHandler(this.ChartMain_Click);
             // 
             // lbRecord
             // 
@@ -446,7 +479,7 @@ namespace Apple_24_Zones.Forms
             this.lbRecord.BackColor = System.Drawing.Color.White;
             this.lbRecord.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRecord.ForeColor = System.Drawing.Color.Black;
-            this.lbRecord.Location = new System.Drawing.Point(615, 1017);
+            this.lbRecord.Location = new System.Drawing.Point(27, 934);
             this.lbRecord.Name = "lbRecord";
             this.lbRecord.Size = new System.Drawing.Size(104, 19);
             this.lbRecord.TabIndex = 218;
@@ -459,7 +492,7 @@ namespace Apple_24_Zones.Forms
             this.lbCharMode.BackColor = System.Drawing.Color.White;
             this.lbCharMode.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCharMode.ForeColor = System.Drawing.Color.Black;
-            this.lbCharMode.Location = new System.Drawing.Point(728, 1017);
+            this.lbCharMode.Location = new System.Drawing.Point(140, 934);
             this.lbCharMode.Name = "lbCharMode";
             this.lbCharMode.Size = new System.Drawing.Size(117, 19);
             this.lbCharMode.TabIndex = 216;
@@ -474,7 +507,7 @@ namespace Apple_24_Zones.Forms
             this.label32.BackColor = System.Drawing.Color.White;
             this.label32.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(1021, 1025);
+            this.label32.Location = new System.Drawing.Point(133, 1001);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(93, 19);
             this.label32.TabIndex = 214;
@@ -503,6 +536,7 @@ namespace Apple_24_Zones.Forms
             // panelZone1
             // 
             this.panelZone1.BackColor = System.Drawing.Color.LightGray;
+            this.panelZone1.Controls.Add(this.label2);
             this.panelZone1.Controls.Add(this.lbDivisor);
             this.panelZone1.Controls.Add(this.txtSetPointZone2);
             this.panelZone1.Controls.Add(this.ledZ2);
@@ -556,9 +590,9 @@ namespace Apple_24_Zones.Forms
             this.panelZone1.Controls.Add(this.txtTC2);
             this.panelZone1.Controls.Add(this.txtTC1);
             this.panelZone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelZone1.Location = new System.Drawing.Point(588, 925);
+            this.panelZone1.Location = new System.Drawing.Point(5, 871);
             this.panelZone1.Name = "panelZone1";
-            this.panelZone1.Size = new System.Drawing.Size(1212, 70);
+            this.panelZone1.Size = new System.Drawing.Size(1212, 82);
             this.panelZone1.TabIndex = 225;
             this.panelZone1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelZone1_Paint);
             // 
@@ -579,17 +613,6 @@ namespace Apple_24_Zones.Forms
             this.txtSetPointZone2.Size = new System.Drawing.Size(109, 44);
             this.txtSetPointZone2.TabIndex = 185;
             this.txtSetPointZone2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // ledZ2
-            // 
-            this.ledZ2.BackColor = System.Drawing.Color.Transparent;
-            this.ledZ2.Image = ((System.Drawing.Image)(resources.GetObject("ledZ2.Image")));
-            this.ledZ2.Location = new System.Drawing.Point(888, 171);
-            this.ledZ2.Name = "ledZ2";
-            this.ledZ2.Size = new System.Drawing.Size(43, 39);
-            this.ledZ2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ledZ2.TabIndex = 184;
-            this.ledZ2.TabStop = false;
             // 
             // label30
             // 
@@ -739,7 +762,7 @@ namespace Apple_24_Zones.Forms
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label17.Location = new System.Drawing.Point(1141, 9);
+            this.label17.Location = new System.Drawing.Point(1139, 23);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(47, 20);
             this.label17.TabIndex = 36;
@@ -751,7 +774,7 @@ namespace Apple_24_Zones.Forms
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label16.Location = new System.Drawing.Point(1034, 8);
+            this.label16.Location = new System.Drawing.Point(1032, 22);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(47, 20);
             this.label16.TabIndex = 35;
@@ -763,7 +786,7 @@ namespace Apple_24_Zones.Forms
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label15.Location = new System.Drawing.Point(923, 9);
+            this.label15.Location = new System.Drawing.Point(921, 23);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(47, 20);
             this.label15.TabIndex = 34;
@@ -775,7 +798,7 @@ namespace Apple_24_Zones.Forms
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label14.Location = new System.Drawing.Point(823, 9);
+            this.label14.Location = new System.Drawing.Point(821, 23);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(37, 20);
             this.label14.TabIndex = 33;
@@ -787,7 +810,7 @@ namespace Apple_24_Zones.Forms
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label13.Location = new System.Drawing.Point(718, 9);
+            this.label13.Location = new System.Drawing.Point(716, 23);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(37, 20);
             this.label13.TabIndex = 32;
@@ -799,7 +822,7 @@ namespace Apple_24_Zones.Forms
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label12.Location = new System.Drawing.Point(614, 10);
+            this.label12.Location = new System.Drawing.Point(612, 24);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(37, 20);
             this.label12.TabIndex = 31;
@@ -811,7 +834,7 @@ namespace Apple_24_Zones.Forms
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label11.Location = new System.Drawing.Point(510, 11);
+            this.label11.Location = new System.Drawing.Point(508, 25);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(37, 20);
             this.label11.TabIndex = 30;
@@ -823,7 +846,7 @@ namespace Apple_24_Zones.Forms
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label10.Location = new System.Drawing.Point(409, 10);
+            this.label10.Location = new System.Drawing.Point(407, 24);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 20);
             this.label10.TabIndex = 29;
@@ -835,7 +858,7 @@ namespace Apple_24_Zones.Forms
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label9.Location = new System.Drawing.Point(314, 11);
+            this.label9.Location = new System.Drawing.Point(312, 25);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 20);
             this.label9.TabIndex = 28;
@@ -847,7 +870,7 @@ namespace Apple_24_Zones.Forms
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label8.Location = new System.Drawing.Point(220, 10);
+            this.label8.Location = new System.Drawing.Point(218, 24);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 20);
             this.label8.TabIndex = 27;
@@ -859,7 +882,7 @@ namespace Apple_24_Zones.Forms
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label7.Location = new System.Drawing.Point(124, 10);
+            this.label7.Location = new System.Drawing.Point(122, 24);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 20);
             this.label7.TabIndex = 26;
@@ -870,7 +893,7 @@ namespace Apple_24_Zones.Forms
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label6.Location = new System.Drawing.Point(31, 10);
+            this.label6.Location = new System.Drawing.Point(29, 24);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 20);
             this.label6.TabIndex = 25;
@@ -998,7 +1021,7 @@ namespace Apple_24_Zones.Forms
             // 
             // txtTC12
             // 
-            this.txtTC12.Location = new System.Drawing.Point(1126, 33);
+            this.txtTC12.Location = new System.Drawing.Point(1124, 47);
             this.txtTC12.Name = "txtTC12";
             this.txtTC12.ReadOnly = true;
             this.txtTC12.Size = new System.Drawing.Size(79, 29);
@@ -1008,7 +1031,7 @@ namespace Apple_24_Zones.Forms
             // 
             // txtTC11
             // 
-            this.txtTC11.Location = new System.Drawing.Point(1020, 33);
+            this.txtTC11.Location = new System.Drawing.Point(1018, 47);
             this.txtTC11.Name = "txtTC11";
             this.txtTC11.ReadOnly = true;
             this.txtTC11.Size = new System.Drawing.Size(79, 29);
@@ -1017,7 +1040,7 @@ namespace Apple_24_Zones.Forms
             // 
             // txtTC10
             // 
-            this.txtTC10.Location = new System.Drawing.Point(911, 33);
+            this.txtTC10.Location = new System.Drawing.Point(909, 47);
             this.txtTC10.Name = "txtTC10";
             this.txtTC10.ReadOnly = true;
             this.txtTC10.Size = new System.Drawing.Size(79, 29);
@@ -1026,7 +1049,7 @@ namespace Apple_24_Zones.Forms
             // 
             // txtTC9
             // 
-            this.txtTC9.Location = new System.Drawing.Point(805, 33);
+            this.txtTC9.Location = new System.Drawing.Point(803, 47);
             this.txtTC9.Name = "txtTC9";
             this.txtTC9.ReadOnly = true;
             this.txtTC9.Size = new System.Drawing.Size(79, 29);
@@ -1035,7 +1058,7 @@ namespace Apple_24_Zones.Forms
             // 
             // txtTC8
             // 
-            this.txtTC8.Location = new System.Drawing.Point(698, 33);
+            this.txtTC8.Location = new System.Drawing.Point(696, 47);
             this.txtTC8.Name = "txtTC8";
             this.txtTC8.ReadOnly = true;
             this.txtTC8.Size = new System.Drawing.Size(79, 29);
@@ -1044,7 +1067,7 @@ namespace Apple_24_Zones.Forms
             // 
             // txtTC7
             // 
-            this.txtTC7.Location = new System.Drawing.Point(594, 33);
+            this.txtTC7.Location = new System.Drawing.Point(592, 47);
             this.txtTC7.Name = "txtTC7";
             this.txtTC7.ReadOnly = true;
             this.txtTC7.Size = new System.Drawing.Size(79, 29);
@@ -1053,7 +1076,7 @@ namespace Apple_24_Zones.Forms
             // 
             // txtTC6
             // 
-            this.txtTC6.Location = new System.Drawing.Point(490, 33);
+            this.txtTC6.Location = new System.Drawing.Point(488, 47);
             this.txtTC6.Name = "txtTC6";
             this.txtTC6.ReadOnly = true;
             this.txtTC6.Size = new System.Drawing.Size(79, 29);
@@ -1062,7 +1085,7 @@ namespace Apple_24_Zones.Forms
             // 
             // txtTC5
             // 
-            this.txtTC5.Location = new System.Drawing.Point(389, 33);
+            this.txtTC5.Location = new System.Drawing.Point(387, 47);
             this.txtTC5.Name = "txtTC5";
             this.txtTC5.ReadOnly = true;
             this.txtTC5.Size = new System.Drawing.Size(79, 29);
@@ -1071,7 +1094,7 @@ namespace Apple_24_Zones.Forms
             // 
             // txtTC4
             // 
-            this.txtTC4.Location = new System.Drawing.Point(295, 33);
+            this.txtTC4.Location = new System.Drawing.Point(293, 47);
             this.txtTC4.Name = "txtTC4";
             this.txtTC4.ReadOnly = true;
             this.txtTC4.Size = new System.Drawing.Size(79, 29);
@@ -1080,7 +1103,7 @@ namespace Apple_24_Zones.Forms
             // 
             // txtTC3
             // 
-            this.txtTC3.Location = new System.Drawing.Point(200, 33);
+            this.txtTC3.Location = new System.Drawing.Point(198, 47);
             this.txtTC3.Name = "txtTC3";
             this.txtTC3.ReadOnly = true;
             this.txtTC3.Size = new System.Drawing.Size(79, 29);
@@ -1089,7 +1112,7 @@ namespace Apple_24_Zones.Forms
             // 
             // txtTC2
             // 
-            this.txtTC2.Location = new System.Drawing.Point(101, 33);
+            this.txtTC2.Location = new System.Drawing.Point(99, 47);
             this.txtTC2.Name = "txtTC2";
             this.txtTC2.ReadOnly = true;
             this.txtTC2.Size = new System.Drawing.Size(79, 29);
@@ -1099,7 +1122,7 @@ namespace Apple_24_Zones.Forms
             // txtTC1
             // 
             this.txtTC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTC1.Location = new System.Drawing.Point(9, 33);
+            this.txtTC1.Location = new System.Drawing.Point(7, 47);
             this.txtTC1.Name = "txtTC1";
             this.txtTC1.ReadOnly = true;
             this.txtTC1.Size = new System.Drawing.Size(79, 29);
@@ -1117,90 +1140,90 @@ namespace Apple_24_Zones.Forms
             this.label33.TabIndex = 227;
             this.label33.Text = "Time [s]";
             // 
-            // chart1
+            // chartZone1
             // 
-            this.chart1.BorderlineColor = System.Drawing.Color.Gray;
-            this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            this.chart1.BorderlineWidth = 2;
-            chartArea6.InnerPlotPosition.Auto = false;
-            chartArea6.InnerPlotPosition.Height = 88.4641F;
-            chartArea6.InnerPlotPosition.Width = 93.2662F;
-            chartArea6.InnerPlotPosition.X = 6.11536F;
-            chartArea6.InnerPlotPosition.Y = 2.79255F;
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
-            this.chart1.Location = new System.Drawing.Point(588, 529);
-            this.chart1.Name = "chart1";
-            series61.ChartArea = "ChartArea1";
-            series61.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series61.Legend = "Legend1";
-            series61.Name = "T-1";
-            series62.ChartArea = "ChartArea1";
-            series62.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series62.Legend = "Legend1";
-            series62.Name = "T-2";
-            series63.ChartArea = "ChartArea1";
-            series63.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series63.Legend = "Legend1";
-            series63.Name = "T-3";
-            series64.ChartArea = "ChartArea1";
-            series64.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series64.Legend = "Legend1";
-            series64.Name = "T-4";
-            series65.ChartArea = "ChartArea1";
-            series65.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series65.Legend = "Legend1";
-            series65.Name = "T-5";
-            series66.ChartArea = "ChartArea1";
-            series66.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series66.Legend = "Legend1";
-            series66.Name = "T-6";
-            series67.ChartArea = "ChartArea1";
-            series67.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series67.Legend = "Legend1";
-            series67.Name = "T-7";
-            series68.ChartArea = "ChartArea1";
-            series68.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series68.Legend = "Legend1";
-            series68.Name = "T-8";
-            series69.ChartArea = "ChartArea1";
-            series69.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series69.Legend = "Legend1";
-            series69.Name = "T-9";
-            series70.ChartArea = "ChartArea1";
-            series70.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series70.Legend = "Legend1";
-            series70.Name = "T-10";
-            series71.ChartArea = "ChartArea1";
-            series71.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series71.Legend = "Legend1";
-            series71.Name = "T-11";
-            series72.ChartArea = "ChartArea1";
-            series72.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series72.Legend = "Legend1";
-            series72.Name = "T-12";
-            this.chart1.Series.Add(series61);
-            this.chart1.Series.Add(series62);
-            this.chart1.Series.Add(series63);
-            this.chart1.Series.Add(series64);
-            this.chart1.Series.Add(series65);
-            this.chart1.Series.Add(series66);
-            this.chart1.Series.Add(series67);
-            this.chart1.Series.Add(series68);
-            this.chart1.Series.Add(series69);
-            this.chart1.Series.Add(series70);
-            this.chart1.Series.Add(series71);
-            this.chart1.Series.Add(series72);
-            this.chart1.Size = new System.Drawing.Size(1212, 395);
-            this.chart1.TabIndex = 238;
-            this.chart1.Text = "chart1";
-            this.chart1.AxisScrollBarClicked += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs>(this.chart1_AxisScrollBarClicked);
-            this.chart1.CustomizeLegend += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.CustomizeLegendEventArgs>(this.chart1_CustomizeLegend);
-            this.chart1.MarginChanged += new System.EventHandler(this.chart1_MarginChanged);
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
-            this.chart1.Resize += new System.EventHandler(this.chart1_Resize);
+            this.chartZone1.BorderlineColor = System.Drawing.Color.Gray;
+            this.chartZone1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.chartZone1.BorderlineWidth = 2;
+            chartArea2.InnerPlotPosition.Auto = false;
+            chartArea2.InnerPlotPosition.Height = 88.4641F;
+            chartArea2.InnerPlotPosition.Width = 93.2662F;
+            chartArea2.InnerPlotPosition.X = 6.11536F;
+            chartArea2.InnerPlotPosition.Y = 2.79255F;
+            chartArea2.Name = "ChartArea1";
+            this.chartZone1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartZone1.Legends.Add(legend2);
+            this.chartZone1.Location = new System.Drawing.Point(5, 479);
+            this.chartZone1.Name = "chartZone1";
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series13.Legend = "Legend1";
+            series13.Name = "T-1";
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series14.Legend = "Legend1";
+            series14.Name = "T-2";
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series15.Legend = "Legend1";
+            series15.Name = "T-3";
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series16.Legend = "Legend1";
+            series16.Name = "T-4";
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series17.Legend = "Legend1";
+            series17.Name = "T-5";
+            series18.ChartArea = "ChartArea1";
+            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series18.Legend = "Legend1";
+            series18.Name = "T-6";
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series19.Legend = "Legend1";
+            series19.Name = "T-7";
+            series20.ChartArea = "ChartArea1";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series20.Legend = "Legend1";
+            series20.Name = "T-8";
+            series21.ChartArea = "ChartArea1";
+            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series21.Legend = "Legend1";
+            series21.Name = "T-9";
+            series22.ChartArea = "ChartArea1";
+            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series22.Legend = "Legend1";
+            series22.Name = "T-10";
+            series23.ChartArea = "ChartArea1";
+            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series23.Legend = "Legend1";
+            series23.Name = "T-11";
+            series24.ChartArea = "ChartArea1";
+            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series24.Legend = "Legend1";
+            series24.Name = "T-12";
+            this.chartZone1.Series.Add(series13);
+            this.chartZone1.Series.Add(series14);
+            this.chartZone1.Series.Add(series15);
+            this.chartZone1.Series.Add(series16);
+            this.chartZone1.Series.Add(series17);
+            this.chartZone1.Series.Add(series18);
+            this.chartZone1.Series.Add(series19);
+            this.chartZone1.Series.Add(series20);
+            this.chartZone1.Series.Add(series21);
+            this.chartZone1.Series.Add(series22);
+            this.chartZone1.Series.Add(series23);
+            this.chartZone1.Series.Add(series24);
+            this.chartZone1.Size = new System.Drawing.Size(1212, 395);
+            this.chartZone1.TabIndex = 238;
+            this.chartZone1.Text = "chart1";
+            this.chartZone1.AxisScrollBarClicked += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs>(this.chart1_AxisScrollBarClicked);
+            this.chartZone1.CustomizeLegend += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.CustomizeLegendEventArgs>(this.chart1_CustomizeLegend);
+            this.chartZone1.MarginChanged += new System.EventHandler(this.chart1_MarginChanged);
+            this.chartZone1.Click += new System.EventHandler(this.chart1_Click);
+            this.chartZone1.Resize += new System.EventHandler(this.chart1_Resize);
             // 
             // label39
             // 
@@ -1810,52 +1833,6 @@ namespace Apple_24_Zones.Forms
             this.panel11.Size = new System.Drawing.Size(461, 323);
             this.panel11.TabIndex = 242;
             // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Image = global::Apple_24_Zones.Properties.Resources.tc1on;
-            this.pictureBox15.Location = new System.Drawing.Point(251, 67);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 233;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Image = global::Apple_24_Zones.Properties.Resources.tc8on;
-            this.pictureBox14.Location = new System.Drawing.Point(252, 115);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 232;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(252, 115);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 231;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(252, 67);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 230;
-            this.pictureBox11.TabStop = false;
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1921,50 +1898,6 @@ namespace Apple_24_Zones.Forms
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(461, 323);
             this.panel10.TabIndex = 1;
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox19.Image = global::Apple_24_Zones.Properties.Resources.tc8on;
-            this.pictureBox19.Location = new System.Drawing.Point(378, 154);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox19.TabIndex = 233;
-            this.pictureBox19.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(378, 103);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 230;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(378, 155);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 229;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(378, 56);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 228;
-            this.pictureBox9.TabStop = false;
             // 
             // label72
             // 
@@ -2108,50 +2041,6 @@ namespace Apple_24_Zones.Forms
             this.panel14.TabIndex = 242;
             this.panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox17.Image = global::Apple_24_Zones.Properties.Resources.tc1on;
-            this.pictureBox17.Location = new System.Drawing.Point(235, 67);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox17.TabIndex = 235;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox16.Image = global::Apple_24_Zones.Properties.Resources.tc8on;
-            this.pictureBox16.Location = new System.Drawing.Point(235, 115);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 234;
-            this.pictureBox16.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(235, 115);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 233;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(235, 67);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 232;
-            this.pictureBox13.TabStop = false;
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2217,50 +2106,6 @@ namespace Apple_24_Zones.Forms
             this.panel13.Size = new System.Drawing.Size(461, 323);
             this.panel13.TabIndex = 1;
             this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.panel13_Paint);
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox18.Image = global::Apple_24_Zones.Properties.Resources.tc8on;
-            this.pictureBox18.Location = new System.Drawing.Point(391, 153);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 233;
-            this.pictureBox18.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(391, 103);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 227;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(391, 155);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 226;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(391, 56);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 225;
-            this.pictureBox4.TabStop = false;
             // 
             // label74
             // 
@@ -2399,7 +2244,7 @@ namespace Apple_24_Zones.Forms
             this.zone2label12.AutoSize = true;
             this.zone2label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zone2label12.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zone2label12.Location = new System.Drawing.Point(1138, 11);
+            this.zone2label12.Location = new System.Drawing.Point(1139, 23);
             this.zone2label12.Name = "zone2label12";
             this.zone2label12.Size = new System.Drawing.Size(47, 20);
             this.zone2label12.TabIndex = 25;
@@ -2410,7 +2255,7 @@ namespace Apple_24_Zones.Forms
             this.zone2label11.AutoSize = true;
             this.zone2label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zone2label11.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zone2label11.Location = new System.Drawing.Point(1030, 11);
+            this.zone2label11.Location = new System.Drawing.Point(1031, 23);
             this.zone2label11.Name = "zone2label11";
             this.zone2label11.Size = new System.Drawing.Size(47, 20);
             this.zone2label11.TabIndex = 25;
@@ -2421,7 +2266,7 @@ namespace Apple_24_Zones.Forms
             this.zone2label10.AutoSize = true;
             this.zone2label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zone2label10.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zone2label10.Location = new System.Drawing.Point(920, 10);
+            this.zone2label10.Location = new System.Drawing.Point(921, 22);
             this.zone2label10.Name = "zone2label10";
             this.zone2label10.Size = new System.Drawing.Size(47, 20);
             this.zone2label10.TabIndex = 25;
@@ -2432,7 +2277,7 @@ namespace Apple_24_Zones.Forms
             this.zone2label9.AutoSize = true;
             this.zone2label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zone2label9.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zone2label9.Location = new System.Drawing.Point(817, 10);
+            this.zone2label9.Location = new System.Drawing.Point(818, 22);
             this.zone2label9.Name = "zone2label9";
             this.zone2label9.Size = new System.Drawing.Size(47, 20);
             this.zone2label9.TabIndex = 25;
@@ -2443,7 +2288,7 @@ namespace Apple_24_Zones.Forms
             this.zone2label8.AutoSize = true;
             this.zone2label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zone2label8.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zone2label8.Location = new System.Drawing.Point(701, 10);
+            this.zone2label8.Location = new System.Drawing.Point(702, 22);
             this.zone2label8.Name = "zone2label8";
             this.zone2label8.Size = new System.Drawing.Size(47, 20);
             this.zone2label8.TabIndex = 25;
@@ -2454,7 +2299,7 @@ namespace Apple_24_Zones.Forms
             this.zone2label7.AutoSize = true;
             this.zone2label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zone2label7.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zone2label7.Location = new System.Drawing.Point(601, 10);
+            this.zone2label7.Location = new System.Drawing.Point(602, 22);
             this.zone2label7.Name = "zone2label7";
             this.zone2label7.Size = new System.Drawing.Size(47, 20);
             this.zone2label7.TabIndex = 25;
@@ -2465,7 +2310,7 @@ namespace Apple_24_Zones.Forms
             this.zone2label6.AutoSize = true;
             this.zone2label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zone2label6.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zone2label6.Location = new System.Drawing.Point(499, 11);
+            this.zone2label6.Location = new System.Drawing.Point(500, 23);
             this.zone2label6.Name = "zone2label6";
             this.zone2label6.Size = new System.Drawing.Size(47, 20);
             this.zone2label6.TabIndex = 25;
@@ -2477,7 +2322,7 @@ namespace Apple_24_Zones.Forms
             this.zone2label5.AutoSize = true;
             this.zone2label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zone2label5.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zone2label5.Location = new System.Drawing.Point(401, 11);
+            this.zone2label5.Location = new System.Drawing.Point(402, 23);
             this.zone2label5.Name = "zone2label5";
             this.zone2label5.Size = new System.Drawing.Size(47, 20);
             this.zone2label5.TabIndex = 25;
@@ -2488,7 +2333,7 @@ namespace Apple_24_Zones.Forms
             this.zone2label4.AutoSize = true;
             this.zone2label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zone2label4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zone2label4.Location = new System.Drawing.Point(300, 10);
+            this.zone2label4.Location = new System.Drawing.Point(301, 22);
             this.zone2label4.Name = "zone2label4";
             this.zone2label4.Size = new System.Drawing.Size(47, 20);
             this.zone2label4.TabIndex = 25;
@@ -2500,7 +2345,7 @@ namespace Apple_24_Zones.Forms
             this.zone2label3.AutoSize = true;
             this.zone2label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zone2label3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zone2label3.Location = new System.Drawing.Point(207, 10);
+            this.zone2label3.Location = new System.Drawing.Point(208, 22);
             this.zone2label3.Name = "zone2label3";
             this.zone2label3.Size = new System.Drawing.Size(47, 20);
             this.zone2label3.TabIndex = 25;
@@ -2512,7 +2357,7 @@ namespace Apple_24_Zones.Forms
             this.zone2label2.AutoSize = true;
             this.zone2label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zone2label2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zone2label2.Location = new System.Drawing.Point(116, 10);
+            this.zone2label2.Location = new System.Drawing.Point(117, 22);
             this.zone2label2.Name = "zone2label2";
             this.zone2label2.Size = new System.Drawing.Size(47, 20);
             this.zone2label2.TabIndex = 25;
@@ -2523,7 +2368,7 @@ namespace Apple_24_Zones.Forms
             this.zone2label1.AutoSize = true;
             this.zone2label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zone2label1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.zone2label1.Location = new System.Drawing.Point(24, 10);
+            this.zone2label1.Location = new System.Drawing.Point(25, 22);
             this.zone2label1.Name = "zone2label1";
             this.zone2label1.Size = new System.Drawing.Size(47, 20);
             this.zone2label1.TabIndex = 25;
@@ -2532,7 +2377,7 @@ namespace Apple_24_Zones.Forms
             // textBox28
             // 
             this.textBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox28.Location = new System.Drawing.Point(7, 31);
+            this.textBox28.Location = new System.Drawing.Point(8, 43);
             this.textBox28.Name = "textBox28";
             this.textBox28.ReadOnly = true;
             this.textBox28.Size = new System.Drawing.Size(79, 29);
@@ -2543,7 +2388,7 @@ namespace Apple_24_Zones.Forms
             // textBox29
             // 
             this.textBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox29.Location = new System.Drawing.Point(99, 31);
+            this.textBox29.Location = new System.Drawing.Point(100, 43);
             this.textBox29.Name = "textBox29";
             this.textBox29.ReadOnly = true;
             this.textBox29.Size = new System.Drawing.Size(79, 29);
@@ -2554,7 +2399,7 @@ namespace Apple_24_Zones.Forms
             // textBox30
             // 
             this.textBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox30.Location = new System.Drawing.Point(192, 31);
+            this.textBox30.Location = new System.Drawing.Point(193, 43);
             this.textBox30.Name = "textBox30";
             this.textBox30.ReadOnly = true;
             this.textBox30.Size = new System.Drawing.Size(79, 29);
@@ -2564,7 +2409,7 @@ namespace Apple_24_Zones.Forms
             // textBox31
             // 
             this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox31.Location = new System.Drawing.Point(286, 31);
+            this.textBox31.Location = new System.Drawing.Point(287, 43);
             this.textBox31.Name = "textBox31";
             this.textBox31.ReadOnly = true;
             this.textBox31.Size = new System.Drawing.Size(79, 29);
@@ -2574,7 +2419,7 @@ namespace Apple_24_Zones.Forms
             // textBox32
             // 
             this.textBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox32.Location = new System.Drawing.Point(387, 32);
+            this.textBox32.Location = new System.Drawing.Point(388, 44);
             this.textBox32.Name = "textBox32";
             this.textBox32.ReadOnly = true;
             this.textBox32.Size = new System.Drawing.Size(79, 29);
@@ -2584,7 +2429,7 @@ namespace Apple_24_Zones.Forms
             // textBox33
             // 
             this.textBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox33.Location = new System.Drawing.Point(485, 31);
+            this.textBox33.Location = new System.Drawing.Point(486, 43);
             this.textBox33.Name = "textBox33";
             this.textBox33.ReadOnly = true;
             this.textBox33.Size = new System.Drawing.Size(79, 29);
@@ -2595,7 +2440,7 @@ namespace Apple_24_Zones.Forms
             // textBox34
             // 
             this.textBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox34.Location = new System.Drawing.Point(589, 31);
+            this.textBox34.Location = new System.Drawing.Point(590, 43);
             this.textBox34.Name = "textBox34";
             this.textBox34.ReadOnly = true;
             this.textBox34.Size = new System.Drawing.Size(79, 29);
@@ -2605,7 +2450,7 @@ namespace Apple_24_Zones.Forms
             // textBox35
             // 
             this.textBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox35.Location = new System.Drawing.Point(690, 31);
+            this.textBox35.Location = new System.Drawing.Point(691, 43);
             this.textBox35.Name = "textBox35";
             this.textBox35.ReadOnly = true;
             this.textBox35.Size = new System.Drawing.Size(79, 29);
@@ -2615,7 +2460,7 @@ namespace Apple_24_Zones.Forms
             // textBox36
             // 
             this.textBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox36.Location = new System.Drawing.Point(800, 31);
+            this.textBox36.Location = new System.Drawing.Point(801, 43);
             this.textBox36.Name = "textBox36";
             this.textBox36.ReadOnly = true;
             this.textBox36.Size = new System.Drawing.Size(79, 29);
@@ -2625,7 +2470,7 @@ namespace Apple_24_Zones.Forms
             // textBox37
             // 
             this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox37.Location = new System.Drawing.Point(909, 31);
+            this.textBox37.Location = new System.Drawing.Point(910, 43);
             this.textBox37.Name = "textBox37";
             this.textBox37.ReadOnly = true;
             this.textBox37.Size = new System.Drawing.Size(79, 29);
@@ -2635,7 +2480,7 @@ namespace Apple_24_Zones.Forms
             // textBox38
             // 
             this.textBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox38.Location = new System.Drawing.Point(1018, 31);
+            this.textBox38.Location = new System.Drawing.Point(1019, 43);
             this.textBox38.Name = "textBox38";
             this.textBox38.ReadOnly = true;
             this.textBox38.Size = new System.Drawing.Size(79, 29);
@@ -2645,47 +2490,48 @@ namespace Apple_24_Zones.Forms
             // textBox39
             // 
             this.textBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox39.Location = new System.Drawing.Point(1124, 31);
+            this.textBox39.Location = new System.Drawing.Point(1125, 43);
             this.textBox39.Name = "textBox39";
             this.textBox39.ReadOnly = true;
             this.textBox39.Size = new System.Drawing.Size(79, 29);
             this.textBox39.TabIndex = 195;
             this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel9
+            // panelZone2
             // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelZone2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.BackColor = System.Drawing.Color.LightGray;
-            this.panel9.Controls.Add(this.textBox39);
-            this.panel9.Controls.Add(this.textBox38);
-            this.panel9.Controls.Add(this.textBox37);
-            this.panel9.Controls.Add(this.textBox36);
-            this.panel9.Controls.Add(this.textBox35);
-            this.panel9.Controls.Add(this.textBox34);
-            this.panel9.Controls.Add(this.textBox33);
-            this.panel9.Controls.Add(this.textBox32);
-            this.panel9.Controls.Add(this.textBox31);
-            this.panel9.Controls.Add(this.textBox30);
-            this.panel9.Controls.Add(this.textBox29);
-            this.panel9.Controls.Add(this.textBox28);
-            this.panel9.Controls.Add(this.zone2label1);
-            this.panel9.Controls.Add(this.zone2label2);
-            this.panel9.Controls.Add(this.zone2label3);
-            this.panel9.Controls.Add(this.zone2label4);
-            this.panel9.Controls.Add(this.zone2label5);
-            this.panel9.Controls.Add(this.zone2label6);
-            this.panel9.Controls.Add(this.zone2label7);
-            this.panel9.Controls.Add(this.zone2label8);
-            this.panel9.Controls.Add(this.zone2label9);
-            this.panel9.Controls.Add(this.zone2label10);
-            this.panel9.Controls.Add(this.zone2label11);
-            this.panel9.Controls.Add(this.zone2label12);
-            this.panel9.Location = new System.Drawing.Point(591, 439);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1200, 70);
-            this.panel9.TabIndex = 239;
-            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            this.panelZone2.BackColor = System.Drawing.Color.LightGray;
+            this.panelZone2.Controls.Add(this.label4);
+            this.panelZone2.Controls.Add(this.textBox39);
+            this.panelZone2.Controls.Add(this.textBox38);
+            this.panelZone2.Controls.Add(this.textBox37);
+            this.panelZone2.Controls.Add(this.textBox36);
+            this.panelZone2.Controls.Add(this.textBox35);
+            this.panelZone2.Controls.Add(this.textBox34);
+            this.panelZone2.Controls.Add(this.textBox33);
+            this.panelZone2.Controls.Add(this.textBox32);
+            this.panelZone2.Controls.Add(this.textBox31);
+            this.panelZone2.Controls.Add(this.textBox30);
+            this.panelZone2.Controls.Add(this.textBox29);
+            this.panelZone2.Controls.Add(this.textBox28);
+            this.panelZone2.Controls.Add(this.zone2label1);
+            this.panelZone2.Controls.Add(this.zone2label2);
+            this.panelZone2.Controls.Add(this.zone2label3);
+            this.panelZone2.Controls.Add(this.zone2label4);
+            this.panelZone2.Controls.Add(this.zone2label5);
+            this.panelZone2.Controls.Add(this.zone2label6);
+            this.panelZone2.Controls.Add(this.zone2label7);
+            this.panelZone2.Controls.Add(this.zone2label8);
+            this.panelZone2.Controls.Add(this.zone2label9);
+            this.panelZone2.Controls.Add(this.zone2label10);
+            this.panelZone2.Controls.Add(this.zone2label11);
+            this.panelZone2.Controls.Add(this.zone2label12);
+            this.panelZone2.Location = new System.Drawing.Point(5, 391);
+            this.panelZone2.Name = "panelZone2";
+            this.panelZone2.Size = new System.Drawing.Size(1212, 82);
+            this.panelZone2.TabIndex = 239;
+            this.panelZone2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // panel1
             // 
@@ -2701,7 +2547,8 @@ namespace Apple_24_Zones.Forms
             this.menuStrip3.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connectToolStripMenuItem,
-            this.exportToolStripMenuItem});
+            this.exportToolStripMenuItem,
+            this.viewOptionToolStripMenuItem});
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(1942, 24);
@@ -2735,294 +2582,6 @@ namespace Apple_24_Zones.Forms
             this.label3.Text = "ELEN II SOFTWARE";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(1775, 56);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 243;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(1775, 74);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 244;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Checked = true;
-            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox4.Location = new System.Drawing.Point(1775, 92);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 246;
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.Click += new System.EventHandler(this.checkBox4_Click);
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Checked = true;
-            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox5.Location = new System.Drawing.Point(1775, 110);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 247;
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.Click += new System.EventHandler(this.checkBox5_Click);
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Checked = true;
-            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox6.Location = new System.Drawing.Point(1775, 128);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 248;
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.Click += new System.EventHandler(this.checkBox6_Click);
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Checked = true;
-            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox7.Location = new System.Drawing.Point(1775, 146);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(15, 14);
-            this.checkBox7.TabIndex = 249;
-            this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.Click += new System.EventHandler(this.checkBox7_Click);
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Checked = true;
-            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox8.Location = new System.Drawing.Point(1775, 165);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(15, 14);
-            this.checkBox8.TabIndex = 250;
-            this.checkBox8.UseVisualStyleBackColor = true;
-            this.checkBox8.Click += new System.EventHandler(this.checkBox8_Click);
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Checked = true;
-            this.checkBox9.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox9.Location = new System.Drawing.Point(1775, 182);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(15, 14);
-            this.checkBox9.TabIndex = 251;
-            this.checkBox9.UseVisualStyleBackColor = true;
-            this.checkBox9.Click += new System.EventHandler(this.checkBox9_Click);
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Checked = true;
-            this.checkBox10.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox10.Location = new System.Drawing.Point(1775, 200);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(15, 14);
-            this.checkBox10.TabIndex = 252;
-            this.checkBox10.UseVisualStyleBackColor = true;
-            this.checkBox10.Click += new System.EventHandler(this.checkBox10_Click);
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Checked = true;
-            this.checkBox11.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox11.Location = new System.Drawing.Point(1775, 218);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(15, 14);
-            this.checkBox11.TabIndex = 253;
-            this.checkBox11.UseVisualStyleBackColor = true;
-            this.checkBox11.Click += new System.EventHandler(this.checkBox11_Click);
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Checked = true;
-            this.checkBox12.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox12.Location = new System.Drawing.Point(1775, 236);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(15, 14);
-            this.checkBox12.TabIndex = 254;
-            this.checkBox12.UseVisualStyleBackColor = true;
-            this.checkBox12.Click += new System.EventHandler(this.checkBox12_Click);
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Checked = true;
-            this.checkBox13.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox13.Location = new System.Drawing.Point(1775, 254);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(15, 14);
-            this.checkBox13.TabIndex = 255;
-            this.checkBox13.UseVisualStyleBackColor = true;
-            this.checkBox13.Click += new System.EventHandler(this.checkBox13_Click);
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Checked = true;
-            this.checkBox14.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox14.Location = new System.Drawing.Point(1775, 734);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(15, 14);
-            this.checkBox14.TabIndex = 267;
-            this.checkBox14.UseVisualStyleBackColor = true;
-            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
-            // 
-            // checkBox15
-            // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Checked = true;
-            this.checkBox15.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox15.Location = new System.Drawing.Point(1775, 716);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(15, 14);
-            this.checkBox15.TabIndex = 266;
-            this.checkBox15.UseVisualStyleBackColor = true;
-            this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
-            // 
-            // checkBox16
-            // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Checked = true;
-            this.checkBox16.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox16.Location = new System.Drawing.Point(1775, 698);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(15, 14);
-            this.checkBox16.TabIndex = 265;
-            this.checkBox16.UseVisualStyleBackColor = true;
-            this.checkBox16.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Checked = true;
-            this.checkBox17.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox17.Location = new System.Drawing.Point(1775, 680);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(15, 14);
-            this.checkBox17.TabIndex = 264;
-            this.checkBox17.UseVisualStyleBackColor = true;
-            this.checkBox17.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged);
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Checked = true;
-            this.checkBox18.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox18.Location = new System.Drawing.Point(1775, 662);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(15, 14);
-            this.checkBox18.TabIndex = 263;
-            this.checkBox18.UseVisualStyleBackColor = true;
-            this.checkBox18.CheckedChanged += new System.EventHandler(this.checkBox18_CheckedChanged);
-            // 
-            // checkBox19
-            // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Checked = true;
-            this.checkBox19.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox19.Location = new System.Drawing.Point(1775, 645);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(15, 14);
-            this.checkBox19.TabIndex = 262;
-            this.checkBox19.UseVisualStyleBackColor = true;
-            this.checkBox19.CheckedChanged += new System.EventHandler(this.checkBox19_CheckedChanged);
-            // 
-            // checkBox20
-            // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.Checked = true;
-            this.checkBox20.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox20.Location = new System.Drawing.Point(1775, 626);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(15, 14);
-            this.checkBox20.TabIndex = 261;
-            this.checkBox20.UseVisualStyleBackColor = true;
-            this.checkBox20.CheckedChanged += new System.EventHandler(this.checkBox20_CheckedChanged);
-            // 
-            // checkBox21
-            // 
-            this.checkBox21.AutoSize = true;
-            this.checkBox21.Checked = true;
-            this.checkBox21.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox21.Location = new System.Drawing.Point(1775, 608);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(15, 14);
-            this.checkBox21.TabIndex = 260;
-            this.checkBox21.UseVisualStyleBackColor = true;
-            this.checkBox21.CheckedChanged += new System.EventHandler(this.checkBox21_CheckedChanged);
-            // 
-            // checkBox22
-            // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.Checked = true;
-            this.checkBox22.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox22.Location = new System.Drawing.Point(1775, 590);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(15, 14);
-            this.checkBox22.TabIndex = 259;
-            this.checkBox22.UseVisualStyleBackColor = true;
-            this.checkBox22.CheckedChanged += new System.EventHandler(this.checkBox22_CheckedChanged);
-            // 
-            // checkBox23
-            // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.Checked = true;
-            this.checkBox23.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox23.Location = new System.Drawing.Point(1775, 572);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(15, 14);
-            this.checkBox23.TabIndex = 258;
-            this.checkBox23.UseVisualStyleBackColor = true;
-            this.checkBox23.CheckedChanged += new System.EventHandler(this.checkBox23_CheckedChanged);
-            // 
-            // checkBox24
-            // 
-            this.checkBox24.AutoSize = true;
-            this.checkBox24.Checked = true;
-            this.checkBox24.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox24.Location = new System.Drawing.Point(1775, 554);
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(15, 14);
-            this.checkBox24.TabIndex = 257;
-            this.checkBox24.UseVisualStyleBackColor = true;
-            this.checkBox24.CheckedChanged += new System.EventHandler(this.checkBox24_CheckedChanged);
-            // 
-            // checkBox25
-            // 
-            this.checkBox25.AutoSize = true;
-            this.checkBox25.Checked = true;
-            this.checkBox25.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox25.Location = new System.Drawing.Point(1775, 554);
-            this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(15, 14);
-            this.checkBox25.TabIndex = 256;
-            this.checkBox25.UseVisualStyleBackColor = true;
-            this.checkBox25.CheckedChanged += new System.EventHandler(this.checkBox25_CheckedChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -3034,24 +2593,80 @@ namespace Apple_24_Zones.Forms
             this.label1.Text = "200-32271";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button3
+            // viewOptionToolStripMenuItem
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1771, 400);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(22, 23);
-            this.button3.TabIndex = 270;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.viewOptionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bothZonesToolStripMenuItem,
+            this.zone1ToolStripMenuItem,
+            this.zone2ToolStripMenuItem});
+            this.viewOptionToolStripMenuItem.Name = "viewOptionToolStripMenuItem";
+            this.viewOptionToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.viewOptionToolStripMenuItem.Text = "View Option";
             // 
-            // pictureBox3
+            // bothZonesToolStripMenuItem
             // 
-            this.pictureBox3.Image = global::Apple_24_Zones.Properties.Resources.MIDORI_OFICIAL2;
-            this.pictureBox3.Location = new System.Drawing.Point(120, 925);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(289, 102);
-            this.pictureBox3.TabIndex = 269;
-            this.pictureBox3.TabStop = false;
+            this.bothZonesToolStripMenuItem.Name = "bothZonesToolStripMenuItem";
+            this.bothZonesToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.bothZonesToolStripMenuItem.Text = "Both Zones";
+            // 
+            // zone1ToolStripMenuItem
+            // 
+            this.zone1ToolStripMenuItem.Name = "zone1ToolStripMenuItem";
+            this.zone1ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.zone1ToolStripMenuItem.Text = "Zone #1";
+            // 
+            // zone2ToolStripMenuItem
+            // 
+            this.zone2ToolStripMenuItem.Name = "zone2ToolStripMenuItem";
+            this.zone2ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.zone2ToolStripMenuItem.Text = "Zone #2";
+            // 
+            // panelBoth
+            // 
+            this.panelBoth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(255)))));
+            this.panelBoth.Controls.Add(this.panel3);
+            this.panelBoth.Controls.Add(this.panel2);
+            this.panelBoth.Controls.Add(this.panelZone2);
+            this.panelBoth.Controls.Add(this.chartZone2);
+            this.panelBoth.Controls.Add(this.chartZone1);
+            this.panelBoth.Controls.Add(this.panelZone1);
+            this.panelBoth.Location = new System.Drawing.Point(579, 45);
+            this.panelBoth.Name = "panelBoth";
+            this.panelBoth.Size = new System.Drawing.Size(1320, 958);
+            this.panelBoth.TabIndex = 271;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label2.Location = new System.Drawing.Point(539, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.TabIndex = 259;
+            this.label2.Text = "ZONE #1";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label4.Location = new System.Drawing.Point(539, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 20);
+            this.label4.TabIndex = 260;
+            this.label4.Text = "ZONE #2";
+            // 
+            // ledZ2
+            // 
+            this.ledZ2.BackColor = System.Drawing.Color.Transparent;
+            this.ledZ2.Image = ((System.Drawing.Image)(resources.GetObject("ledZ2.Image")));
+            this.ledZ2.Location = new System.Drawing.Point(888, 171);
+            this.ledZ2.Name = "ledZ2";
+            this.ledZ2.Size = new System.Drawing.Size(43, 39);
+            this.ledZ2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ledZ2.TabIndex = 184;
+            this.ledZ2.TabStop = false;
             // 
             // btnCSVFileFilter
             // 
@@ -3062,20 +2677,198 @@ namespace Apple_24_Zones.Forms
             this.btnCSVFileFilter.IconColor = System.Drawing.Color.SteelBlue;
             this.btnCSVFileFilter.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnCSVFileFilter.IconSize = 35;
-            this.btnCSVFileFilter.Location = new System.Drawing.Point(865, 1001);
+            this.btnCSVFileFilter.Location = new System.Drawing.Point(272, 936);
             this.btnCSVFileFilter.Name = "btnCSVFileFilter";
             this.btnCSVFileFilter.Size = new System.Drawing.Size(26, 36);
             this.btnCSVFileFilter.TabIndex = 229;
             this.btnCSVFileFilter.UseVisualStyleBackColor = false;
             this.btnCSVFileFilter.Click += new System.EventHandler(this.btnCSVFileFilter_Click);
             // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox17.Image = global::Apple_24_Zones.Properties.Resources.tc1on;
+            this.pictureBox17.Location = new System.Drawing.Point(235, 67);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 235;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.Image = global::Apple_24_Zones.Properties.Resources.tc8on;
+            this.pictureBox16.Location = new System.Drawing.Point(235, 115);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 234;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(235, 115);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 233;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(235, 67);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 232;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox18.Image = global::Apple_24_Zones.Properties.Resources.tc8on;
+            this.pictureBox18.Location = new System.Drawing.Point(391, 153);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 233;
+            this.pictureBox18.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(391, 103);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 227;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(391, 155);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 226;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(391, 56);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 225;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox15.Image = global::Apple_24_Zones.Properties.Resources.tc1on;
+            this.pictureBox15.Location = new System.Drawing.Point(251, 67);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 233;
+            this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.Image = global::Apple_24_Zones.Properties.Resources.tc8on;
+            this.pictureBox14.Location = new System.Drawing.Point(252, 115);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 232;
+            this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(252, 115);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 231;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(252, 67);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 230;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox19.Image = global::Apple_24_Zones.Properties.Resources.tc8on;
+            this.pictureBox19.Location = new System.Drawing.Point(378, 154);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.TabIndex = 233;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(378, 103);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 230;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(378, 155);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 229;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(378, 56);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 228;
+            this.pictureBox9.TabStop = false;
+            // 
             // btnEMO
             // 
             this.btnEMO.BackColor = System.Drawing.Color.White;
             this.btnEMO.Image = ((System.Drawing.Image)(resources.GetObject("btnEMO.Image")));
-            this.btnEMO.Location = new System.Drawing.Point(1806, 905);
+            this.btnEMO.Location = new System.Drawing.Point(12, 970);
             this.btnEMO.Name = "btnEMO";
-            this.btnEMO.Size = new System.Drawing.Size(95, 90);
+            this.btnEMO.Size = new System.Drawing.Size(95, 66);
             this.btnEMO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEMO.TabIndex = 221;
             this.btnEMO.TabStop = false;
@@ -3090,7 +2883,7 @@ namespace Apple_24_Zones.Forms
             this.btnTypeTime.IconColor = System.Drawing.Color.Black;
             this.btnTypeTime.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnTypeTime.IconSize = 30;
-            this.btnTypeTime.Location = new System.Drawing.Point(900, 1011);
+            this.btnTypeTime.Location = new System.Drawing.Point(307, 946);
             this.btnTypeTime.Name = "btnTypeTime";
             this.btnTypeTime.Size = new System.Drawing.Size(38, 33);
             this.btnTypeTime.TabIndex = 220;
@@ -3107,7 +2900,7 @@ namespace Apple_24_Zones.Forms
             this.btnClearChart.IconColor = System.Drawing.Color.Black;
             this.btnClearChart.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnClearChart.IconSize = 30;
-            this.btnClearChart.Location = new System.Drawing.Point(953, 1004);
+            this.btnClearChart.Location = new System.Drawing.Point(360, 939);
             this.btnClearChart.Name = "btnClearChart";
             this.btnClearChart.Size = new System.Drawing.Size(38, 33);
             this.btnClearChart.TabIndex = 219;
@@ -3123,7 +2916,7 @@ namespace Apple_24_Zones.Forms
             this.btnRecordDataChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
             this.btnRecordDataChart.IconColor = System.Drawing.Color.Black;
             this.btnRecordDataChart.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnRecordDataChart.Location = new System.Drawing.Point(538, 697);
+            this.btnRecordDataChart.Location = new System.Drawing.Point(150, 959);
             this.btnRecordDataChart.Name = "btnRecordDataChart";
             this.btnRecordDataChart.Size = new System.Drawing.Size(48, 33);
             this.btnRecordDataChart.TabIndex = 217;
@@ -3139,7 +2932,7 @@ namespace Apple_24_Zones.Forms
             this.btnChartMode.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
             this.btnChartMode.IconColor = System.Drawing.Color.Black;
             this.btnChartMode.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnChartMode.Location = new System.Drawing.Point(1120, 1001);
+            this.btnChartMode.Location = new System.Drawing.Point(243, 993);
             this.btnChartMode.Name = "btnChartMode";
             this.btnChartMode.Size = new System.Drawing.Size(48, 33);
             this.btnChartMode.TabIndex = 215;
@@ -3155,7 +2948,7 @@ namespace Apple_24_Zones.Forms
             this.btnStartStopChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
             this.btnStartStopChart.IconColor = System.Drawing.Color.Black;
             this.btnStartStopChart.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnStartStopChart.Location = new System.Drawing.Point(1174, 1011);
+            this.btnStartStopChart.Location = new System.Drawing.Point(297, 1003);
             this.btnStartStopChart.Name = "btnStartStopChart";
             this.btnStartStopChart.Size = new System.Drawing.Size(48, 33);
             this.btnStartStopChart.TabIndex = 213;
@@ -3185,6 +2978,598 @@ namespace Apple_24_Zones.Forms
             this.pictureBox2.TabIndex = 181;
             this.pictureBox2.TabStop = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Magenta;
+            this.label5.Location = new System.Drawing.Point(7, 272);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 13);
+            this.label5.TabIndex = 250;
+            this.label5.Text = "    ";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Maroon;
+            this.label31.Location = new System.Drawing.Point(7, 211);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(19, 13);
+            this.label31.TabIndex = 249;
+            this.label31.Text = "    ";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Lime;
+            this.label34.Location = new System.Drawing.Point(7, 242);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(19, 13);
+            this.label34.TabIndex = 248;
+            this.label34.Text = "    ";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Orange;
+            this.label35.Location = new System.Drawing.Point(7, 179);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(19, 13);
+            this.label35.TabIndex = 247;
+            this.label35.Text = "    ";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Cyan;
+            this.label36.Location = new System.Drawing.Point(7, 148);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(19, 13);
+            this.label36.TabIndex = 246;
+            this.label36.Text = "    ";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Purple;
+            this.label37.Location = new System.Drawing.Point(7, 119);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(19, 13);
+            this.label37.TabIndex = 245;
+            this.label37.Text = "    ";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Green;
+            this.label38.Location = new System.Drawing.Point(7, 92);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(19, 13);
+            this.label38.TabIndex = 244;
+            this.label38.Text = "    ";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.BackColor = System.Drawing.Color.Yellow;
+            this.label66.Location = new System.Drawing.Point(7, 62);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(19, 13);
+            this.label66.TabIndex = 243;
+            this.label66.Text = "    ";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.BackColor = System.Drawing.Color.Blue;
+            this.label83.Location = new System.Drawing.Point(7, 32);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(19, 13);
+            this.label83.TabIndex = 242;
+            this.label83.Text = "    ";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.BackColor = System.Drawing.Color.Red;
+            this.label84.Location = new System.Drawing.Point(7, 5);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(19, 13);
+            this.label84.TabIndex = 241;
+            this.label84.Text = "    ";
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.BackColor = System.Drawing.Color.Black;
+            this.label85.Location = new System.Drawing.Point(7, 331);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(19, 13);
+            this.label85.TabIndex = 251;
+            this.label85.Text = "    ";
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.BackColor = System.Drawing.Color.Olive;
+            this.label86.Location = new System.Drawing.Point(7, 300);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(19, 13);
+            this.label86.TabIndex = 252;
+            this.label86.Text = "    ";
+            // 
+            // checkT1
+            // 
+            this.checkT1.AutoSize = true;
+            this.checkT1.Checked = true;
+            this.checkT1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT1.Location = new System.Drawing.Point(30, 4);
+            this.checkT1.Name = "checkT1";
+            this.checkT1.Size = new System.Drawing.Size(42, 17);
+            this.checkT1.TabIndex = 253;
+            this.checkT1.Text = "T-1";
+            this.checkT1.UseVisualStyleBackColor = true;
+            // 
+            // checkT2
+            // 
+            this.checkT2.AutoSize = true;
+            this.checkT2.Checked = true;
+            this.checkT2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT2.Location = new System.Drawing.Point(30, 32);
+            this.checkT2.Name = "checkT2";
+            this.checkT2.Size = new System.Drawing.Size(42, 17);
+            this.checkT2.TabIndex = 254;
+            this.checkT2.Text = "T-2";
+            this.checkT2.UseVisualStyleBackColor = true;
+            // 
+            // checkT3
+            // 
+            this.checkT3.AutoSize = true;
+            this.checkT3.Checked = true;
+            this.checkT3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT3.Location = new System.Drawing.Point(30, 61);
+            this.checkT3.Name = "checkT3";
+            this.checkT3.Size = new System.Drawing.Size(42, 17);
+            this.checkT3.TabIndex = 255;
+            this.checkT3.Text = "T-3";
+            this.checkT3.UseVisualStyleBackColor = true;
+            // 
+            // checkT4
+            // 
+            this.checkT4.AutoSize = true;
+            this.checkT4.Checked = true;
+            this.checkT4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT4.Location = new System.Drawing.Point(30, 91);
+            this.checkT4.Name = "checkT4";
+            this.checkT4.Size = new System.Drawing.Size(42, 17);
+            this.checkT4.TabIndex = 256;
+            this.checkT4.Text = "T-4";
+            this.checkT4.UseVisualStyleBackColor = true;
+            // 
+            // checkT5
+            // 
+            this.checkT5.AutoSize = true;
+            this.checkT5.Checked = true;
+            this.checkT5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT5.Location = new System.Drawing.Point(30, 118);
+            this.checkT5.Name = "checkT5";
+            this.checkT5.Size = new System.Drawing.Size(42, 17);
+            this.checkT5.TabIndex = 257;
+            this.checkT5.Text = "T-5";
+            this.checkT5.UseVisualStyleBackColor = true;
+            // 
+            // checkT6
+            // 
+            this.checkT6.AutoSize = true;
+            this.checkT6.Checked = true;
+            this.checkT6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT6.Location = new System.Drawing.Point(30, 147);
+            this.checkT6.Name = "checkT6";
+            this.checkT6.Size = new System.Drawing.Size(42, 17);
+            this.checkT6.TabIndex = 258;
+            this.checkT6.Text = "T-6";
+            this.checkT6.UseVisualStyleBackColor = true;
+            // 
+            // checkT7
+            // 
+            this.checkT7.AutoSize = true;
+            this.checkT7.Checked = true;
+            this.checkT7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT7.Location = new System.Drawing.Point(30, 178);
+            this.checkT7.Name = "checkT7";
+            this.checkT7.Size = new System.Drawing.Size(42, 17);
+            this.checkT7.TabIndex = 259;
+            this.checkT7.Text = "T-7";
+            this.checkT7.UseVisualStyleBackColor = true;
+            // 
+            // checkT8
+            // 
+            this.checkT8.AutoSize = true;
+            this.checkT8.Checked = true;
+            this.checkT8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT8.Location = new System.Drawing.Point(30, 210);
+            this.checkT8.Name = "checkT8";
+            this.checkT8.Size = new System.Drawing.Size(42, 17);
+            this.checkT8.TabIndex = 260;
+            this.checkT8.Text = "T-8";
+            this.checkT8.UseVisualStyleBackColor = true;
+            // 
+            // checkT9
+            // 
+            this.checkT9.AutoSize = true;
+            this.checkT9.Checked = true;
+            this.checkT9.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT9.Location = new System.Drawing.Point(30, 241);
+            this.checkT9.Name = "checkT9";
+            this.checkT9.Size = new System.Drawing.Size(42, 17);
+            this.checkT9.TabIndex = 261;
+            this.checkT9.Text = "T-9";
+            this.checkT9.UseVisualStyleBackColor = true;
+            // 
+            // checkT10
+            // 
+            this.checkT10.AutoSize = true;
+            this.checkT10.Checked = true;
+            this.checkT10.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT10.Location = new System.Drawing.Point(30, 272);
+            this.checkT10.Name = "checkT10";
+            this.checkT10.Size = new System.Drawing.Size(48, 17);
+            this.checkT10.TabIndex = 262;
+            this.checkT10.Text = "T-10";
+            this.checkT10.UseVisualStyleBackColor = true;
+            // 
+            // checkT11
+            // 
+            this.checkT11.AutoSize = true;
+            this.checkT11.Checked = true;
+            this.checkT11.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT11.Location = new System.Drawing.Point(30, 299);
+            this.checkT11.Name = "checkT11";
+            this.checkT11.Size = new System.Drawing.Size(48, 17);
+            this.checkT11.TabIndex = 263;
+            this.checkT11.Text = "T-11";
+            this.checkT11.UseVisualStyleBackColor = true;
+            // 
+            // checkT12
+            // 
+            this.checkT12.AutoSize = true;
+            this.checkT12.Checked = true;
+            this.checkT12.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT12.Location = new System.Drawing.Point(30, 330);
+            this.checkT12.Name = "checkT12";
+            this.checkT12.Size = new System.Drawing.Size(48, 17);
+            this.checkT12.TabIndex = 264;
+            this.checkT12.Text = "T-12";
+            this.checkT12.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(226)))), ((int)(((byte)(220)))));
+            this.panel2.Controls.Add(this.label84);
+            this.panel2.Controls.Add(this.checkT12);
+            this.panel2.Controls.Add(this.label37);
+            this.panel2.Controls.Add(this.checkT11);
+            this.panel2.Controls.Add(this.label38);
+            this.panel2.Controls.Add(this.checkT10);
+            this.panel2.Controls.Add(this.label66);
+            this.panel2.Controls.Add(this.checkT9);
+            this.panel2.Controls.Add(this.label36);
+            this.panel2.Controls.Add(this.checkT8);
+            this.panel2.Controls.Add(this.label83);
+            this.panel2.Controls.Add(this.checkT7);
+            this.panel2.Controls.Add(this.label35);
+            this.panel2.Controls.Add(this.checkT6);
+            this.panel2.Controls.Add(this.label34);
+            this.panel2.Controls.Add(this.checkT5);
+            this.panel2.Controls.Add(this.label31);
+            this.panel2.Controls.Add(this.checkT4);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.checkT3);
+            this.panel2.Controls.Add(this.label85);
+            this.panel2.Controls.Add(this.checkT2);
+            this.panel2.Controls.Add(this.label86);
+            this.panel2.Controls.Add(this.checkT1);
+            this.panel2.Location = new System.Drawing.Point(1223, 492);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(90, 360);
+            this.panel2.TabIndex = 265;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(226)))), ((int)(((byte)(220)))));
+            this.panel3.Controls.Add(this.label87);
+            this.panel3.Controls.Add(this.checkT24);
+            this.panel3.Controls.Add(this.label88);
+            this.panel3.Controls.Add(this.checkT23);
+            this.panel3.Controls.Add(this.label89);
+            this.panel3.Controls.Add(this.checkT22);
+            this.panel3.Controls.Add(this.label90);
+            this.panel3.Controls.Add(this.checkT21);
+            this.panel3.Controls.Add(this.label91);
+            this.panel3.Controls.Add(this.checkT20);
+            this.panel3.Controls.Add(this.label92);
+            this.panel3.Controls.Add(this.checkT19);
+            this.panel3.Controls.Add(this.label93);
+            this.panel3.Controls.Add(this.checkT18);
+            this.panel3.Controls.Add(this.label94);
+            this.panel3.Controls.Add(this.checkT17);
+            this.panel3.Controls.Add(this.label95);
+            this.panel3.Controls.Add(this.checkT16);
+            this.panel3.Controls.Add(this.label96);
+            this.panel3.Controls.Add(this.checkT15);
+            this.panel3.Controls.Add(this.label97);
+            this.panel3.Controls.Add(this.checkT14);
+            this.panel3.Controls.Add(this.label98);
+            this.panel3.Controls.Add(this.checkT13);
+            this.panel3.Location = new System.Drawing.Point(1223, 15);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(90, 360);
+            this.panel3.TabIndex = 266;
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.BackColor = System.Drawing.Color.Red;
+            this.label87.Location = new System.Drawing.Point(7, 5);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(19, 13);
+            this.label87.TabIndex = 241;
+            this.label87.Text = "    ";
+            // 
+            // checkT24
+            // 
+            this.checkT24.AutoSize = true;
+            this.checkT24.Checked = true;
+            this.checkT24.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT24.Location = new System.Drawing.Point(30, 330);
+            this.checkT24.Name = "checkT24";
+            this.checkT24.Size = new System.Drawing.Size(48, 17);
+            this.checkT24.TabIndex = 264;
+            this.checkT24.Text = "T-24";
+            this.checkT24.UseVisualStyleBackColor = true;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.BackColor = System.Drawing.Color.Purple;
+            this.label88.Location = new System.Drawing.Point(7, 119);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(19, 13);
+            this.label88.TabIndex = 245;
+            this.label88.Text = "    ";
+            // 
+            // checkT23
+            // 
+            this.checkT23.AutoSize = true;
+            this.checkT23.Checked = true;
+            this.checkT23.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT23.Location = new System.Drawing.Point(30, 299);
+            this.checkT23.Name = "checkT23";
+            this.checkT23.Size = new System.Drawing.Size(48, 17);
+            this.checkT23.TabIndex = 263;
+            this.checkT23.Text = "T-23";
+            this.checkT23.UseVisualStyleBackColor = true;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.BackColor = System.Drawing.Color.Green;
+            this.label89.Location = new System.Drawing.Point(7, 92);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(19, 13);
+            this.label89.TabIndex = 244;
+            this.label89.Text = "    ";
+            // 
+            // checkT22
+            // 
+            this.checkT22.AutoSize = true;
+            this.checkT22.Checked = true;
+            this.checkT22.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT22.Location = new System.Drawing.Point(30, 272);
+            this.checkT22.Name = "checkT22";
+            this.checkT22.Size = new System.Drawing.Size(48, 17);
+            this.checkT22.TabIndex = 262;
+            this.checkT22.Text = "T-22";
+            this.checkT22.UseVisualStyleBackColor = true;
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.BackColor = System.Drawing.Color.Yellow;
+            this.label90.Location = new System.Drawing.Point(7, 62);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(19, 13);
+            this.label90.TabIndex = 243;
+            this.label90.Text = "    ";
+            // 
+            // checkT21
+            // 
+            this.checkT21.AutoSize = true;
+            this.checkT21.Checked = true;
+            this.checkT21.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT21.Location = new System.Drawing.Point(30, 241);
+            this.checkT21.Name = "checkT21";
+            this.checkT21.Size = new System.Drawing.Size(48, 17);
+            this.checkT21.TabIndex = 261;
+            this.checkT21.Text = "T-21";
+            this.checkT21.UseVisualStyleBackColor = true;
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.BackColor = System.Drawing.Color.Cyan;
+            this.label91.Location = new System.Drawing.Point(7, 148);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(19, 13);
+            this.label91.TabIndex = 246;
+            this.label91.Text = "    ";
+            // 
+            // checkT20
+            // 
+            this.checkT20.AutoSize = true;
+            this.checkT20.Checked = true;
+            this.checkT20.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT20.Location = new System.Drawing.Point(30, 210);
+            this.checkT20.Name = "checkT20";
+            this.checkT20.Size = new System.Drawing.Size(48, 17);
+            this.checkT20.TabIndex = 260;
+            this.checkT20.Text = "T-20";
+            this.checkT20.UseVisualStyleBackColor = true;
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.BackColor = System.Drawing.Color.Blue;
+            this.label92.Location = new System.Drawing.Point(7, 32);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(19, 13);
+            this.label92.TabIndex = 242;
+            this.label92.Text = "    ";
+            // 
+            // checkT19
+            // 
+            this.checkT19.AutoSize = true;
+            this.checkT19.Checked = true;
+            this.checkT19.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT19.Location = new System.Drawing.Point(30, 178);
+            this.checkT19.Name = "checkT19";
+            this.checkT19.Size = new System.Drawing.Size(48, 17);
+            this.checkT19.TabIndex = 259;
+            this.checkT19.Text = "T-19";
+            this.checkT19.UseVisualStyleBackColor = true;
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.BackColor = System.Drawing.Color.Orange;
+            this.label93.Location = new System.Drawing.Point(7, 179);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(19, 13);
+            this.label93.TabIndex = 247;
+            this.label93.Text = "    ";
+            // 
+            // checkT18
+            // 
+            this.checkT18.AutoSize = true;
+            this.checkT18.Checked = true;
+            this.checkT18.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT18.Location = new System.Drawing.Point(30, 147);
+            this.checkT18.Name = "checkT18";
+            this.checkT18.Size = new System.Drawing.Size(48, 17);
+            this.checkT18.TabIndex = 258;
+            this.checkT18.Text = "T-18";
+            this.checkT18.UseVisualStyleBackColor = true;
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.BackColor = System.Drawing.Color.Lime;
+            this.label94.Location = new System.Drawing.Point(7, 242);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(19, 13);
+            this.label94.TabIndex = 248;
+            this.label94.Text = "    ";
+            // 
+            // checkT17
+            // 
+            this.checkT17.AutoSize = true;
+            this.checkT17.Checked = true;
+            this.checkT17.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT17.Location = new System.Drawing.Point(30, 118);
+            this.checkT17.Name = "checkT17";
+            this.checkT17.Size = new System.Drawing.Size(48, 17);
+            this.checkT17.TabIndex = 257;
+            this.checkT17.Text = "T-17";
+            this.checkT17.UseVisualStyleBackColor = true;
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.BackColor = System.Drawing.Color.Maroon;
+            this.label95.Location = new System.Drawing.Point(7, 211);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(19, 13);
+            this.label95.TabIndex = 249;
+            this.label95.Text = "    ";
+            // 
+            // checkT16
+            // 
+            this.checkT16.AutoSize = true;
+            this.checkT16.Checked = true;
+            this.checkT16.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT16.Location = new System.Drawing.Point(30, 91);
+            this.checkT16.Name = "checkT16";
+            this.checkT16.Size = new System.Drawing.Size(48, 17);
+            this.checkT16.TabIndex = 256;
+            this.checkT16.Text = "T-16";
+            this.checkT16.UseVisualStyleBackColor = true;
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.BackColor = System.Drawing.Color.Magenta;
+            this.label96.Location = new System.Drawing.Point(7, 272);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(19, 13);
+            this.label96.TabIndex = 250;
+            this.label96.Text = "    ";
+            // 
+            // checkT15
+            // 
+            this.checkT15.AutoSize = true;
+            this.checkT15.Checked = true;
+            this.checkT15.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT15.Location = new System.Drawing.Point(30, 61);
+            this.checkT15.Name = "checkT15";
+            this.checkT15.Size = new System.Drawing.Size(48, 17);
+            this.checkT15.TabIndex = 255;
+            this.checkT15.Text = "T-15";
+            this.checkT15.UseVisualStyleBackColor = true;
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.BackColor = System.Drawing.Color.Black;
+            this.label97.Location = new System.Drawing.Point(7, 331);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(19, 13);
+            this.label97.TabIndex = 251;
+            this.label97.Text = "    ";
+            // 
+            // checkT14
+            // 
+            this.checkT14.AutoSize = true;
+            this.checkT14.Checked = true;
+            this.checkT14.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT14.Location = new System.Drawing.Point(30, 32);
+            this.checkT14.Name = "checkT14";
+            this.checkT14.Size = new System.Drawing.Size(48, 17);
+            this.checkT14.TabIndex = 254;
+            this.checkT14.Text = "T-14";
+            this.checkT14.UseVisualStyleBackColor = true;
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.BackColor = System.Drawing.Color.Olive;
+            this.label98.Location = new System.Drawing.Point(7, 300);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(19, 13);
+            this.label98.TabIndex = 252;
+            this.label98.Text = "    ";
+            // 
+            // checkT13
+            // 
+            this.checkT13.AutoSize = true;
+            this.checkT13.Checked = true;
+            this.checkT13.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkT13.Location = new System.Drawing.Point(30, 4);
+            this.checkT13.Name = "checkT13";
+            this.checkT13.Size = new System.Drawing.Size(48, 17);
+            this.checkT13.TabIndex = 253;
+            this.checkT13.Text = "T-13";
+            this.checkT13.UseVisualStyleBackColor = true;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3192,44 +3577,15 @@ namespace Apple_24_Zones.Forms
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(226)))), ((int)(((byte)(220)))));
-            this.ClientSize = new System.Drawing.Size(1905, 1061);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.pictureBox3);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.panelBoth);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkBox14);
-            this.Controls.Add(this.checkBox15);
-            this.Controls.Add(this.checkBox16);
-            this.Controls.Add(this.checkBox17);
-            this.Controls.Add(this.checkBox18);
-            this.Controls.Add(this.checkBox19);
             this.Controls.Add(this.btnCSVFileFilter);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.checkBox20);
-            this.Controls.Add(this.checkBox21);
-            this.Controls.Add(this.checkBox22);
-            this.Controls.Add(this.checkBox23);
-            this.Controls.Add(this.checkBox24);
-            this.Controls.Add(this.checkBox25);
-            this.Controls.Add(this.checkBox13);
-            this.Controls.Add(this.checkBox12);
-            this.Controls.Add(this.checkBox11);
-            this.Controls.Add(this.checkBox10);
-            this.Controls.Add(this.checkBox9);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.lbRecord);
-            this.Controls.Add(this.chart1);
-            this.Controls.Add(this.panelZone1);
             this.Controls.Add(this.panel8);
-            this.Controls.Add(this.ChartMain);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.btnEMO);
             this.Controls.Add(this.btnTypeTime);
@@ -3248,53 +3604,57 @@ namespace Apple_24_Zones.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ELEN II Software Rev 1.000.0";
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ChartMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartZone2)).EndInit();
             this.panelZone1.ResumeLayout(false);
             this.panelZone1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ledZ2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            this.panelZone2.ResumeLayout(false);
+            this.panelZone2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip3.ResumeLayout(false);
             this.menuStrip3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panelBoth.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ledZ2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEMO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3370,7 +3730,7 @@ namespace Apple_24_Zones.Forms
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label lbDivisor;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartZone1;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -3491,7 +3851,7 @@ namespace Apple_24_Zones.Forms
         private TextBox textBox37;
         private TextBox textBox38;
         private TextBox textBox39;
-        private Panel panel9;
+        private Panel panelZone2;
         private FontAwesome.Sharp.IconButton btnCSVFileFilter;
         private PictureBox pictureBox7;
         private PictureBox pictureBox8;
@@ -3508,30 +3868,6 @@ namespace Apple_24_Zones.Forms
         private ToolStripMenuItem connectToolStripMenuItem;
         private ToolStripMenuItem exportToolStripMenuItem;
         private Label label3;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox4;
-        private CheckBox checkBox5;
-        private CheckBox checkBox6;
-        private CheckBox checkBox7;
-        private CheckBox checkBox8;
-        private CheckBox checkBox9;
-        private CheckBox checkBox10;
-        private CheckBox checkBox11;
-        private CheckBox checkBox12;
-        private CheckBox checkBox13;
-        private CheckBox checkBox14;
-        private CheckBox checkBox15;
-        private CheckBox checkBox16;
-        private CheckBox checkBox17;
-        private CheckBox checkBox18;
-        private CheckBox checkBox19;
-        private CheckBox checkBox20;
-        private CheckBox checkBox21;
-        private CheckBox checkBox22;
-        private CheckBox checkBox23;
-        private CheckBox checkBox24;
-        private CheckBox checkBox25;
         private PictureBox pictureBox14;
         private PictureBox pictureBox15;
         private PictureBox pictureBox17;
@@ -3539,8 +3875,63 @@ namespace Apple_24_Zones.Forms
         private Label label1;
         private PictureBox pictureBox18;
         private PictureBox pictureBox19;
-        public System.Windows.Forms.DataVisualization.Charting.Chart ChartMain;
-        private PictureBox pictureBox3;
-        private Button button3;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chartZone2;
+        private ToolStripMenuItem viewOptionToolStripMenuItem;
+        private ToolStripMenuItem bothZonesToolStripMenuItem;
+        private ToolStripMenuItem zone1ToolStripMenuItem;
+        private ToolStripMenuItem zone2ToolStripMenuItem;
+        private Panel panelBoth;
+        private Label label2;
+        private Label label4;
+        private Panel panel3;
+        private Label label87;
+        private CheckBox checkT24;
+        private Label label88;
+        private CheckBox checkT23;
+        private Label label89;
+        private CheckBox checkT22;
+        private Label label90;
+        private CheckBox checkT21;
+        private Label label91;
+        private CheckBox checkT20;
+        private Label label92;
+        private CheckBox checkT19;
+        private Label label93;
+        private CheckBox checkT18;
+        private Label label94;
+        private CheckBox checkT17;
+        private Label label95;
+        private CheckBox checkT16;
+        private Label label96;
+        private CheckBox checkT15;
+        private Label label97;
+        private CheckBox checkT14;
+        private Label label98;
+        private CheckBox checkT13;
+        private Panel panel2;
+        private Label label84;
+        private CheckBox checkT12;
+        private Label label37;
+        private CheckBox checkT11;
+        private Label label38;
+        private CheckBox checkT10;
+        private Label label66;
+        private CheckBox checkT9;
+        private Label label36;
+        private CheckBox checkT8;
+        private Label label83;
+        private CheckBox checkT7;
+        private Label label35;
+        private CheckBox checkT6;
+        private Label label34;
+        private CheckBox checkT5;
+        private Label label31;
+        private CheckBox checkT4;
+        private Label label5;
+        private CheckBox checkT3;
+        private Label label85;
+        private CheckBox checkT2;
+        private Label label86;
+        private CheckBox checkT1;
     }
 }
