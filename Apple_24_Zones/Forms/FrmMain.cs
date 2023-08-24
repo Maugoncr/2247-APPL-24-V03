@@ -648,9 +648,41 @@ namespace Apple_24_Zones.Forms
 
         bool ModoAntiguo = true;
 
+        double rt = 0;                              // Time X from chart
+        double tempa = 0;
+        
+        
 
         private void timerForChartTC_Tick(object sender, EventArgs e)
         {
+            //ChartMain.Series.Add("T-13");
+
+            ChartArea CA = ChartMain.ChartAreas[0];
+            CA.CursorX.AutoScroll = true;
+
+            rt = rt + 100;
+            tempa = rt / 1000;
+
+            ChartMain.Series["T-13"].Points.AddXY(tempa.ToString("0.0"), "20");
+
+            ChartMain.ChartAreas[0].AxisY2.Maximum = Double.NaN;
+            ChartMain.ChartAreas[0].AxisY2.Minimum = Double.NaN;
+            ChartMain.ChartAreas[0].RecalculateAxesScale();
+
+            if (ChartMain.Series["T-13"].Points.Count == 31)
+            {
+
+                ChartMain.Series["T-13"].Points.RemoveAt(0);
+            }
+
+
+
+
+
+            chart1.ChartAreas[0].AxisX.Interval = 5;
+            //chart1.ChartAreas[0].AxisY2.Maximum = Double.NaN;
+            //chart1.ChartAreas[0].AxisY2.Minimum = Double.NaN;
+            chart1.ChartAreas[0].RecalculateAxesScale();
             stopwatch.Start();
             //ChartMain.Series["End"].IsVisibleInLegend = false;
             Random rnd = new Random();
@@ -721,9 +753,11 @@ namespace Apple_24_Zones.Forms
                 chart1.Series["T-12"].Points.AddXY((stopwatch.ElapsedMilliseconds / 1000.0), rnd.Next(0, 0));
               
                 double temper = s.Points[ix].XValue;
-                ca.AxisX.Maximum = Math.Round(s.Points[ix].XValue, 1);
-                ca.AxisX.Minimum += Math.Round(s.Points[ix].XValue - s.Points[ix-1].XValue, 1);
-               //  ca.RecalculateAxesScale();
+                //ca.AxisX.Maximum = Math.Round(s.Points[ix].XValue, 1);
+                //ca.AxisX.Maximum = double.NaN;
+                //ca.AxisX.Minimum += Math.Round(s.Points[ix].XValue - s.Points[ix-1].XValue, 1);
+                //ca.AxisX.Minimum += double.NaN;
+                //ca.RecalculateAxesScale();
                 txtTC1.Text = temper.ToString();        
             }
 
@@ -1880,6 +1914,22 @@ namespace Apple_24_Zones.Forms
         private void panel14_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmPopup);
+
+            if (frm == null)
+            {
+                FrmPopup nt = new FrmPopup();
+                nt.Show();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
         }
     }
 }

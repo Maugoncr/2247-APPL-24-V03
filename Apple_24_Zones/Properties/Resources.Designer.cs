@@ -93,6 +93,26 @@ namespace Apple_24_Zones.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MIDORI_OFICIAL2 {
+            get {
+                object obj = ResourceManager.GetObject("MIDORI OFICIAL2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MIDORI_OFICIAL2_ORANGE {
+            get {
+                object obj = ResourceManager.GetObject("MIDORI OFICIAL2 ORANGE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SSNE {
             get {
                 object obj = ResourceManager.GetObject("SSNE", resourceCulture);
