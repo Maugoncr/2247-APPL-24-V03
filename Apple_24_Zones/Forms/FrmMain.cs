@@ -232,11 +232,11 @@ namespace Apple_24_Zones.Forms
             TIMES.Clear();
             TC1A.Clear(); TC2A.Clear(); TC3A.Clear(); TC4A.Clear(); TC5A.Clear(); TC6A.Clear(); TC7A.Clear(); TC8A.Clear(); TC9A.Clear(); TC10A.Clear(); TC11A.Clear(); TC12A.Clear(); TC13A.Clear(); TC14A.Clear(); TC15A.Clear(); TC16A.Clear(); TC17A.Clear(); TC18A.Clear(); TC19A.Clear(); TC20A.Clear(); TC21A.Clear(); TC22A.Clear(); TC23A.Clear(); TC24A.Clear();
 
-            btnRecordDataChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+           // btnRecordDataChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
             Record = false;
             end_record = DateTime.Now;
-            lbRecord.Text = "Record Data";
-            lbRecord.ForeColor = Color.Black;
+           // lbRecord.Text = "Record Data";
+            //lbRecord.ForeColor = Color.Black;
 
             chartZone2.Series.Clear();
             chartZone1.Series.Clear();
@@ -293,12 +293,12 @@ namespace Apple_24_Zones.Forms
 
         private void FuncModeAntiguo()
         {
-            lbCharMode.Text = "Chart Dinamic";
+           // lbCharMode.Text = "Chart Dinamic";
             //lbMinChartMode.Visible = false;
             //NumMinChart.Visible = false;
             //NumMinChart.Value = 2;
             ModoAntiguo = true;
-            btnChartMode.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+           /// btnChartMode.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -556,28 +556,28 @@ namespace Apple_24_Zones.Forms
                     ledZ2.Image = Properties.Resources.led_on_green;
 
 
-                    btnTypeTime.Enabled = true;
-                    btnClearChart.Enabled = true;
-                    btnStartStopChart.Enabled = true;
-                    btnChartMode.Enabled = true;
-                    btnRecordDataChart.Enabled = true;
+                    //btnTypeTime.Enabled = true;
+                    //btnClearChart.Enabled = true;
+                    //btnStartStopChart.Enabled = true;
+                    //btnChartMode.Enabled = true;
+                    //btnRecordDataChart.Enabled = true;
 
 
                     //ChartMain.ChartAreas.Clear();
 
-                    btnTypeTime.Visible = false;
-                    btnClearChart.Visible = false;
-                    btnStartStopChart.Visible = false;
-                    btnChartMode.Visible = false;
-                    btnRecordDataChart.Visible = false;
+                    //btnTypeTime.Visible = false;
+                    //btnClearChart.Visible = false;
+                    //btnStartStopChart.Visible = false;
+                    //btnChartMode.Visible = false;
+                    //btnRecordDataChart.Visible = false;
 
                     //picGREEN.Dispose();
                     //picYELLOW.Dispose();
                     //picRED.Dispose();
 
-                    lbRecord.Visible = false;
-                    lbCharMode.Visible = false;
-                    label32.Visible = false;
+                    //lbRecord.Visible = false;
+                   // lbCharMode.Visible = false;
+                   // label32.Visible = false;
 
                     //SIMULATION...
                     chartZone2.ChartAreas[0].AxisX.Minimum = 0;
@@ -1001,26 +1001,26 @@ namespace Apple_24_Zones.Forms
 
         private void btnTypeTime_Click(object sender, EventArgs e)
         {
-            if (btnTypeTime.IconChar == FontAwesome.Sharp.IconChar.Stopwatch)
-            {
-                ModeChartTimeHHmmss();
-            }
-            else if (btnTypeTime.IconChar == FontAwesome.Sharp.IconChar.Clock)
-            {
-                ModeChartTimeSS();
-            }
+            //if (btnTypeTime.IconChar == FontAwesome.Sharp.IconChar.Stopwatch)
+            //{
+            //    ModeChartTimeHHmmss();
+            //}
+            //else if (btnTypeTime.IconChar == FontAwesome.Sharp.IconChar.Clock)
+            //{
+            //    ModeChartTimeSS();
+            //}
         }
 
         private void ModeChartTimeHHmmss()
         {
-            btnTypeTime.IconChar = FontAwesome.Sharp.IconChar.Clock;
-            btnTypeTime.IconFont = FontAwesome.Sharp.IconFont.Regular;
+            //btnTypeTime.IconChar = FontAwesome.Sharp.IconChar.Clock;
+           // btnTypeTime.IconFont = FontAwesome.Sharp.IconFont.Regular;
             TimeEnSegundosChart = false;
         }
         private void ModeChartTimeSS()
         {
-            btnTypeTime.IconChar = FontAwesome.Sharp.IconChar.Stopwatch;
-            btnTypeTime.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            //btnTypeTime.IconChar = FontAwesome.Sharp.IconChar.Stopwatch;
+           // btnTypeTime.IconFont = FontAwesome.Sharp.IconFont.Solid;
             TimeEnSegundosChart = true;
         }
 
@@ -1080,26 +1080,26 @@ namespace Apple_24_Zones.Forms
 
         private void btnStartStopChart_Click(object sender, EventArgs e)
         {
-            if (btnStartStopChart.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
-            {
-                EncenderChart();
-            }
-            else if (btnStartStopChart.IconChar == FontAwesome.Sharp.IconChar.ToggleOn)
-            {
-                ApagarChartSinBorrar();
-            }
+            //if (btnStartStopChart.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
+            //{
+            //    EncenderChart();
+            //}
+            //else if (btnStartStopChart.IconChar == FontAwesome.Sharp.IconChar.ToggleOn)
+            //{
+            //    ApagarChartSinBorrar();
+            //}
         }
         private void ApagarChartSinBorrar()
         {
             timerForChartTC.Stop();
-            btnStartStopChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+           // btnStartStopChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
         }
 
         private void EncenderChart()
         {
             ResetearChart();
             timerForChartTC.Start();
-            btnStartStopChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+           // btnStartStopChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
         }
 
         bool BanderaRespuestaParaTCS = false;
@@ -1224,7 +1224,7 @@ namespace Apple_24_Zones.Forms
         {
             ResetearChart();
             timerForChartTC.Stop();
-            btnStartStopChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            //btnStartStopChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
         }
 
         private void ResetearChart()
@@ -2088,13 +2088,19 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-
-        
-
-
-
-      
-            
-
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmInformation);
+            if (frm == null)
+            {
+                FrmInformation nt = new FrmInformation();
+                nt.ShowDialog();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
         }
+    }
     }

@@ -85,3 +85,4 @@ C:\Users\ktran\source\repos\2247-APPL-24V2\Apple_24_Zones\obj\Debug\Apple_24_Zon
 C:\Users\ktran\source\repos\2247-APPL-24V2\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmPopup.resources
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmPanelExample.resources
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmPopup.resources
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmInformation.resources

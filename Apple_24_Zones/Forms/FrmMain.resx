@@ -12601,6 +12601,9 @@
   <metadata name="menuMainBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1054, 17</value>
   </metadata>
+  <metadata name="timerGhost.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>942, 17</value>
+  </metadata>
   <data name="btnEMO.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARoAAAEWCAYAAAC5cVjBAAAABGdBTUEAALGPC/xhBQAAHZBJREFUeF7t
@@ -15103,9 +15106,6 @@
         s2HB/bPh/tmov3+/2uH/AWFx4Ik/JcEmAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="timerGhost.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>942, 17</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>116</value>
   </metadata>
