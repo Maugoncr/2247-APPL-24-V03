@@ -1062,20 +1062,7 @@ namespace Apple_24_Zones.Forms
 
         private void btnSetTemperature_Click(object sender, EventArgs e)
         {
-            if (ZonasSelecionadasSendTCSETPOINT == 0)
-            {
-               // txtSetPointZone1.Text = txtSetTemp.Value.ToString();
-               // txtSetPointZone2.Text = txtSetTemp.Value.ToString();
-            }
-            else if (ZonasSelecionadasSendTCSETPOINT == 1)
-            {
-               // txtSetPointZone1.Text = txtSetTemp.Value.ToString();
-            }
-            else if (ZonasSelecionadasSendTCSETPOINT == 2)
-            {
-               // txtSetPointZone2.Text = txtSetTemp.Value.ToString();
-            }
-            
+
         }
 
         private void btnStartStopChart_Click(object sender, EventArgs e)
@@ -1320,21 +1307,7 @@ namespace Apple_24_Zones.Forms
            // cbCOMSelect1.Items.Clear();
            // cbCOMSelect1.Items.AddRange(ports);
         }
-
-        private void lbCharMode_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label32_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbRecord_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void btnCSVFileFilter_Click(object sender, EventArgs e)
         {
