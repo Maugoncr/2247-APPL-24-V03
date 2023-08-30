@@ -2075,5 +2075,32 @@ namespace Apple_24_Zones.Forms
                 return;
             }
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            // Result of: 00 + 01 + F0 + 02 = F3
+
+            int hexValue = 0xF3; // Representa el valor decimal 243 en hexadecimal
+
+            if (int.TryParse(txtTempTest.Text, out int inputValue))
+            {
+                int multipliedValue = inputValue * 10;
+
+                string hexValueTemp = multipliedValue.ToString("X").PadLeft(4, '0');
+
+                txtResult.Text = "Valor hexadecimal:" + hexValueTemp;
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+        
     }
-    }
+}
