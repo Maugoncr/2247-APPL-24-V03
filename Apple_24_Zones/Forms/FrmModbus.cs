@@ -59,54 +59,104 @@ namespace AppleSoftware.Forms
             }
         }
 
+        private void btnSendByte_Click_1(object sender, EventArgs e)
+        {
+            //string hexCommand = "CC 00 01 F0 02 00 FA 12";
+            string hexCommand = "CC 00 01 F0 02 00 C8 44";
+            string[] hexBytes = hexCommand.Split(' ');
+
+            // string binaryValue = Convert.ToString(Convert.ToInt32(hexBytes, 16), 2).PadLeft(hexBytes.Length * 4, '0');
+
+
+        }
+
         private void btnSend_Click(object sender, EventArgs e)
         {
             try
             {
-                if (serialPort1.IsOpen)
+                // string hexCommand = "CC 00 01 F0 02 00 FA 12";
+
+                // Request Current Value
+                string hexCommand = "CC 00 01 20 00 DE";
+
+                // string hexCommand = "CC 00 01 F0 02 00 C8 44";
+                string[] hexBytes = hexCommand.Split(' ');
+
+                byte[] binaryData = new byte[hexBytes.Length];
+
+                for (int i = 0; i < hexBytes.Length; i++)
                 {
-                    serialPort1.DiscardInBuffer();
-                    serialPort1.DiscardOutBuffer();
-                    // byte[] bytes = Encoding.ASCII.GetBytes(txtSend.Text);
-                    //Con este responde leer un dato
-                    // byte[] bytes = { 04, 03, 32 ,00,00,01,143,159 };
-
-                    // Con este setea a 20 set point
-
-
-                    byte[] bytes = { 4, 6, 33, 3, 1, 254, 243, 179 };
-
-                    //  int holamundo = 20;
-                    //  byte[] bytes = { 4, 6, (byte)holamundo };
-
-
-                    // serialPort1.Write(bytes, 0, bytes.Length);
-                    //serialPort1.Write("CC 00 01 F0 02 00 FA 12");
-                    serialPort1.Write("CC 00 01 70 00 8E");
+                    binaryData[i] = Convert.ToByte(hexBytes[i], 16);
 
                 }
+
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Write(binaryData, 0, binaryData.Length);
+                }
+
+                //serialPort1.Write("CC0001F00200FA12");
+
+                // Binary
+
+
+
+                // NOTES:
+                // Setpoint 25 C° = CC 00 01 F0 02 00 FA 12
+                // Binary = 11001100, 00000000, 00000001, 11110000, 00000010, 00000000, 11111010, 00010010
+
+                // Decimal = byte[] bytes = { 204,00,01,240,2,0,250,18 }
+                //
+                // CC for RS485
+                // 00 Most significant byte = ?
+                // 01 Least significant byte = ?
+                // F0 Command 240
+                // 02
+                // 00
+                // FA = 250 = 25C ???
+                // 12 
+
+                // Request Current Value
+                // Hex: CC 00 01 20 00 DE
+
+                // Request Current Setpoint
+                // Hex: CA 00 01 70 00 8E
+
+                //Setpoint 20 C° test
+                //Hex: CC 00 01 F0 02 00 C8 44
+                //11001100, 00000000, 00000001, 11110000, 00000010, 00000000, 11001000, 01000100
+
+                //
+                //Setpoint 23: 11001100, 00000000, 00000001, 11110000, 00000010, 00000000, 11100110, 00100110
+
+                //setpoint 10: 11001100, 00000000, 00000001, 11110000, 00000010, 00000000, 01100100, 10101000
+                //setpoint 9:11001100, 00000000, 00000001, 11110000, 00000010, 00000000, 01011010, 10110010
+
+                //setpoint 5: 11001100, 00000000, 00000001, 11110000, 00000010, 00000000, 00110010, 11011010
+                //setpoint 30: 11001100, 00000000, 00000001, 11110000, 00000010, 00000001, 00101100, 11011111
+
+                //setpoint 40: 11001100, 00000000, 00000001, 11110000, 00000010, 00000001, 10010000, 01111011
+
+                //Command off: 11001100, 00000000, 00000001, 10000001, 00001000, 00000000, 00000010, 00000010, 00000010, 00000010, 00000010, 00000010, 00000010, 01100111
+                //Command on: 11001100, 00000000, 00000001, 10000001, 00001000, 00000001, 00000010, 00000010, 00000010, 00000010, 00000010, 00000010, 00000010, 01100110
             }
             catch (Exception)
             {
 
                 throw;
             }
-         
-           
-
-
         }
 
-      
 
 
-            private void btnReceive_Click(object sender, EventArgs e)
+
+        private void btnReceive_Click(object sender, EventArgs e)
         {
             try
             {
                 if (serialPort1.IsOpen)
                 {
-                    txtReceive.Text = serialPort1.ReadExisting();
+                    txtReceive.Text = serialPort1.ReadLine();
                 }
             }
             catch (Exception ex)
@@ -139,26 +189,62 @@ namespace AppleSoftware.Forms
         }
 
         // dos lineas llegan, serial config cambia chiller a tc's 
-        
+
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            if (serialPort1.IsOpen)
-            {
-                try
-                {
-                    Thread.Sleep(1000);
-                    if (!string.IsNullOrEmpty(serialPort1.ReadExisting()))
-                    {
-                        ReadData(serialPort1.ReadExisting());
-                    }
-                }
-                catch (Exception)
-                {
+            // Hexa
+            if (e.EventType == SerialData.Eof)
+                return;
 
-                    throw;
-                }
-            }
-           
+            byte[] buffer = new byte[serialPort1.BytesToRead];
+            serialPort1.Read(buffer, 0, buffer.Length);
+
+            // Convierte los bytes hexadecimales a una cadena legible
+            string receivedData = BitConverter.ToString(buffer).Replace("-", " ");
+
+            // Muestra los datos en un control de Windows Forms (por ejemplo, un TextBox)
+            Invoke(new Action(() =>
+            {
+                txtReceive.AppendText(receivedData + Environment.NewLine);
+            }));
+
+            // Bytes
+
+            //if (e.EventType == SerialData.Eof)
+            //    return;
+
+            //byte[] buffer = new byte[serialPort1.BytesToRead];
+            //serialPort1.Read(buffer, 0, buffer.Length);
+
+            //// Convierte los bytes a una cadena utilizando UTF-8
+            //string receivedData = Encoding.UTF8.GetString(buffer);
+
+            //// Muestra los datos en un control de Windows Forms (por ejemplo, un TextBox)
+            //Invoke(new Action(() =>
+            //{
+            //    txtReceive.AppendText(receivedData);
+            //}));
+
+
+            //if (serialPort1.IsOpen)
+            //{
+            //    try
+            //    {
+
+            //       // txtReceive.Text = serialPort1.ReadExisting();
+            //        Thread.Sleep(1000);
+            //        if (!string.IsNullOrEmpty(serialPort1.ReadExisting()))
+            //        {
+            //            txtReceive.Text = serialPort1.ReadExisting();
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+
+            //        throw;
+            //    }
+            //}
+
         }
         string T1 = "";
         string T2 = "";
@@ -234,7 +320,7 @@ namespace AppleSoftware.Forms
             T8 = T8.Substring(2);
             T9 = T9.Substring(2);
             T10 = T10.Substring(2);
-            
+
             // Paso 6 Separar a las con numeros a las con C°
 
             TC1Num = Convert.ToDouble(T1);
@@ -262,9 +348,9 @@ namespace AppleSoftware.Forms
 
             //TODO GRAFICAR.
 
-            txtReceive.Text = T1 + " \n"+ T2 + " \n" + T3;
+            txtReceive.Text = T1 + " \n" + T2 + " \n" + T3;
 
-           
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -297,14 +383,14 @@ namespace AppleSoftware.Forms
         {
             for (int i = 0; i < 101; i++)
             {
-                txtReceive.Text += "case "+'"' + i.ToString() + '"'+":\n\nbreak;";
+                txtReceive.Text += "case " + '"' + i.ToString() + '"' + ":\n\nbreak;";
 
 
             }
 
         }
 
-      
+
 
         static byte[] HexToBytes(string input)
         {
@@ -316,7 +402,7 @@ namespace AppleSoftware.Forms
             return result;
         }
 
-            
+
 
         public static String decimalHexadecimal(int numero)
         {
@@ -360,7 +446,7 @@ namespace AppleSoftware.Forms
             }
             return numero;
         }
-      
+
         private void button2_Click(object sender, EventArgs e)
         {
             timer2.Start();
@@ -369,14 +455,14 @@ namespace AppleSoftware.Forms
         private void Cycle()
         {
             serialPort1.DiscardOutBuffer();
-                txtSend.Text = "#03";
-                serialPort1.Write(txtSend.Text + "\r");
+            txtSend.Text = "#03";
+            serialPort1.Write(txtSend.Text + "\r");
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             Cycle();
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -401,16 +487,6 @@ namespace AppleSoftware.Forms
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            modbusClient.UnitIdentifier = 1;// Not necessary since default slaveID = 1;
-            modbusClient.Baudrate = 9600;	// Not necessary since default baudrate = 9600
-            modbusClient.Parity = System.IO.Ports.Parity.Even;
-            modbusClient.StopBits = System.IO.Ports.StopBits.One;
-            modbusClient.ConnectionTimeout = 500;
-            modbusClient.Connect();
-        }
 
-       
     }
 }

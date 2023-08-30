@@ -2078,18 +2078,49 @@ namespace Apple_24_Zones.Forms
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            // Result of: 00 + 01 + F0 + 02 = F3
+            // 1- Crear las variables constantes
 
-            int hexValue = 0xF3; // Representa el valor decimal 243 en hexadecimal
+            string hexConstante = "CC 00 01 F0 02";
+
+            // 2- Obtener el valor deseado en temperatura y hacerle el x10
 
             if (int.TryParse(txtTempTest.Text, out int inputValue))
             {
                 int multipliedValue = inputValue * 10;
 
-                string hexValueTemp = multipliedValue.ToString("X").PadLeft(4, '0');
+                string hexValue = multipliedValue.ToString("X4"); // Formato hexadecimal con 4 caracteres
 
-                txtResult.Text = "Valor hexadecimal:" + hexValueTemp;
+                // 3 - Guardar el hexa de la temperatura
+
+                string hexTemp = hexValue;
+                // Contiene 00FA
+
+                // 4 - Unir las cadenas con hexConstante y la temperatura para que solo quede faltante el checksum
+
+                string hexTempConFormato = string.Join(" ", Enumerable.Range(0, hexTemp.Length / 2).Select(i => hexTemp.Substring(i * 2, 2)));
+
+                string hexCombinado = hexConstante + " " + hexTempConFormato;
+                // Contiene CC 00 01 F0 02 00 FA
+
+                // 5- Iniciar con el calculo del checkSum
+
+                // • 1 Sumar la constante hex con hex Temperatura
+
+                string hexConstanteSumada = "F3";
+
+                int intValue1 = Convert.ToInt32(hexConstanteSumada, 16);
+                int intValue2 = Convert.ToInt32(hexTemp, 16);
+
+                int sum = intValue1 + intValue2;
+
             }
+
+
+
+
+
+
+
 
 
         }
