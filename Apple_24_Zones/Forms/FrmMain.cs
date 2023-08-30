@@ -2104,7 +2104,7 @@ namespace Apple_24_Zones.Forms
 
                 // 5- Iniciar con el calculo del checkSum
 
-                // • 1 Sumar la constante hex con hex Temperatura
+                // 6- Sumar la constante hex con hex Temperatura
 
                 string hexConstanteSumada = "F3";
 
@@ -2112,6 +2112,47 @@ namespace Apple_24_Zones.Forms
                 int intValue2 = Convert.ToInt32(hexTemp, 16);
 
                 int sum = intValue1 + intValue2;
+                // Contiene 1ED
+
+                // 7- Tomar los ultimos 2 digitos
+                string hexSumadoCheck = sum.ToString("X");
+
+                string lastTwoDigits;
+                if (hexSumadoCheck.Length == 1)
+                {
+                    lastTwoDigits = "0" + hexSumadoCheck;
+                }
+                else
+                {
+                    lastTwoDigits = hexSumadoCheck.Substring(hexSumadoCheck.Length - 2);
+                }
+
+                // 8- Pasar estos dos ultimos digitos a binario y realizar el swap 1 - 0 
+
+                string binaryValue = Convert.ToString(Convert.ToInt32(lastTwoDigits, 16), 2);
+
+                // Asegura que la representación binaria tenga 8 dígitos (un byte)
+                binaryValue = binaryValue.PadLeft(8, '0');
+
+                // 9- Hacer el swap
+
+                char[] invertedChars = binaryValue.Select(c => c == '0' ? '1' : '0').ToArray();
+
+                string invertedBinaryString = new string(invertedChars);
+                // Contiene 00010010
+
+                // 10- Convertir este binario a un hexa
+
+                int decimalValue = Convert.ToInt32(invertedBinaryString, 2);
+
+                string hexCheckSum = decimalValue.ToString("X");
+
+                // 11- Unir todo el comando del paso 4
+
+                string setTempCommand = hexCombinado + " " + hexCheckSum;
+
+                txtResult.Text = setTempCommand;
+
 
             }
 
