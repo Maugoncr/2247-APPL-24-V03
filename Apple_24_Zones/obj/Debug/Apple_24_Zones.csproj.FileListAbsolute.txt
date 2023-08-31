@@ -55,7 +55,6 @@ C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\EasyModbus.x
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.AssemblyReference.cache
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.SuggestedBindingRedirects.cache
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\AppleSoftware.Forms.FrmModbus.resources
-C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmConnect.resources
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmFilterCSVFile.resources
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmMain.resources
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Properties.Resources.resources
@@ -84,5 +83,4 @@ C:\Users\ktran\source\repos\2247-APPL-24V2\Apple_24_Zones\obj\Debug\Apple_24_Zon
 C:\Users\ktran\source\repos\2247-APPL-24V2\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.CopyComplete
 C:\Users\ktran\source\repos\2247-APPL-24V2\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmPopup.resources
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmPanelExample.resources
-C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmPopup.resources
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmInformation.resources
