@@ -73,12 +73,6 @@
     <Compile Include="Forms\FrmModbus.designer.cs">
       <DependentUpon>FrmModbus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmConnect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmConnect.Designer.cs">
-      <DependentUpon>FrmConnect.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FrmFilterCSVFile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,12 +91,6 @@
     <Compile Include="Forms\FrmPanelExample.Designer.cs">
       <DependentUpon>FrmPanelExample.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmPopup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmPopup.Designer.cs">
-      <DependentUpon>FrmPopup.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FrmInformation.resx">
@@ -110,9 +98,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmModbus.resx">
       <DependentUpon>FrmModbus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmConnect.resx">
-      <DependentUpon>FrmConnect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmFilterCSVFile.resx">
       <DependentUpon>FrmFilterCSVFile.cs</DependentUpon>
@@ -123,9 +108,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmPanelExample.resx">
       <DependentUpon>FrmPanelExample.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmPopup.resx">
-      <DependentUpon>FrmPopup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
