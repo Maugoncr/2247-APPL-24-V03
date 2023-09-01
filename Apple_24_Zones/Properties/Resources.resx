@@ -118,32 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MIDORI OFICIAL2 ORANGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MIDORI OFICIAL2 ORANGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ledRectangleOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ledRectangleOn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tc1off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tc1off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="led_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\led_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="led_on_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\led_on_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tc8off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tc8off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MIDORI OFICIAL2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MIDORI OFICIAL2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tc8on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tc8on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tc3off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tc3off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="EMO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EMO2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrowUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrowUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tc3on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tc3on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,13 +130,52 @@
   <data name="SSNE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SSNE1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tc1on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tc1on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrowUpRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrowUpRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MIDORI OFICIAL2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MIDORI OFICIAL2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="led_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\led_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrowDownBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrowDownBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tc3off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tc3off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrowDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrowDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrowUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrowUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="led_on_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\led_on_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tc1on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tc1on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MIDORI LOGO ICON VERDE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MIDORI LOGO ICON VERDE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tc8off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tc8off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EMO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EMO2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tc8on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tc8on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tc1off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tc1off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MIDORI OFICIAL2 ORANGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MIDORI OFICIAL2 ORANGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ledRectangleOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ledRectangleOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coming-soon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coming-soon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

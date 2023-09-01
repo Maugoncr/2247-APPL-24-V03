@@ -165,8 +165,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
+    <None Include="Resources\ledRectangleOn.png" />
+    <None Include="Resources\ledRectangleOff.png" />
+    <None Include="Resources\MIDORI LOGO ICON VERDE.png" />
     <None Include="Resources\arrowDown.png" />
     <None Include="Resources\arrowUp.png" />
+    <None Include="Resources\arrowUpRed.png" />
+    <None Include="Resources\arrowDownBlue.png" />
+    <None Include="Resources\coming-soon.jpg" />
     <Content Include="Resources\Icon.ico" />
     <None Include="Resources\MIDORI OFICIAL2 ORANGE.png" />
     <None Include="Resources\MIDORI OFICIAL2.png" />

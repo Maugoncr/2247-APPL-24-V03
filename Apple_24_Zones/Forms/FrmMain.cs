@@ -21,56 +21,11 @@ namespace Apple_24_Zones.Forms
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private extern static void SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         public FrmMain()
         {
             InitializeComponent();
-        }
-
-                                                                                                      
-
-        private void btnCSVFileFilter_Click(object sender, EventArgs e)
-        {
-            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmFilterCSVFile);
-
-            if (frm == null)
-            {
-                FrmFilterCSVFile nt = new FrmFilterCSVFile();
-
-                nt.Show();
-            }
-            else
-            {
-                frm.BringToFront();
-                return;
-            }
-        }
-
-        
-
-       
-
-       
-
-        private void connectToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            // Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmConnect);
-            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmModbus);
-
-            if (frm == null)
-            {
-                FrmModbus nt = new FrmModbus();
-                nt.Show();
-            }
-            else
-            {
-                frm.BringToFront();
-                return;
-            }
-            
-
         }
 
 
@@ -295,31 +250,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-
-        private void zone1ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ChangeViewChartZone(1);
-        }
-
-        private void zone2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ChangeViewChartZone(2);
-        }
-
-        private void btnInfo_Click(object sender, EventArgs e)
-        {
-            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmInformation);
-            if (frm == null)
-            {
-                FrmInformation nt = new FrmInformation();
-                nt.ShowDialog();
-            }
-            else
-            {
-                frm.BringToFront();
-                return;
-            }
-        }
+                   
 
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -414,6 +345,113 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-       
+        
+
+        private void bothZonesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ChangeViewChartZone();
+        }
+
+        private void tempZone1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeViewChartZone(1);
+        }
+
+        private void tempZone2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeViewChartZone(2);
+        }
+
+        private void informationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmInformation);
+            if (frm == null)
+            {
+                FrmInformation nt = new FrmInformation();
+                nt.ShowDialog();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
+        }
+
+        private void cSVFilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmFilterCSVFile);
+
+            if (frm == null)
+            {
+                FrmFilterCSVFile nt = new FrmFilterCSVFile();
+
+                nt.Show();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
+        }
+
+        private void CreateBorderLabel(object sender, PaintEventArgs e)
+        {
+            Label label = (Label)sender;
+            Pen borderPen = new Pen(Color.Black, 3);
+            e.Graphics.DrawRectangle(borderPen, new Rectangle(0, 0, label.Width - 1, label.Height - 1));
+        }
+        
+        private void CreateBorderPanel(object sender, PaintEventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            Pen borderPen = new Pen(Color.Black, 3);
+            e.Graphics.DrawRectangle(borderPen, new Rectangle(0, 0, panel.Width - 1, panel.Height - 1));
+        }
+
+        private void lbCurrentSetpoint2_Paint(object sender, PaintEventArgs e)
+        {
+            CreateBorderLabel(sender, e);
+        }
+
+        private void lbAVGTemp2_Paint(object sender, PaintEventArgs e)
+        {
+            CreateBorderLabel(sender, e);
+        }
+
+        private void lbCurrentSetpoint1_Paint(object sender, PaintEventArgs e)
+        {
+            CreateBorderLabel(sender, e);
+        }
+
+        private void lbAVGTemp1_Paint(object sender, PaintEventArgs e)
+        {
+            CreateBorderLabel(sender, e);
+        }
+
+        private void timerDateTime_Tick(object sender, EventArgs e)
+        {
+            string fecha = DateTime.Now.ToString("dddd, MM/dd/yyyy");
+            lbTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            lbDate.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(fecha);
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            timerDateTime.Start();
+        }
+
+        private void panelControlZone2_Paint(object sender, PaintEventArgs e)
+        {
+            CreateBorderPanel(sender, e);
+        }
+
+        private void panelControlZone1_Paint(object sender, PaintEventArgs e)
+        {
+            CreateBorderPanel(sender, e);
+        }
+
+
+
+
     }
 }

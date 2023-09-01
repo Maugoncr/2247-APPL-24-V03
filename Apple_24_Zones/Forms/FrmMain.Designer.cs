@@ -32,49 +32,49 @@ namespace Apple_24_Zones.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series181 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series182 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series183 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series184 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series185 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series186 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series187 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series188 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series189 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series190 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series191 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series192 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series25 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series26 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series27 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series28 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series33 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series34 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series35 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series36 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series193 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series194 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series195 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series196 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series197 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series198 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series199 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series200 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series201 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series202 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series203 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series204 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series205 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series206 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series207 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series208 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series209 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series210 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series211 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series212 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series213 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series214 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series215 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series216 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
             this.chartZone2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -213,23 +213,30 @@ namespace Apple_24_Zones.Forms
             this.panelZone2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtResult = new System.Windows.Forms.TextBox();
-            this.btnInfo = new FontAwesome.Sharp.IconButton();
+            this.lbDate = new System.Windows.Forms.Label();
+            this.lbTime = new System.Windows.Forms.Label();
+            this.lbDateTime = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label79 = new System.Windows.Forms.Label();
             this.IconMinima = new FontAwesome.Sharp.IconButton();
-            this.btnConnect = new FontAwesome.Sharp.IconButton();
-            this.txtTempTest = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.IconMaxin = new FontAwesome.Sharp.IconButton();
             this.IconClose = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCSVFileFilter = new FontAwesome.Sharp.IconButton();
-            this.menuMain = new System.Windows.Forms.MenuStrip();
-            this.viewOptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bothZonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zone1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zone2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.connectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewOptionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bothZonesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tempZone1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tempZone2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cSVFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pIDChillerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtResult = new System.Windows.Forms.TextBox();
+            this.txtTempTest = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panelBoth = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label87 = new System.Windows.Forms.Label();
             this.checkT24 = new System.Windows.Forms.CheckBox();
@@ -255,6 +262,17 @@ namespace Apple_24_Zones.Forms
             this.checkT14 = new System.Windows.Forms.CheckBox();
             this.label98 = new System.Windows.Forms.Label();
             this.checkT13 = new System.Windows.Forms.CheckBox();
+            this.panelConexion = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnRefreshCOM = new FontAwesome.Sharp.IconButton();
+            this.btnConnectCOM = new FontAwesome.Sharp.IconButton();
+            this.cbCOMSelect = new System.Windows.Forms.ComboBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label84 = new System.Windows.Forms.Label();
             this.checkT12 = new System.Windows.Forms.CheckBox();
@@ -280,33 +298,26 @@ namespace Apple_24_Zones.Forms
             this.checkT2 = new System.Windows.Forms.CheckBox();
             this.label86 = new System.Windows.Forms.Label();
             this.checkT1 = new System.Windows.Forms.CheckBox();
-            this.panelConexion = new System.Windows.Forms.Panel();
-            this.label99 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnRefreshCOM = new FontAwesome.Sharp.IconButton();
-            this.btnConnectCOM = new FontAwesome.Sharp.IconButton();
-            this.cbCOMSelect = new System.Windows.Forms.ComboBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
+            this.panelControlZone2 = new System.Windows.Forms.Panel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label69 = new System.Windows.Forms.Label();
-            this.cbSelect = new System.Windows.Forms.ComboBox();
-            this.led1 = new System.Windows.Forms.PictureBox();
-            this.led2 = new System.Windows.Forms.PictureBox();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.label72 = new System.Windows.Forms.Label();
+            this.lbAVGTemp2 = new System.Windows.Forms.Label();
+            this.lbCurrentSetpoint2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label67 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txtAVGTemp2 = new System.Windows.Forms.TextBox();
             this.label68 = new System.Windows.Forms.Label();
-            this.txtCSetpoint2 = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -365,46 +376,55 @@ namespace Apple_24_Zones.Forms
             this.chartView = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pIDChillerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.panelControlZone1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.lbAVGTemp1 = new System.Windows.Forms.Label();
+            this.lbCurrentSetpoint1 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label75 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.label77 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.label78 = new System.Windows.Forms.Label();
-            this.textBox40 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label102 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.timerDateTime = new System.Windows.Forms.Timer(this.components);
+            this.txtCrono = new System.Windows.Forms.TextBox();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone2)).BeginInit();
             this.panelZone1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ledZ2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).BeginInit();
             this.panelZone2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.menuMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.panelBoth.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panelConexion.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.led1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panelControlZone2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -412,16 +432,18 @@ namespace Apple_24_Zones.Forms
             this.panelCheckView.SuspendLayout();
             this.panelViewZone.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.panelControlZone1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lbFecha
@@ -453,73 +475,73 @@ namespace Apple_24_Zones.Forms
             this.chartZone2.BorderlineColor = System.Drawing.Color.Gray;
             this.chartZone2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartZone2.BorderlineWidth = 2;
-            chartArea1.Name = "ChartArea1";
-            this.chartZone2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartZone2.Legends.Add(legend1);
-            this.chartZone2.Location = new System.Drawing.Point(5, 3);
+            chartArea16.Name = "ChartArea1";
+            this.chartZone2.ChartAreas.Add(chartArea16);
+            legend16.Name = "Legend1";
+            this.chartZone2.Legends.Add(legend16);
+            this.chartZone2.Location = new System.Drawing.Point(10, 91);
             this.chartZone2.Name = "chartZone2";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "T-13";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "T-14";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "T-15";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Legend = "Legend1";
-            series4.Name = "T-16";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Legend = "Legend1";
-            series5.Name = "T-17";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Legend = "Legend1";
-            series6.Name = "T-18";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series7.Legend = "Legend1";
-            series7.Name = "T-19";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series8.Legend = "Legend1";
-            series8.Name = "T-20";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series9.Legend = "Legend1";
-            series9.Name = "T-21";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series10.Legend = "Legend1";
-            series10.Name = "T-22";
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series11.Legend = "Legend1";
-            series11.Name = "T-23";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series12.Legend = "Legend1";
-            series12.Name = "T-24";
-            this.chartZone2.Series.Add(series1);
-            this.chartZone2.Series.Add(series2);
-            this.chartZone2.Series.Add(series3);
-            this.chartZone2.Series.Add(series4);
-            this.chartZone2.Series.Add(series5);
-            this.chartZone2.Series.Add(series6);
-            this.chartZone2.Series.Add(series7);
-            this.chartZone2.Series.Add(series8);
-            this.chartZone2.Series.Add(series9);
-            this.chartZone2.Series.Add(series10);
-            this.chartZone2.Series.Add(series11);
-            this.chartZone2.Series.Add(series12);
-            this.chartZone2.Size = new System.Drawing.Size(1212, 395);
+            series181.ChartArea = "ChartArea1";
+            series181.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series181.Legend = "Legend1";
+            series181.Name = "T-13";
+            series182.ChartArea = "ChartArea1";
+            series182.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series182.Legend = "Legend1";
+            series182.Name = "T-14";
+            series183.ChartArea = "ChartArea1";
+            series183.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series183.Legend = "Legend1";
+            series183.Name = "T-15";
+            series184.ChartArea = "ChartArea1";
+            series184.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series184.Legend = "Legend1";
+            series184.Name = "T-16";
+            series185.ChartArea = "ChartArea1";
+            series185.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series185.Legend = "Legend1";
+            series185.Name = "T-17";
+            series186.ChartArea = "ChartArea1";
+            series186.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series186.Legend = "Legend1";
+            series186.Name = "T-18";
+            series187.ChartArea = "ChartArea1";
+            series187.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series187.Legend = "Legend1";
+            series187.Name = "T-19";
+            series188.ChartArea = "ChartArea1";
+            series188.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series188.Legend = "Legend1";
+            series188.Name = "T-20";
+            series189.ChartArea = "ChartArea1";
+            series189.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series189.Legend = "Legend1";
+            series189.Name = "T-21";
+            series190.ChartArea = "ChartArea1";
+            series190.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series190.Legend = "Legend1";
+            series190.Name = "T-22";
+            series191.ChartArea = "ChartArea1";
+            series191.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series191.Legend = "Legend1";
+            series191.Name = "T-23";
+            series192.ChartArea = "ChartArea1";
+            series192.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series192.Legend = "Legend1";
+            series192.Name = "T-24";
+            this.chartZone2.Series.Add(series181);
+            this.chartZone2.Series.Add(series182);
+            this.chartZone2.Series.Add(series183);
+            this.chartZone2.Series.Add(series184);
+            this.chartZone2.Series.Add(series185);
+            this.chartZone2.Series.Add(series186);
+            this.chartZone2.Series.Add(series187);
+            this.chartZone2.Series.Add(series188);
+            this.chartZone2.Series.Add(series189);
+            this.chartZone2.Series.Add(series190);
+            this.chartZone2.Series.Add(series191);
+            this.chartZone2.Series.Add(series192);
+            this.chartZone2.Size = new System.Drawing.Size(1212, 360);
             this.chartZone2.TabIndex = 212;
             this.chartZone2.Text = "chart1";
             // 
@@ -580,9 +602,9 @@ namespace Apple_24_Zones.Forms
             this.panelZone1.Controls.Add(this.txtTC2);
             this.panelZone1.Controls.Add(this.txtTC1);
             this.panelZone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelZone1.Location = new System.Drawing.Point(5, 871);
+            this.panelZone1.Location = new System.Drawing.Point(10, 510);
             this.panelZone1.Name = "panelZone1";
-            this.panelZone1.Size = new System.Drawing.Size(1212, 82);
+            this.panelZone1.Size = new System.Drawing.Size(1210, 82);
             this.panelZone1.TabIndex = 225;
             // 
             // label2
@@ -590,11 +612,11 @@ namespace Apple_24_Zones.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(539, 4);
+            this.label2.Location = new System.Drawing.Point(531, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.Size = new System.Drawing.Size(130, 20);
             this.label2.TabIndex = 259;
-            this.label2.Text = "ZONE #1";
+            this.label2.Text = "TEMP ZONE 1";
             // 
             // lbDivisor
             // 
@@ -1134,78 +1156,78 @@ namespace Apple_24_Zones.Forms
             this.chartZone1.BorderlineColor = System.Drawing.Color.Gray;
             this.chartZone1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartZone1.BorderlineWidth = 2;
-            chartArea2.InnerPlotPosition.Auto = false;
-            chartArea2.InnerPlotPosition.Height = 88.4641F;
-            chartArea2.InnerPlotPosition.Width = 93.2662F;
-            chartArea2.InnerPlotPosition.X = 6.11536F;
-            chartArea2.InnerPlotPosition.Y = 2.79255F;
-            chartArea2.Name = "ChartArea1";
-            this.chartZone1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartZone1.Legends.Add(legend2);
-            this.chartZone1.Location = new System.Drawing.Point(5, 479);
+            chartArea17.InnerPlotPosition.Auto = false;
+            chartArea17.InnerPlotPosition.Height = 88.4641F;
+            chartArea17.InnerPlotPosition.Width = 93.2662F;
+            chartArea17.InnerPlotPosition.X = 6.11536F;
+            chartArea17.InnerPlotPosition.Y = 2.79255F;
+            chartArea17.Name = "ChartArea1";
+            this.chartZone1.ChartAreas.Add(chartArea17);
+            legend17.Name = "Legend1";
+            this.chartZone1.Legends.Add(legend17);
+            this.chartZone1.Location = new System.Drawing.Point(9, 593);
             this.chartZone1.Name = "chartZone1";
-            series13.ChartArea = "ChartArea1";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series13.Legend = "Legend1";
-            series13.Name = "T-1";
-            series14.ChartArea = "ChartArea1";
-            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series14.Legend = "Legend1";
-            series14.Name = "T-2";
-            series15.ChartArea = "ChartArea1";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series15.Legend = "Legend1";
-            series15.Name = "T-3";
-            series16.ChartArea = "ChartArea1";
-            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series16.Legend = "Legend1";
-            series16.Name = "T-4";
-            series17.ChartArea = "ChartArea1";
-            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series17.Legend = "Legend1";
-            series17.Name = "T-5";
-            series18.ChartArea = "ChartArea1";
-            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series18.Legend = "Legend1";
-            series18.Name = "T-6";
-            series19.ChartArea = "ChartArea1";
-            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series19.Legend = "Legend1";
-            series19.Name = "T-7";
-            series20.ChartArea = "ChartArea1";
-            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series20.Legend = "Legend1";
-            series20.Name = "T-8";
-            series21.ChartArea = "ChartArea1";
-            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series21.Legend = "Legend1";
-            series21.Name = "T-9";
-            series22.ChartArea = "ChartArea1";
-            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series22.Legend = "Legend1";
-            series22.Name = "T-10";
-            series23.ChartArea = "ChartArea1";
-            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series23.Legend = "Legend1";
-            series23.Name = "T-11";
-            series24.ChartArea = "ChartArea1";
-            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series24.Legend = "Legend1";
-            series24.Name = "T-12";
-            this.chartZone1.Series.Add(series13);
-            this.chartZone1.Series.Add(series14);
-            this.chartZone1.Series.Add(series15);
-            this.chartZone1.Series.Add(series16);
-            this.chartZone1.Series.Add(series17);
-            this.chartZone1.Series.Add(series18);
-            this.chartZone1.Series.Add(series19);
-            this.chartZone1.Series.Add(series20);
-            this.chartZone1.Series.Add(series21);
-            this.chartZone1.Series.Add(series22);
-            this.chartZone1.Series.Add(series23);
-            this.chartZone1.Series.Add(series24);
-            this.chartZone1.Size = new System.Drawing.Size(1212, 395);
+            series193.ChartArea = "ChartArea1";
+            series193.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series193.Legend = "Legend1";
+            series193.Name = "T-1";
+            series194.ChartArea = "ChartArea1";
+            series194.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series194.Legend = "Legend1";
+            series194.Name = "T-2";
+            series195.ChartArea = "ChartArea1";
+            series195.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series195.Legend = "Legend1";
+            series195.Name = "T-3";
+            series196.ChartArea = "ChartArea1";
+            series196.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series196.Legend = "Legend1";
+            series196.Name = "T-4";
+            series197.ChartArea = "ChartArea1";
+            series197.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series197.Legend = "Legend1";
+            series197.Name = "T-5";
+            series198.ChartArea = "ChartArea1";
+            series198.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series198.Legend = "Legend1";
+            series198.Name = "T-6";
+            series199.ChartArea = "ChartArea1";
+            series199.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series199.Legend = "Legend1";
+            series199.Name = "T-7";
+            series200.ChartArea = "ChartArea1";
+            series200.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series200.Legend = "Legend1";
+            series200.Name = "T-8";
+            series201.ChartArea = "ChartArea1";
+            series201.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series201.Legend = "Legend1";
+            series201.Name = "T-9";
+            series202.ChartArea = "ChartArea1";
+            series202.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series202.Legend = "Legend1";
+            series202.Name = "T-10";
+            series203.ChartArea = "ChartArea1";
+            series203.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series203.Legend = "Legend1";
+            series203.Name = "T-11";
+            series204.ChartArea = "ChartArea1";
+            series204.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series204.Legend = "Legend1";
+            series204.Name = "T-12";
+            this.chartZone1.Series.Add(series193);
+            this.chartZone1.Series.Add(series194);
+            this.chartZone1.Series.Add(series195);
+            this.chartZone1.Series.Add(series196);
+            this.chartZone1.Series.Add(series197);
+            this.chartZone1.Series.Add(series198);
+            this.chartZone1.Series.Add(series199);
+            this.chartZone1.Series.Add(series200);
+            this.chartZone1.Series.Add(series201);
+            this.chartZone1.Series.Add(series202);
+            this.chartZone1.Series.Add(series203);
+            this.chartZone1.Series.Add(series204);
+            this.chartZone1.Size = new System.Drawing.Size(1212, 360);
             this.chartZone1.TabIndex = 238;
             this.chartZone1.Text = "chart1";
             // 
@@ -2045,9 +2067,9 @@ namespace Apple_24_Zones.Forms
             this.panelZone2.Controls.Add(this.zone2label10);
             this.panelZone2.Controls.Add(this.zone2label11);
             this.panelZone2.Controls.Add(this.zone2label12);
-            this.panelZone2.Location = new System.Drawing.Point(5, 391);
+            this.panelZone2.Location = new System.Drawing.Point(11, 8);
             this.panelZone2.Name = "panelZone2";
-            this.panelZone2.Size = new System.Drawing.Size(1212, 82);
+            this.panelZone2.Size = new System.Drawing.Size(1210, 82);
             this.panelZone2.TabIndex = 239;
             // 
             // label4
@@ -2055,24 +2077,26 @@ namespace Apple_24_Zones.Forms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(539, 3);
+            this.label4.Location = new System.Drawing.Point(530, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 20);
+            this.label4.Size = new System.Drawing.Size(130, 20);
             this.label4.TabIndex = 260;
-            this.label4.Text = "ZONE #2";
+            this.label4.Text = "TEMP ZONE 2";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
-            this.panel1.Controls.Add(this.btnInfo);
+            this.panel1.Controls.Add(this.lbDate);
+            this.panel1.Controls.Add(this.lbTime);
+            this.panel1.Controls.Add(this.lbDateTime);
+            this.panel1.Controls.Add(this.pictureBox12);
+            this.panel1.Controls.Add(this.label79);
             this.panel1.Controls.Add(this.IconMinima);
-            this.panel1.Controls.Add(this.btnConnect);
             this.panel1.Controls.Add(this.IconMaxin);
             this.panel1.Controls.Add(this.IconClose);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnCSVFileFilter);
-            this.panel1.Controls.Add(this.menuMain);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -2080,32 +2104,65 @@ namespace Apple_24_Zones.Forms
             this.panel1.TabIndex = 242;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // txtResult
+            // lbDate
             // 
-            this.txtResult.Location = new System.Drawing.Point(273, 148);
-            this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(187, 20);
-            this.txtResult.TabIndex = 289;
+            this.lbDate.BackColor = System.Drawing.Color.Gray;
+            this.lbDate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lbDate.ForeColor = System.Drawing.Color.Black;
+            this.lbDate.Location = new System.Drawing.Point(1415, 45);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(353, 24);
+            this.lbDate.TabIndex = 324;
+            this.lbDate.Text = "fecha";
+            this.lbDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnInfo
+            // lbTime
             // 
-            this.btnInfo.BackColor = System.Drawing.Color.Gray;
-            this.btnInfo.FlatAppearance.BorderSize = 0;
-            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInfo.ForeColor = System.Drawing.Color.White;
-            this.btnInfo.IconChar = FontAwesome.Sharp.IconChar.Info;
-            this.btnInfo.IconColor = System.Drawing.Color.White;
-            this.btnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInfo.IconSize = 25;
-            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfo.Location = new System.Drawing.Point(234, 37);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(126, 36);
-            this.btnInfo.TabIndex = 274;
-            this.btnInfo.Text = "     Information";
-            this.btnInfo.UseVisualStyleBackColor = false;
-            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            this.lbTime.BackColor = System.Drawing.Color.Gray;
+            this.lbTime.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lbTime.ForeColor = System.Drawing.Color.Black;
+            this.lbTime.Location = new System.Drawing.Point(1710, 45);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(209, 24);
+            this.lbTime.TabIndex = 323;
+            this.lbTime.Text = "hora";
+            this.lbTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbDateTime
+            // 
+            this.lbDateTime.BackColor = System.Drawing.Color.Gray;
+            this.lbDateTime.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateTime.ForeColor = System.Drawing.Color.Black;
+            this.lbDateTime.Location = new System.Drawing.Point(1635, 40);
+            this.lbDateTime.Name = "lbDateTime";
+            this.lbDateTime.Size = new System.Drawing.Size(285, 33);
+            this.lbDateTime.TabIndex = 308;
+            this.lbDateTime.Text = "DateTime";
+            this.lbDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::Apple_24_Zones.Properties.Resources.MIDORI_LOGO_ICON_VERDE;
+            this.pictureBox12.Location = new System.Drawing.Point(50, 0);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(47, 37);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 290;
+            this.pictureBox12.TabStop = false;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.BackColor = System.Drawing.Color.Transparent;
+            this.label79.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.ForeColor = System.Drawing.Color.White;
+            this.label79.Location = new System.Drawing.Point(227, 16);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(92, 16);
+            this.label79.TabIndex = 289;
+            this.label79.Text = "SOFTWARE";
+            this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // IconMinima
             // 
@@ -2121,42 +2178,6 @@ namespace Apple_24_Zones.Forms
             this.IconMinima.TabIndex = 275;
             this.IconMinima.UseVisualStyleBackColor = true;
             this.IconMinima.Click += new System.EventHandler(this.IconMinima_Click);
-            // 
-            // btnConnect
-            // 
-            this.btnConnect.BackColor = System.Drawing.Color.Gray;
-            this.btnConnect.FlatAppearance.BorderSize = 0;
-            this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnect.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnect.ForeColor = System.Drawing.Color.White;
-            this.btnConnect.IconChar = FontAwesome.Sharp.IconChar.PlugCircleExclamation;
-            this.btnConnect.IconColor = System.Drawing.Color.White;
-            this.btnConnect.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConnect.IconSize = 25;
-            this.btnConnect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnect.Location = new System.Drawing.Point(0, 37);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(128, 36);
-            this.btnConnect.TabIndex = 288;
-            this.btnConnect.Text = "      Connection";
-            this.btnConnect.UseVisualStyleBackColor = false;
-            // 
-            // txtTempTest
-            // 
-            this.txtTempTest.Location = new System.Drawing.Point(86, 148);
-            this.txtTempTest.Name = "txtTempTest";
-            this.txtTempTest.Size = new System.Drawing.Size(100, 20);
-            this.txtTempTest.TabIndex = 287;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(192, 148);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 288;
-            this.button3.Text = "convert";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // IconMaxin
             // 
@@ -2191,107 +2212,145 @@ namespace Apple_24_Zones.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(294, 18);
+            this.label1.Location = new System.Drawing.Point(351, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 18);
+            this.label1.Size = new System.Drawing.Size(76, 16);
             this.label1.TabIndex = 268;
             this.label1.Text = "200-32271";
-            // 
-            // btnCSVFileFilter
-            // 
-            this.btnCSVFileFilter.BackColor = System.Drawing.Color.Gray;
-            this.btnCSVFileFilter.FlatAppearance.BorderSize = 0;
-            this.btnCSVFileFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCSVFileFilter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCSVFileFilter.ForeColor = System.Drawing.Color.White;
-            this.btnCSVFileFilter.IconChar = FontAwesome.Sharp.IconChar.FileCsv;
-            this.btnCSVFileFilter.IconColor = System.Drawing.Color.White;
-            this.btnCSVFileFilter.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnCSVFileFilter.IconSize = 25;
-            this.btnCSVFileFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCSVFileFilter.Location = new System.Drawing.Point(128, 37);
-            this.btnCSVFileFilter.Name = "btnCSVFileFilter";
-            this.btnCSVFileFilter.Size = new System.Drawing.Size(109, 36);
-            this.btnCSVFileFilter.TabIndex = 229;
-            this.btnCSVFileFilter.Text = "      CSV Files";
-            this.btnCSVFileFilter.UseVisualStyleBackColor = false;
-            this.btnCSVFileFilter.Click += new System.EventHandler(this.btnCSVFileFilter_Click);
-            // 
-            // menuMain
-            // 
-            this.menuMain.AutoSize = false;
-            this.menuMain.BackColor = System.Drawing.Color.Gray;
-            this.menuMain.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewOptionToolStripMenuItem,
-            this.pIDChillerToolStripMenuItem});
-            this.menuMain.Location = new System.Drawing.Point(359, 37);
-            this.menuMain.Name = "menuMain";
-            this.menuMain.Size = new System.Drawing.Size(1561, 36);
-            this.menuMain.TabIndex = 0;
-            this.menuMain.Text = "menuStrip3";
-            // 
-            // viewOptionToolStripMenuItem
-            // 
-            this.viewOptionToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
-            this.viewOptionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bothZonesToolStripMenuItem,
-            this.zone1ToolStripMenuItem,
-            this.zone2ToolStripMenuItem});
-            this.viewOptionToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewOptionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.viewOptionToolStripMenuItem.Name = "viewOptionToolStripMenuItem";
-            this.viewOptionToolStripMenuItem.Size = new System.Drawing.Size(111, 32);
-            this.viewOptionToolStripMenuItem.Text = "View Option";
-            // 
-            // bothZonesToolStripMenuItem
-            // 
-            this.bothZonesToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
-            this.bothZonesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.bothZonesToolStripMenuItem.Name = "bothZonesToolStripMenuItem";
-            this.bothZonesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bothZonesToolStripMenuItem.Text = "Both Zones";
-            // 
-            // zone1ToolStripMenuItem
-            // 
-            this.zone1ToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
-            this.zone1ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.zone1ToolStripMenuItem.Name = "zone1ToolStripMenuItem";
-            this.zone1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.zone1ToolStripMenuItem.Text = "Zone #1";
-            this.zone1ToolStripMenuItem.Click += new System.EventHandler(this.zone1ToolStripMenuItem_Click);
-            // 
-            // zone2ToolStripMenuItem
-            // 
-            this.zone2ToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
-            this.zone2ToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.zone2ToolStripMenuItem.Name = "zone2ToolStripMenuItem";
-            this.zone2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.zone2ToolStripMenuItem.Text = "Zone #2";
-            this.zone2ToolStripMenuItem.Click += new System.EventHandler(this.zone2ToolStripMenuItem_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(-7, -1);
+            this.label3.Location = new System.Drawing.Point(99, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(309, 41);
+            this.label3.Size = new System.Drawing.Size(133, 37);
             this.label3.TabIndex = 231;
-            this.label3.Text = "ELEN II SOFTWARE";
+            this.label3.Text = "ELEN II";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.Gray;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.connectionToolStripMenuItem,
+            this.viewOptionToolStripMenuItem1,
+            this.cSVFilesToolStripMenuItem,
+            this.informationToolStripMenuItem,
+            this.pIDChillerToolStripMenuItem1,
+            this.reportsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 40);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1920, 33);
+            this.menuStrip1.TabIndex = 291;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // connectionToolStripMenuItem
+            // 
+            this.connectionToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.connectionToolStripMenuItem.Name = "connectionToolStripMenuItem";
+            this.connectionToolStripMenuItem.Size = new System.Drawing.Size(107, 29);
+            this.connectionToolStripMenuItem.Text = "Connection";
+            // 
+            // viewOptionToolStripMenuItem1
+            // 
+            this.viewOptionToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bothZonesToolStripMenuItem1,
+            this.tempZone1ToolStripMenuItem,
+            this.tempZone2ToolStripMenuItem});
+            this.viewOptionToolStripMenuItem1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewOptionToolStripMenuItem1.Name = "viewOptionToolStripMenuItem1";
+            this.viewOptionToolStripMenuItem1.Size = new System.Drawing.Size(111, 29);
+            this.viewOptionToolStripMenuItem1.Text = "View Option";
+            // 
+            // bothZonesToolStripMenuItem1
+            // 
+            this.bothZonesToolStripMenuItem1.BackColor = System.Drawing.Color.Gray;
+            this.bothZonesToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
+            this.bothZonesToolStripMenuItem1.Name = "bothZonesToolStripMenuItem1";
+            this.bothZonesToolStripMenuItem1.Size = new System.Drawing.Size(169, 22);
+            this.bothZonesToolStripMenuItem1.Text = "Both Zones";
+            this.bothZonesToolStripMenuItem1.Click += new System.EventHandler(this.bothZonesToolStripMenuItem1_Click);
+            // 
+            // tempZone1ToolStripMenuItem
+            // 
+            this.tempZone1ToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
+            this.tempZone1ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.tempZone1ToolStripMenuItem.Name = "tempZone1ToolStripMenuItem";
+            this.tempZone1ToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.tempZone1ToolStripMenuItem.Text = "Temp Zone 1";
+            this.tempZone1ToolStripMenuItem.Click += new System.EventHandler(this.tempZone1ToolStripMenuItem_Click);
+            // 
+            // tempZone2ToolStripMenuItem
+            // 
+            this.tempZone2ToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
+            this.tempZone2ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.tempZone2ToolStripMenuItem.Name = "tempZone2ToolStripMenuItem";
+            this.tempZone2ToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.tempZone2ToolStripMenuItem.Text = "Temp Zone 2";
+            this.tempZone2ToolStripMenuItem.Click += new System.EventHandler(this.tempZone2ToolStripMenuItem_Click);
+            // 
+            // cSVFilesToolStripMenuItem
+            // 
+            this.cSVFilesToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cSVFilesToolStripMenuItem.Name = "cSVFilesToolStripMenuItem";
+            this.cSVFilesToolStripMenuItem.Size = new System.Drawing.Size(86, 29);
+            this.cSVFilesToolStripMenuItem.Text = "CSV Files";
+            this.cSVFilesToolStripMenuItem.Click += new System.EventHandler(this.cSVFilesToolStripMenuItem_Click);
+            // 
+            // informationToolStripMenuItem
+            // 
+            this.informationToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
+            this.informationToolStripMenuItem.Text = "Information";
+            this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
+            // 
+            // pIDChillerToolStripMenuItem1
+            // 
+            this.pIDChillerToolStripMenuItem1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pIDChillerToolStripMenuItem1.Name = "pIDChillerToolStripMenuItem1";
+            this.pIDChillerToolStripMenuItem1.Size = new System.Drawing.Size(95, 29);
+            this.pIDChillerToolStripMenuItem1.Text = "PID Chiller";
+            // 
+            // txtResult
+            // 
+            this.txtResult.Location = new System.Drawing.Point(273, 148);
+            this.txtResult.Name = "txtResult";
+            this.txtResult.Size = new System.Drawing.Size(187, 20);
+            this.txtResult.TabIndex = 289;
+            // 
+            // txtTempTest
+            // 
+            this.txtTempTest.Location = new System.Drawing.Point(86, 148);
+            this.txtTempTest.Name = "txtTempTest";
+            this.txtTempTest.Size = new System.Drawing.Size(100, 20);
+            this.txtTempTest.TabIndex = 287;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(192, 148);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 288;
+            this.button3.Text = "convert";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // panelBoth
             // 
             this.panelBoth.BackColor = System.Drawing.Color.DimGray;
+            this.panelBoth.Controls.Add(this.panel10);
             this.panelBoth.Controls.Add(this.panel3);
-            this.panelBoth.Controls.Add(this.panel2);
             this.panelBoth.Controls.Add(this.panelConexion);
+            this.panelBoth.Controls.Add(this.panel2);
             this.panelBoth.Controls.Add(this.panelZone2);
             this.panelBoth.Controls.Add(this.chartZone2);
             this.panelBoth.Controls.Add(this.chartZone1);
@@ -2300,6 +2359,14 @@ namespace Apple_24_Zones.Forms
             this.panelBoth.Name = "panelBoth";
             this.panelBoth.Size = new System.Drawing.Size(1320, 958);
             this.panelBoth.TabIndex = 271;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel10.Location = new System.Drawing.Point(-4, 465);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1333, 29);
+            this.panel10.TabIndex = 312;
             // 
             // panel3
             // 
@@ -2328,7 +2395,7 @@ namespace Apple_24_Zones.Forms
             this.panel3.Controls.Add(this.checkT14);
             this.panel3.Controls.Add(this.label98);
             this.panel3.Controls.Add(this.checkT13);
-            this.panel3.Location = new System.Drawing.Point(1223, 15);
+            this.panel3.Location = new System.Drawing.Point(1224, 65);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(90, 360);
             this.panel3.TabIndex = 266;
@@ -2621,6 +2688,177 @@ namespace Apple_24_Zones.Forms
             this.checkT13.Text = "T-13";
             this.checkT13.UseVisualStyleBackColor = true;
             // 
+            // panelConexion
+            // 
+            this.panelConexion.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelConexion.Controls.Add(this.iconButton3);
+            this.panelConexion.Controls.Add(this.txtResult);
+            this.panelConexion.Controls.Add(this.txtTempTest);
+            this.panelConexion.Controls.Add(this.button3);
+            this.panelConexion.Controls.Add(this.label99);
+            this.panelConexion.Controls.Add(this.label33);
+            this.panelConexion.Controls.Add(this.iconButton1);
+            this.panelConexion.Controls.Add(this.iconButton2);
+            this.panelConexion.Controls.Add(this.comboBox1);
+            this.panelConexion.Controls.Add(this.btnRefreshCOM);
+            this.panelConexion.Controls.Add(this.btnConnectCOM);
+            this.panelConexion.Controls.Add(this.cbCOMSelect);
+            this.panelConexion.Controls.Add(this.label32);
+            this.panelConexion.Location = new System.Drawing.Point(246, 182);
+            this.panelConexion.Name = "panelConexion";
+            this.panelConexion.Size = new System.Drawing.Size(518, 195);
+            this.panelConexion.TabIndex = 275;
+            this.panelConexion.Visible = false;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
+            this.iconButton3.IconColor = System.Drawing.Color.White;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 30;
+            this.iconButton3.Location = new System.Drawing.Point(483, 3);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(35, 31);
+            this.iconButton3.TabIndex = 290;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.ForeColor = System.Drawing.Color.White;
+            this.label99.Location = new System.Drawing.Point(270, 52);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(116, 18);
+            this.label99.TabIndex = 117;
+            this.label99.Text = "Connection #2";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(17, 52);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(116, 18);
+            this.label33.TabIndex = 116;
+            this.label33.Text = "Connection #1";
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Repeat;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(374, 106);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.iconButton1.Size = new System.Drawing.Size(117, 36);
+            this.iconButton1.TabIndex = 115;
+            this.iconButton1.Text = "          Refresh";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 40;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(264, 106);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(116, 36);
+            this.iconButton2.TabIndex = 114;
+            this.iconButton2.Text = "           Connect";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(273, 74);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(206, 26);
+            this.comboBox1.TabIndex = 113;
+            // 
+            // btnRefreshCOM
+            // 
+            this.btnRefreshCOM.FlatAppearance.BorderSize = 0;
+            this.btnRefreshCOM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefreshCOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshCOM.ForeColor = System.Drawing.Color.White;
+            this.btnRefreshCOM.IconChar = FontAwesome.Sharp.IconChar.Repeat;
+            this.btnRefreshCOM.IconColor = System.Drawing.Color.White;
+            this.btnRefreshCOM.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnRefreshCOM.IconSize = 30;
+            this.btnRefreshCOM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefreshCOM.Location = new System.Drawing.Point(119, 104);
+            this.btnRefreshCOM.Name = "btnRefreshCOM";
+            this.btnRefreshCOM.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnRefreshCOM.Size = new System.Drawing.Size(117, 36);
+            this.btnRefreshCOM.TabIndex = 112;
+            this.btnRefreshCOM.Text = "          Refresh";
+            this.btnRefreshCOM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefreshCOM.UseVisualStyleBackColor = true;
+            // 
+            // btnConnectCOM
+            // 
+            this.btnConnectCOM.FlatAppearance.BorderSize = 0;
+            this.btnConnectCOM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnectCOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnectCOM.ForeColor = System.Drawing.Color.White;
+            this.btnConnectCOM.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            this.btnConnectCOM.IconColor = System.Drawing.Color.White;
+            this.btnConnectCOM.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConnectCOM.IconSize = 40;
+            this.btnConnectCOM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConnectCOM.Location = new System.Drawing.Point(9, 104);
+            this.btnConnectCOM.Name = "btnConnectCOM";
+            this.btnConnectCOM.Size = new System.Drawing.Size(116, 36);
+            this.btnConnectCOM.TabIndex = 111;
+            this.btnConnectCOM.Text = "           Connect";
+            this.btnConnectCOM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConnectCOM.UseVisualStyleBackColor = true;
+            // 
+            // cbCOMSelect
+            // 
+            this.cbCOMSelect.BackColor = System.Drawing.Color.SteelBlue;
+            this.cbCOMSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCOMSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCOMSelect.ForeColor = System.Drawing.Color.White;
+            this.cbCOMSelect.FormattingEnabled = true;
+            this.cbCOMSelect.Location = new System.Drawing.Point(20, 73);
+            this.cbCOMSelect.Name = "cbCOMSelect";
+            this.cbCOMSelect.Size = new System.Drawing.Size(206, 26);
+            this.cbCOMSelect.TabIndex = 110;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(3, 14);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(159, 19);
+            this.label32.TabIndex = 1;
+            this.label32.Text = "Connection Section";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
@@ -2648,7 +2886,7 @@ namespace Apple_24_Zones.Forms
             this.panel2.Controls.Add(this.checkT2);
             this.panel2.Controls.Add(this.label86);
             this.panel2.Controls.Add(this.checkT1);
-            this.panel2.Location = new System.Drawing.Point(1223, 492);
+            this.panel2.Location = new System.Drawing.Point(1224, 576);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(90, 360);
             this.panel2.TabIndex = 265;
@@ -2941,310 +3179,58 @@ namespace Apple_24_Zones.Forms
             this.checkT1.Text = "T-1";
             this.checkT1.UseVisualStyleBackColor = true;
             // 
-            // panelConexion
+            // panelControlZone2
             // 
-            this.panelConexion.BackColor = System.Drawing.Color.SteelBlue;
-            this.panelConexion.Controls.Add(this.iconButton3);
-            this.panelConexion.Controls.Add(this.txtResult);
-            this.panelConexion.Controls.Add(this.txtTempTest);
-            this.panelConexion.Controls.Add(this.button3);
-            this.panelConexion.Controls.Add(this.label99);
-            this.panelConexion.Controls.Add(this.label33);
-            this.panelConexion.Controls.Add(this.iconButton1);
-            this.panelConexion.Controls.Add(this.iconButton2);
-            this.panelConexion.Controls.Add(this.comboBox1);
-            this.panelConexion.Controls.Add(this.btnRefreshCOM);
-            this.panelConexion.Controls.Add(this.btnConnectCOM);
-            this.panelConexion.Controls.Add(this.cbCOMSelect);
-            this.panelConexion.Controls.Add(this.label32);
-            this.panelConexion.Location = new System.Drawing.Point(158, 47);
-            this.panelConexion.Name = "panelConexion";
-            this.panelConexion.Size = new System.Drawing.Size(518, 195);
-            this.panelConexion.TabIndex = 275;
-            this.panelConexion.Visible = false;
+            this.panelControlZone2.BackColor = System.Drawing.Color.DimGray;
+            this.panelControlZone2.Controls.Add(this.txtCrono);
+            this.panelControlZone2.Controls.Add(this.pictureBox13);
+            this.panelControlZone2.Controls.Add(this.label69);
+            this.panelControlZone2.Controls.Add(this.iconButton4);
+            this.panelControlZone2.Controls.Add(this.label70);
+            this.panelControlZone2.Controls.Add(this.label71);
+            this.panelControlZone2.Controls.Add(this.iconButton5);
+            this.panelControlZone2.Controls.Add(this.numericUpDown1);
+            this.panelControlZone2.Controls.Add(this.comboBox3);
+            this.panelControlZone2.Controls.Add(this.pictureBox14);
+            this.panelControlZone2.Controls.Add(this.label72);
+            this.panelControlZone2.Controls.Add(this.lbAVGTemp2);
+            this.panelControlZone2.Controls.Add(this.lbCurrentSetpoint2);
+            this.panelControlZone2.Controls.Add(this.panel4);
+            this.panelControlZone2.Controls.Add(this.label74);
+            this.panelControlZone2.Controls.Add(this.pictureBox15);
+            this.panelControlZone2.Controls.Add(this.label67);
+            this.panelControlZone2.Controls.Add(this.panel5);
+            this.panelControlZone2.Controls.Add(this.label68);
+            this.panelControlZone2.Controls.Add(this.pictureBox4);
+            this.panelControlZone2.Controls.Add(this.pictureBox5);
+            this.panelControlZone2.Controls.Add(this.pictureBox6);
+            this.panelControlZone2.Location = new System.Drawing.Point(52, 91);
+            this.panelControlZone2.Name = "panelControlZone2";
+            this.panelControlZone2.Size = new System.Drawing.Size(499, 395);
+            this.panelControlZone2.TabIndex = 291;
+            this.panelControlZone2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControlZone2_Paint);
             // 
-            // label99
+            // pictureBox13
             // 
-            this.label99.AutoSize = true;
-            this.label99.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label99.ForeColor = System.Drawing.Color.White;
-            this.label99.Location = new System.Drawing.Point(270, 52);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(116, 18);
-            this.label99.TabIndex = 117;
-            this.label99.Text = "Connection #2";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(17, 52);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(116, 18);
-            this.label33.TabIndex = 116;
-            this.label33.Text = "Connection #1";
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Repeat;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(374, 106);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(117, 36);
-            this.iconButton1.TabIndex = 115;
-            this.iconButton1.Text = "          Refresh";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 40;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(264, 106);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(116, 36);
-            this.iconButton2.TabIndex = 114;
-            this.iconButton2.Text = "           Connect";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.SteelBlue;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(273, 74);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(206, 26);
-            this.comboBox1.TabIndex = 113;
-            // 
-            // btnRefreshCOM
-            // 
-            this.btnRefreshCOM.FlatAppearance.BorderSize = 0;
-            this.btnRefreshCOM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefreshCOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshCOM.ForeColor = System.Drawing.Color.White;
-            this.btnRefreshCOM.IconChar = FontAwesome.Sharp.IconChar.Repeat;
-            this.btnRefreshCOM.IconColor = System.Drawing.Color.White;
-            this.btnRefreshCOM.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnRefreshCOM.IconSize = 30;
-            this.btnRefreshCOM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefreshCOM.Location = new System.Drawing.Point(119, 104);
-            this.btnRefreshCOM.Name = "btnRefreshCOM";
-            this.btnRefreshCOM.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btnRefreshCOM.Size = new System.Drawing.Size(117, 36);
-            this.btnRefreshCOM.TabIndex = 112;
-            this.btnRefreshCOM.Text = "          Refresh";
-            this.btnRefreshCOM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefreshCOM.UseVisualStyleBackColor = true;
-            // 
-            // btnConnectCOM
-            // 
-            this.btnConnectCOM.FlatAppearance.BorderSize = 0;
-            this.btnConnectCOM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnectCOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnectCOM.ForeColor = System.Drawing.Color.White;
-            this.btnConnectCOM.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
-            this.btnConnectCOM.IconColor = System.Drawing.Color.White;
-            this.btnConnectCOM.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConnectCOM.IconSize = 40;
-            this.btnConnectCOM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnectCOM.Location = new System.Drawing.Point(9, 104);
-            this.btnConnectCOM.Name = "btnConnectCOM";
-            this.btnConnectCOM.Size = new System.Drawing.Size(116, 36);
-            this.btnConnectCOM.TabIndex = 111;
-            this.btnConnectCOM.Text = "           Connect";
-            this.btnConnectCOM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnectCOM.UseVisualStyleBackColor = true;
-            // 
-            // cbCOMSelect
-            // 
-            this.cbCOMSelect.BackColor = System.Drawing.Color.SteelBlue;
-            this.cbCOMSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCOMSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCOMSelect.ForeColor = System.Drawing.Color.White;
-            this.cbCOMSelect.FormattingEnabled = true;
-            this.cbCOMSelect.Location = new System.Drawing.Point(20, 73);
-            this.cbCOMSelect.Name = "cbCOMSelect";
-            this.cbCOMSelect.Size = new System.Drawing.Size(206, 26);
-            this.cbCOMSelect.TabIndex = 110;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(3, 14);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(159, 19);
-            this.label32.TabIndex = 1;
-            this.label32.Text = "Connection Section";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.DimGray;
-            this.panel7.Controls.Add(this.iconButton5);
-            this.panel7.Controls.Add(this.label74);
-            this.panel7.Controls.Add(this.label72);
-            this.panel7.Controls.Add(this.label69);
-            this.panel7.Controls.Add(this.cbSelect);
-            this.panel7.Controls.Add(this.led1);
-            this.panel7.Controls.Add(this.led2);
-            this.panel7.Controls.Add(this.pictureBox15);
-            this.panel7.Controls.Add(this.label67);
-            this.panel7.Controls.Add(this.label73);
-            this.panel7.Controls.Add(this.iconButton4);
-            this.panel7.Controls.Add(this.numericUpDown1);
-            this.panel7.Controls.Add(this.panel5);
-            this.panel7.Controls.Add(this.txtAVGTemp2);
-            this.panel7.Controls.Add(this.label68);
-            this.panel7.Controls.Add(this.txtCSetpoint2);
-            this.panel7.Controls.Add(this.pictureBox4);
-            this.panel7.Controls.Add(this.pictureBox5);
-            this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Location = new System.Drawing.Point(36, 110);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(499, 395);
-            this.panel7.TabIndex = 291;
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.BackColor = System.Drawing.Color.White;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.DimGray;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.iconButton5.IconColor = System.Drawing.Color.DimGray;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton5.IconSize = 25;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(363, 350);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(73, 28);
-            this.iconButton5.TabIndex = 309;
-            this.iconButton5.Text = "    OFF";
-            this.iconButton5.UseVisualStyleBackColor = false;
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.ForeColor = System.Drawing.Color.White;
-            this.label74.Location = new System.Drawing.Point(3, 1);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(201, 32);
-            this.label74.TabIndex = 308;
-            this.label74.Text = "Status Section:";
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.ForeColor = System.Drawing.Color.White;
-            this.label72.Location = new System.Drawing.Point(359, 288);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(70, 19);
-            this.label72.TabIndex = 307;
-            this.label72.Text = "Heating";
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.Image = global::Apple_24_Zones.Properties.Resources.ledRectangleOff;
+            this.pictureBox13.Location = new System.Drawing.Point(24, 330);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(44, 47);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 324;
+            this.pictureBox13.TabStop = false;
             // 
             // label69
             // 
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.ForeColor = System.Drawing.Color.White;
-            this.label69.Location = new System.Drawing.Point(228, 288);
+            this.label69.Location = new System.Drawing.Point(277, 257);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(70, 19);
-            this.label69.TabIndex = 306;
-            this.label69.Text = "Cooling";
-            // 
-            // cbSelect
-            // 
-            this.cbSelect.BackColor = System.Drawing.Color.SteelBlue;
-            this.cbSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSelect.ForeColor = System.Drawing.Color.White;
-            this.cbSelect.FormattingEnabled = true;
-            this.cbSelect.Items.AddRange(new object[] {
-            " • Cooling",
-            " • Heating"});
-            this.cbSelect.Location = new System.Drawing.Point(16, 286);
-            this.cbSelect.Name = "cbSelect";
-            this.cbSelect.Size = new System.Drawing.Size(199, 26);
-            this.cbSelect.TabIndex = 301;
-            // 
-            // led1
-            // 
-            this.led1.BackColor = System.Drawing.Color.Transparent;
-            this.led1.Image = global::Apple_24_Zones.Properties.Resources.tc8off;
-            this.led1.Location = new System.Drawing.Point(304, 286);
-            this.led1.Name = "led1";
-            this.led1.Size = new System.Drawing.Size(26, 26);
-            this.led1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.led1.TabIndex = 304;
-            this.led1.TabStop = false;
-            // 
-            // led2
-            // 
-            this.led2.BackColor = System.Drawing.Color.Transparent;
-            this.led2.Image = global::Apple_24_Zones.Properties.Resources.tc8off;
-            this.led2.Location = new System.Drawing.Point(435, 286);
-            this.led2.Name = "led2";
-            this.led2.Size = new System.Drawing.Size(26, 26);
-            this.led2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.led2.TabIndex = 305;
-            this.led2.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::Apple_24_Zones.Properties.Resources.arrowDown;
-            this.pictureBox15.Location = new System.Drawing.Point(411, 130);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 300;
-            this.pictureBox15.TabStop = false;
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.Color.White;
-            this.label67.Location = new System.Drawing.Point(98, 140);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(84, 32);
-            this.label67.TabIndex = 295;
-            this.label67.Text = "AVG:";
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.ForeColor = System.Drawing.Color.White;
-            this.label73.Location = new System.Drawing.Point(10, 243);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(212, 32);
-            this.label73.TabIndex = 294;
-            this.label73.Text = "Setpoint Config";
+            this.label69.Size = new System.Drawing.Size(121, 19);
+            this.label69.TabIndex = 323;
+            this.label69.Text = "Select process:";
             // 
             // iconButton4
             // 
@@ -3258,72 +3244,205 @@ namespace Apple_24_Zones.Forms
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButton4.IconSize = 25;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(252, 350);
+            this.iconButton4.Location = new System.Drawing.Point(359, 359);
             this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(73, 28);
-            this.iconButton4.TabIndex = 293;
-            this.iconButton4.Text = "    ON";
+            this.iconButton4.Size = new System.Drawing.Size(93, 28);
+            this.iconButton4.TabIndex = 322;
+            this.iconButton4.Text = "     Turn Off";
             this.iconButton4.UseVisualStyleBackColor = false;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.White;
+            this.label70.Location = new System.Drawing.Point(74, 310);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(70, 19);
+            this.label70.TabIndex = 321;
+            this.label70.Text = "Heating";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ForeColor = System.Drawing.Color.White;
+            this.label71.Location = new System.Drawing.Point(74, 351);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(70, 19);
+            this.label71.TabIndex = 320;
+            this.label71.Text = "Cooling";
+            // 
+            // iconButton5
+            // 
+            this.iconButton5.BackColor = System.Drawing.Color.White;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton5.ForeColor = System.Drawing.Color.DimGray;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.iconButton5.IconColor = System.Drawing.Color.DimGray;
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton5.IconSize = 25;
+            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.Location = new System.Drawing.Point(213, 359);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(93, 28);
+            this.iconButton5.TabIndex = 316;
+            this.iconButton5.Text = "    Apply";
+            this.iconButton5.UseVisualStyleBackColor = false;
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.BackColor = System.Drawing.Color.White;
             this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.ForeColor = System.Drawing.Color.DimGray;
-            this.numericUpDown1.Location = new System.Drawing.Point(16, 345);
+            this.numericUpDown1.Location = new System.Drawing.Point(213, 319);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(199, 34);
-            this.numericUpDown1.TabIndex = 292;
+            this.numericUpDown1.Size = new System.Drawing.Size(239, 31);
+            this.numericUpDown1.TabIndex = 315;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.SteelBlue;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.ForeColor = System.Drawing.Color.White;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "• Heating ",
+            "• Cooling"});
+            this.comboBox3.Location = new System.Drawing.Point(213, 282);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(239, 26);
+            this.comboBox3.TabIndex = 318;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.Image = global::Apple_24_Zones.Properties.Resources.ledRectangleOn;
+            this.pictureBox14.Location = new System.Drawing.Point(24, 292);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(44, 47);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 319;
+            this.pictureBox14.TabStop = false;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ForeColor = System.Drawing.Color.White;
+            this.label72.Location = new System.Drawing.Point(11, 257);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(188, 28);
+            this.label72.TabIndex = 317;
+            this.label72.Text = "Setpoint Config";
+            // 
+            // lbAVGTemp2
+            // 
+            this.lbAVGTemp2.BackColor = System.Drawing.Color.White;
+            this.lbAVGTemp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.lbAVGTemp2.ForeColor = System.Drawing.Color.Black;
+            this.lbAVGTemp2.Location = new System.Drawing.Point(263, 148);
+            this.lbAVGTemp2.Name = "lbAVGTemp2";
+            this.lbAVGTemp2.Size = new System.Drawing.Size(173, 55);
+            this.lbAVGTemp2.TabIndex = 313;
+            this.lbAVGTemp2.Text = "RT";
+            this.lbAVGTemp2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbAVGTemp2.Paint += new System.Windows.Forms.PaintEventHandler(this.lbAVGTemp2_Paint);
+            // 
+            // lbCurrentSetpoint2
+            // 
+            this.lbCurrentSetpoint2.BackColor = System.Drawing.Color.White;
+            this.lbCurrentSetpoint2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.lbCurrentSetpoint2.ForeColor = System.Drawing.Color.Black;
+            this.lbCurrentSetpoint2.Location = new System.Drawing.Point(263, 72);
+            this.lbCurrentSetpoint2.Name = "lbCurrentSetpoint2";
+            this.lbCurrentSetpoint2.Size = new System.Drawing.Size(173, 55);
+            this.lbCurrentSetpoint2.TabIndex = 312;
+            this.lbCurrentSetpoint2.Text = "RT";
+            this.lbCurrentSetpoint2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbCurrentSetpoint2.Paint += new System.Windows.Forms.PaintEventHandler(this.lbCurrentSetpoint2_Paint);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.label81);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(499, 29);
+            this.panel4.TabIndex = 311;
+            // 
+            // label81
+            // 
+            this.label81.BackColor = System.Drawing.Color.White;
+            this.label81.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.ForeColor = System.Drawing.Color.Black;
+            this.label81.Location = new System.Drawing.Point(107, -2);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(285, 33);
+            this.label81.TabIndex = 309;
+            this.label81.Text = "Temp Zone 2";
+            this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.ForeColor = System.Drawing.Color.White;
+            this.label74.Location = new System.Drawing.Point(3, 39);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(177, 28);
+            this.label74.TabIndex = 308;
+            this.label74.Text = "Status Section:";
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::Apple_24_Zones.Properties.Resources.arrowUpRed;
+            this.pictureBox15.Location = new System.Drawing.Point(442, 148);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 300;
+            this.pictureBox15.TabStop = false;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.White;
+            this.label67.Location = new System.Drawing.Point(83, 166);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(163, 25);
+            this.label67.TabIndex = 295;
+            this.label67.Text = "Average Temp";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(0, 235);
+            this.panel5.Location = new System.Drawing.Point(2, 246);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(499, 5);
+            this.panel5.Size = new System.Drawing.Size(495, 5);
             this.panel5.TabIndex = 291;
-            // 
-            // txtAVGTemp2
-            // 
-            this.txtAVGTemp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAVGTemp2.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAVGTemp2.Location = new System.Drawing.Point(232, 125);
-            this.txtAVGTemp2.Name = "txtAVGTemp2";
-            this.txtAVGTemp2.ReadOnly = true;
-            this.txtAVGTemp2.Size = new System.Drawing.Size(173, 62);
-            this.txtAVGTemp2.TabIndex = 290;
-            this.txtAVGTemp2.Text = "RT";
-            this.txtAVGTemp2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label68.ForeColor = System.Drawing.Color.White;
-            this.label68.Location = new System.Drawing.Point(116, 58);
+            this.label68.Location = new System.Drawing.Point(83, 81);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(66, 32);
+            this.label68.Size = new System.Drawing.Size(174, 25);
             this.label68.TabIndex = 288;
-            this.label68.Text = "SP2:";
-            // 
-            // txtCSetpoint2
-            // 
-            this.txtCSetpoint2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCSetpoint2.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCSetpoint2.Location = new System.Drawing.Point(232, 46);
-            this.txtCSetpoint2.Name = "txtCSetpoint2";
-            this.txtCSetpoint2.ReadOnly = true;
-            this.txtCSetpoint2.Size = new System.Drawing.Size(173, 62);
-            this.txtCSetpoint2.TabIndex = 287;
-            this.txtCSetpoint2.Text = "RT";
-            this.txtCSetpoint2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label68.Text = "Current Setpoint";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Apple_24_Zones.Properties.Resources.tc3off;
-            this.pictureBox4.Location = new System.Drawing.Point(16, 102);
+            this.pictureBox4.Location = new System.Drawing.Point(16, 140);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 40);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -3333,7 +3452,7 @@ namespace Apple_24_Zones.Forms
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Apple_24_Zones.Properties.Resources.tc8off;
-            this.pictureBox5.Location = new System.Drawing.Point(16, 161);
+            this.pictureBox5.Location = new System.Drawing.Point(16, 199);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(40, 40);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -3343,7 +3462,7 @@ namespace Apple_24_Zones.Forms
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Apple_24_Zones.Properties.Resources.tc1off;
-            this.pictureBox6.Location = new System.Drawing.Point(16, 42);
+            this.pictureBox6.Location = new System.Drawing.Point(16, 80);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(40, 40);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -3356,7 +3475,7 @@ namespace Apple_24_Zones.Forms
             this.panelGhost.Controls.Add(this.panelCheckView);
             this.panelGhost.Controls.Add(this.panelViewZone);
             this.panelGhost.Controls.Add(this.chartView);
-            this.panelGhost.Location = new System.Drawing.Point(579, 1066);
+            this.panelGhost.Location = new System.Drawing.Point(52, 1064);
             this.panelGhost.Name = "panelGhost";
             this.panelGhost.Size = new System.Drawing.Size(1320, 491);
             this.panelGhost.TabIndex = 273;
@@ -3389,7 +3508,7 @@ namespace Apple_24_Zones.Forms
             this.panelCheckView.Controls.Add(this.checkView2);
             this.panelCheckView.Controls.Add(this.lbOlive);
             this.panelCheckView.Controls.Add(this.checkView1);
-            this.panelCheckView.Location = new System.Drawing.Point(1223, 17);
+            this.panelCheckView.Location = new System.Drawing.Point(1224, 65);
             this.panelCheckView.Name = "panelCheckView";
             this.panelCheckView.Size = new System.Drawing.Size(90, 360);
             this.panelCheckView.TabIndex = 267;
@@ -3711,9 +3830,9 @@ namespace Apple_24_Zones.Forms
             this.panelViewZone.Controls.Add(this.lbView10);
             this.panelViewZone.Controls.Add(this.lbView11);
             this.panelViewZone.Controls.Add(this.lbView12);
-            this.panelViewZone.Location = new System.Drawing.Point(5, 395);
+            this.panelViewZone.Location = new System.Drawing.Point(11, 11);
             this.panelViewZone.Name = "panelViewZone";
-            this.panelViewZone.Size = new System.Drawing.Size(1212, 87);
+            this.panelViewZone.Size = new System.Drawing.Size(1210, 87);
             this.panelViewZone.TabIndex = 239;
             // 
             // lbZoneView
@@ -3721,11 +3840,11 @@ namespace Apple_24_Zones.Forms
             this.lbZoneView.AutoSize = true;
             this.lbZoneView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbZoneView.ForeColor = System.Drawing.Color.White;
-            this.lbZoneView.Location = new System.Drawing.Point(539, 3);
+            this.lbZoneView.Location = new System.Drawing.Point(529, 3);
             this.lbZoneView.Name = "lbZoneView";
-            this.lbZoneView.Size = new System.Drawing.Size(84, 20);
+            this.lbZoneView.Size = new System.Drawing.Size(130, 20);
             this.lbZoneView.TabIndex = 260;
-            this.lbZoneView.Text = "ZONE #2";
+            this.lbZoneView.Text = "TEMP ZONE 2";
             // 
             // txtView12
             // 
@@ -3984,75 +4103,376 @@ namespace Apple_24_Zones.Forms
             this.chartView.BorderlineColor = System.Drawing.Color.Gray;
             this.chartView.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartView.BorderlineWidth = 2;
-            chartArea3.Name = "ChartArea1";
-            this.chartView.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartView.Legends.Add(legend3);
-            this.chartView.Location = new System.Drawing.Point(5, 3);
+            chartArea18.Name = "ChartArea1";
+            this.chartView.ChartAreas.Add(chartArea18);
+            legend18.Name = "Legend1";
+            this.chartView.Legends.Add(legend18);
+            this.chartView.Location = new System.Drawing.Point(10, 99);
             this.chartView.Name = "chartView";
-            series25.ChartArea = "ChartArea1";
-            series25.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series25.Legend = "Legend1";
-            series25.Name = "T-13";
-            series26.ChartArea = "ChartArea1";
-            series26.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series26.Legend = "Legend1";
-            series26.Name = "T-14";
-            series27.ChartArea = "ChartArea1";
-            series27.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series27.Legend = "Legend1";
-            series27.Name = "T-15";
-            series28.ChartArea = "ChartArea1";
-            series28.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series28.Legend = "Legend1";
-            series28.Name = "T-16";
-            series29.ChartArea = "ChartArea1";
-            series29.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series29.Legend = "Legend1";
-            series29.Name = "T-17";
-            series30.ChartArea = "ChartArea1";
-            series30.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series30.Legend = "Legend1";
-            series30.Name = "T-18";
-            series31.ChartArea = "ChartArea1";
-            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series31.Legend = "Legend1";
-            series31.Name = "T-19";
-            series32.ChartArea = "ChartArea1";
-            series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series32.Legend = "Legend1";
-            series32.Name = "TC-20";
-            series33.ChartArea = "ChartArea1";
-            series33.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series33.Legend = "Legend1";
-            series33.Name = "TC-21";
-            series34.ChartArea = "ChartArea1";
-            series34.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series34.Legend = "Legend1";
-            series34.Name = "TC-22";
-            series35.ChartArea = "ChartArea1";
-            series35.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series35.Legend = "Legend1";
-            series35.Name = "TC-23";
-            series36.ChartArea = "ChartArea1";
-            series36.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series36.Legend = "Legend1";
-            series36.Name = "TC-24";
-            this.chartView.Series.Add(series25);
-            this.chartView.Series.Add(series26);
-            this.chartView.Series.Add(series27);
-            this.chartView.Series.Add(series28);
-            this.chartView.Series.Add(series29);
-            this.chartView.Series.Add(series30);
-            this.chartView.Series.Add(series31);
-            this.chartView.Series.Add(series32);
-            this.chartView.Series.Add(series33);
-            this.chartView.Series.Add(series34);
-            this.chartView.Series.Add(series35);
-            this.chartView.Series.Add(series36);
-            this.chartView.Size = new System.Drawing.Size(1212, 395);
+            series205.ChartArea = "ChartArea1";
+            series205.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series205.Legend = "Legend1";
+            series205.Name = "T-13";
+            series206.ChartArea = "ChartArea1";
+            series206.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series206.Legend = "Legend1";
+            series206.Name = "T-14";
+            series207.ChartArea = "ChartArea1";
+            series207.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series207.Legend = "Legend1";
+            series207.Name = "T-15";
+            series208.ChartArea = "ChartArea1";
+            series208.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series208.Legend = "Legend1";
+            series208.Name = "T-16";
+            series209.ChartArea = "ChartArea1";
+            series209.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series209.Legend = "Legend1";
+            series209.Name = "T-17";
+            series210.ChartArea = "ChartArea1";
+            series210.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series210.Legend = "Legend1";
+            series210.Name = "T-18";
+            series211.ChartArea = "ChartArea1";
+            series211.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series211.Legend = "Legend1";
+            series211.Name = "T-19";
+            series212.ChartArea = "ChartArea1";
+            series212.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series212.Legend = "Legend1";
+            series212.Name = "TC-20";
+            series213.ChartArea = "ChartArea1";
+            series213.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series213.Legend = "Legend1";
+            series213.Name = "TC-21";
+            series214.ChartArea = "ChartArea1";
+            series214.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series214.Legend = "Legend1";
+            series214.Name = "TC-22";
+            series215.ChartArea = "ChartArea1";
+            series215.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series215.Legend = "Legend1";
+            series215.Name = "TC-23";
+            series216.ChartArea = "ChartArea1";
+            series216.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series216.Legend = "Legend1";
+            series216.Name = "TC-24";
+            this.chartView.Series.Add(series205);
+            this.chartView.Series.Add(series206);
+            this.chartView.Series.Add(series207);
+            this.chartView.Series.Add(series208);
+            this.chartView.Series.Add(series209);
+            this.chartView.Series.Add(series210);
+            this.chartView.Series.Add(series211);
+            this.chartView.Series.Add(series212);
+            this.chartView.Series.Add(series213);
+            this.chartView.Series.Add(series214);
+            this.chartView.Series.Add(series215);
+            this.chartView.Series.Add(series216);
+            this.chartView.Size = new System.Drawing.Size(1212, 360);
             this.chartView.TabIndex = 212;
             this.chartView.Text = "chart1";
+            // 
+            // panelControlZone1
+            // 
+            this.panelControlZone1.BackColor = System.Drawing.Color.DimGray;
+            this.panelControlZone1.Controls.Add(this.textBox27);
+            this.panelControlZone1.Controls.Add(this.pictureBox3);
+            this.panelControlZone1.Controls.Add(this.lbAVGTemp1);
+            this.panelControlZone1.Controls.Add(this.lbCurrentSetpoint1);
+            this.panelControlZone1.Controls.Add(this.panel8);
+            this.panelControlZone1.Controls.Add(this.label76);
+            this.panelControlZone1.Controls.Add(this.iconButton6);
+            this.panelControlZone1.Controls.Add(this.label77);
+            this.panelControlZone1.Controls.Add(this.label78);
+            this.panelControlZone1.Controls.Add(this.label82);
+            this.panelControlZone1.Controls.Add(this.iconButton7);
+            this.panelControlZone1.Controls.Add(this.numericUpDown2);
+            this.panelControlZone1.Controls.Add(this.comboBox2);
+            this.panelControlZone1.Controls.Add(this.pictureBox7);
+            this.panelControlZone1.Controls.Add(this.pictureBox8);
+            this.panelControlZone1.Controls.Add(this.label100);
+            this.panelControlZone1.Controls.Add(this.label101);
+            this.panelControlZone1.Controls.Add(this.panel9);
+            this.panelControlZone1.Controls.Add(this.label102);
+            this.panelControlZone1.Controls.Add(this.pictureBox9);
+            this.panelControlZone1.Controls.Add(this.pictureBox10);
+            this.panelControlZone1.Controls.Add(this.pictureBox11);
+            this.panelControlZone1.Location = new System.Drawing.Point(52, 654);
+            this.panelControlZone1.Name = "panelControlZone1";
+            this.panelControlZone1.Size = new System.Drawing.Size(499, 395);
+            this.panelControlZone1.TabIndex = 292;
+            this.panelControlZone1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControlZone1_Paint);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Apple_24_Zones.Properties.Resources.ledRectangleOff;
+            this.pictureBox3.Location = new System.Drawing.Point(24, 330);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(44, 47);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 314;
+            this.pictureBox3.TabStop = false;
+            // 
+            // lbAVGTemp1
+            // 
+            this.lbAVGTemp1.BackColor = System.Drawing.Color.White;
+            this.lbAVGTemp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.lbAVGTemp1.ForeColor = System.Drawing.Color.Black;
+            this.lbAVGTemp1.Location = new System.Drawing.Point(263, 148);
+            this.lbAVGTemp1.Name = "lbAVGTemp1";
+            this.lbAVGTemp1.Size = new System.Drawing.Size(173, 55);
+            this.lbAVGTemp1.TabIndex = 313;
+            this.lbAVGTemp1.Text = "RT";
+            this.lbAVGTemp1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbAVGTemp1.Paint += new System.Windows.Forms.PaintEventHandler(this.lbAVGTemp1_Paint);
+            // 
+            // lbCurrentSetpoint1
+            // 
+            this.lbCurrentSetpoint1.BackColor = System.Drawing.Color.White;
+            this.lbCurrentSetpoint1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.lbCurrentSetpoint1.ForeColor = System.Drawing.Color.Black;
+            this.lbCurrentSetpoint1.Location = new System.Drawing.Point(263, 72);
+            this.lbCurrentSetpoint1.Name = "lbCurrentSetpoint1";
+            this.lbCurrentSetpoint1.Size = new System.Drawing.Size(173, 55);
+            this.lbCurrentSetpoint1.TabIndex = 312;
+            this.lbCurrentSetpoint1.Text = "RT";
+            this.lbCurrentSetpoint1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbCurrentSetpoint1.Paint += new System.Windows.Forms.PaintEventHandler(this.lbCurrentSetpoint1_Paint);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.label75);
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(499, 29);
+            this.panel8.TabIndex = 311;
+            // 
+            // label75
+            // 
+            this.label75.BackColor = System.Drawing.Color.White;
+            this.label75.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.ForeColor = System.Drawing.Color.Black;
+            this.label75.Location = new System.Drawing.Point(107, -2);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(285, 33);
+            this.label75.TabIndex = 309;
+            this.label75.Text = "Temp Zone 1";
+            this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.ForeColor = System.Drawing.Color.White;
+            this.label76.Location = new System.Drawing.Point(277, 257);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(121, 19);
+            this.label76.TabIndex = 310;
+            this.label76.Text = "Select process:";
+            // 
+            // iconButton6
+            // 
+            this.iconButton6.BackColor = System.Drawing.Color.White;
+            this.iconButton6.FlatAppearance.BorderSize = 0;
+            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton6.ForeColor = System.Drawing.Color.DimGray;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.iconButton6.IconColor = System.Drawing.Color.DimGray;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton6.IconSize = 25;
+            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.Location = new System.Drawing.Point(359, 359);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Size = new System.Drawing.Size(93, 28);
+            this.iconButton6.TabIndex = 309;
+            this.iconButton6.Text = "     Turn Off";
+            this.iconButton6.UseVisualStyleBackColor = false;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.ForeColor = System.Drawing.Color.White;
+            this.label77.Location = new System.Drawing.Point(3, 39);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(177, 28);
+            this.label77.TabIndex = 308;
+            this.label77.Text = "Status Section:";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.ForeColor = System.Drawing.Color.White;
+            this.label78.Location = new System.Drawing.Point(74, 310);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(70, 19);
+            this.label78.TabIndex = 307;
+            this.label78.Text = "Heating";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.ForeColor = System.Drawing.Color.White;
+            this.label82.Location = new System.Drawing.Point(74, 351);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(70, 19);
+            this.label82.TabIndex = 306;
+            this.label82.Text = "Cooling";
+            // 
+            // iconButton7
+            // 
+            this.iconButton7.BackColor = System.Drawing.Color.White;
+            this.iconButton7.FlatAppearance.BorderSize = 0;
+            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton7.ForeColor = System.Drawing.Color.DimGray;
+            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.iconButton7.IconColor = System.Drawing.Color.DimGray;
+            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton7.IconSize = 25;
+            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton7.Location = new System.Drawing.Point(213, 359);
+            this.iconButton7.Name = "iconButton7";
+            this.iconButton7.Size = new System.Drawing.Size(93, 28);
+            this.iconButton7.TabIndex = 293;
+            this.iconButton7.Text = "    Apply";
+            this.iconButton7.UseVisualStyleBackColor = false;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.BackColor = System.Drawing.Color.White;
+            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown2.ForeColor = System.Drawing.Color.DimGray;
+            this.numericUpDown2.Location = new System.Drawing.Point(213, 319);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(239, 31);
+            this.numericUpDown2.TabIndex = 292;
+            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.SteelBlue;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.White;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "• Heating ",
+            "• Cooling"});
+            this.comboBox2.Location = new System.Drawing.Point(213, 282);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(239, 26);
+            this.comboBox2.TabIndex = 301;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = global::Apple_24_Zones.Properties.Resources.ledRectangleOn;
+            this.pictureBox7.Location = new System.Drawing.Point(24, 292);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(44, 47);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 305;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Apple_24_Zones.Properties.Resources.arrowDownBlue;
+            this.pictureBox8.Location = new System.Drawing.Point(442, 148);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 300;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.ForeColor = System.Drawing.Color.White;
+            this.label100.Location = new System.Drawing.Point(83, 166);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(163, 25);
+            this.label100.TabIndex = 295;
+            this.label100.Text = "Average Temp";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.ForeColor = System.Drawing.Color.White;
+            this.label101.Location = new System.Drawing.Point(11, 257);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(188, 28);
+            this.label101.TabIndex = 294;
+            this.label101.Text = "Setpoint Config";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Location = new System.Drawing.Point(2, 246);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(495, 5);
+            this.panel9.TabIndex = 291;
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label102.ForeColor = System.Drawing.Color.White;
+            this.label102.Location = new System.Drawing.Point(83, 81);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(174, 25);
+            this.label102.TabIndex = 288;
+            this.label102.Text = "Current Setpoint";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Apple_24_Zones.Properties.Resources.tc3off;
+            this.pictureBox9.Location = new System.Drawing.Point(16, 140);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 286;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::Apple_24_Zones.Properties.Resources.tc8off;
+            this.pictureBox10.Location = new System.Drawing.Point(16, 199);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 285;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::Apple_24_Zones.Properties.Resources.tc1off;
+            this.pictureBox11.Location = new System.Drawing.Point(16, 80);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 284;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.Image = global::Apple_24_Zones.Properties.Resources.coming_soon;
+            this.pictureBox16.Location = new System.Drawing.Point(52, 492);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(499, 156);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 306;
+            this.pictureBox16.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -4076,279 +4496,57 @@ namespace Apple_24_Zones.Forms
             this.pictureBox2.TabIndex = 181;
             this.pictureBox2.TabStop = false;
             // 
-            // pIDChillerToolStripMenuItem
+            // label73
             // 
-            this.pIDChillerToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pIDChillerToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.pIDChillerToolStripMenuItem.Name = "pIDChillerToolStripMenuItem";
-            this.pIDChillerToolStripMenuItem.Size = new System.Drawing.Size(98, 32);
-            this.pIDChillerToolStripMenuItem.Text = "PID Chiller";
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.ForeColor = System.Drawing.Color.Black;
+            this.label73.Location = new System.Drawing.Point(1063, 1052);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(276, 21);
+            this.label73.TabIndex = 322;
+            this.label73.Text = "Copyright © 2021, SSNE Group Inc.";
             // 
-            // iconButton3
+            // timerDateTime
             // 
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.Location = new System.Drawing.Point(483, 3);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(35, 31);
-            this.iconButton3.TabIndex = 290;
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.timerDateTime.Interval = 1000;
+            this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
             // 
-            // panel6
+            // txtCrono
             // 
-            this.panel6.BackColor = System.Drawing.Color.DimGray;
-            this.panel6.Controls.Add(this.iconButton6);
-            this.panel6.Controls.Add(this.label70);
-            this.panel6.Controls.Add(this.label71);
-            this.panel6.Controls.Add(this.label75);
-            this.panel6.Controls.Add(this.comboBox2);
-            this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Controls.Add(this.pictureBox7);
-            this.panel6.Controls.Add(this.pictureBox8);
-            this.panel6.Controls.Add(this.label76);
-            this.panel6.Controls.Add(this.label77);
-            this.panel6.Controls.Add(this.iconButton7);
-            this.panel6.Controls.Add(this.numericUpDown2);
-            this.panel6.Controls.Add(this.panel8);
-            this.panel6.Controls.Add(this.textBox27);
-            this.panel6.Controls.Add(this.label78);
-            this.panel6.Controls.Add(this.textBox40);
-            this.panel6.Controls.Add(this.pictureBox9);
-            this.panel6.Controls.Add(this.pictureBox10);
-            this.panel6.Controls.Add(this.pictureBox11);
-            this.panel6.Location = new System.Drawing.Point(36, 588);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(499, 395);
-            this.panel6.TabIndex = 292;
-            // 
-            // iconButton6
-            // 
-            this.iconButton6.BackColor = System.Drawing.Color.White;
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.ForeColor = System.Drawing.Color.DimGray;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.iconButton6.IconColor = System.Drawing.Color.DimGray;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton6.IconSize = 25;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(363, 350);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(73, 28);
-            this.iconButton6.TabIndex = 309;
-            this.iconButton6.Text = "    OFF";
-            this.iconButton6.UseVisualStyleBackColor = false;
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.ForeColor = System.Drawing.Color.White;
-            this.label70.Location = new System.Drawing.Point(3, 1);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(201, 32);
-            this.label70.TabIndex = 308;
-            this.label70.Text = "Status Section:";
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.ForeColor = System.Drawing.Color.White;
-            this.label71.Location = new System.Drawing.Point(359, 288);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(70, 19);
-            this.label71.TabIndex = 307;
-            this.label71.Text = "Heating";
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.ForeColor = System.Drawing.Color.White;
-            this.label75.Location = new System.Drawing.Point(228, 288);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(70, 19);
-            this.label75.TabIndex = 306;
-            this.label75.Text = "Cooling";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.SteelBlue;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            " • Cooling",
-            " • Heating"});
-            this.comboBox2.Location = new System.Drawing.Point(16, 286);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 26);
-            this.comboBox2.TabIndex = 301;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::Apple_24_Zones.Properties.Resources.tc8off;
-            this.pictureBox3.Location = new System.Drawing.Point(304, 286);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 304;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = global::Apple_24_Zones.Properties.Resources.tc8off;
-            this.pictureBox7.Location = new System.Drawing.Point(435, 286);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 305;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Apple_24_Zones.Properties.Resources.arrowUp;
-            this.pictureBox8.Location = new System.Drawing.Point(411, 130);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 300;
-            this.pictureBox8.TabStop = false;
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.ForeColor = System.Drawing.Color.White;
-            this.label76.Location = new System.Drawing.Point(98, 140);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(84, 32);
-            this.label76.TabIndex = 295;
-            this.label76.Text = "AVG:";
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.ForeColor = System.Drawing.Color.White;
-            this.label77.Location = new System.Drawing.Point(10, 243);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(212, 32);
-            this.label77.TabIndex = 294;
-            this.label77.Text = "Setpoint Config";
-            // 
-            // iconButton7
-            // 
-            this.iconButton7.BackColor = System.Drawing.Color.White;
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.Color.DimGray;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.iconButton7.IconColor = System.Drawing.Color.DimGray;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton7.IconSize = 25;
-            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(252, 350);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(73, 28);
-            this.iconButton7.TabIndex = 293;
-            this.iconButton7.Text = "    ON";
-            this.iconButton7.UseVisualStyleBackColor = false;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.BackColor = System.Drawing.Color.White;
-            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.ForeColor = System.Drawing.Color.DimGray;
-            this.numericUpDown2.Location = new System.Drawing.Point(16, 345);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(199, 34);
-            this.numericUpDown2.TabIndex = 292;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(0, 235);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(499, 5);
-            this.panel8.TabIndex = 291;
+            this.txtCrono.BackColor = System.Drawing.Color.White;
+            this.txtCrono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCrono.Font = new System.Drawing.Font("Calibri", 13F);
+            this.txtCrono.Location = new System.Drawing.Point(262, 213);
+            this.txtCrono.Name = "txtCrono";
+            this.txtCrono.ReadOnly = true;
+            this.txtCrono.ShortcutsEnabled = false;
+            this.txtCrono.Size = new System.Drawing.Size(174, 22);
+            this.txtCrono.TabIndex = 325;
+            this.txtCrono.Text = "00:00:00:00";
+            this.txtCrono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox27
             // 
-            this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox27.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox27.Location = new System.Drawing.Point(232, 125);
+            this.textBox27.BackColor = System.Drawing.Color.White;
+            this.textBox27.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox27.Font = new System.Drawing.Font("Calibri", 13F);
+            this.textBox27.Location = new System.Drawing.Point(262, 213);
             this.textBox27.Name = "textBox27";
             this.textBox27.ReadOnly = true;
-            this.textBox27.Size = new System.Drawing.Size(173, 62);
-            this.textBox27.TabIndex = 290;
-            this.textBox27.Text = "RT";
+            this.textBox27.ShortcutsEnabled = false;
+            this.textBox27.Size = new System.Drawing.Size(174, 22);
+            this.textBox27.TabIndex = 326;
+            this.textBox27.Text = "00:00:00:00";
             this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label78
+            // reportsToolStripMenuItem
             // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.ForeColor = System.Drawing.Color.White;
-            this.label78.Location = new System.Drawing.Point(116, 58);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(66, 32);
-            this.label78.TabIndex = 288;
-            this.label78.Text = "SP1:";
-            // 
-            // textBox40
-            // 
-            this.textBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox40.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox40.Location = new System.Drawing.Point(232, 46);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.ReadOnly = true;
-            this.textBox40.Size = new System.Drawing.Size(173, 62);
-            this.textBox40.TabIndex = 287;
-            this.textBox40.Text = "RT";
-            this.textBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Apple_24_Zones.Properties.Resources.tc3off;
-            this.pictureBox9.Location = new System.Drawing.Point(16, 102);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 286;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::Apple_24_Zones.Properties.Resources.tc8off;
-            this.pictureBox10.Location = new System.Drawing.Point(16, 161);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 285;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::Apple_24_Zones.Properties.Resources.tc1off;
-            this.pictureBox11.Location = new System.Drawing.Point(16, 42);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 284;
-            this.pictureBox11.TabStop = false;
+            this.reportsToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.reportsToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
+            this.reportsToolStripMenuItem.Text = "Reports";
             // 
             // FrmMain
             // 
@@ -4356,8 +4554,10 @@ namespace Apple_24_Zones.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.label73);
+            this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.panelControlZone1);
+            this.Controls.Add(this.panelControlZone2);
             this.Controls.Add(this.panelGhost);
             this.Controls.Add(this.panelBoth);
             this.Controls.Add(this.panel1);
@@ -4365,9 +4565,11 @@ namespace Apple_24_Zones.Forms
             this.Controls.Add(this.lbHora);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ELEN II Software Rev 1.000.0";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartZone2)).EndInit();
             this.panelZone1.ResumeLayout(false);
             this.panelZone1.PerformLayout();
@@ -4377,21 +4579,23 @@ namespace Apple_24_Zones.Forms
             this.panelZone2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.menuMain.ResumeLayout(false);
-            this.menuMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.panelBoth.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panelConexion.ResumeLayout(false);
             this.panelConexion.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.led1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.led2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panelControlZone2.ResumeLayout(false);
+            this.panelControlZone2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -4401,18 +4605,21 @@ namespace Apple_24_Zones.Forms
             this.panelViewZone.ResumeLayout(false);
             this.panelViewZone.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.panelControlZone1.ResumeLayout(false);
+            this.panelControlZone1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -4553,7 +4760,6 @@ namespace Apple_24_Zones.Forms
         private TextBox textBox38;
         private TextBox textBox39;
         private Panel panelZone2;
-        private FontAwesome.Sharp.IconButton btnCSVFileFilter;
         private Panel panel1;
         private Label label3;
         private Label label1;
@@ -4667,7 +4873,6 @@ namespace Apple_24_Zones.Forms
         private Label lbView11;
         private Label lbView12;
         public System.Windows.Forms.DataVisualization.Charting.Chart chartView;
-        private FontAwesome.Sharp.IconButton btnInfo;
         private Panel panelConexion;
         private Label label99;
         private Label label33;
@@ -4681,55 +4886,75 @@ namespace Apple_24_Zones.Forms
         private TextBox txtTempTest;
         private Button button3;
         private TextBox txtResult;
-        private MenuStrip menuMain;
-        private ToolStripMenuItem viewOptionToolStripMenuItem;
-        private ToolStripMenuItem bothZonesToolStripMenuItem;
-        private ToolStripMenuItem zone1ToolStripMenuItem;
-        private ToolStripMenuItem zone2ToolStripMenuItem;
         private System.IO.Ports.SerialPort serialPort1;
         private System.IO.Ports.SerialPort serialPort2;
-        private FontAwesome.Sharp.IconButton btnConnect;
-        private Panel panel7;
+        private Panel panelControlZone2;
         private Label label68;
-        private TextBox txtCSetpoint2;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
-        private TextBox txtAVGTemp2;
-        private Label label73;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private NumericUpDown numericUpDown1;
         private Panel panel5;
         private PictureBox pictureBox15;
         private Label label67;
         private Label label74;
-        private Label label72;
-        private Label label69;
-        private ComboBox cbSelect;
-        private PictureBox led1;
-        private PictureBox led2;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private ToolStripMenuItem pIDChillerToolStripMenuItem;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private Panel panel6;
-        private FontAwesome.Sharp.IconButton iconButton6;
-        private Label label70;
-        private Label label71;
-        private Label label75;
-        private ComboBox comboBox2;
+        private Label label79;
+        private PictureBox pictureBox12;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem connectionToolStripMenuItem;
+        private ToolStripMenuItem viewOptionToolStripMenuItem1;
+        private ToolStripMenuItem bothZonesToolStripMenuItem1;
+        private ToolStripMenuItem tempZone1ToolStripMenuItem;
+        private ToolStripMenuItem tempZone2ToolStripMenuItem;
+        private ToolStripMenuItem cSVFilesToolStripMenuItem;
+        private ToolStripMenuItem informationToolStripMenuItem;
+        private ToolStripMenuItem pIDChillerToolStripMenuItem1;
+        private Panel panel4;
+        private Label label81;
+        private Label lbAVGTemp2;
+        private Label lbCurrentSetpoint2;
+        private Panel panelControlZone1;
         private PictureBox pictureBox3;
+        private Label lbAVGTemp1;
+        private Label lbCurrentSetpoint1;
+        private Panel panel8;
+        private Label label75;
+        private Label label76;
+        private FontAwesome.Sharp.IconButton iconButton6;
+        private Label label77;
+        private Label label78;
+        private Label label82;
+        private ComboBox comboBox2;
         private PictureBox pictureBox7;
         private PictureBox pictureBox8;
-        private Label label76;
-        private Label label77;
+        private Label label100;
+        private Label label101;
         private FontAwesome.Sharp.IconButton iconButton7;
         private NumericUpDown numericUpDown2;
-        private Panel panel8;
-        private TextBox textBox27;
-        private Label label78;
-        private TextBox textBox40;
+        private Panel panel9;
+        private Label label102;
         private PictureBox pictureBox9;
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
+        private PictureBox pictureBox13;
+        private Label label69;
+        private FontAwesome.Sharp.IconButton iconButton4;
+        private Label label70;
+        private Label label71;
+        private FontAwesome.Sharp.IconButton iconButton5;
+        private NumericUpDown numericUpDown1;
+        private ComboBox comboBox3;
+        private PictureBox pictureBox14;
+        private Label label72;
+        private PictureBox pictureBox16;
+        private Panel panel10;
+        private Label label73;
+        private Timer timerDateTime;
+        private Label lbDateTime;
+        private Label lbDate;
+        private Label lbTime;
+        private TextBox txtCrono;
+        private TextBox textBox27;
+        private ToolStripMenuItem reportsToolStripMenuItem;
     }
 }
