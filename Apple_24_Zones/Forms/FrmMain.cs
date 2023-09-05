@@ -455,7 +455,7 @@ namespace Apple_24_Zones.Forms
 
             string[] puertos = SerialPort.GetPortNames();
             cbCOMSelect1.Items.AddRange(puertos);
-          //  cbCOMSelect1.SelectedIndex = 0;
+           cbCOMSelect1.SelectedIndex = 0;
 
 
 
@@ -502,118 +502,9 @@ namespace Apple_24_Zones.Forms
 
         private void btnApplySetpoint1_Click(object sender, EventArgs e)
         {
-            // 1- Crear las variables constantes
-
-            string hexConstante = "CC 00 01 F0 02";
-
-            // 2- Obtener el valor deseado en temperatura y hacerle el x10
-
-            if (double.TryParse(txtPutSetpoint1.Text, out double inputValue))
+            if (txtPutSetpoint1.Value != 0)
             {
-                lbCurrentSetpoint1.Text = inputValue.ToString();
-
-                double multipliedValue = inputValue * 10;
-
-                string hexValue = ((int)multipliedValue).ToString("X4"); // Formato hexadecimal con 4 caracteres
-
-                // 3 - Guardar el hexa de la temperatura
-
-                string hexTemp = hexValue;
-                // Contiene 00FA
-
-                // 4 - Unir las cadenas con hexConstante y la temperatura para que solo quede faltante el checksum
-
-                string hexTempConFormato = string.Join(" ", Enumerable.Range(0, hexTemp.Length / 2).Select(i => hexTemp.Substring(i * 2, 2)));
-
-                string hexCombinado = hexConstante + " " + hexTempConFormato;
-                // Contiene CC 00 01 F0 02 00 FA
-
-                // 5- Iniciar con el calculo del checkSum
-
-                // 6- Sumar la constante hex con hex Temperatura
-
-                string hexConstanteSumada = "F3";
-                int intValue1 = Convert.ToInt32(hexConstanteSumada, 16);
-                int intValue2;
-                int intValue3;
-                int sum;
-
-                // Se verifica si la cadena con el valor hex es de dos digitos o de tres ejemplo: 00FA "•2" || 01FA "•1"
-                if (hexTemp.Substring(2, 1) != "0")
-                {
-                    intValue2 = Convert.ToInt32(hexTemp.Substring(1, 1), 16);
-                    intValue3 = Convert.ToInt32(hexTemp.Substring(2), 16);
-
-                    sum = intValue1 + intValue2 + intValue3;
-                }
-                else
-                {
-                    intValue3 = Convert.ToInt32(hexTemp.Substring(2), 16);
-
-                    sum = intValue1 + intValue3;
-                    // Contiene 1ED
-                }
-
-                // 7- Tomar los ultimos 2 digitos
-                string hexSumadoCheck = sum.ToString("X");
-
-                string lastTwoDigits;
-                if (hexSumadoCheck.Length == 1)
-                {
-                    lastTwoDigits = "0" + hexSumadoCheck;
-                }
-                else
-                {
-                    lastTwoDigits = hexSumadoCheck.Substring(hexSumadoCheck.Length - 2);
-                }
-
-                // 8- Pasar estos dos ultimos digitos a binario y realizar el swap 1 - 0 
-
-                string binaryValue = Convert.ToString(Convert.ToInt32(lastTwoDigits, 16), 2);
-
-                // Asegura que la representación binaria tenga 8 dígitos (un byte)
-                binaryValue = binaryValue.PadLeft(8, '0');
-
-                // 9- Hacer el swap
-
-                char[] invertedChars = binaryValue.Select(c => c == '0' ? '1' : '0').ToArray();
-
-                string invertedBinaryString = new string(invertedChars);
-                // Contiene 00010010
-
-                // 10- Convertir este binario a un hexa
-
-                int decimalValue = Convert.ToInt32(invertedBinaryString, 2);
-
-                string hexCheckSum = decimalValue.ToString("X");
-
-                // 11- Unir todo el comando del paso 4
-
-                string setTempCommand = hexCombinado + " " + hexCheckSum;
-
-                // 12- Pasar al lenguaje que entiende el chiller el comando
-                // 9600
-                // 8 bits, parity none
-                // writetimeout -1
-
-                string[] hexBytes = setTempCommand.Split(' ');
-
-                byte[] binaryData = new byte[hexBytes.Length];
-
-                for (int i = 0; i < hexBytes.Length; i++)
-                {
-                    binaryData[i] = Convert.ToByte(hexBytes[i], 16);
-
-                }
-
-                if (serialPort1.IsOpen)
-                {
-                    serialPort1.Write(binaryData, 0, binaryData.Length);
-                }
-
-                // 13- Encender Chiller
-
-                string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 66";
+                string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
 
                 string[] hexBytesOn = commandOnChiller.Split(' ');
 
@@ -627,17 +518,133 @@ namespace Apple_24_Zones.Forms
 
                 if (serialPort1.IsOpen)
                 {
+
                     serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
                 }
+                Thread.Sleep(1000);
 
+
+                // 1- Crear las variables constantes
+
+                string hexConstante = "CC 00 01 F0 02";
+
+                // 2- Obtener el valor deseado en temperatura y hacerle el x10
+
+                if (double.TryParse(txtPutSetpoint1.Text, out double inputValue))
+                {
+                    lbCurrentSetpoint2.Text = inputValue.ToString();
+
+                    double multipliedValue = inputValue * 10;
+
+                    string hexValue = ((int)multipliedValue).ToString("X4"); // Formato hexadecimal con 4 caracteres
+
+                    // 3 - Guardar el hexa de la temperatura
+
+                    string hexTemp = hexValue;
+                    // Contiene 00FA
+
+                    // 4 - Unir las cadenas con hexConstante y la temperatura para que solo quede faltante el checksum
+
+                    string hexTempConFormato = string.Join(" ", Enumerable.Range(0, hexTemp.Length / 2).Select(i => hexTemp.Substring(i * 2, 2)));
+
+                    string hexCombinado = hexConstante + " " + hexTempConFormato;
+                    // Contiene CC 00 01 F0 02 00 FA
+
+                    // 5- Iniciar con el calculo del checkSum
+
+                    // 6- Sumar la constante hex con hex Temperatura
+
+                    string hexConstanteSumada = "F3";
+                    int intValue1 = Convert.ToInt32(hexConstanteSumada, 16);
+                    int intValue2;
+                    int intValue3;
+                    int sum;
+
+                    // Se verifica si la cadena con el valor hex es de dos digitos o de tres ejemplo: 00FA "•2" || 01FA "•1"
+                    if (hexTemp.Substring(2, 1) != "0")
+                    {
+                        intValue2 = Convert.ToInt32(hexTemp.Substring(1, 1), 16);
+                        intValue3 = Convert.ToInt32(hexTemp.Substring(2), 16);
+
+                        sum = intValue1 + intValue2 + intValue3;
+                    }
+                    else
+                    {
+                        intValue3 = Convert.ToInt32(hexTemp.Substring(2), 16);
+
+                        sum = intValue1 + intValue3;
+                        // Contiene 1ED
+                    }
+
+                    // 7- Tomar los ultimos 2 digitos
+                    string hexSumadoCheck = sum.ToString("X");
+
+                    string lastTwoDigits;
+                    if (hexSumadoCheck.Length == 1)
+                    {
+                        lastTwoDigits = "0" + hexSumadoCheck;
+                    }
+                    else
+                    {
+                        lastTwoDigits = hexSumadoCheck.Substring(hexSumadoCheck.Length - 2);
+                    }
+
+                    // 8- Pasar estos dos ultimos digitos a binario y realizar el swap 1 - 0 
+
+                    string binaryValue = Convert.ToString(Convert.ToInt32(lastTwoDigits, 16), 2);
+
+                    // Asegura que la representación binaria tenga 8 dígitos (un byte)
+                    binaryValue = binaryValue.PadLeft(8, '0');
+
+                    // 9- Hacer el swap
+
+                    char[] invertedChars = binaryValue.Select(c => c == '0' ? '1' : '0').ToArray();
+
+                    string invertedBinaryString = new string(invertedChars);
+                    // Contiene 00010010
+
+                    // 10- Convertir este binario a un hexa
+
+                    int decimalValue = Convert.ToInt32(invertedBinaryString, 2);
+
+                    string hexCheckSum = decimalValue.ToString("X");
+
+                    // 11- Unir todo el comando del paso 4
+
+                    string setTempCommand = hexCombinado + " " + hexCheckSum;
+
+                    // 12- Pasar al lenguaje que entiende el chiller el comando
+                    // 9600
+                    // 8 bits, parity none
+                    // writetimeout -1
+
+                    string[] hexBytes = setTempCommand.Split(' ');
+
+                    byte[] binaryData = new byte[hexBytes.Length];
+
+                    for (int i = 0; i < hexBytes.Length; i++)
+                    {
+                        binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+
+                    }
+
+                    if (serialPort1.IsOpen)
+                    {
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("The setpoint must be between the range of 0C° to 40C°", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-            // 13- Apagar Chiller
+            // 13- Apagar Chiller this command is correct? let me check
 
-            string commandOffChiller = "CC 00 01 81 08 00 02 02 02 02 02 02 67";
+            string commandOffChiller = "CC 00 01 81 08 00 02 02 02 02 02 02 02 67";
 
             string[] hexBytesOff = commandOffChiller.Split(' ');
 
@@ -652,6 +659,81 @@ namespace Apple_24_Zones.Forms
             if (serialPort1.IsOpen)
             {
                 serialPort1.Write(binaryDataOff, 0, binaryDataOff.Length);
+            }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            // 13- Apagar Chiller this command is correct? let me check
+
+            string commandOffChiller = "CC 00 01 81 08 00 02 02 02 02 02 02 02 67";
+
+            string[] hexBytesOff = commandOffChiller.Split(' ');
+
+            byte[] binaryDataOff = new byte[hexBytesOff.Length];
+
+            for (int i = 0; i < hexBytesOff.Length; i++)
+            {
+                binaryDataOff[i] = Convert.ToByte(hexBytesOff[i], 16);
+
+            }
+
+            if (serialPort1.IsOpen)
+            {
+                serialPort1.Write(binaryDataOff, 0, binaryDataOff.Length);
+            }
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            // 13- Encender Chiller CC 00 01 81 08 01 02 02 02 02 02 02 02 66
+
+            string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
+
+            string[] hexBytesOn = commandOnChiller.Split(' ');
+
+            byte[] binaryDataOn = new byte[hexBytesOn.Length];
+
+            for (int i = 0; i < hexBytesOn.Length; i++)
+            {
+                binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
+
+            }
+
+            if (serialPort1.IsOpen)
+            {
+                serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
+            }
+        }
+
+        private void txtPutSetpoint1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char decimalSeparator = Convert.ToChar(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator);
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != decimalSeparator))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == decimalSeparator)&& ((sender as NumericUpDown).Text.IndexOf(decimalSeparator)> -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private bool ValidRange(decimal input)
+        {
+            // Valid range Chiller
+            decimal number = input;
+            return number > 0 && number <= 40;
+        }
+
+        private void txtPutSetpoint1_Leave(object sender, EventArgs e)
+        {
+            if (!ValidRange(txtPutSetpoint1.Value))
+            {
+                txtPutSetpoint1.Value = 0;
+                txtPutSetpoint1.ResetText();
             }
         }
     }
