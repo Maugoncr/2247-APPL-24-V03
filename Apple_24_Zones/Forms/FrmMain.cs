@@ -15,9 +15,9 @@ namespace Apple_24_Zones.Forms
 {
     public partial class FrmMain : Form
 
-         
+
     {
-        
+
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -72,7 +72,7 @@ namespace Apple_24_Zones.Forms
                 panelGhost.Visible = false;
                 panelBoth.Visible = true;
             }
-            else if (index ==1)
+            else if (index == 1)
             {
                 panelBoth.Visible = false;
 
@@ -118,7 +118,7 @@ namespace Apple_24_Zones.Forms
                 chartView.Series["T-11"].Color = Color.Olive;
                 chartView.Series["T-12"].Color = Color.Black;
 
-                
+
                 chartView.Series["T-1"].ChartType = SeriesChartType.Spline;
                 chartView.Series["T-2"].ChartType = SeriesChartType.Spline;
                 chartView.Series["T-3"].ChartType = SeriesChartType.Spline;
@@ -168,7 +168,7 @@ namespace Apple_24_Zones.Forms
                 panelGhost.Location = new Point(572, 311);
                 panelGhost.Visible = true;
             }
-            else if(index == 2)
+            else if (index == 2)
             {
                 panelBoth.Visible = false;
 
@@ -250,7 +250,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-                   
+
 
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -345,7 +345,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        
+
 
         private void bothZonesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -400,7 +400,7 @@ namespace Apple_24_Zones.Forms
             Pen borderPen = new Pen(Color.Black, 3);
             e.Graphics.DrawRectangle(borderPen, new Rectangle(0, 0, label.Width - 1, label.Height - 1));
         }
-        
+
         private void CreateBorderPanel(object sender, PaintEventArgs e)
         {
             Panel panel = (Panel)sender;
@@ -438,6 +438,27 @@ namespace Apple_24_Zones.Forms
         private void FrmMain_Load(object sender, EventArgs e)
         {
             timerDateTime.Start();
+            FrmCargarDefault();
+        }
+
+        private void FrmCargarDefault()
+        {
+            // Recalibrar Pantalla Conexion
+            int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+            int screenHeight = Screen.PrimaryScreen.Bounds.Height;
+            int panelWidth = panelConexion.Width;
+            int panelHeight = panelConexion.Height;
+            int panelX = (screenWidth - panelWidth) / 2;
+            int panelY = (screenHeight - panelHeight) / 2;
+            panelConexion.Location = new Point(panelX, panelY);
+            panelConexion.Visible = false;
+
+            string[] puertos = SerialPort.GetPortNames();
+            cbCOMSelect1.Items.AddRange(puertos);
+          //  cbCOMSelect1.SelectedIndex = 0;
+
+
+
         }
 
         private void panelControlZone2_Paint(object sender, PaintEventArgs e)
@@ -450,8 +471,188 @@ namespace Apple_24_Zones.Forms
             CreateBorderPanel(sender, e);
         }
 
+        private void btnCloseConexionPanel_Click(object sender, EventArgs e)
+        {
+            panelConexion.Visible = false;
+        }
 
+        private void connectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelConexion.Visible = true;
+        }
 
+        private void btnConnectCOM1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                serialPort1.PortName = cbCOMSelect1.Text;
+                serialPort1.Open();
+                serialPort1.DataReceived += new SerialDataReceivedEventHandler(serialPort1_DataReceived);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+
+        }
+
+        private void btnApplySetpoint1_Click(object sender, EventArgs e)
+        {
+            // 1- Crear las variables constantes
+
+            string hexConstante = "CC 00 01 F0 02";
+
+            // 2- Obtener el valor deseado en temperatura y hacerle el x10
+
+            if (double.TryParse(txtPutSetpoint1.Text, out double inputValue))
+            {
+                lbCurrentSetpoint1.Text = inputValue.ToString();
+
+                double multipliedValue = inputValue * 10;
+
+                string hexValue = ((int)multipliedValue).ToString("X4"); // Formato hexadecimal con 4 caracteres
+
+                // 3 - Guardar el hexa de la temperatura
+
+                string hexTemp = hexValue;
+                // Contiene 00FA
+
+                // 4 - Unir las cadenas con hexConstante y la temperatura para que solo quede faltante el checksum
+
+                string hexTempConFormato = string.Join(" ", Enumerable.Range(0, hexTemp.Length / 2).Select(i => hexTemp.Substring(i * 2, 2)));
+
+                string hexCombinado = hexConstante + " " + hexTempConFormato;
+                // Contiene CC 00 01 F0 02 00 FA
+
+                // 5- Iniciar con el calculo del checkSum
+
+                // 6- Sumar la constante hex con hex Temperatura
+
+                string hexConstanteSumada = "F3";
+                int intValue1 = Convert.ToInt32(hexConstanteSumada, 16);
+                int intValue2;
+                int intValue3;
+                int sum;
+
+                // Se verifica si la cadena con el valor hex es de dos digitos o de tres ejemplo: 00FA "•2" || 01FA "•1"
+                if (hexTemp.Substring(2, 1) != "0")
+                {
+                    intValue2 = Convert.ToInt32(hexTemp.Substring(1, 1), 16);
+                    intValue3 = Convert.ToInt32(hexTemp.Substring(2), 16);
+
+                    sum = intValue1 + intValue2 + intValue3;
+                }
+                else
+                {
+                    intValue3 = Convert.ToInt32(hexTemp.Substring(2), 16);
+
+                    sum = intValue1 + intValue3;
+                    // Contiene 1ED
+                }
+
+                // 7- Tomar los ultimos 2 digitos
+                string hexSumadoCheck = sum.ToString("X");
+
+                string lastTwoDigits;
+                if (hexSumadoCheck.Length == 1)
+                {
+                    lastTwoDigits = "0" + hexSumadoCheck;
+                }
+                else
+                {
+                    lastTwoDigits = hexSumadoCheck.Substring(hexSumadoCheck.Length - 2);
+                }
+
+                // 8- Pasar estos dos ultimos digitos a binario y realizar el swap 1 - 0 
+
+                string binaryValue = Convert.ToString(Convert.ToInt32(lastTwoDigits, 16), 2);
+
+                // Asegura que la representación binaria tenga 8 dígitos (un byte)
+                binaryValue = binaryValue.PadLeft(8, '0');
+
+                // 9- Hacer el swap
+
+                char[] invertedChars = binaryValue.Select(c => c == '0' ? '1' : '0').ToArray();
+
+                string invertedBinaryString = new string(invertedChars);
+                // Contiene 00010010
+
+                // 10- Convertir este binario a un hexa
+
+                int decimalValue = Convert.ToInt32(invertedBinaryString, 2);
+
+                string hexCheckSum = decimalValue.ToString("X");
+
+                // 11- Unir todo el comando del paso 4
+
+                string setTempCommand = hexCombinado + " " + hexCheckSum;
+
+                // 12- Pasar al lenguaje que entiende el chiller el comando
+                // 9600
+                // 8 bits, parity none
+                // writetimeout -1
+
+                string[] hexBytes = setTempCommand.Split(' ');
+
+                byte[] binaryData = new byte[hexBytes.Length];
+
+                for (int i = 0; i < hexBytes.Length; i++)
+                {
+                    binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+
+                }
+
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Write(binaryData, 0, binaryData.Length);
+                }
+
+                // 13- Encender Chiller
+
+                string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 66";
+
+                string[] hexBytesOn = commandOnChiller.Split(' ');
+
+                byte[] binaryDataOn = new byte[hexBytesOn.Length];
+
+                for (int i = 0; i < hexBytesOn.Length; i++)
+                {
+                    binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
+
+                }
+
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
+                }
+
+            }
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            // 13- Apagar Chiller
+
+            string commandOffChiller = "CC 00 01 81 08 00 02 02 02 02 02 02 67";
+
+            string[] hexBytesOff = commandOffChiller.Split(' ');
+
+            byte[] binaryDataOff = new byte[hexBytesOff.Length];
+
+            for (int i = 0; i < hexBytesOff.Length; i++)
+            {
+                binaryDataOff[i] = Convert.ToByte(hexBytesOff[i], 16);
+
+            }
+
+            if (serialPort1.IsOpen)
+            {
+                serialPort1.Write(binaryDataOff, 0, binaryDataOff.Length);
+            }
+        }
     }
 }
