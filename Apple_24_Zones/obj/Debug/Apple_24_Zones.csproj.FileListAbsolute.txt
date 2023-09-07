@@ -102,3 +102,4 @@ C:\Users\Latitude\Source\Repos\2247-APPL-24\Apple_24_Zones\obj\Debug\Apple_24_Zo
 C:\Users\Latitude\Source\Repos\2247-APPL-24\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.CopyComplete
 C:\Users\Latitude\Source\Repos\2247-APPL-24\Apple_24_Zones\obj\Debug\Apple_24_Zones.exe
 C:\Users\Latitude\Source\Repos\2247-APPL-24\Apple_24_Zones\obj\Debug\Apple_24_Zones.pdb
+C:\Users\Latitude\Source\Repos\2247-APPL-24\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmPID.resources

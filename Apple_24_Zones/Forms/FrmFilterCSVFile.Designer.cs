@@ -51,7 +51,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.IconClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -78,7 +78,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 27);
             this.panel2.Name = "panel2";
@@ -87,7 +87,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(265, 27);
             this.panel3.Name = "panel3";
@@ -96,7 +96,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.panel4.BackColor = System.Drawing.Color.SteelBlue;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(5, 445);
             this.panel4.Name = "panel4";
@@ -125,7 +125,7 @@
             // 
             // btnConnectCOM2
             // 
-            this.btnConnectCOM2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.btnConnectCOM2.BackColor = System.Drawing.Color.SteelBlue;
             this.btnConnectCOM2.FlatAppearance.BorderSize = 0;
             this.btnConnectCOM2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConnectCOM2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -387,7 +387,7 @@
             // 
             // iconButton1
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.iconButton1.BackColor = System.Drawing.Color.SteelBlue;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

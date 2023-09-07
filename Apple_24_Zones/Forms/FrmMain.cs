@@ -455,7 +455,7 @@ namespace Apple_24_Zones.Forms
 
             string[] puertos = SerialPort.GetPortNames();
             cbCOMSelect1.Items.AddRange(puertos);
-           cbCOMSelect1.SelectedIndex = 0;
+           //cbCOMSelect1.SelectedIndex = 0;
 
 
 
@@ -488,6 +488,7 @@ namespace Apple_24_Zones.Forms
                 serialPort1.PortName = cbCOMSelect1.Text;
                 serialPort1.Open();
                 serialPort1.DataReceived += new SerialDataReceivedEventHandler(serialPort1_DataReceived);
+                panelConexion.Visible = false;
             }
             catch (Exception ex)
             {
@@ -636,8 +637,10 @@ namespace Apple_24_Zones.Forms
             }
             else
             {
-                MessageBox.Show("The setpoint must be between the range of 0C° to 40C°", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("The setpoint must be between the range of 5C° to 40C°", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+           // txtPutSetpoint1.ResetText();
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
@@ -662,50 +665,6 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            // 13- Apagar Chiller this command is correct? let me check
-
-            string commandOffChiller = "CC 00 01 81 08 00 02 02 02 02 02 02 02 67";
-
-            string[] hexBytesOff = commandOffChiller.Split(' ');
-
-            byte[] binaryDataOff = new byte[hexBytesOff.Length];
-
-            for (int i = 0; i < hexBytesOff.Length; i++)
-            {
-                binaryDataOff[i] = Convert.ToByte(hexBytesOff[i], 16);
-
-            }
-
-            if (serialPort1.IsOpen)
-            {
-                serialPort1.Write(binaryDataOff, 0, binaryDataOff.Length);
-            }
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            // 13- Encender Chiller CC 00 01 81 08 01 02 02 02 02 02 02 02 66
-
-            string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
-
-            string[] hexBytesOn = commandOnChiller.Split(' ');
-
-            byte[] binaryDataOn = new byte[hexBytesOn.Length];
-
-            for (int i = 0; i < hexBytesOn.Length; i++)
-            {
-                binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
-
-            }
-
-            if (serialPort1.IsOpen)
-            {
-                serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
-            }
-        }
-
         private void txtPutSetpoint1_KeyPress(object sender, KeyPressEventArgs e)
         {
             char decimalSeparator = Convert.ToChar(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator);
@@ -725,7 +684,7 @@ namespace Apple_24_Zones.Forms
         {
             // Valid range Chiller
             decimal number = input;
-            return number > 0 && number <= 40;
+            return number >= 5 && number <= 40;
         }
 
         private void txtPutSetpoint1_Leave(object sender, EventArgs e)
@@ -735,6 +694,11 @@ namespace Apple_24_Zones.Forms
                 txtPutSetpoint1.Value = 0;
                 txtPutSetpoint1.ResetText();
             }
+        }
+
+        private void pIDChillerToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
