@@ -143,6 +143,7 @@
             this.txtNotes.Size = new System.Drawing.Size(763, 346);
             this.txtNotes.TabIndex = 32;
             this.txtNotes.Text = "";
+            this.txtNotes.Enter += new System.EventHandler(this.txtNotes_Enter);
             // 
             // label4
             // 

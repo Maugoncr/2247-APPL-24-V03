@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -65,6 +66,28 @@ namespace Apple_24_Zones.Forms
             else
             {
                 MessageBox.Show("There is nothing to save", "Advertisement", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void txtNotes_Enter(object sender, EventArgs e)
+        {
+            // Obtén la fecha y hora actual en el formato deseado
+            string fechaActual = DateTime.Now.ToString("MM/dd/yyyy HH:mm");
+
+            // Verifica si el RichTextBox está vacío
+            if (string.IsNullOrWhiteSpace(txtNotes.Text))
+            {
+                // Si está vacío, simplemente agrega la fecha actual
+                txtNotes.AppendText(fechaActual + " : ");
+            }
+            else
+            {
+                // Si no está vacío, verifica si la fecha actual ya está presente
+                if (!txtNotes.Text.Contains(fechaActual))
+                {
+                    // Si la fecha actual no está presente, agrega un salto de línea y la fecha actual
+                    txtNotes.AppendText("\n" + fechaActual + " : ");
+                }
             }
         }
     }
