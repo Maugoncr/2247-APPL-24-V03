@@ -160,7 +160,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 28);
             this.label1.TabIndex = 117;
-            this.label1.Text = "Since:";
+            this.label1.Text = "Start:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dateTimePicker3
@@ -180,7 +180,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 28);
             this.label2.TabIndex = 119;
-            this.label2.Text = "Until:";
+            this.label2.Text = "End:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // comboBox1

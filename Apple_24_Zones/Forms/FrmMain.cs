@@ -137,7 +137,7 @@ namespace Apple_24_Zones.Forms
 
                 // Labels
 
-                lbZoneView.Text = "ZONE #1";
+                lbZoneView.Text = "TEMP ZONE 1";
 
                 lbView1.Text = "T-1";
                 lbView2.Text = "T-2";
@@ -165,7 +165,7 @@ namespace Apple_24_Zones.Forms
                 checkView11.Text = "T-11";
                 checkView12.Text = "T-12";
 
-                panelGhost.Location = new Point(572, 311);
+                panelGhost.Location = new Point(560, 91);
                 panelGhost.Visible = true;
             }
             else if (index == 2)
@@ -217,7 +217,7 @@ namespace Apple_24_Zones.Forms
 
                 // Labels
 
-                lbZoneView.Text = "ZONE #2";
+                lbZoneView.Text = "TEMP ZONE 2";
 
                 lbView1.Text = "T-13";
                 lbView2.Text = "T-14";
@@ -245,7 +245,7 @@ namespace Apple_24_Zones.Forms
                 checkView11.Text = "T-23";
                 checkView12.Text = "T-24";
 
-                panelGhost.Location = new Point(572, 311);
+                panelGhost.Location = new Point(560, 91);
                 panelGhost.Visible = true;
             }
         }
@@ -307,7 +307,7 @@ namespace Apple_24_Zones.Forms
         private void CreateBorderPanel(object sender, PaintEventArgs e)
         {
             Panel panel = (Panel)sender;
-            Pen borderPen = new Pen(Color.Black, 3);
+            Pen borderPen = new Pen(Color.Black, 5);
             e.Graphics.DrawRectangle(borderPen, new Rectangle(0, 0, panel.Width - 1, panel.Height - 1));
         }
 
@@ -609,11 +609,6 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        private void btnApplySetpoint2_Click(object sender, EventArgs e)
-        {
-                  
-        }
-
         private void iconButton4_Click(object sender, EventArgs e)
         {
             // 13- Apagar Chiller this command is correct? let me check
@@ -737,6 +732,83 @@ namespace Apple_24_Zones.Forms
                 txtPutSetpoint2.Focus();
                 // Cancela la validación para que el usuario pueda corregir el valor
                 e.Cancel = true;
+            }
+        }
+
+        private void btnApplySetpoint1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnApplySetpoint2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbProcess2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbProcess2.SelectedIndex == 0)
+            {
+                ChangeProcessHeatingCoolingLED("Heating",2);
+            }
+            else if (cbProcess2.SelectedIndex == 1)
+            {
+                ChangeProcessHeatingCoolingLED("Cooling", 2);
+            }
+        }
+
+        private void ChangeProcessHeatingCoolingLED(string process, int which)
+        {
+            // Zone 1
+            if (which == 1)
+            {
+                if (process == "Heating")
+                {
+                    picCooling1.Image.Dispose();
+                    picCooling1.Image = Properties.Resources.ledRectangleOff;
+                    picHeating1.Image.Dispose();
+                    picHeating1.Image = Properties.Resources.ledRectangleOn;
+
+                }
+                else if (process == "Cooling")
+                {
+                    picCooling1.Image.Dispose();
+                    picCooling1.Image = Properties.Resources.ledRectangleOn;
+                    picHeating1.Image.Dispose();
+                    picHeating1.Image = Properties.Resources.ledRectangleOff;
+                }
+            }
+            // Zone 2
+            else if (which == 2)
+            {
+                if (process == "Heating")
+                {
+                    picCooling2.Image.Dispose();
+                    picCooling2.Image = Properties.Resources.ledRectangleOff;
+                    picHeating2.Image.Dispose();
+                    picHeating2.Image = Properties.Resources.ledRectangleOn;
+                }
+                else if (process == "Cooling")
+                {
+                    picCooling2.Image.Dispose();
+                    picCooling2.Image = Properties.Resources.ledRectangleOn;
+                    picHeating2.Image.Dispose();
+                    picHeating2.Image = Properties.Resources.ledRectangleOff;
+                }
+            }
+        
+        
+        }
+
+        private void cbProcess1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbProcess1.SelectedIndex == 0)
+            {
+                ChangeProcessHeatingCoolingLED("Heating", 1);
+            }
+            else if (cbProcess1.SelectedIndex == 1)
+            {
+                ChangeProcessHeatingCoolingLED("Cooling", 1);
             }
         }
     }
