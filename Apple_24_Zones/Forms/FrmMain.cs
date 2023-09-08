@@ -1,4 +1,5 @@
-﻿using AppleSoftware.Forms;
+﻿using Apple_24_Zones.Properties;
+using AppleSoftware.Forms;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Contexts;
 using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -26,6 +28,7 @@ namespace Apple_24_Zones.Forms
         public FrmMain()
         {
             InitializeComponent();
+            InicializarComboboxes();
 
             txtView1.Paint += TextBox_Paint;
             txtView2.Paint += TextBox_Paint;
@@ -102,6 +105,122 @@ namespace Apple_24_Zones.Forms
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        private void FillChartZones(int which) 
+        {
+            if (which == 1)
+            {
+                chartZone1.Series.Clear();
+                chartZone1.Series.Add("T-1");
+                chartZone1.Series.Add("T-2");
+                chartZone1.Series.Add("T-3");
+                chartZone1.Series.Add("T-4");
+                chartZone1.Series.Add("T-5");
+                chartZone1.Series.Add("T-6");
+                chartZone1.Series.Add("T-7");
+                chartZone1.Series.Add("T-8");
+                chartZone1.Series.Add("T-9");
+                chartZone1.Series.Add("T-10");
+                chartZone1.Series.Add("T-11");
+                chartZone1.Series.Add("T-12");
+
+                chartZone1.Series["T-1"].IsVisibleInLegend = false;
+                chartZone1.Series["T-2"].IsVisibleInLegend = false;
+                chartZone1.Series["T-3"].IsVisibleInLegend = false;
+                chartZone1.Series["T-4"].IsVisibleInLegend = false;
+                chartZone1.Series["T-5"].IsVisibleInLegend = false;
+                chartZone1.Series["T-6"].IsVisibleInLegend = false;
+                chartZone1.Series["T-7"].IsVisibleInLegend = false;
+                chartZone1.Series["T-8"].IsVisibleInLegend = false;
+                chartZone1.Series["T-9"].IsVisibleInLegend = false;
+                chartZone1.Series["T-10"].IsVisibleInLegend = false;
+                chartZone1.Series["T-11"].IsVisibleInLegend = false;
+                chartZone1.Series["T-12"].IsVisibleInLegend = false;
+
+                chartZone1.Series["T-1"].Color = Color.Red;
+                chartZone1.Series["T-2"].Color = Color.Blue;
+                chartZone1.Series["T-3"].Color = Color.Yellow;
+                chartZone1.Series["T-4"].Color = Color.Green;
+                chartZone1.Series["T-5"].Color = Color.Purple;
+                chartZone1.Series["T-6"].Color = Color.Cyan;
+                chartZone1.Series["T-7"].Color = Color.Orange;
+                chartZone1.Series["T-8"].Color = Color.Maroon;
+                chartZone1.Series["T-9"].Color = Color.Lime;
+                chartZone1.Series["T-10"].Color = Color.Magenta;
+                chartZone1.Series["T-11"].Color = Color.Olive;
+                chartZone1.Series["T-12"].Color = Color.Black;
+
+                chartZone1.Series["T-1"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-2"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-3"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-4"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-5"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-6"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-7"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-8"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-9"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-10"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-11"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-12"].ChartType = SeriesChartType.Spline;
+
+            }
+            else if (which == 2)
+            {
+                chartZone2.Series.Clear();
+                chartZone2.Series.Add("T-13");
+                chartZone2.Series.Add("T-14");
+                chartZone2.Series.Add("T-15");
+                chartZone2.Series.Add("T-16");
+                chartZone2.Series.Add("T-17");
+                chartZone2.Series.Add("T-18");
+                chartZone2.Series.Add("T-19");
+                chartZone2.Series.Add("T-20");
+                chartZone2.Series.Add("T-21");
+                chartZone2.Series.Add("T-22");
+                chartZone2.Series.Add("T-23");
+                chartZone2.Series.Add("T-24");
+
+                chartZone2.Series["T-13"].IsVisibleInLegend = false;
+                chartZone2.Series["T-14"].IsVisibleInLegend = false;
+                chartZone2.Series["T-15"].IsVisibleInLegend = false;
+                chartZone2.Series["T-16"].IsVisibleInLegend = false;
+                chartZone2.Series["T-17"].IsVisibleInLegend = false;
+                chartZone2.Series["T-18"].IsVisibleInLegend = false;
+                chartZone2.Series["T-19"].IsVisibleInLegend = false;
+                chartZone2.Series["T-20"].IsVisibleInLegend = false;
+                chartZone2.Series["T-21"].IsVisibleInLegend = false;
+                chartZone2.Series["T-22"].IsVisibleInLegend = false;
+                chartZone2.Series["T-23"].IsVisibleInLegend = false;
+                chartZone2.Series["T-24"].IsVisibleInLegend = false;
+
+                chartZone2.Series["T-13"].Color = Color.Red;
+                chartZone2.Series["T-14"].Color = Color.Blue;
+                chartZone2.Series["T-15"].Color = Color.Yellow;
+                chartZone2.Series["T-16"].Color = Color.Green;
+                chartZone2.Series["T-17"].Color = Color.Purple;
+                chartZone2.Series["T-18"].Color = Color.Cyan;
+                chartZone2.Series["T-19"].Color = Color.Orange;
+                chartZone2.Series["T-20"].Color = Color.Maroon;
+                chartZone2.Series["T-21"].Color = Color.Lime;
+                chartZone2.Series["T-22"].Color = Color.Magenta;
+                chartZone2.Series["T-23"].Color = Color.Olive;
+                chartZone2.Series["T-24"].Color = Color.Black;
+
+                chartZone2.Series["T-13"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-14"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-15"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-16"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-17"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-18"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-19"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-20"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-21"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-22"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-23"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-24"].ChartType = SeriesChartType.Spline;
+            }
+
+        }
+
         private void ChangeViewChartZone(int index = 0)
         {
             if (index == 0)
@@ -170,9 +289,7 @@ namespace Apple_24_Zones.Forms
                 chartView.Series["T-11"].ChartType = SeriesChartType.Spline;
                 chartView.Series["T-12"].ChartType = SeriesChartType.Spline;
 
-                chartView.Series["T-1"].BorderWidth = 2;
-
-
+               // chartView.Series["T-1"].BorderWidth = 2;
                 // Labels
 
                 lbZoneView.Text = "TEMP ZONE 1";
@@ -252,6 +369,19 @@ namespace Apple_24_Zones.Forms
                 chartView.Series["T-22"].Color = Color.Magenta;
                 chartView.Series["T-23"].Color = Color.Olive;
                 chartView.Series["T-24"].Color = Color.Black;
+
+                chartView.Series["T-13"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-14"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-15"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-16"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-17"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-18"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-19"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-20"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-21"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-22"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-23"].ChartType = SeriesChartType.Spline;
+                chartView.Series["T-24"].ChartType = SeriesChartType.Spline;
 
                 // Labels
 
@@ -361,11 +491,59 @@ namespace Apple_24_Zones.Forms
         private void FrmMain_Load(object sender, EventArgs e)
         {
             timerDateTime.Start();
+            FillChartZones(1);
+            FillChartZones(2);
             FrmCargarDefault();
+            timerSimulationCharts.Start();
+
+
         }
 
         private void FrmCargarDefault()
         {
+            // Disconectar
+
+            if (serialPort1.IsOpen)
+            {
+                serialPort1.Close();
+            }
+            if (serialPort2.IsOpen)
+            {
+                serialPort2.Close();
+            }
+
+            // Default variables
+            rt = 0;
+            temp = 0;
+
+            //Reset Images
+
+            picCooling1.Image.Dispose();
+            picCooling2.Image.Dispose();
+            picHeating1.Image.Dispose();
+            picHeating2.Image.Dispose();
+            picRed.Image.Dispose();
+            picYellow.Image.Dispose();
+            picGreen.Image.Dispose();
+            picUpDown1.Image.Dispose();
+            picUpDown2.Image.Dispose();
+
+            picCooling1.Image = Resources.ledRectangleOff;
+            picCooling2.Image = Resources.ledRectangleOff;
+            picHeating1.Image = Resources.ledRectangleOff;
+            picHeating2.Image = Resources.ledRectangleOff;
+            picRed.Image = Resources.tc1off;
+            picYellow.Image = Resources.tc3off;
+            picGreen.Image = Resources.tc8off;
+            picUpDown1.Image = Resources.neutroWhite;
+            picUpDown2.Image = Resources.neutroWhite;
+
+            // Botones que deben venir por defecto desactivados
+
+            btnConnectCOM1.Enabled = false;
+            btnConnectCOM2.Enabled = false;
+
+
             // Recalibrar Pantalla Conexion
             int screenWidth = Screen.PrimaryScreen.Bounds.Width;
             int screenHeight = Screen.PrimaryScreen.Bounds.Height;
@@ -377,7 +555,10 @@ namespace Apple_24_Zones.Forms
             panelConexion.Visible = false;
 
             string[] puertos = SerialPort.GetPortNames();
+            cbCOMSelect1.Items.Clear();
+            cbCOMSelect2.Items.Clear();
             cbCOMSelect1.Items.AddRange(puertos);
+            cbCOMSelect2.Items.AddRange(puertos);
 
         }
 
@@ -401,18 +582,69 @@ namespace Apple_24_Zones.Forms
             panelConexion.Visible = true;
         }
 
+        private List<ComboBox> comboBoxes;
+
+        private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox selectedComboBox = (ComboBox)sender;
+            bool isItemSelectedInOtherComboBox = false;
+            foreach (ComboBox comboBox in comboBoxes)
+            {
+                if (comboBox != selectedComboBox && comboBox.SelectedItem != null && comboBox.SelectedItem.Equals(selectedComboBox.SelectedItem))
+                {
+                    isItemSelectedInOtherComboBox = true;
+                    break;
+                }
+            }
+            if (isItemSelectedInOtherComboBox)
+            {
+                MessageBox.Show("Cannot select the same item in multiple ComboBoxes.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                selectedComboBox.SelectedIndex = -1;
+            }
+            else
+            {
+                selectedComboBox = comboBoxes.Find(comboBox => comboBox.SelectedItem != null && comboBox.SelectedItem.Equals(selectedComboBox.SelectedItem));
+                if (selectedComboBox != null)
+                {
+                    if (selectedComboBox == cbCOMSelect1)
+                    {
+                        ActivarConnect(1);
+                    }
+                    else if (selectedComboBox == cbCOMSelect2)
+                    {
+                        ActivarConnect(2);
+                    }
+                }
+            }
+
+        }
+
+        private void ActivarConnect(int wich)
+        {
+            if (wich == 1)
+            {
+                btnConnectCOM1.Enabled = true;
+            }
+            else if (wich == 2)
+            {
+                btnConnectCOM2.Enabled = true;
+            }
+        }
+
+        private void InicializarComboboxes()
+        {
+            comboBoxes = new List<ComboBox> { cbCOMSelect1, cbCOMSelect2};
+
+            // Suscribe al evento SelectedIndexChanged para todos los ComboBox
+            foreach (ComboBox comboBox in comboBoxes)
+            {
+                comboBox.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
+            }
+        }
+
         private void btnConnectCOM1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                serialPort1.PortName = cbCOMSelect1.Text;
-                serialPort1.Open();
-                serialPort1.DataReceived += new SerialDataReceivedEventHandler(serialPort1_DataReceived);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
         }
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -694,22 +926,7 @@ namespace Apple_24_Zones.Forms
                 serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
             }
         }
-
-        private bool ValidRange(decimal input)
-        {
-            // Valid range Chiller
-            decimal number = input;
-            return number > 0 && number <= 40;
-        }
-
-        private void txtPutSetpoint1_Leave(object sender, EventArgs e)
-        {
-            if (!ValidRange(txtPutSetpoint1.Value))
-            {
-                txtPutSetpoint1.Value = 0;
-                txtPutSetpoint1.ResetText();
-            }
-        }
+      
 
         private void txtPutSetpoint1_KeyPress_1(object sender, KeyPressEventArgs e)
         {
@@ -740,16 +957,19 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        private void txtPutSetpoint2_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+       
+
+        private void txtPutSetpoint1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            decimal valor = txtPutSetpoint2.Value;
+            decimal valor = txtPutSetpoint10.Value;
             // Verifica si el valor está fuera del rango deseado
-            if (valor <= 0 || valor > 40)
+            if (valor <= 0 || valor >= 41)
             {
                 // Muestra un mensaje de error
-                MessageBox.Show("El valor debe estar entre 1 y 40.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("The value must be between 1 and 40.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 // Establece el foco de nuevo en el control para corregir el valor
-                txtPutSetpoint2.Focus();
+                txtPutSetpoint10.Focus();
+                txtPutSetpoint10.Value = 0;
                 // Cancela la validación para que el usuario pueda corregir el valor
                 e.Cancel = true;
             }
@@ -757,7 +977,27 @@ namespace Apple_24_Zones.Forms
 
         private void btnApplySetpoint1_Click(object sender, EventArgs e)
         {
+            double determinarSiSubeOBaja = Convert.ToDouble(txtPutSetpoint1.Text);
 
+            if (determinarSiSubeOBaja > setpoint)
+            {
+                // Vamos a calentar
+                picUpDown1.Image.Dispose();
+                picUpDown1.Image = Resources.arrowUpRed21;
+            }
+            else if (determinarSiSubeOBaja < setpoint)
+            {
+                // Vamos a enfriar
+                picUpDown1.Image.Dispose();
+                picUpDown1.Image = Resources.arrowDownBlue2;
+            }
+            else
+            {
+                picUpDown1.Image.Dispose();
+                picUpDown1.Image = Resources.neutroWhite;
+            }
+
+            setpoint = determinarSiSubeOBaja;
         }
 
         private void btnApplySetpoint2_Click(object sender, EventArgs e)
@@ -837,5 +1077,184 @@ namespace Apple_24_Zones.Forms
             CreateBorderLabel(sender, e);
         }
 
+        double rt = 0;                              // Time X from chart
+        double temp = 0;                            // Time in ms
+        double setpoint = 25;
+
+        private void timerSimulationCharts_Tick(object sender, EventArgs e)
+        {
+            rt = rt + 100;
+            temp = rt / 1000;
+
+            int margen = 3;
+            Random random = new Random();
+
+            double numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            chartZone1.Series["T-1"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+            txtTC1.Text = numeroAleatorio.ToString() + " °C";
+
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            chartZone1.Series["T-2"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+            txtTC2.Text = numeroAleatorio.ToString() + " °C";
+
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            chartZone1.Series["T-3"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+            txtTC3.Text = numeroAleatorio.ToString() + " °C";
+
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            chartZone1.Series["T-4"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+            txtTC4.Text = numeroAleatorio.ToString() + " °C";
+
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            chartZone1.Series["T-5"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+            txtTC5.Text = numeroAleatorio.ToString() + " °C";
+
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            chartZone1.Series["T-6"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+            txtTC6.Text = numeroAleatorio.ToString() + " °C";
+
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            chartZone1.Series["T-7"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+            txtTC7.Text = numeroAleatorio.ToString() + " °C";
+
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            chartZone1.Series["T-8"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+            txtTC8.Text = numeroAleatorio.ToString() + " °C";
+
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            chartZone1.Series["T-9"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+            txtTC9.Text = numeroAleatorio.ToString() + " °C";
+
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            chartZone1.Series["T-10"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+            txtTC10.Text = numeroAleatorio.ToString() + " °C";
+
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            chartZone1.Series["T-11"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+            txtTC11.Text = numeroAleatorio.ToString() + " °C";
+
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            chartZone1.Series["T-12"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+            txtTC12.Text = numeroAleatorio.ToString() + " °C";
+
+            List<double> temperaturas = new List<double>();
+
+            for (int i = 1; i <= 12; i++)
+            {
+                string nombreLabel = "txtTC" + i;
+                Label label = this.Controls.Find(nombreLabel, true).FirstOrDefault() as Label;
+
+                if (label != null)
+                {
+                    // Obtiene el texto del label
+                    string textoLabel = label.Text;
+
+                    // Elimina " °C" del texto y convierte a double
+                    if (textoLabel.Contains(" °C"))
+                    {
+                        textoLabel = textoLabel.Replace(" °C", "");
+                        if (double.TryParse(textoLabel, out double valor))
+                        {
+                            temperaturas.Add(valor);
+                        }
+                    }
+                }
+            }
+
+            if (temperaturas.Count > 0)
+            {
+                double promedio = temperaturas.Average();
+
+                // Ahora, "promedio" contiene el promedio de las temperaturas
+                // Puedes usar este valor como desees.
+               lbAVGTemp1.Text = promedio.ToString("0.0") + " °C";
+               lbCurrentSetpoint1.Text = setpoint.ToString()+ " °C";
+            }
+
+            chartZone1.ChartAreas[0].AxisX.Interval = 10;
+            chartZone1.ChartAreas[0].AxisY2.Maximum = Double.NaN;
+            chartZone1.ChartAreas[0].AxisY2.Minimum = Double.NaN;
+            chartZone1.ChartAreas[0].RecalculateAxesScale();
+
+            if (chartZone1.Series["T-1"].Points.Count == 111)
+            {
+                chartZone1.Series["T-1"].Points.RemoveAt(0);
+                chartZone1.Series["T-2"].Points.RemoveAt(0);
+                chartZone1.Series["T-3"].Points.RemoveAt(0);
+                chartZone1.Series["T-4"].Points.RemoveAt(0);
+                chartZone1.Series["T-5"].Points.RemoveAt(0);
+                chartZone1.Series["T-6"].Points.RemoveAt(0);
+                chartZone1.Series["T-7"].Points.RemoveAt(0);
+                chartZone1.Series["T-8"].Points.RemoveAt(0);
+                chartZone1.Series["T-9"].Points.RemoveAt(0);
+                chartZone1.Series["T-10"].Points.RemoveAt(0);
+                chartZone1.Series["T-11"].Points.RemoveAt(0);
+                chartZone1.Series["T-12"].Points.RemoveAt(0);
+            }
+
+
+        }
+
+        private void checkT1_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone1.Series["T-1"].Enabled = checkT1.Checked ? true : false;
+        }
+
+        private void checkT2_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone1.Series["T-2"].Enabled = checkT2.Checked ? true : false;
+        }
+
+        private void checkT3_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone1.Series["T-3"].Enabled = checkT3.Checked ? true : false;
+        }
+
+        private void checkT4_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone1.Series["T-4"].Enabled = checkT4.Checked ? true : false;
+        }
+
+        private void checkT5_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone1.Series["T-5"].Enabled = checkT5.Checked ? true : false;
+        }
+
+        private void checkT6_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone1.Series["T-6"].Enabled = checkT6.Checked ? true : false;
+        }
+
+        private void checkT7_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone1.Series["T-7"].Enabled = checkT7.Checked ? true : false;
+        }
+
+        private void checkT8_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone1.Series["T-8"].Enabled = checkT8.Checked ? true : false;
+        }
+
+        private void checkT9_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone1.Series["T-9"].Enabled = checkT9.Checked ? true : false;
+        }
+
+        private void checkT10_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone1.Series["T-10"].Enabled = checkT10.Checked ? true : false;
+        }
+
+        private void checkT11_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone1.Series["T-11"].Enabled = checkT11.Checked ? true : false;
+        }
+
+        private void checkT12_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone1.Series["T-12"].Enabled = checkT12.Checked ? true : false;
+        }
+
+        
     }
 }
