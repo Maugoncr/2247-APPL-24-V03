@@ -145,6 +145,9 @@
   <data name="tc3off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tc3off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="neutroYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\neutroYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrowDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrowDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,8 +163,14 @@
   <data name="tc8off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tc8off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="coming-soon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coming-soon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="EMO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EMO2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrowDownBlue2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrowDownBlue2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tc8on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tc8on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,7 +184,13 @@
   <data name="ledRectangleOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ledRectangleOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coming-soon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coming-soon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrowUpRed2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrowUpRed2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="neutroWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\neutroWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrowUpRed21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrowUpRed21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -83,6 +83,16 @@ namespace Apple_24_Zones.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrowDownBlue2 {
+            get {
+                object obj = ResourceManager.GetObject("arrowDownBlue2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrowUp {
             get {
                 object obj = ResourceManager.GetObject("arrowUp", resourceCulture);
@@ -96,6 +106,26 @@ namespace Apple_24_Zones.Properties {
         internal static System.Drawing.Bitmap arrowUpRed {
             get {
                 object obj = ResourceManager.GetObject("arrowUpRed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrowUpRed2 {
+            get {
+                object obj = ResourceManager.GetObject("arrowUpRed2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrowUpRed21 {
+            get {
+                object obj = ResourceManager.GetObject("arrowUpRed21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +216,26 @@ namespace Apple_24_Zones.Properties {
         internal static System.Drawing.Bitmap MIDORI_OFICIAL2_ORANGE {
             get {
                 object obj = ResourceManager.GetObject("MIDORI OFICIAL2 ORANGE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap neutroWhite {
+            get {
+                object obj = ResourceManager.GetObject("neutroWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap neutroYellow {
+            get {
+                object obj = ResourceManager.GetObject("neutroYellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

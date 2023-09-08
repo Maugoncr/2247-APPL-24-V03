@@ -26,6 +26,44 @@ namespace Apple_24_Zones.Forms
         public FrmMain()
         {
             InitializeComponent();
+
+            txtView1.Paint += TextBox_Paint;
+            txtView2.Paint += TextBox_Paint;
+            txtView3.Paint += TextBox_Paint;
+            txtView4.Paint += TextBox_Paint;
+            txtView5.Paint += TextBox_Paint;
+            txtView6.Paint += TextBox_Paint;
+            txtView7.Paint += TextBox_Paint;
+            txtView8.Paint += TextBox_Paint;
+            txtView9.Paint += TextBox_Paint;
+            txtView10.Paint += TextBox_Paint;
+            txtView11.Paint += TextBox_Paint;
+            txtView12.Paint += TextBox_Paint;
+
+            txtTC1.Paint += TextBox_Paint;
+            txtTC2.Paint += TextBox_Paint;
+            txtTC3.Paint += TextBox_Paint;
+            txtTC4.Paint += TextBox_Paint;
+            txtTC5.Paint += TextBox_Paint;
+            txtTC6.Paint += TextBox_Paint;
+            txtTC7.Paint += TextBox_Paint;
+            txtTC8.Paint += TextBox_Paint;
+            txtTC9.Paint += TextBox_Paint;
+            txtTC10.Paint += TextBox_Paint;
+            txtTC11.Paint += TextBox_Paint;
+            txtTC12.Paint += TextBox_Paint;
+            txtTC13.Paint += TextBox_Paint;
+            txtTC14.Paint += TextBox_Paint;
+            txtTC15.Paint += TextBox_Paint;
+            txtTC16.Paint += TextBox_Paint;
+            txtTC17.Paint += TextBox_Paint;
+            txtTC18.Paint += TextBox_Paint;
+            txtTC19.Paint += TextBox_Paint;
+            txtTC20.Paint += TextBox_Paint;
+            txtTC21.Paint += TextBox_Paint;
+            txtTC22.Paint += TextBox_Paint;
+            txtTC23.Paint += TextBox_Paint;
+            txtTC24.Paint += TextBox_Paint;
         }
 
 
@@ -311,25 +349,7 @@ namespace Apple_24_Zones.Forms
             e.Graphics.DrawRectangle(borderPen, new Rectangle(0, 0, panel.Width - 1, panel.Height - 1));
         }
 
-        private void lbCurrentSetpoint2_Paint(object sender, PaintEventArgs e)
-        {
-            CreateBorderLabel(sender, e);
-        }
-
-        private void lbAVGTemp2_Paint(object sender, PaintEventArgs e)
-        {
-            CreateBorderLabel(sender, e);
-        }
-
-        private void lbCurrentSetpoint1_Paint(object sender, PaintEventArgs e)
-        {
-            CreateBorderLabel(sender, e);
-        }
-
-        private void lbAVGTemp1_Paint(object sender, PaintEventArgs e)
-        {
-            CreateBorderLabel(sender, e);
-        }
+      
 
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
@@ -811,5 +831,11 @@ namespace Apple_24_Zones.Forms
                 ChangeProcessHeatingCoolingLED("Cooling", 1);
             }
         }
+
+        private void TextBox_Paint(object sender, PaintEventArgs e)
+        {
+            CreateBorderLabel(sender, e);
+        }
+
     }
 }
