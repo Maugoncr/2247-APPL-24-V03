@@ -926,55 +926,8 @@ namespace Apple_24_Zones.Forms
                 serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
             }
         }
-      
-
-        private void txtPutSetpoint1_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            char decimalSeparator = Convert.ToChar(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator);
-
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != decimalSeparator))
-            {
-                e.Handled = true;
-            }
-
-            if ((e.KeyChar == decimalSeparator) && ((sender as NumericUpDown).Text.IndexOf(decimalSeparator) > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtPutSetpoint2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char decimalSeparator = Convert.ToChar(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator);
-
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != decimalSeparator))
-            {
-                e.Handled = true;
-            }
-            if ((e.KeyChar == decimalSeparator) && ((sender as NumericUpDown).Text.IndexOf(decimalSeparator) > -1))
-            {
-                e.Handled = true;
-            }
-        }
-
-       
-
-        private void txtPutSetpoint1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            decimal valor = txtPutSetpoint10.Value;
-            // Verifica si el valor está fuera del rango deseado
-            if (valor <= 0 || valor >= 41)
-            {
-                // Muestra un mensaje de error
-                MessageBox.Show("The value must be between 1 and 40.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                // Establece el foco de nuevo en el control para corregir el valor
-                txtPutSetpoint10.Focus();
-                txtPutSetpoint10.Value = 0;
-                // Cancela la validación para que el usuario pueda corregir el valor
-                e.Cancel = true;
-            }
-        }
-
+        
+            
         private void btnApplySetpoint1_Click(object sender, EventArgs e)
         {
             double determinarSiSubeOBaja = Convert.ToDouble(txtPutSetpoint1.Text);
@@ -1255,6 +1208,29 @@ namespace Apple_24_Zones.Forms
             chartZone1.Series["T-12"].Enabled = checkT12.Checked ? true : false;
         }
 
-        
+        private void panelControlZone2_MouseEnter(object sender, EventArgs e)
+        {
+            picDrawMachine.Image = Resources.draw2;
+        }
+
+        private void panelControlZone2_MouseLeave(object sender, EventArgs e)
+        {
+            picDrawMachine.Image = Resources.drawOff;
+        }
+
+        private void btnTurnOff2_MouseEnter(object sender, EventArgs e)
+        {
+            picDrawMachine.Image = Resources.draw2;
+        }
+
+        private void panelControlZone1_MouseEnter(object sender, EventArgs e)
+        {
+            picDrawMachine.Image = Resources.draw1;
+        }
+
+        private void panelControlZone1_MouseLeave(object sender, EventArgs e)
+        {
+            picDrawMachine.Image = Resources.drawOff;
+        }
     }
 }

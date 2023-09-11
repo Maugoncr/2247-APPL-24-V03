@@ -178,6 +178,10 @@
     <None Include="Resources\arrowDownBlue2.png" />
     <None Include="Resources\arrowUpRed2.png" />
     <None Include="Resources\arrowUpRed21.png" />
+    <None Include="Resources\draw1.png" />
+    <None Include="Resources\draw1and2.png" />
+    <None Include="Resources\draw2.png" />
+    <None Include="Resources\drawOff.png" />
     <Content Include="Resources\Icon.ico" />
     <None Include="Resources\MIDORI OFICIAL2 ORANGE.png" />
     <None Include="Resources\MIDORI OFICIAL2.png" />
