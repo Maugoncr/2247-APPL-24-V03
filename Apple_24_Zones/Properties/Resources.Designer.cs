@@ -153,6 +153,16 @@ namespace Apple_24_Zones.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap draw11 {
+            get {
+                object obj = ResourceManager.GetObject("draw11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap draw1and2 {
             get {
                 object obj = ResourceManager.GetObject("draw1and2", resourceCulture);
@@ -173,9 +183,29 @@ namespace Apple_24_Zones.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap draw21 {
+            get {
+                object obj = ResourceManager.GetObject("draw21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap drawOff {
             get {
                 object obj = ResourceManager.GetObject("drawOff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drawOff1 {
+            get {
+                object obj = ResourceManager.GetObject("drawOff1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

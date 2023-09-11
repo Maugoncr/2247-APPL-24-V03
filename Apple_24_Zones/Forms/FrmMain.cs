@@ -1121,7 +1121,7 @@ namespace Apple_24_Zones.Forms
                 // Ahora, "promedio" contiene el promedio de las temperaturas
                 // Puedes usar este valor como desees.
                lbAVGTemp1.Text = promedio.ToString("0.0") + " °C";
-               lbCurrentSetpoint1.Text = setpoint.ToString()+ " °C";
+               lbCurrentSetpoint1.Text = setpoint.ToString("0.0")+ " °C";
             }
 
             chartZone1.ChartAreas[0].AxisX.Interval = 10;
@@ -1210,29 +1210,30 @@ namespace Apple_24_Zones.Forms
 
         private void panelControlZone2_MouseEnter(object sender, EventArgs e)
         {
-            picDrawMachine.Image = Resources.draw2;
+            picDrawMachine.Image = Resources.draw21;
+            lbTitleZone2.BackColor = Color.Yellow;
+            panelTitleZone2.BackColor = Color.Yellow;
         }
 
         private void panelControlZone2_MouseLeave(object sender, EventArgs e)
         {
-            picDrawMachine.Image = Resources.drawOff;
-        }
-
-        private void btnTurnOff2_MouseEnter(object sender, EventArgs e)
-        {
-            picDrawMachine.Image = Resources.draw2;
+            picDrawMachine.Image = Resources.drawOff1;
+            lbTitleZone2.BackColor = Color.White;
+            panelTitleZone2.BackColor = Color.White;
         }
 
         private void panelControlZone1_MouseEnter(object sender, EventArgs e)
         {
-            picDrawMachine.Image = Resources.draw1;
-           
+            picDrawMachine.Image = Resources.draw11;
+            lbTitleZone1.BackColor = Color.Yellow;
+            panelTitleZone1.BackColor = Color.Yellow;
         }
 
         private void panelControlZone1_MouseLeave(object sender, EventArgs e)
         {
-            picDrawMachine.Image = Resources.drawOff;
-           
+            picDrawMachine.Image = Resources.drawOff1;
+            lbTitleZone1.BackColor = Color.White;
+            panelTitleZone1.BackColor = Color.White;
         }
     }
 }
