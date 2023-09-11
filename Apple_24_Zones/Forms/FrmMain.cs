@@ -1226,15 +1226,13 @@ namespace Apple_24_Zones.Forms
         private void panelControlZone1_MouseEnter(object sender, EventArgs e)
         {
             picDrawMachine.Image = Resources.draw1;
-            panel8.BackColor = Color.Yellow;
-            label75.BackColor = Color.Yellow;
+           
         }
 
         private void panelControlZone1_MouseLeave(object sender, EventArgs e)
         {
             picDrawMachine.Image = Resources.drawOff;
-            panel8.BackColor = Color.White;
-            label75.BackColor = Color.White;
+           
         }
     }
 }
