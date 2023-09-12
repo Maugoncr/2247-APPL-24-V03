@@ -494,9 +494,7 @@ namespace Apple_24_Zones.Forms
             FillChartZones(1);
             FillChartZones(2);
             FrmCargarDefault();
-            timerSimulationCharts.Start();
-
-
+           // timerSimulationCharts.Start();
         }
 
         private void FrmCargarDefault()
@@ -644,7 +642,8 @@ namespace Apple_24_Zones.Forms
 
         private void btnConnectCOM1_Click(object sender, EventArgs e)
         {
-           
+            btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+            timerSimulationCharts.Start();
         }
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -950,7 +949,25 @@ namespace Apple_24_Zones.Forms
                 picUpDown1.Image = Resources.neutroWhite;
             }
 
-            setpoint = determinarSiSubeOBaja;
+            setpointGoal = determinarSiSubeOBaja;
+            timerSimulationDownUp.Start();
+        }
+
+        double setpointGoal = 25;
+        private void timerSimulationDownUp_Tick(object sender, EventArgs e)
+        {
+            if (setpoint < setpointGoal)
+            {
+                setpoint++;
+            }
+            else if (setpoint > setpointGoal)
+            {
+                setpoint--;
+            }
+            else if (setpoint == setpointGoal)
+            {
+                timerSimulationDownUp.Stop();
+            }
         }
 
         private void btnApplySetpoint2_Click(object sender, EventArgs e)
@@ -1039,7 +1056,7 @@ namespace Apple_24_Zones.Forms
             rt = rt + 100;
             temp = rt / 1000;
 
-            int margen = 3;
+            int margen = 2;
             Random random = new Random();
 
             double numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
@@ -1121,7 +1138,7 @@ namespace Apple_24_Zones.Forms
                 // Ahora, "promedio" contiene el promedio de las temperaturas
                 // Puedes usar este valor como desees.
                lbAVGTemp1.Text = promedio.ToString("0.0") + " °C";
-               lbCurrentSetpoint1.Text = setpoint.ToString("0.0")+ " °C";
+               lbCurrentSetpoint1.Text = setpointGoal.ToString("0.0")+ " °C";
             }
 
             chartZone1.ChartAreas[0].AxisX.Interval = 10;
@@ -1235,5 +1252,7 @@ namespace Apple_24_Zones.Forms
             lbTitleZone1.BackColor = Color.White;
             panelTitleZone1.BackColor = Color.White;
         }
+
+      
     }
 }

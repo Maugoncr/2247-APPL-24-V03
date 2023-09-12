@@ -356,6 +356,7 @@ namespace Apple_24_Zones.Forms
             this.picYellow = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.timerSimulationDownUp = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chartZone2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).BeginInit();
             this.panelZone2.SuspendLayout();
@@ -4210,6 +4211,11 @@ namespace Apple_24_Zones.Forms
             this.pictureBox2.TabIndex = 181;
             this.pictureBox2.TabStop = false;
             // 
+            // timerSimulationDownUp
+            // 
+            this.timerSimulationDownUp.Interval = 1000;
+            this.timerSimulationDownUp.Tick += new System.EventHandler(this.timerSimulationDownUp_Tick);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4598,5 +4604,6 @@ namespace Apple_24_Zones.Forms
         private TextBox txtPutSetpoint2;
         private Panel panel4;
         private Panel panel8;
+        private Timer timerSimulationDownUp;
     }
 }
