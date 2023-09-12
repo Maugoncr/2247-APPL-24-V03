@@ -1,10 +1,13 @@
 ﻿using Apple_24_Zones.Properties;
 using AppleSoftware.Forms;
+using CrystalDecisions.CrystalReports.Engine;
+using MidoriValveTest.Forms;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -1253,6 +1256,61 @@ namespace Apple_24_Zones.Forms
             panelTitleZone1.BackColor = Color.White;
         }
 
-      
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenerarReporte("Example");
+        }
+
+        private void GenerarReporte(string NombreReport)
+        {
+            // Llamar el aumentador del contador
+            //AumentarContadorReportesGenerados();
+
+            Bitmap screenCapture = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+            Graphics g = Graphics.FromImage(screenCapture);
+            g.CopyFromScreen(0, 0, 0, 0, screenCapture.Size);
+            string tempPath = Path.Combine(Path.GetTempPath(), "screenshot.jpg");
+            screenCapture.Save(tempPath, System.Drawing.Imaging.ImageFormat.Jpeg);
+            ReportDocument MiReporte = new ReportDocument();
+            FrmVisualizadorCrystalReport Visualizador = new FrmVisualizadorCrystalReport();
+
+            MiReporte.Load("../../Reports/RptCyclesComplete.rpt");
+            MiReporte.SetParameterValue("CompleteCycles", /*lbCountCycles.Text*/"XXXX");
+            MiReporte.SetParameterValue("GoalCycles", /*lbGoalCycles.Text*/"XXXX");
+            MiReporte.SetParameterValue("NameReport", NombreReport);
+            MiReporte.SetParameterValue("ImagePath", tempPath);
+
+           // string k = DateStartedTest.Text;
+            //string j = k.Replace("\n", " - ");
+
+            MiReporte.SetParameterValue("DateTimeStartedTest", /*j*/"XXXX");
+
+           // k = DateEndedTest.Text;
+           // j = k.Replace("\n", " - ");
+
+            MiReporte.SetParameterValue("DateTimeFinishTest", /*j*/"XXXX");
+
+            // if (TestToRun == 1)
+            //{
+            //    MiReporte.SetParameterValue("PhaseName", "[1] Pretest System Calibration");
+            //}
+            // else if (TestToRun == 2)
+            //{
+            //    MiReporte.SetParameterValue("PhaseName", "[2] Stability Test");
+            //}
+            //else if (TestToRun == 3)
+            //{
+            //    MiReporte.SetParameterValue("PhaseName", "[3] Valve Leak Test");
+            //}
+            //else
+            //{
+                MiReporte.SetParameterValue("PhaseName", "Phase not selected yet");
+            //}
+
+            Visualizador.crystalReportViewer1.ReportSource = MiReporte;
+            Visualizador.crystalReportViewer1.Zoom(85);
+            Visualizador.Show();
+        }
+
     }
 }
