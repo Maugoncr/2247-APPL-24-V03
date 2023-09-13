@@ -12,6 +12,7 @@ using System.IO.Ports;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Contexts;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -108,7 +109,7 @@ namespace Apple_24_Zones.Forms
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void FillChartZones(int which) 
+        private void FillChartZones(int which)
         {
             if (which == 1)
             {
@@ -292,7 +293,7 @@ namespace Apple_24_Zones.Forms
                 chartView.Series["T-11"].ChartType = SeriesChartType.Spline;
                 chartView.Series["T-12"].ChartType = SeriesChartType.Spline;
 
-               // chartView.Series["T-1"].BorderWidth = 2;
+                // chartView.Series["T-1"].BorderWidth = 2;
                 // Labels
 
                 lbZoneView.Text = "TEMP ZONE 1";
@@ -482,7 +483,7 @@ namespace Apple_24_Zones.Forms
             e.Graphics.DrawRectangle(borderPen, new Rectangle(0, 0, panel.Width - 1, panel.Height - 1));
         }
 
-      
+
 
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
@@ -497,7 +498,7 @@ namespace Apple_24_Zones.Forms
             FillChartZones(1);
             FillChartZones(2);
             FrmCargarDefault();
-           // timerSimulationCharts.Start();
+            // timerSimulationCharts.Start();
         }
 
         private void FrmCargarDefault()
@@ -634,7 +635,7 @@ namespace Apple_24_Zones.Forms
 
         private void InicializarComboboxes()
         {
-            comboBoxes = new List<ComboBox> { cbCOMSelect1, cbCOMSelect2};
+            comboBoxes = new List<ComboBox> { cbCOMSelect1, cbCOMSelect2 };
 
             // Suscribe al evento SelectedIndexChanged para todos los ComboBox
             foreach (ComboBox comboBox in comboBoxes)
@@ -793,37 +794,37 @@ namespace Apple_24_Zones.Forms
             return commandResult;
         }
 
-        private void ApagarChiller(int Adress) 
+        private void ApagarChiller(int Adress)
         {
             if (Adress == 0)
             {
-                    string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
-                    string[] hexBytesOn = commandOnChiller.Split(' ');
-                    byte[] binaryDataOn = new byte[hexBytesOn.Length];
-                    for (int i = 0; i < hexBytesOn.Length; i++)
-                    {
-                        binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
-                    }
-                    if (serialPort1.IsOpen)
-                    {
-                        serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
-                    }
-                    Thread.Sleep(1000);
+                string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
+                string[] hexBytesOn = commandOnChiller.Split(' ');
+                byte[] binaryDataOn = new byte[hexBytesOn.Length];
+                for (int i = 0; i < hexBytesOn.Length; i++)
+                {
+                    binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
+                }
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
+                }
+                Thread.Sleep(1000);
             }
             else if (Adress == 1)
             {
-                    string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
-                    string[] hexBytesOn = commandOnChiller.Split(' ');
-                    byte[] binaryDataOn = new byte[hexBytesOn.Length];
-                    for (int i = 0; i < hexBytesOn.Length; i++)
-                    {
-                        binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
-                    }
-                    if (serialPort2.IsOpen)
-                    {
-                        serialPort2.Write(binaryDataOn, 0, binaryDataOn.Length);
-                    }
-                    Thread.Sleep(1000);
+                string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
+                string[] hexBytesOn = commandOnChiller.Split(' ');
+                byte[] binaryDataOn = new byte[hexBytesOn.Length];
+                for (int i = 0; i < hexBytesOn.Length; i++)
+                {
+                    binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
+                }
+                if (serialPort2.IsOpen)
+                {
+                    serialPort2.Write(binaryDataOn, 0, binaryDataOn.Length);
+                }
+                Thread.Sleep(1000);
             }
         }
 
@@ -876,10 +877,10 @@ namespace Apple_24_Zones.Forms
                     byte[] bytes = { 4, 6, 33, 3, 0, 0, 115, 163 };
                     serialPort1.Write(bytes, 0, bytes.Length);
                     lbCurrentSetpoint2.Text = "0.0 °C";
-                 //   BanderaRespuestaParaTCS = false;
-                 //   Thread.Sleep(1000);
-                 //  SetConfigSerialPortForTCS();
-                 // Temporizador.Stop();
+                    //   BanderaRespuestaParaTCS = false;
+                    //   Thread.Sleep(1000);
+                    //  SetConfigSerialPortForTCS();
+                    // Temporizador.Stop();
                 }
             }
             else if (cbProcess2.SelectedIndex == 1)
@@ -949,8 +950,8 @@ namespace Apple_24_Zones.Forms
                 serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
             }
         }
-        
-            
+
+
         private void btnApplySetpoint1_Click(object sender, EventArgs e)
         {
             double determinarSiSubeOBaja = Convert.ToDouble(txtPutSetpoint1.Text);
@@ -2165,9 +2166,9 @@ namespace Apple_24_Zones.Forms
 
         private void btnApplySetpoint2_Click(object sender, EventArgs e)
         {
-            if (serialPort1.IsOpen) 
+            if (serialPort1.IsOpen)
             {
-                if (!string.IsNullOrEmpty(txtPutSetpoint2.Text.Trim())) 
+                if (!string.IsNullOrEmpty(txtPutSetpoint2.Text.Trim()))
                 {
                     if (Convert.ToInt32(txtPutSetpoint2.Text) >= 1 && Convert.ToInt32(txtPutSetpoint2.Text) <= 10)
                     {
@@ -2177,7 +2178,7 @@ namespace Apple_24_Zones.Forms
                     }
                     else
                     {
-                       MessageBox.Show("Out of range\nRange from 1°C to 10°C", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Out of range\nRange from 1°C to 10°C", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
             }
@@ -2187,7 +2188,7 @@ namespace Apple_24_Zones.Forms
         {
             if (cbProcess2.SelectedIndex == 0)
             {
-                ChangeProcessHeatingCoolingLED("Heating",2);
+                ChangeProcessHeatingCoolingLED("Heating", 2);
             }
             else if (cbProcess2.SelectedIndex == 1)
             {
@@ -2234,8 +2235,8 @@ namespace Apple_24_Zones.Forms
                     picHeating2.Image = Properties.Resources.ledRectangleOff;
                 }
             }
-        
-        
+
+
         }
 
         private void cbProcess1_SelectedIndexChanged(object sender, EventArgs e)
@@ -2345,8 +2346,8 @@ namespace Apple_24_Zones.Forms
 
                 // Ahora, "promedio" contiene el promedio de las temperaturas
                 // Puedes usar este valor como desees.
-               lbAVGTemp1.Text = promedio.ToString("0.0") + " °C";
-               lbCurrentSetpoint1.Text = setpointGoal.ToString("0.0")+ " °C";
+                lbAVGTemp1.Text = promedio.ToString("0.0") + " °C";
+                lbCurrentSetpoint1.Text = setpointGoal.ToString("0.0") + " °C";
             }
 
             chartZone1.ChartAreas[0].AxisX.Interval = 10;
@@ -2485,13 +2486,13 @@ namespace Apple_24_Zones.Forms
             MiReporte.SetParameterValue("NameReport", NombreReport);
             MiReporte.SetParameterValue("ImagePath", tempPath);
 
-           // string k = DateStartedTest.Text;
+            // string k = DateStartedTest.Text;
             //string j = k.Replace("\n", " - ");
 
             MiReporte.SetParameterValue("DateTimeStartedTest", /*j*/"XXXX");
 
-           // k = DateEndedTest.Text;
-           // j = k.Replace("\n", " - ");
+            // k = DateEndedTest.Text;
+            // j = k.Replace("\n", " - ");
 
             MiReporte.SetParameterValue("DateTimeFinishTest", /*j*/"XXXX");
 
@@ -2509,7 +2510,7 @@ namespace Apple_24_Zones.Forms
             //}
             //else
             //{
-                MiReporte.SetParameterValue("PhaseName", "Phase not selected yet");
+            MiReporte.SetParameterValue("PhaseName", "Phase not selected yet");
             //}
 
             Visualizador.crystalReportViewer1.ReportSource = MiReporte;
@@ -2522,6 +2523,7 @@ namespace Apple_24_Zones.Forms
             if (reconocerCOM(cbCOMSelect2.SelectedItem.ToString()))
             {
                 btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+                timerRequestTemps.Start();
             }
         }
 
@@ -2547,6 +2549,91 @@ namespace Apple_24_Zones.Forms
 
         }
 
+        private string TC1 = "";
 
+        private void serialPort2_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+
+            if (BanderaRespuestaParaTCS)
+            {
+                try
+                {
+                    int bytesToRead = serialPort1.BytesToRead;
+                    byte[] buffer = new byte[bytesToRead];
+                    serialPort1.Read(buffer, 0, bytesToRead);
+
+                    // Verifica si los datos recibidos no están vacíos
+                    if (bytesToRead > 0)
+                    {
+                        // Convierte los datos a una cadena hexadecimal
+                        string hexData = BitConverter.ToString(buffer).Replace("-", "");
+
+                        // Guarda la cadena hexadecimal en la variable "temp"
+                        TC1 = hexData;
+                        // Puedes realizar cualquier otro procesamiento con la variable "temp" según tus necesidades.
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+
+
+            
+        }
+
+        private void timerRequestTemps_Tick(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+                CycleRequestTemp();
+            }
+        }
+
+        private void CycleRequestTemp()
+        {
+            string hexCommand = "01 03 00 00 00 01 84 0A";
+
+            // string hexCommand = "CC 00 01 F0 02 00 C8 44";
+            string[] hexBytes = hexCommand.Split(' ');
+
+            byte[] binaryData = new byte[hexBytes.Length];
+
+            for (int i = 0; i < hexBytes.Length; i++)
+            {
+                binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+
+            }
+
+            if (serialPort1.IsOpen)
+            {
+                serialPort1.Write(binaryData, 0, binaryData.Length);
+                BanderaRespuestaParaTCS = true;
+            }
+        }
+
+        private void timerGraphChart_Tick(object sender, EventArgs e)
+        {
+            if (TC1.Length == 14)
+            {
+                //txtSend.Text = TC1.Substring(6, 4);
+
+                string hexa = TC1.Substring(6, 4);
+
+                long decimalValue = Convert.ToInt64(hexa, 16);
+
+                string decima = decimalValue.ToString();
+
+                if (decima.Length % 2 == 0 && decima.Length >= 2)
+                {
+                    int middleIndex = decima.Length / 2;
+                    StringBuilder sb = new StringBuilder(decima);
+                    sb.Insert(middleIndex, '.');
+                    string result = sb.ToString();
+                    lbAVGTemp2.Text = result + " °C";
+                }
+            }
+        }
     }
 }

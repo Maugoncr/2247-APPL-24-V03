@@ -357,6 +357,8 @@ namespace Apple_24_Zones.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timerSimulationDownUp = new System.Windows.Forms.Timer(this.components);
+            this.timerRequestTemps = new System.Windows.Forms.Timer(this.components);
+            this.timerGraphChart = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chartZone2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).BeginInit();
             this.panelZone2.SuspendLayout();
@@ -3823,6 +3825,10 @@ namespace Apple_24_Zones.Forms
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
+            // serialPort2
+            // 
+            this.serialPort2.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort2_DataReceived);
+            // 
             // panelControlZone1
             // 
             this.panelControlZone1.BackColor = System.Drawing.Color.DarkGray;
@@ -4218,6 +4224,15 @@ namespace Apple_24_Zones.Forms
             this.timerSimulationDownUp.Interval = 1000;
             this.timerSimulationDownUp.Tick += new System.EventHandler(this.timerSimulationDownUp_Tick);
             // 
+            // timerRequestTemps
+            // 
+            this.timerRequestTemps.Interval = 1000;
+            this.timerRequestTemps.Tick += new System.EventHandler(this.timerRequestTemps_Tick);
+            // 
+            // timerGraphChart
+            // 
+            this.timerGraphChart.Tick += new System.EventHandler(this.timerGraphChart_Tick);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4607,5 +4622,7 @@ namespace Apple_24_Zones.Forms
         private Panel panel4;
         private Panel panel8;
         private Timer timerSimulationDownUp;
+        private Timer timerRequestTemps;
+        private Timer timerGraphChart;
     }
 }

@@ -45,6 +45,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.txtComplete = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtSend
@@ -232,12 +233,20 @@
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // FrmChartTesting
+            // txtComplete
+            // 
+            this.txtComplete.Location = new System.Drawing.Point(566, 255);
+            this.txtComplete.Name = "txtComplete";
+            this.txtComplete.Size = new System.Drawing.Size(149, 20);
+            this.txtComplete.TabIndex = 14;
+            // 
+            // FrmModbus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtComplete);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -252,7 +261,7 @@
             this.Controls.Add(this.txtReceive);
             this.Controls.Add(this.txtSend);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmChartTesting";
+            this.Name = "FrmModbus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmChartTesting_FormClosing);
@@ -281,5 +290,6 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Button button3;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.TextBox txtComplete;
     }
 }

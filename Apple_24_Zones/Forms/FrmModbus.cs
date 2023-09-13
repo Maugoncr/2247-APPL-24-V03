@@ -76,8 +76,8 @@ namespace AppleSoftware.Forms
             {
                 // string hexCommand = "CC 00 01 F0 02 00 FA 12";
 
-                // Request Current Value
-                string hexCommand = "CC 00 01 20 00 DE";
+                //Request Current Value
+                string hexCommand = "01 03 00 00 00 01 84 0A";
 
                 // string hexCommand = "CC 00 01 F0 02 00 C8 44";
                 string[] hexBytes = hexCommand.Split(' ');
@@ -95,7 +95,9 @@ namespace AppleSoftware.Forms
                     serialPort1.Write(binaryData, 0, binaryData.Length);
                 }
 
-                //serialPort1.Write("CC0001F00200FA12");
+                // serialPort1.Write("#010\r");
+
+                //  serialPort1.WriteLine("01 03 00 00 00 01 84 0A");
 
                 // Binary
 
@@ -193,59 +195,42 @@ namespace AppleSoftware.Forms
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             // Hexa
-            if (e.EventType == SerialData.Eof)
-                return;
-
-            byte[] buffer = new byte[serialPort1.BytesToRead];
-            serialPort1.Read(buffer, 0, buffer.Length);
-
-            // Convierte los bytes hexadecimales a una cadena legible
-            string receivedData = BitConverter.ToString(buffer).Replace("-", " ");
-
-            // Muestra los datos en un control de Windows Forms (por ejemplo, un TextBox)
-            Invoke(new Action(() =>
-            {
-                txtReceive.AppendText(receivedData + Environment.NewLine);
-            }));
-
-            // Bytes
-
             //if (e.EventType == SerialData.Eof)
             //    return;
 
             //byte[] buffer = new byte[serialPort1.BytesToRead];
             //serialPort1.Read(buffer, 0, buffer.Length);
 
-            //// Convierte los bytes a una cadena utilizando UTF-8
-            //string receivedData = Encoding.UTF8.GetString(buffer);
+            //// Convierte los bytes hexadecimales a una cadena legible
+            //string receivedData = BitConverter.ToString(buffer).Replace("-", " ");
 
             //// Muestra los datos en un control de Windows Forms (por ejemplo, un TextBox)
             //Invoke(new Action(() =>
             //{
-            //    txtReceive.AppendText(receivedData);
+            //    txtReceive.AppendText(receivedData + Environment.NewLine);
             //}));
 
+            int bytesToRead = serialPort1.BytesToRead;
+            byte[] buffer = new byte[bytesToRead];
+            serialPort1.Read(buffer, 0, bytesToRead);
 
-            //if (serialPort1.IsOpen)
-            //{
-            //    try
-            //    {
+            // Verifica si los datos recibidos no están vacíos
+            if (bytesToRead > 0)
+            {
+                // Convierte los datos a una cadena hexadecimal
+                string hexData = BitConverter.ToString(buffer).Replace("-", "");
 
-            //       // txtReceive.Text = serialPort1.ReadExisting();
-            //        Thread.Sleep(1000);
-            //        if (!string.IsNullOrEmpty(serialPort1.ReadExisting()))
-            //        {
-            //            txtReceive.Text = serialPort1.ReadExisting();
-            //        }
-            //    }
-            //    catch (Exception)
-            //    {
+                // Guarda la cadena hexadecimal en la variable "temp"
+                temp = hexData;
 
-            //        throw;
-            //    }
-            //}
+                // Puedes realizar cualquier otro procesamiento con la variable "temp" según tus necesidades.
+            }
 
+            // Guarda la cadena hexadecimal en la variable "temp"
         }
+
+        private string temp = "";
+
         string T1 = "";
         string T2 = "";
         string T3 = "";
@@ -355,18 +340,28 @@ namespace AppleSoftware.Forms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            try
+            if (temp.Length == 14)
             {
-                if (serialPort1.IsOpen)
-                {
-                    txtReceive.Text += serialPort1.ReadExisting();
-                }
-            }
-            catch (Exception ex)
-            {
+                txtSend.Text = temp.Substring(6, 4);
 
-                MessageBox.Show(ex.Message);
+                string hexa = txtSend.Text;
+
+                long decimalValue = Convert.ToInt64(hexa, 16);
+
+                string decima = decimalValue.ToString();
+
+                if (decima.Length % 2 == 0 && decima.Length >= 2)
+                {
+                    int middleIndex = decima.Length / 2;
+                    StringBuilder sb = new StringBuilder(decima);
+                    sb.Insert(middleIndex, '.');
+                    string result = sb.ToString();
+                    txtSend.Text = result + " °C";
+                }
+
+                txtComplete.Text = temp;
             }
+
         }
 
         public static byte calculateLRC(byte[] bytes)
