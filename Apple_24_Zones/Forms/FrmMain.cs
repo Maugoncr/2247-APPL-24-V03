@@ -2175,6 +2175,10 @@ namespace Apple_24_Zones.Forms
                         double setpoint2 = Convert.ToDouble(txtPutSetpoint2.Text.ToString());
                         lbCurrentSetpoint2.Text = setpoint2.ToString("0.0") + " °C";
                     }
+                    else
+                    {
+                       MessageBox.Show("Out of range\nRange from 1°C to 10°C", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
             }
         }
