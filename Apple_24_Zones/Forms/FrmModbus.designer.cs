@@ -141,7 +141,6 @@
             // 
             // serialPort1
             // 
-            this.serialPort1.Parity = System.IO.Ports.Parity.Even;
             this.serialPort1.WriteTimeout = 100;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
