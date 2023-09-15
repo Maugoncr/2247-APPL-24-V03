@@ -520,25 +520,7 @@ namespace Apple_24_Zones.Forms
 
             //Reset Images
 
-            picCooling1.Image.Dispose();
-            picCooling2.Image.Dispose();
-            picHeating1.Image.Dispose();
-            picHeating2.Image.Dispose();
-            picRed.Image.Dispose();
-            picYellow.Image.Dispose();
-            picGreen.Image.Dispose();
-            picUpDown1.Image.Dispose();
-            picUpDown2.Image.Dispose();
-
-            picCooling1.Image = Resources.ledRectangleOff;
-            picCooling2.Image = Resources.ledRectangleOff;
-            picHeating1.Image = Resources.ledRectangleOff;
-            picHeating2.Image = Resources.ledRectangleOff;
-            picRed.Image = Resources.tc1off;
-            picYellow.Image = Resources.tc3off;
-            picGreen.Image = Resources.tc8off;
-            picUpDown1.Image = Resources.neutroWhite;
-            picUpDown2.Image = Resources.neutroWhite;
+          
 
             // Botones que deben venir por defecto desactivados
 
@@ -670,7 +652,7 @@ namespace Apple_24_Zones.Forms
                 // 2- Obtener el valor deseado en temperatura y hacerle el x10
                 if (double.TryParse(temperature, out double inputValue))
                 {
-                    lbCurrentSetpoint2.Text = inputValue.ToString();
+                    //lbCurrentSetpoint2.Text = inputValue.ToString();
                     double multipliedValue = inputValue * 10;
                     string hexValue = ((int)multipliedValue).ToString("X4"); // Formato hexadecimal con 4 caracteres
                     // 3 - Guardar el hexa de la temperatura
@@ -736,7 +718,7 @@ namespace Apple_24_Zones.Forms
                 // 2- Obtener el valor deseado en temperatura y hacerle el x10
                 if (double.TryParse(temperature, out double inputValue))
                 {
-                    lbCurrentSetpoint2.Text = inputValue.ToString();
+                  //  lbCurrentSetpoint2.Text = inputValue.ToString();
                     double multipliedValue = inputValue * 10;
                     string hexValue = ((int)multipliedValue).ToString("X4"); // Formato hexadecimal con 4 caracteres
                     // 3 - Guardar el hexa de la temperatura
@@ -867,7 +849,7 @@ namespace Apple_24_Zones.Forms
         private void iconButton4_Click(object sender, EventArgs e)
         {
 
-            if (cbProcess2.SelectedIndex == 0)
+           // if (cbProcess2.SelectedIndex == 0)
             {
                 if (serialPort1.IsOpen)
                 {
@@ -876,15 +858,15 @@ namespace Apple_24_Zones.Forms
                     serialPort1.DiscardOutBuffer();
                     byte[] bytes = { 4, 6, 33, 3, 0, 0, 115, 163 };
                     serialPort1.Write(bytes, 0, bytes.Length);
-                    lbCurrentSetpoint2.Text = "0.0 °C";
+                    //lbCurrentSetpoint2.Text = "0.0 °C";
                     //   BanderaRespuestaParaTCS = false;
                     //   Thread.Sleep(1000);
                     //  SetConfigSerialPortForTCS();
                     // Temporizador.Stop();
                 }
-            }
-            else if (cbProcess2.SelectedIndex == 1)
-            {
+         //   }
+           // else if (cbProcess2.SelectedIndex == 1)
+           // {
                 // 13- Apagar Chiller this command is correct? let me check
 
                 string commandOffChiller = "CC 00 01 81 08 00 02 02 02 02 02 02 02 67";
@@ -952,31 +934,31 @@ namespace Apple_24_Zones.Forms
         }
 
 
-        private void btnApplySetpoint1_Click(object sender, EventArgs e)
-        {
-            double determinarSiSubeOBaja = Convert.ToDouble(txtPutSetpoint1.Text);
+        //private void btnApplySetpoint1_Click(object sender, EventArgs e)
+        //{
+        //    double determinarSiSubeOBaja = Convert.ToDouble(txtPutSetpoint1.Text);
 
-            if (determinarSiSubeOBaja > setpoint)
-            {
-                // Vamos a calentar
-                picUpDown1.Image.Dispose();
-                picUpDown1.Image = Resources.arrowUpRed21;
-            }
-            else if (determinarSiSubeOBaja < setpoint)
-            {
-                // Vamos a enfriar
-                picUpDown1.Image.Dispose();
-                picUpDown1.Image = Resources.arrowDownBlue2;
-            }
-            else
-            {
-                picUpDown1.Image.Dispose();
-                picUpDown1.Image = Resources.neutroWhite;
-            }
+        //    if (determinarSiSubeOBaja > setpoint)
+        //    {
+        //        // Vamos a calentar
+        //        picUpDown1.Image.Dispose();
+        //        picUpDown1.Image = Resources.arrowUpRed21;
+        //    }
+        //    else if (determinarSiSubeOBaja < setpoint)
+        //    {
+        //        // Vamos a enfriar
+        //        picUpDown1.Image.Dispose();
+        //        picUpDown1.Image = Resources.arrowDownBlue2;
+        //    }
+        //    else
+        //    {
+        //        picUpDown1.Image.Dispose();
+        //        picUpDown1.Image = Resources.neutroWhite;
+        //    }
 
-            setpointGoal = determinarSiSubeOBaja;
-            timerSimulationDownUp.Start();
-        }
+        //    setpointGoal = determinarSiSubeOBaja;
+        //    timerSimulationDownUp.Start();
+        //}
 
         double setpointGoal = 25;
         private void timerSimulationDownUp_Tick(object sender, EventArgs e)
@@ -2174,7 +2156,7 @@ namespace Apple_24_Zones.Forms
                     {
                         SendSetTempHeaterAndTurnItOn();
                         double setpoint2 = Convert.ToDouble(txtPutSetpoint2.Text.ToString());
-                        lbCurrentSetpoint2.Text = setpoint2.ToString("0.0") + " °C";
+                        //lbCurrentSetpoint2.Text = setpoint2.ToString("0.0") + " °C";
                     }
                     else
                     {
@@ -2186,14 +2168,14 @@ namespace Apple_24_Zones.Forms
 
         private void cbProcess2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbProcess2.SelectedIndex == 0)
-            {
+          //  if (cbProcess2.SelectedIndex == 0)
+          //  {
                 ChangeProcessHeatingCoolingLED("Heating", 2);
-            }
-            else if (cbProcess2.SelectedIndex == 1)
-            {
+           // }
+          //  else if (cbProcess2.SelectedIndex == 1)
+          //  {
                 ChangeProcessHeatingCoolingLED("Cooling", 2);
-            }
+          //  }
         }
 
         private void ChangeProcessHeatingCoolingLED(string process, int which)
@@ -2203,18 +2185,18 @@ namespace Apple_24_Zones.Forms
             {
                 if (process == "Heating")
                 {
-                    picCooling1.Image.Dispose();
-                    picCooling1.Image = Properties.Resources.ledRectangleOff;
-                    picHeating1.Image.Dispose();
-                    picHeating1.Image = Properties.Resources.ledRectangleOn;
+                    //picCooling1.Image.Dispose();
+                    //picCooling1.Image = Properties.Resources.ledRectangleOff;
+                    //picHeating1.Image.Dispose();
+                    //picHeating1.Image = Properties.Resources.ledRectangleOn;
 
                 }
                 else if (process == "Cooling")
                 {
-                    picCooling1.Image.Dispose();
-                    picCooling1.Image = Properties.Resources.ledRectangleOn;
-                    picHeating1.Image.Dispose();
-                    picHeating1.Image = Properties.Resources.ledRectangleOff;
+                    //picCooling1.Image.Dispose();
+                    //picCooling1.Image = Properties.Resources.ledRectangleOn;
+                    //picHeating1.Image.Dispose();
+                    //picHeating1.Image = Properties.Resources.ledRectangleOff;
                 }
             }
             // Zone 2
@@ -2222,15 +2204,15 @@ namespace Apple_24_Zones.Forms
             {
                 if (process == "Heating")
                 {
-                    picCooling2.Image.Dispose();
-                    picCooling2.Image = Properties.Resources.ledRectangleOff;
+                  //  picCooling2.Image.Dispose();
+                   // picCooling2.Image = Properties.Resources.ledRectangleOff;
                     picHeating2.Image.Dispose();
                     picHeating2.Image = Properties.Resources.ledRectangleOn;
                 }
                 else if (process == "Cooling")
                 {
-                    picCooling2.Image.Dispose();
-                    picCooling2.Image = Properties.Resources.ledRectangleOn;
+                  //  picCooling2.Image.Dispose();
+                  //  picCooling2.Image = Properties.Resources.ledRectangleOn;
                     picHeating2.Image.Dispose();
                     picHeating2.Image = Properties.Resources.ledRectangleOff;
                 }
@@ -2239,17 +2221,6 @@ namespace Apple_24_Zones.Forms
 
         }
 
-        private void cbProcess1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbProcess1.SelectedIndex == 0)
-            {
-                ChangeProcessHeatingCoolingLED("Heating", 1);
-            }
-            else if (cbProcess1.SelectedIndex == 1)
-            {
-                ChangeProcessHeatingCoolingLED("Cooling", 1);
-            }
-        }
 
         private void TextBox_Paint(object sender, PaintEventArgs e)
         {
@@ -2346,8 +2317,8 @@ namespace Apple_24_Zones.Forms
 
                 // Ahora, "promedio" contiene el promedio de las temperaturas
                 // Puedes usar este valor como desees.
-                lbAVGTemp1.Text = promedio.ToString("0.0") + " °C";
-                lbCurrentSetpoint1.Text = setpointGoal.ToString("0.0") + " °C";
+                //lbAVGTemp1.Text = promedio.ToString("0.0") + " °C";
+              //  lbCurrentSetpoint1.Text = setpointGoal.ToString("0.0") + " °C";
             }
 
             chartZone1.ChartAreas[0].AxisX.Interval = 10;
@@ -2451,15 +2422,15 @@ namespace Apple_24_Zones.Forms
         private void panelControlZone1_MouseEnter(object sender, EventArgs e)
         {
             picDrawMachine.Image = Resources.draw11;
-            lbTitleZone1.BackColor = Color.Yellow;
-            panelTitleZone1.BackColor = Color.Yellow;
+          //  lbTitleZone1.BackColor = Color.Yellow;
+            //panelTitleZone1.BackColor = Color.Yellow;
         }
 
         private void panelControlZone1_MouseLeave(object sender, EventArgs e)
         {
             picDrawMachine.Image = Resources.drawOff1;
-            lbTitleZone1.BackColor = Color.White;
-            panelTitleZone1.BackColor = Color.White;
+            //lbTitleZone1.BackColor = Color.White;
+          //  panelTitleZone1.BackColor = Color.White;
         }
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2634,6 +2605,21 @@ namespace Apple_24_Zones.Forms
                     lbAVGTemp2.Text = result + " °C";
                 }
             }
+        }
+
+        private void panelBoth_Paint(object sender, PaintEventArgs e)
+        {
+            CreateBorderPanel(sender, e);
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+            CreateBorderPanel(sender, e);
+        }
+
+        private void panelControlZone1_Paint_1(object sender, PaintEventArgs e)
+        {
+            CreateBorderPanel(sender, e);
         }
     }
 }

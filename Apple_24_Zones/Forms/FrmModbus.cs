@@ -1,4 +1,4 @@
-﻿using EasyModbus;
+﻿//using EasyModbus;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ namespace AppleSoftware.Forms
     public partial class FrmModbus : Form
     {
 
-        ModbusClient modbusClient = new ModbusClient("COM3");
+        //ModbusClient modbusClient = new ModbusClient("COM3");
 
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
