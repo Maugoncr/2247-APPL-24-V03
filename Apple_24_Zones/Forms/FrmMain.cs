@@ -1314,7 +1314,7 @@ namespace Apple_24_Zones.Forms
                     // 5- Iniciar con el calculo del checkSum
                     // 6- Sumar la constante hex con hex Temperatura
                     //•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-                    string hexConstanteSumada = "F3";
+                    string hexConstanteSumada = "FA";
                     //•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
                     int intValue1 = Convert.ToInt32(hexConstanteSumada, 16);
                     int intValue2;
@@ -1392,7 +1392,7 @@ namespace Apple_24_Zones.Forms
                     // 5- Iniciar con el calculo del checkSum
                     // 6- Sumar la constante hex con hex Temperatura
                     //•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-                    string hexConstanteSumada = "F3";
+                    string hexConstanteSumada = "FB";
                     //•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
                     int intValue1 = Convert.ToInt32(hexConstanteSumada, 16);
                     int intValue2;
@@ -1479,7 +1479,7 @@ namespace Apple_24_Zones.Forms
                     else if (setpoint >= 5 && setpoint <= 20)
                     {
                         // Tenemos que enfriar
-                        SendCommandSetpointChiller(txtPutSetpoint1.Text, 9);
+                        SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
 
 
                     }
