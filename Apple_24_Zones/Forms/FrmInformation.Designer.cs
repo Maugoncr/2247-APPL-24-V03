@@ -40,6 +40,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnSaveNotes = new FontAwesome.Sharp.IconButton();
             this.btnDeleteNotes = new FontAwesome.Sharp.IconButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -190,12 +194,60 @@
             this.btnDeleteNotes.UseVisualStyleBackColor = false;
             this.btnDeleteNotes.Click += new System.EventHandler(this.btnDeleteNotes_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(664, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 16);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Ranges to use";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(592, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(179, 16);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "85 °C   -- Heating --  27 °C";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(625, 88);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(146, 16);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "26 °C   -- RT --  21 °C";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Cyan;
+            this.label7.Location = new System.Drawing.Point(601, 111);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(170, 16);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "20 °C   -- Cooling --  5 °C";
+            // 
             // FrmInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(787, 582);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDeleteNotes);
             this.Controls.Add(this.btnSaveNotes);
             this.Controls.Add(this.label4);
@@ -230,5 +282,9 @@
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconButton btnSaveNotes;
         private FontAwesome.Sharp.IconButton btnDeleteNotes;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
