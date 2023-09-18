@@ -1285,7 +1285,7 @@ namespace Apple_24_Zones.Forms
             serialPort1.DataBits = 8;
             serialPort1.Parity = Parity.None;
             serialPort1.StopBits = StopBits.One;
-            serialPort1.WriteTimeout = 100;
+            serialPort1.WriteTimeout = -1;
         }
 
         private void SendCommandSetpointChiller(string temperature, int adress)
