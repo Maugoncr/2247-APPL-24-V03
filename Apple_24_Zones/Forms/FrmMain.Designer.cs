@@ -137,7 +137,6 @@ namespace Apple_24_Zones.Forms
             this.lbDate = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
             this.label79 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.connectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -148,9 +147,16 @@ namespace Apple_24_Zones.Forms
             this.cSVFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelBoth = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.panelConexion = new System.Windows.Forms.Panel();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.cbCOMSelect2 = new System.Windows.Forms.ComboBox();
+            this.cbCOMSelect1 = new System.Windows.Forms.ComboBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -233,12 +239,6 @@ namespace Apple_24_Zones.Forms
             this.checkT2 = new System.Windows.Forms.CheckBox();
             this.label86 = new System.Windows.Forms.Label();
             this.checkT1 = new System.Windows.Forms.CheckBox();
-            this.panelConexion = new System.Windows.Forms.Panel();
-            this.label99 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.cbCOMSelect2 = new System.Windows.Forms.ComboBox();
-            this.cbCOMSelect1 = new System.Windows.Forms.ComboBox();
-            this.label32 = new System.Windows.Forms.Label();
             this.panelControlZone2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -357,11 +357,11 @@ namespace Apple_24_Zones.Forms
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panelBoth.SuspendLayout();
+            this.panelConexion.SuspendLayout();
             this.panelZone1.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panelConexion.SuspendLayout();
             this.panelControlZone2.SuspendLayout();
             this.panelTitleZone2.SuspendLayout();
             this.panelGhost.SuspendLayout();
@@ -1369,17 +1369,6 @@ namespace Apple_24_Zones.Forms
             this.label79.Text = "SOFTWARE  V.01.32";
             this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(1837, 1062);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
-            this.label1.TabIndex = 268;
-            this.label1.Text = "200-32271";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -1482,6 +1471,17 @@ namespace Apple_24_Zones.Forms
             this.reportsToolStripMenuItem.Text = "Reports";
             this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(1837, 1062);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.TabIndex = 268;
+            this.label1.Text = "200-32271";
+            // 
             // panelBoth
             // 
             this.panelBoth.BackColor = System.Drawing.Color.DimGray;
@@ -1522,6 +1522,82 @@ namespace Apple_24_Zones.Forms
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(1, 130);
             this.panel15.TabIndex = 317;
+            // 
+            // panelConexion
+            // 
+            this.panelConexion.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelConexion.Controls.Add(this.btnCloseConexionPanel);
+            this.panelConexion.Controls.Add(this.label99);
+            this.panelConexion.Controls.Add(this.label33);
+            this.panelConexion.Controls.Add(this.btnRefreshCOM2);
+            this.panelConexion.Controls.Add(this.btnConnectCOM2);
+            this.panelConexion.Controls.Add(this.cbCOMSelect2);
+            this.panelConexion.Controls.Add(this.btnRefreshCOM1);
+            this.panelConexion.Controls.Add(this.btnConnectCOM1);
+            this.panelConexion.Controls.Add(this.cbCOMSelect1);
+            this.panelConexion.Controls.Add(this.label32);
+            this.panelConexion.Location = new System.Drawing.Point(74, 246);
+            this.panelConexion.Name = "panelConexion";
+            this.panelConexion.Size = new System.Drawing.Size(518, 158);
+            this.panelConexion.TabIndex = 275;
+            this.panelConexion.Visible = false;
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.ForeColor = System.Drawing.Color.White;
+            this.label99.Location = new System.Drawing.Point(270, 52);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(117, 18);
+            this.label99.TabIndex = 117;
+            this.label99.Text = "Connection #2";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(17, 52);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(117, 18);
+            this.label33.TabIndex = 116;
+            this.label33.Text = "Connection #1";
+            // 
+            // cbCOMSelect2
+            // 
+            this.cbCOMSelect2.BackColor = System.Drawing.Color.SteelBlue;
+            this.cbCOMSelect2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCOMSelect2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCOMSelect2.ForeColor = System.Drawing.Color.White;
+            this.cbCOMSelect2.FormattingEnabled = true;
+            this.cbCOMSelect2.Location = new System.Drawing.Point(273, 74);
+            this.cbCOMSelect2.Name = "cbCOMSelect2";
+            this.cbCOMSelect2.Size = new System.Drawing.Size(206, 26);
+            this.cbCOMSelect2.TabIndex = 113;
+            // 
+            // cbCOMSelect1
+            // 
+            this.cbCOMSelect1.BackColor = System.Drawing.Color.SteelBlue;
+            this.cbCOMSelect1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCOMSelect1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCOMSelect1.ForeColor = System.Drawing.Color.White;
+            this.cbCOMSelect1.FormattingEnabled = true;
+            this.cbCOMSelect1.Location = new System.Drawing.Point(20, 73);
+            this.cbCOMSelect1.Name = "cbCOMSelect1";
+            this.cbCOMSelect1.Size = new System.Drawing.Size(206, 26);
+            this.cbCOMSelect1.TabIndex = 110;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(3, 14);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(166, 20);
+            this.label32.TabIndex = 1;
+            this.label32.Text = "Connection Section";
             // 
             // label6
             // 
@@ -2545,82 +2621,6 @@ namespace Apple_24_Zones.Forms
             this.checkT1.UseVisualStyleBackColor = true;
             this.checkT1.CheckedChanged += new System.EventHandler(this.checkT1_CheckedChanged);
             // 
-            // panelConexion
-            // 
-            this.panelConexion.BackColor = System.Drawing.Color.SteelBlue;
-            this.panelConexion.Controls.Add(this.btnCloseConexionPanel);
-            this.panelConexion.Controls.Add(this.label99);
-            this.panelConexion.Controls.Add(this.label33);
-            this.panelConexion.Controls.Add(this.btnRefreshCOM2);
-            this.panelConexion.Controls.Add(this.btnConnectCOM2);
-            this.panelConexion.Controls.Add(this.cbCOMSelect2);
-            this.panelConexion.Controls.Add(this.btnRefreshCOM1);
-            this.panelConexion.Controls.Add(this.btnConnectCOM1);
-            this.panelConexion.Controls.Add(this.cbCOMSelect1);
-            this.panelConexion.Controls.Add(this.label32);
-            this.panelConexion.Location = new System.Drawing.Point(74, 246);
-            this.panelConexion.Name = "panelConexion";
-            this.panelConexion.Size = new System.Drawing.Size(518, 158);
-            this.panelConexion.TabIndex = 275;
-            this.panelConexion.Visible = false;
-            // 
-            // label99
-            // 
-            this.label99.AutoSize = true;
-            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label99.ForeColor = System.Drawing.Color.White;
-            this.label99.Location = new System.Drawing.Point(270, 52);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(117, 18);
-            this.label99.TabIndex = 117;
-            this.label99.Text = "Connection #2";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(17, 52);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(117, 18);
-            this.label33.TabIndex = 116;
-            this.label33.Text = "Connection #1";
-            // 
-            // cbCOMSelect2
-            // 
-            this.cbCOMSelect2.BackColor = System.Drawing.Color.SteelBlue;
-            this.cbCOMSelect2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCOMSelect2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCOMSelect2.ForeColor = System.Drawing.Color.White;
-            this.cbCOMSelect2.FormattingEnabled = true;
-            this.cbCOMSelect2.Location = new System.Drawing.Point(273, 74);
-            this.cbCOMSelect2.Name = "cbCOMSelect2";
-            this.cbCOMSelect2.Size = new System.Drawing.Size(206, 26);
-            this.cbCOMSelect2.TabIndex = 113;
-            // 
-            // cbCOMSelect1
-            // 
-            this.cbCOMSelect1.BackColor = System.Drawing.Color.SteelBlue;
-            this.cbCOMSelect1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCOMSelect1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCOMSelect1.ForeColor = System.Drawing.Color.White;
-            this.cbCOMSelect1.FormattingEnabled = true;
-            this.cbCOMSelect1.Location = new System.Drawing.Point(20, 73);
-            this.cbCOMSelect1.Name = "cbCOMSelect1";
-            this.cbCOMSelect1.Size = new System.Drawing.Size(206, 26);
-            this.cbCOMSelect1.TabIndex = 110;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(3, 14);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(166, 20);
-            this.label32.TabIndex = 1;
-            this.label32.Text = "Connection Section";
-            // 
             // panelControlZone2
             // 
             this.panelControlZone2.BackColor = System.Drawing.Color.DarkGray;
@@ -2741,7 +2741,7 @@ namespace Apple_24_Zones.Forms
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.label67.ForeColor = System.Drawing.Color.Black;
-            this.label67.Location = new System.Drawing.Point(20, 92);
+            this.label67.Location = new System.Drawing.Point(20, 90);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(135, 20);
             this.label67.TabIndex = 295;
@@ -3610,7 +3610,7 @@ namespace Apple_24_Zones.Forms
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F);
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(180, 53);
             this.label9.Name = "label9";
@@ -3645,7 +3645,7 @@ namespace Apple_24_Zones.Forms
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(20, 92);
+            this.label11.Location = new System.Drawing.Point(20, 90);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(135, 20);
             this.label11.TabIndex = 295;
@@ -3707,7 +3707,7 @@ namespace Apple_24_Zones.Forms
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::Apple_24_Zones.Properties.Resources.STOP;
+            this.button2.BackgroundImage = global::Apple_24_Zones.Properties.Resources.STOP2;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -3806,7 +3806,7 @@ namespace Apple_24_Zones.Forms
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Apple_24_Zones.Properties.Resources.STOP;
+            this.button1.BackgroundImage = global::Apple_24_Zones.Properties.Resources.STOP2;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -4104,6 +4104,8 @@ namespace Apple_24_Zones.Forms
             this.menuStrip1.PerformLayout();
             this.panelBoth.ResumeLayout(false);
             this.panelBoth.PerformLayout();
+            this.panelConexion.ResumeLayout(false);
+            this.panelConexion.PerformLayout();
             this.panelZone1.ResumeLayout(false);
             this.panelZone1.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -4112,8 +4114,6 @@ namespace Apple_24_Zones.Forms
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panelConexion.ResumeLayout(false);
-            this.panelConexion.PerformLayout();
             this.panelControlZone2.ResumeLayout(false);
             this.panelControlZone2.PerformLayout();
             this.panelTitleZone2.ResumeLayout(false);

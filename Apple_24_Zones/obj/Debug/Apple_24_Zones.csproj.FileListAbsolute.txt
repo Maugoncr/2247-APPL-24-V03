@@ -118,3 +118,8 @@ C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zon
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.CopyComplete
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.exe
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.pdb
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\Apple_24_Zones.exe.manifest
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\Apple_24_Zones.application
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.TrustInfo.xml
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.exe.manifest
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.application
