@@ -32,22 +32,22 @@ namespace Apple_24_Zones.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series49 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series50 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series51 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series52 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series53 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series54 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series55 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series56 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series57 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series58 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series59 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series60 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea22 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea23 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea24 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series85 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series86 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series87 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series88 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series89 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series90 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series91 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series92 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series93 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series94 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series95 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series96 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
@@ -419,8 +419,8 @@ namespace Apple_24_Zones.Forms
             this.chartZone2.BorderlineColor = System.Drawing.Color.Gray;
             this.chartZone2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartZone2.BorderlineWidth = 2;
-            chartArea13.Name = "ChartArea1";
-            this.chartZone2.ChartAreas.Add(chartArea13);
+            chartArea22.Name = "ChartArea1";
+            this.chartZone2.ChartAreas.Add(chartArea22);
             this.chartZone2.Location = new System.Drawing.Point(10, 96);
             this.chartZone2.Name = "chartZone2";
             this.chartZone2.Size = new System.Drawing.Size(1212, 360);
@@ -432,13 +432,13 @@ namespace Apple_24_Zones.Forms
             this.chartZone1.BorderlineColor = System.Drawing.Color.Gray;
             this.chartZone1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartZone1.BorderlineWidth = 2;
-            chartArea14.InnerPlotPosition.Auto = false;
-            chartArea14.InnerPlotPosition.Height = 88.4641F;
-            chartArea14.InnerPlotPosition.Width = 93.2662F;
-            chartArea14.InnerPlotPosition.X = 6.11536F;
-            chartArea14.InnerPlotPosition.Y = 2.79255F;
-            chartArea14.Name = "ChartArea1";
-            this.chartZone1.ChartAreas.Add(chartArea14);
+            chartArea23.InnerPlotPosition.Auto = false;
+            chartArea23.InnerPlotPosition.Height = 88.4641F;
+            chartArea23.InnerPlotPosition.Width = 93.2662F;
+            chartArea23.InnerPlotPosition.X = 6.11536F;
+            chartArea23.InnerPlotPosition.Y = 2.79255F;
+            chartArea23.Name = "ChartArea1";
+            this.chartZone1.ChartAreas.Add(chartArea23);
             this.chartZone1.Location = new System.Drawing.Point(10, 588);
             this.chartZone1.Name = "chartZone1";
             this.chartZone1.Size = new System.Drawing.Size(1212, 360);
@@ -2852,6 +2852,7 @@ namespace Apple_24_Zones.Forms
             this.btnStop2.Size = new System.Drawing.Size(58, 23);
             this.btnStop2.TabIndex = 331;
             this.btnStop2.UseVisualStyleBackColor = false;
+            this.btnStop2.Click += new System.EventHandler(this.btnStop2_Click);
             // 
             // lbStartDate2
             // 
@@ -3691,72 +3692,72 @@ namespace Apple_24_Zones.Forms
             this.chartView.BorderlineColor = System.Drawing.Color.Gray;
             this.chartView.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartView.BorderlineWidth = 2;
-            chartArea15.Name = "ChartArea1";
-            this.chartView.ChartAreas.Add(chartArea15);
-            legend5.Name = "Legend1";
-            this.chartView.Legends.Add(legend5);
+            chartArea24.Name = "ChartArea1";
+            this.chartView.ChartAreas.Add(chartArea24);
+            legend8.Name = "Legend1";
+            this.chartView.Legends.Add(legend8);
             this.chartView.Location = new System.Drawing.Point(10, 140);
             this.chartView.Name = "chartView";
-            series49.ChartArea = "ChartArea1";
-            series49.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series49.Legend = "Legend1";
-            series49.Name = "T-13";
-            series50.ChartArea = "ChartArea1";
-            series50.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series50.Legend = "Legend1";
-            series50.Name = "T-14";
-            series51.ChartArea = "ChartArea1";
-            series51.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series51.Legend = "Legend1";
-            series51.Name = "T-15";
-            series52.ChartArea = "ChartArea1";
-            series52.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series52.Legend = "Legend1";
-            series52.Name = "T-16";
-            series53.ChartArea = "ChartArea1";
-            series53.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series53.Legend = "Legend1";
-            series53.Name = "T-17";
-            series54.ChartArea = "ChartArea1";
-            series54.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series54.Legend = "Legend1";
-            series54.Name = "T-18";
-            series55.ChartArea = "ChartArea1";
-            series55.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series55.Legend = "Legend1";
-            series55.Name = "T-19";
-            series56.ChartArea = "ChartArea1";
-            series56.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series56.Legend = "Legend1";
-            series56.Name = "TC-20";
-            series57.ChartArea = "ChartArea1";
-            series57.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series57.Legend = "Legend1";
-            series57.Name = "TC-21";
-            series58.ChartArea = "ChartArea1";
-            series58.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series58.Legend = "Legend1";
-            series58.Name = "TC-22";
-            series59.ChartArea = "ChartArea1";
-            series59.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series59.Legend = "Legend1";
-            series59.Name = "TC-23";
-            series60.ChartArea = "ChartArea1";
-            series60.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series60.Legend = "Legend1";
-            series60.Name = "TC-24";
-            this.chartView.Series.Add(series49);
-            this.chartView.Series.Add(series50);
-            this.chartView.Series.Add(series51);
-            this.chartView.Series.Add(series52);
-            this.chartView.Series.Add(series53);
-            this.chartView.Series.Add(series54);
-            this.chartView.Series.Add(series55);
-            this.chartView.Series.Add(series56);
-            this.chartView.Series.Add(series57);
-            this.chartView.Series.Add(series58);
-            this.chartView.Series.Add(series59);
-            this.chartView.Series.Add(series60);
+            series85.ChartArea = "ChartArea1";
+            series85.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series85.Legend = "Legend1";
+            series85.Name = "T-13";
+            series86.ChartArea = "ChartArea1";
+            series86.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series86.Legend = "Legend1";
+            series86.Name = "T-14";
+            series87.ChartArea = "ChartArea1";
+            series87.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series87.Legend = "Legend1";
+            series87.Name = "T-15";
+            series88.ChartArea = "ChartArea1";
+            series88.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series88.Legend = "Legend1";
+            series88.Name = "T-16";
+            series89.ChartArea = "ChartArea1";
+            series89.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series89.Legend = "Legend1";
+            series89.Name = "T-17";
+            series90.ChartArea = "ChartArea1";
+            series90.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series90.Legend = "Legend1";
+            series90.Name = "T-18";
+            series91.ChartArea = "ChartArea1";
+            series91.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series91.Legend = "Legend1";
+            series91.Name = "T-19";
+            series92.ChartArea = "ChartArea1";
+            series92.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series92.Legend = "Legend1";
+            series92.Name = "TC-20";
+            series93.ChartArea = "ChartArea1";
+            series93.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series93.Legend = "Legend1";
+            series93.Name = "TC-21";
+            series94.ChartArea = "ChartArea1";
+            series94.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series94.Legend = "Legend1";
+            series94.Name = "TC-22";
+            series95.ChartArea = "ChartArea1";
+            series95.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series95.Legend = "Legend1";
+            series95.Name = "TC-23";
+            series96.ChartArea = "ChartArea1";
+            series96.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series96.Legend = "Legend1";
+            series96.Name = "TC-24";
+            this.chartView.Series.Add(series85);
+            this.chartView.Series.Add(series86);
+            this.chartView.Series.Add(series87);
+            this.chartView.Series.Add(series88);
+            this.chartView.Series.Add(series89);
+            this.chartView.Series.Add(series90);
+            this.chartView.Series.Add(series91);
+            this.chartView.Series.Add(series92);
+            this.chartView.Series.Add(series93);
+            this.chartView.Series.Add(series94);
+            this.chartView.Series.Add(series95);
+            this.chartView.Series.Add(series96);
             this.chartView.Size = new System.Drawing.Size(1225, 803);
             this.chartView.TabIndex = 212;
             this.chartView.Text = "chart1";
@@ -3876,6 +3877,7 @@ namespace Apple_24_Zones.Forms
             this.btnStop1.Size = new System.Drawing.Size(58, 23);
             this.btnStop1.TabIndex = 331;
             this.btnStop1.UseVisualStyleBackColor = false;
+            this.btnStop1.Click += new System.EventHandler(this.btnStop1_Click);
             // 
             // lbStartDate1
             // 
@@ -4108,7 +4110,7 @@ namespace Apple_24_Zones.Forms
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(170, 16);
             this.label7.TabIndex = 327;
-            this.label7.Text = "20 °C   -- Cooling --  5 °C";
+            this.label7.Text = "5 °C   -- Cooling --  20 °C";
             // 
             // label8
             // 
@@ -4119,7 +4121,7 @@ namespace Apple_24_Zones.Forms
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(146, 16);
             this.label8.TabIndex = 326;
-            this.label8.Text = "26 °C   -- RT --  21 °C";
+            this.label8.Text = "21 °C   -- RT --  26 °C";
             // 
             // label9
             // 
@@ -4130,7 +4132,7 @@ namespace Apple_24_Zones.Forms
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(179, 16);
             this.label9.TabIndex = 325;
-            this.label9.Text = "85 °C   -- Heating --  27 °C";
+            this.label9.Text = "27 °C   -- Heating --  85 °C";
             // 
             // label13
             // 
