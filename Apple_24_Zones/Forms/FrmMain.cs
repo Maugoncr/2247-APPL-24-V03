@@ -1431,8 +1431,18 @@ namespace Apple_24_Zones.Forms
 
             if (which == 1)
             {
-                switch (txtPutSetpoint2.Text)
+                switch (txtPutSetpoint1.Text)
                 {
+                    case "0":
+                        hexCommand = "01 06 21 03 00 00 73 F6";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
                     case "25":
                         hexCommand = "01 06 21 03 00 19 B2 3C";
                         hexBytes = hexCommand.Split(' ');
