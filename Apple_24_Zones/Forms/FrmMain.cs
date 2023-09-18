@@ -1411,14 +1411,14 @@ namespace Apple_24_Zones.Forms
 
         private void btnApplySetpoint2_Click(object sender, EventArgs e)
         {
-            string input = txtPutSetpoint1.Text;
+            string input = txtPutSetpoint2.Text;
 
             if (int.TryParse(input, out int number))
             {
                 // Comprueba si el número está en el rango de 5 a 85
                 if (number >= 5 && number <= 85)
                 {
-                    int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
+                    int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
 
                     if (setpoint >= 27 && setpoint <= 85)
                     {
