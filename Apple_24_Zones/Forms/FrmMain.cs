@@ -667,130 +667,6 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        private void SendSetpointChiller(string Command, int Adress)
-        {
-            // 12- Pasar al lenguaje que entiende el chiller el comando
-            // 9600
-            // 8 bits, parity none
-            // writetimeout -1
-            if (Adress == 0)
-            {
-                string[] hexBytes = Command.Split(' ');
-                byte[] binaryData = new byte[hexBytes.Length];
-                for (int i = 0; i < hexBytes.Length; i++)
-                {
-                    binaryData[i] = Convert.ToByte(hexBytes[i], 16);
-
-                }
-                if (serialPort1.IsOpen)
-                {
-                    serialPort1.Write(binaryData, 0, binaryData.Length);
-                }
-            }
-            else if (Adress == 1)
-            {
-                string[] hexBytes = Command.Split(' ');
-                byte[] binaryData = new byte[hexBytes.Length];
-                for (int i = 0; i < hexBytes.Length; i++)
-                {
-                    binaryData[i] = Convert.ToByte(hexBytes[i], 16);
-
-                }
-                if (serialPort2.IsOpen)
-                {
-                    serialPort2.Write(binaryData, 0, binaryData.Length);
-                }
-            }
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-
-           // if (cbProcess2.SelectedIndex == 0)
-            {
-                if (serialPort1.IsOpen)
-                {
-                    SetConfigSerialPortForHeater();
-                    Thread.Sleep(1000);
-                    serialPort1.DiscardOutBuffer();
-                    byte[] bytes = { 4, 6, 33, 3, 0, 0, 115, 163 };
-                    serialPort1.Write(bytes, 0, bytes.Length);
-                    //lbCurrentSetpoint2.Text = "0.0 °C";
-                    //   BanderaRespuestaParaTCS = false;
-                    //   Thread.Sleep(1000);
-                    //  SetConfigSerialPortForTCS();
-                    // Temporizador.Stop();
-                }
-         //   }
-           // else if (cbProcess2.SelectedIndex == 1)
-           // {
-                // 13- Apagar Chiller this command is correct? let me check
-
-                string commandOffChiller = "CC 00 01 81 08 00 02 02 02 02 02 02 02 67";
-
-                string[] hexBytesOff = commandOffChiller.Split(' ');
-
-                byte[] binaryDataOff = new byte[hexBytesOff.Length];
-
-                for (int i = 0; i < hexBytesOff.Length; i++)
-                {
-                    binaryDataOff[i] = Convert.ToByte(hexBytesOff[i], 16);
-
-                }
-
-                if (serialPort1.IsOpen)
-                {
-                    serialPort1.Write(binaryDataOff, 0, binaryDataOff.Length);
-                }
-            }
-
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            // 13- Apagar Chiller this command is correct? let me check
-
-            string commandOffChiller = "CC 00 01 81 08 00 02 02 02 02 02 02 02 67";
-
-            string[] hexBytesOff = commandOffChiller.Split(' ');
-
-            byte[] binaryDataOff = new byte[hexBytesOff.Length];
-
-            for (int i = 0; i < hexBytesOff.Length; i++)
-            {
-                binaryDataOff[i] = Convert.ToByte(hexBytesOff[i], 16);
-
-            }
-
-            if (serialPort1.IsOpen)
-            {
-                serialPort1.Write(binaryDataOff, 0, binaryDataOff.Length);
-            }
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            // 13- Encender Chiller CC 00 01 81 08 01 02 02 02 02 02 02 02 66
-
-            string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
-
-            string[] hexBytesOn = commandOnChiller.Split(' ');
-
-            byte[] binaryDataOn = new byte[hexBytesOn.Length];
-
-            for (int i = 0; i < hexBytesOn.Length; i++)
-            {
-                binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
-
-            }
-
-            if (serialPort1.IsOpen)
-            {
-                serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
-            }
-        }
-
-
         //private void btnApplySetpoint1_Click(object sender, EventArgs e)
         //{
         //    double determinarSiSubeOBaja = Convert.ToDouble(txtPutSetpoint1.Text);
@@ -1044,19 +920,7 @@ namespace Apple_24_Zones.Forms
             panelTitleZone2.BackColor = Color.White;
         }
 
-        private void panelControlZone1_MouseEnter(object sender, EventArgs e)
-        {
-            picDrawMachine.Image = Resources.draw11;
-          //  lbTitleZone1.BackColor = Color.Yellow;
-            //panelTitleZone1.BackColor = Color.Yellow;
-        }
-
-        private void panelControlZone1_MouseLeave(object sender, EventArgs e)
-        {
-            picDrawMachine.Image = Resources.drawOff1;
-            //lbTitleZone1.BackColor = Color.White;
-          //  panelTitleZone1.BackColor = Color.White;
-        }
+       
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1116,10 +980,9 @@ namespace Apple_24_Zones.Forms
 
         private void btnConnectCOM2_Click(object sender, EventArgs e)
         {
-            if (reconocerCOMForComponents(cbCOMSelect2.SelectedItem.ToString()))
+            if (reconocerCOMTEMPS(cbCOMSelect2.SelectedItem.ToString()))
             {
                 btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
-                timerRequestTemps.Start();
             }
         }
 
@@ -1129,11 +992,29 @@ namespace Apple_24_Zones.Forms
             {
                 btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
             }
-
-           
-
-
            // timerSimulationCharts.Start();
+        }
+
+        private bool reconocerCOMTEMPS(string COM)
+        {
+            try
+            {
+                if (serialPort2.IsOpen)
+                {
+                    serialPort2.Close();
+                    return false;
+                }
+
+                serialPort2.PortName = COM;
+                serialPort2.Open();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        
         }
 
         private bool reconocerCOMForComponents(string COM)
@@ -2994,6 +2875,69 @@ namespace Apple_24_Zones.Forms
                 // Aquí puedes poner alguna acción si el usuario selecciona "No"
                 MessageBox.Show("Operation cancelled by the user", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            SetConfigSerialPortForChiller();
+
+            //string commandOnChiller = "CC 00 08 81 08 01 02 02 02 02 02 02 02 5F";
+
+            string commandOnChiller = "CC 00 09 81 08 01 02 02 02 02 02 02 02 5E";
+
+            // string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
+
+            string[] hexBytesOn = commandOnChiller.Split(' ');
+
+            byte[] binaryDataOn = new byte[hexBytesOn.Length];
+
+            for (int i = 0; i < hexBytesOn.Length; i++)
+            {
+                binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
+
+            }
+
+            if (serialPort1.IsOpen)
+            {
+                serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
+            }
+        }
+
+        private void iconButton2_Click_1(object sender, EventArgs e)
+        {
+            SetConfigSerialPortForChiller();
+
+            //string commandOffChiller = "CC 00 08 81 08 00 02 02 02 02 02 02 02 60";
+
+            string commandOffChiller = "CC 00 09 81 08 00 02 02 02 02 02 02 02 5F";
+
+            //string commandOffChiller = "CC 00 01 81 08 00 02 02 02 02 02 02 02 67";
+
+            string[] hexBytesOn = commandOffChiller.Split(' ');
+
+            byte[] binaryDataOn = new byte[hexBytesOn.Length];
+
+            for (int i = 0; i < hexBytesOn.Length; i++)
+            {
+                binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
+
+            }
+
+            if (serialPort1.IsOpen)
+            {
+                serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
+            }
+        }
+
+        private void timerRequestTemps_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            serialPort2.Write("#03");
         }
     }
 }
