@@ -32,6 +32,7 @@ namespace Apple_24_Zones.Forms
         public FrmMain()
         {
             InitializeComponent();
+            Control.CheckForIllegalCrossThreadCalls = false;
             InicializarComboboxes();
 
             txtView1.Paint += TextBox_Paint;
@@ -980,10 +981,23 @@ namespace Apple_24_Zones.Forms
 
         private void btnConnectCOM2_Click(object sender, EventArgs e)
         {
-            if (reconocerCOMTEMPS(cbCOMSelect2.SelectedItem.ToString()))
+            try
             {
+                serialPort2.PortName = cbCOMSelect2.Text;
+                serialPort2.Open();
                 btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+                serialPort2.DataReceived += new SerialDataReceivedEventHandler(serialPort2_DataReceived_1);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            //if (reconocerCOMTEMPS(cbCOMSelect2.SelectedItem.ToString()))
+            //{
+            //    btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+            //}
+           
         }
 
         private void btnConnectCOM1_Click(object sender, EventArgs e)
@@ -2937,7 +2951,55 @@ namespace Apple_24_Zones.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            serialPort2.Write("#03");
+            // WRITELINE X
+            // WRITE \R •
+            // WRITE \N X
+            // WRITE ENVIO.NEWLINE X
+
+            /* Medio funciono! pero sin respuesta!!!*/
+            try
+            {
+                serialPort2.BaudRate = 9600;
+                serialPort2.DataBits = 8;
+                serialPort2.StopBits = StopBits.One;
+                serialPort2.Parity = Parity.None;
+                serialPort2.ReceivedBytesThreshold = 44;
+
+                // ASCII Igual, Default Igual, UFT8 Igual
+
+                serialPort2.Encoding = Encoding.UTF8;
+
+                serialPort2.Write("#03" + "\r");
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
+
+        private void serialPort2_DataReceived_1(object sender, SerialDataReceivedEventArgs e)
+        {
+            int bytesToRead = serialPort2.BytesToRead;
+            byte[] buffer = new byte[bytesToRead];
+            serialPort2.Read(buffer, 0, bytesToRead);
+
+            //// Verifica si los datos recibidos no están vacíos
+            if (bytesToRead > 0)
+            {
+                // Convierte los datos a una cadena hexadecimal
+                string hexData = BitConverter.ToString(buffer).Replace("-", "");
+
+                // Guarda la cadena hexadecimal en la variable "temp"
+                responseModule03Address = hexData;
+                txtReceive.Clear();
+                txtReceive.Text = responseModule03Address;
+                // Puedes realizar cualquier otro procesamiento con la variable "temp" según tus necesidades.
+            }
+        }
+
+        string responseModule03Address;
+
     }
 }
