@@ -2993,13 +2993,101 @@ namespace Apple_24_Zones.Forms
 
                 // Guarda la cadena hexadecimal en la variable "temp"
                 responseModule03Address = hexData;
-                txtReceive.Clear();
-                txtReceive.Text = responseModule03Address;
+
+                ProcesarCadena(responseModule03Address);
+
                 // Puedes realizar cualquier otro procesamiento con la variable "temp" según tus necesidades.
             }
         }
 
         string responseModule03Address;
+        private string T1, T2, T3, T4, T5, T6;
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            ProcesarCadena(cosaADescifrar);
+        }
+
+        string cosaADescifrar = "3E2B3032352E31382B393939392E392B393939392E392B393939392E392B393939392E392B393939392E390D";
+
+        public void ProcesarCadena(string cadena)
+        {
+            // Bucle para buscar y procesar cada ocurrencia de "2B"
+            int currentIndex = 0;
+            int tCounter = 1;
+
+            while ((currentIndex = cadena.IndexOf("2B", currentIndex)) != -1)
+            {
+                // Asegúrate de que hay al menos 12 caracteres después de "2B"
+                if (currentIndex + 2 + 12 <= cadena.Length)
+                {
+                    // Extrae los 12 caracteres siguientes a "2B"
+                    string siguiente12Caracteres = cadena.Substring(currentIndex + 2, 12);
+
+                    // Asigna los caracteres a la variable correspondiente (T1, T2, ...)
+                    switch (tCounter)
+                    {
+                        case 1:
+                            T1 = siguiente12Caracteres;
+                            break;
+                        case 2:
+                            T2 = siguiente12Caracteres;
+                            break;
+                        case 3:
+                            T3 = siguiente12Caracteres;
+                            break;
+                        case 4:
+                            T4 = siguiente12Caracteres;
+                            break;
+                        case 5:
+                            T5 = siguiente12Caracteres;
+                            break;
+                        case 6:
+                            T6 = siguiente12Caracteres;
+                            break;
+                        default:
+                            break;
+                    }
+                    // Mueve el índice para buscar la siguiente ocurrencia de "2B"
+                    currentIndex += 14; // 2B + 12 caracteres
+                    tCounter++;
+                    // Si ya hemos almacenado en todas las variables, salimos del bucle
+                    if (tCounter > 6)
+                        break;
+                }
+                else
+                {
+                    // No hay suficientes caracteres después de "2B", salimos del bucle
+                    break;
+                }
+            }
+
+
+            txtReceive.Text = "T1: " + HexStringToAscii(T1) + "\nT2: " + HexStringToAscii(T2) + "\nT3: " + HexStringToAscii(T3) +
+                "\nT4: " + HexStringToAscii(T4) + "\nT5: " + HexStringToAscii(T5) + "\nT6: " + HexStringToAscii(T6);
+
+        }
+
+        public string HexStringToAscii(string hexString)
+        {
+            // Asegúrate de que la longitud de la cadena sea par
+            if (hexString.Length % 2 != 0)
+                throw new ArgumentException("La cadena hexadecimal debe tener una longitud par.");
+
+            // Convierte cada par de caracteres hexadecimales a un byte
+            byte[] bytes = new byte[hexString.Length / 2];
+            for (int i = 0; i < hexString.Length; i += 2)
+            {
+                bytes[i / 2] = Convert.ToByte(hexString.Substring(i, 2), 16);
+            }
+
+            // Convierte los bytes a una cadena ASCII
+            string asciiString = Encoding.ASCII.GetString(bytes);
+
+            return asciiString;
+        }
+
+
 
     }
 }

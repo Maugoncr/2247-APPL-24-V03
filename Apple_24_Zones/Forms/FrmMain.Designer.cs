@@ -357,7 +357,8 @@ namespace Apple_24_Zones.Forms
             this.label13 = new System.Windows.Forms.Label();
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
             this.button1 = new System.Windows.Forms.Button();
-            this.txtReceive = new System.Windows.Forms.TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.txtReceive = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).BeginInit();
             this.panelZone2.SuspendLayout();
@@ -2611,6 +2612,7 @@ namespace Apple_24_Zones.Forms
             // 
             this.panelConexion.BackColor = System.Drawing.Color.SteelBlue;
             this.panelConexion.Controls.Add(this.txtReceive);
+            this.panelConexion.Controls.Add(this.iconButton1);
             this.panelConexion.Controls.Add(this.button1);
             this.panelConexion.Controls.Add(this.btnCloseConexionPanel);
             this.panelConexion.Controls.Add(this.label99);
@@ -4153,24 +4155,35 @@ namespace Apple_24_Zones.Forms
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(292, 177);
+            this.button1.Location = new System.Drawing.Point(157, 170);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 58);
             this.button1.TabIndex = 291;
-            this.button1.Text = "Send #03";
+            this.button1.Text = "Request #03";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // iconButton1
+            // 
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(7, 397);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(49, 23);
+            this.iconButton1.TabIndex = 294;
+            this.iconButton1.Text = "Test";
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
             // txtReceive
             // 
-            this.txtReceive.BackColor = System.Drawing.Color.DimGray;
-            this.txtReceive.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceive.ForeColor = System.Drawing.Color.Lime;
-            this.txtReceive.Location = new System.Drawing.Point(62, 260);
-            this.txtReceive.Multiline = true;
+            this.txtReceive.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.txtReceive.Location = new System.Drawing.Point(62, 241);
             this.txtReceive.Name = "txtReceive";
-            this.txtReceive.Size = new System.Drawing.Size(371, 128);
-            this.txtReceive.TabIndex = 293;
+            this.txtReceive.Size = new System.Drawing.Size(371, 164);
+            this.txtReceive.TabIndex = 295;
+            this.txtReceive.Text = "";
             // 
             // FrmMain
             // 
@@ -4564,6 +4577,7 @@ namespace Apple_24_Zones.Forms
         private Label label13;
         private System.IO.Ports.SerialPort serialPort2;
         private Button button1;
-        private TextBox txtReceive;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private RichTextBox txtReceive;
     }
 }
