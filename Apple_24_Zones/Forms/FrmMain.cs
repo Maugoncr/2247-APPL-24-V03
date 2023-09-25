@@ -2954,22 +2954,45 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        // Banderas
+
+        bool sendAgainRequest = true;
+        int whichRequestToSend = 1;
+
         private void timerRequestTemps_Tick(object sender, EventArgs e)
         {
 
             try
             {
-                serialPort2.BaudRate = 9600;
-                serialPort2.DataBits = 8;
-                serialPort2.StopBits = StopBits.One;
-                serialPort2.Parity = Parity.None;
-                serialPort2.ReceivedBytesThreshold = 44;
+                if (sendAgainRequest)
+                {
+                    serialPort2.BaudRate = 9600;
+                    serialPort2.DataBits = 8;
+                    serialPort2.StopBits = StopBits.One;
+                    serialPort2.Parity = Parity.None;
+                    serialPort2.ReceivedBytesThreshold = 44;
+                    serialPort2.Encoding = Encoding.UTF8;
 
-                // ASCII Igual, Default Igual, UFT8 Igual
-
-                serialPort2.Encoding = Encoding.UTF8;
-
-                serialPort2.Write("#03" + "\r");
+                    switch (whichRequestToSend)
+                    {
+                        case 1:
+                            serialPort2.Write("#03" + "\r");
+                            sendAgainRequest = false;
+                            break;
+                        case 2:
+                            serialPort2.Write("#04" + "\r");
+                            sendAgainRequest = false;
+                            break;
+                        case 3:
+                            serialPort2.Write("#05" + "\r");
+                            sendAgainRequest = false;
+                            break;
+                        case 4:
+                            serialPort2.Write("#06" + "\r");
+                            sendAgainRequest = false;
+                            break;
+                    }
+                }
 
             }
             catch (Exception)
@@ -3013,22 +3036,21 @@ namespace Apple_24_Zones.Forms
             int bytesToRead = serialPort2.BytesToRead;
             byte[] buffer = new byte[bytesToRead];
             serialPort2.Read(buffer, 0, bytesToRead);
-
-            //// Verifica si los datos recibidos no están vacíos
+            // Verifica si los datos recibidos no están vacíos
             if (bytesToRead > 0)
             {
                 // Convierte los datos a una cadena hexadecimal
                 string hexData = BitConverter.ToString(buffer).Replace("-", "");
-
                 // Guarda la cadena hexadecimal en la variable "temp"
                 responseModule03Address = hexData;
-
                 ProcesarCadena(responseModule03Address);
             }
         }
 
         string responseModule03Address;
         private string T1, T2, T3, T4, T5, T6;
+
+        private string TF1, TF2, TF3, TF4, TF5, TF6, TF7, TF8, TF9, TF10, TF11, TF12, TF13, TF14, TF15, TF16, TF17, TF18, TF19, TF20, TF21, TF22, TF23, TF24;
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -3099,10 +3121,74 @@ namespace Apple_24_Zones.Forms
                 }
             }
 
+            switch (whichRequestToSend)
+            {
+                case 1:
+                    TF1 = T1;
+                    TF2 = T2;
+                    TF3 = T3;   
+                    TF4 = T4;
+                    TF5 = T5;
+                    TF6 = T6;
+                    whichRequestToSend = 2;
+                    sendAgainRequest = true;
+                    break;
+                    case 2:
+                    TF7 = T1;
+                    TF8 = T2;
+                    TF9 = T3;
+                    TF10 = T4;
+                    TF11 = T5;
+                    TF12 = T6;
+                    whichRequestToSend = 3;
+                    sendAgainRequest = true;
+                    break;
+                    case 3:
+                    TF13 = T1;
+                    TF14 = T2;
+                    TF15 = T3;
+                    TF16 = T4;
+                    TF17 = T5;
+                    TF18 = T6;
+                    whichRequestToSend = 4;
+                    sendAgainRequest = true;
+                    break;
+                    case 4:
+                    TF19 = T1;
+                    TF20 = T2;
+                    TF21 = T3;
+                    TF22 = T4;
+                    TF23 = T5;
+                    TF24 = T6;
+                    whichRequestToSend = 1;
+                    sendAgainRequest = true;
+                    break;
+            }
 
-            txtReceive.Text = "T1: " + HexStringToAscii(T1) + "\nT2: " + HexStringToAscii(T2) + "\nT3: " + HexStringToAscii(T3) +
-                "\nT4: " + HexStringToAscii(T4) + "\nT5: " + HexStringToAscii(T5) + "\nT6: " + HexStringToAscii(T6);
-
+            txtReceive.Text = "T1: " + HexStringToAscii(TF1) +
+                "T2: " + HexStringToAscii(TF2) + "\n" +
+                "T3: " + HexStringToAscii(TF3) +
+                "T4: " + HexStringToAscii(TF4) + "\n" +
+                "T5: " + HexStringToAscii(TF5) +
+                "T6: " + HexStringToAscii(TF6) + "\n" +
+                "T7: " + HexStringToAscii(TF7) +
+                "T8: " + HexStringToAscii(TF8) + "\n" +
+                "T9: " + HexStringToAscii(TF9) +
+                "T10: " + HexStringToAscii(TF10) + "\n" +
+                "T11: " + HexStringToAscii(TF11) +
+                "T12: " + HexStringToAscii(TF12) + "\n" +
+                "T13: " + HexStringToAscii(TF13) +
+                "T14: " + HexStringToAscii(TF14) + "\n" +
+                "T15: " + HexStringToAscii(TF15) +
+                "T16: " + HexStringToAscii(TF16) + "\n" +
+                "T17: " + HexStringToAscii(TF17) +
+                "T18: " + HexStringToAscii(TF18) + "\n" +
+                "T19: " + HexStringToAscii(TF19) +
+                "T20: " + HexStringToAscii(TF20) + "\n" +
+                "T21: " + HexStringToAscii(TF21) +
+                "T22: " + HexStringToAscii(TF22) + "\n" +
+                "T23: " + HexStringToAscii(TF23) +
+                "T24: " + HexStringToAscii(TF24);
         }
 
         public string HexStringToAscii(string hexString)
