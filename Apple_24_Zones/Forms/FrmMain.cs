@@ -824,9 +824,18 @@ namespace Apple_24_Zones.Forms
             }
 
             chartZone1.ChartAreas[0].AxisX.Interval = 10;
+            chartZone1.ChartAreas[0].AxisY.Interval = 10;
+
+
+            chartZone1.ChartAreas[0].BorderDashStyle = ChartDashStyle.Solid;
+            chartZone1.ChartAreas[0].BorderWidth = 2;
+            chartZone1.ChartAreas[0].BorderColor = Color.Black;
+
             chartZone1.ChartAreas[0].AxisY2.Maximum = Double.NaN;
             chartZone1.ChartAreas[0].AxisY2.Minimum = Double.NaN;
             chartZone1.ChartAreas[0].RecalculateAxesScale();
+
+
 
             if (chartZone1.Series["T-1"].Points.Count == 111)
             {
@@ -1005,8 +1014,9 @@ namespace Apple_24_Zones.Forms
             if (reconocerCOMForComponents(cbCOMSelect1.SelectedItem.ToString()))
             {
                 btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+                timerSimulationCharts.Start();
             }
-           // timerSimulationCharts.Start();
+
         }
 
         private bool reconocerCOMTEMPS(string COM)
@@ -2947,6 +2957,25 @@ namespace Apple_24_Zones.Forms
         private void timerRequestTemps_Tick(object sender, EventArgs e)
         {
 
+            try
+            {
+                serialPort2.BaudRate = 9600;
+                serialPort2.DataBits = 8;
+                serialPort2.StopBits = StopBits.One;
+                serialPort2.Parity = Parity.None;
+                serialPort2.ReceivedBytesThreshold = 44;
+
+                // ASCII Igual, Default Igual, UFT8 Igual
+
+                serialPort2.Encoding = Encoding.UTF8;
+
+                serialPort2.Write("#03" + "\r");
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -2995,13 +3024,21 @@ namespace Apple_24_Zones.Forms
                 responseModule03Address = hexData;
 
                 ProcesarCadena(responseModule03Address);
-
-                // Puedes realizar cualquier otro procesamiento con la variable "temp" según tus necesidades.
             }
         }
 
         string responseModule03Address;
         private string T1, T2, T3, T4, T5, T6;
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            timerRequestTemps.Stop();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            timerRequestTemps.Start();
+        }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
