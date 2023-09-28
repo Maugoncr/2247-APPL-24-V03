@@ -504,6 +504,20 @@ namespace Apple_24_Zones.Forms
 
         private void FrmCargarDefault()
         {
+
+            // Chart Settings
+
+            chartZone1.ChartAreas[0].AxisY.Interval = 10;
+
+            chartZone1.ChartAreas[0].AxisY.Maximum = 100;
+            chartZone1.ChartAreas[0].AxisY.Minimum = 0;
+
+            chartZone1.ChartAreas[0].AxisX.Minimum = 0;
+          
+
+            //chartZone1.Series["T-1"].Points.AddXY(temp.ToString(), "55");
+
+
             // Disconectar
 
             if (serialPort1.IsOpen)
@@ -823,21 +837,17 @@ namespace Apple_24_Zones.Forms
               //  lbCurrentSetpoint1.Text = setpointGoal.ToString("0.0") + " °C";
             }
 
-            chartZone1.ChartAreas[0].AxisX.Interval = 10;
-            chartZone1.ChartAreas[0].AxisY.Interval = 10;
+            //chartZone1.ChartAreas[0].AxisY.Interval = 10;
 
+            //chartZone1.ChartAreas[0].AxisY.Maximum = double.NaN;
+            //chartZone1.ChartAreas[0].AxisY.Minimum = 0;
+            //chartZone1.ChartAreas[0].AxisX.Minimum = 0;
 
-            chartZone1.ChartAreas[0].BorderDashStyle = ChartDashStyle.Solid;
-            chartZone1.ChartAreas[0].BorderWidth = 2;
-            chartZone1.ChartAreas[0].BorderColor = Color.Black;
-
-            chartZone1.ChartAreas[0].AxisY2.Maximum = Double.NaN;
-            chartZone1.ChartAreas[0].AxisY2.Minimum = Double.NaN;
             chartZone1.ChartAreas[0].RecalculateAxesScale();
 
 
 
-            if (chartZone1.Series["T-1"].Points.Count == 111)
+            if (chartZone1.Series["T-1"].Points.Count == 101)
             {
                 chartZone1.Series["T-1"].Points.RemoveAt(0);
                 chartZone1.Series["T-2"].Points.RemoveAt(0);
@@ -916,21 +926,6 @@ namespace Apple_24_Zones.Forms
             chartZone1.Series["T-12"].Enabled = checkT12.Checked ? true : false;
         }
 
-        private void panelControlZone2_MouseEnter(object sender, EventArgs e)
-        {
-            picDrawMachine.Image = Resources.draw21;
-            lbTitleZone2.BackColor = Color.Yellow;
-            panelTitleZone2.BackColor = Color.Yellow;
-        }
-
-        private void panelControlZone2_MouseLeave(object sender, EventArgs e)
-        {
-            picDrawMachine.Image = Resources.drawOff1;
-            lbTitleZone2.BackColor = Color.White;
-            panelTitleZone2.BackColor = Color.White;
-        }
-
-       
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1171,7 +1166,10 @@ namespace Apple_24_Zones.Forms
                         SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
 
 
-
+                        picUpDown1.Image.Dispose();
+                        picUpDown1.Image = Resources.arrowDownBlue2;
+                        picProcess1.Image.Dispose();
+                        picProcess1.Image = Resources.LedBlueCooling2;
                     }
                 }
                 else
@@ -1364,29 +1362,52 @@ namespace Apple_24_Zones.Forms
                 {
                     int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
 
+
+                    // HEATING
                     if (setpoint >= 27 && setpoint <= 85)
                     {
-                        // Tenemos que calentar
                         try
                         {
                             SendSetTempHeaterAndTurnItOn(2);
+
+                            picProcess2.Image.Dispose();
+                            picProcess2.Image = Resources.LedRedHeating2;
+                            picUpDown2.Image.Dispose();
+                            picUpDown2.Image = Resources.arrowUpRed21;
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+
+
+                    // NEUTRAL
                     else if (setpoint >= 21 && setpoint <= 26)
                     {
                         // Tenemos que dejar a temperatura ambiente
+                        picUpDown2.Image.Dispose();
+                        picUpDown2.Image = Resources.neutroWhite;
+                        picProcess2.Image.Dispose();
+                        picProcess2.Image = Resources.LedWhite1;
+
+
 
                     }
+
+
+
+                    // COOLING
                     else if (setpoint >= 5 && setpoint <= 20)
                     {
                         // Tenemos que enfriar
                         SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
 
 
+                        picUpDown2.Image.Dispose();
+                        picUpDown2.Image = Resources.arrowDownBlue2;
+                        picProcess2.Image.Dispose();
+                        picProcess2.Image = Resources.LedBlueCooling2;
                     }
                 }
                 else
@@ -2714,52 +2735,6 @@ namespace Apple_24_Zones.Forms
                         }
                         serialPort1.Write(binaryData, 0, binaryData.Length);
                         break;
-                    case "86":
-
-                        break;
-                    case "87":
-
-                        break;
-                    case "88":
-
-                        break;
-                    case "89":
-
-                        break;
-                    case "90":
-
-                        break;
-                    case "91":
-
-                        break;
-                    case "92":
-
-                        break;
-                    case "93":
-
-                        break;
-                    case "94":
-
-                        break;
-                    case "95":
-
-                        break;
-                    case "96":
-
-                        break;
-                    case "97":
-
-                        break;
-                    case "98":
-
-                        break;
-                    case "99":
-
-                        break;
-                    case "100":
-
-                        break;
-
                 }
             }
            
@@ -3051,6 +3026,57 @@ namespace Apple_24_Zones.Forms
         private string T1, T2, T3, T4, T5, T6;
 
         private string TF1, TF2, TF3, TF4, TF5, TF6, TF7, TF8, TF9, TF10, TF11, TF12, TF13, TF14, TF15, TF16, TF17, TF18, TF19, TF20, TF21, TF22, TF23, TF24;
+
+        bool toggleScaleZone1 = true;
+        private void btnScaleToggleZone1_Click(object sender, EventArgs e)
+        {
+            if (toggleScaleZone1)
+            {
+                chartZone1.ChartAreas[0].AxisY.Maximum = double.NaN;
+                chartZone1.ChartAreas[0].AxisY.Minimum = 0;
+                toggleScaleZone1 = false;           
+            }
+            else
+            {
+                chartZone1.ChartAreas[0].AxisY.Maximum = 100;
+                chartZone1.ChartAreas[0].AxisY.Minimum = 0;
+                toggleScaleZone1 = true;
+            }
+        }
+
+        private void panelControlZone1_MouseLeave(object sender, EventArgs e)
+        {
+            picDrawMachine.Image.Dispose();
+            picDrawMachine.Image = Resources.drawOff1;
+            lbTitleZone1.BackColor = Color.White;
+            panelTitleZone1.BackColor = Color.White;
+        }
+
+        private void panelControlZone1_MouseEnter(object sender, EventArgs e)
+        {
+            picDrawMachine.Image.Dispose();
+            picDrawMachine.Image = Resources.draw11;
+            lbTitleZone1.BackColor = Color.Yellow;
+            panelTitleZone1.BackColor = Color.Yellow;
+        }
+
+        private void panelControlZone2_MouseEnter(object sender, EventArgs e)
+        {
+            picDrawMachine.Image.Dispose();
+            picDrawMachine.Image = Resources.draw21;
+            lbTitleZone2.BackColor = Color.Yellow;
+            panelTitleZone2.BackColor = Color.Yellow;
+        }
+
+        private void panelControlZone2_MouseLeave(object sender, EventArgs e)
+        {
+            picDrawMachine.Image.Dispose();
+            picDrawMachine.Image = Resources.drawOff1;
+            lbTitleZone2.BackColor = Color.White;
+            panelTitleZone2.BackColor = Color.White;
+        }
+
+    
 
         private void button3_Click(object sender, EventArgs e)
         {

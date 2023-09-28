@@ -32,22 +32,25 @@ namespace Apple_24_Zones.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series49 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series50 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series51 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series52 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series53 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series54 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series55 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series56 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series57 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series58 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series59 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series60 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series33 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series34 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series35 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series36 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series37 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series38 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series39 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series40 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series41 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series42 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
@@ -153,6 +156,12 @@ namespace Apple_24_Zones.Forms
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.panelBoth = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -238,6 +247,8 @@ namespace Apple_24_Zones.Forms
             this.label86 = new System.Windows.Forms.Label();
             this.checkT1 = new System.Windows.Forms.CheckBox();
             this.panelConexion = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.txtReceive = new System.Windows.Forms.RichTextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.button1 = new System.Windows.Forms.Button();
@@ -336,14 +347,14 @@ namespace Apple_24_Zones.Forms
             this.btnStop1 = new System.Windows.Forms.Button();
             this.lbStartDate1 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.picUpDown1 = new System.Windows.Forms.PictureBox();
             this.txtPutSetpoint1 = new System.Windows.Forms.TextBox();
             this.txtCrono1 = new System.Windows.Forms.TextBox();
             this.btnApplySetpoint1 = new FontAwesome.Sharp.IconButton();
             this.picProcess1 = new System.Windows.Forms.PictureBox();
             this.lbAVGTemp1 = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.panelTitleZone1 = new System.Windows.Forms.Panel();
+            this.lbTitleZone1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -359,8 +370,10 @@ namespace Apple_24_Zones.Forms
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.panelaxisXZone1 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.btnScaleToggleZone1 = new FontAwesome.Sharp.IconButton();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).BeginInit();
             this.panelZone2.SuspendLayout();
@@ -384,9 +397,9 @@ namespace Apple_24_Zones.Forms
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartView)).BeginInit();
             this.panelControlZone1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProcess1)).BeginInit();
-            this.panel16.SuspendLayout();
+            this.panelTitleZone1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDrawMachine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGreen)).BeginInit();
@@ -424,8 +437,8 @@ namespace Apple_24_Zones.Forms
             this.chartZone2.BorderlineColor = System.Drawing.Color.Gray;
             this.chartZone2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartZone2.BorderlineWidth = 2;
-            chartArea13.Name = "ChartArea1";
-            this.chartZone2.ChartAreas.Add(chartArea13);
+            chartArea7.Name = "ChartArea1";
+            this.chartZone2.ChartAreas.Add(chartArea7);
             this.chartZone2.Location = new System.Drawing.Point(10, 96);
             this.chartZone2.Name = "chartZone2";
             this.chartZone2.Size = new System.Drawing.Size(1212, 360);
@@ -437,15 +450,37 @@ namespace Apple_24_Zones.Forms
             this.chartZone1.BorderlineColor = System.Drawing.Color.Gray;
             this.chartZone1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartZone1.BorderlineWidth = 2;
-            chartArea14.InnerPlotPosition.Auto = false;
-            chartArea14.InnerPlotPosition.Height = 88.4641F;
-            chartArea14.InnerPlotPosition.Width = 93.2662F;
-            chartArea14.InnerPlotPosition.X = 6.11536F;
-            chartArea14.InnerPlotPosition.Y = 2.79255F;
-            chartArea14.Name = "ChartArea1";
-            this.chartZone1.ChartAreas.Add(chartArea14);
+            chartArea8.AxisX.Interval = 10D;
+            chartArea8.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea8.AxisX.Maximum = 100D;
+            chartArea8.AxisX.Minimum = 0D;
+            chartArea8.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea8.AxisY.Interval = 10D;
+            chartArea8.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea8.AxisY.MinorTickMark.Enabled = true;
+            chartArea8.AxisY.MinorTickMark.Interval = 5D;
+            chartArea8.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea8.AxisY.MinorTickMark.Size = 0.6F;
+            chartArea8.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea8.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea8.BorderWidth = 0;
+            chartArea8.InnerPlotPosition.Auto = false;
+            chartArea8.InnerPlotPosition.Height = 88.4641F;
+            chartArea8.InnerPlotPosition.Width = 93.2662F;
+            chartArea8.InnerPlotPosition.X = 6.11536F;
+            chartArea8.InnerPlotPosition.Y = 2.79255F;
+            chartArea8.Name = "ChartArea1";
+            this.chartZone1.ChartAreas.Add(chartArea8);
             this.chartZone1.Location = new System.Drawing.Point(10, 588);
             this.chartZone1.Name = "chartZone1";
+            series29.ChartArea = "ChartArea1";
+            series29.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series29.Name = "Series1";
+            series30.ChartArea = "ChartArea1";
+            series30.Name = "Series2";
+            series30.Points.Add(dataPoint3);
+            this.chartZone1.Series.Add(series29);
+            this.chartZone1.Series.Add(series30);
             this.chartZone1.Size = new System.Drawing.Size(1212, 360);
             this.chartZone1.TabIndex = 238;
             this.chartZone1.Text = "chart1";
@@ -1551,6 +1586,16 @@ namespace Apple_24_Zones.Forms
             // panelBoth
             // 
             this.panelBoth.BackColor = System.Drawing.Color.DimGray;
+            this.panelBoth.Controls.Add(this.label15);
+            this.panelBoth.Controls.Add(this.btnScaleToggleZone1);
+            this.panelBoth.Controls.Add(this.panel20);
+            this.panelBoth.Controls.Add(this.panelaxisXZone1);
+            this.panelBoth.Controls.Add(this.panel18);
+            this.panelBoth.Controls.Add(this.panel19);
+            this.panelBoth.Controls.Add(this.label14);
+            this.panelBoth.Controls.Add(this.panel4);
+            this.panelBoth.Controls.Add(this.panel16);
+            this.panelBoth.Controls.Add(this.label10);
             this.panelBoth.Controls.Add(this.panel14);
             this.panelBoth.Controls.Add(this.panel15);
             this.panelBoth.Controls.Add(this.label6);
@@ -1569,6 +1614,66 @@ namespace Apple_24_Zones.Forms
             this.panelBoth.Size = new System.Drawing.Size(1320, 958);
             this.panelBoth.TabIndex = 271;
             this.panelBoth.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBoth_Paint);
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.Black;
+            this.panel18.ForeColor = System.Drawing.Color.Black;
+            this.panel18.Location = new System.Drawing.Point(672, 443);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(370, 1);
+            this.panel18.TabIndex = 325;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.Black;
+            this.panel19.ForeColor = System.Drawing.Color.Black;
+            this.panel19.Location = new System.Drawing.Point(222, 444);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(370, 1);
+            this.panel19.TabIndex = 324;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(602, 435);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(56, 16);
+            this.label14.TabIndex = 323;
+            this.label14.Text = "Time [s]";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.ForeColor = System.Drawing.Color.Teal;
+            this.panel4.Location = new System.Drawing.Point(44, 287);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 130);
+            this.panel4.TabIndex = 321;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.Black;
+            this.panel16.ForeColor = System.Drawing.Color.Teal;
+            this.panel16.Location = new System.Drawing.Point(44, 120);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(1, 130);
+            this.panel16.TabIndex = 320;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(34, 263);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(20, 16);
+            this.label10.TabIndex = 322;
+            this.label10.Text = "°C";
             // 
             // panel14
             // 
@@ -1594,11 +1699,11 @@ namespace Apple_24_Zones.Forms
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(34, 749);
+            this.label6.Location = new System.Drawing.Point(30, 749);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 16);
+            this.label6.Size = new System.Drawing.Size(28, 16);
             this.label6.TabIndex = 319;
-            this.label6.Text = "°C";
+            this.label6.Text = "[°C]";
             // 
             // panel11
             // 
@@ -2628,11 +2733,31 @@ namespace Apple_24_Zones.Forms
             this.panelConexion.Controls.Add(this.btnConnectCOM1);
             this.panelConexion.Controls.Add(this.cbCOMSelect1);
             this.panelConexion.Controls.Add(this.label32);
-            this.panelConexion.Location = new System.Drawing.Point(580, 78);
+            this.panelConexion.Location = new System.Drawing.Point(876, 79);
             this.panelConexion.Name = "panelConexion";
-            this.panelConexion.Size = new System.Drawing.Size(622, 531);
+            this.panelConexion.Size = new System.Drawing.Size(516, 158);
             this.panelConexion.TabIndex = 275;
             this.panelConexion.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(404, 204);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 298;
+            this.button3.Text = "stop";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(404, 172);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 297;
+            this.button2.Text = "start";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtReceive
             // 
@@ -2862,6 +2987,8 @@ namespace Apple_24_Zones.Forms
             this.btnUpSet2.TabIndex = 335;
             this.btnUpSet2.UseVisualStyleBackColor = false;
             this.btnUpSet2.Click += new System.EventHandler(this.btnUpSet2_Click);
+            this.btnUpSet2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.btnUpSet2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
             // 
             // btnDownSet2
             // 
@@ -2880,6 +3007,8 @@ namespace Apple_24_Zones.Forms
             this.btnDownSet2.TabIndex = 334;
             this.btnDownSet2.UseVisualStyleBackColor = false;
             this.btnDownSet2.Click += new System.EventHandler(this.btnDownSet2_Click);
+            this.btnDownSet2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.btnDownSet2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
             // 
             // btnStop2
             // 
@@ -2895,6 +3024,8 @@ namespace Apple_24_Zones.Forms
             this.btnStop2.TabIndex = 331;
             this.btnStop2.UseVisualStyleBackColor = false;
             this.btnStop2.Click += new System.EventHandler(this.btnStop2_Click);
+            this.btnStop2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.btnStop2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
             // 
             // lbStartDate2
             // 
@@ -2905,6 +3036,8 @@ namespace Apple_24_Zones.Forms
             this.lbStartDate2.Size = new System.Drawing.Size(249, 20);
             this.lbStartDate2.TabIndex = 330;
             this.lbStartDate2.Text = "Start DateTime: --/--/--  --:--";
+            this.lbStartDate2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.lbStartDate2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
             // 
             // panel8
             // 
@@ -3078,6 +3211,8 @@ namespace Apple_24_Zones.Forms
             this.lbC2.Size = new System.Drawing.Size(87, 56);
             this.lbC2.TabIndex = 337;
             this.lbC2.Text = "°C";
+            this.lbC2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.lbC2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
             // 
             // panelGhost
             // 
@@ -3734,72 +3869,72 @@ namespace Apple_24_Zones.Forms
             this.chartView.BorderlineColor = System.Drawing.Color.Gray;
             this.chartView.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartView.BorderlineWidth = 2;
-            chartArea15.Name = "ChartArea1";
-            this.chartView.ChartAreas.Add(chartArea15);
-            legend5.Name = "Legend1";
-            this.chartView.Legends.Add(legend5);
+            chartArea9.Name = "ChartArea1";
+            this.chartView.ChartAreas.Add(chartArea9);
+            legend3.Name = "Legend1";
+            this.chartView.Legends.Add(legend3);
             this.chartView.Location = new System.Drawing.Point(10, 140);
             this.chartView.Name = "chartView";
-            series49.ChartArea = "ChartArea1";
-            series49.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series49.Legend = "Legend1";
-            series49.Name = "T-13";
-            series50.ChartArea = "ChartArea1";
-            series50.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series50.Legend = "Legend1";
-            series50.Name = "T-14";
-            series51.ChartArea = "ChartArea1";
-            series51.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series51.Legend = "Legend1";
-            series51.Name = "T-15";
-            series52.ChartArea = "ChartArea1";
-            series52.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series52.Legend = "Legend1";
-            series52.Name = "T-16";
-            series53.ChartArea = "ChartArea1";
-            series53.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series53.Legend = "Legend1";
-            series53.Name = "T-17";
-            series54.ChartArea = "ChartArea1";
-            series54.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series54.Legend = "Legend1";
-            series54.Name = "T-18";
-            series55.ChartArea = "ChartArea1";
-            series55.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series55.Legend = "Legend1";
-            series55.Name = "T-19";
-            series56.ChartArea = "ChartArea1";
-            series56.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series56.Legend = "Legend1";
-            series56.Name = "TC-20";
-            series57.ChartArea = "ChartArea1";
-            series57.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series57.Legend = "Legend1";
-            series57.Name = "TC-21";
-            series58.ChartArea = "ChartArea1";
-            series58.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series58.Legend = "Legend1";
-            series58.Name = "TC-22";
-            series59.ChartArea = "ChartArea1";
-            series59.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series59.Legend = "Legend1";
-            series59.Name = "TC-23";
-            series60.ChartArea = "ChartArea1";
-            series60.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series60.Legend = "Legend1";
-            series60.Name = "TC-24";
-            this.chartView.Series.Add(series49);
-            this.chartView.Series.Add(series50);
-            this.chartView.Series.Add(series51);
-            this.chartView.Series.Add(series52);
-            this.chartView.Series.Add(series53);
-            this.chartView.Series.Add(series54);
-            this.chartView.Series.Add(series55);
-            this.chartView.Series.Add(series56);
-            this.chartView.Series.Add(series57);
-            this.chartView.Series.Add(series58);
-            this.chartView.Series.Add(series59);
-            this.chartView.Series.Add(series60);
+            series31.ChartArea = "ChartArea1";
+            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series31.Legend = "Legend1";
+            series31.Name = "T-13";
+            series32.ChartArea = "ChartArea1";
+            series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series32.Legend = "Legend1";
+            series32.Name = "T-14";
+            series33.ChartArea = "ChartArea1";
+            series33.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series33.Legend = "Legend1";
+            series33.Name = "T-15";
+            series34.ChartArea = "ChartArea1";
+            series34.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series34.Legend = "Legend1";
+            series34.Name = "T-16";
+            series35.ChartArea = "ChartArea1";
+            series35.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series35.Legend = "Legend1";
+            series35.Name = "T-17";
+            series36.ChartArea = "ChartArea1";
+            series36.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series36.Legend = "Legend1";
+            series36.Name = "T-18";
+            series37.ChartArea = "ChartArea1";
+            series37.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series37.Legend = "Legend1";
+            series37.Name = "T-19";
+            series38.ChartArea = "ChartArea1";
+            series38.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series38.Legend = "Legend1";
+            series38.Name = "TC-20";
+            series39.ChartArea = "ChartArea1";
+            series39.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series39.Legend = "Legend1";
+            series39.Name = "TC-21";
+            series40.ChartArea = "ChartArea1";
+            series40.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series40.Legend = "Legend1";
+            series40.Name = "TC-22";
+            series41.ChartArea = "ChartArea1";
+            series41.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series41.Legend = "Legend1";
+            series41.Name = "TC-23";
+            series42.ChartArea = "ChartArea1";
+            series42.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series42.Legend = "Legend1";
+            series42.Name = "TC-24";
+            this.chartView.Series.Add(series31);
+            this.chartView.Series.Add(series32);
+            this.chartView.Series.Add(series33);
+            this.chartView.Series.Add(series34);
+            this.chartView.Series.Add(series35);
+            this.chartView.Series.Add(series36);
+            this.chartView.Series.Add(series37);
+            this.chartView.Series.Add(series38);
+            this.chartView.Series.Add(series39);
+            this.chartView.Series.Add(series40);
+            this.chartView.Series.Add(series41);
+            this.chartView.Series.Add(series42);
             this.chartView.Size = new System.Drawing.Size(1225, 803);
             this.chartView.TabIndex = 212;
             this.chartView.Text = "chart1";
@@ -3850,13 +3985,13 @@ namespace Apple_24_Zones.Forms
             this.panelControlZone1.Controls.Add(this.btnStop1);
             this.panelControlZone1.Controls.Add(this.lbStartDate1);
             this.panelControlZone1.Controls.Add(this.panel9);
-            this.panelControlZone1.Controls.Add(this.pictureBox3);
+            this.panelControlZone1.Controls.Add(this.picUpDown1);
             this.panelControlZone1.Controls.Add(this.txtPutSetpoint1);
             this.panelControlZone1.Controls.Add(this.txtCrono1);
             this.panelControlZone1.Controls.Add(this.btnApplySetpoint1);
             this.panelControlZone1.Controls.Add(this.picProcess1);
             this.panelControlZone1.Controls.Add(this.lbAVGTemp1);
-            this.panelControlZone1.Controls.Add(this.panel16);
+            this.panelControlZone1.Controls.Add(this.panelTitleZone1);
             this.panelControlZone1.Controls.Add(this.label11);
             this.panelControlZone1.Controls.Add(this.panel17);
             this.panelControlZone1.Controls.Add(this.label12);
@@ -3866,6 +4001,8 @@ namespace Apple_24_Zones.Forms
             this.panelControlZone1.Size = new System.Drawing.Size(521, 331);
             this.panelControlZone1.TabIndex = 323;
             this.panelControlZone1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControlZone1_Paint_1);
+            this.panelControlZone1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.panelControlZone1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // btnUpSet1
             // 
@@ -3884,6 +4021,8 @@ namespace Apple_24_Zones.Forms
             this.btnUpSet1.TabIndex = 335;
             this.btnUpSet1.UseVisualStyleBackColor = false;
             this.btnUpSet1.Click += new System.EventHandler(this.btnUpSet1_Click);
+            this.btnUpSet1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.btnUpSet1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // btnDownSet1
             // 
@@ -3902,6 +4041,8 @@ namespace Apple_24_Zones.Forms
             this.btnDownSet1.TabIndex = 334;
             this.btnDownSet1.UseVisualStyleBackColor = false;
             this.btnDownSet1.Click += new System.EventHandler(this.btnDownSet1_Click);
+            this.btnDownSet1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.btnDownSet1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // btnStop1
             // 
@@ -3917,6 +4058,8 @@ namespace Apple_24_Zones.Forms
             this.btnStop1.TabIndex = 331;
             this.btnStop1.UseVisualStyleBackColor = false;
             this.btnStop1.Click += new System.EventHandler(this.btnStop1_Click);
+            this.btnStop1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.btnStop1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // lbStartDate1
             // 
@@ -3927,6 +4070,8 @@ namespace Apple_24_Zones.Forms
             this.lbStartDate1.Size = new System.Drawing.Size(249, 20);
             this.lbStartDate1.TabIndex = 330;
             this.lbStartDate1.Text = "Start DateTime: --/--/--  --:--";
+            this.lbStartDate1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.lbStartDate1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // panel9
             // 
@@ -3935,16 +4080,20 @@ namespace Apple_24_Zones.Forms
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(515, 4);
             this.panel9.TabIndex = 329;
+            this.panel9.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.panel9.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
-            // pictureBox3
+            // picUpDown1
             // 
-            this.pictureBox3.Image = global::Apple_24_Zones.Properties.Resources.arrowUpRed21;
-            this.pictureBox3.Location = new System.Drawing.Point(462, 153);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 300;
-            this.pictureBox3.TabStop = false;
+            this.picUpDown1.Image = global::Apple_24_Zones.Properties.Resources.arrowUpRed21;
+            this.picUpDown1.Location = new System.Drawing.Point(462, 153);
+            this.picUpDown1.Name = "picUpDown1";
+            this.picUpDown1.Size = new System.Drawing.Size(50, 50);
+            this.picUpDown1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUpDown1.TabIndex = 300;
+            this.picUpDown1.TabStop = false;
+            this.picUpDown1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.picUpDown1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // txtPutSetpoint1
             // 
@@ -3959,6 +4108,8 @@ namespace Apple_24_Zones.Forms
             this.txtPutSetpoint1.Text = "--";
             this.txtPutSetpoint1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPutSetpoint1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPutSetpoint1_KeyPress);
+            this.txtPutSetpoint1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.txtPutSetpoint1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // txtCrono1
             // 
@@ -3973,6 +4124,8 @@ namespace Apple_24_Zones.Forms
             this.txtCrono1.TabIndex = 325;
             this.txtCrono1.Text = "00:00:00:00";
             this.txtCrono1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCrono1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.txtCrono1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // btnApplySetpoint1
             // 
@@ -3993,6 +4146,8 @@ namespace Apple_24_Zones.Forms
             this.btnApplySetpoint1.Text = "    Enter";
             this.btnApplySetpoint1.UseVisualStyleBackColor = false;
             this.btnApplySetpoint1.Click += new System.EventHandler(this.btnApplySetpoint1_Click);
+            this.btnApplySetpoint1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.btnApplySetpoint1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // picProcess1
             // 
@@ -4004,6 +4159,8 @@ namespace Apple_24_Zones.Forms
             this.picProcess1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picProcess1.TabIndex = 319;
             this.picProcess1.TabStop = false;
+            this.picProcess1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.picProcess1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // lbAVGTemp1
             // 
@@ -4016,27 +4173,33 @@ namespace Apple_24_Zones.Forms
             this.lbAVGTemp1.TabIndex = 313;
             this.lbAVGTemp1.Text = "-- °C";
             this.lbAVGTemp1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbAVGTemp1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.lbAVGTemp1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
-            // panel16
+            // panelTitleZone1
             // 
-            this.panel16.BackColor = System.Drawing.Color.White;
-            this.panel16.Controls.Add(this.label10);
-            this.panel16.Location = new System.Drawing.Point(3, 3);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(515, 45);
-            this.panel16.TabIndex = 311;
+            this.panelTitleZone1.BackColor = System.Drawing.Color.White;
+            this.panelTitleZone1.Controls.Add(this.lbTitleZone1);
+            this.panelTitleZone1.Location = new System.Drawing.Point(3, 3);
+            this.panelTitleZone1.Name = "panelTitleZone1";
+            this.panelTitleZone1.Size = new System.Drawing.Size(515, 45);
+            this.panelTitleZone1.TabIndex = 311;
+            this.panelTitleZone1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.panelTitleZone1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
-            // label10
+            // lbTitleZone1
             // 
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(14, 5);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(482, 33);
-            this.label10.TabIndex = 309;
-            this.label10.Text = "Temp Zone 1";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTitleZone1.BackColor = System.Drawing.Color.White;
+            this.lbTitleZone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitleZone1.ForeColor = System.Drawing.Color.Black;
+            this.lbTitleZone1.Location = new System.Drawing.Point(14, 5);
+            this.lbTitleZone1.Name = "lbTitleZone1";
+            this.lbTitleZone1.Size = new System.Drawing.Size(482, 33);
+            this.lbTitleZone1.TabIndex = 309;
+            this.lbTitleZone1.Text = "Temp Zone 1";
+            this.lbTitleZone1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTitleZone1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.lbTitleZone1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // label11
             // 
@@ -4048,6 +4211,8 @@ namespace Apple_24_Zones.Forms
             this.label11.Size = new System.Drawing.Size(135, 20);
             this.label11.TabIndex = 295;
             this.label11.Text = "Average Temp:";
+            this.label11.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.label11.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // panel17
             // 
@@ -4056,6 +4221,8 @@ namespace Apple_24_Zones.Forms
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(515, 4);
             this.panel17.TabIndex = 291;
+            this.panel17.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.panel17.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // label12
             // 
@@ -4067,6 +4234,8 @@ namespace Apple_24_Zones.Forms
             this.label12.Size = new System.Drawing.Size(153, 20);
             this.label12.TabIndex = 288;
             this.label12.Text = "Current Setpoint:";
+            this.label12.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.label12.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // lbC1
             // 
@@ -4076,6 +4245,8 @@ namespace Apple_24_Zones.Forms
             this.lbC1.Size = new System.Drawing.Size(87, 56);
             this.lbC1.TabIndex = 336;
             this.lbC1.Text = "°C";
+            this.lbC1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.lbC1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // picDrawMachine
             // 
@@ -4189,25 +4360,55 @@ namespace Apple_24_Zones.Forms
             this.serialPort2.ReceivedBytesThreshold = 44;
             this.serialPort2.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort2_DataReceived_1);
             // 
-            // button2
+            // panelaxisXZone1
             // 
-            this.button2.Location = new System.Drawing.Point(404, 172);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 297;
-            this.button2.Text = "start";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.panelaxisXZone1.BackColor = System.Drawing.Color.Black;
+            this.panelaxisXZone1.ForeColor = System.Drawing.Color.Black;
+            this.panelaxisXZone1.Location = new System.Drawing.Point(104, 907);
+            this.panelaxisXZone1.Name = "panelaxisXZone1";
+            this.panelaxisXZone1.Size = new System.Drawing.Size(1075, 2);
+            this.panelaxisXZone1.TabIndex = 326;
             // 
-            // button3
+            // panel20
             // 
-            this.button3.Location = new System.Drawing.Point(404, 204);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 298;
-            this.button3.Text = "stop";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.panel20.BackColor = System.Drawing.Color.Black;
+            this.panel20.ForeColor = System.Drawing.Color.Black;
+            this.panel20.Location = new System.Drawing.Point(104, 607);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(1075, 2);
+            this.panel20.TabIndex = 327;
+            // 
+            // btnScaleToggleZone1
+            // 
+            this.btnScaleToggleZone1.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnScaleToggleZone1.FlatAppearance.BorderSize = 2;
+            this.btnScaleToggleZone1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScaleToggleZone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScaleToggleZone1.IconChar = FontAwesome.Sharp.IconChar.LineChart;
+            this.btnScaleToggleZone1.IconColor = System.Drawing.Color.Black;
+            this.btnScaleToggleZone1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnScaleToggleZone1.IconSize = 16;
+            this.btnScaleToggleZone1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScaleToggleZone1.Location = new System.Drawing.Point(14, 920);
+            this.btnScaleToggleZone1.Name = "btnScaleToggleZone1";
+            this.btnScaleToggleZone1.Size = new System.Drawing.Size(94, 24);
+            this.btnScaleToggleZone1.TabIndex = 328;
+            this.btnScaleToggleZone1.Text = "Toggle Scale";
+            this.btnScaleToggleZone1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnScaleToggleZone1.UseVisualStyleBackColor = false;
+            this.btnScaleToggleZone1.Click += new System.EventHandler(this.btnScaleToggleZone1_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(21, 733);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(43, 16);
+            this.label15.TabIndex = 329;
+            this.label15.Text = "Temp";
             // 
             // FrmMain
             // 
@@ -4278,9 +4479,9 @@ namespace Apple_24_Zones.Forms
             ((System.ComponentModel.ISupportInitialize)(this.chartView)).EndInit();
             this.panelControlZone1.ResumeLayout(false);
             this.panelControlZone1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProcess1)).EndInit();
-            this.panel16.ResumeLayout(false);
+            this.panelTitleZone1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picDrawMachine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGreen)).EndInit();
@@ -4582,14 +4783,14 @@ namespace Apple_24_Zones.Forms
         private Button btnStop1;
         private Label lbStartDate1;
         private Panel panel9;
-        private PictureBox pictureBox3;
+        private PictureBox picUpDown1;
         private TextBox txtPutSetpoint1;
         private TextBox txtCrono1;
         private FontAwesome.Sharp.IconButton btnApplySetpoint1;
         private PictureBox picProcess1;
         private Label lbAVGTemp1;
-        private Panel panel16;
-        private Label label10;
+        private Panel panelTitleZone1;
+        private Label lbTitleZone1;
         private Label label11;
         private Panel panel17;
         private Label label12;
@@ -4605,5 +4806,15 @@ namespace Apple_24_Zones.Forms
         private RichTextBox txtReceive;
         private Button button3;
         private Button button2;
+        private Panel panel18;
+        private Panel panel19;
+        private Label label14;
+        private Panel panel4;
+        private Panel panel16;
+        private Label label10;
+        private Panel panelaxisXZone1;
+        private Panel panel20;
+        private FontAwesome.Sharp.IconButton btnScaleToggleZone1;
+        private Label label15;
     }
 }
