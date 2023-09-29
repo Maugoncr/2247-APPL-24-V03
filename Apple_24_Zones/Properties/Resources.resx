@@ -121,29 +121,23 @@
   <data name="led_on_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\led_on_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tc8off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tc8off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="downArrowHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\downArrowHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coming-soon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coming-soon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LedRedHeating" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LedRedHeating.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="STOP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\STOP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="draw1and2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\draw1and2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="draw1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\draw1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrowDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrowDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="draw2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\draw2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LedWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LedWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="neutroWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\neutroWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +157,9 @@
   <data name="tc1off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tc1off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="draw21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\draw21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="upArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,23 +178,23 @@
   <data name="drawOff1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\drawOff1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LedRedHeating" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LedRedHeating.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tc1on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tc1on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tc3off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tc3off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MIDORI OFICIAL2 ORANGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MIDORI OFICIAL2 ORANGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LedBlueCooling" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LedBlueCooling.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tc1on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tc1on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrowDownBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrowDownBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="drawOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\drawOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bracket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bracket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LedRedHeating1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LedRedHeating1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,20 +205,23 @@
   <data name="arrowUpRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrowUpRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrowDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrowDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="draw1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\draw1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrowUpRed2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrowUpRed2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bracket2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bracket2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LedRedHeating2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LedRedHeating2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrowDownBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrowDownBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tc8off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tc8off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bracket" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bracket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LedWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LedWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="draw11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\draw11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,8 +232,8 @@
   <data name="arrowUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrowUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="draw21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\draw21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MIDORI OFICIAL2 ORANGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MIDORI OFICIAL2 ORANGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LedBlueCooling1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LedBlueCooling1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,11 +244,14 @@
   <data name="neutroYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\neutroYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="STOP2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\STOP2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="led_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\led_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bracket2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bracket2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="draw1and2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\draw1and2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MIDORI OFICIAL2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MIDORI OFICIAL2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,7 +262,7 @@
   <data name="tc3on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tc3on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="STOP2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\STOP2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="labelTempAxisY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\labelTempAxisY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

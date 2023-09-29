@@ -202,6 +202,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
+    <None Include="Resources\labelTempAxisY.png" />
     <None Include="Resources\LedBlueCooling2.png" />
     <None Include="Resources\LedRedHeating2.png" />
     <None Include="Resources\STOP.png" />

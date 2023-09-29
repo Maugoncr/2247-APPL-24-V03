@@ -32,29 +32,21 @@ namespace Apple_24_Zones.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series33 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series34 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series35 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series36 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series37 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series38 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series39 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series40 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series41 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series42 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
-            this.chartZone2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartZone1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label39 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -139,11 +131,7 @@ namespace Apple_24_Zones.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbDate = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label79 = new System.Windows.Forms.Label();
-            this.IconMinima = new FontAwesome.Sharp.IconButton();
-            this.IconMaxin = new FontAwesome.Sharp.IconButton();
-            this.IconClose = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.connectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -156,15 +144,17 @@ namespace Apple_24_Zones.Forms
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.panelBoth = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panelaxisXZone1 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -246,33 +236,22 @@ namespace Apple_24_Zones.Forms
             this.checkT2 = new System.Windows.Forms.CheckBox();
             this.label86 = new System.Windows.Forms.Label();
             this.checkT1 = new System.Windows.Forms.CheckBox();
+            this.chartZone2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panelConexion = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtReceive = new System.Windows.Forms.RichTextBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnCloseConexionPanel = new FontAwesome.Sharp.IconButton();
             this.label99 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.btnRefreshCOM2 = new FontAwesome.Sharp.IconButton();
-            this.btnConnectCOM2 = new FontAwesome.Sharp.IconButton();
             this.cbCOMSelect2 = new System.Windows.Forms.ComboBox();
-            this.btnRefreshCOM1 = new FontAwesome.Sharp.IconButton();
-            this.btnConnectCOM1 = new FontAwesome.Sharp.IconButton();
             this.cbCOMSelect1 = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.panelControlZone2 = new System.Windows.Forms.Panel();
-            this.btnUpSet2 = new FontAwesome.Sharp.IconButton();
-            this.btnDownSet2 = new FontAwesome.Sharp.IconButton();
-            this.btnStop2 = new System.Windows.Forms.Button();
             this.lbStartDate2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.picUpDown2 = new System.Windows.Forms.PictureBox();
             this.txtPutSetpoint2 = new System.Windows.Forms.TextBox();
             this.txtCrono2 = new System.Windows.Forms.TextBox();
-            this.btnApplySetpoint2 = new FontAwesome.Sharp.IconButton();
-            this.picProcess2 = new System.Windows.Forms.PictureBox();
             this.lbAVGTemp2 = new System.Windows.Forms.Label();
             this.panelTitleZone2 = new System.Windows.Forms.Panel();
             this.lbTitleZone2 = new System.Windows.Forms.Label();
@@ -333,7 +312,6 @@ namespace Apple_24_Zones.Forms
             this.lbView10 = new System.Windows.Forms.Label();
             this.lbView11 = new System.Windows.Forms.Label();
             this.lbView12 = new System.Windows.Forms.Label();
-            this.chartView = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.label73 = new System.Windows.Forms.Label();
             this.timerDateTime = new System.Windows.Forms.Timer(this.components);
@@ -342,16 +320,10 @@ namespace Apple_24_Zones.Forms
             this.timerRequestTemps = new System.Windows.Forms.Timer(this.components);
             this.timerGraphChart = new System.Windows.Forms.Timer(this.components);
             this.panelControlZone1 = new System.Windows.Forms.Panel();
-            this.btnUpSet1 = new FontAwesome.Sharp.IconButton();
-            this.btnDownSet1 = new FontAwesome.Sharp.IconButton();
-            this.btnStop1 = new System.Windows.Forms.Button();
             this.lbStartDate1 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.picUpDown1 = new System.Windows.Forms.PictureBox();
             this.txtPutSetpoint1 = new System.Windows.Forms.TextBox();
             this.txtCrono1 = new System.Windows.Forms.TextBox();
-            this.btnApplySetpoint1 = new FontAwesome.Sharp.IconButton();
-            this.picProcess1 = new System.Windows.Forms.PictureBox();
             this.lbAVGTemp1 = new System.Windows.Forms.Label();
             this.panelTitleZone1 = new System.Windows.Forms.Panel();
             this.lbTitleZone1 = new System.Windows.Forms.Label();
@@ -359,53 +331,88 @@ namespace Apple_24_Zones.Forms
             this.panel17 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.lbC1 = new System.Windows.Forms.Label();
-            this.picDrawMachine = new System.Windows.Forms.PictureBox();
-            this.picRed = new System.Windows.Forms.PictureBox();
-            this.picGreen = new System.Windows.Forms.PictureBox();
-            this.picYellow = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
-            this.panelaxisXZone1 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
+            this.btnUpSet1 = new FontAwesome.Sharp.IconButton();
+            this.btnDownSet1 = new FontAwesome.Sharp.IconButton();
+            this.btnStop1 = new System.Windows.Forms.Button();
+            this.picUpDown1 = new System.Windows.Forms.PictureBox();
+            this.btnApplySetpoint1 = new FontAwesome.Sharp.IconButton();
+            this.picProcess1 = new System.Windows.Forms.PictureBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnCloseConexionPanel = new FontAwesome.Sharp.IconButton();
+            this.btnRefreshCOM2 = new FontAwesome.Sharp.IconButton();
+            this.btnConnectCOM2 = new FontAwesome.Sharp.IconButton();
+            this.btnRefreshCOM1 = new FontAwesome.Sharp.IconButton();
+            this.btnConnectCOM1 = new FontAwesome.Sharp.IconButton();
+            this.picDrawMachine = new System.Windows.Forms.PictureBox();
+            this.btnUpSet2 = new FontAwesome.Sharp.IconButton();
+            this.btnDownSet2 = new FontAwesome.Sharp.IconButton();
+            this.btnStop2 = new System.Windows.Forms.Button();
+            this.picUpDown2 = new System.Windows.Forms.PictureBox();
+            this.btnApplySetpoint2 = new FontAwesome.Sharp.IconButton();
+            this.picProcess2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnScaleToggleZone2 = new FontAwesome.Sharp.IconButton();
             this.btnScaleToggleZone1 = new FontAwesome.Sharp.IconButton();
-            this.label15 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chartZone2)).BeginInit();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.IconMinima = new FontAwesome.Sharp.IconButton();
+            this.IconMaxin = new FontAwesome.Sharp.IconButton();
+            this.IconClose = new FontAwesome.Sharp.IconButton();
+            this.picRed = new System.Windows.Forms.PictureBox();
+            this.picGreen = new System.Windows.Forms.PictureBox();
+            this.picYellow = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.chartView = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnScaleToggleZoneViewSingle = new FontAwesome.Sharp.IconButton();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).BeginInit();
             this.panelZone2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panelBoth.SuspendLayout();
             this.panelZone1.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartZone2)).BeginInit();
             this.panelConexion.SuspendLayout();
             this.panelControlZone2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picProcess2)).BeginInit();
             this.panelTitleZone2.SuspendLayout();
             this.panelGhost.SuspendLayout();
             this.panelCheckView.SuspendLayout();
             this.panelViewZone.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartView)).BeginInit();
             this.panelControlZone1.SuspendLayout();
+            this.panelTitleZone1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProcess1)).BeginInit();
-            this.panelTitleZone1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDrawMachine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProcess2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picYellow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // lbFecha
@@ -432,55 +439,48 @@ namespace Apple_24_Zones.Forms
             this.lbHora.Text = "hora";
             this.lbHora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // chartZone2
-            // 
-            this.chartZone2.BorderlineColor = System.Drawing.Color.Gray;
-            this.chartZone2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            this.chartZone2.BorderlineWidth = 2;
-            chartArea7.Name = "ChartArea1";
-            this.chartZone2.ChartAreas.Add(chartArea7);
-            this.chartZone2.Location = new System.Drawing.Point(10, 96);
-            this.chartZone2.Name = "chartZone2";
-            this.chartZone2.Size = new System.Drawing.Size(1212, 360);
-            this.chartZone2.TabIndex = 212;
-            this.chartZone2.Text = "chart1";
-            // 
             // chartZone1
             // 
             this.chartZone1.BorderlineColor = System.Drawing.Color.Gray;
             this.chartZone1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartZone1.BorderlineWidth = 2;
-            chartArea8.AxisX.Interval = 10D;
-            chartArea8.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea8.AxisX.Maximum = 100D;
-            chartArea8.AxisX.Minimum = 0D;
-            chartArea8.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea8.AxisY.Interval = 10D;
-            chartArea8.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea8.AxisY.MinorTickMark.Enabled = true;
-            chartArea8.AxisY.MinorTickMark.Interval = 5D;
-            chartArea8.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea8.AxisY.MinorTickMark.Size = 0.6F;
-            chartArea8.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea8.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea8.BorderWidth = 0;
-            chartArea8.InnerPlotPosition.Auto = false;
-            chartArea8.InnerPlotPosition.Height = 88.4641F;
-            chartArea8.InnerPlotPosition.Width = 93.2662F;
-            chartArea8.InnerPlotPosition.X = 6.11536F;
-            chartArea8.InnerPlotPosition.Y = 2.79255F;
-            chartArea8.Name = "ChartArea1";
-            this.chartZone1.ChartAreas.Add(chartArea8);
+            chartArea4.AxisX.Interval = 10D;
+            chartArea4.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea4.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea4.AxisX.Maximum = 100D;
+            chartArea4.AxisX.Minimum = 0D;
+            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.AxisY.Interval = 10D;
+            chartArea4.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea4.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea4.AxisY.MinorTickMark.Enabled = true;
+            chartArea4.AxisY.MinorTickMark.Interval = 5D;
+            chartArea4.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea4.AxisY.MinorTickMark.Size = 0.6F;
+            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.BackColor = System.Drawing.Color.White;
+            chartArea4.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea4.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea4.BorderWidth = 0;
+            chartArea4.InnerPlotPosition.Auto = false;
+            chartArea4.InnerPlotPosition.Height = 88.4641F;
+            chartArea4.InnerPlotPosition.Width = 93.2662F;
+            chartArea4.InnerPlotPosition.X = 6.11536F;
+            chartArea4.InnerPlotPosition.Y = 2.79255F;
+            chartArea4.Name = "ChartArea1";
+            this.chartZone1.ChartAreas.Add(chartArea4);
             this.chartZone1.Location = new System.Drawing.Point(10, 588);
             this.chartZone1.Name = "chartZone1";
-            series29.ChartArea = "ChartArea1";
-            series29.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series29.Name = "Series1";
-            series30.ChartArea = "ChartArea1";
-            series30.Name = "Series2";
-            series30.Points.Add(dataPoint3);
-            this.chartZone1.Series.Add(series29);
-            this.chartZone1.Series.Add(series30);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Name = "Series1";
+            series8.ChartArea = "ChartArea1";
+            series8.Name = "Series2";
+            series8.Points.Add(dataPoint4);
+            this.chartZone1.Series.Add(series7);
+            this.chartZone1.Series.Add(series8);
             this.chartZone1.Size = new System.Drawing.Size(1212, 360);
             this.chartZone1.TabIndex = 238;
             this.chartZone1.Text = "chart1";
@@ -1401,16 +1401,6 @@ namespace Apple_24_Zones.Forms
             this.lbTime.Text = "hora";
             this.lbTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::Apple_24_Zones.Properties.Resources.MIDORI_LOGO_ICON_VERDE;
-            this.pictureBox12.Location = new System.Drawing.Point(50, 0);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(47, 37);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 290;
-            this.pictureBox12.TabStop = false;
-            // 
             // label79
             // 
             this.label79.AutoSize = true;
@@ -1424,51 +1414,6 @@ namespace Apple_24_Zones.Forms
             this.label79.TabIndex = 289;
             this.label79.Text = "SOFTWARE  V.01.32";
             this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // IconMinima
-            // 
-            this.IconMinima.FlatAppearance.BorderSize = 0;
-            this.IconMinima.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IconMinima.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.IconMinima.IconColor = System.Drawing.Color.White;
-            this.IconMinima.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IconMinima.IconSize = 30;
-            this.IconMinima.Location = new System.Drawing.Point(1815, 0);
-            this.IconMinima.Name = "IconMinima";
-            this.IconMinima.Size = new System.Drawing.Size(35, 28);
-            this.IconMinima.TabIndex = 275;
-            this.IconMinima.UseVisualStyleBackColor = true;
-            this.IconMinima.Click += new System.EventHandler(this.IconMinima_Click);
-            // 
-            // IconMaxin
-            // 
-            this.IconMaxin.FlatAppearance.BorderSize = 0;
-            this.IconMaxin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IconMaxin.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.IconMaxin.IconColor = System.Drawing.Color.White;
-            this.IconMaxin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IconMaxin.IconSize = 30;
-            this.IconMaxin.Location = new System.Drawing.Point(1850, 0);
-            this.IconMaxin.Name = "IconMaxin";
-            this.IconMaxin.Size = new System.Drawing.Size(35, 31);
-            this.IconMaxin.TabIndex = 274;
-            this.IconMaxin.UseVisualStyleBackColor = true;
-            this.IconMaxin.Click += new System.EventHandler(this.IconMaxin_Click);
-            // 
-            // IconClose
-            // 
-            this.IconClose.FlatAppearance.BorderSize = 0;
-            this.IconClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IconClose.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
-            this.IconClose.IconColor = System.Drawing.Color.White;
-            this.IconClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IconClose.IconSize = 30;
-            this.IconClose.Location = new System.Drawing.Point(1885, 0);
-            this.IconClose.Name = "IconClose";
-            this.IconClose.Size = new System.Drawing.Size(35, 31);
-            this.IconClose.TabIndex = 40;
-            this.IconClose.UseVisualStyleBackColor = true;
-            this.IconClose.Click += new System.EventHandler(this.IconClose_Click);
             // 
             // label3
             // 
@@ -1586,7 +1531,11 @@ namespace Apple_24_Zones.Forms
             // panelBoth
             // 
             this.panelBoth.BackColor = System.Drawing.Color.DimGray;
-            this.panelBoth.Controls.Add(this.label15);
+            this.panelBoth.Controls.Add(this.pictureBox4);
+            this.panelBoth.Controls.Add(this.pictureBox3);
+            this.panelBoth.Controls.Add(this.btnScaleToggleZone2);
+            this.panelBoth.Controls.Add(this.panel22);
+            this.panelBoth.Controls.Add(this.panel21);
             this.panelBoth.Controls.Add(this.btnScaleToggleZone1);
             this.panelBoth.Controls.Add(this.panel20);
             this.panelBoth.Controls.Add(this.panelaxisXZone1);
@@ -1595,10 +1544,8 @@ namespace Apple_24_Zones.Forms
             this.panelBoth.Controls.Add(this.label14);
             this.panelBoth.Controls.Add(this.panel4);
             this.panelBoth.Controls.Add(this.panel16);
-            this.panelBoth.Controls.Add(this.label10);
             this.panelBoth.Controls.Add(this.panel14);
             this.panelBoth.Controls.Add(this.panel15);
-            this.panelBoth.Controls.Add(this.label6);
             this.panelBoth.Controls.Add(this.panel11);
             this.panelBoth.Controls.Add(this.panel13);
             this.panelBoth.Controls.Add(this.label2);
@@ -1607,13 +1554,49 @@ namespace Apple_24_Zones.Forms
             this.panelBoth.Controls.Add(this.panel3);
             this.panelBoth.Controls.Add(this.panel2);
             this.panelBoth.Controls.Add(this.panelZone2);
-            this.panelBoth.Controls.Add(this.chartZone2);
             this.panelBoth.Controls.Add(this.chartZone1);
+            this.panelBoth.Controls.Add(this.chartZone2);
             this.panelBoth.Location = new System.Drawing.Point(566, 90);
             this.panelBoth.Name = "panelBoth";
             this.panelBoth.Size = new System.Drawing.Size(1320, 958);
             this.panelBoth.TabIndex = 271;
             this.panelBoth.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBoth_Paint);
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.Black;
+            this.panel22.ForeColor = System.Drawing.Color.Black;
+            this.panel22.Location = new System.Drawing.Point(104, 414);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(1075, 2);
+            this.panel22.TabIndex = 332;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.Black;
+            this.panel21.ForeColor = System.Drawing.Color.Black;
+            this.panel21.Location = new System.Drawing.Point(104, 115);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(1075, 2);
+            this.panel21.TabIndex = 331;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.Black;
+            this.panel20.ForeColor = System.Drawing.Color.Black;
+            this.panel20.Location = new System.Drawing.Point(104, 607);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(1075, 2);
+            this.panel20.TabIndex = 327;
+            // 
+            // panelaxisXZone1
+            // 
+            this.panelaxisXZone1.BackColor = System.Drawing.Color.Black;
+            this.panelaxisXZone1.ForeColor = System.Drawing.Color.Black;
+            this.panelaxisXZone1.Location = new System.Drawing.Point(104, 907);
+            this.panelaxisXZone1.Name = "panelaxisXZone1";
+            this.panelaxisXZone1.Size = new System.Drawing.Size(1075, 2);
+            this.panelaxisXZone1.TabIndex = 326;
             // 
             // panel18
             // 
@@ -1621,7 +1604,7 @@ namespace Apple_24_Zones.Forms
             this.panel18.ForeColor = System.Drawing.Color.Black;
             this.panel18.Location = new System.Drawing.Point(672, 443);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(370, 1);
+            this.panel18.Size = new System.Drawing.Size(370, 2);
             this.panel18.TabIndex = 325;
             // 
             // panel19
@@ -1630,18 +1613,18 @@ namespace Apple_24_Zones.Forms
             this.panel19.ForeColor = System.Drawing.Color.Black;
             this.panel19.Location = new System.Drawing.Point(222, 444);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(370, 1);
+            this.panel19.Size = new System.Drawing.Size(370, 2);
             this.panel19.TabIndex = 324;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(602, 435);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 16);
+            this.label14.Size = new System.Drawing.Size(64, 16);
             this.label14.TabIndex = 323;
             this.label14.Text = "Time [s]";
             // 
@@ -1649,9 +1632,9 @@ namespace Apple_24_Zones.Forms
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.ForeColor = System.Drawing.Color.Teal;
-            this.panel4.Location = new System.Drawing.Point(44, 287);
+            this.panel4.Location = new System.Drawing.Point(44, 325);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 130);
+            this.panel4.Size = new System.Drawing.Size(2, 90);
             this.panel4.TabIndex = 321;
             // 
             // panel16
@@ -1660,50 +1643,26 @@ namespace Apple_24_Zones.Forms
             this.panel16.ForeColor = System.Drawing.Color.Teal;
             this.panel16.Location = new System.Drawing.Point(44, 120);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(1, 130);
+            this.panel16.Size = new System.Drawing.Size(2, 80);
             this.panel16.TabIndex = 320;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(34, 263);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 16);
-            this.label10.TabIndex = 322;
-            this.label10.Text = "°C";
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.Black;
             this.panel14.ForeColor = System.Drawing.Color.Teal;
-            this.panel14.Location = new System.Drawing.Point(44, 773);
+            this.panel14.Location = new System.Drawing.Point(44, 820);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1, 130);
+            this.panel14.Size = new System.Drawing.Size(2, 90);
             this.panel14.TabIndex = 318;
             // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Black;
             this.panel15.ForeColor = System.Drawing.Color.Teal;
-            this.panel15.Location = new System.Drawing.Point(44, 606);
+            this.panel15.Location = new System.Drawing.Point(44, 615);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1, 130);
+            this.panel15.Size = new System.Drawing.Size(2, 80);
             this.panel15.TabIndex = 317;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(30, 749);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 16);
-            this.label6.TabIndex = 319;
-            this.label6.Text = "[°C]";
             // 
             // panel11
             // 
@@ -1711,7 +1670,7 @@ namespace Apple_24_Zones.Forms
             this.panel11.ForeColor = System.Drawing.Color.Black;
             this.panel11.Location = new System.Drawing.Point(672, 936);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(370, 1);
+            this.panel11.Size = new System.Drawing.Size(370, 2);
             this.panel11.TabIndex = 316;
             // 
             // panel13
@@ -1720,18 +1679,18 @@ namespace Apple_24_Zones.Forms
             this.panel13.ForeColor = System.Drawing.Color.Black;
             this.panel13.Location = new System.Drawing.Point(222, 937);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(370, 1);
+            this.panel13.Size = new System.Drawing.Size(370, 2);
             this.panel13.TabIndex = 315;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(602, 928);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 16);
+            this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 314;
             this.label2.Text = "Time [s]";
             // 
@@ -2065,7 +2024,7 @@ namespace Apple_24_Zones.Forms
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel3.BackColor = System.Drawing.Color.DarkGray;
             this.panel3.Controls.Add(this.label87);
             this.panel3.Controls.Add(this.checkT24);
             this.panel3.Controls.Add(this.label88);
@@ -2118,6 +2077,7 @@ namespace Apple_24_Zones.Forms
             this.checkT24.TabIndex = 264;
             this.checkT24.Text = "T-24";
             this.checkT24.UseVisualStyleBackColor = true;
+            this.checkT24.CheckedChanged += new System.EventHandler(this.checkT24_CheckedChanged);
             // 
             // label88
             // 
@@ -2142,6 +2102,7 @@ namespace Apple_24_Zones.Forms
             this.checkT23.TabIndex = 263;
             this.checkT23.Text = "T-23";
             this.checkT23.UseVisualStyleBackColor = true;
+            this.checkT23.CheckedChanged += new System.EventHandler(this.checkT23_CheckedChanged);
             // 
             // label89
             // 
@@ -2166,6 +2127,7 @@ namespace Apple_24_Zones.Forms
             this.checkT22.TabIndex = 262;
             this.checkT22.Text = "T-22";
             this.checkT22.UseVisualStyleBackColor = true;
+            this.checkT22.CheckedChanged += new System.EventHandler(this.checkT22_CheckedChanged);
             // 
             // label90
             // 
@@ -2190,6 +2152,7 @@ namespace Apple_24_Zones.Forms
             this.checkT21.TabIndex = 261;
             this.checkT21.Text = "T-21";
             this.checkT21.UseVisualStyleBackColor = true;
+            this.checkT21.CheckedChanged += new System.EventHandler(this.checkT21_CheckedChanged);
             // 
             // label91
             // 
@@ -2214,6 +2177,7 @@ namespace Apple_24_Zones.Forms
             this.checkT20.TabIndex = 260;
             this.checkT20.Text = "T-20";
             this.checkT20.UseVisualStyleBackColor = true;
+            this.checkT20.CheckedChanged += new System.EventHandler(this.checkT20_CheckedChanged);
             // 
             // label92
             // 
@@ -2238,6 +2202,7 @@ namespace Apple_24_Zones.Forms
             this.checkT19.TabIndex = 259;
             this.checkT19.Text = "T-19";
             this.checkT19.UseVisualStyleBackColor = true;
+            this.checkT19.CheckedChanged += new System.EventHandler(this.checkT19_CheckedChanged);
             // 
             // label93
             // 
@@ -2262,6 +2227,7 @@ namespace Apple_24_Zones.Forms
             this.checkT18.TabIndex = 258;
             this.checkT18.Text = "T-18";
             this.checkT18.UseVisualStyleBackColor = true;
+            this.checkT18.CheckedChanged += new System.EventHandler(this.checkT18_CheckedChanged);
             // 
             // label94
             // 
@@ -2286,6 +2252,7 @@ namespace Apple_24_Zones.Forms
             this.checkT17.TabIndex = 257;
             this.checkT17.Text = "T-17";
             this.checkT17.UseVisualStyleBackColor = true;
+            this.checkT17.CheckedChanged += new System.EventHandler(this.checkT17_CheckedChanged);
             // 
             // label95
             // 
@@ -2310,6 +2277,7 @@ namespace Apple_24_Zones.Forms
             this.checkT16.TabIndex = 256;
             this.checkT16.Text = "T-16";
             this.checkT16.UseVisualStyleBackColor = true;
+            this.checkT16.CheckedChanged += new System.EventHandler(this.checkT16_CheckedChanged);
             // 
             // label96
             // 
@@ -2334,6 +2302,7 @@ namespace Apple_24_Zones.Forms
             this.checkT15.TabIndex = 255;
             this.checkT15.Text = "T-15";
             this.checkT15.UseVisualStyleBackColor = true;
+            this.checkT15.CheckedChanged += new System.EventHandler(this.checkT15_CheckedChanged);
             // 
             // label97
             // 
@@ -2358,6 +2327,7 @@ namespace Apple_24_Zones.Forms
             this.checkT14.TabIndex = 254;
             this.checkT14.Text = "T-14";
             this.checkT14.UseVisualStyleBackColor = true;
+            this.checkT14.CheckedChanged += new System.EventHandler(this.checkT14_CheckedChanged);
             // 
             // label98
             // 
@@ -2382,10 +2352,11 @@ namespace Apple_24_Zones.Forms
             this.checkT13.TabIndex = 253;
             this.checkT13.Text = "T-13";
             this.checkT13.UseVisualStyleBackColor = true;
+            this.checkT13.CheckedChanged += new System.EventHandler(this.checkT13_CheckedChanged);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.BackColor = System.Drawing.Color.DarkGray;
             this.panel2.Controls.Add(this.label84);
             this.panel2.Controls.Add(this.checkT12);
             this.panel2.Controls.Add(this.label37);
@@ -2410,7 +2381,7 @@ namespace Apple_24_Zones.Forms
             this.panel2.Controls.Add(this.checkT2);
             this.panel2.Controls.Add(this.label86);
             this.panel2.Controls.Add(this.checkT1);
-            this.panel2.Location = new System.Drawing.Point(1224, 593);
+            this.panel2.Location = new System.Drawing.Point(1224, 588);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(90, 360);
             this.panel2.TabIndex = 265;
@@ -2715,6 +2686,50 @@ namespace Apple_24_Zones.Forms
             this.checkT1.UseVisualStyleBackColor = true;
             this.checkT1.CheckedChanged += new System.EventHandler(this.checkT1_CheckedChanged);
             // 
+            // chartZone2
+            // 
+            this.chartZone2.BorderlineColor = System.Drawing.Color.Gray;
+            this.chartZone2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.chartZone2.BorderlineWidth = 2;
+            chartArea5.AxisX.Interval = 10D;
+            chartArea5.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea5.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea5.AxisX.Maximum = 100D;
+            chartArea5.AxisX.Minimum = 0D;
+            chartArea5.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.AxisY.Interval = 10D;
+            chartArea5.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea5.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea5.AxisY.MinorTickMark.Enabled = true;
+            chartArea5.AxisY.MinorTickMark.Interval = 5D;
+            chartArea5.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea5.AxisY.MinorTickMark.Size = 0.6F;
+            chartArea5.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea5.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea5.BorderWidth = 0;
+            chartArea5.InnerPlotPosition.Auto = false;
+            chartArea5.InnerPlotPosition.Height = 88.4641F;
+            chartArea5.InnerPlotPosition.Width = 93.2662F;
+            chartArea5.InnerPlotPosition.X = 6.11536F;
+            chartArea5.InnerPlotPosition.Y = 2.79255F;
+            chartArea5.Name = "ChartArea1";
+            this.chartZone2.ChartAreas.Add(chartArea5);
+            this.chartZone2.Location = new System.Drawing.Point(10, 95);
+            this.chartZone2.Name = "chartZone2";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series9.Name = "Series1";
+            series10.ChartArea = "ChartArea1";
+            series10.Name = "Series2";
+            series10.Points.Add(dataPoint5);
+            this.chartZone2.Series.Add(series9);
+            this.chartZone2.Series.Add(series10);
+            this.chartZone2.Size = new System.Drawing.Size(1212, 360);
+            this.chartZone2.TabIndex = 333;
+            this.chartZone2.Text = "chart1";
+            // 
             // panelConexion
             // 
             this.panelConexion.BackColor = System.Drawing.Color.SteelBlue;
@@ -2768,19 +2783,6 @@ namespace Apple_24_Zones.Forms
             this.txtReceive.TabIndex = 295;
             this.txtReceive.Text = "";
             // 
-            // iconButton1
-            // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(9, 500);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(49, 23);
-            this.iconButton1.TabIndex = 294;
-            this.iconButton1.Text = "Test";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(157, 170);
@@ -2790,21 +2792,6 @@ namespace Apple_24_Zones.Forms
             this.button1.Text = "Request #03";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnCloseConexionPanel
-            // 
-            this.btnCloseConexionPanel.FlatAppearance.BorderSize = 0;
-            this.btnCloseConexionPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseConexionPanel.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
-            this.btnCloseConexionPanel.IconColor = System.Drawing.Color.White;
-            this.btnCloseConexionPanel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCloseConexionPanel.IconSize = 30;
-            this.btnCloseConexionPanel.Location = new System.Drawing.Point(483, 3);
-            this.btnCloseConexionPanel.Name = "btnCloseConexionPanel";
-            this.btnCloseConexionPanel.Size = new System.Drawing.Size(35, 31);
-            this.btnCloseConexionPanel.TabIndex = 290;
-            this.btnCloseConexionPanel.UseVisualStyleBackColor = true;
-            this.btnCloseConexionPanel.Click += new System.EventHandler(this.btnCloseConexionPanel_Click);
             // 
             // label99
             // 
@@ -2828,46 +2815,6 @@ namespace Apple_24_Zones.Forms
             this.label33.TabIndex = 116;
             this.label33.Text = "Connection #1";
             // 
-            // btnRefreshCOM2
-            // 
-            this.btnRefreshCOM2.FlatAppearance.BorderSize = 0;
-            this.btnRefreshCOM2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefreshCOM2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshCOM2.ForeColor = System.Drawing.Color.White;
-            this.btnRefreshCOM2.IconChar = FontAwesome.Sharp.IconChar.Repeat;
-            this.btnRefreshCOM2.IconColor = System.Drawing.Color.White;
-            this.btnRefreshCOM2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnRefreshCOM2.IconSize = 30;
-            this.btnRefreshCOM2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefreshCOM2.Location = new System.Drawing.Point(374, 106);
-            this.btnRefreshCOM2.Name = "btnRefreshCOM2";
-            this.btnRefreshCOM2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btnRefreshCOM2.Size = new System.Drawing.Size(117, 36);
-            this.btnRefreshCOM2.TabIndex = 115;
-            this.btnRefreshCOM2.Text = "          Refresh";
-            this.btnRefreshCOM2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefreshCOM2.UseVisualStyleBackColor = true;
-            // 
-            // btnConnectCOM2
-            // 
-            this.btnConnectCOM2.FlatAppearance.BorderSize = 0;
-            this.btnConnectCOM2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnectCOM2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnectCOM2.ForeColor = System.Drawing.Color.White;
-            this.btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
-            this.btnConnectCOM2.IconColor = System.Drawing.Color.White;
-            this.btnConnectCOM2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConnectCOM2.IconSize = 40;
-            this.btnConnectCOM2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnectCOM2.Location = new System.Drawing.Point(264, 106);
-            this.btnConnectCOM2.Name = "btnConnectCOM2";
-            this.btnConnectCOM2.Size = new System.Drawing.Size(116, 36);
-            this.btnConnectCOM2.TabIndex = 114;
-            this.btnConnectCOM2.Text = "           Connect";
-            this.btnConnectCOM2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnectCOM2.UseVisualStyleBackColor = true;
-            this.btnConnectCOM2.Click += new System.EventHandler(this.btnConnectCOM2_Click);
-            // 
             // cbCOMSelect2
             // 
             this.cbCOMSelect2.BackColor = System.Drawing.Color.SteelBlue;
@@ -2879,46 +2826,6 @@ namespace Apple_24_Zones.Forms
             this.cbCOMSelect2.Name = "cbCOMSelect2";
             this.cbCOMSelect2.Size = new System.Drawing.Size(206, 26);
             this.cbCOMSelect2.TabIndex = 113;
-            // 
-            // btnRefreshCOM1
-            // 
-            this.btnRefreshCOM1.FlatAppearance.BorderSize = 0;
-            this.btnRefreshCOM1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefreshCOM1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshCOM1.ForeColor = System.Drawing.Color.White;
-            this.btnRefreshCOM1.IconChar = FontAwesome.Sharp.IconChar.Repeat;
-            this.btnRefreshCOM1.IconColor = System.Drawing.Color.White;
-            this.btnRefreshCOM1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnRefreshCOM1.IconSize = 30;
-            this.btnRefreshCOM1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefreshCOM1.Location = new System.Drawing.Point(119, 104);
-            this.btnRefreshCOM1.Name = "btnRefreshCOM1";
-            this.btnRefreshCOM1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btnRefreshCOM1.Size = new System.Drawing.Size(117, 36);
-            this.btnRefreshCOM1.TabIndex = 112;
-            this.btnRefreshCOM1.Text = "          Refresh";
-            this.btnRefreshCOM1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefreshCOM1.UseVisualStyleBackColor = true;
-            // 
-            // btnConnectCOM1
-            // 
-            this.btnConnectCOM1.FlatAppearance.BorderSize = 0;
-            this.btnConnectCOM1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnectCOM1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnectCOM1.ForeColor = System.Drawing.Color.White;
-            this.btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
-            this.btnConnectCOM1.IconColor = System.Drawing.Color.White;
-            this.btnConnectCOM1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConnectCOM1.IconSize = 40;
-            this.btnConnectCOM1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnectCOM1.Location = new System.Drawing.Point(9, 104);
-            this.btnConnectCOM1.Name = "btnConnectCOM1";
-            this.btnConnectCOM1.Size = new System.Drawing.Size(116, 36);
-            this.btnConnectCOM1.TabIndex = 111;
-            this.btnConnectCOM1.Text = "           Connect";
-            this.btnConnectCOM1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnectCOM1.UseVisualStyleBackColor = true;
-            this.btnConnectCOM1.Click += new System.EventHandler(this.btnConnectCOM1_Click);
             // 
             // cbCOMSelect1
             // 
@@ -2962,70 +2869,13 @@ namespace Apple_24_Zones.Forms
             this.panelControlZone2.Controls.Add(this.panel5);
             this.panelControlZone2.Controls.Add(this.label68);
             this.panelControlZone2.Controls.Add(this.lbC2);
-            this.panelControlZone2.Location = new System.Drawing.Point(39, 90);
+            this.panelControlZone2.Location = new System.Drawing.Point(23, 90);
             this.panelControlZone2.Name = "panelControlZone2";
             this.panelControlZone2.Size = new System.Drawing.Size(521, 331);
             this.panelControlZone2.TabIndex = 291;
             this.panelControlZone2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControlZone2_Paint);
             this.panelControlZone2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
             this.panelControlZone2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
-            // 
-            // btnUpSet2
-            // 
-            this.btnUpSet2.BackColor = System.Drawing.Color.White;
-            this.btnUpSet2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnUpSet2.FlatAppearance.BorderSize = 2;
-            this.btnUpSet2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpSet2.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleUp;
-            this.btnUpSet2.IconColor = System.Drawing.Color.Black;
-            this.btnUpSet2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnUpSet2.IconSize = 30;
-            this.btnUpSet2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUpSet2.Location = new System.Drawing.Point(394, 135);
-            this.btnUpSet2.Name = "btnUpSet2";
-            this.btnUpSet2.Size = new System.Drawing.Size(40, 40);
-            this.btnUpSet2.TabIndex = 335;
-            this.btnUpSet2.UseVisualStyleBackColor = false;
-            this.btnUpSet2.Click += new System.EventHandler(this.btnUpSet2_Click);
-            this.btnUpSet2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
-            this.btnUpSet2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
-            // 
-            // btnDownSet2
-            // 
-            this.btnDownSet2.BackColor = System.Drawing.Color.White;
-            this.btnDownSet2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDownSet2.FlatAppearance.BorderSize = 2;
-            this.btnDownSet2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDownSet2.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleDown;
-            this.btnDownSet2.IconColor = System.Drawing.Color.Black;
-            this.btnDownSet2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnDownSet2.IconSize = 30;
-            this.btnDownSet2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDownSet2.Location = new System.Drawing.Point(394, 181);
-            this.btnDownSet2.Name = "btnDownSet2";
-            this.btnDownSet2.Size = new System.Drawing.Size(40, 40);
-            this.btnDownSet2.TabIndex = 334;
-            this.btnDownSet2.UseVisualStyleBackColor = false;
-            this.btnDownSet2.Click += new System.EventHandler(this.btnDownSet2_Click);
-            this.btnDownSet2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
-            this.btnDownSet2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
-            // 
-            // btnStop2
-            // 
-            this.btnStop2.BackColor = System.Drawing.Color.Transparent;
-            this.btnStop2.BackgroundImage = global::Apple_24_Zones.Properties.Resources.STOP2;
-            this.btnStop2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnStop2.FlatAppearance.BorderSize = 0;
-            this.btnStop2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStop2.Location = new System.Drawing.Point(458, 53);
-            this.btnStop2.Name = "btnStop2";
-            this.btnStop2.Size = new System.Drawing.Size(58, 23);
-            this.btnStop2.TabIndex = 331;
-            this.btnStop2.UseVisualStyleBackColor = false;
-            this.btnStop2.Click += new System.EventHandler(this.btnStop2_Click);
-            this.btnStop2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
-            this.btnStop2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
             // 
             // lbStartDate2
             // 
@@ -3048,18 +2898,6 @@ namespace Apple_24_Zones.Forms
             this.panel8.TabIndex = 329;
             this.panel8.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
             this.panel8.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
-            // 
-            // picUpDown2
-            // 
-            this.picUpDown2.Image = global::Apple_24_Zones.Properties.Resources.arrowDownBlue2;
-            this.picUpDown2.Location = new System.Drawing.Point(462, 153);
-            this.picUpDown2.Name = "picUpDown2";
-            this.picUpDown2.Size = new System.Drawing.Size(50, 50);
-            this.picUpDown2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUpDown2.TabIndex = 300;
-            this.picUpDown2.TabStop = false;
-            this.picUpDown2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
-            this.picUpDown2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
             // 
             // txtPutSetpoint2
             // 
@@ -3092,41 +2930,6 @@ namespace Apple_24_Zones.Forms
             this.txtCrono2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCrono2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
             this.txtCrono2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
-            // 
-            // btnApplySetpoint2
-            // 
-            this.btnApplySetpoint2.BackColor = System.Drawing.Color.White;
-            this.btnApplySetpoint2.FlatAppearance.BorderSize = 2;
-            this.btnApplySetpoint2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApplySetpoint2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.btnApplySetpoint2.ForeColor = System.Drawing.Color.Black;
-            this.btnApplySetpoint2.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            this.btnApplySetpoint2.IconColor = System.Drawing.Color.Black;
-            this.btnApplySetpoint2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnApplySetpoint2.IconSize = 25;
-            this.btnApplySetpoint2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnApplySetpoint2.Location = new System.Drawing.Point(244, 216);
-            this.btnApplySetpoint2.Name = "btnApplySetpoint2";
-            this.btnApplySetpoint2.Size = new System.Drawing.Size(107, 34);
-            this.btnApplySetpoint2.TabIndex = 316;
-            this.btnApplySetpoint2.Text = "    Enter";
-            this.btnApplySetpoint2.UseVisualStyleBackColor = false;
-            this.btnApplySetpoint2.Click += new System.EventHandler(this.btnApplySetpoint2_Click);
-            this.btnApplySetpoint2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
-            this.btnApplySetpoint2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
-            // 
-            // picProcess2
-            // 
-            this.picProcess2.BackColor = System.Drawing.Color.Transparent;
-            this.picProcess2.Image = global::Apple_24_Zones.Properties.Resources.LedBlueCooling2;
-            this.picProcess2.Location = new System.Drawing.Point(30, 210);
-            this.picProcess2.Name = "picProcess2";
-            this.picProcess2.Size = new System.Drawing.Size(135, 45);
-            this.picProcess2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picProcess2.TabIndex = 319;
-            this.picProcess2.TabStop = false;
-            this.picProcess2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
-            this.picProcess2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
             // 
             // lbAVGTemp2
             // 
@@ -3217,10 +3020,19 @@ namespace Apple_24_Zones.Forms
             // panelGhost
             // 
             this.panelGhost.BackColor = System.Drawing.Color.DimGray;
+            this.panelGhost.Controls.Add(this.panel28);
+            this.panelGhost.Controls.Add(this.panel27);
+            this.panelGhost.Controls.Add(this.panel25);
+            this.panelGhost.Controls.Add(this.panel26);
+            this.panelGhost.Controls.Add(this.label6);
+            this.panelGhost.Controls.Add(this.panel24);
+            this.panelGhost.Controls.Add(this.panel23);
+            this.panelGhost.Controls.Add(this.btnScaleToggleZoneViewSingle);
+            this.panelGhost.Controls.Add(this.pictureBox5);
+            this.panelGhost.Controls.Add(this.chartView);
             this.panelGhost.Controls.Add(this.panelCheckView);
             this.panelGhost.Controls.Add(this.panelViewZone);
-            this.panelGhost.Controls.Add(this.chartView);
-            this.panelGhost.Location = new System.Drawing.Point(12, 1065);
+            this.panelGhost.Location = new System.Drawing.Point(12, 1062);
             this.panelGhost.Name = "panelGhost";
             this.panelGhost.Size = new System.Drawing.Size(1352, 958);
             this.panelGhost.TabIndex = 273;
@@ -3228,7 +3040,7 @@ namespace Apple_24_Zones.Forms
             // 
             // panelCheckView
             // 
-            this.panelCheckView.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelCheckView.BackColor = System.Drawing.Color.DarkGray;
             this.panelCheckView.Controls.Add(this.lbRed);
             this.panelCheckView.Controls.Add(this.checkView12);
             this.panelCheckView.Controls.Add(this.lbPurple);
@@ -3864,81 +3676,6 @@ namespace Apple_24_Zones.Forms
             this.lbView12.TabIndex = 25;
             this.lbView12.Text = "T-24";
             // 
-            // chartView
-            // 
-            this.chartView.BorderlineColor = System.Drawing.Color.Gray;
-            this.chartView.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            this.chartView.BorderlineWidth = 2;
-            chartArea9.Name = "ChartArea1";
-            this.chartView.ChartAreas.Add(chartArea9);
-            legend3.Name = "Legend1";
-            this.chartView.Legends.Add(legend3);
-            this.chartView.Location = new System.Drawing.Point(10, 140);
-            this.chartView.Name = "chartView";
-            series31.ChartArea = "ChartArea1";
-            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series31.Legend = "Legend1";
-            series31.Name = "T-13";
-            series32.ChartArea = "ChartArea1";
-            series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series32.Legend = "Legend1";
-            series32.Name = "T-14";
-            series33.ChartArea = "ChartArea1";
-            series33.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series33.Legend = "Legend1";
-            series33.Name = "T-15";
-            series34.ChartArea = "ChartArea1";
-            series34.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series34.Legend = "Legend1";
-            series34.Name = "T-16";
-            series35.ChartArea = "ChartArea1";
-            series35.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series35.Legend = "Legend1";
-            series35.Name = "T-17";
-            series36.ChartArea = "ChartArea1";
-            series36.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series36.Legend = "Legend1";
-            series36.Name = "T-18";
-            series37.ChartArea = "ChartArea1";
-            series37.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series37.Legend = "Legend1";
-            series37.Name = "T-19";
-            series38.ChartArea = "ChartArea1";
-            series38.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series38.Legend = "Legend1";
-            series38.Name = "TC-20";
-            series39.ChartArea = "ChartArea1";
-            series39.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series39.Legend = "Legend1";
-            series39.Name = "TC-21";
-            series40.ChartArea = "ChartArea1";
-            series40.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series40.Legend = "Legend1";
-            series40.Name = "TC-22";
-            series41.ChartArea = "ChartArea1";
-            series41.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series41.Legend = "Legend1";
-            series41.Name = "TC-23";
-            series42.ChartArea = "ChartArea1";
-            series42.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series42.Legend = "Legend1";
-            series42.Name = "TC-24";
-            this.chartView.Series.Add(series31);
-            this.chartView.Series.Add(series32);
-            this.chartView.Series.Add(series33);
-            this.chartView.Series.Add(series34);
-            this.chartView.Series.Add(series35);
-            this.chartView.Series.Add(series36);
-            this.chartView.Series.Add(series37);
-            this.chartView.Series.Add(series38);
-            this.chartView.Series.Add(series39);
-            this.chartView.Series.Add(series40);
-            this.chartView.Series.Add(series41);
-            this.chartView.Series.Add(series42);
-            this.chartView.Size = new System.Drawing.Size(1225, 803);
-            this.chartView.TabIndex = 212;
-            this.chartView.Text = "chart1";
-            // 
             // serialPort1
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
@@ -3996,70 +3733,13 @@ namespace Apple_24_Zones.Forms
             this.panelControlZone1.Controls.Add(this.panel17);
             this.panelControlZone1.Controls.Add(this.label12);
             this.panelControlZone1.Controls.Add(this.lbC1);
-            this.panelControlZone1.Location = new System.Drawing.Point(39, 717);
+            this.panelControlZone1.Location = new System.Drawing.Point(23, 717);
             this.panelControlZone1.Name = "panelControlZone1";
             this.panelControlZone1.Size = new System.Drawing.Size(521, 331);
             this.panelControlZone1.TabIndex = 323;
             this.panelControlZone1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControlZone1_Paint_1);
             this.panelControlZone1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
             this.panelControlZone1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
-            // 
-            // btnUpSet1
-            // 
-            this.btnUpSet1.BackColor = System.Drawing.Color.White;
-            this.btnUpSet1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnUpSet1.FlatAppearance.BorderSize = 2;
-            this.btnUpSet1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpSet1.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleUp;
-            this.btnUpSet1.IconColor = System.Drawing.Color.Black;
-            this.btnUpSet1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnUpSet1.IconSize = 30;
-            this.btnUpSet1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUpSet1.Location = new System.Drawing.Point(394, 135);
-            this.btnUpSet1.Name = "btnUpSet1";
-            this.btnUpSet1.Size = new System.Drawing.Size(40, 40);
-            this.btnUpSet1.TabIndex = 335;
-            this.btnUpSet1.UseVisualStyleBackColor = false;
-            this.btnUpSet1.Click += new System.EventHandler(this.btnUpSet1_Click);
-            this.btnUpSet1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
-            this.btnUpSet1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
-            // 
-            // btnDownSet1
-            // 
-            this.btnDownSet1.BackColor = System.Drawing.Color.White;
-            this.btnDownSet1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDownSet1.FlatAppearance.BorderSize = 2;
-            this.btnDownSet1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDownSet1.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleDown;
-            this.btnDownSet1.IconColor = System.Drawing.Color.Black;
-            this.btnDownSet1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnDownSet1.IconSize = 30;
-            this.btnDownSet1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDownSet1.Location = new System.Drawing.Point(394, 181);
-            this.btnDownSet1.Name = "btnDownSet1";
-            this.btnDownSet1.Size = new System.Drawing.Size(40, 40);
-            this.btnDownSet1.TabIndex = 334;
-            this.btnDownSet1.UseVisualStyleBackColor = false;
-            this.btnDownSet1.Click += new System.EventHandler(this.btnDownSet1_Click);
-            this.btnDownSet1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
-            this.btnDownSet1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
-            // 
-            // btnStop1
-            // 
-            this.btnStop1.BackColor = System.Drawing.Color.Transparent;
-            this.btnStop1.BackgroundImage = global::Apple_24_Zones.Properties.Resources.STOP2;
-            this.btnStop1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnStop1.FlatAppearance.BorderSize = 0;
-            this.btnStop1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStop1.Location = new System.Drawing.Point(458, 53);
-            this.btnStop1.Name = "btnStop1";
-            this.btnStop1.Size = new System.Drawing.Size(58, 23);
-            this.btnStop1.TabIndex = 331;
-            this.btnStop1.UseVisualStyleBackColor = false;
-            this.btnStop1.Click += new System.EventHandler(this.btnStop1_Click);
-            this.btnStop1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
-            this.btnStop1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // lbStartDate1
             // 
@@ -4082,18 +3762,6 @@ namespace Apple_24_Zones.Forms
             this.panel9.TabIndex = 329;
             this.panel9.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
             this.panel9.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
-            // 
-            // picUpDown1
-            // 
-            this.picUpDown1.Image = global::Apple_24_Zones.Properties.Resources.arrowUpRed21;
-            this.picUpDown1.Location = new System.Drawing.Point(462, 153);
-            this.picUpDown1.Name = "picUpDown1";
-            this.picUpDown1.Size = new System.Drawing.Size(50, 50);
-            this.picUpDown1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUpDown1.TabIndex = 300;
-            this.picUpDown1.TabStop = false;
-            this.picUpDown1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
-            this.picUpDown1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // txtPutSetpoint1
             // 
@@ -4126,41 +3794,6 @@ namespace Apple_24_Zones.Forms
             this.txtCrono1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCrono1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
             this.txtCrono1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
-            // 
-            // btnApplySetpoint1
-            // 
-            this.btnApplySetpoint1.BackColor = System.Drawing.Color.White;
-            this.btnApplySetpoint1.FlatAppearance.BorderSize = 2;
-            this.btnApplySetpoint1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApplySetpoint1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.btnApplySetpoint1.ForeColor = System.Drawing.Color.Black;
-            this.btnApplySetpoint1.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            this.btnApplySetpoint1.IconColor = System.Drawing.Color.Black;
-            this.btnApplySetpoint1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnApplySetpoint1.IconSize = 25;
-            this.btnApplySetpoint1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnApplySetpoint1.Location = new System.Drawing.Point(244, 216);
-            this.btnApplySetpoint1.Name = "btnApplySetpoint1";
-            this.btnApplySetpoint1.Size = new System.Drawing.Size(107, 34);
-            this.btnApplySetpoint1.TabIndex = 316;
-            this.btnApplySetpoint1.Text = "    Enter";
-            this.btnApplySetpoint1.UseVisualStyleBackColor = false;
-            this.btnApplySetpoint1.Click += new System.EventHandler(this.btnApplySetpoint1_Click);
-            this.btnApplySetpoint1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
-            this.btnApplySetpoint1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
-            // 
-            // picProcess1
-            // 
-            this.picProcess1.BackColor = System.Drawing.Color.Transparent;
-            this.picProcess1.Image = global::Apple_24_Zones.Properties.Resources.LedRedHeating2;
-            this.picProcess1.Location = new System.Drawing.Point(30, 210);
-            this.picProcess1.Name = "picProcess1";
-            this.picProcess1.Size = new System.Drawing.Size(135, 45);
-            this.picProcess1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picProcess1.TabIndex = 319;
-            this.picProcess1.TabStop = false;
-            this.picProcess1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
-            this.picProcess1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // lbAVGTemp1
             // 
@@ -4248,21 +3881,492 @@ namespace Apple_24_Zones.Forms
             this.lbC1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
             this.lbC1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Cyan;
+            this.label7.Location = new System.Drawing.Point(39, 624);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(170, 16);
+            this.label7.TabIndex = 327;
+            this.label7.Text = "5 °C   -- Cooling --  20 °C";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(54, 601);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(146, 16);
+            this.label8.TabIndex = 326;
+            this.label8.Text = "21 °C   -- RT --  26 °C";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(39, 578);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(179, 16);
+            this.label9.TabIndex = 325;
+            this.label9.Text = "27 °C   -- Heating --  85 °C";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(81, 555);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(107, 16);
+            this.label13.TabIndex = 324;
+            this.label13.Text = "Ranges to use";
+            // 
+            // serialPort2
+            // 
+            this.serialPort2.ReceivedBytesThreshold = 44;
+            this.serialPort2.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort2_DataReceived_1);
+            // 
+            // btnUpSet1
+            // 
+            this.btnUpSet1.BackColor = System.Drawing.Color.White;
+            this.btnUpSet1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnUpSet1.FlatAppearance.BorderSize = 2;
+            this.btnUpSet1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpSet1.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleUp;
+            this.btnUpSet1.IconColor = System.Drawing.Color.Black;
+            this.btnUpSet1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnUpSet1.IconSize = 30;
+            this.btnUpSet1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnUpSet1.Location = new System.Drawing.Point(394, 135);
+            this.btnUpSet1.Name = "btnUpSet1";
+            this.btnUpSet1.Size = new System.Drawing.Size(40, 40);
+            this.btnUpSet1.TabIndex = 335;
+            this.btnUpSet1.UseVisualStyleBackColor = false;
+            this.btnUpSet1.Click += new System.EventHandler(this.btnUpSet1_Click);
+            this.btnUpSet1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.btnUpSet1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
+            // 
+            // btnDownSet1
+            // 
+            this.btnDownSet1.BackColor = System.Drawing.Color.White;
+            this.btnDownSet1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnDownSet1.FlatAppearance.BorderSize = 2;
+            this.btnDownSet1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownSet1.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleDown;
+            this.btnDownSet1.IconColor = System.Drawing.Color.Black;
+            this.btnDownSet1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnDownSet1.IconSize = 30;
+            this.btnDownSet1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDownSet1.Location = new System.Drawing.Point(394, 181);
+            this.btnDownSet1.Name = "btnDownSet1";
+            this.btnDownSet1.Size = new System.Drawing.Size(40, 40);
+            this.btnDownSet1.TabIndex = 334;
+            this.btnDownSet1.UseVisualStyleBackColor = false;
+            this.btnDownSet1.Click += new System.EventHandler(this.btnDownSet1_Click);
+            this.btnDownSet1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.btnDownSet1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
+            // 
+            // btnStop1
+            // 
+            this.btnStop1.BackColor = System.Drawing.Color.Transparent;
+            this.btnStop1.BackgroundImage = global::Apple_24_Zones.Properties.Resources.STOP2;
+            this.btnStop1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnStop1.FlatAppearance.BorderSize = 0;
+            this.btnStop1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStop1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStop1.Location = new System.Drawing.Point(458, 53);
+            this.btnStop1.Name = "btnStop1";
+            this.btnStop1.Size = new System.Drawing.Size(58, 23);
+            this.btnStop1.TabIndex = 331;
+            this.btnStop1.UseVisualStyleBackColor = false;
+            this.btnStop1.Click += new System.EventHandler(this.btnStop1_Click);
+            this.btnStop1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.btnStop1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
+            // 
+            // picUpDown1
+            // 
+            this.picUpDown1.Image = global::Apple_24_Zones.Properties.Resources.arrowUpRed21;
+            this.picUpDown1.Location = new System.Drawing.Point(462, 153);
+            this.picUpDown1.Name = "picUpDown1";
+            this.picUpDown1.Size = new System.Drawing.Size(50, 50);
+            this.picUpDown1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUpDown1.TabIndex = 300;
+            this.picUpDown1.TabStop = false;
+            this.picUpDown1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.picUpDown1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
+            // 
+            // btnApplySetpoint1
+            // 
+            this.btnApplySetpoint1.BackColor = System.Drawing.Color.White;
+            this.btnApplySetpoint1.FlatAppearance.BorderSize = 2;
+            this.btnApplySetpoint1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApplySetpoint1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.btnApplySetpoint1.ForeColor = System.Drawing.Color.Black;
+            this.btnApplySetpoint1.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.btnApplySetpoint1.IconColor = System.Drawing.Color.Black;
+            this.btnApplySetpoint1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnApplySetpoint1.IconSize = 25;
+            this.btnApplySetpoint1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnApplySetpoint1.Location = new System.Drawing.Point(244, 216);
+            this.btnApplySetpoint1.Name = "btnApplySetpoint1";
+            this.btnApplySetpoint1.Size = new System.Drawing.Size(107, 34);
+            this.btnApplySetpoint1.TabIndex = 316;
+            this.btnApplySetpoint1.Text = "    Enter";
+            this.btnApplySetpoint1.UseVisualStyleBackColor = false;
+            this.btnApplySetpoint1.Click += new System.EventHandler(this.btnApplySetpoint1_Click);
+            this.btnApplySetpoint1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.btnApplySetpoint1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
+            // 
+            // picProcess1
+            // 
+            this.picProcess1.BackColor = System.Drawing.Color.Transparent;
+            this.picProcess1.Image = global::Apple_24_Zones.Properties.Resources.LedRedHeating2;
+            this.picProcess1.Location = new System.Drawing.Point(30, 210);
+            this.picProcess1.Name = "picProcess1";
+            this.picProcess1.Size = new System.Drawing.Size(135, 45);
+            this.picProcess1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picProcess1.TabIndex = 319;
+            this.picProcess1.TabStop = false;
+            this.picProcess1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.picProcess1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(9, 500);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(49, 23);
+            this.iconButton1.TabIndex = 294;
+            this.iconButton1.Text = "Test";
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // btnCloseConexionPanel
+            // 
+            this.btnCloseConexionPanel.FlatAppearance.BorderSize = 0;
+            this.btnCloseConexionPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseConexionPanel.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
+            this.btnCloseConexionPanel.IconColor = System.Drawing.Color.White;
+            this.btnCloseConexionPanel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCloseConexionPanel.IconSize = 30;
+            this.btnCloseConexionPanel.Location = new System.Drawing.Point(483, 3);
+            this.btnCloseConexionPanel.Name = "btnCloseConexionPanel";
+            this.btnCloseConexionPanel.Size = new System.Drawing.Size(35, 31);
+            this.btnCloseConexionPanel.TabIndex = 290;
+            this.btnCloseConexionPanel.UseVisualStyleBackColor = true;
+            this.btnCloseConexionPanel.Click += new System.EventHandler(this.btnCloseConexionPanel_Click);
+            // 
+            // btnRefreshCOM2
+            // 
+            this.btnRefreshCOM2.FlatAppearance.BorderSize = 0;
+            this.btnRefreshCOM2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefreshCOM2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshCOM2.ForeColor = System.Drawing.Color.White;
+            this.btnRefreshCOM2.IconChar = FontAwesome.Sharp.IconChar.Repeat;
+            this.btnRefreshCOM2.IconColor = System.Drawing.Color.White;
+            this.btnRefreshCOM2.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnRefreshCOM2.IconSize = 30;
+            this.btnRefreshCOM2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefreshCOM2.Location = new System.Drawing.Point(374, 106);
+            this.btnRefreshCOM2.Name = "btnRefreshCOM2";
+            this.btnRefreshCOM2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnRefreshCOM2.Size = new System.Drawing.Size(117, 36);
+            this.btnRefreshCOM2.TabIndex = 115;
+            this.btnRefreshCOM2.Text = "          Refresh";
+            this.btnRefreshCOM2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefreshCOM2.UseVisualStyleBackColor = true;
+            // 
+            // btnConnectCOM2
+            // 
+            this.btnConnectCOM2.FlatAppearance.BorderSize = 0;
+            this.btnConnectCOM2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnectCOM2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnectCOM2.ForeColor = System.Drawing.Color.White;
+            this.btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            this.btnConnectCOM2.IconColor = System.Drawing.Color.White;
+            this.btnConnectCOM2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConnectCOM2.IconSize = 40;
+            this.btnConnectCOM2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConnectCOM2.Location = new System.Drawing.Point(264, 106);
+            this.btnConnectCOM2.Name = "btnConnectCOM2";
+            this.btnConnectCOM2.Size = new System.Drawing.Size(116, 36);
+            this.btnConnectCOM2.TabIndex = 114;
+            this.btnConnectCOM2.Text = "           Connect";
+            this.btnConnectCOM2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConnectCOM2.UseVisualStyleBackColor = true;
+            this.btnConnectCOM2.Click += new System.EventHandler(this.btnConnectCOM2_Click);
+            // 
+            // btnRefreshCOM1
+            // 
+            this.btnRefreshCOM1.FlatAppearance.BorderSize = 0;
+            this.btnRefreshCOM1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefreshCOM1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshCOM1.ForeColor = System.Drawing.Color.White;
+            this.btnRefreshCOM1.IconChar = FontAwesome.Sharp.IconChar.Repeat;
+            this.btnRefreshCOM1.IconColor = System.Drawing.Color.White;
+            this.btnRefreshCOM1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnRefreshCOM1.IconSize = 30;
+            this.btnRefreshCOM1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefreshCOM1.Location = new System.Drawing.Point(119, 104);
+            this.btnRefreshCOM1.Name = "btnRefreshCOM1";
+            this.btnRefreshCOM1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnRefreshCOM1.Size = new System.Drawing.Size(117, 36);
+            this.btnRefreshCOM1.TabIndex = 112;
+            this.btnRefreshCOM1.Text = "          Refresh";
+            this.btnRefreshCOM1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefreshCOM1.UseVisualStyleBackColor = true;
+            // 
+            // btnConnectCOM1
+            // 
+            this.btnConnectCOM1.FlatAppearance.BorderSize = 0;
+            this.btnConnectCOM1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnectCOM1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnectCOM1.ForeColor = System.Drawing.Color.White;
+            this.btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            this.btnConnectCOM1.IconColor = System.Drawing.Color.White;
+            this.btnConnectCOM1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConnectCOM1.IconSize = 40;
+            this.btnConnectCOM1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConnectCOM1.Location = new System.Drawing.Point(9, 104);
+            this.btnConnectCOM1.Name = "btnConnectCOM1";
+            this.btnConnectCOM1.Size = new System.Drawing.Size(116, 36);
+            this.btnConnectCOM1.TabIndex = 111;
+            this.btnConnectCOM1.Text = "           Connect";
+            this.btnConnectCOM1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConnectCOM1.UseVisualStyleBackColor = true;
+            this.btnConnectCOM1.Click += new System.EventHandler(this.btnConnectCOM1_Click);
+            // 
             // picDrawMachine
             // 
             this.picDrawMachine.BackColor = System.Drawing.Color.Transparent;
             this.picDrawMachine.Image = global::Apple_24_Zones.Properties.Resources.drawOff1;
-            this.picDrawMachine.Location = new System.Drawing.Point(258, 454);
+            this.picDrawMachine.Location = new System.Drawing.Point(242, 454);
             this.picDrawMachine.Name = "picDrawMachine";
             this.picDrawMachine.Size = new System.Drawing.Size(303, 230);
             this.picDrawMachine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picDrawMachine.TabIndex = 306;
             this.picDrawMachine.TabStop = false;
             // 
+            // btnUpSet2
+            // 
+            this.btnUpSet2.BackColor = System.Drawing.Color.White;
+            this.btnUpSet2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnUpSet2.FlatAppearance.BorderSize = 2;
+            this.btnUpSet2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpSet2.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleUp;
+            this.btnUpSet2.IconColor = System.Drawing.Color.Black;
+            this.btnUpSet2.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnUpSet2.IconSize = 30;
+            this.btnUpSet2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnUpSet2.Location = new System.Drawing.Point(394, 135);
+            this.btnUpSet2.Name = "btnUpSet2";
+            this.btnUpSet2.Size = new System.Drawing.Size(40, 40);
+            this.btnUpSet2.TabIndex = 335;
+            this.btnUpSet2.UseVisualStyleBackColor = false;
+            this.btnUpSet2.Click += new System.EventHandler(this.btnUpSet2_Click);
+            this.btnUpSet2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.btnUpSet2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
+            // 
+            // btnDownSet2
+            // 
+            this.btnDownSet2.BackColor = System.Drawing.Color.White;
+            this.btnDownSet2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnDownSet2.FlatAppearance.BorderSize = 2;
+            this.btnDownSet2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownSet2.IconChar = FontAwesome.Sharp.IconChar.ChevronCircleDown;
+            this.btnDownSet2.IconColor = System.Drawing.Color.Black;
+            this.btnDownSet2.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnDownSet2.IconSize = 30;
+            this.btnDownSet2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDownSet2.Location = new System.Drawing.Point(394, 181);
+            this.btnDownSet2.Name = "btnDownSet2";
+            this.btnDownSet2.Size = new System.Drawing.Size(40, 40);
+            this.btnDownSet2.TabIndex = 334;
+            this.btnDownSet2.UseVisualStyleBackColor = false;
+            this.btnDownSet2.Click += new System.EventHandler(this.btnDownSet2_Click);
+            this.btnDownSet2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.btnDownSet2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
+            // 
+            // btnStop2
+            // 
+            this.btnStop2.BackColor = System.Drawing.Color.Transparent;
+            this.btnStop2.BackgroundImage = global::Apple_24_Zones.Properties.Resources.STOP2;
+            this.btnStop2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnStop2.FlatAppearance.BorderSize = 0;
+            this.btnStop2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStop2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStop2.Location = new System.Drawing.Point(458, 53);
+            this.btnStop2.Name = "btnStop2";
+            this.btnStop2.Size = new System.Drawing.Size(58, 23);
+            this.btnStop2.TabIndex = 331;
+            this.btnStop2.UseVisualStyleBackColor = false;
+            this.btnStop2.Click += new System.EventHandler(this.btnStop2_Click);
+            this.btnStop2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.btnStop2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
+            // 
+            // picUpDown2
+            // 
+            this.picUpDown2.Image = global::Apple_24_Zones.Properties.Resources.arrowDownBlue2;
+            this.picUpDown2.Location = new System.Drawing.Point(462, 153);
+            this.picUpDown2.Name = "picUpDown2";
+            this.picUpDown2.Size = new System.Drawing.Size(50, 50);
+            this.picUpDown2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUpDown2.TabIndex = 300;
+            this.picUpDown2.TabStop = false;
+            this.picUpDown2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.picUpDown2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
+            // 
+            // btnApplySetpoint2
+            // 
+            this.btnApplySetpoint2.BackColor = System.Drawing.Color.White;
+            this.btnApplySetpoint2.FlatAppearance.BorderSize = 2;
+            this.btnApplySetpoint2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApplySetpoint2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.btnApplySetpoint2.ForeColor = System.Drawing.Color.Black;
+            this.btnApplySetpoint2.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.btnApplySetpoint2.IconColor = System.Drawing.Color.Black;
+            this.btnApplySetpoint2.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnApplySetpoint2.IconSize = 25;
+            this.btnApplySetpoint2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnApplySetpoint2.Location = new System.Drawing.Point(244, 216);
+            this.btnApplySetpoint2.Name = "btnApplySetpoint2";
+            this.btnApplySetpoint2.Size = new System.Drawing.Size(107, 34);
+            this.btnApplySetpoint2.TabIndex = 316;
+            this.btnApplySetpoint2.Text = "    Enter";
+            this.btnApplySetpoint2.UseVisualStyleBackColor = false;
+            this.btnApplySetpoint2.Click += new System.EventHandler(this.btnApplySetpoint2_Click);
+            this.btnApplySetpoint2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.btnApplySetpoint2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
+            // 
+            // picProcess2
+            // 
+            this.picProcess2.BackColor = System.Drawing.Color.Transparent;
+            this.picProcess2.Image = global::Apple_24_Zones.Properties.Resources.LedBlueCooling2;
+            this.picProcess2.Location = new System.Drawing.Point(30, 210);
+            this.picProcess2.Name = "picProcess2";
+            this.picProcess2.Size = new System.Drawing.Size(135, 45);
+            this.picProcess2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picProcess2.TabIndex = 319;
+            this.picProcess2.TabStop = false;
+            this.picProcess2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.picProcess2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::Apple_24_Zones.Properties.Resources.labelTempAxisY;
+            this.pictureBox3.Location = new System.Drawing.Point(32, 205);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 117);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 335;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnScaleToggleZone2
+            // 
+            this.btnScaleToggleZone2.BackColor = System.Drawing.Color.DarkGray;
+            this.btnScaleToggleZone2.FlatAppearance.BorderSize = 2;
+            this.btnScaleToggleZone2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScaleToggleZone2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScaleToggleZone2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnScaleToggleZone2.IconColor = System.Drawing.Color.Black;
+            this.btnScaleToggleZone2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnScaleToggleZone2.IconSize = 16;
+            this.btnScaleToggleZone2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScaleToggleZone2.Location = new System.Drawing.Point(14, 427);
+            this.btnScaleToggleZone2.Name = "btnScaleToggleZone2";
+            this.btnScaleToggleZone2.Size = new System.Drawing.Size(91, 24);
+            this.btnScaleToggleZone2.TabIndex = 334;
+            this.btnScaleToggleZone2.Text = "Toggle Scale";
+            this.btnScaleToggleZone2.UseVisualStyleBackColor = false;
+            this.btnScaleToggleZone2.Click += new System.EventHandler(this.btnScaleToggleZone2_Click);
+            // 
+            // btnScaleToggleZone1
+            // 
+            this.btnScaleToggleZone1.BackColor = System.Drawing.Color.DarkGray;
+            this.btnScaleToggleZone1.FlatAppearance.BorderSize = 2;
+            this.btnScaleToggleZone1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScaleToggleZone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScaleToggleZone1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnScaleToggleZone1.IconColor = System.Drawing.Color.Black;
+            this.btnScaleToggleZone1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnScaleToggleZone1.IconSize = 16;
+            this.btnScaleToggleZone1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScaleToggleZone1.Location = new System.Drawing.Point(14, 920);
+            this.btnScaleToggleZone1.Name = "btnScaleToggleZone1";
+            this.btnScaleToggleZone1.Size = new System.Drawing.Size(91, 24);
+            this.btnScaleToggleZone1.TabIndex = 328;
+            this.btnScaleToggleZone1.Text = "Toggle Scale";
+            this.btnScaleToggleZone1.UseVisualStyleBackColor = false;
+            this.btnScaleToggleZone1.Click += new System.EventHandler(this.btnScaleToggleZone1_Click);
+            this.btnScaleToggleZone1.MouseEnter += new System.EventHandler(this.btnScaleToggleZone1_MouseEnter);
+            this.btnScaleToggleZone1.MouseLeave += new System.EventHandler(this.btnScaleToggleZone1_MouseLeave);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::Apple_24_Zones.Properties.Resources.MIDORI_LOGO_ICON_VERDE;
+            this.pictureBox12.Location = new System.Drawing.Point(50, 0);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(47, 37);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 290;
+            this.pictureBox12.TabStop = false;
+            // 
+            // IconMinima
+            // 
+            this.IconMinima.FlatAppearance.BorderSize = 0;
+            this.IconMinima.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IconMinima.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.IconMinima.IconColor = System.Drawing.Color.White;
+            this.IconMinima.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IconMinima.IconSize = 30;
+            this.IconMinima.Location = new System.Drawing.Point(1815, 0);
+            this.IconMinima.Name = "IconMinima";
+            this.IconMinima.Size = new System.Drawing.Size(35, 28);
+            this.IconMinima.TabIndex = 275;
+            this.IconMinima.UseVisualStyleBackColor = true;
+            this.IconMinima.Click += new System.EventHandler(this.IconMinima_Click);
+            // 
+            // IconMaxin
+            // 
+            this.IconMaxin.FlatAppearance.BorderSize = 0;
+            this.IconMaxin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IconMaxin.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.IconMaxin.IconColor = System.Drawing.Color.White;
+            this.IconMaxin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IconMaxin.IconSize = 30;
+            this.IconMaxin.Location = new System.Drawing.Point(1850, 0);
+            this.IconMaxin.Name = "IconMaxin";
+            this.IconMaxin.Size = new System.Drawing.Size(35, 31);
+            this.IconMaxin.TabIndex = 274;
+            this.IconMaxin.UseVisualStyleBackColor = true;
+            this.IconMaxin.Click += new System.EventHandler(this.IconMaxin_Click);
+            // 
+            // IconClose
+            // 
+            this.IconClose.FlatAppearance.BorderSize = 0;
+            this.IconClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IconClose.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
+            this.IconClose.IconColor = System.Drawing.Color.White;
+            this.IconClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IconClose.IconSize = 30;
+            this.IconClose.Location = new System.Drawing.Point(1885, 0);
+            this.IconClose.Name = "IconClose";
+            this.IconClose.Size = new System.Drawing.Size(35, 31);
+            this.IconClose.TabIndex = 40;
+            this.IconClose.UseVisualStyleBackColor = true;
+            this.IconClose.Click += new System.EventHandler(this.IconClose_Click);
+            // 
             // picRed
             // 
             this.picRed.Image = global::Apple_24_Zones.Properties.Resources.tc1off;
-            this.picRed.Location = new System.Drawing.Point(184, 475);
+            this.picRed.Location = new System.Drawing.Point(168, 475);
             this.picRed.Name = "picRed";
             this.picRed.Size = new System.Drawing.Size(60, 60);
             this.picRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4272,7 +4376,7 @@ namespace Apple_24_Zones.Forms
             // picGreen
             // 
             this.picGreen.Image = global::Apple_24_Zones.Properties.Resources.tc8off;
-            this.picGreen.Location = new System.Drawing.Point(47, 475);
+            this.picGreen.Location = new System.Drawing.Point(31, 475);
             this.picGreen.Name = "picGreen";
             this.picGreen.Size = new System.Drawing.Size(60, 60);
             this.picGreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4282,7 +4386,7 @@ namespace Apple_24_Zones.Forms
             // picYellow
             // 
             this.picYellow.Image = global::Apple_24_Zones.Properties.Resources.tc3off;
-            this.picYellow.Location = new System.Drawing.Point(116, 475);
+            this.picYellow.Location = new System.Drawing.Point(100, 475);
             this.picYellow.Name = "picYellow";
             this.picYellow.Size = new System.Drawing.Size(60, 60);
             this.picYellow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4311,104 +4415,160 @@ namespace Apple_24_Zones.Forms
             this.pictureBox2.TabIndex = 181;
             this.pictureBox2.TabStop = false;
             // 
-            // label7
+            // pictureBox4
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.Cyan;
-            this.label7.Location = new System.Drawing.Point(55, 624);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(170, 16);
-            this.label7.TabIndex = 327;
-            this.label7.Text = "5 °C   -- Cooling --  20 °C";
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = global::Apple_24_Zones.Properties.Resources.labelTempAxisY;
+            this.pictureBox4.Location = new System.Drawing.Point(32, 700);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(25, 117);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 336;
+            this.pictureBox4.TabStop = false;
             // 
-            // label8
+            // chartView
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(70, 601);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(146, 16);
-            this.label8.TabIndex = 326;
-            this.label8.Text = "21 °C   -- RT --  26 °C";
+            this.chartView.BorderlineColor = System.Drawing.Color.Gray;
+            this.chartView.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.chartView.BorderlineWidth = 2;
+            chartArea6.AxisX.Interval = 10D;
+            chartArea6.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea6.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea6.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea6.AxisX.Maximum = 100D;
+            chartArea6.AxisX.Minimum = 0D;
+            chartArea6.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.AxisY.Interval = 10D;
+            chartArea6.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea6.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea6.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea6.AxisY.MinorTickMark.Enabled = true;
+            chartArea6.AxisY.MinorTickMark.Interval = 5D;
+            chartArea6.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea6.AxisY.MinorTickMark.Size = 0.6F;
+            chartArea6.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.BackColor = System.Drawing.Color.White;
+            chartArea6.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea6.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea6.BorderWidth = 0;
+            chartArea6.InnerPlotPosition.Auto = false;
+            chartArea6.InnerPlotPosition.Height = 88.4641F;
+            chartArea6.InnerPlotPosition.Width = 93.2662F;
+            chartArea6.InnerPlotPosition.X = 6.11536F;
+            chartArea6.InnerPlotPosition.Y = 2.79255F;
+            chartArea6.Name = "ChartArea1";
+            this.chartView.ChartAreas.Add(chartArea6);
+            this.chartView.Location = new System.Drawing.Point(11, 138);
+            this.chartView.Name = "chartView";
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series11.Name = "Series1";
+            series12.ChartArea = "ChartArea1";
+            series12.Name = "Series2";
+            series12.Points.Add(dataPoint6);
+            this.chartView.Series.Add(series11);
+            this.chartView.Series.Add(series12);
+            this.chartView.Size = new System.Drawing.Size(1221, 806);
+            this.chartView.TabIndex = 268;
+            this.chartView.Text = "chart1";
             // 
-            // label9
+            // pictureBox5
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(55, 578);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(179, 16);
-            this.label9.TabIndex = 325;
-            this.label9.Text = "27 °C   -- Heating --  85 °C";
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.Image = global::Apple_24_Zones.Properties.Resources.labelTempAxisY;
+            this.pictureBox5.Location = new System.Drawing.Point(44, 442);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 150);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 336;
+            this.pictureBox5.TabStop = false;
             // 
-            // label13
+            // btnScaleToggleZoneViewSingle
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(97, 555);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 16);
-            this.label13.TabIndex = 324;
-            this.label13.Text = "Ranges to use";
+            this.btnScaleToggleZoneViewSingle.BackColor = System.Drawing.Color.DarkGray;
+            this.btnScaleToggleZoneViewSingle.FlatAppearance.BorderSize = 2;
+            this.btnScaleToggleZoneViewSingle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScaleToggleZoneViewSingle.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScaleToggleZoneViewSingle.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnScaleToggleZoneViewSingle.IconColor = System.Drawing.Color.Black;
+            this.btnScaleToggleZoneViewSingle.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnScaleToggleZoneViewSingle.IconSize = 16;
+            this.btnScaleToggleZoneViewSingle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScaleToggleZoneViewSingle.Location = new System.Drawing.Point(21, 910);
+            this.btnScaleToggleZoneViewSingle.Name = "btnScaleToggleZoneViewSingle";
+            this.btnScaleToggleZoneViewSingle.Size = new System.Drawing.Size(91, 24);
+            this.btnScaleToggleZoneViewSingle.TabIndex = 337;
+            this.btnScaleToggleZoneViewSingle.Text = "Toggle Scale";
+            this.btnScaleToggleZoneViewSingle.UseVisualStyleBackColor = false;
+            this.btnScaleToggleZoneViewSingle.Click += new System.EventHandler(this.btnScaleToggleZoneViewSingle_Click);
+            this.btnScaleToggleZoneViewSingle.MouseEnter += new System.EventHandler(this.btnScaleToggleZoneViewSingle_MouseEnter);
+            this.btnScaleToggleZoneViewSingle.MouseLeave += new System.EventHandler(this.btnScaleToggleZoneViewSingle_MouseLeave);
             // 
-            // serialPort2
+            // panel23
             // 
-            this.serialPort2.ReceivedBytesThreshold = 44;
-            this.serialPort2.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort2_DataReceived_1);
+            this.panel23.BackColor = System.Drawing.Color.Black;
+            this.panel23.ForeColor = System.Drawing.Color.Teal;
+            this.panel23.Location = new System.Drawing.Point(55, 600);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(2, 260);
+            this.panel23.TabIndex = 338;
             // 
-            // panelaxisXZone1
+            // panel24
             // 
-            this.panelaxisXZone1.BackColor = System.Drawing.Color.Black;
-            this.panelaxisXZone1.ForeColor = System.Drawing.Color.Black;
-            this.panelaxisXZone1.Location = new System.Drawing.Point(104, 907);
-            this.panelaxisXZone1.Name = "panelaxisXZone1";
-            this.panelaxisXZone1.Size = new System.Drawing.Size(1075, 2);
-            this.panelaxisXZone1.TabIndex = 326;
+            this.panel24.BackColor = System.Drawing.Color.Black;
+            this.panel24.ForeColor = System.Drawing.Color.Teal;
+            this.panel24.Location = new System.Drawing.Point(55, 182);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(2, 250);
+            this.panel24.TabIndex = 339;
             // 
-            // panel20
+            // panel25
             // 
-            this.panel20.BackColor = System.Drawing.Color.Black;
-            this.panel20.ForeColor = System.Drawing.Color.Black;
-            this.panel20.Location = new System.Drawing.Point(104, 607);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1075, 2);
-            this.panel20.TabIndex = 327;
+            this.panel25.BackColor = System.Drawing.Color.Black;
+            this.panel25.ForeColor = System.Drawing.Color.Black;
+            this.panel25.Location = new System.Drawing.Point(693, 902);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(470, 2);
+            this.panel25.TabIndex = 342;
             // 
-            // btnScaleToggleZone1
+            // panel26
             // 
-            this.btnScaleToggleZone1.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnScaleToggleZone1.FlatAppearance.BorderSize = 2;
-            this.btnScaleToggleZone1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnScaleToggleZone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScaleToggleZone1.IconChar = FontAwesome.Sharp.IconChar.LineChart;
-            this.btnScaleToggleZone1.IconColor = System.Drawing.Color.Black;
-            this.btnScaleToggleZone1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnScaleToggleZone1.IconSize = 16;
-            this.btnScaleToggleZone1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScaleToggleZone1.Location = new System.Drawing.Point(14, 920);
-            this.btnScaleToggleZone1.Name = "btnScaleToggleZone1";
-            this.btnScaleToggleZone1.Size = new System.Drawing.Size(94, 24);
-            this.btnScaleToggleZone1.TabIndex = 328;
-            this.btnScaleToggleZone1.Text = "Toggle Scale";
-            this.btnScaleToggleZone1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnScaleToggleZone1.UseVisualStyleBackColor = false;
-            this.btnScaleToggleZone1.Click += new System.EventHandler(this.btnScaleToggleZone1_Click);
+            this.panel26.BackColor = System.Drawing.Color.Black;
+            this.panel26.ForeColor = System.Drawing.Color.Black;
+            this.panel26.Location = new System.Drawing.Point(129, 902);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(470, 2);
+            this.panel26.TabIndex = 341;
             // 
-            // label15
+            // label6
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.White;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(21, 733);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(43, 16);
-            this.label15.TabIndex = 329;
-            this.label15.Text = "Temp";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(606, 892);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 20);
+            this.label6.TabIndex = 340;
+            this.label6.Text = "Time [s]";
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.Black;
+            this.panel27.ForeColor = System.Drawing.Color.Black;
+            this.panel27.Location = new System.Drawing.Point(106, 182);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(1082, 2);
+            this.panel27.TabIndex = 343;
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.Black;
+            this.panel28.ForeColor = System.Drawing.Color.Black;
+            this.panel28.Location = new System.Drawing.Point(106, 853);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(1082, 2);
+            this.panel28.TabIndex = 344;
             // 
             // FrmMain
             // 
@@ -4441,7 +4601,6 @@ namespace Apple_24_Zones.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ELEN II Software Rev 1.000.0";
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chartZone2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).EndInit();
             this.panelZone2.ResumeLayout(false);
             this.panelZone2.PerformLayout();
@@ -4449,7 +4608,6 @@ namespace Apple_24_Zones.Forms
             this.panel7.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelBoth.ResumeLayout(false);
@@ -4462,32 +4620,38 @@ namespace Apple_24_Zones.Forms
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartZone2)).EndInit();
             this.panelConexion.ResumeLayout(false);
             this.panelConexion.PerformLayout();
             this.panelControlZone2.ResumeLayout(false);
             this.panelControlZone2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picProcess2)).EndInit();
             this.panelTitleZone2.ResumeLayout(false);
             this.panelGhost.ResumeLayout(false);
+            this.panelGhost.PerformLayout();
             this.panelCheckView.ResumeLayout(false);
             this.panelCheckView.PerformLayout();
             this.panelViewZone.ResumeLayout(false);
             this.panelViewZone.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartView)).EndInit();
             this.panelControlZone1.ResumeLayout(false);
             this.panelControlZone1.PerformLayout();
+            this.panelTitleZone1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProcess1)).EndInit();
-            this.panelTitleZone1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picDrawMachine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProcess2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picYellow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4568,7 +4732,6 @@ namespace Apple_24_Zones.Forms
         private Panel panel1;
         private Label label3;
         private Label label1;
-        public System.Windows.Forms.DataVisualization.Charting.Chart chartZone2;
         private Panel panelBoth;
         private Label label4;
         private Panel panel3;
@@ -4664,7 +4827,6 @@ namespace Apple_24_Zones.Forms
         private Label lbView10;
         private Label lbView11;
         private Label lbView12;
-        public System.Windows.Forms.DataVisualization.Charting.Chart chartView;
         private Panel panelConexion;
         private Label label99;
         private Label label33;
@@ -4767,7 +4929,6 @@ namespace Apple_24_Zones.Forms
         private Label label2;
         private Panel panel14;
         private Panel panel15;
-        private Label label6;
         private TextBox txtPutSetpoint2;
         private Panel panel8;
         private Timer timerSimulationDownUp;
@@ -4811,10 +4972,24 @@ namespace Apple_24_Zones.Forms
         private Label label14;
         private Panel panel4;
         private Panel panel16;
-        private Label label10;
         private Panel panelaxisXZone1;
         private Panel panel20;
         private FontAwesome.Sharp.IconButton btnScaleToggleZone1;
-        private Label label15;
+        private Panel panel22;
+        private Panel panel21;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartZone2;
+        private FontAwesome.Sharp.IconButton btnScaleToggleZone2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartView;
+        private FontAwesome.Sharp.IconButton btnScaleToggleZoneViewSingle;
+        private Panel panel23;
+        private Panel panel24;
+        private Panel panel25;
+        private Panel panel26;
+        private Label label6;
+        private Panel panel27;
+        private Panel panel28;
     }
 }

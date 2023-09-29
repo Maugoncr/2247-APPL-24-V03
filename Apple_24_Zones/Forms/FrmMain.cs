@@ -74,6 +74,10 @@ namespace Apple_24_Zones.Forms
             txtTC24.Paint += TextBox_Paint;
         }
 
+        //ZONE TO VARIABLES
+
+
+
 
         private void IconClose_Click(object sender, EventArgs e)
         {
@@ -425,11 +429,13 @@ namespace Apple_24_Zones.Forms
 
         private void bothZonesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            viewChart = "Both";
             ChangeViewChartZone();
         }
 
         private void tempZone1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            viewChart = "Zone1";
             ChangeViewChartZone(1);
         }
 
@@ -508,14 +514,23 @@ namespace Apple_24_Zones.Forms
             // Chart Settings
 
             chartZone1.ChartAreas[0].AxisY.Interval = 10;
-
             chartZone1.ChartAreas[0].AxisY.Maximum = 100;
             chartZone1.ChartAreas[0].AxisY.Minimum = 0;
-
             chartZone1.ChartAreas[0].AxisX.Minimum = 0;
-          
+            chartZone1.ChartAreas[0].BackColor = Color.FromArgb(30, Color.LightGreen);
 
-            //chartZone1.Series["T-1"].Points.AddXY(temp.ToString(), "55");
+
+            chartZone2.ChartAreas[0].AxisY.Interval = 10;
+            chartZone2.ChartAreas[0].AxisY.Maximum = 100;
+            chartZone2.ChartAreas[0].AxisY.Minimum = 0;
+            chartZone2.ChartAreas[0].AxisX.Minimum = 0;
+            chartZone2.ChartAreas[0].BackColor = Color.FromArgb(30, Color.LightGreen);
+
+            chartView.ChartAreas[0].AxisY.Interval = 10;
+            chartView.ChartAreas[0].AxisY.Maximum = 100;
+            chartView.ChartAreas[0].AxisY.Minimum = 0;
+            chartView.ChartAreas[0].AxisX.Minimum = 0;
+            chartView.ChartAreas[0].BackColor = Color.FromArgb(30, Color.LightGreen);
 
 
             // Disconectar
@@ -682,31 +697,6 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        //private void btnApplySetpoint1_Click(object sender, EventArgs e)
-        //{
-        //    double determinarSiSubeOBaja = Convert.ToDouble(txtPutSetpoint1.Text);
-
-        //    if (determinarSiSubeOBaja > setpoint)
-        //    {
-        //        // Vamos a calentar
-        //        picUpDown1.Image.Dispose();
-        //        picUpDown1.Image = Resources.arrowUpRed21;
-        //    }
-        //    else if (determinarSiSubeOBaja < setpoint)
-        //    {
-        //        // Vamos a enfriar
-        //        picUpDown1.Image.Dispose();
-        //        picUpDown1.Image = Resources.arrowDownBlue2;
-        //    }
-        //    else
-        //    {
-        //        picUpDown1.Image.Dispose();
-        //        picUpDown1.Image = Resources.neutroWhite;
-        //    }
-
-        //    setpointGoal = determinarSiSubeOBaja;
-        //    timerSimulationDownUp.Start();
-        //}
 
         double setpointGoal = 25;
         private void timerSimulationDownUp_Tick(object sender, EventArgs e)
@@ -733,9 +723,6 @@ namespace Apple_24_Zones.Forms
             serialPort1.Parity = Parity.None;
 
         }
-        
-
-      
 
 
         private void TextBox_Paint(object sender, PaintEventArgs e)
@@ -747,6 +734,8 @@ namespace Apple_24_Zones.Forms
         double temp = 0;                            // Time in ms
         double setpoint = 25;
 
+        string viewChart = "Both";
+
         private void timerSimulationCharts_Tick(object sender, EventArgs e)
         {
             rt = rt + 100;
@@ -755,113 +744,148 @@ namespace Apple_24_Zones.Forms
             int margen = 2;
             Random random = new Random();
 
-            double numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-            chartZone1.Series["T-1"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-            txtTC1.Text = numeroAleatorio.ToString() + " °C";
-
-            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-            chartZone1.Series["T-2"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-            txtTC2.Text = numeroAleatorio.ToString() + " °C";
-
-            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-            chartZone1.Series["T-3"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-            txtTC3.Text = numeroAleatorio.ToString() + " °C";
-
-            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-            chartZone1.Series["T-4"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-            txtTC4.Text = numeroAleatorio.ToString() + " °C";
-
-            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-            chartZone1.Series["T-5"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-            txtTC5.Text = numeroAleatorio.ToString() + " °C";
-
-            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-            chartZone1.Series["T-6"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-            txtTC6.Text = numeroAleatorio.ToString() + " °C";
-
-            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-            chartZone1.Series["T-7"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-            txtTC7.Text = numeroAleatorio.ToString() + " °C";
-
-            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-            chartZone1.Series["T-8"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-            txtTC8.Text = numeroAleatorio.ToString() + " °C";
-
-            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-            chartZone1.Series["T-9"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-            txtTC9.Text = numeroAleatorio.ToString() + " °C";
-
-            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-            chartZone1.Series["T-10"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-            txtTC10.Text = numeroAleatorio.ToString() + " °C";
-
-            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-            chartZone1.Series["T-11"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-            txtTC11.Text = numeroAleatorio.ToString() + " °C";
-
-            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-            chartZone1.Series["T-12"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-            txtTC12.Text = numeroAleatorio.ToString() + " °C";
-
-            List<double> temperaturas = new List<double>();
-
-            for (int i = 1; i <= 12; i++)
+            if (viewChart == "Both")
             {
-                string nombreLabel = "txtTC" + i;
-                Label label = this.Controls.Find(nombreLabel, true).FirstOrDefault() as Label;
+                double numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone2.Series["T-13"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC13.Text = numeroAleatorio.ToString() + " °C";
 
-                if (label != null)
+                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone1.Series["T-1"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC1.Text = numeroAleatorio.ToString() + " °C";
+
+                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone1.Series["T-2"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC2.Text = numeroAleatorio.ToString() + " °C";
+
+                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone1.Series["T-3"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC3.Text = numeroAleatorio.ToString() + " °C";
+
+                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone1.Series["T-4"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC4.Text = numeroAleatorio.ToString() + " °C";
+
+                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone1.Series["T-5"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC5.Text = numeroAleatorio.ToString() + " °C";
+
+                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone1.Series["T-6"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC6.Text = numeroAleatorio.ToString() + " °C";
+
+                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone1.Series["T-7"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC7.Text = numeroAleatorio.ToString() + " °C";
+
+                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone1.Series["T-8"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC8.Text = numeroAleatorio.ToString() + " °C";
+
+                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone1.Series["T-9"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC9.Text = numeroAleatorio.ToString() + " °C";
+
+                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone1.Series["T-10"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC10.Text = numeroAleatorio.ToString() + " °C";
+
+                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone1.Series["T-11"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC11.Text = numeroAleatorio.ToString() + " °C";
+
+                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartZone1.Series["T-12"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                txtTC12.Text = numeroAleatorio.ToString() + " °C";
+
+                List<double> temperaturas = new List<double>();
+
+                for (int i = 1; i <= 12; i++)
                 {
-                    // Obtiene el texto del label
-                    string textoLabel = label.Text;
+                    string nombreLabel = "txtTC" + i;
+                    Label label = this.Controls.Find(nombreLabel, true).FirstOrDefault() as Label;
 
-                    // Elimina " °C" del texto y convierte a double
-                    if (textoLabel.Contains(" °C"))
+                    if (label != null)
                     {
-                        textoLabel = textoLabel.Replace(" °C", "");
-                        if (double.TryParse(textoLabel, out double valor))
+                        // Obtiene el texto del label
+                        string textoLabel = label.Text;
+
+                        // Elimina " °C" del texto y convierte a double
+                        if (textoLabel.Contains(" °C"))
                         {
-                            temperaturas.Add(valor);
+                            textoLabel = textoLabel.Replace(" °C", "");
+                            if (double.TryParse(textoLabel, out double valor))
+                            {
+                                temperaturas.Add(valor);
+                            }
                         }
                     }
                 }
-            }
 
-            if (temperaturas.Count > 0)
+                if (temperaturas.Count > 0)
+                {
+                    double promedio = temperaturas.Average();
+
+                    // Ahora, "promedio" contiene el promedio de las temperaturas
+                    // Puedes usar este valor como desees.
+                    //lbAVGTemp1.Text = promedio.ToString("0.0") + " °C";
+                    //  lbCurrentSetpoint1.Text = setpointGoal.ToString("0.0") + " °C";
+                }
+
+                //chartZone1.ChartAreas[0].AxisY.Interval = 10;
+
+                //chartZone1.ChartAreas[0].AxisY.Maximum = double.NaN;
+                //chartZone1.ChartAreas[0].AxisY.Minimum = 0;
+                //chartZone1.ChartAreas[0].AxisX.Minimum = 0;
+
+                chartZone1.ChartAreas[0].RecalculateAxesScale();
+
+
+
+                if (chartZone1.Series["T-1"].Points.Count == 101)
+                {
+                    chartZone1.Series["T-1"].Points.RemoveAt(0);
+                    chartZone1.Series["T-2"].Points.RemoveAt(0);
+                    chartZone1.Series["T-3"].Points.RemoveAt(0);
+                    chartZone1.Series["T-4"].Points.RemoveAt(0);
+                    chartZone1.Series["T-5"].Points.RemoveAt(0);
+                    chartZone1.Series["T-6"].Points.RemoveAt(0);
+                    chartZone1.Series["T-7"].Points.RemoveAt(0);
+                    chartZone1.Series["T-8"].Points.RemoveAt(0);
+                    chartZone1.Series["T-9"].Points.RemoveAt(0);
+                    chartZone1.Series["T-10"].Points.RemoveAt(0);
+                    chartZone1.Series["T-11"].Points.RemoveAt(0);
+                    chartZone1.Series["T-12"].Points.RemoveAt(0);
+                }
+
+            }
+            else if (viewChart == "Zone1")
             {
-                double promedio = temperaturas.Average();
+                double numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                chartView.Series["T-1"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
 
-                // Ahora, "promedio" contiene el promedio de las temperaturas
-                // Puedes usar este valor como desees.
-                //lbAVGTemp1.Text = promedio.ToString("0.0") + " °C";
-              //  lbCurrentSetpoint1.Text = setpointGoal.ToString("0.0") + " °C";
+                txtView1.Text = numeroAleatorio.ToString() + " °C";
+
+                chartView.ChartAreas[0].RecalculateAxesScale();
+
+                if (chartView.Series["T-1"].Points.Count == 101)
+                {
+                    chartView.Series["T-1"].Points.RemoveAt(0);
+                    //chartView.Series["T-2"].Points.RemoveAt(0);
+                    //chartView.Series["T-3"].Points.RemoveAt(0);
+                    //chartView.Series["T-4"].Points.RemoveAt(0);
+                    //chartView.Series["T-5"].Points.RemoveAt(0);
+                    //chartView.Series["T-6"].Points.RemoveAt(0);
+                    //chartView.Series["T-7"].Points.RemoveAt(0);
+                    //chartView.Series["T-8"].Points.RemoveAt(0);
+                    //chartView.Series["T-9"].Points.RemoveAt(0);
+                    //chartView.Series["T-10"].Points.RemoveAt(0);
+                    //chartView.Series["T-11"].Points.RemoveAt(0);
+                    //chartView.Series["T-12"].Points.RemoveAt(0);
+                }
+
             }
 
-            //chartZone1.ChartAreas[0].AxisY.Interval = 10;
-
-            //chartZone1.ChartAreas[0].AxisY.Maximum = double.NaN;
-            //chartZone1.ChartAreas[0].AxisY.Minimum = 0;
-            //chartZone1.ChartAreas[0].AxisX.Minimum = 0;
-
-            chartZone1.ChartAreas[0].RecalculateAxesScale();
-
-
-
-            if (chartZone1.Series["T-1"].Points.Count == 101)
-            {
-                chartZone1.Series["T-1"].Points.RemoveAt(0);
-                chartZone1.Series["T-2"].Points.RemoveAt(0);
-                chartZone1.Series["T-3"].Points.RemoveAt(0);
-                chartZone1.Series["T-4"].Points.RemoveAt(0);
-                chartZone1.Series["T-5"].Points.RemoveAt(0);
-                chartZone1.Series["T-6"].Points.RemoveAt(0);
-                chartZone1.Series["T-7"].Points.RemoveAt(0);
-                chartZone1.Series["T-8"].Points.RemoveAt(0);
-                chartZone1.Series["T-9"].Points.RemoveAt(0);
-                chartZone1.Series["T-10"].Points.RemoveAt(0);
-                chartZone1.Series["T-11"].Points.RemoveAt(0);
-                chartZone1.Series["T-12"].Points.RemoveAt(0);
-            }
 
 
         }
@@ -1058,42 +1082,9 @@ namespace Apple_24_Zones.Forms
 
         }
 
+
+        // SIMULATIOOOON
         private string TC1 = "";
-
-        private void serialPort2_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-
-            if (BanderaRespuestaParaTCS)
-            {
-                try
-                {
-                    int bytesToRead = serialPort1.BytesToRead;
-                    byte[] buffer = new byte[bytesToRead];
-                    serialPort1.Read(buffer, 0, bytesToRead);
-
-                    // Verifica si los datos recibidos no están vacíos
-                    if (bytesToRead > 0)
-                    {
-                        // Convierte los datos a una cadena hexadecimal
-                        string hexData = BitConverter.ToString(buffer).Replace("-", "");
-
-                        // Guarda la cadena hexadecimal en la variable "temp"
-                        TC1 = hexData;
-                        // Puedes realizar cualquier otro procesamiento con la variable "temp" según tus necesidades.
-                    }
-                }
-                catch (Exception)
-                {
-
-                }
-            }
-
-
-            
-        }
-
-      
-
         private void timerGraphChart_Tick(object sender, EventArgs e)
         {
             if (TC1.Length == 14)
@@ -1116,6 +1107,8 @@ namespace Apple_24_Zones.Forms
                 }
             }
         }
+
+
 
         private void panelBoth_Paint(object sender, PaintEventArgs e)
         {
@@ -1149,6 +1142,11 @@ namespace Apple_24_Zones.Forms
                         try
                         {
                             SendSetTempHeaterAndTurnItOn(2);
+
+                            picProcess1.Image.Dispose();
+                            picProcess1.Image = Resources.LedRedHeating2;
+                            picUpDown1.Image.Dispose();
+                            picUpDown1.Image = Resources.arrowUpRed21;
                         }
                         catch (Exception ex)
                         {
@@ -1158,6 +1156,10 @@ namespace Apple_24_Zones.Forms
                     else if (setpoint >= 21 && setpoint <= 26)
                     {
                         // Tenemos que dejar a temperatura ambiente
+                        picUpDown2.Image.Dispose();
+                        picUpDown2.Image = Resources.neutroWhite;
+                        picProcess2.Image.Dispose();
+                        picProcess2.Image = Resources.LedWhite1;
 
                     }
                     else if (setpoint >= 5 && setpoint <= 20)
@@ -3026,6 +3028,122 @@ namespace Apple_24_Zones.Forms
         private string T1, T2, T3, T4, T5, T6;
 
         private string TF1, TF2, TF3, TF4, TF5, TF6, TF7, TF8, TF9, TF10, TF11, TF12, TF13, TF14, TF15, TF16, TF17, TF18, TF19, TF20, TF21, TF22, TF23, TF24;
+
+        bool toggleScaleZoneSingle = true;
+        private void btnScaleToggleZoneViewSingle_Click(object sender, EventArgs e)
+        {
+            if (toggleScaleZoneSingle)
+            {
+                chartView.ChartAreas[0].AxisY.Maximum = double.NaN;
+                chartView.ChartAreas[0].AxisY.Minimum = 0;
+                toggleScaleZoneSingle = false;
+            }
+            else
+            {
+                chartView.ChartAreas[0].AxisY.Maximum = 100;
+                chartView.ChartAreas[0].AxisY.Minimum = 0;
+                toggleScaleZoneSingle = true;
+            }
+        }
+
+        private void btnScaleToggleZoneViewSingle_MouseEnter(object sender, EventArgs e)
+        {
+            btnScaleToggleZone1.BackColor = Color.SteelBlue;
+        }
+
+        private void btnScaleToggleZoneViewSingle_MouseLeave(object sender, EventArgs e)
+        {
+            btnScaleToggleZone1.BackColor = Color.DarkGray;
+        }
+
+        private void checkT24_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone2.Series["T-24"].Enabled = checkT24.Checked ? true : false;
+        }
+
+        private void checkT23_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone2.Series["T-23"].Enabled = checkT23.Checked ? true : false;
+        }
+
+        private void checkT22_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone2.Series["T-22"].Enabled = checkT22.Checked ? true : false;
+        }
+
+        private void checkT21_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone2.Series["T-21"].Enabled = checkT21.Checked ? true : false;
+        }
+
+        private void checkT20_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone2.Series["T-20"].Enabled = checkT20.Checked ? true : false;
+        }
+
+        private void checkT19_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone2.Series["T-19"].Enabled = checkT19.Checked ? true : false;
+        }
+
+        private void checkT18_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone2.Series["T-18"].Enabled = checkT18.Checked ? true : false;
+        }
+
+        private void checkT17_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone2.Series["T-17"].Enabled = checkT17.Checked ? true : false;
+        }
+
+        private void checkT16_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone2.Series["T-16"].Enabled = checkT16.Checked ? true : false;
+        }
+
+        private void checkT15_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone2.Series["T-15"].Enabled = checkT15.Checked ? true : false;
+        }
+
+        private void checkT14_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone2.Series["T-14"].Enabled = checkT14.Checked ? true : false;
+        }
+
+        private void checkT13_CheckedChanged(object sender, EventArgs e)
+        {
+            chartZone2.Series["T-13"].Enabled = checkT13.Checked ? true : false;
+        }
+
+        bool toggleScaleZone2 = true;
+        private void btnScaleToggleZone2_Click(object sender, EventArgs e)
+        {
+            if (toggleScaleZone2)
+            {
+                chartZone2.ChartAreas[0].AxisY.Maximum = double.NaN;
+                chartZone2.ChartAreas[0].AxisY.Minimum = 0;
+                toggleScaleZone2 = false;
+            }
+            else
+            {
+                chartZone2.ChartAreas[0].AxisY.Maximum = 100;
+                chartZone2.ChartAreas[0].AxisY.Minimum = 0;
+                toggleScaleZone2 = true;
+            }
+        }
+
+        private void btnScaleToggleZone1_MouseEnter(object sender, EventArgs e)
+        {
+            btnScaleToggleZone1.BackColor = Color.SteelBlue;
+        }
+
+        private void btnScaleToggleZone1_MouseLeave(object sender, EventArgs e)
+        {
+            btnScaleToggleZone1.BackColor = Color.DarkGray;
+        }
+
+      
 
         bool toggleScaleZone1 = true;
         private void btnScaleToggleZone1_Click(object sender, EventArgs e)

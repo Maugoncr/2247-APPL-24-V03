@@ -263,6 +263,16 @@ namespace Apple_24_Zones.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap labelTempAxisY {
+            get {
+                object obj = ResourceManager.GetObject("labelTempAxisY", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap led_off {
             get {
                 object obj = ResourceManager.GetObject("led_off", resourceCulture);
