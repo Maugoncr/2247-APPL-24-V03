@@ -75,8 +75,20 @@ namespace Apple_24_Zones.Forms
         }
 
         //ZONE TO VARIABLES
+        private StreamWriter streamWriterZone1;
+        private string tempFileName1; 
 
+        private StreamWriter streamWriterZone2;
+        private string tempFileName2;
 
+        private bool RecordZone1 = false;
+        private bool RecordZone2 = false;
+
+        private bool firstEntranceZone1 = true;
+        private bool firstEntranceZone2 = true;
+
+        private string inicioRecordZone1;
+        private string inicioRecordZone2;
 
 
         private void IconClose_Click(object sender, EventArgs e)
@@ -431,17 +443,27 @@ namespace Apple_24_Zones.Forms
         {
             viewChart = "Both";
             ChangeViewChartZone();
+            rt1 = 0;temp1 = 0;
+            rt2 = 0;temp2 = 0;
+            rtView = 0; tempView = 0;
         }
 
         private void tempZone1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             viewChart = "Zone1";
             ChangeViewChartZone(1);
+            rt1 = 0; temp1 = 0;
+            rt2 = 0; temp2 = 0;
+            rtView = 0; tempView = 0;
         }
 
         private void tempZone2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            viewChart = "Zone2";
             ChangeViewChartZone(2);
+            rt1 = 0; temp1 = 0;
+            rt2 = 0; temp2 = 0;
+            rtView = 0; tempView = 0;
         }
 
         private void informationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -497,11 +519,44 @@ namespace Apple_24_Zones.Forms
             string fecha = DateTime.Now.ToString("dddd, MM/dd/yyyy");
             lbTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             lbDate.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(fecha);
+
+            if (RecordZone1 == true)
+            {
+                if (firstEntranceZone1)
+                {
+                    tempFileName1 = Path.Combine(Path.GetTempPath(), "ELEN II_" + Guid.NewGuid().ToString() + ".txt");
+                    streamWriterZone1 = new StreamWriter(tempFileName1, true);
+                    streamWriterZone1.WriteLine("Temperature#,TemperatureCelsius,RunningTime,DateTime");
+                    inicioRecordZone1 = DateTime.Now.ToString("MM-dd-yyyy HH-mm");
+                    firstEntranceZone1 = false;
+                }
+                //Escribir lo necesario
+                //           Temp#, Temp°C, RunningTime, DateTime
+                //            1,          25.50,            1,           10 / 04 / 2023 15:20:20
+                //            12,         26.00             1,           10 / 04 / 2023 15:20:20
+                streamWriterZone1.WriteLine("T1"+","+TF1+","+temp1.ToString()+","+DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                streamWriterZone1.WriteLine("T2"+","+TF2+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                streamWriterZone1.WriteLine("T3"+","+TF3+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                streamWriterZone1.WriteLine("T4"+","+TF4+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                streamWriterZone1.WriteLine("T5"+","+TF5+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                streamWriterZone1.WriteLine("T6"+","+TF6+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                streamWriterZone1.WriteLine("T7"+","+TF7+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                streamWriterZone1.WriteLine("T8"+","+TF8+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                streamWriterZone1.WriteLine("T9"+","+TF9+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                streamWriterZone1.WriteLine("T10"+","+TF10+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                streamWriterZone1.WriteLine("T11"+","+TF11+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                streamWriterZone1.WriteLine("T12"+","+TF12+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+            }
+
+
+
+
+
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            timerDateTime.Start();
+            timerDateTimeAndRecord.Start();
             FillChartZones(1);
             FillChartZones(2);
             FrmCargarDefault();
@@ -510,6 +565,12 @@ namespace Apple_24_Zones.Forms
 
         private void FrmCargarDefault()
         {
+            //Record
+
+            btnRecordZone1.Text = "Record"; btnRecordZone1.ForeColor = Color.Black; btnRecordZone1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            btnRecordZone1.Size = new Size(109,33); btnRecordZone1.Location = new Point(409,234);
+            btnRecordZone2.Text = "Record"; btnRecordZone2.ForeColor = Color.Black; btnRecordZone2.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            btnRecordZone2.Size = new Size(109, 33); btnRecordZone2.Location = new Point(409, 234);
 
             // Chart Settings
 
@@ -698,32 +759,63 @@ namespace Apple_24_Zones.Forms
         }
 
 
-        double setpointGoal = 25;
+
         private void timerSimulationDownUp_Tick(object sender, EventArgs e)
         {
-            if (setpoint < setpointGoal)
-            {
-                setpoint++;
-            }
-            else if (setpoint > setpointGoal)
-            {
-                setpoint--;
-            }
-            else if (setpoint == setpointGoal)
-            {
-                timerSimulationDownUp.Stop();
-            }
+            int margen = 2;
+            Random random = new Random();
+
+            double numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF1 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF2 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF3 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF4 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF5 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF6 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF7 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF8 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF9 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF10 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF11 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF12 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF13 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF14 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF15 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF16 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF17 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF18 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF19 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF20 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF21 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF22 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF23 = numeroAleatorio.ToString("00.00");
+            numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+            TF24 = numeroAleatorio.ToString("00.00");
+
+
         }
-        
-
-        bool BanderaRespuestaParaTCS = false;
-        private void SetConfigSerialPortForTCS()
-        {
-            serialPort1.DataBits = 8;
-            serialPort1.Parity = Parity.None;
-
-        }
-
 
         private void TextBox_Paint(object sender, PaintEventArgs e)
         {
@@ -733,8 +825,6 @@ namespace Apple_24_Zones.Forms
         double rt = 0;                              // Time X from chart
         double temp = 0;                            // Time in ms
         double setpoint = 25;
-
-        string viewChart = "Both";
 
         private void timerSimulationCharts_Tick(object sender, EventArgs e)
         {
@@ -828,7 +918,7 @@ namespace Apple_24_Zones.Forms
 
                     // Ahora, "promedio" contiene el promedio de las temperaturas
                     // Puedes usar este valor como desees.
-                    //lbAVGTemp1.Text = promedio.ToString("0.0") + " °C";
+                    lbAVGTemp1.Text = promedio.ToString("0.0") + " °C";
                     //  lbCurrentSetpoint1.Text = setpointGoal.ToString("0.0") + " °C";
                 }
 
@@ -1009,55 +1099,65 @@ namespace Apple_24_Zones.Forms
 
         private void btnConnectCOM2_Click(object sender, EventArgs e)
         {
-            try
+            if (btnConnectCOM2.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
             {
-                serialPort2.PortName = cbCOMSelect2.Text;
-                serialPort2.Open();
-                btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
-                serialPort2.DataReceived += new SerialDataReceivedEventHandler(serialPort2_DataReceived_1);
+                try
+                {
+                    serialPort2.PortName = cbCOMSelect2.Text;
+                    serialPort2.Open();
+                    serialPort2.DataReceived += new SerialDataReceivedEventHandler(serialPort2_DataReceived_1);
+
+                    btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+                    btnRefreshCOM2.Enabled = false;
+
+                    timerRequestTemps.Start();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            //if (reconocerCOMTEMPS(cbCOMSelect2.SelectedItem.ToString()))
-            //{
-            //    btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
-            //}
-           
-        }
-
-        private void btnConnectCOM1_Click(object sender, EventArgs e)
-        {
-            if (reconocerCOMForComponents(cbCOMSelect1.SelectedItem.ToString()))
-            {
-                btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
-                timerSimulationCharts.Start();
-            }
-
-        }
-
-        private bool reconocerCOMTEMPS(string COM)
-        {
-            try
+            else
             {
                 if (serialPort2.IsOpen)
                 {
                     serialPort2.Close();
-                    return false;
-                }
 
-                serialPort2.PortName = COM;
-                serialPort2.Open();
-                return true;
+                    timerRequestTemps.Stop();
+
+                    btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+                    btnRefreshCOM2.Enabled = true;
+                }
             }
-            catch (Exception e)
+        }
+
+        private void btnConnectCOM1_Click(object sender, EventArgs e)
+        {
+            if (btnConnectCOM1.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
             {
-                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                if (reconocerCOMForComponents(cbCOMSelect1.SelectedItem.ToString()))
+                {
+                    btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+                    btnRefreshCOM1.Enabled = false;
+
+                    //SIMULATION
+                   // timerSimulationCharts.Start();
+                   timerSimulationDownUp.Start();
+                   timerGraficarCharts.Start();
+                }
             }
-        
+            else
+            {
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Close();
+                    btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+                    btnRefreshCOM1.Enabled = true;
+
+                    //SIMULATION
+                    timerSimulationCharts.Stop();
+                }
+            }
         }
 
         private bool reconocerCOMForComponents(string COM)
@@ -1079,35 +1179,7 @@ namespace Apple_24_Zones.Forms
                 MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-
         }
-
-
-        // SIMULATIOOOON
-        private string TC1 = "";
-        private void timerGraphChart_Tick(object sender, EventArgs e)
-        {
-            if (TC1.Length == 14)
-            {
-                //txtSend.Text = TC1.Substring(6, 4);
-
-                string hexa = TC1.Substring(6, 4);
-
-                long decimalValue = Convert.ToInt64(hexa, 16);
-
-                string decima = decimalValue.ToString();
-
-                if (decima.Length % 2 == 0 && decima.Length >= 2)
-                {
-                    int middleIndex = decima.Length / 2;
-                    StringBuilder sb = new StringBuilder(decima);
-                    sb.Insert(middleIndex, '.');
-                    string result = sb.ToString();
-                    lbAVGTemp2.Text = result + " °C";
-                }
-            }
-        }
-
 
 
         private void panelBoth_Paint(object sender, PaintEventArgs e)
@@ -2938,7 +3010,6 @@ namespace Apple_24_Zones.Forms
 
         private void timerRequestTemps_Tick(object sender, EventArgs e)
         {
-
             try
             {
                 if (sendAgainRequest)
@@ -2970,7 +3041,6 @@ namespace Apple_24_Zones.Forms
                             break;
                     }
                 }
-
             }
             catch (Exception)
             {
@@ -3023,10 +3093,12 @@ namespace Apple_24_Zones.Forms
                 ProcesarCadena(responseModule03Address);
             }
         }
-
+        // Variable que toma la respuesta sin procesar al comando que solicita la cadena de las 6 temps segun a que modulo pregunta
         string responseModule03Address;
+        // Variables cambiantes según la recepcion de los RTD's T1 Funciona como T1, T7, T13, T18 segun el ciclo por el que vaya
         private string T1, T2, T3, T4, T5, T6;
 
+        // Variables de cada temperatura ya en formato string sin signo °C
         private string TF1, TF2, TF3, TF4, TF5, TF6, TF7, TF8, TF9, TF10, TF11, TF12, TF13, TF14, TF15, TF16, TF17, TF18, TF19, TF20, TF21, TF22, TF23, TF24;
 
         bool toggleScaleZoneSingle = true;
@@ -3054,6 +3126,402 @@ namespace Apple_24_Zones.Forms
         private void btnScaleToggleZoneViewSingle_MouseLeave(object sender, EventArgs e)
         {
             btnScaleToggleZone1.BackColor = Color.DarkGray;
+        }
+
+        private void btnRefreshCOM1_Click(object sender, EventArgs e)
+        {
+            if (btnConnectCOM1.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
+            {
+                btnConnectCOM1.Enabled = false;
+
+                cbCOMSelect1.Enabled = true;
+                string[] ports = SerialPort.GetPortNames();
+                cbCOMSelect1.Items.Clear();
+                cbCOMSelect1.Items.AddRange(ports);
+            }
+        }
+
+        private void btnRefreshCOM2_Click(object sender, EventArgs e)
+        {
+            if (btnConnectCOM2.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
+            {
+                btnConnectCOM2.Enabled = false;
+
+                cbCOMSelect2.Enabled = true;
+                string[] ports = SerialPort.GetPortNames();
+                cbCOMSelect2.Items.Clear();
+                cbCOMSelect2.Items.AddRange(ports);
+            }
+        }
+
+        string viewChart = "Both";
+
+        double rt1 = 0;                              // Time X from chart
+        double temp1 = 0;
+        double rt2 = 0;                              // Time X from chart
+        double temp2 = 0;
+        double rtView = 0;                              // Time X from chart
+        double tempView = 0;
+
+        double AVGZona1, AVGZona2;
+
+        private void btnRecordZone1_Click(object sender, EventArgs e)
+        {
+            if (btnRecordZone1.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
+            {
+                btnRecordZone1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+                RecordZone1 = true;
+                btnRecordZone1.Text = "Recording...";btnRecordZone1.ForeColor = Color.Red;
+                btnRecordZone1.Size = new Size(145, 33); btnRecordZone1.Location = new Point(373, 234);
+            }
+            else
+            {
+                btnRecordZone1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+                RecordZone1 = false;
+                btnRecordZone1.Text = "Record"; btnRecordZone1.ForeColor = Color.Black; 
+                btnRecordZone1.Size = new Size(109, 33); btnRecordZone1.Location = new Point(409, 234);
+               
+                streamWriterZone1.Close();
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                {
+                    saveFileDialog.Filter = "Archivos de texto|*.txt";
+                    saveFileDialog.FileName = "ELEN II SOFTWARE RECORD ZONE 1 STARTED " + inicioRecordZone1 + " ENDED " + DateTime.Now.ToString("MM-dd-yyyy HH-mm");
+
+                    // Establece la ruta por defecto en la carpeta "ELEN II SOFTWARE" dentro de "Documentos"
+                    string defaultSavePath = Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                        "ELEN II SOFTWARE");
+
+                    Directory.CreateDirectory(defaultSavePath); // Crea la carpeta si no existe
+
+                    saveFileDialog.InitialDirectory = defaultSavePath;
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        // Elimina el archivo existente si hay uno con el mismo nombre
+                        if (File.Exists(saveFileDialog.FileName))
+                        {
+                            File.Delete(saveFileDialog.FileName);
+                        }
+
+                        // Mueve el archivo temporal a la ubicación seleccionada
+                        File.Move(tempFileName1, saveFileDialog.FileName);
+                        MessageBox.Show("File saved successfully.", "Successful Saved", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        // Si se cancela, elimina el archivo temporal
+                        File.Delete(tempFileName1);
+                    }
+                }
+                firstEntranceZone1 = true;
+
+            }
+        }
+
+        private void btnRecordZone2_Click(object sender, EventArgs e)
+        {
+            if (btnRecordZone2.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
+            {
+                btnRecordZone2.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+                RecordZone2 = true;
+                btnRecordZone2.Text = "Recording..."; btnRecordZone2.ForeColor = Color.Red;
+                btnRecordZone2.Size = new Size(145, 33); btnRecordZone2.Location = new Point(373, 234);
+            }
+            else
+            {
+                btnRecordZone2.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+                RecordZone2 = false;
+                btnRecordZone2.Text = "Record"; btnRecordZone2.ForeColor = Color.Black;
+                btnRecordZone2.Size = new Size(109, 33); btnRecordZone2.Location = new Point(409, 234);
+            }
+        }
+
+        private void timerGraficarCharts_Tick(object sender, EventArgs e)
+        {
+            //Si todas las TF con formula ya se encuentran con su respectivo valor 4 segundos despues de conectar!
+            if (TF1 != null && TF7 != null && TF13 != null && TF19 != null && TF24 != null)
+            {
+                if (viewChart == "Both")
+                {
+                    // ZONA 1 
+                    rt1 = rt1 + 100;
+                    temp1 = rt1 / 1000;
+
+                    chartZone1.Series["T-1"].Points.AddXY(temp1.ToString(), TF1.ToString());
+                    txtTC1.Text = TF1;
+                    chartZone1.Series["T-2"].Points.AddXY(temp1.ToString(), TF2.ToString());
+                    txtTC2.Text = TF2;
+                    chartZone1.Series["T-3"].Points.AddXY(temp1.ToString(), TF3.ToString());
+                    txtTC3.Text = TF3;
+                    chartZone1.Series["T-4"].Points.AddXY(temp1.ToString(), TF4.ToString());
+                    txtTC4.Text = TF4;
+                    chartZone1.Series["T-5"].Points.AddXY(temp1.ToString(), TF5.ToString());
+                    txtTC5.Text = TF5;
+                    chartZone1.Series["T-6"].Points.AddXY(temp1.ToString(), TF6.ToString());
+                    txtTC6.Text = TF6;
+                    chartZone1.Series["T-7"].Points.AddXY(temp1.ToString(), TF7.ToString());
+                    txtTC7.Text = TF7;
+                    chartZone1.Series["T-8"].Points.AddXY(temp1.ToString(), TF8.ToString());
+                    txtTC8.Text = TF8;
+                    chartZone1.Series["T-9"].Points.AddXY(temp1.ToString(), TF9.ToString());
+                    txtTC9.Text = TF9;
+                    chartZone1.Series["T-10"].Points.AddXY(temp1.ToString(), TF10.ToString());
+                    txtTC10.Text = TF10;
+                    chartZone1.Series["T-11"].Points.AddXY(temp1.ToString(), TF11.ToString());
+                    txtTC11.Text = TF11;
+                    chartZone1.Series["T-12"].Points.AddXY(temp1.ToString(), TF12.ToString());
+                    txtTC12.Text = TF12;
+
+                    List<double> temperaturas1 = new List<double>
+                    {
+                        Convert.ToDouble(TF1),
+                        Convert.ToDouble(TF2),
+                        Convert.ToDouble(TF3),
+                        Convert.ToDouble(TF4),
+                        Convert.ToDouble(TF5),
+                        Convert.ToDouble(TF6),
+                        Convert.ToDouble(TF7),
+                        Convert.ToDouble(TF8),
+                        Convert.ToDouble(TF9),
+                        Convert.ToDouble(TF10),
+                        Convert.ToDouble(TF11),
+                        Convert.ToDouble(TF12)
+                    };
+
+                    AVGZona1 = temperaturas1.Average();
+                    lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
+
+                    chartZone1.ChartAreas[0].RecalculateAxesScale();
+
+                    if (chartZone1.Series["T-1"].Points.Count == 101)
+                    {
+                        chartZone1.Series["T-1"].Points.RemoveAt(0);chartZone1.Series["T-2"].Points.RemoveAt(0);
+                        chartZone1.Series["T-3"].Points.RemoveAt(0);chartZone1.Series["T-4"].Points.RemoveAt(0);
+                        chartZone1.Series["T-5"].Points.RemoveAt(0);chartZone1.Series["T-6"].Points.RemoveAt(0);
+                        chartZone1.Series["T-7"].Points.RemoveAt(0);chartZone1.Series["T-8"].Points.RemoveAt(0);
+                        chartZone1.Series["T-9"].Points.RemoveAt(0);chartZone1.Series["T-10"].Points.RemoveAt(0);
+                        chartZone1.Series["T-11"].Points.RemoveAt(0);chartZone1.Series["T-12"].Points.RemoveAt(0);
+                    }
+
+                    //ZONA 2
+                    rt2 = rt2 + 100;
+                    temp2 = rt2 / 1000;
+
+                    chartZone2.Series["T-13"].Points.AddXY(temp2.ToString(), TF13.ToString());
+                    txtTC13.Text = TF13;
+                    chartZone2.Series["T-14"].Points.AddXY(temp2.ToString(), TF14.ToString());
+                    txtTC14.Text = TF14;
+                    chartZone2.Series["T-15"].Points.AddXY(temp2.ToString(), TF15.ToString());
+                    txtTC15.Text = TF15;
+                    chartZone2.Series["T-16"].Points.AddXY(temp2.ToString(), TF16.ToString());
+                    txtTC16.Text = TF16;
+                    chartZone2.Series["T-17"].Points.AddXY(temp2.ToString(), TF17.ToString());
+                    txtTC17.Text = TF17;
+                    chartZone2.Series["T-18"].Points.AddXY(temp2.ToString(), TF18.ToString());
+                    txtTC18.Text = TF18;
+                    chartZone2.Series["T-19"].Points.AddXY(temp2.ToString(), TF19.ToString());
+                    txtTC19.Text = TF19;
+                    chartZone2.Series["T-20"].Points.AddXY(temp2.ToString(), TF20.ToString());
+                    txtTC20.Text = TF20;
+                    chartZone2.Series["T-21"].Points.AddXY(temp2.ToString(), TF21.ToString());
+                    txtTC21.Text = TF21;
+                    chartZone2.Series["T-22"].Points.AddXY(temp2.ToString(), TF22.ToString());
+                    txtTC22.Text = TF22;
+                    chartZone2.Series["T-23"].Points.AddXY(temp2.ToString(), TF23.ToString());
+                    txtTC23.Text = TF23;
+                    chartZone2.Series["T-24"].Points.AddXY(temp2.ToString(), TF24.ToString());
+                    txtTC24.Text = TF24;
+
+                    List<double> temperaturas2 = new List<double>
+                    {
+                        Convert.ToDouble(TF13),
+                        Convert.ToDouble(TF14),
+                        Convert.ToDouble(TF15),
+                        Convert.ToDouble(TF16),
+                        Convert.ToDouble(TF17),
+                        Convert.ToDouble(TF18),
+                        Convert.ToDouble(TF19),
+                        Convert.ToDouble(TF20),
+                        Convert.ToDouble(TF21),
+                        Convert.ToDouble(TF22),
+                        Convert.ToDouble(TF23),
+                        Convert.ToDouble(TF24)
+                    };
+
+                    AVGZona2 = temperaturas2.Average();
+                    lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
+
+                    chartZone2.ChartAreas[0].RecalculateAxesScale();
+
+                    if (chartZone2.Series["T-13"].Points.Count == 101)
+                    {
+                        chartZone2.Series["T-13"].Points.RemoveAt(0); chartZone2.Series["T-14"].Points.RemoveAt(0);
+                        chartZone2.Series["T-15"].Points.RemoveAt(0); chartZone2.Series["T-16"].Points.RemoveAt(0);
+                        chartZone2.Series["T-17"].Points.RemoveAt(0); chartZone2.Series["T-18"].Points.RemoveAt(0);
+                        chartZone2.Series["T-19"].Points.RemoveAt(0); chartZone2.Series["T-20"].Points.RemoveAt(0);
+                        chartZone2.Series["T-21"].Points.RemoveAt(0); chartZone2.Series["T-22"].Points.RemoveAt(0);
+                        chartZone2.Series["T-23"].Points.RemoveAt(0); chartZone2.Series["T-24"].Points.RemoveAt(0);
+                    }
+                }
+                else if (viewChart == "Zone1")
+                {
+                    rtView = rtView + 100;
+                    tempView = rtView / 1000;
+
+                    chartView.Series["T-1"].Points.AddXY(tempView.ToString(), TF1.ToString());
+                    txtView1.Text = TF1;
+                    chartView.Series["T-2"].Points.AddXY(tempView.ToString(), TF2.ToString());
+                    txtView2.Text = TF2;
+                    chartView.Series["T-3"].Points.AddXY(tempView.ToString(), TF3.ToString());
+                    txtView3.Text = TF3;
+                    chartView.Series["T-4"].Points.AddXY(tempView.ToString(), TF4.ToString());
+                    txtView4.Text = TF4;
+                    chartView.Series["T-5"].Points.AddXY(tempView.ToString(), TF5.ToString());
+                    txtView5.Text = TF5;
+                    chartView.Series["T-6"].Points.AddXY(tempView.ToString(), TF6.ToString());
+                    txtView6.Text = TF6;
+                    chartView.Series["T-7"].Points.AddXY(tempView.ToString(), TF7.ToString());
+                    txtView7.Text = TF7;
+                    chartView.Series["T-8"].Points.AddXY(tempView.ToString(), TF8.ToString());
+                    txtView8.Text = TF8;
+                    chartView.Series["T-9"].Points.AddXY(tempView.ToString(), TF9.ToString());
+                    txtView9.Text = TF9;
+                    chartView.Series["T-10"].Points.AddXY(tempView.ToString(), TF10.ToString());
+                    txtView10.Text = TF10;
+                    chartView.Series["T-11"].Points.AddXY(tempView.ToString(), TF11.ToString());
+                    txtView11.Text = TF11;
+                    chartView.Series["T-12"].Points.AddXY(tempView.ToString(), TF12.ToString());
+                    txtView12.Text = TF12;
+
+                    List<double> temperaturas1 = new List<double>
+                    {
+                        Convert.ToDouble(TF1),
+                        Convert.ToDouble(TF2),
+                        Convert.ToDouble(TF3),
+                        Convert.ToDouble(TF4),
+                        Convert.ToDouble(TF5),
+                        Convert.ToDouble(TF6),
+                        Convert.ToDouble(TF7),
+                        Convert.ToDouble(TF8),
+                        Convert.ToDouble(TF9),
+                        Convert.ToDouble(TF10),
+                        Convert.ToDouble(TF11),
+                        Convert.ToDouble(TF12)
+                    };
+                    List<double> temperaturas2 = new List<double>
+                    {
+                        Convert.ToDouble(TF13),
+                        Convert.ToDouble(TF14),
+                        Convert.ToDouble(TF15),
+                        Convert.ToDouble(TF16),
+                        Convert.ToDouble(TF17),
+                        Convert.ToDouble(TF18),
+                        Convert.ToDouble(TF19),
+                        Convert.ToDouble(TF20),
+                        Convert.ToDouble(TF21),
+                        Convert.ToDouble(TF22),
+                        Convert.ToDouble(TF23),
+                        Convert.ToDouble(TF24)
+                    };
+
+                    AVGZona1 = temperaturas1.Average();
+                    lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
+                    AVGZona2 = temperaturas2.Average();
+                    lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
+
+                    chartView.ChartAreas[0].RecalculateAxesScale();
+
+                    if (chartView.Series["T-1"].Points.Count == 101)
+                    {
+                        chartView.Series["T-1"].Points.RemoveAt(0); chartView.Series["T-2"].Points.RemoveAt(0);
+                        chartView.Series["T-3"].Points.RemoveAt(0); chartView.Series["T-4"].Points.RemoveAt(0);
+                        chartView.Series["T-5"].Points.RemoveAt(0); chartView.Series["T-6"].Points.RemoveAt(0);
+                        chartView.Series["T-7"].Points.RemoveAt(0); chartView.Series["T-8"].Points.RemoveAt(0);
+                        chartView.Series["T-9"].Points.RemoveAt(0); chartView.Series["T-10"].Points.RemoveAt(0);
+                        chartView.Series["T-11"].Points.RemoveAt(0); chartView.Series["T-12"].Points.RemoveAt(0);
+                    }
+
+                }
+                else if (viewChart == "Zone2")
+                {
+                    rtView = rtView + 100;
+                    tempView = rtView / 1000;
+
+                    chartView.Series["T-13"].Points.AddXY(tempView.ToString(), TF13.ToString());
+                    txtView1.Text = TF13;
+                    chartView.Series["T-14"].Points.AddXY(tempView.ToString(), TF14.ToString());
+                    txtView2.Text = TF14;
+                    chartView.Series["T-15"].Points.AddXY(tempView.ToString(), TF15.ToString());
+                    txtView3.Text = TF15;
+                    chartView.Series["T-16"].Points.AddXY(tempView.ToString(), TF16.ToString());
+                    txtView4.Text = TF16;
+                    chartView.Series["T-17"].Points.AddXY(tempView.ToString(), TF17.ToString());
+                    txtView5.Text = TF17;
+                    chartView.Series["T-18"].Points.AddXY(tempView.ToString(), TF18.ToString());
+                    txtView6.Text = TF18;
+                    chartView.Series["T-19"].Points.AddXY(tempView.ToString(), TF19.ToString());
+                    txtView7.Text = TF19;
+                    chartView.Series["T-20"].Points.AddXY(tempView.ToString(), TF20.ToString());
+                    txtView8.Text = TF20;
+                    chartView.Series["T-21"].Points.AddXY(tempView.ToString(), TF21.ToString());
+                    txtView9.Text = TF21;
+                    chartView.Series["T-22"].Points.AddXY(tempView.ToString(), TF22.ToString());
+                    txtView10.Text = TF22;
+                    chartView.Series["T-23"].Points.AddXY(tempView.ToString(), TF23.ToString());
+                    txtView11.Text = TF23;
+                    chartView.Series["T-24"].Points.AddXY(tempView.ToString(), TF24.ToString());
+                    txtView12.Text = TF24;
+
+                    List<double> temperaturas1 = new List<double>
+                    {
+                        Convert.ToDouble(TF1),
+                        Convert.ToDouble(TF2),
+                        Convert.ToDouble(TF3),
+                        Convert.ToDouble(TF4),
+                        Convert.ToDouble(TF5),
+                        Convert.ToDouble(TF6),
+                        Convert.ToDouble(TF7),
+                        Convert.ToDouble(TF8),
+                        Convert.ToDouble(TF9),
+                        Convert.ToDouble(TF10),
+                        Convert.ToDouble(TF11),
+                        Convert.ToDouble(TF12)
+                    };
+                    List<double> temperaturas2 = new List<double>
+                    {
+                        Convert.ToDouble(TF13),
+                        Convert.ToDouble(TF14),
+                        Convert.ToDouble(TF15),
+                        Convert.ToDouble(TF16),
+                        Convert.ToDouble(TF17),
+                        Convert.ToDouble(TF18),
+                        Convert.ToDouble(TF19),
+                        Convert.ToDouble(TF20),
+                        Convert.ToDouble(TF21),
+                        Convert.ToDouble(TF22),
+                        Convert.ToDouble(TF23),
+                        Convert.ToDouble(TF24)
+                    };
+
+                    AVGZona1 = temperaturas1.Average();
+                    lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
+                    AVGZona2 = temperaturas2.Average();
+                    lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
+
+                    chartView.ChartAreas[0].RecalculateAxesScale();
+
+                    if (chartView.Series["T-13"].Points.Count == 101)
+                    {
+                        chartView.Series["T-13"].Points.RemoveAt(0); chartView.Series["T-14"].Points.RemoveAt(0);
+                        chartView.Series["T-15"].Points.RemoveAt(0); chartView.Series["T-16"].Points.RemoveAt(0);
+                        chartView.Series["T-17"].Points.RemoveAt(0); chartView.Series["T-18"].Points.RemoveAt(0);
+                        chartView.Series["T-19"].Points.RemoveAt(0); chartView.Series["T-20"].Points.RemoveAt(0);
+                        chartView.Series["T-21"].Points.RemoveAt(0); chartView.Series["T-22"].Points.RemoveAt(0);
+                        chartView.Series["T-23"].Points.RemoveAt(0); chartView.Series["T-24"].Points.RemoveAt(0);
+                    }
+                }
+            }
         }
 
         private void checkT24_CheckedChanged(object sender, EventArgs e)
@@ -3215,7 +3683,7 @@ namespace Apple_24_Zones.Forms
 
         public void ProcesarCadena(string cadena)
         {
-            // Bucle para buscar y procesar cada ocurrencia de "2B"
+            // Bucle para buscar y procesar cada ocurrencia de "2B" y dar separacion al valor correspondiente de cada temperatura
             int currentIndex = 0;
             int tCounter = 1;
 
@@ -3226,7 +3694,6 @@ namespace Apple_24_Zones.Forms
                 {
                     // Extrae los 12 caracteres siguientes a "2B"
                     string siguiente12Caracteres = cadena.Substring(currentIndex + 2, 12);
-
                     // Asigna los caracteres a la variable correspondiente (T1, T2, ...)
                     switch (tCounter)
                     {
@@ -3268,71 +3735,71 @@ namespace Apple_24_Zones.Forms
             switch (whichRequestToSend)
             {
                 case 1:
-                    TF1 = T1;
-                    TF2 = T2;
-                    TF3 = T3;   
-                    TF4 = T4;
-                    TF5 = T5;
-                    TF6 = T6;
+                    TF1 = HexStringToAscii(T1);
+                    TF2 = HexStringToAscii(T2);
+                    TF3 = HexStringToAscii(T3);   
+                    TF4 = HexStringToAscii(T4);
+                    TF5 = HexStringToAscii(T5);
+                    TF6 = HexStringToAscii(T6);
                     whichRequestToSend = 2;
                     sendAgainRequest = true;
                     break;
                     case 2:
-                    TF7 = T1;
-                    TF8 = T2;
-                    TF9 = T3;
-                    TF10 = T4;
-                    TF11 = T5;
-                    TF12 = T6;
+                    TF7 = HexStringToAscii(T1);
+                    TF8 = HexStringToAscii(T2);
+                    TF9 = HexStringToAscii(T3);
+                    TF10 = HexStringToAscii(T4);
+                    TF11 = HexStringToAscii(T5);
+                    TF12 = HexStringToAscii(T6);
                     whichRequestToSend = 3;
                     sendAgainRequest = true;
                     break;
                     case 3:
-                    TF13 = T1;
-                    TF14 = T2;
-                    TF15 = T3;
-                    TF16 = T4;
-                    TF17 = T5;
-                    TF18 = T6;
+                    TF13 = HexStringToAscii(T1);
+                    TF14 = HexStringToAscii(T2);
+                    TF15 = HexStringToAscii(T3);
+                    TF16 = HexStringToAscii(T4);
+                    TF17 = HexStringToAscii(T5);
+                    TF18 = HexStringToAscii(T6);
                     whichRequestToSend = 4;
                     sendAgainRequest = true;
                     break;
                     case 4:
-                    TF19 = T1;
-                    TF20 = T2;
-                    TF21 = T3;
-                    TF22 = T4;
-                    TF23 = T5;
-                    TF24 = T6;
+                    TF19 = HexStringToAscii(T1);
+                    TF20 = HexStringToAscii(T2);
+                    TF21 = HexStringToAscii(T3);
+                    TF22 = HexStringToAscii(T4);
+                    TF23 = HexStringToAscii(T5);
+                    TF24 = HexStringToAscii(T6);
                     whichRequestToSend = 1;
                     sendAgainRequest = true;
                     break;
             }
 
-            txtReceive.Text = "T1: " + HexStringToAscii(TF1) +
-                "T2: " + HexStringToAscii(TF2) + "\n" +
-                "T3: " + HexStringToAscii(TF3) +
-                "T4: " + HexStringToAscii(TF4) + "\n" +
-                "T5: " + HexStringToAscii(TF5) +
-                "T6: " + HexStringToAscii(TF6) + "\n" +
-                "T7: " + HexStringToAscii(TF7) +
-                "T8: " + HexStringToAscii(TF8) + "\n" +
-                "T9: " + HexStringToAscii(TF9) +
-                "T10: " + HexStringToAscii(TF10) + "\n" +
-                "T11: " + HexStringToAscii(TF11) +
-                "T12: " + HexStringToAscii(TF12) + "\n" +
-                "T13: " + HexStringToAscii(TF13) +
-                "T14: " + HexStringToAscii(TF14) + "\n" +
-                "T15: " + HexStringToAscii(TF15) +
-                "T16: " + HexStringToAscii(TF16) + "\n" +
-                "T17: " + HexStringToAscii(TF17) +
-                "T18: " + HexStringToAscii(TF18) + "\n" +
-                "T19: " + HexStringToAscii(TF19) +
-                "T20: " + HexStringToAscii(TF20) + "\n" +
-                "T21: " + HexStringToAscii(TF21) +
-                "T22: " + HexStringToAscii(TF22) + "\n" +
-                "T23: " + HexStringToAscii(TF23) +
-                "T24: " + HexStringToAscii(TF24);
+            txtReceive.Text = "T1: " + TF1 +
+                "T2: " + TF2 + "\n" +
+                "T3: " + TF3 +
+                "T4: " + TF4 + "\n" +
+                "T5: " + TF5 +
+                "T6: " + TF6 + "\n" +
+                "T7: " + TF7 +
+                "T8: " + TF8 + "\n" +
+                "T9: " + TF9 +
+                "T10: " + TF10 + "\n" +
+                "T11: " + TF11 +
+                "T12: " + TF12 + "\n" +
+                "T13: " + TF13 +
+                "T14: " + TF14 + "\n" +
+                "T15: " + TF15 +
+                "T16: " + TF16 + "\n" +
+                "T17: " + TF17 +
+                "T18: " + TF18 + "\n" +
+                "T19: " + TF19 +
+                "T20: " + TF20 + "\n" +
+                "T21: " + TF21 +
+                "T22: " + TF22 + "\n" +
+                "T23: " + TF23 +
+                "T24: " + TF24;
         }
 
         public string HexStringToAscii(string hexString)
@@ -3351,7 +3818,19 @@ namespace Apple_24_Zones.Forms
             // Convierte los bytes a una cadena ASCII
             string asciiString = Encoding.ASCII.GetString(bytes);
 
-            return asciiString;
+
+            int index = 0;
+
+            // Find the first non-zero digit
+            while (index < asciiString.Length && asciiString[index] == '0')
+            {
+                index++;
+            }
+
+            // Return the modified string
+            return index < asciiString.Length ? asciiString.Substring(index) : asciiString;
+
+            //return asciiString;
         }
 
 
