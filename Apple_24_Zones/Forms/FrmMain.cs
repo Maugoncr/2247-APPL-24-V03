@@ -21,7 +21,6 @@ namespace Apple_24_Zones.Forms
 {
     public partial class FrmMain : Form
 
-
     {
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -89,6 +88,17 @@ namespace Apple_24_Zones.Forms
 
         private string inicioRecordZone1;
         private string inicioRecordZone2;
+
+        string viewChart = "Both";
+
+        double rt1 = 0;                              
+        double temp1 = 0;
+        double rt2 = 0;                              
+        double temp2 = 0;
+        double rtView = 0;                            
+        double tempView = 0;
+
+        double AVGZona1, AVGZona2;
 
 
         private void IconClose_Click(object sender, EventArgs e)
@@ -526,32 +536,28 @@ namespace Apple_24_Zones.Forms
                 {
                     tempFileName1 = Path.Combine(Path.GetTempPath(), "ELEN II_" + Guid.NewGuid().ToString() + ".txt");
                     streamWriterZone1 = new StreamWriter(tempFileName1, true);
-                    streamWriterZone1.WriteLine("Temperature#,TemperatureCelsius,RunningTime,DateTime");
-                    inicioRecordZone1 = DateTime.Now.ToString("MM-dd-yyyy HH-mm");
+                    streamWriterZone1.WriteLine("DateTime,RunningTime,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12");
+                    inicioRecordZone1 = DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss");
                     firstEntranceZone1 = false;
                 }
-                //Escribir lo necesario
-                //           Temp#, Temp°C, RunningTime, DateTime
-                //            1,          25.50,            1,           10 / 04 / 2023 15:20:20
-                //            12,         26.00             1,           10 / 04 / 2023 15:20:20
-                streamWriterZone1.WriteLine("T1"+","+TF1+","+temp1.ToString()+","+DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-                streamWriterZone1.WriteLine("T2"+","+TF2+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-                streamWriterZone1.WriteLine("T3"+","+TF3+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-                streamWriterZone1.WriteLine("T4"+","+TF4+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-                streamWriterZone1.WriteLine("T5"+","+TF5+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-                streamWriterZone1.WriteLine("T6"+","+TF6+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-                streamWriterZone1.WriteLine("T7"+","+TF7+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-                streamWriterZone1.WriteLine("T8"+","+TF8+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-                streamWriterZone1.WriteLine("T9"+","+TF9+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-                streamWriterZone1.WriteLine("T10"+","+TF10+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-                streamWriterZone1.WriteLine("T11"+","+TF11+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-                streamWriterZone1.WriteLine("T12"+","+TF12+","+temp1.ToString() + "," + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                
+                streamWriterZone1.WriteLine(DateTime.Now.ToString("MM/dd/yyyy") + "," + DateTime.Now.ToString("HH:mm:ss")+ "," + TF1 + ","
+                    + TF2 + "," + TF3 + "," + TF4 + "," + TF5 + "," + TF6 + "," + TF7 + "," + TF8 + "," + TF9 + "," + TF10 + "," + TF11 + "," + TF12);
             }
 
-
-
-
-
+            if (RecordZone2 == true)
+            {
+                if (firstEntranceZone2)
+                {
+                    tempFileName2 = Path.Combine(Path.GetTempPath(), "ELEN II_" + Guid.NewGuid().ToString() + ".txt");
+                    streamWriterZone2 = new StreamWriter(tempFileName2, true);
+                    streamWriterZone2.WriteLine("DateTime,RunningTime,T13,T14,T15,T16,T17,T18,T19,T20,T21,T22,T23,T24");
+                    inicioRecordZone2 = DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss");
+                    firstEntranceZone2 = false;
+                }
+                streamWriterZone2.WriteLine(DateTime.Now.ToString("MM/dd/yyyy") + "," + DateTime.Now.ToString("HH:mm:ss") + "," + TF13 + ","
+                    + TF14 + "," + TF15 + "," + TF16 + "," + TF17 + "," + TF18 + "," + TF19 + "," + TF20 + "," + TF21 + "," + TF22 + "," + TF23 + "," + TF24);
+            }
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -560,7 +566,6 @@ namespace Apple_24_Zones.Forms
             FillChartZones(1);
             FillChartZones(2);
             FrmCargarDefault();
-            // timerSimulationCharts.Start();
         }
 
         private void FrmCargarDefault()
@@ -3154,16 +3159,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        string viewChart = "Both";
-
-        double rt1 = 0;                              // Time X from chart
-        double temp1 = 0;
-        double rt2 = 0;                              // Time X from chart
-        double temp2 = 0;
-        double rtView = 0;                              // Time X from chart
-        double tempView = 0;
-
-        double AVGZona1, AVGZona2;
+       
 
         private void btnRecordZone1_Click(object sender, EventArgs e)
         {
@@ -3185,7 +3181,7 @@ namespace Apple_24_Zones.Forms
                 using (SaveFileDialog saveFileDialog = new SaveFileDialog())
                 {
                     saveFileDialog.Filter = "Archivos de texto|*.txt";
-                    saveFileDialog.FileName = "ELEN II SOFTWARE RECORD ZONE 1 STARTED " + inicioRecordZone1 + " ENDED " + DateTime.Now.ToString("MM-dd-yyyy HH-mm");
+                    saveFileDialog.FileName = "ELEN II SOFTWARE RECORD ZONE 1 STARTED " + inicioRecordZone1 + " ENDED " + DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss");
 
                     // Establece la ruta por defecto en la carpeta "ELEN II SOFTWARE" dentro de "Documentos"
                     string defaultSavePath = Path.Combine(
@@ -3215,7 +3211,6 @@ namespace Apple_24_Zones.Forms
                     }
                 }
                 firstEntranceZone1 = true;
-
             }
         }
 
@@ -3234,6 +3229,41 @@ namespace Apple_24_Zones.Forms
                 RecordZone2 = false;
                 btnRecordZone2.Text = "Record"; btnRecordZone2.ForeColor = Color.Black;
                 btnRecordZone2.Size = new Size(109, 33); btnRecordZone2.Location = new Point(409, 234);
+
+                streamWriterZone2.Close();
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                {
+                    saveFileDialog.Filter = "Archivos de texto|*.txt";
+                    saveFileDialog.FileName = "ELEN II SOFTWARE RECORD ZONE 2 STARTED " + inicioRecordZone2 + " ENDED " + DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss");
+
+                    // Establece la ruta por defecto en la carpeta "ELEN II SOFTWARE" dentro de "Documentos"
+                    string defaultSavePath = Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                        "ELEN II SOFTWARE");
+
+                    Directory.CreateDirectory(defaultSavePath); // Crea la carpeta si no existe
+
+                    saveFileDialog.InitialDirectory = defaultSavePath;
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        // Elimina el archivo existente si hay uno con el mismo nombre
+                        if (File.Exists(saveFileDialog.FileName))
+                        {
+                            File.Delete(saveFileDialog.FileName);
+                        }
+
+                        // Mueve el archivo temporal a la ubicación seleccionada
+                        File.Move(tempFileName2, saveFileDialog.FileName);
+                        MessageBox.Show("File saved successfully.", "Successful Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        // Si se cancela, elimina el archivo temporal
+                        File.Delete(tempFileName2);
+                    }
+                }
+                firstEntranceZone2 = true;
             }
         }
 
