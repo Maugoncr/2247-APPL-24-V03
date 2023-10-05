@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFilterCSVFile));
             this.panel1 = new System.Windows.Forms.Panel();
             this.IconClose = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -35,29 +36,34 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtRutaArchivoFiltrado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnConnectCOM2 = new FontAwesome.Sharp.IconButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnImportFile = new FontAwesome.Sharp.IconButton();
+            this.dateTimePickerInicial = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFinal = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.comboBoxHoraInicial = new System.Windows.Forms.ComboBox();
+            this.comboBoxMinutoInicial = new System.Windows.Forms.ComboBox();
+            this.comboBoxHoraFinal = new System.Windows.Forms.ComboBox();
+            this.comboBoxMinutoFinal = new System.Windows.Forms.ComboBox();
+            this.btnExportFile = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.IconClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(270, 27);
             this.panel1.TabIndex = 35;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // IconClose
             // 
@@ -78,27 +84,27 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 423);
+            this.panel2.Size = new System.Drawing.Size(5, 479);
             this.panel2.TabIndex = 91;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(265, 27);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 423);
+            this.panel3.Size = new System.Drawing.Size(5, 479);
             this.panel3.TabIndex = 92;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.panel4.BackColor = System.Drawing.Color.SteelBlue;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(5, 445);
+            this.panel4.Location = new System.Drawing.Point(5, 501);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(260, 5);
             this.panel4.TabIndex = 93;
@@ -112,6 +118,7 @@
             this.txtRutaArchivoFiltrado.Size = new System.Drawing.Size(193, 26);
             this.txtRutaArchivoFiltrado.TabIndex = 97;
             this.txtRutaArchivoFiltrado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRutaArchivoFiltrado.TextChanged += new System.EventHandler(this.txtRutaArchivoFiltrado_TextChanged);
             // 
             // label3
             // 
@@ -123,70 +130,71 @@
             this.label3.Text = "Path of the imported file:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnConnectCOM2
+            // btnImportFile
             // 
-            this.btnConnectCOM2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
-            this.btnConnectCOM2.FlatAppearance.BorderSize = 0;
-            this.btnConnectCOM2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnectCOM2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnectCOM2.ForeColor = System.Drawing.Color.White;
-            this.btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.FileImport;
-            this.btnConnectCOM2.IconColor = System.Drawing.Color.White;
-            this.btnConnectCOM2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConnectCOM2.IconSize = 35;
-            this.btnConnectCOM2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnectCOM2.Location = new System.Drawing.Point(69, 81);
-            this.btnConnectCOM2.Name = "btnConnectCOM2";
-            this.btnConnectCOM2.Size = new System.Drawing.Size(129, 36);
-            this.btnConnectCOM2.TabIndex = 114;
-            this.btnConnectCOM2.Text = "         Import Data";
-            this.btnConnectCOM2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConnectCOM2.UseVisualStyleBackColor = false;
+            this.btnImportFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.btnImportFile.FlatAppearance.BorderSize = 0;
+            this.btnImportFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportFile.ForeColor = System.Drawing.Color.White;
+            this.btnImportFile.IconChar = FontAwesome.Sharp.IconChar.FileImport;
+            this.btnImportFile.IconColor = System.Drawing.Color.White;
+            this.btnImportFile.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnImportFile.IconSize = 35;
+            this.btnImportFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImportFile.Location = new System.Drawing.Point(69, 81);
+            this.btnImportFile.Name = "btnImportFile";
+            this.btnImportFile.Size = new System.Drawing.Size(129, 36);
+            this.btnImportFile.TabIndex = 114;
+            this.btnImportFile.Text = "         Import Data";
+            this.btnImportFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImportFile.UseVisualStyleBackColor = false;
+            this.btnImportFile.Click += new System.EventHandler(this.btnImportFile_Click);
             // 
-            // dateTimePicker1
+            // dateTimePickerInicial
             // 
-            this.dateTimePicker1.CustomFormat = "MM/dd/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(69, 224);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(129, 26);
-            this.dateTimePicker1.TabIndex = 115;
+            this.dateTimePickerInicial.CustomFormat = "MM/dd/yyyy";
+            this.dateTimePickerInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerInicial.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerInicial.Location = new System.Drawing.Point(68, 224);
+            this.dateTimePickerInicial.Name = "dateTimePickerInicial";
+            this.dateTimePickerInicial.Size = new System.Drawing.Size(129, 26);
+            this.dateTimePickerInicial.TabIndex = 115;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 193);
+            this.label1.Location = new System.Drawing.Point(66, 193);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 28);
+            this.label1.Size = new System.Drawing.Size(95, 28);
             this.label1.TabIndex = 117;
-            this.label1.Text = "Start:";
+            this.label1.Text = "Date Start:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dateTimePicker3
+            // dateTimePickerFinal
             // 
-            this.dateTimePicker3.CustomFormat = "MM/dd/yyyy";
-            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(69, 311);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(129, 26);
-            this.dateTimePicker3.TabIndex = 118;
+            this.dateTimePickerFinal.CustomFormat = "MM/dd/yyyy";
+            this.dateTimePickerFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerFinal.Location = new System.Drawing.Point(68, 344);
+            this.dateTimePickerFinal.Name = "dateTimePickerFinal";
+            this.dateTimePickerFinal.Size = new System.Drawing.Size(129, 26);
+            this.dateTimePickerFinal.TabIndex = 118;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(105, 280);
+            this.label2.Location = new System.Drawing.Point(65, 313);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 28);
             this.label2.TabIndex = 119;
-            this.label2.Text = "End:";
+            this.label2.Text = "Date End:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox1
+            // comboBoxHoraInicial
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxHoraInicial.FormattingEnabled = true;
+            this.comboBoxHoraInicial.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -211,15 +219,16 @@
             "22",
             "23",
             "24"});
-            this.comboBox1.Location = new System.Drawing.Point(69, 256);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(58, 21);
-            this.comboBox1.TabIndex = 120;
+            this.comboBoxHoraInicial.Location = new System.Drawing.Point(68, 276);
+            this.comboBoxHoraInicial.Name = "comboBoxHoraInicial";
+            this.comboBoxHoraInicial.Size = new System.Drawing.Size(58, 21);
+            this.comboBoxHoraInicial.TabIndex = 120;
             // 
-            // comboBox2
+            // comboBoxMinutoInicial
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxMinutoInicial.FormattingEnabled = true;
+            this.comboBoxMinutoInicial.Items.AddRange(new object[] {
+            "00",
             "01",
             "02",
             "03",
@@ -279,15 +288,15 @@
             "57",
             "58",
             "59"});
-            this.comboBox2.Location = new System.Drawing.Point(140, 256);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(58, 21);
-            this.comboBox2.TabIndex = 121;
+            this.comboBoxMinutoInicial.Location = new System.Drawing.Point(139, 276);
+            this.comboBoxMinutoInicial.Name = "comboBoxMinutoInicial";
+            this.comboBoxMinutoInicial.Size = new System.Drawing.Size(58, 21);
+            this.comboBoxMinutoInicial.TabIndex = 121;
             // 
-            // comboBox3
+            // comboBoxHoraFinal
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.comboBoxHoraFinal.FormattingEnabled = true;
+            this.comboBoxHoraFinal.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -312,15 +321,16 @@
             "22",
             "23",
             "24"});
-            this.comboBox3.Location = new System.Drawing.Point(69, 353);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(58, 21);
-            this.comboBox3.TabIndex = 122;
+            this.comboBoxHoraFinal.Location = new System.Drawing.Point(68, 396);
+            this.comboBoxHoraFinal.Name = "comboBoxHoraFinal";
+            this.comboBoxHoraFinal.Size = new System.Drawing.Size(58, 21);
+            this.comboBoxHoraFinal.TabIndex = 122;
             // 
-            // comboBox4
+            // comboBoxMinutoFinal
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.comboBoxMinutoFinal.FormattingEnabled = true;
+            this.comboBoxMinutoFinal.Items.AddRange(new object[] {
+            "00",
             "01",
             "02",
             "03",
@@ -380,30 +390,31 @@
             "57",
             "58",
             "59"});
-            this.comboBox4.Location = new System.Drawing.Point(140, 353);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(58, 21);
-            this.comboBox4.TabIndex = 123;
+            this.comboBoxMinutoFinal.Location = new System.Drawing.Point(139, 396);
+            this.comboBoxMinutoFinal.Name = "comboBoxMinutoFinal";
+            this.comboBoxMinutoFinal.Size = new System.Drawing.Size(58, 21);
+            this.comboBoxMinutoFinal.TabIndex = 123;
             // 
-            // iconButton1
+            // btnExportFile
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FileArrowUp;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(69, 390);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(129, 36);
-            this.iconButton1.TabIndex = 124;
-            this.iconButton1.Text = "          Export File";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnExportFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(141)))), ((int)(((byte)(220)))));
+            this.btnExportFile.FlatAppearance.BorderSize = 0;
+            this.btnExportFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportFile.ForeColor = System.Drawing.Color.White;
+            this.btnExportFile.IconChar = FontAwesome.Sharp.IconChar.FileArrowUp;
+            this.btnExportFile.IconColor = System.Drawing.Color.White;
+            this.btnExportFile.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExportFile.IconSize = 32;
+            this.btnExportFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportFile.Location = new System.Drawing.Point(68, 440);
+            this.btnExportFile.Name = "btnExportFile";
+            this.btnExportFile.Size = new System.Drawing.Size(129, 36);
+            this.btnExportFile.TabIndex = 124;
+            this.btnExportFile.Text = "          Export File";
+            this.btnExportFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportFile.UseVisualStyleBackColor = false;
+            this.btnExportFile.Click += new System.EventHandler(this.btnExportFile_Click);
             // 
             // label4
             // 
@@ -415,22 +426,66 @@
             this.label4.Text = "Filter data by date and time";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(66, 253);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 20);
+            this.label6.TabIndex = 127;
+            this.label6.Text = "HH";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(137, 253);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 20);
+            this.label7.TabIndex = 128;
+            this.label7.Text = "mm";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(137, 373);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 20);
+            this.label5.TabIndex = 130;
+            this.label5.Text = "mm";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(66, 373);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 20);
+            this.label8.TabIndex = 129;
+            this.label8.Text = "HH";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FrmFilterCSVFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(270, 450);
+            this.ClientSize = new System.Drawing.Size(270, 506);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnExportFile);
+            this.Controls.Add(this.comboBoxMinutoFinal);
+            this.Controls.Add(this.comboBoxHoraFinal);
+            this.Controls.Add(this.comboBoxMinutoInicial);
+            this.Controls.Add(this.comboBoxHoraInicial);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker3);
+            this.Controls.Add(this.dateTimePickerFinal);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.btnConnectCOM2);
+            this.Controls.Add(this.dateTimePickerInicial);
+            this.Controls.Add(this.btnImportFile);
             this.Controls.Add(this.txtRutaArchivoFiltrado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel4);
@@ -438,9 +493,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmFilterCSVFile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Filter Data";
+            this.Load += new System.EventHandler(this.FrmFilterCSVFile_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -456,16 +513,20 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtRutaArchivoFiltrado;
         private System.Windows.Forms.Label label3;
-        private FontAwesome.Sharp.IconButton btnConnectCOM2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private FontAwesome.Sharp.IconButton btnImportFile;
+        private System.Windows.Forms.DateTimePicker dateTimePickerInicial;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFinal;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.ComboBox comboBoxHoraInicial;
+        private System.Windows.Forms.ComboBox comboBoxMinutoInicial;
+        private System.Windows.Forms.ComboBox comboBoxHoraFinal;
+        private System.Windows.Forms.ComboBox comboBoxMinutoFinal;
+        private FontAwesome.Sharp.IconButton btnExportFile;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -499,7 +499,7 @@ namespace Apple_24_Zones.Forms
             {
                 FrmFilterCSVFile nt = new FrmFilterCSVFile();
 
-                nt.Show();
+                nt.ShowDialog();
             }
             else
             {
