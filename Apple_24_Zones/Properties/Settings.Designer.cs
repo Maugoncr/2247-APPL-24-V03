@@ -26,24 +26,24 @@ namespace Apple_24_Zones.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int CountHeat {
+        public int CountHeat1 {
             get {
-                return ((int)(this["CountHeat"]));
+                return ((int)(this["CountHeat1"]));
             }
             set {
-                this["CountHeat"] = value;
+                this["CountHeat1"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int CountCool {
+        public int CountCool1 {
             get {
-                return ((int)(this["CountCool"]));
+                return ((int)(this["CountCool1"]));
             }
             set {
-                this["CountCool"] = value;
+                this["CountCool1"] = value;
             }
         }
         
@@ -56,6 +56,30 @@ namespace Apple_24_Zones.Properties {
             }
             set {
                 this["Notes"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int CountCool2 {
+            get {
+                return ((int)(this["CountCool2"]));
+            }
+            set {
+                this["CountCool2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int CountHeat2 {
+            get {
+                return ((int)(this["CountHeat2"]));
+            }
+            set {
+                this["CountHeat2"] = value;
             }
         }
     }

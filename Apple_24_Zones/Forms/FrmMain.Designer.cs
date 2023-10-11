@@ -32,18 +32,18 @@ namespace Apple_24_Zones.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
@@ -266,7 +266,7 @@ namespace Apple_24_Zones.Forms
             this.btnUpSet2 = new FontAwesome.Sharp.IconButton();
             this.btnDownSet2 = new FontAwesome.Sharp.IconButton();
             this.btnStop2 = new System.Windows.Forms.Button();
-            this.lbStartDate2 = new System.Windows.Forms.Label();
+            this.lb487 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.picUpDown2 = new System.Windows.Forms.PictureBox();
             this.txtPutSetpoint2 = new System.Windows.Forms.TextBox();
@@ -354,11 +354,9 @@ namespace Apple_24_Zones.Forms
             this.btnUpSet1 = new FontAwesome.Sharp.IconButton();
             this.btnDownSet1 = new FontAwesome.Sharp.IconButton();
             this.btnStop1 = new System.Windows.Forms.Button();
-            this.lbStartDate1 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.picUpDown1 = new System.Windows.Forms.PictureBox();
             this.txtPutSetpoint1 = new System.Windows.Forms.TextBox();
-            this.txtCrono1 = new System.Windows.Forms.TextBox();
             this.btnApplySetpoint1 = new FontAwesome.Sharp.IconButton();
             this.picProcess1 = new System.Windows.Forms.PictureBox();
             this.lbAVGTemp1 = new System.Windows.Forms.Label();
@@ -380,6 +378,10 @@ namespace Apple_24_Zones.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timerGraficarCharts = new System.Windows.Forms.Timer(this.components);
+            this.lbStartDate2 = new System.Windows.Forms.Label();
+            this.lbStartDate1 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtCrono1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).BeginInit();
             this.panelZone2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -446,43 +448,43 @@ namespace Apple_24_Zones.Forms
             this.chartZone1.BorderlineColor = System.Drawing.Color.Gray;
             this.chartZone1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartZone1.BorderlineWidth = 2;
-            chartArea1.AxisX.Interval = 10D;
-            chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea1.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea1.AxisX.Maximum = 100D;
-            chartArea1.AxisX.Minimum = 0D;
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Interval = 10D;
-            chartArea1.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea1.AxisY.MinorTickMark.Enabled = true;
-            chartArea1.AxisY.MinorTickMark.Interval = 5D;
-            chartArea1.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea1.AxisY.MinorTickMark.Size = 0.6F;
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.BackColor = System.Drawing.Color.White;
-            chartArea1.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea1.BorderWidth = 0;
-            chartArea1.InnerPlotPosition.Auto = false;
-            chartArea1.InnerPlotPosition.Height = 88.4641F;
-            chartArea1.InnerPlotPosition.Width = 93.2662F;
-            chartArea1.InnerPlotPosition.X = 6.11536F;
-            chartArea1.InnerPlotPosition.Y = 2.79255F;
-            chartArea1.Name = "ChartArea1";
-            this.chartZone1.ChartAreas.Add(chartArea1);
+            chartArea7.AxisX.Interval = 10D;
+            chartArea7.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea7.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea7.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea7.AxisX.Maximum = 100D;
+            chartArea7.AxisX.Minimum = 0D;
+            chartArea7.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea7.AxisY.Interval = 10D;
+            chartArea7.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea7.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea7.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea7.AxisY.MinorTickMark.Enabled = true;
+            chartArea7.AxisY.MinorTickMark.Interval = 5D;
+            chartArea7.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea7.AxisY.MinorTickMark.Size = 0.6F;
+            chartArea7.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea7.BackColor = System.Drawing.Color.White;
+            chartArea7.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea7.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea7.BorderWidth = 0;
+            chartArea7.InnerPlotPosition.Auto = false;
+            chartArea7.InnerPlotPosition.Height = 88.4641F;
+            chartArea7.InnerPlotPosition.Width = 93.2662F;
+            chartArea7.InnerPlotPosition.X = 6.11536F;
+            chartArea7.InnerPlotPosition.Y = 2.79255F;
+            chartArea7.Name = "ChartArea1";
+            this.chartZone1.ChartAreas.Add(chartArea7);
             this.chartZone1.Location = new System.Drawing.Point(10, 588);
             this.chartZone1.Name = "chartZone1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Name = "Series1";
-            series2.ChartArea = "ChartArea1";
-            series2.Name = "Series2";
-            series2.Points.Add(dataPoint1);
-            this.chartZone1.Series.Add(series1);
-            this.chartZone1.Series.Add(series2);
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series13.Name = "Series1";
+            series14.ChartArea = "ChartArea1";
+            series14.Name = "Series2";
+            series14.Points.Add(dataPoint7);
+            this.chartZone1.Series.Add(series13);
+            this.chartZone1.Series.Add(series14);
             this.chartZone1.Size = new System.Drawing.Size(1212, 360);
             this.chartZone1.TabIndex = 238;
             this.chartZone1.Text = "chart1";
@@ -1424,7 +1426,7 @@ namespace Apple_24_Zones.Forms
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(150, 16);
             this.label79.TabIndex = 289;
-            this.label79.Text = "SOFTWARE  V.01.56";
+            this.label79.Text = "SOFTWARE  V.01.60";
             this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // IconMinima
@@ -2810,41 +2812,41 @@ namespace Apple_24_Zones.Forms
             this.chartZone2.BorderlineColor = System.Drawing.Color.Gray;
             this.chartZone2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartZone2.BorderlineWidth = 2;
-            chartArea2.AxisX.Interval = 10D;
-            chartArea2.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea2.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea2.AxisX.Maximum = 100D;
-            chartArea2.AxisX.Minimum = 0D;
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Interval = 10D;
-            chartArea2.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea2.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea2.AxisY.MinorTickMark.Enabled = true;
-            chartArea2.AxisY.MinorTickMark.Interval = 5D;
-            chartArea2.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea2.AxisY.MinorTickMark.Size = 0.6F;
-            chartArea2.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea2.BorderWidth = 0;
-            chartArea2.InnerPlotPosition.Auto = false;
-            chartArea2.InnerPlotPosition.Height = 88.4641F;
-            chartArea2.InnerPlotPosition.Width = 93.2662F;
-            chartArea2.InnerPlotPosition.X = 6.11536F;
-            chartArea2.InnerPlotPosition.Y = 2.79255F;
-            chartArea2.Name = "ChartArea1";
-            this.chartZone2.ChartAreas.Add(chartArea2);
+            chartArea8.AxisX.Interval = 10D;
+            chartArea8.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea8.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea8.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea8.AxisX.Maximum = 100D;
+            chartArea8.AxisX.Minimum = 0D;
+            chartArea8.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea8.AxisY.Interval = 10D;
+            chartArea8.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea8.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea8.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea8.AxisY.MinorTickMark.Enabled = true;
+            chartArea8.AxisY.MinorTickMark.Interval = 5D;
+            chartArea8.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea8.AxisY.MinorTickMark.Size = 0.6F;
+            chartArea8.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea8.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea8.BorderWidth = 0;
+            chartArea8.InnerPlotPosition.Auto = false;
+            chartArea8.InnerPlotPosition.Height = 88.4641F;
+            chartArea8.InnerPlotPosition.Width = 93.2662F;
+            chartArea8.InnerPlotPosition.X = 6.11536F;
+            chartArea8.InnerPlotPosition.Y = 2.79255F;
+            chartArea8.Name = "ChartArea1";
+            this.chartZone2.ChartAreas.Add(chartArea8);
             this.chartZone2.Location = new System.Drawing.Point(10, 95);
             this.chartZone2.Name = "chartZone2";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Name = "Series1";
-            series4.ChartArea = "ChartArea1";
-            series4.Name = "Series2";
-            series4.Points.Add(dataPoint2);
-            this.chartZone2.Series.Add(series3);
-            this.chartZone2.Series.Add(series4);
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series15.Name = "Series1";
+            series16.ChartArea = "ChartArea1";
+            series16.Name = "Series2";
+            series16.Points.Add(dataPoint8);
+            this.chartZone2.Series.Add(series15);
+            this.chartZone2.Series.Add(series16);
             this.chartZone2.Size = new System.Drawing.Size(1212, 360);
             this.chartZone2.TabIndex = 333;
             this.chartZone2.Text = "chart1";
@@ -3082,11 +3084,12 @@ namespace Apple_24_Zones.Forms
             // panelControlZone2
             // 
             this.panelControlZone2.BackColor = System.Drawing.Color.DarkGray;
+            this.panelControlZone2.Controls.Add(this.lbStartDate2);
             this.panelControlZone2.Controls.Add(this.label67);
             this.panelControlZone2.Controls.Add(this.btnUpSet2);
             this.panelControlZone2.Controls.Add(this.btnDownSet2);
             this.panelControlZone2.Controls.Add(this.btnStop2);
-            this.panelControlZone2.Controls.Add(this.lbStartDate2);
+            this.panelControlZone2.Controls.Add(this.lb487);
             this.panelControlZone2.Controls.Add(this.panel8);
             this.panelControlZone2.Controls.Add(this.picUpDown2);
             this.panelControlZone2.Controls.Add(this.txtPutSetpoint2);
@@ -3177,17 +3180,17 @@ namespace Apple_24_Zones.Forms
             this.btnStop2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
             this.btnStop2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
             // 
-            // lbStartDate2
+            // lb487
             // 
-            this.lbStartDate2.AutoSize = true;
-            this.lbStartDate2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.lbStartDate2.Location = new System.Drawing.Point(18, 290);
-            this.lbStartDate2.Name = "lbStartDate2";
-            this.lbStartDate2.Size = new System.Drawing.Size(249, 20);
-            this.lbStartDate2.TabIndex = 330;
-            this.lbStartDate2.Text = "Start DateTime: --/--/--  --:--";
-            this.lbStartDate2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
-            this.lbStartDate2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
+            this.lb487.AutoSize = true;
+            this.lb487.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.lb487.Location = new System.Drawing.Point(18, 290);
+            this.lb487.Name = "lb487";
+            this.lb487.Size = new System.Drawing.Size(143, 20);
+            this.lb487.TabIndex = 330;
+            this.lb487.Text = "Start DateTime:";
+            this.lb487.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.lb487.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
             // 
             // panel8
             // 
@@ -3232,11 +3235,11 @@ namespace Apple_24_Zones.Forms
             this.txtCrono2.BackColor = System.Drawing.Color.White;
             this.txtCrono2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCrono2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.txtCrono2.Location = new System.Drawing.Point(294, 288);
+            this.txtCrono2.Location = new System.Drawing.Point(323, 288);
             this.txtCrono2.Name = "txtCrono2";
             this.txtCrono2.ReadOnly = true;
             this.txtCrono2.ShortcutsEnabled = false;
-            this.txtCrono2.Size = new System.Drawing.Size(190, 20);
+            this.txtCrono2.Size = new System.Drawing.Size(189, 20);
             this.txtCrono2.TabIndex = 325;
             this.txtCrono2.Text = "00:00:00:00";
             this.txtCrono2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3498,43 +3501,43 @@ namespace Apple_24_Zones.Forms
             this.chartView.BorderlineColor = System.Drawing.Color.Gray;
             this.chartView.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartView.BorderlineWidth = 2;
-            chartArea3.AxisX.Interval = 10D;
-            chartArea3.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea3.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea3.AxisX.Maximum = 100D;
-            chartArea3.AxisX.Minimum = 0D;
-            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.Interval = 10D;
-            chartArea3.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea3.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea3.AxisY.MinorTickMark.Enabled = true;
-            chartArea3.AxisY.MinorTickMark.Interval = 5D;
-            chartArea3.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea3.AxisY.MinorTickMark.Size = 0.6F;
-            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.BackColor = System.Drawing.Color.White;
-            chartArea3.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea3.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea3.BorderWidth = 0;
-            chartArea3.InnerPlotPosition.Auto = false;
-            chartArea3.InnerPlotPosition.Height = 88.4641F;
-            chartArea3.InnerPlotPosition.Width = 93.2662F;
-            chartArea3.InnerPlotPosition.X = 6.11536F;
-            chartArea3.InnerPlotPosition.Y = 2.79255F;
-            chartArea3.Name = "ChartArea1";
-            this.chartView.ChartAreas.Add(chartArea3);
+            chartArea9.AxisX.Interval = 10D;
+            chartArea9.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea9.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea9.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea9.AxisX.Maximum = 100D;
+            chartArea9.AxisX.Minimum = 0D;
+            chartArea9.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea9.AxisY.Interval = 10D;
+            chartArea9.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea9.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea9.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea9.AxisY.MinorTickMark.Enabled = true;
+            chartArea9.AxisY.MinorTickMark.Interval = 5D;
+            chartArea9.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea9.AxisY.MinorTickMark.Size = 0.6F;
+            chartArea9.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea9.BackColor = System.Drawing.Color.White;
+            chartArea9.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea9.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea9.BorderWidth = 0;
+            chartArea9.InnerPlotPosition.Auto = false;
+            chartArea9.InnerPlotPosition.Height = 88.4641F;
+            chartArea9.InnerPlotPosition.Width = 93.2662F;
+            chartArea9.InnerPlotPosition.X = 6.11536F;
+            chartArea9.InnerPlotPosition.Y = 2.79255F;
+            chartArea9.Name = "ChartArea1";
+            this.chartView.ChartAreas.Add(chartArea9);
             this.chartView.Location = new System.Drawing.Point(11, 138);
             this.chartView.Name = "chartView";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Name = "Series1";
-            series6.ChartArea = "ChartArea1";
-            series6.Name = "Series2";
-            series6.Points.Add(dataPoint3);
-            this.chartView.Series.Add(series5);
-            this.chartView.Series.Add(series6);
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series17.Name = "Series1";
+            series18.ChartArea = "ChartArea1";
+            series18.Name = "Series2";
+            series18.Points.Add(dataPoint9);
+            this.chartView.Series.Add(series17);
+            this.chartView.Series.Add(series18);
             this.chartView.Size = new System.Drawing.Size(1221, 806);
             this.chartView.TabIndex = 268;
             this.chartView.Text = "chart1";
@@ -4190,7 +4193,7 @@ namespace Apple_24_Zones.Forms
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(262, 20);
             this.label73.TabIndex = 322;
-            this.label73.Text = "Copyright © 2021, SSNE Group Inc.";
+            this.label73.Text = "Copyright © 2023, SSNE Group Inc.";
             // 
             // timerDateTimeAndRecord
             // 
@@ -4213,15 +4216,15 @@ namespace Apple_24_Zones.Forms
             // panelControlZone1
             // 
             this.panelControlZone1.BackColor = System.Drawing.Color.DarkGray;
+            this.panelControlZone1.Controls.Add(this.lbStartDate1);
+            this.panelControlZone1.Controls.Add(this.txtCrono1);
             this.panelControlZone1.Controls.Add(this.label11);
             this.panelControlZone1.Controls.Add(this.btnUpSet1);
             this.panelControlZone1.Controls.Add(this.btnDownSet1);
             this.panelControlZone1.Controls.Add(this.btnStop1);
-            this.panelControlZone1.Controls.Add(this.lbStartDate1);
             this.panelControlZone1.Controls.Add(this.panel9);
             this.panelControlZone1.Controls.Add(this.picUpDown1);
             this.panelControlZone1.Controls.Add(this.txtPutSetpoint1);
-            this.panelControlZone1.Controls.Add(this.txtCrono1);
             this.panelControlZone1.Controls.Add(this.btnApplySetpoint1);
             this.panelControlZone1.Controls.Add(this.picProcess1);
             this.panelControlZone1.Controls.Add(this.lbAVGTemp1);
@@ -4230,6 +4233,7 @@ namespace Apple_24_Zones.Forms
             this.panelControlZone1.Controls.Add(this.label12);
             this.panelControlZone1.Controls.Add(this.lbC1);
             this.panelControlZone1.Controls.Add(this.btnRecordZone1);
+            this.panelControlZone1.Controls.Add(this.label15);
             this.panelControlZone1.Location = new System.Drawing.Point(23, 717);
             this.panelControlZone1.Name = "panelControlZone1";
             this.panelControlZone1.Size = new System.Drawing.Size(521, 331);
@@ -4308,18 +4312,6 @@ namespace Apple_24_Zones.Forms
             this.btnStop1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
             this.btnStop1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
-            // lbStartDate1
-            // 
-            this.lbStartDate1.AutoSize = true;
-            this.lbStartDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.lbStartDate1.Location = new System.Drawing.Point(18, 290);
-            this.lbStartDate1.Name = "lbStartDate1";
-            this.lbStartDate1.Size = new System.Drawing.Size(249, 20);
-            this.lbStartDate1.TabIndex = 330;
-            this.lbStartDate1.Text = "Start DateTime: --/--/--  --:--";
-            this.lbStartDate1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
-            this.lbStartDate1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
-            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Black;
@@ -4357,22 +4349,6 @@ namespace Apple_24_Zones.Forms
             this.txtPutSetpoint1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPutSetpoint1_KeyPress);
             this.txtPutSetpoint1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
             this.txtPutSetpoint1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
-            // 
-            // txtCrono1
-            // 
-            this.txtCrono1.BackColor = System.Drawing.Color.White;
-            this.txtCrono1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCrono1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.txtCrono1.Location = new System.Drawing.Point(294, 288);
-            this.txtCrono1.Name = "txtCrono1";
-            this.txtCrono1.ReadOnly = true;
-            this.txtCrono1.ShortcutsEnabled = false;
-            this.txtCrono1.Size = new System.Drawing.Size(190, 20);
-            this.txtCrono1.TabIndex = 325;
-            this.txtCrono1.Text = "00:00:00:00";
-            this.txtCrono1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCrono1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
-            this.txtCrono1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // btnApplySetpoint1
             // 
@@ -4619,6 +4595,56 @@ namespace Apple_24_Zones.Forms
             // timerGraficarCharts
             // 
             this.timerGraficarCharts.Tick += new System.EventHandler(this.timerGraficarCharts_Tick);
+            // 
+            // lbStartDate2
+            // 
+            this.lbStartDate2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.lbStartDate2.Location = new System.Drawing.Point(157, 290);
+            this.lbStartDate2.Name = "lbStartDate2";
+            this.lbStartDate2.Size = new System.Drawing.Size(160, 20);
+            this.lbStartDate2.TabIndex = 339;
+            this.lbStartDate2.Text = "10/11/2023  14:59";
+            this.lbStartDate2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
+            this.lbStartDate2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
+            // 
+            // lbStartDate1
+            // 
+            this.lbStartDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.lbStartDate1.Location = new System.Drawing.Point(159, 290);
+            this.lbStartDate1.Name = "lbStartDate1";
+            this.lbStartDate1.Size = new System.Drawing.Size(160, 20);
+            this.lbStartDate1.TabIndex = 342;
+            this.lbStartDate1.Text = "10/11/2023  14:59";
+            this.lbStartDate1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.lbStartDate1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(20, 290);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(143, 20);
+            this.label15.TabIndex = 341;
+            this.label15.Text = "Start DateTime:";
+            this.label15.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.label15.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
+            // 
+            // txtCrono1
+            // 
+            this.txtCrono1.BackColor = System.Drawing.Color.White;
+            this.txtCrono1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCrono1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
+            this.txtCrono1.Location = new System.Drawing.Point(325, 288);
+            this.txtCrono1.Name = "txtCrono1";
+            this.txtCrono1.ReadOnly = true;
+            this.txtCrono1.ShortcutsEnabled = false;
+            this.txtCrono1.Size = new System.Drawing.Size(189, 20);
+            this.txtCrono1.TabIndex = 340;
+            this.txtCrono1.Text = "00:00:00:00";
+            this.txtCrono1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCrono1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
+            this.txtCrono1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
             // 
             // FrmMain
             // 
@@ -4983,7 +5009,7 @@ namespace Apple_24_Zones.Forms
         private Panel panel8;
         private Timer timerSimulationDownUp;
         private Timer timerRequestTemps;
-        private Label lbStartDate2;
+        private Label lb487;
         private Button btnStop2;
         private FontAwesome.Sharp.IconButton btnUpSet2;
         private FontAwesome.Sharp.IconButton btnDownSet2;
@@ -4991,11 +5017,9 @@ namespace Apple_24_Zones.Forms
         private FontAwesome.Sharp.IconButton btnUpSet1;
         private FontAwesome.Sharp.IconButton btnDownSet1;
         private Button btnStop1;
-        private Label lbStartDate1;
         private Panel panel9;
         private PictureBox picUpDown1;
         private TextBox txtPutSetpoint1;
-        private TextBox txtCrono1;
         private FontAwesome.Sharp.IconButton btnApplySetpoint1;
         private PictureBox picProcess1;
         private Label lbAVGTemp1;
@@ -5043,5 +5067,9 @@ namespace Apple_24_Zones.Forms
         private Timer timerGraficarCharts;
         private FontAwesome.Sharp.IconButton btnRecordZone2;
         private FontAwesome.Sharp.IconButton btnRecordZone1;
+        private Label lbStartDate2;
+        private Label lbStartDate1;
+        private TextBox txtCrono1;
+        private Label label15;
     }
 }

@@ -1065,20 +1065,26 @@ namespace Apple_24_Zones.Forms
             FrmVisualizadorCrystalReport Visualizador = new FrmVisualizadorCrystalReport();
 
             MiReporte.Load("../../Reports/RptCyclesComplete.rpt");
-            MiReporte.SetParameterValue("CompleteCycles", /*lbCountCycles.Text*/"XXXX");
-            MiReporte.SetParameterValue("GoalCycles", /*lbGoalCycles.Text*/"XXXX");
-            MiReporte.SetParameterValue("NameReport", NombreReport);
+
+            MiReporte.SetParameterValue("AVGTempZone1", lbAVGTemp1.Text);
+            MiReporte.SetParameterValue("AVGTempZone2", lbAVGTemp2.Text);
+            MiReporte.SetParameterValue("ExecutionTimeZone1", lbStartDate1.Text);
+            MiReporte.SetParameterValue("ExecutionTimeZone2", lbStartDate2.Text);
+            MiReporte.SetParameterValue("HeatingCounterZone1", Settings.Default.CountHeat1.ToString());
+            MiReporte.SetParameterValue("HeatingCounterZone2", Settings.Default.CountHeat2.ToString());
+            MiReporte.SetParameterValue("CoolingCounterZone1", Settings.Default.CountCool1.ToString());
+            MiReporte.SetParameterValue("CoolingCounterZone2", Settings.Default.CountCool2.ToString());
             MiReporte.SetParameterValue("ImagePath", tempPath);
 
             // string k = DateStartedTest.Text;
             //string j = k.Replace("\n", " - ");
 
-            MiReporte.SetParameterValue("DateTimeStartedTest", /*j*/"XXXX");
+            //MiReporte.SetParameterValue("DateTimeStartedTest", /*j*/"XXXX");
 
             // k = DateEndedTest.Text;
             // j = k.Replace("\n", " - ");
 
-            MiReporte.SetParameterValue("DateTimeFinishTest", /*j*/"XXXX");
+            //MiReporte.SetParameterValue("DateTimeFinishTest", /*j*/"XXXX");
 
             // if (TestToRun == 1)
             //{
@@ -1094,11 +1100,11 @@ namespace Apple_24_Zones.Forms
             //}
             //else
             //{
-            MiReporte.SetParameterValue("PhaseName", "Phase not selected yet");
+            //MiReporte.SetParameterValue("PhaseName", "Phase not selected yet");
             //}
 
             Visualizador.crystalReportViewer1.ReportSource = MiReporte;
-            Visualizador.crystalReportViewer1.Zoom(85);
+            Visualizador.crystalReportViewer1.Zoom(125);
             Visualizador.Show();
         }
 

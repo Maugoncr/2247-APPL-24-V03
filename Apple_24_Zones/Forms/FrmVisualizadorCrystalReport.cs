@@ -33,7 +33,7 @@ namespace MidoriValveTest.Forms
             saveFileDialog.Filter = "Archivos PDF (*.pdf)|*.pdf";
             saveFileDialog.Title = "Save Report as PDF";
 
-            saveFileDialog.FileName = "Report MIDORI II Exported at " + DateTime.Now.ToString("MM-dd-yyyy  HH-mm-ss");
+            saveFileDialog.FileName = "Report ELEN II Exported at " + DateTime.Now.ToString("MM-dd-yyyy  HH-mm-ss");
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
