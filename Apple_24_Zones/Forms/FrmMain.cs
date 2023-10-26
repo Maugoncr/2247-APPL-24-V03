@@ -3273,6 +3273,331 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        private bool ChartSeriesExists(Chart chart, string seriesName)
+        {
+            foreach (Series series in chart.Series)
+            {
+                if (series.Name == seriesName)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void checkView1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkView1.Checked)
+            {
+                if (ChartSeriesExists(chartView, "T-1"))
+                {
+                    chartView.Series["T-1"].Enabled = true;
+                }
+                else if (ChartSeriesExists(chartView, "T-13"))
+                {
+                    chartView.Series["T-13"].Enabled = true;
+                }
+            }
+            else
+            {
+                if (ChartSeriesExists(chartView, "T-1"))
+                {
+                    chartView.Series["T-1"].Enabled = false;
+                }
+                else if (ChartSeriesExists(chartView, "T-13"))
+                {
+                    chartView.Series["T-13"].Enabled = false;
+                }
+            }
+           
+        }
+
+        private void checkView2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkView2.Checked)
+            {
+                if (ChartSeriesExists(chartView, "T-2"))
+                {
+                    chartView.Series["T-2"].Enabled = true;
+                }
+                else if (ChartSeriesExists(chartView, "T-14"))
+                {
+                    chartView.Series["T-14"].Enabled = true;
+                }
+            }
+            else
+            {
+                if (ChartSeriesExists(chartView, "T-2"))
+                {
+                    chartView.Series["T-2"].Enabled = false;
+                }
+                else if (ChartSeriesExists(chartView, "T-14"))
+                {
+                    chartView.Series["T-14"].Enabled = false;
+                }
+            }
+        }
+
+        private void checkView3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkView3.Checked)
+            {
+                if (ChartSeriesExists(chartView, "T-3"))
+                {
+                    chartView.Series["T-3"].Enabled = true;
+                }
+                else if (ChartSeriesExists(chartView, "T-15"))
+                {
+                    chartView.Series["T-15"].Enabled = true;
+                }
+            }
+            else
+            {
+                if (ChartSeriesExists(chartView, "T-3"))
+                {
+                    chartView.Series["T-3"].Enabled = false;
+                }
+                else if (ChartSeriesExists(chartView, "T-15"))
+                {
+                    chartView.Series["T-15"].Enabled = false;
+                }
+            }
+        }
+
+        private void checkView4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkView4.Checked)
+            {
+                if (ChartSeriesExists(chartView, "T-4"))
+                {
+                    chartView.Series["T-4"].Enabled = true;
+                }
+                else if (ChartSeriesExists(chartView, "T-16"))
+                {
+                    chartView.Series["T-16"].Enabled = true;
+                }
+            }
+            else
+            {
+                if (ChartSeriesExists(chartView, "T-4"))
+                {
+                    chartView.Series["T-4"].Enabled = false;
+                }
+                else if (ChartSeriesExists(chartView, "T-16"))
+                {
+                    chartView.Series["T-16"].Enabled = false;
+                }
+            }
+        }
+
+        private void checkView5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkView5.Checked)
+            {
+                if (ChartSeriesExists(chartView, "T-5"))
+                {
+                    chartView.Series["T-5"].Enabled = true;
+                }
+                else if (ChartSeriesExists(chartView, "T-17"))
+                {
+                    chartView.Series["T-17"].Enabled = true;
+                }
+            }
+            else
+            {
+                if (ChartSeriesExists(chartView, "T-5"))
+                {
+                    chartView.Series["T-5"].Enabled = false;
+                }
+                else if (ChartSeriesExists(chartView, "T-17"))
+                {
+                    chartView.Series["T-17"].Enabled = false;
+                }
+            }
+        }
+
+        private void checkView6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkView6.Checked)
+            {
+                if (ChartSeriesExists(chartView, "T-6"))
+                {
+                    chartView.Series["T-6"].Enabled = true;
+                }
+                else if (ChartSeriesExists(chartView, "T-18"))
+                {
+                    chartView.Series["T-18"].Enabled = true;
+                }
+            }
+            else
+            {
+                if (ChartSeriesExists(chartView, "T-6"))
+                {
+                    chartView.Series["T-6"].Enabled = false;
+                }
+                else if (ChartSeriesExists(chartView, "T-18"))
+                {
+                    chartView.Series["T-18"].Enabled = false;
+                }
+            }
+        }
+
+        private void checkView7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkView7.Checked)
+            {
+                if (ChartSeriesExists(chartView, "T-7"))
+                {
+                    chartView.Series["T-7"].Enabled = true;
+                }
+                else if (ChartSeriesExists(chartView, "T-19"))
+                {
+                    chartView.Series["T-19"].Enabled = true;
+                }
+            }
+            else
+            {
+                if (ChartSeriesExists(chartView, "T-7"))
+                {
+                    chartView.Series["T-7"].Enabled = false;
+                }
+                else if (ChartSeriesExists(chartView, "T-19"))
+                {
+                    chartView.Series["T-19"].Enabled = false;
+                }
+            }
+        }
+
+        private void checkView8_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkView8.Checked)
+            {
+                if (ChartSeriesExists(chartView, "T-8"))
+                {
+                    chartView.Series["T-8"].Enabled = true;
+                }
+                else if (ChartSeriesExists(chartView, "T-20"))
+                {
+                    chartView.Series["T-20"].Enabled = true;
+                }
+            }
+            else
+            {
+                if (ChartSeriesExists(chartView, "T-8"))
+                {
+                    chartView.Series["T-8"].Enabled = false;
+                }
+                else if (ChartSeriesExists(chartView, "T-20"))
+                {
+                    chartView.Series["T-20"].Enabled = false;
+                }
+            }
+        }
+
+        private void checkView9_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkView9.Checked)
+            {
+                if (ChartSeriesExists(chartView, "T-9"))
+                {
+                    chartView.Series["T-9"].Enabled = true;
+                }
+                else if (ChartSeriesExists(chartView, "T-21"))
+                {
+                    chartView.Series["T-21"].Enabled = true;
+                }
+            }
+            else
+            {
+                if (ChartSeriesExists(chartView, "T-9"))
+                {
+                    chartView.Series["T-9"].Enabled = false;
+                }
+                else if (ChartSeriesExists(chartView, "T-21"))
+                {
+                    chartView.Series["T-21"].Enabled = false;
+                }
+            }
+        }
+
+        private void checkView10_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkView10.Checked)
+            {
+                if (ChartSeriesExists(chartView, "T-10"))
+                {
+                    chartView.Series["T-10"].Enabled = true;
+                }
+                else if (ChartSeriesExists(chartView, "T-22"))
+                {
+                    chartView.Series["T-22"].Enabled = true;
+                }
+            }
+            else
+            {
+                if (ChartSeriesExists(chartView, "T-10"))
+                {
+                    chartView.Series["T-10"].Enabled = false;
+                }
+                else if (ChartSeriesExists(chartView, "T-22"))
+                {
+                    chartView.Series["T-22"].Enabled = false;
+                }
+            }
+        }
+
+        private void checkView11_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkView11.Checked)
+            {
+                if (ChartSeriesExists(chartView, "T-11"))
+                {
+                    chartView.Series["T-11"].Enabled = true;
+                }
+                else if (ChartSeriesExists(chartView, "T-23"))
+                {
+                    chartView.Series["T-23"].Enabled = true;
+                }
+            }
+            else
+            {
+                if (ChartSeriesExists(chartView, "T-11"))
+                {
+                    chartView.Series["T-11"].Enabled = false;
+                }
+                else if (ChartSeriesExists(chartView, "T-23"))
+                {
+                    chartView.Series["T-23"].Enabled = false;
+                }
+            }
+        }
+
+        private void checkView12_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkView12.Checked)
+            {
+                if (ChartSeriesExists(chartView, "T-12"))
+                {
+                    chartView.Series["T-12"].Enabled = true;
+                }
+                else if (ChartSeriesExists(chartView, "T-24"))
+                {
+                    chartView.Series["T-24"].Enabled = true;
+                }
+            }
+            else
+            {
+                if (ChartSeriesExists(chartView, "T-12"))
+                {
+                    chartView.Series["T-12"].Enabled = false;
+                }
+                else if (ChartSeriesExists(chartView, "T-24"))
+                {
+                    chartView.Series["T-24"].Enabled = false;
+                }
+            }
+        }
+
         private void timerGraficarCharts_Tick(object sender, EventArgs e)
         {
             //Si todas las TF con formula ya se encuentran con su respectivo valor 4 segundos despues de conectar!
