@@ -2846,6 +2846,9 @@ namespace Apple_24_Zones.Forms
             {
                 try
                 {
+                    //Apagar Chiller
+                    ApagarChillerZone(2);
+
                     string hexCommand;
                     string[] hexBytes;
                     byte[] binaryData;
@@ -2860,11 +2863,6 @@ namespace Apple_24_Zones.Forms
                         binaryData[i] = Convert.ToByte(hexBytes[i], 16);
                     }
                     serialPort1.Write(binaryData, 0, binaryData.Length);
-
-                    //Apagar Chiller
-                    //TO DO
-                    ApagarChillerZone(2);
-
                 }
                 catch (Exception ex)
                 {
@@ -2885,6 +2883,9 @@ namespace Apple_24_Zones.Forms
             {
                 try
                 {
+                    //Apagar Chiller
+                    ApagarChillerZone(1);
+
                     string hexCommand;
                     string[] hexBytes;
                     byte[] binaryData;
@@ -2899,9 +2900,6 @@ namespace Apple_24_Zones.Forms
                         binaryData[i] = Convert.ToByte(hexBytes[i], 16);
                     }
                     serialPort1.Write(binaryData, 0, binaryData.Length);
-
-                    //Apagar Chiller
-                    ApagarChillerZone(1);
 
                 }
                 catch (Exception ex)
