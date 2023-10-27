@@ -729,41 +729,6 @@ namespace Apple_24_Zones.Forms
 
         }
 
-        private void ApagarChiller(int Adress)
-        {
-            if (Adress == 0)
-            {
-                string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
-                string[] hexBytesOn = commandOnChiller.Split(' ');
-                byte[] binaryDataOn = new byte[hexBytesOn.Length];
-                for (int i = 0; i < hexBytesOn.Length; i++)
-                {
-                    binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
-                }
-                if (serialPort1.IsOpen)
-                {
-                    serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
-                }
-                Thread.Sleep(1000);
-            }
-            else if (Adress == 1)
-            {
-                string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
-                string[] hexBytesOn = commandOnChiller.Split(' ');
-                byte[] binaryDataOn = new byte[hexBytesOn.Length];
-                for (int i = 0; i < hexBytesOn.Length; i++)
-                {
-                    binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
-                }
-                if (serialPort2.IsOpen)
-                {
-                    serialPort2.Write(binaryDataOn, 0, binaryDataOn.Length);
-                }
-                Thread.Sleep(1000);
-            }
-        }
-
-
 
         private void timerSimulationDownUp_Tick(object sender, EventArgs e)
         {
@@ -1122,6 +1087,7 @@ namespace Apple_24_Zones.Forms
                     btnRefreshCOM2.Enabled = false;
 
                     timerRequestTemps.Start();
+                    timerGraficarCharts.Start();
                 }
                 catch (Exception ex)
                 {
@@ -1135,6 +1101,7 @@ namespace Apple_24_Zones.Forms
                     serialPort2.Close();
 
                     timerRequestTemps.Stop();
+                    timerGraficarCharts.Stop();
 
                     btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
                     btnRefreshCOM2.Enabled = true;
@@ -1153,8 +1120,7 @@ namespace Apple_24_Zones.Forms
 
                     //SIMULATION
                    // timerSimulationCharts.Start();
-                   timerSimulationDownUp.Start();
-                   timerGraficarCharts.Start();
+                   //timerSimulationDownUp.Start();
                 }
             }
             else
@@ -1164,9 +1130,6 @@ namespace Apple_24_Zones.Forms
                     serialPort1.Close();
                     btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
                     btnRefreshCOM1.Enabled = true;
-
-                    //SIMULATION
-                    timerSimulationCharts.Stop();
                 }
             }
         }
@@ -1224,7 +1187,7 @@ namespace Apple_24_Zones.Forms
                         // Tenemos que calentar
                         try
                         {
-                            SendSetTempHeaterAndTurnItOn(2);
+                            SendSetTempHeaterAndTurnItOn(1);
 
                             picProcess1.Image.Dispose();
                             picProcess1.Image = Resources.LedRedHeating2;
@@ -1247,9 +1210,10 @@ namespace Apple_24_Zones.Forms
                     }
                     else if (setpoint >= 5 && setpoint <= 20)
                     {
+                        EncenderChillerZone(1);
+                        Thread.Sleep(100);
                         // Tenemos que enfriar
                         SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
-
 
                         picUpDown1.Image.Dispose();
                         picUpDown1.Image = Resources.arrowDownBlue2;
@@ -1446,8 +1410,6 @@ namespace Apple_24_Zones.Forms
                 if (number >= 5 && number <= 85)
                 {
                     int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
-
-
                     // HEATING
                     if (setpoint >= 27 && setpoint <= 85)
                     {
@@ -1465,8 +1427,6 @@ namespace Apple_24_Zones.Forms
                             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-
-
                     // NEUTRAL
                     else if (setpoint >= 21 && setpoint <= 26)
                     {
@@ -1475,19 +1435,15 @@ namespace Apple_24_Zones.Forms
                         picUpDown2.Image = Resources.neutroWhite;
                         picProcess2.Image.Dispose();
                         picProcess2.Image = Resources.LedWhite1;
-
-
-
                     }
-
-
-
                     // COOLING
                     else if (setpoint >= 5 && setpoint <= 20)
                     {
+                        EncenderChillerZone(2);
+                        Thread.Sleep(100);
+
                         // Tenemos que enfriar
                         SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
-
 
                         picUpDown2.Image.Dispose();
                         picUpDown2.Image = Resources.arrowDownBlue2;
@@ -2906,8 +2862,8 @@ namespace Apple_24_Zones.Forms
                     serialPort1.Write(binaryData, 0, binaryData.Length);
 
                     //Apagar Chiller
-
                     //TO DO
+                    ApagarChillerZone(2);
 
                 }
                 catch (Exception ex)
@@ -2945,8 +2901,7 @@ namespace Apple_24_Zones.Forms
                     serialPort1.Write(binaryData, 0, binaryData.Length);
 
                     //Apagar Chiller
-
-                    //TO DO
+                    ApagarChillerZone(1);
 
                 }
                 catch (Exception ex)
@@ -2962,55 +2917,80 @@ namespace Apple_24_Zones.Forms
         }
 
 
-        private void iconButton1_Click_1(object sender, EventArgs e)
+        private void EncenderChillerZone(int whichzone)
         {
-            SetConfigSerialPortForChiller();
-
-            //string commandOnChiller = "CC 00 08 81 08 01 02 02 02 02 02 02 02 5F";
-
-            string commandOnChiller = "CC 00 09 81 08 01 02 02 02 02 02 02 02 5E";
-
-            // string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
-
-            string[] hexBytesOn = commandOnChiller.Split(' ');
-
-            byte[] binaryDataOn = new byte[hexBytesOn.Length];
-
-            for (int i = 0; i < hexBytesOn.Length; i++)
+            try
             {
-                binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
+                SetConfigSerialPortForChiller();
 
+                string commandOnChiller = "";
+
+                // string commandOnChiller = "CC 00 01 81 08 01 02 02 02 02 02 02 02 66";
+
+                if (whichzone == 1)
+                {
+                    commandOnChiller = "CC 00 08 81 08 01 02 02 02 02 02 02 02 5F";
+                }
+                else if (whichzone == 2)
+                {
+                    commandOnChiller = "CC 00 09 81 08 01 02 02 02 02 02 02 02 5E";
+                }
+
+                string[] hexBytesOn = commandOnChiller.Split(' ');
+
+                byte[] binaryDataOn = new byte[hexBytesOn.Length];
+
+                for (int i = 0; i < hexBytesOn.Length; i++)
+                {
+                    binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
+
+                }
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
+                }
             }
-
-            if (serialPort1.IsOpen)
+            catch (Exception ex)
             {
-                serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
+                MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void iconButton2_Click_1(object sender, EventArgs e)
+        private void ApagarChillerZone(int whichzone)
         {
-            SetConfigSerialPortForChiller();
-
-            //string commandOffChiller = "CC 00 08 81 08 00 02 02 02 02 02 02 02 60";
-
-            string commandOffChiller = "CC 00 09 81 08 00 02 02 02 02 02 02 02 5F";
-
-            //string commandOffChiller = "CC 00 01 81 08 00 02 02 02 02 02 02 02 67";
-
-            string[] hexBytesOn = commandOffChiller.Split(' ');
-
-            byte[] binaryDataOn = new byte[hexBytesOn.Length];
-
-            for (int i = 0; i < hexBytesOn.Length; i++)
+            try
             {
-                binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
+                SetConfigSerialPortForChiller();
 
+                string commandOffChiller = "";
+
+                //string commandOffChiller = "CC 00 01 81 08 00 02 02 02 02 02 02 02 67";
+
+                if (whichzone == 1)
+                {
+                    commandOffChiller = "CC 00 08 81 08 00 02 02 02 02 02 02 02 60";
+                }
+                else if (whichzone == 2)
+                {
+                    commandOffChiller = "CC 00 09 81 08 00 02 02 02 02 02 02 02 5F";
+                }
+
+                string[] hexBytesOn = commandOffChiller.Split(' ');
+
+                byte[] binaryDataOn = new byte[hexBytesOn.Length];
+
+                for (int i = 0; i < hexBytesOn.Length; i++)
+                {
+                    binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
+                }
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
+                }
             }
-
-            if (serialPort1.IsOpen)
+            catch (Exception ex)
             {
-                serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
+                MessageBox.Show("Error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
