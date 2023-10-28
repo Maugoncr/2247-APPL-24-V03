@@ -2908,21 +2908,37 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        private void btnStop2_Click(object sender, EventArgs e)
+        private void OffOmron(int which)
         {
-            DialogResult result = MessageBox.Show("Do you want to stop operation?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            if (which == 1)
             {
                 try
                 {
-                    //Apagar Chiller
-                    ApagarChillerZone(2);
-
                     string hexCommand;
                     string[] hexBytes;
                     byte[] binaryData;
-
-                    // Apagar Omron
+                    SetConfigSerialPortForHeater();
+                    hexCommand = "01 06 21 03 00 00 73 F6";
+                    hexBytes = hexCommand.Split(' ');
+                    binaryData = new byte[hexBytes.Length];
+                    for (int i = 0; i < hexBytes.Length; i++)
+                    {
+                        binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                    }
+                    serialPort1.Write(binaryData, 0, binaryData.Length);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (which == 2)
+            {
+                try
+                {
+                    string hexCommand;
+                    string[] hexBytes;
+                    byte[] binaryData;
                     SetConfigSerialPortForHeater();
                     hexCommand = "02 06 21 03 00 00 73 C5";
                     hexBytes = hexCommand.Split(' ');
@@ -2932,6 +2948,24 @@ namespace Apple_24_Zones.Forms
                         binaryData[i] = Convert.ToByte(hexBytes[i], 16);
                     }
                     serialPort1.Write(binaryData, 0, binaryData.Length);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        
+        }
+        private void btnStop2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to stop operation?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    secuenceZone2 = 1;
+                    timerStopButton2.Start();
+                    btnStop2.Enabled = false;
                 }
                 catch (Exception ex)
                 {
@@ -2952,24 +2986,9 @@ namespace Apple_24_Zones.Forms
             {
                 try
                 {
-                    //Apagar Chiller
-                    ApagarChillerZone(1);
-
-                    string hexCommand;
-                    string[] hexBytes;
-                    byte[] binaryData;
-
-                    // Apagar Omron
-                    SetConfigSerialPortForHeater();
-                    hexCommand = "01 06 21 03 00 00 73 F6";
-                    hexBytes = hexCommand.Split(' ');
-                    binaryData = new byte[hexBytes.Length];
-                    for (int i = 0; i < hexBytes.Length; i++)
-                    {
-                        binaryData[i] = Convert.ToByte(hexBytes[i], 16);
-                    }
-                    serialPort1.Write(binaryData, 0, binaryData.Length);
-
+                    secuenceZone1 = 1;
+                    timerStopButton1.Start();
+                    btnStop1.Enabled = false;
                 }
                 catch (Exception ex)
                 {
@@ -3642,6 +3661,40 @@ namespace Apple_24_Zones.Forms
                 {
                     chartView.Series["T-24"].Enabled = false;
                 }
+            }
+        }
+
+        int secuenceZone2 = 1;
+        private void timerStopButton_Tick(object sender, EventArgs e)
+        {
+            if (secuenceZone2 == 1)
+            {
+                OffOmron(2);
+                secuenceZone2++;
+            }
+            else if (secuenceZone2 == 2)
+            {
+                ApagarChillerZone(2);
+                secuenceZone2--;
+                btnStop2.Enabled = true;
+                timerStopButton2.Stop();
+            }
+        }
+
+        int secuenceZone1 = 1;
+        private void timerStopButton1_Tick(object sender, EventArgs e)
+        {
+            if (secuenceZone1 == 1)
+            {
+                OffOmron(1);
+                secuenceZone1++;
+            }
+            else if (secuenceZone1 == 2)
+            {
+                ApagarChillerZone(1);
+                secuenceZone1--;
+                btnStop1.Enabled = true;
+                timerStopButton1.Stop();
             }
         }
 
