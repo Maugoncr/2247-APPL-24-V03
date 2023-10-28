@@ -3664,23 +3664,6 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        int secuenceZone2 = 1;
-        private void timerStopButton_Tick(object sender, EventArgs e)
-        {
-            if (secuenceZone2 == 1)
-            {
-                OffOmron(2);
-                secuenceZone2++;
-            }
-            else if (secuenceZone2 == 2)
-            {
-                ApagarChillerZone(2);
-                secuenceZone2--;
-                btnStop2.Enabled = true;
-                timerStopButton2.Stop();
-            }
-        }
-
         int secuenceZone1 = 1;
         private void timerStopButton1_Tick(object sender, EventArgs e)
         {
@@ -3691,10 +3674,31 @@ namespace Apple_24_Zones.Forms
             }
             else if (secuenceZone1 == 2)
             {
+                SendCommandSetpointChiller("20", 8);
+
                 ApagarChillerZone(1);
                 secuenceZone1--;
                 btnStop1.Enabled = true;
                 timerStopButton1.Stop();
+            }
+        }
+
+        int secuenceZone2 = 1;
+        private void timerStopButton2_Tick(object sender, EventArgs e)
+        {
+            if (secuenceZone2 == 1)
+            {
+                OffOmron(2);
+                secuenceZone2++;
+            }
+            else if (secuenceZone2 == 2)
+            {
+                SendCommandSetpointChiller("20", 9);
+
+                ApagarChillerZone(2);
+                secuenceZone2--;
+                btnStop2.Enabled = true;
+                timerStopButton2.Stop();
             }
         }
 

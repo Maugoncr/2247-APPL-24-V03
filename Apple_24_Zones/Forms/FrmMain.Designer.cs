@@ -4663,7 +4663,7 @@ namespace Apple_24_Zones.Forms
             // timerStopButton2
             // 
             this.timerStopButton2.Interval = 2000;
-            this.timerStopButton2.Tick += new System.EventHandler(this.timerStopButton_Tick);
+            this.timerStopButton2.Tick += new System.EventHandler(this.timerStopButton2_Tick);
             // 
             // timerStopButton1
             // 
