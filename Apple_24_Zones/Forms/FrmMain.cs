@@ -1118,6 +1118,7 @@ namespace Apple_24_Zones.Forms
                     btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
                     btnRefreshCOM1.Enabled = false;
 
+                    EncenderRojo();
                     //SIMULATION
                    // timerSimulationCharts.Start();
                    //timerSimulationDownUp.Start();
@@ -1127,6 +1128,8 @@ namespace Apple_24_Zones.Forms
             {
                 if (serialPort1.IsOpen)
                 {
+                    ApagarAllLeds();
+
                     serialPort1.Close();
                     btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
                     btnRefreshCOM1.Enabled = true;
@@ -1238,6 +1241,72 @@ namespace Apple_24_Zones.Forms
             serialPort1.Parity = Parity.None;
             serialPort1.StopBits = StopBits.One;
             serialPort1.WriteTimeout = -1;
+        }
+
+        //ENCENDER LUCES
+        private void setConfigSerialPortLeds()
+        {
+            serialPort1.DataBits = 8;
+            serialPort1.Parity = Parity.None;
+        }
+
+        private void EncenderRojo()
+        { 
+            setConfigSerialPortLeds();
+            picGreen.Image.Dispose();
+            picGreen.Image = Resources.tc8off;
+            picYellow.Image.Dispose();
+            picYellow.Image = Resources.tc3off;
+            picRed.Image.Dispose();
+            picRed.Image = Resources.tc1on;
+            serialPort1.Write("#070004" + "\r");
+        }
+        private void EncenderVerde()
+        {
+            setConfigSerialPortLeds();
+            picGreen.Image.Dispose();
+            picGreen.Image = Resources.tc8on;
+            picYellow.Image.Dispose();
+            picYellow.Image = Resources.tc3off;
+            picRed.Image.Dispose();
+            picRed.Image = Resources.tc1off;
+            serialPort1.Write("#070001" + "\r");
+        }
+
+        private void EncenderAmarillo()
+        {
+            setConfigSerialPortLeds();
+            picGreen.Image.Dispose();
+            picGreen.Image = Resources.tc8off;
+            picYellow.Image.Dispose();
+            picYellow.Image = Resources.tc3on;
+            picRed.Image.Dispose();
+            picRed.Image = Resources.tc1off;
+            serialPort1.Write("#070002" + "\r");
+        }
+
+        private void EncenderAllLeds()
+        {
+            setConfigSerialPortLeds();
+            picGreen.Image.Dispose();
+            picGreen.Image = Resources.tc8on;
+            picYellow.Image.Dispose();
+            picYellow.Image = Resources.tc3on;
+            picRed.Image.Dispose();
+            picRed.Image = Resources.tc1on;
+            serialPort1.Write("#070007" + "\r");
+        }
+
+        private void ApagarAllLeds()
+        {
+            setConfigSerialPortLeds();
+            picGreen.Image.Dispose();
+            picGreen.Image = Resources.tc8off;
+            picYellow.Image.Dispose();
+            picYellow.Image = Resources.tc3off;
+            picRed.Image.Dispose();
+            picRed.Image = Resources.tc1off;
+            serialPort1.Write("#070000" + "\r");
         }
 
         private void SendCommandSetpointChiller(string temperature, int adress)
