@@ -1508,16 +1508,22 @@ namespace Apple_24_Zones.Forms
                     // COOLING
                     else if (setpoint >= 5 && setpoint <= 20)
                     {
-                        EncenderChillerZone(2);
-                        Thread.Sleep(100);
+                        DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗛𝗮𝘃𝗲 𝘆𝗼𝘂 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.YesNo , MessageBoxIcon.Warning);
 
-                        // Tenemos que enfriar
-                        SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+                        if (result == DialogResult.Yes)
+                        {
+                            EncenderChillerZone(2);
+                            Thread.Sleep(100);
 
-                        picUpDown2.Image.Dispose();
-                        picUpDown2.Image = Resources.arrowDownBlue2;
-                        picProcess2.Image.Dispose();
-                        picProcess2.Image = Resources.LedBlueCooling2;
+                            // Tenemos que enfriar
+                            SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+
+                            picUpDown2.Image.Dispose();
+                            picUpDown2.Image = Resources.arrowDownBlue2;
+                            picProcess2.Image.Dispose();
+                            picProcess2.Image = Resources.LedBlueCooling2;
+
+                        }
                     }
                 }
                 else
