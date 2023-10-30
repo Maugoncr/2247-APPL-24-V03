@@ -1222,10 +1222,10 @@ namespace Apple_24_Zones.Forms
                             SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
 
                             // Tenemos que dejar a temperatura ambiente
-                            picUpDown2.Image.Dispose();
-                            picUpDown2.Image = Resources.neutroWhite;
-                            picProcess2.Image.Dispose();
-                            picProcess2.Image = Resources.LedWhite1;
+                            picUpDown1.Image.Dispose();
+                            picUpDown1.Image = Resources.neutroWhite;
+                            picProcess1.Image.Dispose();
+                            picProcess1.Image = Resources.LedWhite1;
 
                             EncenderVerde();
                         }
