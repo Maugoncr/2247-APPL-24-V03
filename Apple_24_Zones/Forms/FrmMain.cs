@@ -1197,12 +1197,14 @@ namespace Apple_24_Zones.Forms
                             picUpDown1.Image.Dispose();
                             picUpDown1.Image = Resources.arrowUpRed21;
 
-                            EncenderVerde();
-
                             DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             if (result == DialogResult.OK)
                             {
                                 ApagarChillerZone(1);
+
+                                Thread.Sleep(50);
+
+                                EncenderVerde();
                             }
                         }
                         catch (Exception ex)
@@ -1516,12 +1518,14 @@ namespace Apple_24_Zones.Forms
                             picUpDown2.Image.Dispose();
                             picUpDown2.Image = Resources.arrowUpRed21;
 
-                            EncenderVerde();
-
                             DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             if (result == DialogResult.OK)
                             {
                                 ApagarChillerZone(2);
+
+                                Thread.Sleep(50);
+
+                                EncenderVerde();
                             }
                         }
                         catch (Exception ex)
@@ -3505,7 +3509,7 @@ namespace Apple_24_Zones.Forms
                 {
                     OffOmron(2);
 
-                    EncenderRojo();
+                    Thread.Sleep(50);
 
                     picUpDown2.Image.Dispose();
                     picUpDown2.Image = Resources.neutroWhite;
@@ -3539,7 +3543,7 @@ namespace Apple_24_Zones.Forms
                 {
                     OffOmron(1);
 
-                    EncenderRojo();
+                    Thread.Sleep(50);
 
                     picUpDown1.Image.Dispose();
                     picUpDown1.Image = Resources.neutroWhite;
