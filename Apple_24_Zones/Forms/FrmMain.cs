@@ -3503,9 +3503,20 @@ namespace Apple_24_Zones.Forms
             {
                 try
                 {
-                    secuenceZone2 = 1;
-                    timerStopButton2.Start();
-                    btnStop2.Enabled = false;
+                    OffOmron(2);
+
+                    EncenderRojo();
+
+                    picUpDown2.Image.Dispose();
+                    picUpDown2.Image = Resources.neutroWhite;
+                    picProcess2.Image.Dispose();
+                    picProcess2.Image = Resources.LedWhite1;
+
+                    DialogResult result2 = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (result2 == DialogResult.OK)
+                    {
+                        ApagarChillerZone(2);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -3526,9 +3537,20 @@ namespace Apple_24_Zones.Forms
             {
                 try
                 {
-                    secuenceZone1 = 1;
-                    timerStopButton1.Start();
-                    btnStop1.Enabled = false;
+                    OffOmron(1);
+
+                    EncenderRojo();
+
+                    picUpDown1.Image.Dispose();
+                    picUpDown1.Image = Resources.neutroWhite;
+                    picProcess1.Image.Dispose();
+                    picProcess1.Image = Resources.LedWhite1;
+
+                    DialogResult result2 = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (result2 == DialogResult.OK)
+                    {
+                        ApagarChillerZone(1);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -4202,49 +4224,6 @@ namespace Apple_24_Zones.Forms
                     chartView.Series["T-24"].Enabled = false;
                 }
             }
-        }
-
-        int secuenceZone1 = 1;
-        private void timerStopButton1_Tick(object sender, EventArgs e)
-        {
-            if (secuenceZone1 == 1)
-            {
-                OffOmron(1);
-                secuenceZone1++;
-            }
-            else if (secuenceZone1 == 2)
-            {
-                SendCommandSetpointChiller("20", 8);
-
-                ApagarChillerZone(1);
-                secuenceZone1--;
-                btnStop1.Enabled = true;
-                timerStopButton1.Stop();
-            }
-        }
-
-        int secuenceZone2 = 1;
-        private void timerStopButton2_Tick(object sender, EventArgs e)
-        {
-            if (secuenceZone2 == 1)
-            {
-                OffOmron(2);
-                secuenceZone2++;
-            }
-            else if (secuenceZone2 == 2)
-            {
-                SendCommandSetpointChiller("20", 9);
-
-                ApagarChillerZone(2);
-                secuenceZone2--;
-                btnStop2.Enabled = true;
-                timerStopButton2.Stop();
-            }
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            EncenderChillerZone(1);
         }
 
         private void timerGraficarCharts_Tick(object sender, EventArgs e)
