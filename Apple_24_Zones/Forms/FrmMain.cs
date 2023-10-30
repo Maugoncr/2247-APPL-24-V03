@@ -1212,12 +1212,23 @@ namespace Apple_24_Zones.Forms
                     }
                     else if (setpoint >= 21 && setpoint <= 26)
                     {
-                        // Tenemos que dejar a temperatura ambiente
-                        picUpDown2.Image.Dispose();
-                        picUpDown2.Image = Resources.neutroWhite;
-                        picProcess2.Image.Dispose();
-                        picProcess2.Image = Resources.LedWhite1;
+                       
+                        SendSetTempHeaterAndTurnItOn(1);
+                        DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (result == DialogResult.OK)
+                        {
+                            EncenderChillerZone(1);
+                            Thread.Sleep(100);
+                            SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
 
+                            // Tenemos que dejar a temperatura ambiente
+                            picUpDown2.Image.Dispose();
+                            picUpDown2.Image = Resources.neutroWhite;
+                            picProcess2.Image.Dispose();
+                            picProcess2.Image = Resources.LedWhite1;
+
+                            EncenderVerde();
+                        }
                     }
                     else if (setpoint >= 5 && setpoint <= 20)
                     {
@@ -1522,10 +1533,26 @@ namespace Apple_24_Zones.Forms
                     else if (setpoint >= 21 && setpoint <= 26)
                     {
                         // Tenemos que dejar a temperatura ambiente
-                        picUpDown2.Image.Dispose();
-                        picUpDown2.Image = Resources.neutroWhite;
-                        picProcess2.Image.Dispose();
-                        picProcess2.Image = Resources.LedWhite1;
+                        SendSetTempHeaterAndTurnItOn(2);
+
+                        DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.OK)
+                        {
+                            EncenderChillerZone(2);
+                            Thread.Sleep(100);
+
+                            // Tenemos que enfriar
+                            SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+
+                            picUpDown2.Image.Dispose();
+                            picUpDown2.Image = Resources.neutroWhite;
+                            picProcess2.Image.Dispose();
+                            picProcess2.Image = Resources.LedWhite1;
+
+                            EncenderVerde();
+                        }
+
                     }
                     // COOLING
                     else if (setpoint >= 5 && setpoint <= 20)
