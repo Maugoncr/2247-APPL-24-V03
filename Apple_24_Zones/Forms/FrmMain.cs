@@ -1367,7 +1367,7 @@ namespace Apple_24_Zones.Forms
                     int intValue3;
                     int sum;
                     // Se verifica si la cadena con el valor hex es de dos digitos o de tres ejemplo: 00FA "•2" || 01FA "•1"
-                    if (hexTemp.Substring(2, 1) != "0")
+                    if (hexTemp.Substring(1, 1) != "0")
                     {
                         intValue2 = Convert.ToInt32(hexTemp.Substring(1, 1), 16);
                         intValue3 = Convert.ToInt32(hexTemp.Substring(2), 16);
@@ -1445,7 +1445,7 @@ namespace Apple_24_Zones.Forms
                     int intValue3;
                     int sum;
                     // Se verifica si la cadena con el valor hex es de dos digitos o de tres ejemplo: 00FA "•2" || 01FA "•1"
-                    if (hexTemp.Substring(2, 1) != "0")
+                    if (hexTemp.Substring(1, 1) != "0")
                     {
                         intValue2 = Convert.ToInt32(hexTemp.Substring(1, 1), 16);
                         intValue3 = Convert.ToInt32(hexTemp.Substring(2), 16);
