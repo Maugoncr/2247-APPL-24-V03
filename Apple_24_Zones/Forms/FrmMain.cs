@@ -1196,6 +1196,8 @@ namespace Apple_24_Zones.Forms
                             picProcess1.Image = Resources.LedRedHeating2;
                             picUpDown1.Image.Dispose();
                             picUpDown1.Image = Resources.arrowUpRed21;
+
+                            EncenderVerde();
                         }
                         catch (Exception ex)
                         {
@@ -1213,15 +1215,21 @@ namespace Apple_24_Zones.Forms
                     }
                     else if (setpoint >= 5 && setpoint <= 20)
                     {
-                        EncenderChillerZone(1);
-                        Thread.Sleep(100);
-                        // Tenemos que enfriar
-                        SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+                        SendSetTempHeaterAndTurnItOn(1);
+                        DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (result == DialogResult.OK)
+                        {
+                            EncenderChillerZone(1);
+                            Thread.Sleep(100);
+                            SendCommandSetpointChiller(txtPutSetpoint2.Text, 8);
 
-                        picUpDown1.Image.Dispose();
-                        picUpDown1.Image = Resources.arrowDownBlue2;
-                        picProcess1.Image.Dispose();
-                        picProcess1.Image = Resources.LedBlueCooling2;
+                            picUpDown1.Image.Dispose();
+                            picUpDown1.Image = Resources.arrowDownBlue2;
+                            picProcess1.Image.Dispose();
+                            picProcess1.Image = Resources.LedBlueCooling2;
+
+                            EncenderVerde();
+                        }
                     }
                 }
                 else
@@ -1490,6 +1498,8 @@ namespace Apple_24_Zones.Forms
                             picProcess2.Image = Resources.LedRedHeating2;
                             picUpDown2.Image.Dispose();
                             picUpDown2.Image = Resources.arrowUpRed21;
+
+                            EncenderVerde();
                         }
                         catch (Exception ex)
                         {
@@ -1508,9 +1518,12 @@ namespace Apple_24_Zones.Forms
                     // COOLING
                     else if (setpoint >= 5 && setpoint <= 20)
                     {
-                        DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗛𝗮𝘃𝗲 𝘆𝗼𝘂 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.YesNo , MessageBoxIcon.Warning);
 
-                        if (result == DialogResult.Yes)
+                        SendSetTempHeaterAndTurnItOn(2);
+
+                        DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK , MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.OK)
                         {
                             EncenderChillerZone(2);
                             Thread.Sleep(100);
@@ -1523,6 +1536,7 @@ namespace Apple_24_Zones.Forms
                             picProcess2.Image.Dispose();
                             picProcess2.Image = Resources.LedBlueCooling2;
 
+                            EncenderVerde();
                         }
                     }
                 }
