@@ -4226,6 +4226,21 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            EncenderVerde();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            EncenderAmarillo();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            EncenderRojo();
+        }
+
         private void timerGraficarCharts_Tick(object sender, EventArgs e)
         {
             //Si todas las TF con formula ya se encuentran con su respectivo valor 4 segundos despues de conectar!
