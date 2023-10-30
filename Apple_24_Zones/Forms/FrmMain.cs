@@ -1198,6 +1198,12 @@ namespace Apple_24_Zones.Forms
                             picUpDown1.Image = Resources.arrowUpRed21;
 
                             EncenderVerde();
+
+                            DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            if (result == DialogResult.OK)
+                            {
+                                ApagarChillerZone(1);
+                            }
                         }
                         catch (Exception ex)
                         {
@@ -1221,7 +1227,7 @@ namespace Apple_24_Zones.Forms
                         {
                             EncenderChillerZone(1);
                             Thread.Sleep(100);
-                            SendCommandSetpointChiller(txtPutSetpoint2.Text, 8);
+                            SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
 
                             picUpDown1.Image.Dispose();
                             picUpDown1.Image = Resources.arrowDownBlue2;
@@ -1500,6 +1506,12 @@ namespace Apple_24_Zones.Forms
                             picUpDown2.Image = Resources.arrowUpRed21;
 
                             EncenderVerde();
+
+                            DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            if (result == DialogResult.OK)
+                            {
+                                ApagarChillerZone(2);
+                            }
                         }
                         catch (Exception ex)
                         {
@@ -4203,6 +4215,11 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            EncenderChillerZone(1);
+        }
+
         private void timerGraficarCharts_Tick(object sender, EventArgs e)
         {
             //Si todas las TF con formula ya se encuentran con su respectivo valor 4 segundos despues de conectar!
@@ -4741,31 +4758,6 @@ namespace Apple_24_Zones.Forms
                     sendAgainRequest = true;
                     break;
             }
-
-            txtReceive.Text = "T1: " + TF1 +
-                "T2: " + TF2 + "\n" +
-                "T3: " + TF3 +
-                "T4: " + TF4 + "\n" +
-                "T5: " + TF5 +
-                "T6: " + TF6 + "\n" +
-                "T7: " + TF7 +
-                "T8: " + TF8 + "\n" +
-                "T9: " + TF9 +
-                "T10: " + TF10 + "\n" +
-                "T11: " + TF11 +
-                "T12: " + TF12 + "\n" +
-                "T13: " + TF13 +
-                "T14: " + TF14 + "\n" +
-                "T15: " + TF15 +
-                "T16: " + TF16 + "\n" +
-                "T17: " + TF17 +
-                "T18: " + TF18 + "\n" +
-                "T19: " + TF19 +
-                "T20: " + TF20 + "\n" +
-                "T21: " + TF21 +
-                "T22: " + TF22 + "\n" +
-                "T23: " + TF23 +
-                "T24: " + TF24;
         }
 
         public string HexStringToAscii(string hexString)
