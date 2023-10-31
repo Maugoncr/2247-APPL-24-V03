@@ -1176,90 +1176,112 @@ namespace Apple_24_Zones.Forms
 
         private void btnApplySetpoint1_Click(object sender, EventArgs e)
         {
-            string input = txtPutSetpoint1.Text;
-            
-            if (int.TryParse(input, out int number))
+            try
             {
-                // Comprueba si el número está en el rango de 5 a 85
-                if (number >= 5 && number <= 85)
+                string input = txtPutSetpoint1.Text;
+
+                if (int.TryParse(input, out int number))
                 {
-                    int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
-
-                    if (setpoint >= 27 && setpoint <= 85)
+                    // Comprueba si el número está en el rango de 5 a 85
+                    if (number >= 5 && number <= 85)
                     {
-                        // Tenemos que calentar
-                        try
+                        int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
+
+                        if (setpoint >= 27 && setpoint <= 85)
                         {
-                            SendSetTempHeaterAndTurnItOn(1);
-
-                            picProcess1.Image.Dispose();
-                            picProcess1.Image = Resources.LedRedHeating2;
-                            picUpDown1.Image.Dispose();
-                            picUpDown1.Image = Resources.arrowUpRed21;
-
-                            DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            if (result == DialogResult.OK)
+                            try
                             {
-                                ApagarChillerZone(1);
+                                SendSetTempHeaterAndTurnItOn(1);
 
-                                Thread.Sleep(50);
+                                picProcess1.Image.Dispose();
+                                picProcess1.Image = Resources.LedRedHeating2;
+                                picUpDown1.Image.Dispose();
+                                picUpDown1.Image = Resources.arrowUpRed21;
 
-                                EncenderVerde();
+                                FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+                                if (customForm.ShowDialog() == DialogResult.OK)
+                                {
+                                    ApagarChillerZone(1);
+
+                                    Thread.Sleep(50);
+
+                                    EncenderVerde();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-                        catch (Exception ex)
+                        else if (setpoint >= 21 && setpoint <= 26)
                         {
-                            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            try
+                            {
+                                SendSetTempHeaterAndTurnItOn(1);
+                                FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+                                if (customForm.ShowDialog() == DialogResult.OK)
+                                {
+                                    EncenderChillerZone(1);
+                                    Thread.Sleep(100);
+                                    SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+
+                                    // Tenemos que dejar a temperatura ambiente
+                                    picUpDown1.Image.Dispose();
+                                    picUpDown1.Image = Resources.neutroWhite;
+                                    picProcess1.Image.Dispose();
+                                    picProcess1.Image = Resources.LedWhite1;
+
+                                    EncenderVerde();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            
+                        }
+                        else if (setpoint >= 5 && setpoint <= 20)
+                        {
+                            try
+                            {
+                                SendSetTempHeaterAndTurnItOn(1);
+                                FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+                                if (customForm.ShowDialog() == DialogResult.OK)
+                                {
+                                    EncenderChillerZone(1);
+                                    Thread.Sleep(100);
+                                    SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+
+                                    picUpDown1.Image.Dispose();
+                                    picUpDown1.Image = Resources.arrowDownBlue2;
+                                    picProcess1.Image.Dispose();
+                                    picProcess1.Image = Resources.LedBlueCooling2;
+
+                                    EncenderVerde();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            
                         }
                     }
-                    else if (setpoint >= 21 && setpoint <= 26)
+                    else
                     {
-                       
-                        SendSetTempHeaterAndTurnItOn(1);
-                        DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        if (result == DialogResult.OK)
-                        {
-                            EncenderChillerZone(1);
-                            Thread.Sleep(100);
-                            SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
-
-                            // Tenemos que dejar a temperatura ambiente
-                            picUpDown1.Image.Dispose();
-                            picUpDown1.Image = Resources.neutroWhite;
-                            picProcess1.Image.Dispose();
-                            picProcess1.Image = Resources.LedWhite1;
-
-                            EncenderVerde();
-                        }
-                    }
-                    else if (setpoint >= 5 && setpoint <= 20)
-                    {
-                        SendSetTempHeaterAndTurnItOn(1);
-                        DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        if (result == DialogResult.OK)
-                        {
-                            EncenderChillerZone(1);
-                            Thread.Sleep(100);
-                            SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
-
-                            picUpDown1.Image.Dispose();
-                            picUpDown1.Image = Resources.arrowDownBlue2;
-                            picProcess1.Image.Dispose();
-                            picProcess1.Image = Resources.LedBlueCooling2;
-
-                            EncenderVerde();
-                        }
+                        MessageBox.Show("Please enter a number between 5 and 85", "Number out of range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a number between 5 and 85", "Number out of range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please enter a valid number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please enter a valid number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
 
         private void SetConfigSerialPortForChiller()
@@ -1498,100 +1520,118 @@ namespace Apple_24_Zones.Forms
 
         private void btnApplySetpoint2_Click(object sender, EventArgs e)
         {
-            string input = txtPutSetpoint2.Text;
-
-            if (int.TryParse(input, out int number))
+            try
             {
-                // Comprueba si el número está en el rango de 5 a 85
-                if (number >= 5 && number <= 85)
+                string input = txtPutSetpoint2.Text;
+                if (int.TryParse(input, out int number))
                 {
-                    int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
-                    // HEATING
-                    if (setpoint >= 27 && setpoint <= 85)
+                    // Comprueba si el número está en el rango de 5 a 85
+                    if (number >= 5 && number <= 85)
                     {
-                        try
+                        int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
+                        // HEATING
+                        if (setpoint >= 27 && setpoint <= 85)
                         {
-                            SendSetTempHeaterAndTurnItOn(2);
-
-                            picProcess2.Image.Dispose();
-                            picProcess2.Image = Resources.LedRedHeating2;
-                            picUpDown2.Image.Dispose();
-                            picUpDown2.Image = Resources.arrowUpRed21;
-
-                            DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            if (result == DialogResult.OK)
+                            try
                             {
-                                ApagarChillerZone(2);
+                                SendSetTempHeaterAndTurnItOn(2);
 
-                                Thread.Sleep(50);
+                                picProcess2.Image.Dispose();
+                                picProcess2.Image = Resources.LedRedHeating2;
+                                picUpDown2.Image.Dispose();
+                                picUpDown2.Image = Resources.arrowUpRed21;
 
-                                EncenderVerde();
+                                FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+
+                                if (customForm.ShowDialog() == DialogResult.OK)
+                                {
+                                    ApagarChillerZone(2);
+
+                                    Thread.Sleep(50);
+
+                                    EncenderVerde();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-                        catch (Exception ex)
+                        // NEUTRAL
+                        else if (setpoint >= 21 && setpoint <= 26)
                         {
-                            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            try
+                            {
+                                SendSetTempHeaterAndTurnItOn(2);
+
+                                FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+
+                                if (customForm.ShowDialog() == DialogResult.OK)
+                                {
+                                    EncenderChillerZone(2);
+                                    Thread.Sleep(100);
+
+                                    SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+
+                                    picUpDown2.Image.Dispose();
+                                    picUpDown2.Image = Resources.neutroWhite;
+                                    picProcess2.Image.Dispose();
+                                    picProcess2.Image = Resources.LedWhite1;
+
+                                    EncenderVerde();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        // COOLING
+                        else if (setpoint >= 5 && setpoint <= 20)
+                        {
+                            try
+                            {
+                                SendSetTempHeaterAndTurnItOn(2);
+
+                                FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+
+                                if (customForm.ShowDialog() == DialogResult.OK)
+                                {
+                                    EncenderChillerZone(2);
+                                    Thread.Sleep(100);
+
+                                    SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+
+                                    picUpDown2.Image.Dispose();
+                                    picUpDown2.Image = Resources.arrowDownBlue2;
+                                    picProcess2.Image.Dispose();
+                                    picProcess2.Image = Resources.LedBlueCooling2;
+
+                                    EncenderVerde();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
                         }
                     }
-                    // NEUTRAL
-                    else if (setpoint >= 21 && setpoint <= 26)
+                    else
                     {
-                        // Tenemos que dejar a temperatura ambiente
-                        SendSetTempHeaterAndTurnItOn(2);
-
-                        DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                        if (result == DialogResult.OK)
-                        {
-                            EncenderChillerZone(2);
-                            Thread.Sleep(100);
-
-                            // Tenemos que enfriar
-                            SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
-
-                            picUpDown2.Image.Dispose();
-                            picUpDown2.Image = Resources.neutroWhite;
-                            picProcess2.Image.Dispose();
-                            picProcess2.Image = Resources.LedWhite1;
-
-                            EncenderVerde();
-                        }
-
-                    }
-                    // COOLING
-                    else if (setpoint >= 5 && setpoint <= 20)
-                    {
-
-                        SendSetTempHeaterAndTurnItOn(2);
-
-                        DialogResult result = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK , MessageBoxIcon.Warning);
-
-                        if (result == DialogResult.OK)
-                        {
-                            EncenderChillerZone(2);
-                            Thread.Sleep(100);
-
-                            // Tenemos que enfriar
-                            SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
-
-                            picUpDown2.Image.Dispose();
-                            picUpDown2.Image = Resources.arrowDownBlue2;
-                            picProcess2.Image.Dispose();
-                            picProcess2.Image = Resources.LedBlueCooling2;
-
-                            EncenderVerde();
-                        }
+                        MessageBox.Show("Please enter a number between 5 and 85", "Number out of range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a number between 5 and 85", "Number out of range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please enter a valid number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please enter a valid number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
 
         private void SetConfigSerialPortForHeater()
@@ -3516,8 +3556,8 @@ namespace Apple_24_Zones.Forms
                     picProcess2.Image.Dispose();
                     picProcess2.Image = Resources.LedWhite1;
 
-                    DialogResult result2 = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    if (result2 == DialogResult.OK)
+                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+                    if (customForm.ShowDialog() == DialogResult.OK)
                     {
                         ApagarChillerZone(2);
                     }
@@ -3550,8 +3590,8 @@ namespace Apple_24_Zones.Forms
                     picProcess1.Image.Dispose();
                     picProcess1.Image = Resources.LedWhite1;
 
-                    DialogResult result2 = MessageBox.Show("You are about to use a function with the chiller!!\nSo to ensure your objective is met, you should manually check the chiller screen for any errors.\n\n𝗣𝗿𝗲𝘀𝘀 𝗢𝗞 𝗼𝗻𝗰𝗲 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘁𝗵𝗮𝘁 𝘁𝗵𝗲𝗿𝗲 𝗮𝗿𝗲 𝗻𝗼 𝗲𝗿𝗿𝗼𝗿𝘀?", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    if (result2 == DialogResult.OK)
+                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+                    if (customForm.ShowDialog() == DialogResult.OK)
                     {
                         ApagarChillerZone(1);
                     }
