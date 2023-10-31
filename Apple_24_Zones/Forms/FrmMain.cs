@@ -1192,6 +1192,7 @@ namespace Apple_24_Zones.Forms
                             try
                             {
                                 SendSetTempHeaterAndTurnItOn(1);
+                                CountOmronUse(1);
 
                                 picProcess1.Image.Dispose();
                                 picProcess1.Image = Resources.LedRedHeating2;
@@ -1218,10 +1219,14 @@ namespace Apple_24_Zones.Forms
                             try
                             {
                                 SendSetTempHeaterAndTurnItOn(1);
+                                CountOmronUse(1);
+
                                 FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
                                 if (customForm.ShowDialog() == DialogResult.OK)
                                 {
                                     EncenderChillerZone(1);
+                                    CountChillerUse(1);
+
                                     Thread.Sleep(100);
                                     SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
 
@@ -1245,10 +1250,14 @@ namespace Apple_24_Zones.Forms
                             try
                             {
                                 SendSetTempHeaterAndTurnItOn(1);
+                                CountOmronUse(1);
+
                                 FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
                                 if (customForm.ShowDialog() == DialogResult.OK)
                                 {
                                     EncenderChillerZone(1);
+                                    CountChillerUse(1);
+
                                     Thread.Sleep(100);
                                     SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
 
@@ -1535,6 +1544,7 @@ namespace Apple_24_Zones.Forms
                             try
                             {
                                 SendSetTempHeaterAndTurnItOn(2);
+                                CountOmronUse(2);
 
                                 picProcess2.Image.Dispose();
                                 picProcess2.Image = Resources.LedRedHeating2;
@@ -1563,12 +1573,15 @@ namespace Apple_24_Zones.Forms
                             try
                             {
                                 SendSetTempHeaterAndTurnItOn(2);
+                                CountOmronUse(2);
 
                                 FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
 
                                 if (customForm.ShowDialog() == DialogResult.OK)
                                 {
                                     EncenderChillerZone(2);
+                                    CountChillerUse(2);
+
                                     Thread.Sleep(100);
 
                                     SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
@@ -1592,12 +1605,15 @@ namespace Apple_24_Zones.Forms
                             try
                             {
                                 SendSetTempHeaterAndTurnItOn(2);
+                                CountOmronUse(2);
 
                                 FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
 
                                 if (customForm.ShowDialog() == DialogResult.OK)
                                 {
                                     EncenderChillerZone(2);
+                                    CountChillerUse(2);
+
                                     Thread.Sleep(100);
 
                                     SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
@@ -4712,21 +4728,6 @@ namespace Apple_24_Zones.Forms
 
     
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            timerRequestTemps.Stop();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            timerRequestTemps.Start();
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            ProcesarCadena(cosaADescifrar);
-        }
-
         string cosaADescifrar = "3E2B3032352E31382B393939392E392B393939392E392B393939392E392B393939392E392B393939392E390D";
 
         public void ProcesarCadena(string cadena)
@@ -4854,6 +4855,35 @@ namespace Apple_24_Zones.Forms
             return index < asciiString.Length ? asciiString.Substring(index) : asciiString;
 
             //return asciiString;
+        }
+
+
+        private void CountChillerUse(int whichChiller)
+        {
+            if (whichChiller == 1) 
+            {
+                Settings.Default.CountCool1++;
+                Settings.Default.Save();
+            }
+            else if (whichChiller == 2)
+            {
+                Settings.Default.CountCool2++;
+                Settings.Default.Save();
+            }
+        }
+
+        private void CountOmronUse(int whichOmron)
+        {
+            if (whichOmron == 1)
+            {
+                Settings.Default.CountHeat1++;
+                Settings.Default.Save();
+            }
+            else if (whichOmron == 2)
+            {
+                Settings.Default.CountHeat2++;
+                Settings.Default.Save();
+            }
         }
 
 

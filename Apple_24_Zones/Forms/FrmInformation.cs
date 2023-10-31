@@ -34,8 +34,13 @@ namespace Apple_24_Zones.Forms
         private void FrmInformation_Load(object sender, EventArgs e)
         {
             txtNotes.Text = Settings.Default.Notes;
-            lbCountHeat.Text = Settings.Default.CountHeat1.ToString();
-            lbCountCool.Text = Settings.Default.CountCool1.ToString();
+
+            lbCountCool1.Text = Settings.Default.CountCool1.ToString();
+            lbCountCool2.Text = Settings.Default.CountCool2.ToString();
+
+            lbCountHeat1.Text = Settings.Default.CountHeat1.ToString(); 
+            lbCountHeat2.Text = Settings.Default.CountHeat2.ToString();
+
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
