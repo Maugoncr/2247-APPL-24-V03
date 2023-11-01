@@ -4794,12 +4794,12 @@ namespace Apple_24_Zones.Forms
                     sendAgainRequest = true;
                     break;
                     case 2:
-                    TF7 = HexStringToAscii(T1);
-                    TF8 = HexStringToAscii(T2);
-                    TF9 = HexStringToAscii(T3);
-                    TF10 = HexStringToAscii(T4);
-                    TF11 = HexStringToAscii(T5);
-                    TF12 = HexStringToAscii(T6);
+                    TF7 = HexStringToAscii(T6);
+                    TF8 = HexStringToAscii(T5);
+                    TF9 = HexStringToAscii(T4);
+                    TF10 = HexStringToAscii(T3);
+                    TF11 = HexStringToAscii(T2);
+                    TF12 = HexStringToAscii(T1);
                     whichRequestToSend = 3;
                     sendAgainRequest = true;
                     break;
@@ -4814,12 +4814,12 @@ namespace Apple_24_Zones.Forms
                     sendAgainRequest = true;
                     break;
                     case 4:
-                    TF19 = HexStringToAscii(T1);
-                    TF20 = HexStringToAscii(T2);
-                    TF21 = HexStringToAscii(T3);
-                    TF22 = HexStringToAscii(T4);
-                    TF23 = HexStringToAscii(T5);
-                    TF24 = HexStringToAscii(T6);
+                    TF19 = HexStringToAscii(T6);
+                    TF20 = HexStringToAscii(T5);
+                    TF21 = HexStringToAscii(T4);
+                    TF22 = HexStringToAscii(T3);
+                    TF23 = HexStringToAscii(T2);
+                    TF24 = HexStringToAscii(T1);
                     whichRequestToSend = 1;
                     sendAgainRequest = true;
                     break;
