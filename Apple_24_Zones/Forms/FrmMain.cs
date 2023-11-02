@@ -259,6 +259,113 @@ namespace Apple_24_Zones.Forms
                 panelGhost.Location = new Point(579, 1020);
                 panelGhost.Visible = false;
                 panelBoth.Visible = true;
+
+                chartZone1.Series.Clear();
+                chartZone1.Series.Add("T-1");
+                chartZone1.Series.Add("T-2");
+                chartZone1.Series.Add("T-3");
+                chartZone1.Series.Add("T-4");
+                chartZone1.Series.Add("T-5");
+                chartZone1.Series.Add("T-6");
+                chartZone1.Series.Add("T-7");
+                chartZone1.Series.Add("T-8");
+                chartZone1.Series.Add("T-9");
+                chartZone1.Series.Add("T-10");
+                chartZone1.Series.Add("T-11");
+                chartZone1.Series.Add("T-12");
+
+                chartZone1.Series["T-1"].IsVisibleInLegend = false;
+                chartZone1.Series["T-2"].IsVisibleInLegend = false;
+                chartZone1.Series["T-3"].IsVisibleInLegend = false;
+                chartZone1.Series["T-4"].IsVisibleInLegend = false;
+                chartZone1.Series["T-5"].IsVisibleInLegend = false;
+                chartZone1.Series["T-6"].IsVisibleInLegend = false;
+                chartZone1.Series["T-7"].IsVisibleInLegend = false;
+                chartZone1.Series["T-8"].IsVisibleInLegend = false;
+                chartZone1.Series["T-9"].IsVisibleInLegend = false;
+                chartZone1.Series["T-10"].IsVisibleInLegend = false;
+                chartZone1.Series["T-11"].IsVisibleInLegend = false;
+                chartZone1.Series["T-12"].IsVisibleInLegend = false;
+
+                chartZone1.Series["T-1"].Color = Color.Red;
+                chartZone1.Series["T-2"].Color = Color.Blue;
+                chartZone1.Series["T-3"].Color = Color.Yellow;
+                chartZone1.Series["T-4"].Color = Color.Green;
+                chartZone1.Series["T-5"].Color = Color.Purple;
+                chartZone1.Series["T-6"].Color = Color.Cyan;
+                chartZone1.Series["T-7"].Color = Color.Orange;
+                chartZone1.Series["T-8"].Color = Color.Maroon;
+                chartZone1.Series["T-9"].Color = Color.Lime;
+                chartZone1.Series["T-10"].Color = Color.Magenta;
+                chartZone1.Series["T-11"].Color = Color.Olive;
+                chartZone1.Series["T-12"].Color = Color.Black;
+
+
+                chartZone1.Series["T-1"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-2"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-3"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-4"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-5"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-6"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-7"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-8"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-9"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-10"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-11"].ChartType = SeriesChartType.Spline;
+                chartZone1.Series["T-12"].ChartType = SeriesChartType.Spline;
+
+                chartZone2.Series.Clear();
+                chartZone2.Series.Add("T-13");
+                chartZone2.Series.Add("T-14");
+                chartZone2.Series.Add("T-15");
+                chartZone2.Series.Add("T-16");
+                chartZone2.Series.Add("T-17");
+                chartZone2.Series.Add("T-18");
+                chartZone2.Series.Add("T-19");
+                chartZone2.Series.Add("T-20");
+                chartZone2.Series.Add("T-21");
+                chartZone2.Series.Add("T-22");
+                chartZone2.Series.Add("T-23");
+                chartZone2.Series.Add("T-24");
+
+                chartZone2.Series["T-13"].IsVisibleInLegend = false;
+                chartZone2.Series["T-14"].IsVisibleInLegend = false;
+                chartZone2.Series["T-15"].IsVisibleInLegend = false;
+                chartZone2.Series["T-16"].IsVisibleInLegend = false;
+                chartZone2.Series["T-17"].IsVisibleInLegend = false;
+                chartZone2.Series["T-18"].IsVisibleInLegend = false;
+                chartZone2.Series["T-19"].IsVisibleInLegend = false;
+                chartZone2.Series["T-20"].IsVisibleInLegend = false;
+                chartZone2.Series["T-21"].IsVisibleInLegend = false;
+                chartZone2.Series["T-22"].IsVisibleInLegend = false;
+                chartZone2.Series["T-23"].IsVisibleInLegend = false;
+                chartZone2.Series["T-24"].IsVisibleInLegend = false;
+
+                chartZone2.Series["T-13"].Color = Color.Red;
+                chartZone2.Series["T-14"].Color = Color.Blue;
+                chartZone2.Series["T-15"].Color = Color.Yellow;
+                chartZone2.Series["T-16"].Color = Color.Green;
+                chartZone2.Series["T-17"].Color = Color.Purple;
+                chartZone2.Series["T-18"].Color = Color.Cyan;
+                chartZone2.Series["T-19"].Color = Color.Orange;
+                chartZone2.Series["T-20"].Color = Color.Maroon;
+                chartZone2.Series["T-21"].Color = Color.Lime;
+                chartZone2.Series["T-22"].Color = Color.Magenta;
+                chartZone2.Series["T-23"].Color = Color.Olive;
+                chartZone2.Series["T-24"].Color = Color.Black;
+
+                chartZone2.Series["T-13"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-14"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-15"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-16"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-17"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-18"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-19"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-20"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-21"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-22"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-23"].ChartType = SeriesChartType.Spline;
+                chartZone2.Series["T-24"].ChartType = SeriesChartType.Spline;
             }
             else if (index == 1)
             {
