@@ -522,7 +522,12 @@ namespace Apple_24_Zones.Forms
             e.Graphics.DrawRectangle(borderPen, new Rectangle(0, 0, panel.Width - 1, panel.Height - 1));
         }
 
-
+        bool ThereIsTwoProcessRN = false;
+        bool Zona1Encendida = false;
+        bool Zona2Encendida = false;
+        bool PressButtonStop = false;
+        bool VengoZona1 = false;
+        bool VengoZona2 = false;
 
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
@@ -530,21 +535,41 @@ namespace Apple_24_Zones.Forms
             lbTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             lbDate.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(fecha);
 
-            if (serialPort1.IsOpen)
+            if (PressButtonStop)
             {
-                try
+                if (serialPort1.IsOpen)
                 {
-                    if (ZONA2Apagada && ZONA1Apagada)
+                    if (ThereIsTwoProcessRN)
+                    {
+                        if (Zona1Encendida && Zona2Encendida)
+                        {
+                            ThereIsTwoProcessRN = false;
+                            if (VengoZona1)
+                            {
+                                Zona1Encendida = false;
+                                VengoZona1 = false;
+                            }
+                            else if (VengoZona2)
+                            {
+                                Zona2Encendida = false;
+                                VengoZona2 = false;
+                            }
+                        }
+                    }
+                    else if (Zona1Encendida)
                     {
                         EncenderRojo();
-                        ZONA1Apagada = false;
-                        ZONA2Apagada = false;
+                        Zona1Encendida = false;
+                        VengoZona1 = false;
+                    }
+                    else if (Zona2Encendida)
+                    {
+                        EncenderRojo();
+                        Zona2Encendida = false;
+                        VengoZona2 = false;
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                PressButtonStop = false;
             }
 
 
@@ -1226,7 +1251,6 @@ namespace Apple_24_Zones.Forms
 
                                     EncenderVerde();
                                 }
-                                ZONA1Apagada = false;
                             }
                             catch (Exception ex)
                             {
@@ -1257,7 +1281,6 @@ namespace Apple_24_Zones.Forms
 
                                     EncenderVerde();
                                 }
-                                ZONA1Apagada = false;
                             }
                             catch (Exception ex)
                             {
@@ -1288,7 +1311,6 @@ namespace Apple_24_Zones.Forms
 
                                     EncenderVerde();
                                 }
-                                ZONA1Apagada = false;
                             }
                             catch (Exception ex)
                             {
@@ -1305,6 +1327,16 @@ namespace Apple_24_Zones.Forms
                 else
                 {
                     MessageBox.Show("Please enter a valid number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                Zona1Encendida = true;
+                if (Zona2Encendida && Zona1Encendida)
+                {
+                    ThereIsTwoProcessRN = true;
+                }
+                else
+                {
+                    ThereIsTwoProcessRN = false;
                 }
             }
             catch (Exception ex)
@@ -1583,7 +1615,6 @@ namespace Apple_24_Zones.Forms
                                     EncenderVerde();
                                 }
 
-                                ZONA2Apagada = false;
                             }
                             catch (Exception ex)
                             {
@@ -1616,7 +1647,6 @@ namespace Apple_24_Zones.Forms
 
                                     EncenderVerde();
                                 }
-                                ZONA2Apagada = false;
                             }
                             catch (Exception ex)
                             {
@@ -1649,7 +1679,6 @@ namespace Apple_24_Zones.Forms
 
                                     EncenderVerde();
                                 }
-                                ZONA2Apagada = false;
                             }
                             catch (Exception ex)
                             {
@@ -1666,6 +1695,16 @@ namespace Apple_24_Zones.Forms
                 else
                 {
                     MessageBox.Show("Please enter a valid number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                Zona2Encendida = true;
+                if (Zona2Encendida && Zona1Encendida)
+                {
+                    ThereIsTwoProcessRN = true;
+                }
+                else
+                {
+                    ThereIsTwoProcessRN = false;
                 }
             }
             catch (Exception ex)
@@ -3582,7 +3621,6 @@ namespace Apple_24_Zones.Forms
         
         }
 
-        bool ZONA2Apagada = false;
         private void btnStop2_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you want to stop operation?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -3605,8 +3643,10 @@ namespace Apple_24_Zones.Forms
                         ApagarChillerZone(2);
 
                         txtPutSetpoint2.Text = "--";
-                        ZONA2Apagada = true;
                     }
+
+                    PressButtonStop = true;
+                    VengoZona2 = true;
                 }
                 catch (Exception ex)
                 {
@@ -3620,7 +3660,6 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        bool ZONA1Apagada = false;
         private void btnStop1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you want to stop operation?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -3643,8 +3682,9 @@ namespace Apple_24_Zones.Forms
                         ApagarChillerZone(1);
 
                         txtPutSetpoint1.Text = "--";
-                        ZONA1Apagada = true;
                     }
+                    PressButtonStop = true;
+                    VengoZona1 = true;
                 }
                 catch (Exception ex)
                 {
