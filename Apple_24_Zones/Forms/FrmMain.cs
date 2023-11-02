@@ -659,7 +659,8 @@ namespace Apple_24_Zones.Forms
 
             //Reset Images
 
-          
+            lbStartDate1.Text = "--/--/--  --:--";
+            lbStartDate2.Text = "--/--/--  --:--";
 
             // Botones que deben venir por defecto desactivados
 
@@ -1221,122 +1222,130 @@ namespace Apple_24_Zones.Forms
         {
             try
             {
-                string input = txtPutSetpoint1.Text;
-
-                if (int.TryParse(input, out int number))
+                if (serialPort1.IsOpen)
                 {
-                    // Comprueba si el número está en el rango de 5 a 85
-                    if (number >= 5 && number <= 85)
+                    string input = txtPutSetpoint1.Text;
+
+                    if (int.TryParse(input, out int number))
                     {
-                        int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
-
-                        if (setpoint >= 27 && setpoint <= 85)
+                        // Comprueba si el número está en el rango de 5 a 85
+                        if (number >= 5 && number <= 85)
                         {
-                            try
+                            int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
+
+                            if (setpoint >= 27 && setpoint <= 85)
                             {
-                                SendSetTempHeaterAndTurnItOn(1);
-                                CountOmronUse(1);
-
-                                picProcess1.Image.Dispose();
-                                picProcess1.Image = Resources.LedRedHeating2;
-                                picUpDown1.Image.Dispose();
-                                picUpDown1.Image = Resources.arrowUpRed21;
-
-                                FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
-                                if (customForm.ShowDialog() == DialogResult.OK)
+                                try
                                 {
-                                    ApagarChillerZone(1);
+                                    SendSetTempHeaterAndTurnItOn(1);
+                                    CountOmronUse(1);
 
-                                    Thread.Sleep(50);
-
-                                    EncenderVerde();
-                                }
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                        else if (setpoint >= 21 && setpoint <= 26)
-                        {
-                            try
-                            {
-                                SendSetTempHeaterAndTurnItOn(1);
-                                CountOmronUse(1);
-
-                                FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
-                                if (customForm.ShowDialog() == DialogResult.OK)
-                                {
-                                    EncenderChillerZone(1);
-                                    CountChillerUse(1);
-
-                                    Thread.Sleep(100);
-                                    SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
-
-                                    // Tenemos que dejar a temperatura ambiente
-                                    picUpDown1.Image.Dispose();
-                                    picUpDown1.Image = Resources.neutroWhite;
                                     picProcess1.Image.Dispose();
-                                    picProcess1.Image = Resources.LedWhite1;
-
-                                    EncenderVerde();
-                                }
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            
-                        }
-                        else if (setpoint >= 5 && setpoint <= 20)
-                        {
-                            try
-                            {
-                                SendSetTempHeaterAndTurnItOn(1);
-                                CountOmronUse(1);
-
-                                FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
-                                if (customForm.ShowDialog() == DialogResult.OK)
-                                {
-                                    EncenderChillerZone(1);
-                                    CountChillerUse(1);
-
-                                    Thread.Sleep(100);
-                                    SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
-
+                                    picProcess1.Image = Resources.LedRedHeating2;
                                     picUpDown1.Image.Dispose();
-                                    picUpDown1.Image = Resources.arrowDownBlue2;
-                                    picProcess1.Image.Dispose();
-                                    picProcess1.Image = Resources.LedBlueCooling2;
+                                    picUpDown1.Image = Resources.arrowUpRed21;
 
-                                    EncenderVerde();
+                                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+                                    if (customForm.ShowDialog() == DialogResult.OK)
+                                    {
+                                        ApagarChillerZone(1);
+
+                                        Thread.Sleep(50);
+
+                                        EncenderVerde();
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
-                            catch (Exception ex)
+                            else if (setpoint >= 21 && setpoint <= 26)
                             {
-                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                try
+                                {
+                                    SendSetTempHeaterAndTurnItOn(1);
+                                    CountOmronUse(1);
+
+                                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+                                    if (customForm.ShowDialog() == DialogResult.OK)
+                                    {
+                                        EncenderChillerZone(1);
+                                        CountChillerUse(1);
+
+                                        Thread.Sleep(100);
+                                        SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+
+                                        // Tenemos que dejar a temperatura ambiente
+                                        picUpDown1.Image.Dispose();
+                                        picUpDown1.Image = Resources.neutroWhite;
+                                        picProcess1.Image.Dispose();
+                                        picProcess1.Image = Resources.LedWhite1;
+
+                                        EncenderVerde();
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
                             }
-                            
+                            else if (setpoint >= 5 && setpoint <= 20)
+                            {
+                                try
+                                {
+                                    SendSetTempHeaterAndTurnItOn(1);
+                                    CountOmronUse(1);
+
+                                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+                                    if (customForm.ShowDialog() == DialogResult.OK)
+                                    {
+                                        EncenderChillerZone(1);
+                                        CountChillerUse(1);
+
+                                        Thread.Sleep(100);
+                                        SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+
+                                        picUpDown1.Image.Dispose();
+                                        picUpDown1.Image = Resources.arrowDownBlue2;
+                                        picProcess1.Image.Dispose();
+                                        picProcess1.Image = Resources.LedBlueCooling2;
+
+                                        EncenderVerde();
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
+                            }
+                            Zona1Encendida = true;
+                            if (Zona2Encendida && Zona1Encendida)
+                            {
+                                ThereIsTwoProcessRN = true;
+                            }
+                            else
+                            {
+                                ThereIsTwoProcessRN = false;
+                            }
+
+                            lbStartDate1.Text = DateTime.Now.ToString("MM/dd/yyyy  HH:mm");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please enter a number between 5 and 85", "Number out of range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Please enter a number between 5 and 85", "Number out of range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Please enter a valid number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a valid number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-
-                Zona1Encendida = true;
-                if (Zona2Encendida && Zona1Encendida)
-                {
-                    ThereIsTwoProcessRN = true;
-                }
-                else
-                {
-                    ThereIsTwoProcessRN = false;
+                    MessageBox.Show("SERIAL PORT IS CLOSE.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -1584,127 +1593,136 @@ namespace Apple_24_Zones.Forms
         {
             try
             {
-                string input = txtPutSetpoint2.Text;
-                if (int.TryParse(input, out int number))
+                if (serialPort1.IsOpen)
                 {
-                    // Comprueba si el número está en el rango de 5 a 85
-                    if (number >= 5 && number <= 85)
+                    string input = txtPutSetpoint2.Text;
+                    if (int.TryParse(input, out int number))
                     {
-                        int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
-                        // HEATING
-                        if (setpoint >= 27 && setpoint <= 85)
+                        // Comprueba si el número está en el rango de 5 a 85
+                        if (number >= 5 && number <= 85)
                         {
-                            try
+                            int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
+                            // HEATING
+                            if (setpoint >= 27 && setpoint <= 85)
                             {
-                                SendSetTempHeaterAndTurnItOn(2);
-                                CountOmronUse(2);
-
-                                picProcess2.Image.Dispose();
-                                picProcess2.Image = Resources.LedRedHeating2;
-                                picUpDown2.Image.Dispose();
-                                picUpDown2.Image = Resources.arrowUpRed21;
-
-                                FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
-
-                                if (customForm.ShowDialog() == DialogResult.OK)
+                                try
                                 {
-                                    ApagarChillerZone(2);
+                                    SendSetTempHeaterAndTurnItOn(2);
+                                    CountOmronUse(2);
 
-                                    Thread.Sleep(50);
-
-                                    EncenderVerde();
-                                }
-
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                        // NEUTRAL
-                        else if (setpoint >= 21 && setpoint <= 26)
-                        {
-                            try
-                            {
-                                SendSetTempHeaterAndTurnItOn(2);
-                                CountOmronUse(2);
-
-                                FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
-
-                                if (customForm.ShowDialog() == DialogResult.OK)
-                                {
-                                    EncenderChillerZone(2);
-                                    CountChillerUse(2);
-
-                                    Thread.Sleep(100);
-
-                                    SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
-
-                                    picUpDown2.Image.Dispose();
-                                    picUpDown2.Image = Resources.neutroWhite;
                                     picProcess2.Image.Dispose();
-                                    picProcess2.Image = Resources.LedWhite1;
-
-                                    EncenderVerde();
-                                }
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                        // COOLING
-                        else if (setpoint >= 5 && setpoint <= 20)
-                        {
-                            try
-                            {
-                                SendSetTempHeaterAndTurnItOn(2);
-                                CountOmronUse(2);
-
-                                FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
-
-                                if (customForm.ShowDialog() == DialogResult.OK)
-                                {
-                                    EncenderChillerZone(2);
-                                    CountChillerUse(2);
-
-                                    Thread.Sleep(100);
-
-                                    SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
-
+                                    picProcess2.Image = Resources.LedRedHeating2;
                                     picUpDown2.Image.Dispose();
-                                    picUpDown2.Image = Resources.arrowDownBlue2;
-                                    picProcess2.Image.Dispose();
-                                    picProcess2.Image = Resources.LedBlueCooling2;
+                                    picUpDown2.Image = Resources.arrowUpRed21;
 
-                                    EncenderVerde();
+                                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+
+                                    if (customForm.ShowDialog() == DialogResult.OK)
+                                    {
+                                        ApagarChillerZone(2);
+
+                                        Thread.Sleep(50);
+
+                                        EncenderVerde();
+                                    }
+
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
-                            catch (Exception ex)
+                            // NEUTRAL
+                            else if (setpoint >= 21 && setpoint <= 26)
                             {
-                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                try
+                                {
+                                    SendSetTempHeaterAndTurnItOn(2);
+                                    CountOmronUse(2);
+
+                                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+
+                                    if (customForm.ShowDialog() == DialogResult.OK)
+                                    {
+                                        EncenderChillerZone(2);
+                                        CountChillerUse(2);
+
+                                        Thread.Sleep(100);
+
+                                        SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+
+                                        picUpDown2.Image.Dispose();
+                                        picUpDown2.Image = Resources.neutroWhite;
+                                        picProcess2.Image.Dispose();
+                                        picProcess2.Image = Resources.LedWhite1;
+
+                                        EncenderVerde();
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            // COOLING
+                            else if (setpoint >= 5 && setpoint <= 20)
+                            {
+                                try
+                                {
+                                    SendSetTempHeaterAndTurnItOn(2);
+                                    CountOmronUse(2);
+
+                                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+
+                                    if (customForm.ShowDialog() == DialogResult.OK)
+                                    {
+                                        EncenderChillerZone(2);
+                                        CountChillerUse(2);
+
+                                        Thread.Sleep(100);
+
+                                        SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+
+                                        picUpDown2.Image.Dispose();
+                                        picUpDown2.Image = Resources.arrowDownBlue2;
+                                        picProcess2.Image.Dispose();
+                                        picProcess2.Image = Resources.LedBlueCooling2;
+
+                                        EncenderVerde();
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
                             }
 
+                            Zona2Encendida = true;
+                            if (Zona2Encendida && Zona1Encendida)
+                            {
+                                ThereIsTwoProcessRN = true;
+                            }
+                            else
+                            {
+                                ThereIsTwoProcessRN = false;
+                            }
+
+                            lbStartDate2.Text = DateTime.Now.ToString("MM/dd/yyyy  HH:mm");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please enter a number between 5 and 85", "Number out of range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Please enter a number between 5 and 85", "Number out of range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Please enter a valid number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a valid number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-
-                Zona2Encendida = true;
-                if (Zona2Encendida && Zona1Encendida)
-                {
-                    ThereIsTwoProcessRN = true;
-                }
-                else
-                {
-                    ThereIsTwoProcessRN = false;
+                    MessageBox.Show("SERIAL PORT IS CLOSE.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -3537,8 +3555,15 @@ namespace Apple_24_Zones.Forms
             string input = txtPutSetpoint2.Text;
             if (int.TryParse(input, out int number))
             { 
+                if (number < 85)
+                {
                     number++;
                     txtPutSetpoint2.Text = number.ToString();
+                }
+            }
+            else if (txtPutSetpoint2.Text == "--" || txtPutSetpoint2.Text == "")
+            {
+                txtPutSetpoint2.Text = "5";
             }
         }
 
@@ -3547,8 +3572,15 @@ namespace Apple_24_Zones.Forms
             string input = txtPutSetpoint2.Text;
             if (int.TryParse(input, out int number))
             {
-                number--;
-                txtPutSetpoint2.Text = number.ToString();
+                if (number > 5)
+                {
+                    number--;
+                    txtPutSetpoint2.Text = number.ToString();
+                }
+            }
+            else if (txtPutSetpoint2.Text == "--" || txtPutSetpoint2.Text == "")
+            {
+                txtPutSetpoint2.Text = "5";
             }
         }
 
@@ -3557,8 +3589,15 @@ namespace Apple_24_Zones.Forms
             string input = txtPutSetpoint1.Text;
             if (int.TryParse(input, out int number))
             {
-                number++;
-                txtPutSetpoint1.Text = number.ToString();
+                if (number < 85)
+                {
+                    number++;
+                    txtPutSetpoint1.Text = number.ToString();
+                }
+            }
+            else if (txtPutSetpoint1.Text == "--" || txtPutSetpoint1.Text == "")
+            {
+                txtPutSetpoint1.Text = "5";
             }
         }
 
@@ -3567,8 +3606,15 @@ namespace Apple_24_Zones.Forms
             string input = txtPutSetpoint1.Text;
             if (int.TryParse(input, out int number))
             {
-                number--;
-                txtPutSetpoint1.Text = number.ToString();
+                if (number > 5)
+                {
+                    number--;
+                    txtPutSetpoint1.Text = number.ToString();
+                }
+            }
+            else if (txtPutSetpoint1.Text == "--" || txtPutSetpoint1.Text == "")
+            {
+                txtPutSetpoint1.Text = "5";
             }
         }
 
@@ -3643,6 +3689,7 @@ namespace Apple_24_Zones.Forms
                         ApagarChillerZone(2);
 
                         txtPutSetpoint2.Text = "--";
+                        lbStartDate2.Text = "--/--/--  --:--";
                     }
 
                     PressButtonStop = true;
@@ -3682,6 +3729,7 @@ namespace Apple_24_Zones.Forms
                         ApagarChillerZone(1);
 
                         txtPutSetpoint1.Text = "--";
+                        lbStartDate1.Text = "--/--/--  --:--";
                     }
                     PressButtonStop = true;
                     VengoZona1 = true;
@@ -4368,6 +4416,26 @@ namespace Apple_24_Zones.Forms
         private void iconButton2_Click(object sender, EventArgs e)
         {
             EncenderAmarillo();
+        }
+
+        private void txtPutSetpoint2_Enter(object sender, EventArgs e)
+        {
+            txtPutSetpoint2.BackColor = Color.White;
+        }
+
+        private void txtPutSetpoint2_Leave(object sender, EventArgs e)
+        {
+            txtPutSetpoint2.BackColor = Color.DarkGray;
+        }
+
+        private void txtPutSetpoint1_Enter(object sender, EventArgs e)
+        {
+            txtPutSetpoint1.BackColor = Color.White;
+        }
+
+        private void txtPutSetpoint1_Leave(object sender, EventArgs e)
+        {
+            txtPutSetpoint1.BackColor = Color.DarkGray;
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
