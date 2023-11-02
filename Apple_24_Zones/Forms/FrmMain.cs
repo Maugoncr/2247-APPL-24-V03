@@ -530,6 +530,24 @@ namespace Apple_24_Zones.Forms
             lbTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             lbDate.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(fecha);
 
+            if (serialPort1.IsOpen)
+            {
+                try
+                {
+                    if (ZONA2Apagada && ZONA1Apagada)
+                    {
+                        EncenderRojo();
+                        ZONA1Apagada = false;
+                        ZONA2Apagada = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
             if (RecordZone1 == true)
             {
                 if (firstEntranceZone1)
@@ -1208,6 +1226,7 @@ namespace Apple_24_Zones.Forms
 
                                     EncenderVerde();
                                 }
+                                ZONA1Apagada = false;
                             }
                             catch (Exception ex)
                             {
@@ -1238,6 +1257,7 @@ namespace Apple_24_Zones.Forms
 
                                     EncenderVerde();
                                 }
+                                ZONA1Apagada = false;
                             }
                             catch (Exception ex)
                             {
@@ -1268,6 +1288,7 @@ namespace Apple_24_Zones.Forms
 
                                     EncenderVerde();
                                 }
+                                ZONA1Apagada = false;
                             }
                             catch (Exception ex)
                             {
@@ -1561,6 +1582,8 @@ namespace Apple_24_Zones.Forms
 
                                     EncenderVerde();
                                 }
+
+                                ZONA2Apagada = false;
                             }
                             catch (Exception ex)
                             {
@@ -1593,6 +1616,7 @@ namespace Apple_24_Zones.Forms
 
                                     EncenderVerde();
                                 }
+                                ZONA2Apagada = false;
                             }
                             catch (Exception ex)
                             {
@@ -1625,6 +1649,7 @@ namespace Apple_24_Zones.Forms
 
                                     EncenderVerde();
                                 }
+                                ZONA2Apagada = false;
                             }
                             catch (Exception ex)
                             {
@@ -3556,6 +3581,8 @@ namespace Apple_24_Zones.Forms
             }
         
         }
+
+        bool ZONA2Apagada = false;
         private void btnStop2_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you want to stop operation?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -3578,6 +3605,7 @@ namespace Apple_24_Zones.Forms
                         ApagarChillerZone(2);
 
                         txtPutSetpoint2.Text = "--";
+                        ZONA2Apagada = true;
                     }
                 }
                 catch (Exception ex)
@@ -3592,6 +3620,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        bool ZONA1Apagada = false;
         private void btnStop1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you want to stop operation?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -3614,6 +3643,7 @@ namespace Apple_24_Zones.Forms
                         ApagarChillerZone(1);
 
                         txtPutSetpoint1.Text = "--";
+                        ZONA1Apagada = true;
                     }
                 }
                 catch (Exception ex)
