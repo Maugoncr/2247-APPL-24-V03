@@ -3576,6 +3576,8 @@ namespace Apple_24_Zones.Forms
                     if (customForm.ShowDialog() == DialogResult.OK)
                     {
                         ApagarChillerZone(2);
+
+                        txtPutSetpoint2.Text = "--";
                     }
                 }
                 catch (Exception ex)
@@ -3610,6 +3612,8 @@ namespace Apple_24_Zones.Forms
                     if (customForm.ShowDialog() == DialogResult.OK)
                     {
                         ApagarChillerZone(1);
+
+                        txtPutSetpoint1.Text = "--";
                     }
                 }
                 catch (Exception ex)
