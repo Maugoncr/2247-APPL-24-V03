@@ -4545,6 +4545,11 @@ namespace Apple_24_Zones.Forms
             txtPutSetpoint1.BackColor = Color.DarkGray;
         }
 
+        private void panelGhost_Paint(object sender, PaintEventArgs e)
+        {
+            CreateBorderPanel(sender,e);
+        }
+
         private void iconButton3_Click(object sender, EventArgs e)
         {
             EncenderRojo();

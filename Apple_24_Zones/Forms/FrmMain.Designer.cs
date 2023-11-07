@@ -1527,7 +1527,7 @@ namespace Apple_24_Zones.Forms
             this.bothZonesToolStripMenuItem1.BackColor = System.Drawing.Color.Gray;
             this.bothZonesToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
             this.bothZonesToolStripMenuItem1.Name = "bothZonesToolStripMenuItem1";
-            this.bothZonesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.bothZonesToolStripMenuItem1.Size = new System.Drawing.Size(175, 22);
             this.bothZonesToolStripMenuItem1.Text = "Both Zones";
             this.bothZonesToolStripMenuItem1.Click += new System.EventHandler(this.bothZonesToolStripMenuItem1_Click);
             // 
@@ -1536,7 +1536,7 @@ namespace Apple_24_Zones.Forms
             this.tempZone1ToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.tempZone1ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.tempZone1ToolStripMenuItem.Name = "tempZone1ToolStripMenuItem";
-            this.tempZone1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tempZone1ToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.tempZone1ToolStripMenuItem.Text = "Temp Zone 1";
             this.tempZone1ToolStripMenuItem.Click += new System.EventHandler(this.tempZone1ToolStripMenuItem_Click);
             // 
@@ -1545,7 +1545,7 @@ namespace Apple_24_Zones.Forms
             this.tempZone2ToolStripMenuItem.BackColor = System.Drawing.Color.Gray;
             this.tempZone2ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.tempZone2ToolStripMenuItem.Name = "tempZone2ToolStripMenuItem";
-            this.tempZone2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tempZone2ToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.tempZone2ToolStripMenuItem.Text = "Temp Zone 2";
             this.tempZone2ToolStripMenuItem.Click += new System.EventHandler(this.tempZone2ToolStripMenuItem_Click);
             // 
@@ -3395,6 +3395,7 @@ namespace Apple_24_Zones.Forms
             this.panelGhost.Size = new System.Drawing.Size(1352, 958);
             this.panelGhost.TabIndex = 273;
             this.panelGhost.Visible = false;
+            this.panelGhost.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGhost_Paint);
             // 
             // panel28
             // 
