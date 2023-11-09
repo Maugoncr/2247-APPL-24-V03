@@ -4540,14 +4540,14 @@ namespace Apple_24_Zones.Forms
             txtPutSetpoint1.BackColor = Color.White;
         }
 
-        private void txtPutSetpoint1_Leave(object sender, EventArgs e)
-        {
-            txtPutSetpoint1.BackColor = Color.DarkGray;
-        }
-
         private void panelGhost_Paint(object sender, PaintEventArgs e)
         {
             CreateBorderPanel(sender,e);
+        }
+
+        private void txtPutSetpoint1_Leave_1(object sender, EventArgs e)
+        {
+            txtPutSetpoint1.BackColor = Color.DarkGray;
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
