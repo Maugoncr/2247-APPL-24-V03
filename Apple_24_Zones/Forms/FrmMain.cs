@@ -763,6 +763,7 @@ namespace Apple_24_Zones.Forms
             // Default variables
             rt = 0;
             temp = 0;
+            ResetTAVG();
 
             //Reset Images
 
@@ -1103,62 +1104,74 @@ namespace Apple_24_Zones.Forms
 
         private void checkT1_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone1.Series["T-1"].Enabled = checkT1.Checked ? true : false;
+            //chartZone1.Series["T-1"].Enabled = checkT1.Checked ? true : false;
+            chartZone1.Series["T-1"].Enabled = checkT1.Checked ? (TAVG1 = true) : (TAVG1 = false);
         }
 
         private void checkT2_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone1.Series["T-2"].Enabled = checkT2.Checked ? true : false;
+            //chartZone1.Series["T-2"].Enabled = checkT2.Checked ? true : false;
+            chartZone1.Series["T-2"].Enabled = checkT2.Checked ? (TAVG2 = true) : (TAVG2 = false);
         }
 
         private void checkT3_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone1.Series["T-3"].Enabled = checkT3.Checked ? true : false;
+            //chartZone1.Series["T-3"].Enabled = checkT3.Checked ? true : false;
+            chartZone1.Series["T-3"].Enabled = checkT3.Checked ? (TAVG3 = true) : (TAVG3 = false);
         }
 
         private void checkT4_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone1.Series["T-4"].Enabled = checkT4.Checked ? true : false;
+            //chartZone1.Series["T-4"].Enabled = checkT4.Checked ? true : false;
+            chartZone1.Series["T-4"].Enabled = checkT4.Checked ? (TAVG4 = true) : (TAVG4 = false);
         }
 
         private void checkT5_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone1.Series["T-5"].Enabled = checkT5.Checked ? true : false;
+            //chartZone1.Series["T-5"].Enabled = checkT5.Checked ? true : false;
+            chartZone1.Series["T-5"].Enabled = checkT5.Checked ? (TAVG5 = true) : (TAVG5 = false);
         }
 
         private void checkT6_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone1.Series["T-6"].Enabled = checkT6.Checked ? true : false;
+            //chartZone1.Series["T-6"].Enabled = checkT6.Checked ? true : false;
+            chartZone1.Series["T-6"].Enabled = checkT6.Checked ? (TAVG6 = true) : (TAVG6 = false);
         }
 
         private void checkT7_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone1.Series["T-7"].Enabled = checkT7.Checked ? true : false;
+            //chartZone1.Series["T-7"].Enabled = checkT7.Checked ? true : false;
+            chartZone1.Series["T-7"].Enabled = checkT7.Checked ? (TAVG7 = true) : (TAVG7 = false);
         }
 
         private void checkT8_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone1.Series["T-8"].Enabled = checkT8.Checked ? true : false;
+            //chartZone1.Series["T-8"].Enabled = checkT8.Checked ? true : false;
+            chartZone1.Series["T-8"].Enabled = checkT8.Checked ? (TAVG8 = true) : (TAVG8 = false);
         }
 
         private void checkT9_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone1.Series["T-9"].Enabled = checkT9.Checked ? true : false;
+            //chartZone1.Series["T-9"].Enabled = checkT9.Checked ? true : false;
+            chartZone1.Series["T-9"].Enabled = checkT9.Checked ? (TAVG9 = true) : (TAVG9 = false);
         }
 
         private void checkT10_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone1.Series["T-10"].Enabled = checkT10.Checked ? true : false;
+            //chartZone1.Series["T-10"].Enabled = checkT10.Checked ? true : false;
+            chartZone1.Series["T-10"].Enabled = checkT10.Checked ? (TAVG10 = true) : (TAVG10 = false);
         }
 
         private void checkT11_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone1.Series["T-11"].Enabled = checkT11.Checked ? true : false;
+            //chartZone1.Series["T-11"].Enabled = checkT11.Checked ? true : false;
+            chartZone1.Series["T-11"].Enabled = checkT11.Checked ? (TAVG11 = true) : (TAVG11 = false);
         }
 
         private void checkT12_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone1.Series["T-12"].Enabled = checkT12.Checked ? true : false;
+            //chartZone1.Series["T-12"].Enabled = checkT12.Checked ? true : false;
+            chartZone1.Series["T-12"].Enabled = checkT12.Checked ? (TAVG12 = true) : (TAVG12 = false);
         }
 
 
@@ -4209,10 +4222,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-1"))
                 {
                     chartView.Series["T-1"].Enabled = true;
+                    TAVG1 = true;
                 }
                 else if (ChartSeriesExists(chartView, "T-13"))
                 {
                     chartView.Series["T-13"].Enabled = true;
+                    TAVG13 = true;
                 }
             }
             else
@@ -4220,10 +4235,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-1"))
                 {
                     chartView.Series["T-1"].Enabled = false;
+                    TAVG1 = false;
                 }
                 else if (ChartSeriesExists(chartView, "T-13"))
                 {
                     chartView.Series["T-13"].Enabled = false;
+                    TAVG13 = false;
                 }
             }
            
@@ -4236,10 +4253,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-2"))
                 {
                     chartView.Series["T-2"].Enabled = true;
+                    TAVG2 = true;
                 }
                 else if (ChartSeriesExists(chartView, "T-14"))
                 {
                     chartView.Series["T-14"].Enabled = true;
+                    TAVG14 = true;
                 }
             }
             else
@@ -4247,10 +4266,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-2"))
                 {
                     chartView.Series["T-2"].Enabled = false;
+                    TAVG2 = false;
                 }
                 else if (ChartSeriesExists(chartView, "T-14"))
                 {
                     chartView.Series["T-14"].Enabled = false;
+                    TAVG14 = false;
                 }
             }
         }
@@ -4262,10 +4283,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-3"))
                 {
                     chartView.Series["T-3"].Enabled = true;
+                    TAVG3 = true;
                 }
                 else if (ChartSeriesExists(chartView, "T-15"))
                 {
                     chartView.Series["T-15"].Enabled = true;
+                    TAVG15 = true;
                 }
             }
             else
@@ -4273,10 +4296,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-3"))
                 {
                     chartView.Series["T-3"].Enabled = false;
+                    TAVG3 = false;
                 }
                 else if (ChartSeriesExists(chartView, "T-15"))
                 {
                     chartView.Series["T-15"].Enabled = false;
+                    TAVG15 = false;
                 }
             }
         }
@@ -4288,10 +4313,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-4"))
                 {
                     chartView.Series["T-4"].Enabled = true;
+                    TAVG4 = true;
                 }
                 else if (ChartSeriesExists(chartView, "T-16"))
                 {
                     chartView.Series["T-16"].Enabled = true;
+                    TAVG16 = true;
                 }
             }
             else
@@ -4299,10 +4326,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-4"))
                 {
                     chartView.Series["T-4"].Enabled = false;
+                    TAVG4 = false;
                 }
                 else if (ChartSeriesExists(chartView, "T-16"))
                 {
                     chartView.Series["T-16"].Enabled = false;
+                    TAVG16 = false;
                 }
             }
         }
@@ -4314,10 +4343,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-5"))
                 {
                     chartView.Series["T-5"].Enabled = true;
+                    TAVG5 = true;
                 }
                 else if (ChartSeriesExists(chartView, "T-17"))
                 {
                     chartView.Series["T-17"].Enabled = true;
+                    TAVG17 = true;
                 }
             }
             else
@@ -4325,10 +4356,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-5"))
                 {
                     chartView.Series["T-5"].Enabled = false;
+                    TAVG5 = false;
                 }
                 else if (ChartSeriesExists(chartView, "T-17"))
                 {
                     chartView.Series["T-17"].Enabled = false;
+                    TAVG17 = false;
                 }
             }
         }
@@ -4340,10 +4373,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-6"))
                 {
                     chartView.Series["T-6"].Enabled = true;
+                    TAVG6 = true;
                 }
                 else if (ChartSeriesExists(chartView, "T-18"))
                 {
                     chartView.Series["T-18"].Enabled = true;
+                    TAVG18 = true;
                 }
             }
             else
@@ -4351,10 +4386,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-6"))
                 {
                     chartView.Series["T-6"].Enabled = false;
+                    TAVG6 = false;
                 }
                 else if (ChartSeriesExists(chartView, "T-18"))
                 {
                     chartView.Series["T-18"].Enabled = false;
+                    TAVG18 = false;
                 }
             }
         }
@@ -4366,10 +4403,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-7"))
                 {
                     chartView.Series["T-7"].Enabled = true;
+                    TAVG7 = true;
                 }
                 else if (ChartSeriesExists(chartView, "T-19"))
                 {
                     chartView.Series["T-19"].Enabled = true;
+                    TAVG19 = true;
                 }
             }
             else
@@ -4377,10 +4416,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-7"))
                 {
                     chartView.Series["T-7"].Enabled = false;
+                    TAVG7 = false;
                 }
                 else if (ChartSeriesExists(chartView, "T-19"))
                 {
                     chartView.Series["T-19"].Enabled = false;
+                    TAVG19 = false;
                 }
             }
         }
@@ -4392,10 +4433,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-8"))
                 {
                     chartView.Series["T-8"].Enabled = true;
+                    TAVG8 = true;
                 }
                 else if (ChartSeriesExists(chartView, "T-20"))
                 {
                     chartView.Series["T-20"].Enabled = true;
+                    TAVG20 = true;
                 }
             }
             else
@@ -4403,10 +4446,12 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-8"))
                 {
                     chartView.Series["T-8"].Enabled = false;
+                    TAVG8 = false;
                 }
                 else if (ChartSeriesExists(chartView, "T-20"))
                 {
                     chartView.Series["T-20"].Enabled = false;
+                    TAVG20 = false;
                 }
             }
         }
@@ -4418,6 +4463,7 @@ namespace Apple_24_Zones.Forms
                 if (ChartSeriesExists(chartView, "T-9"))
                 {
                     chartView.Series["T-9"].Enabled = true;
+                    TAVG9 = true;
                 }
                 else if (ChartSeriesExists(chartView, "T-21"))
                 {
@@ -4555,6 +4601,59 @@ namespace Apple_24_Zones.Forms
             EncenderRojo();
         }
 
+        bool TAVG1 = true;
+        bool TAVG2 = true;
+        bool TAVG3 = true;
+        bool TAVG4 = true;
+        bool TAVG5 = true;
+        bool TAVG6 = true;
+        bool TAVG7 = true;
+        bool TAVG8 = true;
+        bool TAVG9 = true;
+        bool TAVG10 = true;
+        bool TAVG11 = true;
+        bool TAVG12 = true;
+        bool TAVG13 = true;
+        bool TAVG14 = true;
+        bool TAVG15 = true;
+        bool TAVG16 = true;
+        bool TAVG17 = true;
+        bool TAVG18 = true;
+        bool TAVG19 = true;
+        bool TAVG20 = true;
+        bool TAVG21 = true;
+        bool TAVG22 = true;
+        bool TAVG23 = true;
+        bool TAVG24 = true;
+
+        private void ResetTAVG() 
+        {
+             TAVG1 = true;
+             TAVG2 = true;
+             TAVG3 = true;
+             TAVG4 = true;
+             TAVG5 = true;
+             TAVG6 = true;
+             TAVG7 = true;
+             TAVG8 = true;
+             TAVG9 = true;
+             TAVG10 = true;
+             TAVG11 = true;
+             TAVG12 = true;
+             TAVG13 = true;
+             TAVG14 = true;
+             TAVG15 = true;
+             TAVG16 = true;
+             TAVG17 = true;
+             TAVG18 = true;
+             TAVG19 = true;
+             TAVG20 = true;
+             TAVG21 = true;
+             TAVG22 = true;
+             TAVG23 = true;
+             TAVG24 = true;
+        }
+
         private void timerGraficarCharts_Tick(object sender, EventArgs e)
         {
             //Si todas las TF con formula ya se encuentran con su respectivo valor 4 segundos despues de conectar!
@@ -4591,21 +4690,57 @@ namespace Apple_24_Zones.Forms
                     chartZone1.Series["T-12"].Points.AddXY(temp1.ToString(), TF12.ToString());
                     txtTC12.Text = TF12;
 
-                    List<double> temperaturas1 = new List<double>
+                    List<double> temperaturas1 = new List<double>();
+
+                    if (TAVG1)
                     {
-                        Convert.ToDouble(TF1),
-                        Convert.ToDouble(TF2),
-                        Convert.ToDouble(TF3),
-                        Convert.ToDouble(TF4),
-                        Convert.ToDouble(TF5),
-                        Convert.ToDouble(TF6),
-                        Convert.ToDouble(TF7),
-                        Convert.ToDouble(TF8),
-                        Convert.ToDouble(TF9),
-                        Convert.ToDouble(TF10),
-                        Convert.ToDouble(TF11),
-                        Convert.ToDouble(TF12)
-                    };
+                        temperaturas1.Add(Convert.ToDouble(TF1));
+                    }
+                    if (TAVG2)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF2));
+                    }
+                    if (TAVG3)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF3));
+                    }
+                    if (TAVG4)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF4));
+                    }
+                    if (TAVG5)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF5));
+                    }
+                    if (TAVG6)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF6));
+                    }
+                    if (TAVG7)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF7));
+                    }
+                    if (TAVG8)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF8));
+                    }
+                    if (TAVG9)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF9));
+                    }
+                    if (TAVG10)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF10));
+                    }
+                    if (TAVG11)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF11));
+                    }
+                    if (TAVG12)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF12));
+                    }
+
 
                     AVGZona1 = temperaturas1.Average();
                     lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
@@ -4651,21 +4786,57 @@ namespace Apple_24_Zones.Forms
                     chartZone2.Series["T-24"].Points.AddXY(temp2.ToString(), TF24.ToString());
                     txtTC24.Text = TF24;
 
-                    List<double> temperaturas2 = new List<double>
+                    List<double> temperaturas2 = new List<double>();
+
+                    if (TAVG13)
                     {
-                        Convert.ToDouble(TF13),
-                        Convert.ToDouble(TF14),
-                        Convert.ToDouble(TF15),
-                        Convert.ToDouble(TF16),
-                        Convert.ToDouble(TF17),
-                        Convert.ToDouble(TF18),
-                        Convert.ToDouble(TF19),
-                        Convert.ToDouble(TF20),
-                        Convert.ToDouble(TF21),
-                        Convert.ToDouble(TF22),
-                        Convert.ToDouble(TF23),
-                        Convert.ToDouble(TF24)
-                    };
+                        temperaturas2.Add(Convert.ToDouble(TF13));
+                    }
+                    if (TAVG14)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF14));
+                    }
+                    if (TAVG15)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF15));
+                    }
+                    if (TAVG16)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF16));
+                    }
+                    if (TAVG17)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF17));
+                    }
+                    if (TAVG18)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF18));
+                    }
+                    if (TAVG19)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF19));
+                    }
+                    if (TAVG20)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF20));
+                    }
+                    if (TAVG21)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF21));
+                    }
+                    if (TAVG22)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF22));
+                    }
+                    if (TAVG23)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF23));
+                    }
+                    if (TAVG24)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF24));
+                    }
+
 
                     AVGZona2 = temperaturas2.Average();
                     lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
@@ -4712,36 +4883,108 @@ namespace Apple_24_Zones.Forms
                     chartView.Series["T-12"].Points.AddXY(tempView.ToString(), TF12.ToString());
                     txtView12.Text = TF12;
 
-                    List<double> temperaturas1 = new List<double>
+
+                    List<double> temperaturas1 = new List<double>();
+
+                    if (TAVG1)
                     {
-                        Convert.ToDouble(TF1),
-                        Convert.ToDouble(TF2),
-                        Convert.ToDouble(TF3),
-                        Convert.ToDouble(TF4),
-                        Convert.ToDouble(TF5),
-                        Convert.ToDouble(TF6),
-                        Convert.ToDouble(TF7),
-                        Convert.ToDouble(TF8),
-                        Convert.ToDouble(TF9),
-                        Convert.ToDouble(TF10),
-                        Convert.ToDouble(TF11),
-                        Convert.ToDouble(TF12)
-                    };
-                    List<double> temperaturas2 = new List<double>
+                        temperaturas1.Add(Convert.ToDouble(TF1));
+                    }
+                    if (TAVG2)
                     {
-                        Convert.ToDouble(TF13),
-                        Convert.ToDouble(TF14),
-                        Convert.ToDouble(TF15),
-                        Convert.ToDouble(TF16),
-                        Convert.ToDouble(TF17),
-                        Convert.ToDouble(TF18),
-                        Convert.ToDouble(TF19),
-                        Convert.ToDouble(TF20),
-                        Convert.ToDouble(TF21),
-                        Convert.ToDouble(TF22),
-                        Convert.ToDouble(TF23),
-                        Convert.ToDouble(TF24)
-                    };
+                        temperaturas1.Add(Convert.ToDouble(TF2));
+                    }
+                    if (TAVG3)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF3));
+                    }
+                    if (TAVG4)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF4));
+                    }
+                    if (TAVG5)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF5));
+                    }
+                    if (TAVG6)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF6));
+                    }
+                    if (TAVG7)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF7));
+                    }
+                    if (TAVG8)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF8));
+                    }
+                    if (TAVG9)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF9));
+                    }
+                    if (TAVG10)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF10));
+                    }
+                    if (TAVG11)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF11));
+                    }
+                    if (TAVG12)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF12));
+                    }
+
+                    List<double> temperaturas2 = new List<double>();
+
+                    if (TAVG13)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF13));
+                    }
+                    if (TAVG14)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF14));
+                    }
+                    if (TAVG15)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF15));
+                    }
+                    if (TAVG16)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF16));
+                    }
+                    if (TAVG17)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF17));
+                    }
+                    if (TAVG18)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF18));
+                    }
+                    if (TAVG19)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF19));
+                    }
+                    if (TAVG20)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF20));
+                    }
+                    if (TAVG21)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF21));
+                    }
+                    if (TAVG22)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF22));
+                    }
+                    if (TAVG23)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF23));
+                    }
+                    if (TAVG24)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF24));
+                    }
 
                     AVGZona1 = temperaturas1.Average();
                     lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
@@ -4791,36 +5034,107 @@ namespace Apple_24_Zones.Forms
                     chartView.Series["T-24"].Points.AddXY(tempView.ToString(), TF24.ToString());
                     txtView12.Text = TF24;
 
-                    List<double> temperaturas1 = new List<double>
+                    List<double> temperaturas1 = new List<double>();
+
+                    if (TAVG1)
                     {
-                        Convert.ToDouble(TF1),
-                        Convert.ToDouble(TF2),
-                        Convert.ToDouble(TF3),
-                        Convert.ToDouble(TF4),
-                        Convert.ToDouble(TF5),
-                        Convert.ToDouble(TF6),
-                        Convert.ToDouble(TF7),
-                        Convert.ToDouble(TF8),
-                        Convert.ToDouble(TF9),
-                        Convert.ToDouble(TF10),
-                        Convert.ToDouble(TF11),
-                        Convert.ToDouble(TF12)
-                    };
-                    List<double> temperaturas2 = new List<double>
+                        temperaturas1.Add(Convert.ToDouble(TF1));
+                    }
+                    if (TAVG2)
                     {
-                        Convert.ToDouble(TF13),
-                        Convert.ToDouble(TF14),
-                        Convert.ToDouble(TF15),
-                        Convert.ToDouble(TF16),
-                        Convert.ToDouble(TF17),
-                        Convert.ToDouble(TF18),
-                        Convert.ToDouble(TF19),
-                        Convert.ToDouble(TF20),
-                        Convert.ToDouble(TF21),
-                        Convert.ToDouble(TF22),
-                        Convert.ToDouble(TF23),
-                        Convert.ToDouble(TF24)
-                    };
+                        temperaturas1.Add(Convert.ToDouble(TF2));
+                    }
+                    if (TAVG3)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF3));
+                    }
+                    if (TAVG4)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF4));
+                    }
+                    if (TAVG5)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF5));
+                    }
+                    if (TAVG6)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF6));
+                    }
+                    if (TAVG7)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF7));
+                    }
+                    if (TAVG8)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF8));
+                    }
+                    if (TAVG9)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF9));
+                    }
+                    if (TAVG10)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF10));
+                    }
+                    if (TAVG11)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF11));
+                    }
+                    if (TAVG12)
+                    {
+                        temperaturas1.Add(Convert.ToDouble(TF12));
+                    }
+
+                    List<double> temperaturas2 = new List<double>();
+
+                    if (TAVG13)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF13));
+                    }
+                    if (TAVG14)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF14));
+                    }
+                    if (TAVG15)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF15));
+                    }
+                    if (TAVG16)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF16));
+                    }
+                    if (TAVG17)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF17));
+                    }
+                    if (TAVG18)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF18));
+                    }
+                    if (TAVG19)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF19));
+                    }
+                    if (TAVG20)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF20));
+                    }
+                    if (TAVG21)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF21));
+                    }
+                    if (TAVG22)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF22));
+                    }
+                    if (TAVG23)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF23));
+                    }
+                    if (TAVG24)
+                    {
+                        temperaturas2.Add(Convert.ToDouble(TF24));
+                    }
 
                     AVGZona1 = temperaturas1.Average();
                     lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
@@ -4844,62 +5158,73 @@ namespace Apple_24_Zones.Forms
 
         private void checkT24_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone2.Series["T-24"].Enabled = checkT24.Checked ? true : false;
+            chartZone2.Series["T-24"].Enabled = checkT24.Checked ? (TAVG24 = true) : (TAVG24 = false);
+            //chartZone2.Series["T-24"].Enabled = checkT24.Checked ? true : false;
         }
 
         private void checkT23_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone2.Series["T-23"].Enabled = checkT23.Checked ? true : false;
+            chartZone2.Series["T-23"].Enabled = checkT23.Checked ? (TAVG23 = true) : (TAVG23 = false);
+            //chartZone2.Series["T-23"].Enabled = checkT23.Checked ? true : false;
         }
 
         private void checkT22_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone2.Series["T-22"].Enabled = checkT22.Checked ? true : false;
+            chartZone2.Series["T-22"].Enabled = checkT22.Checked ? (TAVG22 = true) : (TAVG22 = false);
+            //chartZone2.Series["T-22"].Enabled = checkT22.Checked ? true : false;
         }
 
         private void checkT21_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone2.Series["T-21"].Enabled = checkT21.Checked ? true : false;
+            chartZone2.Series["T-21"].Enabled = checkT21.Checked ? (TAVG21 = true) : (TAVG21 = false);
+            //chartZone2.Series["T-21"].Enabled = checkT21.Checked ? true : false;
         }
 
         private void checkT20_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone2.Series["T-20"].Enabled = checkT20.Checked ? true : false;
+            chartZone2.Series["T-20"].Enabled = checkT20.Checked ? (TAVG20 = true) : (TAVG20 = false);
+            //chartZone2.Series["T-20"].Enabled = checkT20.Checked ? true : false;
         }
 
         private void checkT19_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone2.Series["T-19"].Enabled = checkT19.Checked ? true : false;
+            chartZone2.Series["T-19"].Enabled = checkT19.Checked ? (TAVG19 = true) : (TAVG19 = false);
+            //chartZone2.Series["T-19"].Enabled = checkT19.Checked ? true : false;
         }
 
         private void checkT18_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone2.Series["T-18"].Enabled = checkT18.Checked ? true : false;
+            chartZone2.Series["T-18"].Enabled = checkT18.Checked ? (TAVG18 = true) : (TAVG18 = false);
+            // chartZone2.Series["T-18"].Enabled = checkT18.Checked ? true : false;
         }
 
         private void checkT17_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone2.Series["T-17"].Enabled = checkT17.Checked ? true : false;
+            chartZone2.Series["T-17"].Enabled = checkT17.Checked ? (TAVG17 = true) : (TAVG17 = false);
+            //chartZone2.Series["T-17"].Enabled = checkT17.Checked ? true : false;
         }
 
         private void checkT16_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone2.Series["T-16"].Enabled = checkT16.Checked ? true : false;
+            //chartZone2.Series["T-16"].Enabled = checkT16.Checked ? true : false;
+            chartZone2.Series["T-16"].Enabled = checkT16.Checked ? (TAVG16 = true) : (TAVG16 = false);
         }
 
         private void checkT15_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone2.Series["T-15"].Enabled = checkT15.Checked ? true : false;
+            //chartZone2.Series["T-15"].Enabled = checkT15.Checked ? true : false;
+            chartZone2.Series["T-15"].Enabled = checkT15.Checked ? (TAVG15 = true) : (TAVG15 = false);
         }
 
         private void checkT14_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone2.Series["T-14"].Enabled = checkT14.Checked ? true : false;
+            chartZone2.Series["T-14"].Enabled = checkT14.Checked ? (TAVG14 = true) : (TAVG14 = false);
         }
 
         private void checkT13_CheckedChanged(object sender, EventArgs e)
         {
-            chartZone2.Series["T-13"].Enabled = checkT13.Checked ? true : false;
+           // chartZone2.Series["T-13"].Enabled = checkT13.Checked ? true : false;
+            chartZone2.Series["T-13"].Enabled = checkT13.Checked ? (TAVG13 = true) : (TAVG13 = false);
         }
 
         bool toggleScaleZone2 = true;

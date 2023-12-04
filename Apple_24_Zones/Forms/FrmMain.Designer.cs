@@ -3269,7 +3269,7 @@ namespace Apple_24_Zones.Forms
             // picProcess2
             // 
             this.picProcess2.BackColor = System.Drawing.Color.Transparent;
-            this.picProcess2.Image = global::Apple_24_Zones.Properties.Resources.neutroWhite;
+            this.picProcess2.Image = global::Apple_24_Zones.Properties.Resources.LedWhite1;
             this.picProcess2.Location = new System.Drawing.Point(30, 210);
             this.picProcess2.Name = "picProcess2";
             this.picProcess2.Size = new System.Drawing.Size(135, 45);
@@ -4436,7 +4436,7 @@ namespace Apple_24_Zones.Forms
             this.lbAVGTemp1.Name = "lbAVGTemp1";
             this.lbAVGTemp1.Size = new System.Drawing.Size(351, 94);
             this.lbAVGTemp1.TabIndex = 313;
-            this.lbAVGTemp1.Text = "15.61 °C";
+            this.lbAVGTemp1.Text = "-- °C";
             this.lbAVGTemp1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbAVGTemp1.MouseEnter += new System.EventHandler(this.panelControlZone1_MouseEnter);
             this.lbAVGTemp1.MouseLeave += new System.EventHandler(this.panelControlZone1_MouseLeave);
