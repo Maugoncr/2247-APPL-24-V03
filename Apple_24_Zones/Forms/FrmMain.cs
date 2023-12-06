@@ -4702,7 +4702,7 @@ namespace Apple_24_Zones.Forms
                         }
                     }
 
-                    if (!temperaturas1.Any())
+                    if (temperaturas1.Any())
                     {
                         AVGZona1 = temperaturas1.Average();
                         lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
@@ -4765,7 +4765,7 @@ namespace Apple_24_Zones.Forms
                         }
                     }
 
-                    if (!temperaturas2.Any())
+                    if (temperaturas2.Any())
                     {
                         AVGZona2 = temperaturas2.Average();
                         lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
@@ -4842,7 +4842,7 @@ namespace Apple_24_Zones.Forms
                         }
                     }
 
-                    if (!temperaturas1.Any())
+                    if (temperaturas1.Any())
                     {
                         AVGZona1 = temperaturas1.Average();
                         lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
@@ -4851,7 +4851,7 @@ namespace Apple_24_Zones.Forms
                     {
                         lbAVGTemp1.Text = "-- °C";
                     }
-                    if (!temperaturas2.Any())
+                    if (temperaturas2.Any())
                     {
                         AVGZona2 = temperaturas2.Average();
                         lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
@@ -4928,7 +4928,7 @@ namespace Apple_24_Zones.Forms
                         }
                     }
 
-                    if (!temperaturas1.Any())
+                    if (temperaturas1.Any())
                     {
                         AVGZona1 = temperaturas1.Average();
                         lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
@@ -4937,7 +4937,7 @@ namespace Apple_24_Zones.Forms
                     {
                         lbAVGTemp1.Text = "-- °C";
                     }
-                    if (!temperaturas2.Any())
+                    if (temperaturas2.Any())
                     {
                         AVGZona2 = temperaturas2.Average();
                         lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
