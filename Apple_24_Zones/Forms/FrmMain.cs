@@ -4691,59 +4691,26 @@ namespace Apple_24_Zones.Forms
                     txtTC12.Text = TF12;
 
                     List<double> temperaturas1 = new List<double>();
+                    string[] temperaturasF1 = { TF1, TF2, TF3, TF4, TF5, TF6, TF7, TF8, TF9, TF10, TF11, TF12 };
+                    bool[] temperaturasAVG1 = { TAVG1, TAVG2, TAVG3, TAVG4, TAVG5, TAVG6, TAVG7, TAVG8, TAVG9, TAVG10, TAVG11, TAVG12 };
 
-                    if (TAVG1)
+                    for (int i = 0; i < temperaturasF1.Length; i++)
                     {
-                        temperaturas1.Add(Convert.ToDouble(TF1));
-                    }
-                    if (TAVG2)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF2));
-                    }
-                    if (TAVG3)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF3));
-                    }
-                    if (TAVG4)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF4));
-                    }
-                    if (TAVG5)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF5));
-                    }
-                    if (TAVG6)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF6));
-                    }
-                    if (TAVG7)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF7));
-                    }
-                    if (TAVG8)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF8));
-                    }
-                    if (TAVG9)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF9));
-                    }
-                    if (TAVG10)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF10));
-                    }
-                    if (TAVG11)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF11));
-                    }
-                    if (TAVG12)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF12));
+                        if (temperaturasAVG1[i])
+                        {
+                            temperaturas1.Add(Convert.ToDouble(temperaturasF1[i]));
+                        }
                     }
 
-
-                    AVGZona1 = temperaturas1.Average();
-                    lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
+                    if (!temperaturas1.Any())
+                    {
+                        AVGZona1 = temperaturas1.Average();
+                        lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
+                    }
+                    else
+                    {
+                        lbAVGTemp1.Text = "-- °C";
+                    }
 
                     chartZone1.ChartAreas[0].RecalculateAxesScale();
 
@@ -4787,59 +4754,26 @@ namespace Apple_24_Zones.Forms
                     txtTC24.Text = TF24;
 
                     List<double> temperaturas2 = new List<double>();
+                    string[] temperaturasF = { TF13, TF14, TF15, TF16, TF17, TF18, TF19, TF20, TF21, TF22, TF23, TF24 };
+                    bool[] temperaturasAVG = { TAVG13, TAVG14, TAVG15, TAVG16, TAVG17, TAVG18, TAVG19, TAVG20, TAVG21, TAVG22, TAVG23, TAVG24 };
 
-                    if (TAVG13)
+                    for (int i = 0; i < temperaturasF.Length; i++)
                     {
-                        temperaturas2.Add(Convert.ToDouble(TF13));
-                    }
-                    if (TAVG14)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF14));
-                    }
-                    if (TAVG15)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF15));
-                    }
-                    if (TAVG16)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF16));
-                    }
-                    if (TAVG17)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF17));
-                    }
-                    if (TAVG18)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF18));
-                    }
-                    if (TAVG19)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF19));
-                    }
-                    if (TAVG20)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF20));
-                    }
-                    if (TAVG21)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF21));
-                    }
-                    if (TAVG22)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF22));
-                    }
-                    if (TAVG23)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF23));
-                    }
-                    if (TAVG24)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF24));
+                        if (temperaturasAVG[i])
+                        {
+                            temperaturas2.Add(Convert.ToDouble(temperaturasF[i]));
+                        }
                     }
 
-
-                    AVGZona2 = temperaturas2.Average();
-                    lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
+                    if (!temperaturas2.Any())
+                    {
+                        AVGZona2 = temperaturas2.Average();
+                        lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
+                    }
+                    else
+                    {
+                        lbAVGTemp2.Text = "-- °C";
+                    }
 
                     chartZone2.ChartAreas[0].RecalculateAxesScale();
 
@@ -4885,111 +4819,47 @@ namespace Apple_24_Zones.Forms
 
 
                     List<double> temperaturas1 = new List<double>();
+                    string[] temperaturasF1 = { TF1, TF2, TF3, TF4, TF5, TF6, TF7, TF8, TF9, TF10, TF11, TF12 };
+                    bool[] temperaturasAVG1 = { TAVG1, TAVG2, TAVG3, TAVG4, TAVG5, TAVG6, TAVG7, TAVG8, TAVG9, TAVG10, TAVG11, TAVG12 };
 
-                    if (TAVG1)
+                    for (int i = 0; i < temperaturasF1.Length; i++)
                     {
-                        temperaturas1.Add(Convert.ToDouble(TF1));
-                    }
-                    if (TAVG2)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF2));
-                    }
-                    if (TAVG3)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF3));
-                    }
-                    if (TAVG4)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF4));
-                    }
-                    if (TAVG5)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF5));
-                    }
-                    if (TAVG6)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF6));
-                    }
-                    if (TAVG7)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF7));
-                    }
-                    if (TAVG8)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF8));
-                    }
-                    if (TAVG9)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF9));
-                    }
-                    if (TAVG10)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF10));
-                    }
-                    if (TAVG11)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF11));
-                    }
-                    if (TAVG12)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF12));
+                        if (temperaturasAVG1[i])
+                        {
+                            temperaturas1.Add(Convert.ToDouble(temperaturasF1[i]));
+                        }
                     }
 
                     List<double> temperaturas2 = new List<double>();
+                    string[] temperaturasF = { TF13, TF14, TF15, TF16, TF17, TF18, TF19, TF20, TF21, TF22, TF23, TF24 };
+                    bool[] temperaturasAVG = { TAVG13, TAVG14, TAVG15, TAVG16, TAVG17, TAVG18, TAVG19, TAVG20, TAVG21, TAVG22, TAVG23, TAVG24 };
 
-                    if (TAVG13)
+                    for (int i = 0; i < temperaturasF.Length; i++)
                     {
-                        temperaturas2.Add(Convert.ToDouble(TF13));
-                    }
-                    if (TAVG14)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF14));
-                    }
-                    if (TAVG15)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF15));
-                    }
-                    if (TAVG16)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF16));
-                    }
-                    if (TAVG17)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF17));
-                    }
-                    if (TAVG18)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF18));
-                    }
-                    if (TAVG19)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF19));
-                    }
-                    if (TAVG20)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF20));
-                    }
-                    if (TAVG21)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF21));
-                    }
-                    if (TAVG22)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF22));
-                    }
-                    if (TAVG23)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF23));
-                    }
-                    if (TAVG24)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF24));
+                        if (temperaturasAVG[i])
+                        {
+                            temperaturas2.Add(Convert.ToDouble(temperaturasF[i]));
+                        }
                     }
 
-                    AVGZona1 = temperaturas1.Average();
-                    lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
-                    AVGZona2 = temperaturas2.Average();
-                    lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
+                    if (!temperaturas1.Any())
+                    {
+                        AVGZona1 = temperaturas1.Average();
+                        lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
+                    }
+                    else
+                    {
+                        lbAVGTemp1.Text = "-- °C";
+                    }
+                    if (!temperaturas2.Any())
+                    {
+                        AVGZona2 = temperaturas2.Average();
+                        lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
+                    }
+                    else
+                    {
+                        lbAVGTemp2.Text = "-- °C";
+                    }
 
                     chartView.ChartAreas[0].RecalculateAxesScale();
 
@@ -5035,111 +4905,47 @@ namespace Apple_24_Zones.Forms
                     txtView12.Text = TF24;
 
                     List<double> temperaturas1 = new List<double>();
+                    string[] temperaturasF1 = { TF1, TF2, TF3, TF4, TF5, TF6, TF7, TF8, TF9, TF10, TF11, TF12 };
+                    bool[] temperaturasAVG1 = { TAVG1, TAVG2, TAVG3, TAVG4, TAVG5, TAVG6, TAVG7, TAVG8, TAVG9, TAVG10, TAVG11, TAVG12 };
 
-                    if (TAVG1)
+                    for (int i = 0; i < temperaturasF1.Length; i++)
                     {
-                        temperaturas1.Add(Convert.ToDouble(TF1));
-                    }
-                    if (TAVG2)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF2));
-                    }
-                    if (TAVG3)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF3));
-                    }
-                    if (TAVG4)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF4));
-                    }
-                    if (TAVG5)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF5));
-                    }
-                    if (TAVG6)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF6));
-                    }
-                    if (TAVG7)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF7));
-                    }
-                    if (TAVG8)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF8));
-                    }
-                    if (TAVG9)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF9));
-                    }
-                    if (TAVG10)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF10));
-                    }
-                    if (TAVG11)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF11));
-                    }
-                    if (TAVG12)
-                    {
-                        temperaturas1.Add(Convert.ToDouble(TF12));
+                        if (temperaturasAVG1[i])
+                        {
+                            temperaturas1.Add(Convert.ToDouble(temperaturasF1[i]));
+                        }
                     }
 
                     List<double> temperaturas2 = new List<double>();
+                    string[] temperaturasF = { TF13, TF14, TF15, TF16, TF17, TF18, TF19, TF20, TF21, TF22, TF23, TF24 };
+                    bool[] temperaturasAVG = { TAVG13, TAVG14, TAVG15, TAVG16, TAVG17, TAVG18, TAVG19, TAVG20, TAVG21, TAVG22, TAVG23, TAVG24 };
 
-                    if (TAVG13)
+                    for (int i = 0; i < temperaturasF.Length; i++)
                     {
-                        temperaturas2.Add(Convert.ToDouble(TF13));
-                    }
-                    if (TAVG14)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF14));
-                    }
-                    if (TAVG15)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF15));
-                    }
-                    if (TAVG16)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF16));
-                    }
-                    if (TAVG17)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF17));
-                    }
-                    if (TAVG18)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF18));
-                    }
-                    if (TAVG19)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF19));
-                    }
-                    if (TAVG20)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF20));
-                    }
-                    if (TAVG21)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF21));
-                    }
-                    if (TAVG22)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF22));
-                    }
-                    if (TAVG23)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF23));
-                    }
-                    if (TAVG24)
-                    {
-                        temperaturas2.Add(Convert.ToDouble(TF24));
+                        if (temperaturasAVG[i])
+                        {
+                            temperaturas2.Add(Convert.ToDouble(temperaturasF[i]));
+                        }
                     }
 
-                    AVGZona1 = temperaturas1.Average();
-                    lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
-                    AVGZona2 = temperaturas2.Average();
-                    lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
+                    if (!temperaturas1.Any())
+                    {
+                        AVGZona1 = temperaturas1.Average();
+                        lbAVGTemp1.Text = AVGZona1.ToString("00.00") + " °C";
+                    }
+                    else
+                    {
+                        lbAVGTemp1.Text = "-- °C";
+                    }
+                    if (!temperaturas2.Any())
+                    {
+                        AVGZona2 = temperaturas2.Average();
+                        lbAVGTemp2.Text = AVGZona2.ToString("00.00") + " °C";
+                    }
+                    else
+                    {
+                        lbAVGTemp2.Text = "-- °C";
+                    }
 
                     chartView.ChartAreas[0].RecalculateAxesScale();
 
