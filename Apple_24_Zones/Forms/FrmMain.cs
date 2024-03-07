@@ -4116,7 +4116,7 @@ namespace Apple_24_Zones.Forms
                 streamWriterZone1.Close();
                 using (SaveFileDialog saveFileDialog = new SaveFileDialog())
                 {
-                    saveFileDialog.Filter = "Archivos de texto|*.txt";
+                    saveFileDialog.Filter = "Text Files|*.txt";
                     saveFileDialog.FileName = "ELEN II SOFTWARE RECORD ZONE 1 STARTED " + inicioRecordZone1 + " ENDED " + DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss");
 
                     // Establece la ruta por defecto en la carpeta "ELEN II SOFTWARE" dentro de "Documentos"
@@ -4169,7 +4169,7 @@ namespace Apple_24_Zones.Forms
                 streamWriterZone2.Close();
                 using (SaveFileDialog saveFileDialog = new SaveFileDialog())
                 {
-                    saveFileDialog.Filter = "Archivos de texto|*.txt";
+                    saveFileDialog.Filter = "Text Files|*.txt";
                     saveFileDialog.FileName = "ELEN II SOFTWARE RECORD ZONE 2 STARTED " + inicioRecordZone2 + " ENDED " + DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss");
 
                     // Establece la ruta por defecto en la carpeta "ELEN II SOFTWARE" dentro de "Documentos"

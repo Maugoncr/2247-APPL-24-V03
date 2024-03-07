@@ -84,6 +84,8 @@ C:\Users\Latitude\Source\Repos\2247-APPL-24\Apple_24_Zones\obj\Debug\Apple_24_Zo
 C:\Users\Latitude\Source\Repos\2247-APPL-24\Apple_24_Zones\obj\Debug\Apple_24_Zones.exe
 C:\Users\Latitude\Source\Repos\2247-APPL-24\Apple_24_Zones\obj\Debug\Apple_24_Zones.pdb
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\Apple_24_Zones.exe.config
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\Apple_24_Zones.exe.manifest
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\Apple_24_Zones.application
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\Apple_24_Zones.exe
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\Apple_24_Zones.pdb
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
@@ -105,8 +107,8 @@ C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\CrystalDecis
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\stdole.dll
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.AssemblyReference.cache
-C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.SuggestedBindingRedirects.cache
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmInformation.resources
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmMessageAlertChiller.resources
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\AppleSoftware.Forms.FrmModbus.resources
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmFilterCSVFile.resources
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmMain.resources
@@ -115,12 +117,9 @@ C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\MidoriValveT
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Properties.Resources.resources
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.GenerateResource.cache
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.CoreCompileInputs.cache
-C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.CopyComplete
-C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.exe
-C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.pdb
-C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\Apple_24_Zones.exe.manifest
-C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\bin\Debug\Apple_24_Zones.application
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.TrustInfo.xml
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.exe.manifest
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.application
-C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmMessageAlertChiller.resources
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.exe
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.pdb
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24.4717FA0A.Up2Date
