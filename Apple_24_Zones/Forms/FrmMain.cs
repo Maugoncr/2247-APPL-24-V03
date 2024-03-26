@@ -4715,12 +4715,48 @@ namespace Apple_24_Zones.Forms
              TAVG24 = true;
         }
 
+        
+
+        private void AlterarOffSets() {
+
+            double AT1 = Convert.ToDouble(TF1);
+            double AT2 = Convert.ToDouble(TF2);
+            double AT3 = Convert.ToDouble(TF3);
+            double AT4 = Convert.ToDouble(TF4);
+            double AT5 = Convert.ToDouble(TF5);
+            double AT6 = Convert.ToDouble(TF6);
+            double AT7 = Convert.ToDouble(TF7);
+            double AT8 = Convert.ToDouble(TF8);
+            double AT9 = Convert.ToDouble(TF9);
+            double AT10 = Convert.ToDouble(TF10);
+            double AT11 = Convert.ToDouble(TF11);
+            double AT12 = Convert.ToDouble(TF12);
+            double AT13 = Convert.ToDouble(TF13);
+            double AT14 = Convert.ToDouble(TF14);
+            double AT15 = Convert.ToDouble(TF15);
+            double AT16 = Convert.ToDouble(TF16);
+            double AT17 = Convert.ToDouble(TF17);
+            double AT18 = Convert.ToDouble(TF18);
+            double AT19 = Convert.ToDouble(TF19);
+            double AT20 = Convert.ToDouble(TF20);
+            double AT21 = Convert.ToDouble(TF21);
+            double AT22 = Convert.ToDouble(TF22);
+            double AT23 = Convert.ToDouble(TF23);
+            double AT24 = Convert.ToDouble(TF24);
+
+
+
+
+        }
+
         private void timerGraficarCharts_Tick(object sender, EventArgs e)
         {
             //Si todas las TF con formula ya se encuentran con su respectivo valor 4 segundos despues de conectar!
             if (TF1 != null && TF7 != null && TF13 != null && TF19 != null && TF24 != null)
             {
                 //TODO 
+
+                AlterarOffSets();
 
                 if (viewChart == "Both")
                 {
