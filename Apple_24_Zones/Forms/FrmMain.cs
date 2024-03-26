@@ -4626,6 +4626,67 @@ namespace Apple_24_Zones.Forms
         bool TAVG23 = true;
         bool TAVG24 = true;
 
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (btnRecordZone2.IconChar == FontAwesome.Sharp.IconChar.ToggleOn)
+            {
+                // Se desactiva la flag, para que se deje de escribir dentro del StreamWriter que se ejecuta en el Timer.
+                RecordZone2 = false;
+                streamWriterZone2.Close();
+                
+                // Se define el nombre y ruta del archivo con el distintivo [AUTO-RECOVERY]
+                string recoveryFileName = "[AUTO-RECOVERY] ELEN II SOFTWARE RECORD ZONE 2 STARTED " + inicioRecordZone2 + " ENDED " + DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss")+".txt";
+                string recoveryFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "ELEN II SOFTWARE");
+
+                // Creamos el subfolder si este no existe
+                Directory.CreateDirectory(recoveryFilePath);
+
+                // Creamos una variable con nuestra ruta absoluta
+                string completeSafeFileName = Path.Combine(recoveryFilePath, recoveryFileName);
+
+                // Si el archivo ya existe, lo eliminamos
+                if (File.Exists(completeSafeFileName))
+                {
+                    File.Delete(completeSafeFileName);
+                }
+                
+                // Tomamos los datos del archivo temporal donde hemos venido almacenando la información y lo copiamos en la ruta absoluta
+                File.Move(tempFileName2, completeSafeFileName);
+
+                // Eliminamos el archivo temporal
+                File.Delete(tempFileName2);
+            }
+             
+            if (btnRecordZone1.IconChar == FontAwesome.Sharp.IconChar.ToggleOn)
+            {
+                // Se desactiva la flag, para que se deje de escribir dentro del StreamWriter que se ejecuta en el Timer.
+                RecordZone1 = false;
+                streamWriterZone1.Close();
+                
+                // Se define el nombre y ruta del archivo con el distintivo [AUTO-RECOVERY]
+                string recoveryFileName = "[AUTO-RECOVERY] ELEN II SOFTWARE RECORD ZONE 1 STARTED " + inicioRecordZone1 + " ENDED " + DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss")+".txt";
+                string recoveryFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "ELEN II SOFTWARE");
+
+                // Creamos el subfolder si este no existe
+                Directory.CreateDirectory(recoveryFilePath);
+
+                //Creamos una variable con nuestra ruta absoluta
+                string completeSafeFileName = Path.Combine(recoveryFilePath, recoveryFileName);
+                
+                //Si el archivo ya existe, lo eliminamos
+                if (File.Exists(completeSafeFileName))
+                {
+                    File.Delete(completeSafeFileName);
+                }
+                
+                //Tomamos los datos del archivo temporal donde hemos venido almacenando la información y lo copiamos en la ruta absoluta
+                File.Move(tempFileName1, completeSafeFileName);
+                
+                //Eliminamos el archivo temporal
+                File.Delete(tempFileName1);
+            }
+        }
+
         private void ResetTAVG() 
         {
              TAVG1 = true;
@@ -4659,6 +4720,8 @@ namespace Apple_24_Zones.Forms
             //Si todas las TF con formula ya se encuentran con su respectivo valor 4 segundos despues de conectar!
             if (TF1 != null && TF7 != null && TF13 != null && TF19 != null && TF24 != null)
             {
+                //TODO 
+
                 if (viewChart == "Both")
                 {
                     // ZONA 1 
