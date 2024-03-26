@@ -4715,7 +4715,7 @@ namespace Apple_24_Zones.Forms
              TAVG24 = true;
         }
 
-        
+
 
         private void AlterarOffSets() {
 
@@ -4744,8 +4744,138 @@ namespace Apple_24_Zones.Forms
             double AT23 = Convert.ToDouble(TF23);
             double AT24 = Convert.ToDouble(TF24);
 
+            Dictionary<Tuple<double, double>, double> rangosYValoresARestar = new Dictionary<Tuple<double, double>, double>()
+            {
+                { Tuple.Create(0.0, 5.0), Settings.Default.Offset0_5 },
+                { Tuple.Create(5.0, 10.0), Settings.Default.Offset5_10 },
+                { Tuple.Create(10.0, 15.0), Settings.Default.Offset10_15 },
+                { Tuple.Create(15.0, 20.0), Settings.Default.Offset15_20 },
+                { Tuple.Create(20.0, 25.0), Settings.Default.Offset20_25 },
+                { Tuple.Create(25.0, 30.0),Settings.Default.Offset25_30 },
+                { Tuple.Create(30.0, 35.0), Settings.Default.Offset30_35 },
+                { Tuple.Create(35.0, 40.0), Settings.Default.Offset35_40 },
+                { Tuple.Create(40.0, 45.0), Settings.Default.Offset40_45 },
+                { Tuple.Create(45.0, 50.0), Settings.Default.Offset45_50 },
+                { Tuple.Create(50.0, 55.0), Settings.Default.Offset50_55 },
+                { Tuple.Create(55.0, 60.0), Settings.Default.Offset55_60 },
+                { Tuple.Create(60.0, 65.0), Settings.Default.Offset60_65 },
+                { Tuple.Create(65.0, 70.0), Settings.Default.Offset65_70 },
+                { Tuple.Create(70.0, 75.0), Settings.Default.Offset70_75 },
+                { Tuple.Create(75.0, 80.0), Settings.Default.Offset75_80 },
+                { Tuple.Create(80.0, 85.0), Settings.Default.Offset80_85 },
+                { Tuple.Create(85.0, 90.0), Settings.Default.Offset85_90 },
+                { Tuple.Create(90.0, 95.0), Settings.Default.Offset90_95 },
+                { Tuple.Create(95.0, 100.0), Settings.Default.Offset95_100 },
+                { Tuple.Create(100.0, 105.0), Settings.Default.Offset100_105},
+                { Tuple.Create(105.0, 110.0), Settings.Default.Offset105_110 },
+                { Tuple.Create(110.0, 115.0), Settings.Default.Offset110_115 },
+                { Tuple.Create(115.0, 120.0), Settings.Default.Offset115_120},
+                { Tuple.Create(120.0, 125.0), Settings.Default.Offset120_125 },
+                { Tuple.Create(125.0, 130.0), Settings.Default.Offset125_130},
+                { Tuple.Create(130.0, 135.0), Settings.Default.Offset130_135},
+                { Tuple.Create(135.0, 140.0), Settings.Default.Offset135_140},
+            };
 
+            foreach (var kvp in rangosYValoresARestar)
+            {
+                double valorARestar = kvp.Value;
+                if (AT1 >= kvp.Key.Item1 && AT1 <= kvp.Key.Item2)
+                    AT1 -= valorARestar;
 
+                if (AT2 >= kvp.Key.Item1 && AT2 <= kvp.Key.Item2)
+                    AT2 -= valorARestar;
+
+                if (AT3 >= kvp.Key.Item1 && AT3 <= kvp.Key.Item2)
+                    AT3 -= valorARestar;
+
+                if (AT4 >= kvp.Key.Item1 && AT4 <= kvp.Key.Item2)
+                    AT4 -= valorARestar;
+
+                if (AT5 >= kvp.Key.Item1 && AT5 <= kvp.Key.Item2)
+                    AT5 -= valorARestar;
+
+                if (AT6 >= kvp.Key.Item1 && AT6 <= kvp.Key.Item2)
+                    AT6 -= valorARestar;
+
+                if (AT7 >= kvp.Key.Item1 && AT7 <= kvp.Key.Item2)
+                    AT7 -= valorARestar;
+
+                if (AT8 >= kvp.Key.Item1 && AT8 <= kvp.Key.Item2)
+                    AT8 -= valorARestar;
+
+                if (AT9 >= kvp.Key.Item1 && AT9 <= kvp.Key.Item2)
+                    AT9 -= valorARestar;
+
+                if (AT10 >= kvp.Key.Item1 && AT10 <= kvp.Key.Item2)
+                    AT10 -= valorARestar;
+
+                if (AT11 >= kvp.Key.Item1 && AT11 <= kvp.Key.Item2)
+                    AT11 -= valorARestar;
+
+                if (AT12 >= kvp.Key.Item1 && AT12 <= kvp.Key.Item2)
+                    AT12 -= valorARestar;
+
+                if (AT13 >= kvp.Key.Item1 && AT13 <= kvp.Key.Item2)
+                    AT13 -= valorARestar;
+
+                if (AT14 >= kvp.Key.Item1 && AT14 <= kvp.Key.Item2)
+                    AT14 -= valorARestar;
+
+                if (AT15 >= kvp.Key.Item1 && AT15 <= kvp.Key.Item2)
+                    AT15 -= valorARestar;
+
+                if (AT16 >= kvp.Key.Item1 && AT16 <= kvp.Key.Item2)
+                    AT16 -= valorARestar;
+
+                if (AT17 >= kvp.Key.Item1 && AT17 <= kvp.Key.Item2)
+                    AT17 -= valorARestar;
+
+                if (AT18 >= kvp.Key.Item1 && AT18 <= kvp.Key.Item2)
+                    AT18 -= valorARestar;
+
+                if (AT19 >= kvp.Key.Item1 && AT19 <= kvp.Key.Item2)
+                    AT19 -= valorARestar;
+
+                if (AT20 >= kvp.Key.Item1 && AT20 <= kvp.Key.Item2)
+                    AT20 -= valorARestar;
+
+                if (AT21 >= kvp.Key.Item1 && AT21 <= kvp.Key.Item2)
+                    AT21 -= valorARestar;
+
+                if (AT22 >= kvp.Key.Item1 && AT22 <= kvp.Key.Item2)
+                    AT22 -= valorARestar;
+
+                if (AT23 >= kvp.Key.Item1 && AT23 <= kvp.Key.Item2)
+                    AT23 -= valorARestar;
+
+                if (AT24 >= kvp.Key.Item1 && AT24 <= kvp.Key.Item2)
+                    AT24 -= valorARestar;
+            }
+
+            TF1 = AT1.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF2 = AT2.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF3 = AT3.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF4 = AT4.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF5 = AT5.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF6 = AT6.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF7 = AT7.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF8 = AT8.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF9 = AT9.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF10 = AT10.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF11 = AT11.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF12 = AT12.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF13 = AT13.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF14 = AT14.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF15 = AT15.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF16 = AT16.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF17 = AT17.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF18 = AT18.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF19 = AT19.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF20 = AT20.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF21 = AT21.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF22 = AT22.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF23 = AT23.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TF24 = AT24.ToString(System.Globalization.CultureInfo.InvariantCulture);
 
         }
 
@@ -4754,7 +4884,6 @@ namespace Apple_24_Zones.Forms
             //Si todas las TF con formula ya se encuentran con su respectivo valor 4 segundos despues de conectar!
             if (TF1 != null && TF7 != null && TF13 != null && TF19 != null && TF24 != null)
             {
-                //TODO 
 
                 AlterarOffSets();
 
