@@ -1424,7 +1424,7 @@ namespace Apple_24_Zones.Forms
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(150, 16);
             this.label79.TabIndex = 289;
-            this.label79.Text = "SOFTWARE  V.02.02";
+            this.label79.Text = "SOFTWARE  V.02.03";
             this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // IconMinima

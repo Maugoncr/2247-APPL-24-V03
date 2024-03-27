@@ -207,6 +207,7 @@
             this.label60 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.btnLock = new FontAwesome.Sharp.IconButton();
+            this.txtTimesLogCreated = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pSecurity.SuspendLayout();
             this.SuspendLayout();
@@ -2421,7 +2422,7 @@
             this.pSecurity.Controls.Add(this.label59);
             this.pSecurity.Location = new System.Drawing.Point(25, 34);
             this.pSecurity.Name = "pSecurity";
-            this.pSecurity.Size = new System.Drawing.Size(664, 773);
+            this.pSecurity.Size = new System.Drawing.Size(679, 776);
             this.pSecurity.TabIndex = 321;
             // 
             // label60
@@ -2462,6 +2463,14 @@
             this.btnLock.UseVisualStyleBackColor = false;
             this.btnLock.Visible = false;
             this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
+            // 
+            // txtTimesLogCreated
+            // 
+            this.txtTimesLogCreated.Location = new System.Drawing.Point(649, 796);
+            this.txtTimesLogCreated.Name = "txtTimesLogCreated";
+            this.txtTimesLogCreated.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtTimesLogCreated.Size = new System.Drawing.Size(54, 14);
+            this.txtTimesLogCreated.TabIndex = 322;
             // 
             // FrmOffsets
             // 
@@ -2643,6 +2652,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtTimesLogCreated);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "FrmOffsets";
@@ -2838,5 +2848,6 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
         private FontAwesome.Sharp.IconButton btnLock;
+        private System.Windows.Forms.Label txtTimesLogCreated;
     }
 }

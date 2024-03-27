@@ -4768,6 +4768,8 @@ namespace Apple_24_Zones.Forms
             double AT23 = Convert.ToDouble(TF23);
             double AT24 = Convert.ToDouble(TF24);
 
+            // OFFSETS ZONA 1
+
             Dictionary<Tuple<double, double>, double> rangosYValoresARestar = new Dictionary<Tuple<double, double>, double>()
             {
                 { Tuple.Create(0.0, 5.0), Settings.Default.Offset0_5 },
@@ -4799,6 +4801,42 @@ namespace Apple_24_Zones.Forms
                 { Tuple.Create(130.0, 135.0), Settings.Default.Offset130_135},
                 { Tuple.Create(135.0, 140.0), Settings.Default.Offset135_140},
             };
+
+            // OFFSETS ZONA 2
+
+            Dictionary<Tuple<double, double>, double> rangosYValoresARestar2 = new Dictionary<Tuple<double, double>, double>()
+            {
+                { Tuple.Create(0.0, 5.0), Settings.Default.Off2set0_5 },
+                { Tuple.Create(5.0, 10.0), Settings.Default.Off2set5_10 },
+                { Tuple.Create(10.0, 15.0), Settings.Default.Off2set10_15 },
+                { Tuple.Create(15.0, 20.0), Settings.Default.Off2set15_20 },
+                { Tuple.Create(20.0, 25.0), Settings.Default.Off2set20_25 },
+                { Tuple.Create(25.0, 30.0),Settings.Default.Off2set25_30 },
+                { Tuple.Create(30.0, 35.0), Settings.Default.Off2set30_35 },
+                { Tuple.Create(35.0, 40.0), Settings.Default.Off2set35_40 },
+                { Tuple.Create(40.0, 45.0), Settings.Default.Off2set40_45 },
+                { Tuple.Create(45.0, 50.0), Settings.Default.Off2set45_50 },
+                { Tuple.Create(50.0, 55.0), Settings.Default.Off2set50_55 },
+                { Tuple.Create(55.0, 60.0), Settings.Default.Off2set55_60 },
+                { Tuple.Create(60.0, 65.0), Settings.Default.Off2set60_65 },
+                { Tuple.Create(65.0, 70.0), Settings.Default.Off2set65_70 },
+                { Tuple.Create(70.0, 75.0), Settings.Default.Off2set70_75 },
+                { Tuple.Create(75.0, 80.0), Settings.Default.Off2set75_80 },
+                { Tuple.Create(80.0, 85.0), Settings.Default.Off2set80_85 },
+                { Tuple.Create(85.0, 90.0), Settings.Default.Off2set85_90 },
+                { Tuple.Create(90.0, 95.0), Settings.Default.Off2set90_95 },
+                { Tuple.Create(95.0, 100.0), Settings.Default.Off2set95_100 },
+                { Tuple.Create(100.0, 105.0), Settings.Default.Off2set100_105},
+                { Tuple.Create(105.0, 110.0), Settings.Default.Off2set105_110 },
+                { Tuple.Create(110.0, 115.0), Settings.Default.Off2set110_115 },
+                { Tuple.Create(115.0, 120.0), Settings.Default.Off2set115_120},
+                { Tuple.Create(120.0, 125.0), Settings.Default.Off2set120_125 },
+                { Tuple.Create(125.0, 130.0), Settings.Default.Off2set125_130},
+                { Tuple.Create(130.0, 135.0), Settings.Default.Off2set130_135},
+                { Tuple.Create(135.0, 140.0), Settings.Default.Off2set135_140},
+            };
+
+            // ITERACION Y ALTERACION TEMPS ZONA 1 CON DICCIONARIO DE OFFSETS ZONA 1
 
             foreach (var kvp in rangosYValoresARestar)
             {
@@ -4838,7 +4876,13 @@ namespace Apple_24_Zones.Forms
 
                 if (AT12 >= kvp.Key.Item1 && AT12 <= kvp.Key.Item2)
                     AT12 -= valorARestar;
+            }
 
+            // ITERACION Y ALTERACION TEMPS ZONA 2 CON DICCIONARIO DE OFFSETS ZONA 2
+
+            foreach (var kvp in rangosYValoresARestar2)
+            {
+                double valorARestar = kvp.Value;
                 if (AT13 >= kvp.Key.Item1 && AT13 <= kvp.Key.Item2)
                     AT13 -= valorARestar;
 

@@ -1,6 +1,6 @@
 ﻿using Apple_24_Zones.Properties;
 using System;
-
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -84,6 +84,8 @@ namespace Apple_24_Zones.Forms
             txt_26.Text = Settings.Default.Off2set125_130.ToString();
             txt_27.Text = Settings.Default.Off2set130_135.ToString();
             txt_28.Text = Settings.Default.Off2set135_140.ToString();
+
+         
         }
 
         private void IconClose_Click(object sender, EventArgs e)
@@ -849,9 +851,37 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+       
+
         private void btnLock_Click(object sender, EventArgs e)
         {
             pSecurity.Visible = false;
+            txtTimesLogCreated.Text = Settings.Default.LogCreateTimes.ToString();
+
+            string logFilePath = Path.Combine(Application.StartupPath, "log.txt");
+            string logEntry = $"{DateTime.Now.ToString("MM/dd/yyyy HH:mm")}: Restricted form entry\r\n";
+
+            try
+            {
+                // Verificar si el archivo existe
+                if (!File.Exists(logFilePath))
+                {
+                    // Si no existe, crear el archivo y guardar la información
+                    Settings.Default.LogCreateTimes++;
+                    Settings.Default.Save();
+                    File.WriteAllText(logFilePath, logEntry);
+                }
+                else
+                {
+                    // Si ya existe, agregar la información al archivo
+                    File.AppendAllText(logFilePath, logEntry);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

@@ -754,5 +754,17 @@ namespace Apple_24_Zones.Properties {
                 this["Off2set135_140"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int LogCreateTimes {
+            get {
+                return ((int)(this["LogCreateTimes"]));
+            }
+            set {
+                this["LogCreateTimes"] = value;
+            }
+        }
     }
 }
