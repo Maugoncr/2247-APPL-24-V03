@@ -30,6 +30,9 @@ namespace Apple_24_Zones.Forms
 
         public FrmMain()
         {
+            // Permite leer la tecla anterior
+            this.KeyPreview = true;
+
             InitializeComponent();
             Control.CheckForIllegalCrossThreadCalls = false;
             InicializarComboboxes();
@@ -4715,22 +4718,28 @@ namespace Apple_24_Zones.Forms
              TAVG24 = true;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+      
+
+        private void FrmMain_KeyDown(object sender, KeyEventArgs e)
         {
-            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmOffsets);
-
-            if (frm == null)
+            if (e.Alt && e.KeyCode == Keys.L && e.Modifiers == Keys.Alt)
             {
-                FrmOffsets nt = new FrmOffsets();
+                Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmOffsets);
 
-                nt.ShowDialog();
-            }
-            else
-            {
-                frm.BringToFront();
-                return;
+                if (frm == null)
+                {
+                    FrmOffsets nt = new FrmOffsets();
+
+                    nt.ShowDialog();
+                }
+                else
+                {
+                    frm.BringToFront();
+                    return;
+                }
             }
         }
+
 
         private void AlterarOffSets() {
 

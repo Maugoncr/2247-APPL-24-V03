@@ -203,7 +203,12 @@
             this.txt_13 = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
+            this.pSecurity = new System.Windows.Forms.Panel();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.btnLock = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
+            this.pSecurity.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -215,6 +220,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(715, 27);
             this.panel1.TabIndex = 36;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // IconClose
             // 
@@ -1049,6 +1055,7 @@
             this.btn15.Text = "Save";
             this.btn15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn15.UseVisualStyleBackColor = false;
+            this.btn15.Click += new System.EventHandler(this.btn15_Click);
             // 
             // btn16
             // 
@@ -1069,6 +1076,7 @@
             this.btn16.Text = "Save";
             this.btn16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn16.UseVisualStyleBackColor = false;
+            this.btn16.Click += new System.EventHandler(this.btn16_Click);
             // 
             // btn17
             // 
@@ -1089,6 +1097,7 @@
             this.btn17.Text = "Save";
             this.btn17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn17.UseVisualStyleBackColor = false;
+            this.btn17.Click += new System.EventHandler(this.btn17_Click);
             // 
             // btn18
             // 
@@ -1109,6 +1118,7 @@
             this.btn18.Text = "Save";
             this.btn18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn18.UseVisualStyleBackColor = false;
+            this.btn18.Click += new System.EventHandler(this.btn18_Click);
             // 
             // btn19
             // 
@@ -1129,6 +1139,7 @@
             this.btn19.Text = "Save";
             this.btn19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn19.UseVisualStyleBackColor = false;
+            this.btn19.Click += new System.EventHandler(this.btn19_Click);
             // 
             // btn20
             // 
@@ -1149,6 +1160,7 @@
             this.btn20.Text = "Save";
             this.btn20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn20.UseVisualStyleBackColor = false;
+            this.btn20.Click += new System.EventHandler(this.btn20_Click);
             // 
             // btn21
             // 
@@ -1169,6 +1181,7 @@
             this.btn21.Text = "Save";
             this.btn21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn21.UseVisualStyleBackColor = false;
+            this.btn21.Click += new System.EventHandler(this.btn21_Click);
             // 
             // btn22
             // 
@@ -1189,6 +1202,7 @@
             this.btn22.Text = "Save";
             this.btn22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn22.UseVisualStyleBackColor = false;
+            this.btn22.Click += new System.EventHandler(this.btn22_Click);
             // 
             // btn23
             // 
@@ -1209,6 +1223,7 @@
             this.btn23.Text = "Save";
             this.btn23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn23.UseVisualStyleBackColor = false;
+            this.btn23.Click += new System.EventHandler(this.btn23_Click);
             // 
             // btn24
             // 
@@ -1229,6 +1244,7 @@
             this.btn24.Text = "Save";
             this.btn24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn24.UseVisualStyleBackColor = false;
+            this.btn24.Click += new System.EventHandler(this.btn24_Click);
             // 
             // btn25
             // 
@@ -1249,6 +1265,7 @@
             this.btn25.Text = "Save";
             this.btn25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn25.UseVisualStyleBackColor = false;
+            this.btn25.Click += new System.EventHandler(this.btn25_Click);
             // 
             // btn26
             // 
@@ -1269,6 +1286,7 @@
             this.btn26.Text = "Save";
             this.btn26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn26.UseVisualStyleBackColor = false;
+            this.btn26.Click += new System.EventHandler(this.btn26_Click);
             // 
             // btn27
             // 
@@ -1289,6 +1307,7 @@
             this.btn27.Text = "Save";
             this.btn27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn27.UseVisualStyleBackColor = false;
+            this.btn27.Click += new System.EventHandler(this.btn27_Click);
             // 
             // btn28
             // 
@@ -1309,6 +1328,7 @@
             this.btn28.Text = "Save";
             this.btn28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn28.UseVisualStyleBackColor = false;
+            this.btn28.Click += new System.EventHandler(this.btn28_Click);
             // 
             // btn_28
             // 
@@ -1329,6 +1349,7 @@
             this.btn_28.Text = "Save";
             this.btn_28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_28.UseVisualStyleBackColor = false;
+            this.btn_28.Click += new System.EventHandler(this.btn_28_Click);
             // 
             // btn_27
             // 
@@ -1349,6 +1370,7 @@
             this.btn_27.Text = "Save";
             this.btn_27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_27.UseVisualStyleBackColor = false;
+            this.btn_27.Click += new System.EventHandler(this.btn_27_Click);
             // 
             // btn_26
             // 
@@ -1369,6 +1391,7 @@
             this.btn_26.Text = "Save";
             this.btn_26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_26.UseVisualStyleBackColor = false;
+            this.btn_26.Click += new System.EventHandler(this.btn_26_Click);
             // 
             // btn_25
             // 
@@ -1389,6 +1412,7 @@
             this.btn_25.Text = "Save";
             this.btn_25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_25.UseVisualStyleBackColor = false;
+            this.btn_25.Click += new System.EventHandler(this.btn_25_Click);
             // 
             // btn_24
             // 
@@ -1409,6 +1433,7 @@
             this.btn_24.Text = "Save";
             this.btn_24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_24.UseVisualStyleBackColor = false;
+            this.btn_24.Click += new System.EventHandler(this.btn_24_Click);
             // 
             // btn_23
             // 
@@ -1429,6 +1454,7 @@
             this.btn_23.Text = "Save";
             this.btn_23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_23.UseVisualStyleBackColor = false;
+            this.btn_23.Click += new System.EventHandler(this.btn_23_Click);
             // 
             // btn_22
             // 
@@ -1449,6 +1475,7 @@
             this.btn_22.Text = "Save";
             this.btn_22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_22.UseVisualStyleBackColor = false;
+            this.btn_22.Click += new System.EventHandler(this.btn_22_Click);
             // 
             // btn_21
             // 
@@ -1469,6 +1496,7 @@
             this.btn_21.Text = "Save";
             this.btn_21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_21.UseVisualStyleBackColor = false;
+            this.btn_21.Click += new System.EventHandler(this.btn_21_Click);
             // 
             // btn_20
             // 
@@ -1489,6 +1517,7 @@
             this.btn_20.Text = "Save";
             this.btn_20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_20.UseVisualStyleBackColor = false;
+            this.btn_20.Click += new System.EventHandler(this.btn_20_Click);
             // 
             // btn_19
             // 
@@ -1509,6 +1538,7 @@
             this.btn_19.Text = "Save";
             this.btn_19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_19.UseVisualStyleBackColor = false;
+            this.btn_19.Click += new System.EventHandler(this.btn_19_Click);
             // 
             // btn_18
             // 
@@ -1529,6 +1559,7 @@
             this.btn_18.Text = "Save";
             this.btn_18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_18.UseVisualStyleBackColor = false;
+            this.btn_18.Click += new System.EventHandler(this.btn_18_Click);
             // 
             // btn_17
             // 
@@ -1549,6 +1580,7 @@
             this.btn_17.Text = "Save";
             this.btn_17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_17.UseVisualStyleBackColor = false;
+            this.btn_17.Click += new System.EventHandler(this.btn_17_Click);
             // 
             // btn_16
             // 
@@ -1569,6 +1601,7 @@
             this.btn_16.Text = "Save";
             this.btn_16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_16.UseVisualStyleBackColor = false;
+            this.btn_16.Click += new System.EventHandler(this.btn_16_Click);
             // 
             // btn_15
             // 
@@ -1589,6 +1622,7 @@
             this.btn_15.Text = "Save";
             this.btn_15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_15.UseVisualStyleBackColor = false;
+            this.btn_15.Click += new System.EventHandler(this.btn_15_Click);
             // 
             // btn_14
             // 
@@ -1609,6 +1643,7 @@
             this.btn_14.Text = "Save";
             this.btn_14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_14.UseVisualStyleBackColor = false;
+            this.btn_14.Click += new System.EventHandler(this.btn_14_Click);
             // 
             // btn_13
             // 
@@ -1629,6 +1664,7 @@
             this.btn_13.Text = "Save";
             this.btn_13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_13.UseVisualStyleBackColor = false;
+            this.btn_13.Click += new System.EventHandler(this.btn_13_Click);
             // 
             // btn_12
             // 
@@ -1649,6 +1685,7 @@
             this.btn_12.Text = "Save";
             this.btn_12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_12.UseVisualStyleBackColor = false;
+            this.btn_12.Click += new System.EventHandler(this.btn_12_Click);
             // 
             // btn_11
             // 
@@ -1669,6 +1706,7 @@
             this.btn_11.Text = "Save";
             this.btn_11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_11.UseVisualStyleBackColor = false;
+            this.btn_11.Click += new System.EventHandler(this.btn_11_Click);
             // 
             // btn_10
             // 
@@ -1689,6 +1727,7 @@
             this.btn_10.Text = "Save";
             this.btn_10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_10.UseVisualStyleBackColor = false;
+            this.btn_10.Click += new System.EventHandler(this.btn_10_Click);
             // 
             // btn_9
             // 
@@ -1709,6 +1748,7 @@
             this.btn_9.Text = "Save";
             this.btn_9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_9.UseVisualStyleBackColor = false;
+            this.btn_9.Click += new System.EventHandler(this.btn_9_Click);
             // 
             // btn_8
             // 
@@ -1729,6 +1769,7 @@
             this.btn_8.Text = "Save";
             this.btn_8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_8.UseVisualStyleBackColor = false;
+            this.btn_8.Click += new System.EventHandler(this.btn_8_Click);
             // 
             // btn_7
             // 
@@ -1749,6 +1790,7 @@
             this.btn_7.Text = "Save";
             this.btn_7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_7.UseVisualStyleBackColor = false;
+            this.btn_7.Click += new System.EventHandler(this.btn_7_Click);
             // 
             // btn_6
             // 
@@ -1769,6 +1811,7 @@
             this.btn_6.Text = "Save";
             this.btn_6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_6.UseVisualStyleBackColor = false;
+            this.btn_6.Click += new System.EventHandler(this.btn_6_Click);
             // 
             // btn_5
             // 
@@ -1789,6 +1832,7 @@
             this.btn_5.Text = "Save";
             this.btn_5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_5.UseVisualStyleBackColor = false;
+            this.btn_5.Click += new System.EventHandler(this.btn_5_Click);
             // 
             // btn_4
             // 
@@ -1809,6 +1853,7 @@
             this.btn_4.Text = "Save";
             this.btn_4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_4.UseVisualStyleBackColor = false;
+            this.btn_4.Click += new System.EventHandler(this.btn_4_Click);
             // 
             // btn_3
             // 
@@ -1829,6 +1874,7 @@
             this.btn_3.Text = "Save";
             this.btn_3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_3.UseVisualStyleBackColor = false;
+            this.btn_3.Click += new System.EventHandler(this.btn_3_Click);
             // 
             // btn_2
             // 
@@ -1849,6 +1895,7 @@
             this.btn_2.Text = "Save";
             this.btn_2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_2.UseVisualStyleBackColor = false;
+            this.btn_2.Click += new System.EventHandler(this.btn_2_Click);
             // 
             // btn_1
             // 
@@ -1869,6 +1916,7 @@
             this.btn_1.Text = "Save";
             this.btn_1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_1.UseVisualStyleBackColor = false;
+            this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
             // 
             // txt_26
             // 
@@ -2366,11 +2414,61 @@
             this.label58.TabIndex = 320;
             this.label58.Text = "OFFSETS ZONE 1";
             // 
+            // pSecurity
+            // 
+            this.pSecurity.Controls.Add(this.btnLock);
+            this.pSecurity.Controls.Add(this.label60);
+            this.pSecurity.Controls.Add(this.label59);
+            this.pSecurity.Location = new System.Drawing.Point(25, 34);
+            this.pSecurity.Name = "pSecurity";
+            this.pSecurity.Size = new System.Drawing.Size(664, 773);
+            this.pSecurity.TabIndex = 321;
+            // 
+            // label60
+            // 
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label60.Location = new System.Drawing.Point(3, 307);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(658, 50);
+            this.label60.TabIndex = 2;
+            this.label60.Text = "Sorry, this page is only available for developers and administrators. If you beli" +
+    "eve you should have access, please contact the administrative team";
+            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label59
+            // 
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(74, 233);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(485, 69);
+            this.label59.TabIndex = 0;
+            this.label59.Text = "Restricted Access Form";
+            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnLock
+            // 
+            this.btnLock.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLock.FlatAppearance.BorderSize = 0;
+            this.btnLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLock.IconChar = FontAwesome.Sharp.IconChar.Lock;
+            this.btnLock.IconColor = System.Drawing.Color.White;
+            this.btnLock.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnLock.IconSize = 40;
+            this.btnLock.Location = new System.Drawing.Point(280, 374);
+            this.btnLock.Name = "btnLock";
+            this.btnLock.Size = new System.Drawing.Size(60, 49);
+            this.btnLock.TabIndex = 3;
+            this.btnLock.UseVisualStyleBackColor = false;
+            this.btnLock.Visible = false;
+            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
+            // 
             // FrmOffsets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 819);
+            this.Controls.Add(this.pSecurity);
             this.Controls.Add(this.label58);
             this.Controls.Add(this.label57);
             this.Controls.Add(this.btn_28);
@@ -2546,11 +2644,14 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FrmOffsets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmOffsets";
             this.Load += new System.EventHandler(this.FrmOffsets_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FrmOffsets_KeyPress);
             this.panel1.ResumeLayout(false);
+            this.pSecurity.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2733,5 +2834,9 @@
         private System.Windows.Forms.TextBox txt_13;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Panel pSecurity;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
+        private FontAwesome.Sharp.IconButton btnLock;
     }
 }
