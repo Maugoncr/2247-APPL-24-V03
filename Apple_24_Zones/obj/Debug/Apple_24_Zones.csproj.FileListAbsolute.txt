@@ -123,3 +123,4 @@ C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zon
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.exe
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.pdb
 C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24.4717FA0A.Up2Date
+C:\Users\maugo\source\repos\Apple_24_Zones\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmOffsets.resources

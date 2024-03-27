@@ -4715,7 +4715,22 @@ namespace Apple_24_Zones.Forms
              TAVG24 = true;
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmOffsets);
 
+            if (frm == null)
+            {
+                FrmOffsets nt = new FrmOffsets();
+
+                nt.ShowDialog();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
+        }
 
         private void AlterarOffSets() {
 
