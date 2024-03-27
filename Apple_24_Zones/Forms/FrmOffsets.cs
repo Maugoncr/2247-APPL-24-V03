@@ -858,7 +858,15 @@ namespace Apple_24_Zones.Forms
             pSecurity.Visible = false;
             txtTimesLogCreated.Text = Settings.Default.LogCreateTimes.ToString();
 
-            string logFilePath = Path.Combine(Application.StartupPath, "log.txt");
+            // Obtener la ruta de la carpeta AppData del usuario actual
+            string appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            // Construir la ruta completa para el archivo de registro
+            string PathFolder = Path.Combine(appDataFolder, "ELEN II");
+
+            Directory.CreateDirectory(PathFolder);
+
+            string logFilePath = Path.Combine(PathFolder, "log.txt");
+
             string logEntry = $"{DateTime.Now.ToString("MM/dd/yyyy HH:mm")}: Restricted form entry\r\n";
 
             try
