@@ -4841,7 +4841,7 @@ namespace Apple_24_Zones.Forms
             foreach (var kvp in rangosYValoresARestar)
             {
                 double valorARestar = kvp.Value;
-                if (AT1 >= kvp.Key.Item1 && AT1 <= kvp.Key.Item2)
+                /*if (AT1 >= kvp.Key.Item1 && AT1 <= kvp.Key.Item2)
                     AT1 -= valorARestar;
 
                 if (AT2 >= kvp.Key.Item1 && AT2 <= kvp.Key.Item2)
@@ -4854,12 +4854,23 @@ namespace Apple_24_Zones.Forms
                     AT4 -= valorARestar;
 
                 if (AT5 >= kvp.Key.Item1 && AT5 <= kvp.Key.Item2)
-                    AT5 -= valorARestar;
+                    AT5 -= valorARestar;*/
 
                 if (AT6 >= kvp.Key.Item1 && AT6 <= kvp.Key.Item2)
+                    AT1 -= valorARestar;
+                    AT2 -= valorARestar;
+                    AT3 -= valorARestar;
+                    AT4 -= valorARestar;
+                    AT5 -= valorARestar;
                     AT6 -= valorARestar;
+                    AT7 -= valorARestar;
+                    AT8 -= valorARestar;
+                    AT9 -= valorARestar;
+                    AT10 -= valorARestar;
+                    AT11 -= valorARestar;
+                    AT12 -= valorARestar;
 
-                if (AT7 >= kvp.Key.Item1 && AT7 <= kvp.Key.Item2)
+               /* if (AT7 >= kvp.Key.Item1 && AT7 <= kvp.Key.Item2)
                     AT7 -= valorARestar;
 
                 if (AT8 >= kvp.Key.Item1 && AT8 <= kvp.Key.Item2)
@@ -4875,7 +4886,7 @@ namespace Apple_24_Zones.Forms
                     AT11 -= valorARestar;
 
                 if (AT12 >= kvp.Key.Item1 && AT12 <= kvp.Key.Item2)
-                    AT12 -= valorARestar;
+                    AT12 -= valorARestar; */
             }
 
             // ITERACION Y ALTERACION TEMPS ZONA 2 CON DICCIONARIO DE OFFSETS ZONA 2
@@ -4883,7 +4894,7 @@ namespace Apple_24_Zones.Forms
             foreach (var kvp in rangosYValoresARestar2)
             {
                 double valorARestar = kvp.Value;
-                if (AT13 >= kvp.Key.Item1 && AT13 <= kvp.Key.Item2)
+                /*if (AT13 >= kvp.Key.Item1 && AT13 <= kvp.Key.Item2)
                     AT13 -= valorARestar;
 
                 if (AT14 >= kvp.Key.Item1 && AT14 <= kvp.Key.Item2)
@@ -4896,12 +4907,23 @@ namespace Apple_24_Zones.Forms
                     AT16 -= valorARestar;
 
                 if (AT17 >= kvp.Key.Item1 && AT17 <= kvp.Key.Item2)
-                    AT17 -= valorARestar;
+                    AT17 -= valorARestar;*/
 
                 if (AT18 >= kvp.Key.Item1 && AT18 <= kvp.Key.Item2)
+                    AT13 -= valorARestar;
+                    AT14 -= valorARestar;
+                    AT15 -= valorARestar;
+                    AT16 -= valorARestar;
+                    AT17 -= valorARestar;
                     AT18 -= valorARestar;
+                    AT19 -= valorARestar;
+                    AT20 -= valorARestar;
+                    AT21 -= valorARestar;
+                    AT22 -= valorARestar;
+                    AT23 -= valorARestar;
+                    AT24 -= valorARestar;
 
-                if (AT19 >= kvp.Key.Item1 && AT19 <= kvp.Key.Item2)
+                /*if (AT19 >= kvp.Key.Item1 && AT19 <= kvp.Key.Item2)
                     AT19 -= valorARestar;
 
                 if (AT20 >= kvp.Key.Item1 && AT20 <= kvp.Key.Item2)
@@ -4917,7 +4939,7 @@ namespace Apple_24_Zones.Forms
                     AT23 -= valorARestar;
 
                 if (AT24 >= kvp.Key.Item1 && AT24 <= kvp.Key.Item2)
-                    AT24 -= valorARestar;
+                    AT24 -= valorARestar;*/
             }
 
             TF1 = AT1.ToString(System.Globalization.CultureInfo.InvariantCulture);
