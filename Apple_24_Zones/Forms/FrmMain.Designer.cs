@@ -1422,9 +1422,9 @@ namespace Apple_24_Zones.Forms
             this.label79.ForeColor = System.Drawing.Color.White;
             this.label79.Location = new System.Drawing.Point(227, 16);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(150, 16);
+            this.label79.Size = new System.Drawing.Size(170, 16);
             this.label79.TabIndex = 289;
-            this.label79.Text = "SOFTWARE  V.02.04";
+            this.label79.Text = "SOFTWARE  V.02.04.01";
             this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // IconMinima

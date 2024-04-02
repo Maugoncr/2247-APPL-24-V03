@@ -4856,7 +4856,8 @@ namespace Apple_24_Zones.Forms
                 if (AT5 >= kvp.Key.Item1 && AT5 <= kvp.Key.Item2)
                     AT5 -= valorARestar;*/
 
-                if (AT6 >= kvp.Key.Item1 && AT6 <= kvp.Key.Item2)
+                if (AT6 >= kvp.Key.Item1 && AT6 < kvp.Key.Item2)
+                {
                     AT1 -= valorARestar;
                     AT2 -= valorARestar;
                     AT3 -= valorARestar;
@@ -4869,24 +4870,28 @@ namespace Apple_24_Zones.Forms
                     AT10 -= valorARestar;
                     AT11 -= valorARestar;
                     AT12 -= valorARestar;
+                    // Debo detener el loop apenas encuentre el rango de T6, ya que si permito que el
+                    // loop continue entraré en otros rangos nuevamente y crearé una falla.
+                    break;
+                }
 
-               /* if (AT7 >= kvp.Key.Item1 && AT7 <= kvp.Key.Item2)
-                    AT7 -= valorARestar;
+                /* if (AT7 >= kvp.Key.Item1 && AT7 <= kvp.Key.Item2)
+                     AT7 -= valorARestar;
 
-                if (AT8 >= kvp.Key.Item1 && AT8 <= kvp.Key.Item2)
-                    AT8 -= valorARestar;
+                 if (AT8 >= kvp.Key.Item1 && AT8 <= kvp.Key.Item2)
+                     AT8 -= valorARestar;
 
-                if (AT9 >= kvp.Key.Item1 && AT9 <= kvp.Key.Item2)
-                    AT9 -= valorARestar;
+                 if (AT9 >= kvp.Key.Item1 && AT9 <= kvp.Key.Item2)
+                     AT9 -= valorARestar;
 
-                if (AT10 >= kvp.Key.Item1 && AT10 <= kvp.Key.Item2)
-                    AT10 -= valorARestar;
+                 if (AT10 >= kvp.Key.Item1 && AT10 <= kvp.Key.Item2)
+                     AT10 -= valorARestar;
 
-                if (AT11 >= kvp.Key.Item1 && AT11 <= kvp.Key.Item2)
-                    AT11 -= valorARestar;
+                 if (AT11 >= kvp.Key.Item1 && AT11 <= kvp.Key.Item2)
+                     AT11 -= valorARestar;
 
-                if (AT12 >= kvp.Key.Item1 && AT12 <= kvp.Key.Item2)
-                    AT12 -= valorARestar; */
+                 if (AT12 >= kvp.Key.Item1 && AT12 <= kvp.Key.Item2)
+                     AT12 -= valorARestar; */
             }
 
             // ITERACION Y ALTERACION TEMPS ZONA 2 CON DICCIONARIO DE OFFSETS ZONA 2
@@ -4909,7 +4914,7 @@ namespace Apple_24_Zones.Forms
                 if (AT17 >= kvp.Key.Item1 && AT17 <= kvp.Key.Item2)
                     AT17 -= valorARestar;*/
 
-                if (AT18 >= kvp.Key.Item1 && AT18 <= kvp.Key.Item2)
+                if (AT18 >= kvp.Key.Item1 && AT18 < kvp.Key.Item2) { 
                     AT13 -= valorARestar;
                     AT14 -= valorARestar;
                     AT15 -= valorARestar;
@@ -4922,6 +4927,8 @@ namespace Apple_24_Zones.Forms
                     AT22 -= valorARestar;
                     AT23 -= valorARestar;
                     AT24 -= valorARestar;
+                    break;
+                }
 
                 /*if (AT19 >= kvp.Key.Item1 && AT19 <= kvp.Key.Item2)
                     AT19 -= valorARestar;
