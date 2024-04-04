@@ -4856,7 +4856,7 @@ namespace Apple_24_Zones.Forms
                 if (AT5 >= kvp.Key.Item1 && AT5 <= kvp.Key.Item2)
                     AT5 -= valorARestar;*/
 
-                if (AT6 >= kvp.Key.Item1 && AT6 < kvp.Key.Item2)
+                if (AT7 >= kvp.Key.Item1 && AT7 < kvp.Key.Item2)
                 {
                     AT1 -= valorARestar;
                     AT2 -= valorARestar;
@@ -4914,7 +4914,7 @@ namespace Apple_24_Zones.Forms
                 if (AT17 >= kvp.Key.Item1 && AT17 <= kvp.Key.Item2)
                     AT17 -= valorARestar;*/
 
-                if (AT18 >= kvp.Key.Item1 && AT18 < kvp.Key.Item2) { 
+                if (AT19 >= kvp.Key.Item1 && AT19 < kvp.Key.Item2) { 
                     AT13 -= valorARestar;
                     AT14 -= valorARestar;
                     AT15 -= valorARestar;
