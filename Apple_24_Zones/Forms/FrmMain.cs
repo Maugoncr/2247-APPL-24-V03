@@ -4045,6 +4045,8 @@ namespace Apple_24_Zones.Forms
         // Variables de cada temperatura ya en formato string sin signo °C
         private string TF1, TF2, TF3, TF4, TF5, TF6, TF7, TF8, TF9, TF10, TF11, TF12, TF13, TF14, TF15, TF16, TF17, TF18, TF19, TF20, TF21, TF22, TF23, TF24;
 
+        private string TFO1, TFO2, TFO3, TFO4, TFO5, TFO6, TFO7, TFO8, TFO9, TFO10, TFO11, TFO12, TFO13, TFO14, TFO15, TFO16, TFO17, TFO18, TFO19, TFO20, TFO21, TFO22, TFO23, TFO24;
+
         bool toggleScaleZoneSingle = true;
         private void btnScaleToggleZoneViewSingle_Click(object sender, EventArgs e)
         {
@@ -4949,30 +4951,30 @@ namespace Apple_24_Zones.Forms
                     AT24 -= valorARestar;*/
             }
 
-            TF1 = AT1.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF2 = AT2.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF3 = AT3.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF4 = AT4.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF5 = AT5.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF6 = AT6.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF7 = AT7.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF8 = AT8.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF9 = AT9.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF10 = AT10.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF11 = AT11.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF12 = AT12.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF13 = AT13.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF14 = AT14.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF15 = AT15.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF16 = AT16.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF17 = AT17.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF18 = AT18.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF19 = AT19.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF20 = AT20.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF21 = AT21.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF22 = AT22.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF23 = AT23.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            TF24 = AT24.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO1 = AT1.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO2 = AT2.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO3 = AT3.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO4 = AT4.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO5 = AT5.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO6 = AT6.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO7 = AT7.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO8 = AT8.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO9 = AT9.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO10 = AT10.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO11 = AT11.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO12 = AT12.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO13 = AT13.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO14 = AT14.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO15 = AT15.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO16 = AT16.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO17 = AT17.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO18 = AT18.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO19 = AT19.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO20 = AT20.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO21 = AT21.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO22 = AT22.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO23 = AT23.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            TFO24 = AT24.ToString(System.Globalization.CultureInfo.InvariantCulture);
 
         }
 
@@ -4995,33 +4997,33 @@ namespace Apple_24_Zones.Forms
                     rt1 = rt1 + 100;
                     temp1 = rt1 / 1000;
 
-                    chartZone1.Series["T-1"].Points.AddXY(temp1.ToString(), TF1.ToString());
-                    txtTC1.Text = TF1;
-                    chartZone1.Series["T-2"].Points.AddXY(temp1.ToString(), TF2.ToString());
-                    txtTC2.Text = TF2;
-                    chartZone1.Series["T-3"].Points.AddXY(temp1.ToString(), TF3.ToString());
-                    txtTC3.Text = TF3;
-                    chartZone1.Series["T-4"].Points.AddXY(temp1.ToString(), TF4.ToString());
-                    txtTC4.Text = TF4;
-                    chartZone1.Series["T-5"].Points.AddXY(temp1.ToString(), TF5.ToString());
-                    txtTC5.Text = TF5;
-                    chartZone1.Series["T-6"].Points.AddXY(temp1.ToString(), TF6.ToString());
-                    txtTC6.Text = TF6;
-                    chartZone1.Series["T-7"].Points.AddXY(temp1.ToString(), TF7.ToString());
-                    txtTC7.Text = TF7;
-                    chartZone1.Series["T-8"].Points.AddXY(temp1.ToString(), TF8.ToString());
-                    txtTC8.Text = TF8;
-                    chartZone1.Series["T-9"].Points.AddXY(temp1.ToString(), TF9.ToString());
-                    txtTC9.Text = TF9;
-                    chartZone1.Series["T-10"].Points.AddXY(temp1.ToString(), TF10.ToString());
-                    txtTC10.Text = TF10;
-                    chartZone1.Series["T-11"].Points.AddXY(temp1.ToString(), TF11.ToString());
-                    txtTC11.Text = TF11;
-                    chartZone1.Series["T-12"].Points.AddXY(temp1.ToString(), TF12.ToString());
-                    txtTC12.Text = TF12;
+                    chartZone1.Series["T-1"].Points.AddXY(temp1.ToString(), TFO1.ToString());
+                    txtTC1.Text = TFO1;
+                    chartZone1.Series["T-2"].Points.AddXY(temp1.ToString(), TFO2.ToString());
+                    txtTC2.Text = TFO2;
+                    chartZone1.Series["T-3"].Points.AddXY(temp1.ToString(), TFO3.ToString());
+                    txtTC3.Text = TFO3;
+                    chartZone1.Series["T-4"].Points.AddXY(temp1.ToString(), TFO4.ToString());
+                    txtTC4.Text = TFO4;
+                    chartZone1.Series["T-5"].Points.AddXY(temp1.ToString(), TFO5.ToString());
+                    txtTC5.Text = TFO5;
+                    chartZone1.Series["T-6"].Points.AddXY(temp1.ToString(), TFO6.ToString());
+                    txtTC6.Text = TFO6;
+                    chartZone1.Series["T-7"].Points.AddXY(temp1.ToString(), TFO7.ToString());
+                    txtTC7.Text = TFO7;
+                    chartZone1.Series["T-8"].Points.AddXY(temp1.ToString(), TFO8.ToString());
+                    txtTC8.Text = TFO8;
+                    chartZone1.Series["T-9"].Points.AddXY(temp1.ToString(), TFO9.ToString());
+                    txtTC9.Text = TFO9;
+                    chartZone1.Series["T-10"].Points.AddXY(temp1.ToString(), TFO10.ToString());
+                    txtTC10.Text = TFO10;
+                    chartZone1.Series["T-11"].Points.AddXY(temp1.ToString(), TFO11.ToString());
+                    txtTC11.Text = TFO11;
+                    chartZone1.Series["T-12"].Points.AddXY(temp1.ToString(), TFO12.ToString());
+                    txtTC12.Text = TFO12;
 
                     List<double> temperaturas1 = new List<double>();
-                    string[] temperaturasF1 = { TF1, TF2, TF3, TF4, TF5, TF6, TF7, TF8, TF9, TF10, TF11, TF12 };
+                    string[] temperaturasF1 = { TFO1, TFO2, TFO3, TFO4, TFO5, TFO6, TFO7, TFO8, TFO9, TFO10, TFO11, TFO12 };
                     bool[] temperaturasAVG1 = { TAVG1, TAVG2, TAVG3, TAVG4, TAVG5, TAVG6, TAVG7, TAVG8, TAVG9, TAVG10, TAVG11, TAVG12 };
 
                     for (int i = 0; i < temperaturasF1.Length; i++)
@@ -5058,33 +5060,33 @@ namespace Apple_24_Zones.Forms
                     rt2 = rt2 + 100;
                     temp2 = rt2 / 1000;
 
-                    chartZone2.Series["T-13"].Points.AddXY(temp2.ToString(), TF13.ToString());
-                    txtTC13.Text = TF13;
-                    chartZone2.Series["T-14"].Points.AddXY(temp2.ToString(), TF14.ToString());
-                    txtTC14.Text = TF14;
-                    chartZone2.Series["T-15"].Points.AddXY(temp2.ToString(), TF15.ToString());
-                    txtTC15.Text = TF15;
-                    chartZone2.Series["T-16"].Points.AddXY(temp2.ToString(), TF16.ToString());
-                    txtTC16.Text = TF16;
-                    chartZone2.Series["T-17"].Points.AddXY(temp2.ToString(), TF17.ToString());
-                    txtTC17.Text = TF17;
-                    chartZone2.Series["T-18"].Points.AddXY(temp2.ToString(), TF18.ToString());
-                    txtTC18.Text = TF18;
-                    chartZone2.Series["T-19"].Points.AddXY(temp2.ToString(), TF19.ToString());
-                    txtTC19.Text = TF19;
-                    chartZone2.Series["T-20"].Points.AddXY(temp2.ToString(), TF20.ToString());
-                    txtTC20.Text = TF20;
-                    chartZone2.Series["T-21"].Points.AddXY(temp2.ToString(), TF21.ToString());
-                    txtTC21.Text = TF21;
-                    chartZone2.Series["T-22"].Points.AddXY(temp2.ToString(), TF22.ToString());
-                    txtTC22.Text = TF22;
-                    chartZone2.Series["T-23"].Points.AddXY(temp2.ToString(), TF23.ToString());
-                    txtTC23.Text = TF23;
-                    chartZone2.Series["T-24"].Points.AddXY(temp2.ToString(), TF24.ToString());
-                    txtTC24.Text = TF24;
+                    chartZone2.Series["T-13"].Points.AddXY(temp2.ToString(), TFO13.ToString());
+                    txtTC13.Text = TFO13;
+                    chartZone2.Series["T-14"].Points.AddXY(temp2.ToString(), TFO14.ToString());
+                    txtTC14.Text = TFO14;
+                    chartZone2.Series["T-15"].Points.AddXY(temp2.ToString(), TFO15.ToString());
+                    txtTC15.Text = TFO15;
+                    chartZone2.Series["T-16"].Points.AddXY(temp2.ToString(), TFO16.ToString());
+                    txtTC16.Text = TFO16;
+                    chartZone2.Series["T-17"].Points.AddXY(temp2.ToString(), TFO17.ToString());
+                    txtTC17.Text = TFO17;
+                    chartZone2.Series["T-18"].Points.AddXY(temp2.ToString(), TFO18.ToString());
+                    txtTC18.Text = TFO18;
+                    chartZone2.Series["T-19"].Points.AddXY(temp2.ToString(), TFO19.ToString());
+                    txtTC19.Text = TFO19;
+                    chartZone2.Series["T-20"].Points.AddXY(temp2.ToString(), TFO20.ToString());
+                    txtTC20.Text = TFO20;
+                    chartZone2.Series["T-21"].Points.AddXY(temp2.ToString(), TFO21.ToString());
+                    txtTC21.Text = TFO21;
+                    chartZone2.Series["T-22"].Points.AddXY(temp2.ToString(), TFO22.ToString());
+                    txtTC22.Text = TFO22;
+                    chartZone2.Series["T-23"].Points.AddXY(temp2.ToString(), TFO23.ToString());
+                    txtTC23.Text = TFO23;
+                    chartZone2.Series["T-24"].Points.AddXY(temp2.ToString(), TFO24.ToString());
+                    txtTC24.Text = TFO24;
 
                     List<double> temperaturas2 = new List<double>();
-                    string[] temperaturasF = { TF13, TF14, TF15, TF16, TF17, TF18, TF19, TF20, TF21, TF22, TF23, TF24 };
+                    string[] temperaturasF = { TFO13, TFO14, TFO15, TFO16, TFO17, TFO18, TFO19, TFO20, TFO21, TFO22, TFO23, TFO24 };
                     bool[] temperaturasAVG = { TAVG13, TAVG14, TAVG15, TAVG16, TAVG17, TAVG18, TAVG19, TAVG20, TAVG21, TAVG22, TAVG23, TAVG24 };
 
                     for (int i = 0; i < temperaturasF.Length; i++)
