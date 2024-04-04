@@ -204,10 +204,12 @@
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.pSecurity = new System.Windows.Forms.Panel();
+            this.btnLock = new FontAwesome.Sharp.IconButton();
             this.label60 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
-            this.btnLock = new FontAwesome.Sharp.IconButton();
             this.txtTimesLogCreated = new System.Windows.Forms.Label();
+            this.checkboxShowOriginal = new System.Windows.Forms.CheckBox();
+            this.label61 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pSecurity.SuspendLayout();
             this.SuspendLayout();
@@ -246,7 +248,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 792);
+            this.panel2.Size = new System.Drawing.Size(5, 796);
             this.panel2.TabIndex = 92;
             // 
             // panel3
@@ -255,14 +257,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(710, 27);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 792);
+            this.panel3.Size = new System.Drawing.Size(5, 796);
             this.panel3.TabIndex = 93;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.SteelBlue;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(5, 814);
+            this.panel4.Location = new System.Drawing.Point(5, 818);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(705, 5);
             this.panel4.TabIndex = 94;
@@ -2420,10 +2422,27 @@
             this.pSecurity.Controls.Add(this.btnLock);
             this.pSecurity.Controls.Add(this.label60);
             this.pSecurity.Controls.Add(this.label59);
-            this.pSecurity.Location = new System.Drawing.Point(25, 34);
+            this.pSecurity.Location = new System.Drawing.Point(678, 173);
             this.pSecurity.Name = "pSecurity";
             this.pSecurity.Size = new System.Drawing.Size(679, 776);
             this.pSecurity.TabIndex = 321;
+            // 
+            // btnLock
+            // 
+            this.btnLock.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLock.FlatAppearance.BorderSize = 0;
+            this.btnLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLock.IconChar = FontAwesome.Sharp.IconChar.Lock;
+            this.btnLock.IconColor = System.Drawing.Color.White;
+            this.btnLock.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnLock.IconSize = 40;
+            this.btnLock.Location = new System.Drawing.Point(280, 374);
+            this.btnLock.Name = "btnLock";
+            this.btnLock.Size = new System.Drawing.Size(60, 49);
+            this.btnLock.TabIndex = 3;
+            this.btnLock.UseVisualStyleBackColor = false;
+            this.btnLock.Visible = false;
+            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
             // 
             // label60
             // 
@@ -2447,23 +2466,6 @@
             this.label59.Text = "Restricted Access Form";
             this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnLock
-            // 
-            this.btnLock.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnLock.FlatAppearance.BorderSize = 0;
-            this.btnLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLock.IconChar = FontAwesome.Sharp.IconChar.Lock;
-            this.btnLock.IconColor = System.Drawing.Color.White;
-            this.btnLock.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnLock.IconSize = 40;
-            this.btnLock.Location = new System.Drawing.Point(280, 374);
-            this.btnLock.Name = "btnLock";
-            this.btnLock.Size = new System.Drawing.Size(60, 49);
-            this.btnLock.TabIndex = 3;
-            this.btnLock.UseVisualStyleBackColor = false;
-            this.btnLock.Visible = false;
-            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
-            // 
             // txtTimesLogCreated
             // 
             this.txtTimesLogCreated.Location = new System.Drawing.Point(649, 796);
@@ -2472,11 +2474,32 @@
             this.txtTimesLogCreated.Size = new System.Drawing.Size(54, 14);
             this.txtTimesLogCreated.TabIndex = 322;
             // 
+            // checkboxShowOriginal
+            // 
+            this.checkboxShowOriginal.AutoSize = true;
+            this.checkboxShowOriginal.Location = new System.Drawing.Point(11, 799);
+            this.checkboxShowOriginal.Name = "checkboxShowOriginal";
+            this.checkboxShowOriginal.Size = new System.Drawing.Size(154, 17);
+            this.checkboxShowOriginal.TabIndex = 323;
+            this.checkboxShowOriginal.Text = "Show original RTD\'s Inputs";
+            this.checkboxShowOriginal.UseVisualStyleBackColor = true;
+            this.checkboxShowOriginal.CheckedChanged += new System.EventHandler(this.checkboxShowOriginal_CheckedChanged);
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(292, 41);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(0, 13);
+            this.label61.TabIndex = 324;
+            // 
             // FrmOffsets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 819);
+            this.ClientSize = new System.Drawing.Size(715, 823);
+            this.Controls.Add(this.label61);
+            this.Controls.Add(this.checkboxShowOriginal);
             this.Controls.Add(this.pSecurity);
             this.Controls.Add(this.label58);
             this.Controls.Add(this.label57);
@@ -2849,5 +2872,7 @@
         private System.Windows.Forms.Label label60;
         private FontAwesome.Sharp.IconButton btnLock;
         private System.Windows.Forms.Label txtTimesLogCreated;
+        private System.Windows.Forms.CheckBox checkboxShowOriginal;
+        private System.Windows.Forms.Label label61;
     }
 }

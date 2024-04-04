@@ -856,7 +856,6 @@ namespace Apple_24_Zones.Forms
         private void btnLock_Click(object sender, EventArgs e)
         {
             pSecurity.Visible = false;
-            txtTimesLogCreated.Text = Settings.Default.LogCreateTimes.ToString();
 
             // Obtener la ruta de la carpeta AppData del usuario actual
             string appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -890,6 +889,22 @@ namespace Apple_24_Zones.Forms
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            txtTimesLogCreated.Text = Settings.Default.LogCreateTimes.ToString();
+
+        }
+
+        private void checkboxShowOriginal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkboxShowOriginal.Checked)
+            {
+                Settings.Default.ShowZone1Original = true;
+                Settings.Default.Save();
+            }
+            else
+            {
+                Settings.Default.ShowZone1Original = false;
+                Settings.Default.Save();
+            }
         }
     }
 }

@@ -4843,20 +4843,6 @@ namespace Apple_24_Zones.Forms
             foreach (var kvp in rangosYValoresARestar)
             {
                 double valorARestar = kvp.Value;
-                /*if (AT1 >= kvp.Key.Item1 && AT1 <= kvp.Key.Item2)
-                    AT1 -= valorARestar;
-
-                if (AT2 >= kvp.Key.Item1 && AT2 <= kvp.Key.Item2)
-                    AT2 -= valorARestar;
-
-                if (AT3 >= kvp.Key.Item1 && AT3 <= kvp.Key.Item2)
-                    AT3 -= valorARestar;
-
-                if (AT4 >= kvp.Key.Item1 && AT4 <= kvp.Key.Item2)
-                    AT4 -= valorARestar;
-
-                if (AT5 >= kvp.Key.Item1 && AT5 <= kvp.Key.Item2)
-                    AT5 -= valorARestar;*/
 
                 if (AT7 >= kvp.Key.Item1 && AT7 < kvp.Key.Item2)
                 {
@@ -4873,27 +4859,10 @@ namespace Apple_24_Zones.Forms
                     AT11 -= valorARestar;
                     AT12 -= valorARestar;
                     // Debo detener el loop apenas encuentre el rango de T6, ya que si permito que el
-                    // loop continue entraré en otros rangos nuevamente y crearé una falla.
+                    // loop continue entraré en otros rangos nuevamente y crearé una falla. Si quiero validar individualmente
+                    // cada RTD entonces elimino el "break;"
                     break;
                 }
-
-                /* if (AT7 >= kvp.Key.Item1 && AT7 <= kvp.Key.Item2)
-                     AT7 -= valorARestar;
-
-                 if (AT8 >= kvp.Key.Item1 && AT8 <= kvp.Key.Item2)
-                     AT8 -= valorARestar;
-
-                 if (AT9 >= kvp.Key.Item1 && AT9 <= kvp.Key.Item2)
-                     AT9 -= valorARestar;
-
-                 if (AT10 >= kvp.Key.Item1 && AT10 <= kvp.Key.Item2)
-                     AT10 -= valorARestar;
-
-                 if (AT11 >= kvp.Key.Item1 && AT11 <= kvp.Key.Item2)
-                     AT11 -= valorARestar;
-
-                 if (AT12 >= kvp.Key.Item1 && AT12 <= kvp.Key.Item2)
-                     AT12 -= valorARestar; */
             }
 
             // ITERACION Y ALTERACION TEMPS ZONA 2 CON DICCIONARIO DE OFFSETS ZONA 2
@@ -4901,21 +4870,7 @@ namespace Apple_24_Zones.Forms
             foreach (var kvp in rangosYValoresARestar2)
             {
                 double valorARestar = kvp.Value;
-                /*if (AT13 >= kvp.Key.Item1 && AT13 <= kvp.Key.Item2)
-                    AT13 -= valorARestar;
-
-                if (AT14 >= kvp.Key.Item1 && AT14 <= kvp.Key.Item2)
-                    AT14 -= valorARestar;
-
-                if (AT15 >= kvp.Key.Item1 && AT15 <= kvp.Key.Item2)
-                    AT15 -= valorARestar;
-
-                if (AT16 >= kvp.Key.Item1 && AT16 <= kvp.Key.Item2)
-                    AT16 -= valorARestar;
-
-                if (AT17 >= kvp.Key.Item1 && AT17 <= kvp.Key.Item2)
-                    AT17 -= valorARestar;*/
-
+               
                 if (AT19 >= kvp.Key.Item1 && AT19 < kvp.Key.Item2) { 
                     AT13 -= valorARestar;
                     AT14 -= valorARestar;
@@ -4931,24 +4886,6 @@ namespace Apple_24_Zones.Forms
                     AT24 -= valorARestar;
                     break;
                 }
-
-                /*if (AT19 >= kvp.Key.Item1 && AT19 <= kvp.Key.Item2)
-                    AT19 -= valorARestar;
-
-                if (AT20 >= kvp.Key.Item1 && AT20 <= kvp.Key.Item2)
-                    AT20 -= valorARestar;
-
-                if (AT21 >= kvp.Key.Item1 && AT21 <= kvp.Key.Item2)
-                    AT21 -= valorARestar;
-
-                if (AT22 >= kvp.Key.Item1 && AT22 <= kvp.Key.Item2)
-                    AT22 -= valorARestar;
-
-                if (AT23 >= kvp.Key.Item1 && AT23 <= kvp.Key.Item2)
-                    AT23 -= valorARestar;
-
-                if (AT24 >= kvp.Key.Item1 && AT24 <= kvp.Key.Item2)
-                    AT24 -= valorARestar;*/
             }
 
             TFO1 = AT1.ToString(System.Globalization.CultureInfo.InvariantCulture);
@@ -4983,14 +4920,31 @@ namespace Apple_24_Zones.Forms
             //Si todas las TF con formula ya se encuentran con su respectivo valor 4 segundos despues de conectar!
             if (TF1 != null && TF7 != null && TF13 != null && TF19 != null && TF24 != null)
             {
-                txtZONE1Testing.Text = TF1 + " | " + TF2 + " | " + TF3 + " | " + TF4 + " | " + TF5 + " | " + TF6 + " | " + TF7 + " | " + TF8 + " | " + TF9 + " | " +
-                    TF10 + " | " + TF11 + " | " + TF12;
 
-                txtZONE2Testing.Text = TF13 + " | " + TF14 + " | " + TF15 + " | " + TF16 + " | " + TF17 + " | " + TF18 + " | " + TF19 + " | " + TF20 + " | " + TF21 + " | " +
+                if (Settings.Default.ShowZone1Original == true)
+                {
+                    txtZONE1Testing.Visible = true;
+                    txtZONE1Testing.Text = TF1 + " | " + TF2 + " | " + TF3 + " | " + TF4 + " | " + TF5 + " | " + TF6 + " | " + TF7 + " | " + TF8 + " | " + TF9 + " | " +
+                    TF10 + " | " + TF11 + " | " + TF12;
+                }
+                else
+                {
+                    txtZONE1Testing.Visible = false;
+                }
+
+                if (Settings.Default.ShowZone2Original == true)
+                {
+                    txtZONE2Testing.Visible = true;
+                    txtZONE2Testing.Text = TF13 + " | " + TF14 + " | " + TF15 + " | " + TF16 + " | " + TF17 + " | " + TF18 + " | " + TF19 + " | " + TF20 + " | " + TF21 + " | " +
                     TF22 + " | " + TF23 + " | " + TF24;
+                }
+                else
+                {
+                    txtZONE2Testing.Visible = false;
+                }
 
                 AlterarOffSets();
-
+                
                 if (viewChart == "Both")
                 {
                     // ZONA 1 
@@ -5124,34 +5078,34 @@ namespace Apple_24_Zones.Forms
                     rtView = rtView + 100;
                     tempView = rtView / 1000;
 
-                    chartView.Series["T-1"].Points.AddXY(tempView.ToString(), TF1.ToString());
-                    txtView1.Text = TF1;
-                    chartView.Series["T-2"].Points.AddXY(tempView.ToString(), TF2.ToString());
-                    txtView2.Text = TF2;
-                    chartView.Series["T-3"].Points.AddXY(tempView.ToString(), TF3.ToString());
-                    txtView3.Text = TF3;
-                    chartView.Series["T-4"].Points.AddXY(tempView.ToString(), TF4.ToString());
-                    txtView4.Text = TF4;
-                    chartView.Series["T-5"].Points.AddXY(tempView.ToString(), TF5.ToString());
-                    txtView5.Text = TF5;
-                    chartView.Series["T-6"].Points.AddXY(tempView.ToString(), TF6.ToString());
-                    txtView6.Text = TF6;
-                    chartView.Series["T-7"].Points.AddXY(tempView.ToString(), TF7.ToString());
-                    txtView7.Text = TF7;
-                    chartView.Series["T-8"].Points.AddXY(tempView.ToString(), TF8.ToString());
-                    txtView8.Text = TF8;
-                    chartView.Series["T-9"].Points.AddXY(tempView.ToString(), TF9.ToString());
-                    txtView9.Text = TF9;
-                    chartView.Series["T-10"].Points.AddXY(tempView.ToString(), TF10.ToString());
-                    txtView10.Text = TF10;
-                    chartView.Series["T-11"].Points.AddXY(tempView.ToString(), TF11.ToString());
-                    txtView11.Text = TF11;
-                    chartView.Series["T-12"].Points.AddXY(tempView.ToString(), TF12.ToString());
-                    txtView12.Text = TF12;
+                    chartView.Series["T-1"].Points.AddXY(tempView.ToString(), TFO1.ToString());
+                    txtView1.Text = TFO1;
+                    chartView.Series["T-2"].Points.AddXY(tempView.ToString(), TFO2.ToString());
+                    txtView2.Text = TFO2;
+                    chartView.Series["T-3"].Points.AddXY(tempView.ToString(), TFO3.ToString());
+                    txtView3.Text = TFO3;
+                    chartView.Series["T-4"].Points.AddXY(tempView.ToString(), TFO4.ToString());
+                    txtView4.Text = TFO4;
+                    chartView.Series["T-5"].Points.AddXY(tempView.ToString(), TFO5.ToString());
+                    txtView5.Text = TFO5;
+                    chartView.Series["T-6"].Points.AddXY(tempView.ToString(), TFO6.ToString());
+                    txtView6.Text = TFO6;
+                    chartView.Series["T-7"].Points.AddXY(tempView.ToString(), TFO7.ToString());
+                    txtView7.Text = TFO7;
+                    chartView.Series["T-8"].Points.AddXY(tempView.ToString(), TFO8.ToString());
+                    txtView8.Text = TFO8;
+                    chartView.Series["T-9"].Points.AddXY(tempView.ToString(), TFO9.ToString());
+                    txtView9.Text = TFO9;
+                    chartView.Series["T-10"].Points.AddXY(tempView.ToString(), TFO10.ToString());
+                    txtView10.Text = TFO10;
+                    chartView.Series["T-11"].Points.AddXY(tempView.ToString(), TFO11.ToString());
+                    txtView11.Text = TFO11;
+                    chartView.Series["T-12"].Points.AddXY(tempView.ToString(), TFO12.ToString());
+                    txtView12.Text = TFO12;
 
 
                     List<double> temperaturas1 = new List<double>();
-                    string[] temperaturasF1 = { TF1, TF2, TF3, TF4, TF5, TF6, TF7, TF8, TF9, TF10, TF11, TF12 };
+                    string[] temperaturasF1 = { TFO1, TFO2, TFO3, TFO4, TFO5, TFO6, TFO7, TFO8, TFO9, TFO10, TFO11, TFO12 };
                     bool[] temperaturasAVG1 = { TAVG1, TAVG2, TAVG3, TAVG4, TAVG5, TAVG6, TAVG7, TAVG8, TAVG9, TAVG10, TAVG11, TAVG12 };
 
                     for (int i = 0; i < temperaturasF1.Length; i++)
@@ -5163,7 +5117,7 @@ namespace Apple_24_Zones.Forms
                     }
 
                     List<double> temperaturas2 = new List<double>();
-                    string[] temperaturasF = { TF13, TF14, TF15, TF16, TF17, TF18, TF19, TF20, TF21, TF22, TF23, TF24 };
+                    string[] temperaturasF = { TFO13, TFO14, TFO15, TFO16, TFO17, TFO18, TFO19, TFO20, TFO21, TFO22, TFO23, TFO24 };
                     bool[] temperaturasAVG = { TAVG13, TAVG14, TAVG15, TAVG16, TAVG17, TAVG18, TAVG19, TAVG20, TAVG21, TAVG22, TAVG23, TAVG24 };
 
                     for (int i = 0; i < temperaturasF.Length; i++)
@@ -5211,33 +5165,33 @@ namespace Apple_24_Zones.Forms
                     rtView = rtView + 100;
                     tempView = rtView / 1000;
 
-                    chartView.Series["T-13"].Points.AddXY(tempView.ToString(), TF13.ToString());
-                    txtView1.Text = TF13;
-                    chartView.Series["T-14"].Points.AddXY(tempView.ToString(), TF14.ToString());
-                    txtView2.Text = TF14;
-                    chartView.Series["T-15"].Points.AddXY(tempView.ToString(), TF15.ToString());
-                    txtView3.Text = TF15;
-                    chartView.Series["T-16"].Points.AddXY(tempView.ToString(), TF16.ToString());
-                    txtView4.Text = TF16;
-                    chartView.Series["T-17"].Points.AddXY(tempView.ToString(), TF17.ToString());
-                    txtView5.Text = TF17;
-                    chartView.Series["T-18"].Points.AddXY(tempView.ToString(), TF18.ToString());
-                    txtView6.Text = TF18;
-                    chartView.Series["T-19"].Points.AddXY(tempView.ToString(), TF19.ToString());
-                    txtView7.Text = TF19;
-                    chartView.Series["T-20"].Points.AddXY(tempView.ToString(), TF20.ToString());
-                    txtView8.Text = TF20;
-                    chartView.Series["T-21"].Points.AddXY(tempView.ToString(), TF21.ToString());
-                    txtView9.Text = TF21;
-                    chartView.Series["T-22"].Points.AddXY(tempView.ToString(), TF22.ToString());
-                    txtView10.Text = TF22;
-                    chartView.Series["T-23"].Points.AddXY(tempView.ToString(), TF23.ToString());
-                    txtView11.Text = TF23;
-                    chartView.Series["T-24"].Points.AddXY(tempView.ToString(), TF24.ToString());
-                    txtView12.Text = TF24;
+                    chartView.Series["T-13"].Points.AddXY(tempView.ToString(), TFO13.ToString());
+                    txtView1.Text = TFO13;
+                    chartView.Series["T-14"].Points.AddXY(tempView.ToString(), TFO14.ToString());
+                    txtView2.Text = TFO14;
+                    chartView.Series["T-15"].Points.AddXY(tempView.ToString(), TFO15.ToString());
+                    txtView3.Text = TFO15;
+                    chartView.Series["T-16"].Points.AddXY(tempView.ToString(), TFO16.ToString());
+                    txtView4.Text = TFO16;
+                    chartView.Series["T-17"].Points.AddXY(tempView.ToString(), TFO17.ToString());
+                    txtView5.Text = TFO17;
+                    chartView.Series["T-18"].Points.AddXY(tempView.ToString(), TFO18.ToString());
+                    txtView6.Text = TFO18;
+                    chartView.Series["T-19"].Points.AddXY(tempView.ToString(), TFO19.ToString());
+                    txtView7.Text = TFO19;
+                    chartView.Series["T-20"].Points.AddXY(tempView.ToString(), TFO20.ToString());
+                    txtView8.Text = TFO20;
+                    chartView.Series["T-21"].Points.AddXY(tempView.ToString(), TFO21.ToString());
+                    txtView9.Text = TFO21;
+                    chartView.Series["T-22"].Points.AddXY(tempView.ToString(), TFO22.ToString());
+                    txtView10.Text = TFO22;
+                    chartView.Series["T-23"].Points.AddXY(tempView.ToString(), TFO23.ToString());
+                    txtView11.Text = TFO23;
+                    chartView.Series["T-24"].Points.AddXY(tempView.ToString(), TFO24.ToString());
+                    txtView12.Text = TFO24;
 
                     List<double> temperaturas1 = new List<double>();
-                    string[] temperaturasF1 = { TF1, TF2, TF3, TF4, TF5, TF6, TF7, TF8, TF9, TF10, TF11, TF12 };
+                    string[] temperaturasF1 = { TFO1, TFO2, TFO3, TFO4, TFO5, TFO6, TFO7, TFO8, TFO9, TFO10, TFO11, TFO12 };
                     bool[] temperaturasAVG1 = { TAVG1, TAVG2, TAVG3, TAVG4, TAVG5, TAVG6, TAVG7, TAVG8, TAVG9, TAVG10, TAVG11, TAVG12 };
 
                     for (int i = 0; i < temperaturasF1.Length; i++)
@@ -5249,7 +5203,7 @@ namespace Apple_24_Zones.Forms
                     }
 
                     List<double> temperaturas2 = new List<double>();
-                    string[] temperaturasF = { TF13, TF14, TF15, TF16, TF17, TF18, TF19, TF20, TF21, TF22, TF23, TF24 };
+                    string[] temperaturasF = { TFO13, TFO14, TFO15, TFO16, TFO17, TFO18, TFO19, TFO20, TFO21, TFO22, TFO23, TFO24 };
                     bool[] temperaturasAVG = { TAVG13, TAVG14, TAVG15, TAVG16, TAVG17, TAVG18, TAVG19, TAVG20, TAVG21, TAVG22, TAVG23, TAVG24 };
 
                     for (int i = 0; i < temperaturasF.Length; i++)
