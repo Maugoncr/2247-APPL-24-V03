@@ -4648,6 +4648,7 @@ namespace Apple_24_Zones.Forms
             // 
             // timerGraficarCharts
             // 
+            this.timerGraficarCharts.Interval = 1000;
             this.timerGraficarCharts.Tick += new System.EventHandler(this.timerGraficarCharts_Tick);
             // 
             // FrmMain
