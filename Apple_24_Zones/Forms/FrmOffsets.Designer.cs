@@ -2422,9 +2422,9 @@
             this.pSecurity.Controls.Add(this.btnLock);
             this.pSecurity.Controls.Add(this.label60);
             this.pSecurity.Controls.Add(this.label59);
-            this.pSecurity.Location = new System.Drawing.Point(678, 173);
+            this.pSecurity.Location = new System.Drawing.Point(11, 34);
             this.pSecurity.Name = "pSecurity";
-            this.pSecurity.Size = new System.Drawing.Size(679, 776);
+            this.pSecurity.Size = new System.Drawing.Size(680, 782);
             this.pSecurity.TabIndex = 321;
             // 
             // btnLock
@@ -2499,7 +2499,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 823);
             this.Controls.Add(this.label61);
-            this.Controls.Add(this.checkboxShowOriginal);
             this.Controls.Add(this.pSecurity);
             this.Controls.Add(this.label58);
             this.Controls.Add(this.label57);
@@ -2676,6 +2675,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtTimesLogCreated);
+            this.Controls.Add(this.checkboxShowOriginal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "FrmOffsets";

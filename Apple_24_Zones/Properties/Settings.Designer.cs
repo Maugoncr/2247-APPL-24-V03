@@ -770,24 +770,12 @@ namespace Apple_24_Zones.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool ShowZone1Original {
+        public bool ShowOInputs {
             get {
-                return ((bool)(this["ShowZone1Original"]));
+                return ((bool)(this["ShowOInputs"]));
             }
             set {
-                this["ShowZone1Original"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool ShowZone2Original {
-            get {
-                return ((bool)(this["ShowZone2Original"]));
-            }
-            set {
-                this["ShowZone2Original"] = value;
+                this["ShowOInputs"] = value;
             }
         }
     }

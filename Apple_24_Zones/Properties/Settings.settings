@@ -188,10 +188,7 @@
     <Setting Name="LogCreateTimes" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="ShowZone1Original" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="ShowZone2Original" Type="System.Boolean" Scope="User">
+    <Setting Name="ShowOInputs" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>

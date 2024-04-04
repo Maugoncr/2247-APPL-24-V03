@@ -4920,26 +4920,22 @@ namespace Apple_24_Zones.Forms
             //Si todas las TF con formula ya se encuentran con su respectivo valor 4 segundos despues de conectar!
             if (TF1 != null && TF7 != null && TF13 != null && TF19 != null && TF24 != null)
             {
+                // Muestra los valores originales sin que sean afectados por los offsets, muy util para el desarrollo y calculo de offsets
 
-                if (Settings.Default.ShowZone1Original == true)
+                if (Settings.Default.ShowOInputs == true)
                 {
                     txtZONE1Testing.Visible = true;
+                    txtZONE2Testing.Visible = true;
+
                     txtZONE1Testing.Text = TF1 + " | " + TF2 + " | " + TF3 + " | " + TF4 + " | " + TF5 + " | " + TF6 + " | " + TF7 + " | " + TF8 + " | " + TF9 + " | " +
                     TF10 + " | " + TF11 + " | " + TF12;
-                }
-                else
-                {
-                    txtZONE1Testing.Visible = false;
-                }
-
-                if (Settings.Default.ShowZone2Original == true)
-                {
-                    txtZONE2Testing.Visible = true;
+                   
                     txtZONE2Testing.Text = TF13 + " | " + TF14 + " | " + TF15 + " | " + TF16 + " | " + TF17 + " | " + TF18 + " | " + TF19 + " | " + TF20 + " | " + TF21 + " | " +
                     TF22 + " | " + TF23 + " | " + TF24;
                 }
                 else
                 {
+                    txtZONE1Testing.Visible = false;
                     txtZONE2Testing.Visible = false;
                 }
 

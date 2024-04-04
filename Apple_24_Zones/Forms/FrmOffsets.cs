@@ -897,12 +897,12 @@ namespace Apple_24_Zones.Forms
         {
             if (checkboxShowOriginal.Checked)
             {
-                Settings.Default.ShowZone1Original = true;
+                Settings.Default.ShowOInputs = true;
                 Settings.Default.Save();
             }
             else
             {
-                Settings.Default.ShowZone1Original = false;
+                Settings.Default.ShowOInputs = false;
                 Settings.Default.Save();
             }
         }
