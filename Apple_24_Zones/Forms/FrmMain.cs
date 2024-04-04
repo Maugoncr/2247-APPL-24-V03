@@ -4844,7 +4844,7 @@ namespace Apple_24_Zones.Forms
             {
                 double valorARestar = kvp.Value;
 
-                if (AT7 >= kvp.Key.Item1 && AT7 < kvp.Key.Item2)
+                if (AT6 >= kvp.Key.Item1 && AT6 < kvp.Key.Item2)
                 {
                     AT1 -= valorARestar;
                     AT2 -= valorARestar;
@@ -4871,7 +4871,7 @@ namespace Apple_24_Zones.Forms
             {
                 double valorARestar = kvp.Value;
                
-                if (AT19 >= kvp.Key.Item1 && AT19 < kvp.Key.Item2) { 
+                if (AT18 >= kvp.Key.Item1 && AT18 < kvp.Key.Item2) { 
                     AT13 -= valorARestar;
                     AT14 -= valorARestar;
                     AT15 -= valorARestar;
