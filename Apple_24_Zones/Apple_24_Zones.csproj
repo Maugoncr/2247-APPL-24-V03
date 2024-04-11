@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +48,29 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -40,6 +78,9 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -54,6 +95,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FrmInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmInformation.Designer.cs">
+      <DependentUpon>FrmInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMessageAlertChiller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMessageAlertChiller.Designer.cs">
+      <DependentUpon>FrmMessageAlertChiller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmModbus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmModbus.designer.cs">
+      <DependentUpon>FrmModbus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmFilterCSVFile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,13 +125,58 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmOffsets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmOffsets.Designer.cs">
+      <DependentUpon>FrmOffsets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPanelExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPanelExample.Designer.cs">
+      <DependentUpon>FrmPanelExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmVisualizadorCrystalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmVisualizadorCrystalReport.Designer.cs">
+      <DependentUpon>FrmVisualizadorCrystalReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\RptCyclesComplete.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptCyclesComplete.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\STOP2.png" />
+    <EmbeddedResource Include="Forms\FrmInformation.resx">
+      <DependentUpon>FrmInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMessageAlertChiller.resx">
+      <DependentUpon>FrmMessageAlertChiller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmModbus.resx">
+      <DependentUpon>FrmModbus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmFilterCSVFile.resx">
       <DependentUpon>FrmFilterCSVFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmOffsets.resx">
+      <DependentUpon>FrmOffsets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPanelExample.resx">
+      <DependentUpon>FrmPanelExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmVisualizadorCrystalReport.resx">
+      <DependentUpon>FrmVisualizadorCrystalReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,6 +188,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\RptCyclesComplete.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptCyclesComplete.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,7 +206,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\SSNE1.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\EMO2.png" />
   </ItemGroup>
@@ -125,6 +235,65 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tc8on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+    <None Include="Resources\labelTempAxisY.png" />
+    <None Include="Resources\LedBlueCooling2.png" />
+    <None Include="Resources\LedRedHeating2.png" />
+    <None Include="Resources\STOP.png" />
+    <None Include="Resources\upArrowHover.png" />
+    <None Include="Resources\upArrow.png" />
+    <None Include="Resources\LedWhite1.png" />
+    <None Include="Resources\LedRedHeating1.png" />
+    <None Include="Resources\LedBlueCooling1.png" />
+    <None Include="Resources\LedWhite.png" />
+    <None Include="Resources\LedRedHeating.png" />
+    <None Include="Resources\LedBlueCooling.png" />
+    <None Include="Resources\neutroWhite.png" />
+    <None Include="Resources\neutroYellow.png" />
+    <None Include="Resources\ledRectangleOn.png" />
+    <None Include="Resources\ledRectangleOff.png" />
+    <None Include="Resources\MIDORI LOGO ICON VERDE.png" />
+    <None Include="Resources\arrowDown.png" />
+    <None Include="Resources\arrowUp.png" />
+    <None Include="Resources\arrowUpRed.png" />
+    <None Include="Resources\arrowDownBlue.png" />
+    <None Include="Resources\coming-soon.jpg" />
+    <None Include="Resources\arrowDownBlue2.png" />
+    <None Include="Resources\arrowUpRed2.png" />
+    <None Include="Resources\arrowUpRed21.png" />
+    <None Include="Resources\draw1.png" />
+    <None Include="Resources\draw1and2.png" />
+    <None Include="Resources\draw2.png" />
+    <None Include="Resources\drawOff.png" />
+    <None Include="Resources\draw11.png" />
+    <None Include="Resources\draw21.png" />
+    <None Include="Resources\drawOff1.png" />
+    <None Include="Resources\downArrow.png" />
+    <None Include="Resources\downArrowHover.png" />
+    <None Include="Resources\bracket.png" />
+    <None Include="Resources\bracket2.png" />
+    <None Include="Resources\Alert.png" />
+    <None Include="Resources\Alert1.png" />
+    <Content Include="Resources\Icon.ico" />
+    <None Include="Resources\MIDORI OFICIAL2 ORANGE.png" />
+    <None Include="Resources\MIDORI OFICIAL2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

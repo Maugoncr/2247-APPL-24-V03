@@ -8,22 +8,774 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Apple_24_Zones.Properties
-{
-
-
+namespace Apple_24_Zones.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int CountHeat1 {
+            get {
+                return ((int)(this["CountHeat1"]));
+            }
+            set {
+                this["CountHeat1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int CountCool1 {
+            get {
+                return ((int)(this["CountCool1"]));
+            }
+            set {
+                this["CountCool1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Notes {
+            get {
+                return ((string)(this["Notes"]));
+            }
+            set {
+                this["Notes"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int CountCool2 {
+            get {
+                return ((int)(this["CountCool2"]));
+            }
+            set {
+                this["CountCool2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int CountHeat2 {
+            get {
+                return ((int)(this["CountHeat2"]));
+            }
+            set {
+                this["CountHeat2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset0_5 {
+            get {
+                return ((double)(this["Offset0_5"]));
+            }
+            set {
+                this["Offset0_5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset5_10 {
+            get {
+                return ((double)(this["Offset5_10"]));
+            }
+            set {
+                this["Offset5_10"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset10_15 {
+            get {
+                return ((double)(this["Offset10_15"]));
+            }
+            set {
+                this["Offset10_15"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset15_20 {
+            get {
+                return ((double)(this["Offset15_20"]));
+            }
+            set {
+                this["Offset15_20"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset20_25 {
+            get {
+                return ((double)(this["Offset20_25"]));
+            }
+            set {
+                this["Offset20_25"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset25_30 {
+            get {
+                return ((double)(this["Offset25_30"]));
+            }
+            set {
+                this["Offset25_30"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset30_35 {
+            get {
+                return ((double)(this["Offset30_35"]));
+            }
+            set {
+                this["Offset30_35"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset35_40 {
+            get {
+                return ((double)(this["Offset35_40"]));
+            }
+            set {
+                this["Offset35_40"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset40_45 {
+            get {
+                return ((double)(this["Offset40_45"]));
+            }
+            set {
+                this["Offset40_45"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset45_50 {
+            get {
+                return ((double)(this["Offset45_50"]));
+            }
+            set {
+                this["Offset45_50"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset50_55 {
+            get {
+                return ((double)(this["Offset50_55"]));
+            }
+            set {
+                this["Offset50_55"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset55_60 {
+            get {
+                return ((double)(this["Offset55_60"]));
+            }
+            set {
+                this["Offset55_60"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset60_65 {
+            get {
+                return ((double)(this["Offset60_65"]));
+            }
+            set {
+                this["Offset60_65"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset65_70 {
+            get {
+                return ((double)(this["Offset65_70"]));
+            }
+            set {
+                this["Offset65_70"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset70_75 {
+            get {
+                return ((double)(this["Offset70_75"]));
+            }
+            set {
+                this["Offset70_75"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset75_80 {
+            get {
+                return ((double)(this["Offset75_80"]));
+            }
+            set {
+                this["Offset75_80"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset80_85 {
+            get {
+                return ((double)(this["Offset80_85"]));
+            }
+            set {
+                this["Offset80_85"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset85_90 {
+            get {
+                return ((double)(this["Offset85_90"]));
+            }
+            set {
+                this["Offset85_90"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset90_95 {
+            get {
+                return ((double)(this["Offset90_95"]));
+            }
+            set {
+                this["Offset90_95"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset95_100 {
+            get {
+                return ((double)(this["Offset95_100"]));
+            }
+            set {
+                this["Offset95_100"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset100_105 {
+            get {
+                return ((double)(this["Offset100_105"]));
+            }
+            set {
+                this["Offset100_105"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset105_110 {
+            get {
+                return ((double)(this["Offset105_110"]));
+            }
+            set {
+                this["Offset105_110"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset110_115 {
+            get {
+                return ((double)(this["Offset110_115"]));
+            }
+            set {
+                this["Offset110_115"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset115_120 {
+            get {
+                return ((double)(this["Offset115_120"]));
+            }
+            set {
+                this["Offset115_120"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset120_125 {
+            get {
+                return ((double)(this["Offset120_125"]));
+            }
+            set {
+                this["Offset120_125"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset125_130 {
+            get {
+                return ((double)(this["Offset125_130"]));
+            }
+            set {
+                this["Offset125_130"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset130_135 {
+            get {
+                return ((double)(this["Offset130_135"]));
+            }
+            set {
+                this["Offset130_135"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Offset135_140 {
+            get {
+                return ((double)(this["Offset135_140"]));
+            }
+            set {
+                this["Offset135_140"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set0_5 {
+            get {
+                return ((double)(this["Off2set0_5"]));
+            }
+            set {
+                this["Off2set0_5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set5_10 {
+            get {
+                return ((double)(this["Off2set5_10"]));
+            }
+            set {
+                this["Off2set5_10"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set10_15 {
+            get {
+                return ((double)(this["Off2set10_15"]));
+            }
+            set {
+                this["Off2set10_15"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set15_20 {
+            get {
+                return ((double)(this["Off2set15_20"]));
+            }
+            set {
+                this["Off2set15_20"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set20_25 {
+            get {
+                return ((double)(this["Off2set20_25"]));
+            }
+            set {
+                this["Off2set20_25"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set25_30 {
+            get {
+                return ((double)(this["Off2set25_30"]));
+            }
+            set {
+                this["Off2set25_30"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set30_35 {
+            get {
+                return ((double)(this["Off2set30_35"]));
+            }
+            set {
+                this["Off2set30_35"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set35_40 {
+            get {
+                return ((double)(this["Off2set35_40"]));
+            }
+            set {
+                this["Off2set35_40"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set40_45 {
+            get {
+                return ((double)(this["Off2set40_45"]));
+            }
+            set {
+                this["Off2set40_45"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set45_50 {
+            get {
+                return ((double)(this["Off2set45_50"]));
+            }
+            set {
+                this["Off2set45_50"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set50_55 {
+            get {
+                return ((double)(this["Off2set50_55"]));
+            }
+            set {
+                this["Off2set50_55"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set55_60 {
+            get {
+                return ((double)(this["Off2set55_60"]));
+            }
+            set {
+                this["Off2set55_60"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set60_65 {
+            get {
+                return ((double)(this["Off2set60_65"]));
+            }
+            set {
+                this["Off2set60_65"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set65_70 {
+            get {
+                return ((double)(this["Off2set65_70"]));
+            }
+            set {
+                this["Off2set65_70"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set70_75 {
+            get {
+                return ((double)(this["Off2set70_75"]));
+            }
+            set {
+                this["Off2set70_75"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set75_80 {
+            get {
+                return ((double)(this["Off2set75_80"]));
+            }
+            set {
+                this["Off2set75_80"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set80_85 {
+            get {
+                return ((double)(this["Off2set80_85"]));
+            }
+            set {
+                this["Off2set80_85"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set85_90 {
+            get {
+                return ((double)(this["Off2set85_90"]));
+            }
+            set {
+                this["Off2set85_90"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set90_95 {
+            get {
+                return ((double)(this["Off2set90_95"]));
+            }
+            set {
+                this["Off2set90_95"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set95_100 {
+            get {
+                return ((double)(this["Off2set95_100"]));
+            }
+            set {
+                this["Off2set95_100"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set100_105 {
+            get {
+                return ((double)(this["Off2set100_105"]));
+            }
+            set {
+                this["Off2set100_105"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set105_110 {
+            get {
+                return ((double)(this["Off2set105_110"]));
+            }
+            set {
+                this["Off2set105_110"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set110_115 {
+            get {
+                return ((double)(this["Off2set110_115"]));
+            }
+            set {
+                this["Off2set110_115"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set115_120 {
+            get {
+                return ((double)(this["Off2set115_120"]));
+            }
+            set {
+                this["Off2set115_120"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set120_125 {
+            get {
+                return ((double)(this["Off2set120_125"]));
+            }
+            set {
+                this["Off2set120_125"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set125_130 {
+            get {
+                return ((double)(this["Off2set125_130"]));
+            }
+            set {
+                this["Off2set125_130"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set130_135 {
+            get {
+                return ((double)(this["Off2set130_135"]));
+            }
+            set {
+                this["Off2set130_135"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Off2set135_140 {
+            get {
+                return ((double)(this["Off2set135_140"]));
+            }
+            set {
+                this["Off2set135_140"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int LogCreateTimes {
+            get {
+                return ((int)(this["LogCreateTimes"]));
+            }
+            set {
+                this["LogCreateTimes"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowOInputs {
+            get {
+                return ((bool)(this["ShowOInputs"]));
+            }
+            set {
+                this["ShowOInputs"] = value;
             }
         }
     }
