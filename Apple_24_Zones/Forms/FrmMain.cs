@@ -1382,8 +1382,25 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-                                    SendSetTempHeaterAndTurnItOn(1);
-                                    CountOmronUse(1);
+                                    SetConfigSerialPortForHeater();
+                                    string hexCommand;
+                                    string[] hexBytes;
+                                    byte[] binaryData;
+
+
+
+                                    hexCommand = "01 06 21 03 00 00 73 F6";
+                                    hexBytes = hexCommand.Split(' ');
+                                    binaryData = new byte[hexBytes.Length];
+                                    for (int i = 0; i < hexBytes.Length; i++)
+                                    {
+                                        binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                                    }
+                                    serialPort1.Write(binaryData, 0, binaryData.Length);
+
+
+                                    //SendSetTempHeaterAndTurnItOn(1);
+                                    //CountOmronUse(1);
 
                                     FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
                                     if (customForm.ShowDialog() == DialogResult.OK)
@@ -1413,8 +1430,25 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-                                    SendSetTempHeaterAndTurnItOn(1);
-                                    CountOmronUse(1);
+                                    SetConfigSerialPortForHeater();
+                                    string hexCommand;
+                                    string[] hexBytes;
+                                    byte[] binaryData;
+
+
+
+                                    hexCommand = "01 06 21 03 00 00 73 F6";
+                                    hexBytes = hexCommand.Split(' ');
+                                    binaryData = new byte[hexBytes.Length];
+                                    for (int i = 0; i < hexBytes.Length; i++)
+                                    {
+                                        binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                                    }
+                                    serialPort1.Write(binaryData, 0, binaryData.Length);
+
+
+                                    //SendSetTempHeaterAndTurnItOn(1);
+                                    //CountOmronUse(1);
 
                                     FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
                                     if (customForm.ShowDialog() == DialogResult.OK)
@@ -1759,8 +1793,8 @@ namespace Apple_24_Zones.Forms
                                     string hexCommand;
                                     string[] hexBytes;
                                     byte[] binaryData;
-                                      
-                                    hexCommand = "01 06 21 03 00 00 73 F6";
+
+                                    hexCommand = "02 06 21 03 00 00 73 C5";
                                     hexBytes = hexCommand.Split(' ');
                                     binaryData = new byte[hexBytes.Length];
                                     for (int i = 0; i < hexBytes.Length; i++)
@@ -1768,7 +1802,6 @@ namespace Apple_24_Zones.Forms
                                         binaryData[i] = Convert.ToByte(hexBytes[i], 16);
                                     }
                                     serialPort1.Write(binaryData, 0, binaryData.Length);
-                                               
 
                                     //SendSetTempHeaterAndTurnItOn(2);
                                     //CountOmronUse(2);
@@ -1807,7 +1840,7 @@ namespace Apple_24_Zones.Forms
                                     string[] hexBytes;
                                     byte[] binaryData;
 
-                                    hexCommand = "01 06 21 03 00 00 73 F6";
+                                    hexCommand = "02 06 21 03 00 00 73 C5";
                                     hexBytes = hexCommand.Split(' ');
                                     binaryData = new byte[hexBytes.Length];
                                     for (int i = 0; i < hexBytes.Length; i++)
