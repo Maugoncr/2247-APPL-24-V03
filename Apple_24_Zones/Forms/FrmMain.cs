@@ -1755,8 +1755,23 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-                                    SendSetTempHeaterAndTurnItOn(2);
-                                    CountOmronUse(2);
+                                    SetConfigSerialPortForHeater();
+                                    string hexCommand;
+                                    string[] hexBytes;
+                                    byte[] binaryData;
+                                      
+                                    hexCommand = "01 06 21 03 00 00 73 F6";
+                                    hexBytes = hexCommand.Split(' ');
+                                    binaryData = new byte[hexBytes.Length];
+                                    for (int i = 0; i < hexBytes.Length; i++)
+                                    {
+                                        binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                                    }
+                                    serialPort1.Write(binaryData, 0, binaryData.Length);
+                                               
+
+                                    //SendSetTempHeaterAndTurnItOn(2);
+                                    //CountOmronUse(2);
 
                                     FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
 
@@ -1787,8 +1802,22 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-                                    SendSetTempHeaterAndTurnItOn(2);
-                                    CountOmronUse(2);
+                                    SetConfigSerialPortForHeater();
+                                    string hexCommand;
+                                    string[] hexBytes;
+                                    byte[] binaryData;
+
+                                    hexCommand = "01 06 21 03 00 00 73 F6";
+                                    hexBytes = hexCommand.Split(' ');
+                                    binaryData = new byte[hexBytes.Length];
+                                    for (int i = 0; i < hexBytes.Length; i++)
+                                    {
+                                        binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                                    }
+                                    serialPort1.Write(binaryData, 0, binaryData.Length);
+
+                                    //SendSetTempHeaterAndTurnItOn(2);
+                                    //CountOmronUse(2);
 
                                     FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
 
