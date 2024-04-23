@@ -1544,7 +1544,7 @@ namespace Apple_24_Zones.Forms
             picYellow.Image = Resources.tc3off;
             picRed.Image.Dispose();
             picRed.Image = Resources.tc1off;
-            serialPort1.Write("#070000" + "\r");
+            serialPort2.Write("#070000" + "\r");
         }
 
         private void SendCommandSetpointChiller(string temperature, int adress)
@@ -4019,7 +4019,7 @@ namespace Apple_24_Zones.Forms
 
         private void serialPort2_DataReceived_1(object sender, SerialDataReceivedEventArgs e)
         {
-            int bytesToRead = serialPort2.BytesToRead;
+            /*int bytesToRead = serialPort2.BytesToRead;
             byte[] buffer = new byte[bytesToRead];
             serialPort2.Read(buffer, 0, bytesToRead);
             // Verifica si los datos recibidos no están vacíos
@@ -4030,7 +4030,7 @@ namespace Apple_24_Zones.Forms
                 // Guarda la cadena hexadecimal en la variable "temp"
                 responseModule03Address = hexData;
                 ProcesarCadena(responseModule03Address);
-            }
+            }*/
         }
         // Variable que toma la respuesta sin procesar al comando que solicita la cadena de las 6 temps segun a que modulo pregunta
         string responseModule03Address;
