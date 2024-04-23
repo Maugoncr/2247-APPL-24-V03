@@ -50,30 +50,10 @@ namespace Apple_24_Zones.Forms
             txtView11.Paint += TextBox_Paint;
             txtView12.Paint += TextBox_Paint;
 
-            txtTC1.Paint += TextBox_Paint;
-            txtTC2.Paint += TextBox_Paint;
-            txtTC3.Paint += TextBox_Paint;
-            txtTC4.Paint += TextBox_Paint;
-            txtTC5.Paint += TextBox_Paint;
-            txtTC6.Paint += TextBox_Paint;
-            txtTC7.Paint += TextBox_Paint;
-            txtTC8.Paint += TextBox_Paint;
-            txtTC9.Paint += TextBox_Paint;
-            txtTC10.Paint += TextBox_Paint;
-            txtTC11.Paint += TextBox_Paint;
-            txtTC12.Paint += TextBox_Paint;
-            txtTC13.Paint += TextBox_Paint;
-            txtTC14.Paint += TextBox_Paint;
-            txtTC15.Paint += TextBox_Paint;
-            txtTC16.Paint += TextBox_Paint;
-            txtTC17.Paint += TextBox_Paint;
-            txtTC18.Paint += TextBox_Paint;
-            txtTC19.Paint += TextBox_Paint;
-            txtTC20.Paint += TextBox_Paint;
-            txtTC21.Paint += TextBox_Paint;
-            txtTC22.Paint += TextBox_Paint;
-            txtTC23.Paint += TextBox_Paint;
-            txtTC24.Paint += TextBox_Paint;
+           txtPutSetpoint1.Paint += txtRealsBorder;
+           txtPutSetpoint2.Paint += TextBox_Paint;
+           lbC1.Paint += TextBox_Paint;
+           lbC2.Paint += TextBox_Paint;
         }
 
         //ZONE TO VARIABLES
@@ -956,6 +936,11 @@ namespace Apple_24_Zones.Forms
 
 
         }
+        private void txtRealsBorder(object sender, PaintEventArgs e)
+        {
+            // Dibujar el borde negro alrededor del TextBox
+            ControlPaint.DrawBorder(e.Graphics, textBox1.ClientRectangle, Color.Black, 2, ButtonBorderStyle.Solid, Color.Black, 2, ButtonBorderStyle.Solid, Color.Black, 2, ButtonBorderStyle.Solid, Color.Black, 2, ButtonBorderStyle.Solid);
+        }
 
         private void TextBox_Paint(object sender, PaintEventArgs e)
         {
@@ -976,7 +961,7 @@ namespace Apple_24_Zones.Forms
 
             if (viewChart == "Both")
             {
-                double numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+               /* double numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
                 chartZone2.Series["T-13"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
                 txtTC13.Text = numeroAleatorio.ToString() + " °C";
 
@@ -1026,7 +1011,7 @@ namespace Apple_24_Zones.Forms
 
                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
                 chartZone1.Series["T-12"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC12.Text = numeroAleatorio.ToString() + " °C";
+                txtTC12.Text = numeroAleatorio.ToString() + " °C";*/
 
                 List<double> temperaturas = new List<double>();
 
@@ -1120,7 +1105,7 @@ namespace Apple_24_Zones.Forms
 
         }
 
-        private void checkT1_CheckedChanged(object sender, EventArgs e)
+      /*  private void checkT1_CheckedChanged(object sender, EventArgs e)
         {
             //chartZone1.Series["T-1"].Enabled = checkT1.Checked ? true : false;
             chartZone1.Series["T-1"].Enabled = checkT1.Checked ? (TAVG1 = true) : (TAVG1 = false);
@@ -1190,7 +1175,7 @@ namespace Apple_24_Zones.Forms
         {
             //chartZone1.Series["T-12"].Enabled = checkT12.Checked ? true : false;
             chartZone1.Series["T-12"].Enabled = checkT12.Checked ? (TAVG12 = true) : (TAVG12 = false);
-        }
+        }*/
 
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -4978,7 +4963,7 @@ namespace Apple_24_Zones.Forms
                     rt1 = rt1 + 100;
                     temp1 = rt1 / 1000;
 
-                    chartZone1.Series["T-1"].Points.AddXY(temp1.ToString(), TFO1.ToString());
+                  /*  chartZone1.Series["T-1"].Points.AddXY(temp1.ToString(), TFO1.ToString());
                     txtTC1.Text = TFO1;
                     chartZone1.Series["T-2"].Points.AddXY(temp1.ToString(), TFO2.ToString());
                     txtTC2.Text = TFO2;
@@ -5001,7 +4986,7 @@ namespace Apple_24_Zones.Forms
                     chartZone1.Series["T-11"].Points.AddXY(temp1.ToString(), TFO11.ToString());
                     txtTC11.Text = TFO11;
                     chartZone1.Series["T-12"].Points.AddXY(temp1.ToString(), TFO12.ToString());
-                    txtTC12.Text = TFO12;
+                    txtTC12.Text = TFO12;*/
 
                     List<double> temperaturas1 = new List<double>();
                     string[] temperaturasF1 = { TFO1, TFO2, TFO3, TFO4, TFO5, TFO6, TFO7, TFO8, TFO9, TFO10, TFO11, TFO12 };
@@ -5041,7 +5026,7 @@ namespace Apple_24_Zones.Forms
                     rt2 = rt2 + 100;
                     temp2 = rt2 / 1000;
 
-                    chartZone2.Series["T-13"].Points.AddXY(temp2.ToString(), TFO13.ToString());
+                 /*   chartZone2.Series["T-13"].Points.AddXY(temp2.ToString(), TFO13.ToString());
                     txtTC13.Text = TFO13;
                     chartZone2.Series["T-14"].Points.AddXY(temp2.ToString(), TFO14.ToString());
                     txtTC14.Text = TFO14;
@@ -5064,7 +5049,7 @@ namespace Apple_24_Zones.Forms
                     chartZone2.Series["T-23"].Points.AddXY(temp2.ToString(), TFO23.ToString());
                     txtTC23.Text = TFO23;
                     chartZone2.Series["T-24"].Points.AddXY(temp2.ToString(), TFO24.ToString());
-                    txtTC24.Text = TFO24;
+                    txtTC24.Text = TFO24;*/
 
                     List<double> temperaturas2 = new List<double>();
                     string[] temperaturasF = { TFO13, TFO14, TFO15, TFO16, TFO17, TFO18, TFO19, TFO20, TFO21, TFO22, TFO23, TFO24 };
@@ -5275,7 +5260,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        private void checkT24_CheckedChanged(object sender, EventArgs e)
+      /*  private void checkT24_CheckedChanged(object sender, EventArgs e)
         {
             chartZone2.Series["T-24"].Enabled = checkT24.Checked ? (TAVG24 = true) : (TAVG24 = false);
             //chartZone2.Series["T-24"].Enabled = checkT24.Checked ? true : false;
@@ -5344,7 +5329,7 @@ namespace Apple_24_Zones.Forms
         {
            // chartZone2.Series["T-13"].Enabled = checkT13.Checked ? true : false;
             chartZone2.Series["T-13"].Enabled = checkT13.Checked ? (TAVG13 = true) : (TAVG13 = false);
-        }
+        }*/
 
         bool toggleScaleZone2 = true;
         private void btnScaleToggleZone2_Click(object sender, EventArgs e)
