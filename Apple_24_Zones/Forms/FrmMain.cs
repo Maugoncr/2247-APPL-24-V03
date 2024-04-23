@@ -1240,6 +1240,7 @@ namespace Apple_24_Zones.Forms
             Visualizador.Show();
         }
 
+        // Chiller & Leds COM PORT
         private void btnConnectCOM2_Click(object sender, EventArgs e)
         {
             if (btnConnectCOM2.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
@@ -1248,13 +1249,14 @@ namespace Apple_24_Zones.Forms
                 {
                     serialPort2.PortName = cbCOMSelect2.Text;
                     serialPort2.Open();
-                    serialPort2.DataReceived += new SerialDataReceivedEventHandler(serialPort2_DataReceived_1);
 
                     btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
                     btnRefreshCOM2.Enabled = false;
 
-                    timerRequestTemps.Start();
-                    timerGraficarCharts.Start();
+                    EncenderRojo();
+
+                    //timerRequestTemps.Start();
+                    //timerGraficarCharts.Start();
                 }
                 catch (Exception ex)
                 {
@@ -1265,10 +1267,9 @@ namespace Apple_24_Zones.Forms
             {
                 if (serialPort2.IsOpen)
                 {
-                    serialPort2.Close();
+                    ApagarAllLeds();
 
-                    timerRequestTemps.Stop();
-                    timerGraficarCharts.Stop();
+                    serialPort2.Close();
 
                     btnConnectCOM2.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
                     btnRefreshCOM2.Enabled = true;
@@ -1276,6 +1277,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        // Omron COM PORT
         private void btnConnectCOM1_Click(object sender, EventArgs e)
         {
             if (btnConnectCOM1.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
@@ -1284,19 +1286,12 @@ namespace Apple_24_Zones.Forms
                 {
                     btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
                     btnRefreshCOM1.Enabled = false;
-
-                    EncenderRojo();
-                    //SIMULATION
-                   // timerSimulationCharts.Start();
-                   //timerSimulationDownUp.Start();
                 }
             }
             else
             {
                 if (serialPort1.IsOpen)
                 {
-                    ApagarAllLeds();
-
                     serialPort1.Close();
                     btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
                     btnRefreshCOM1.Enabled = true;
@@ -1345,7 +1340,7 @@ namespace Apple_24_Zones.Forms
         {
             try
             {
-                if (serialPort1.IsOpen)
+                if (serialPort1.IsOpen && serialPort2.IsOpen)
                 {
                     string input = txtPutSetpoint1.Text;
 
@@ -1480,17 +1475,17 @@ namespace Apple_24_Zones.Forms
 
         private void SetConfigSerialPortForChiller()
         {
-            serialPort1.DataBits = 8;
-            serialPort1.Parity = Parity.None;
-            serialPort1.StopBits = StopBits.One;
-            serialPort1.WriteTimeout = -1;
+            serialPort2.DataBits = 8;
+            serialPort2.Parity = Parity.None;
+            serialPort2.StopBits = StopBits.One;
+            serialPort2.WriteTimeout = -1;
         }
 
         //ENCENDER LUCES
         private void setConfigSerialPortLeds()
         {
-            serialPort1.DataBits = 8;
-            serialPort1.Parity = Parity.None;
+            serialPort2.DataBits = 8;
+            serialPort2.Parity = Parity.None;
         }
 
         private void EncenderRojo()
@@ -1502,7 +1497,7 @@ namespace Apple_24_Zones.Forms
             picYellow.Image = Resources.tc3off;
             picRed.Image.Dispose();
             picRed.Image = Resources.tc1on;
-            serialPort1.Write("#070004" + "\r");
+            serialPort2.Write("#070004" + "\r");
         }
         private void EncenderVerde()
         {
@@ -1513,7 +1508,7 @@ namespace Apple_24_Zones.Forms
             picYellow.Image = Resources.tc3off;
             picRed.Image.Dispose();
             picRed.Image = Resources.tc1off;
-            serialPort1.Write("#070001" + "\r");
+            serialPort2.Write("#070001" + "\r");
         }
 
         private void EncenderAmarillo()
@@ -1525,7 +1520,7 @@ namespace Apple_24_Zones.Forms
             picYellow.Image = Resources.tc3on;
             picRed.Image.Dispose();
             picRed.Image = Resources.tc1off;
-            serialPort1.Write("#070002" + "\r");
+            serialPort2.Write("#070002" + "\r");
         }
 
         private void EncenderAllLeds()
@@ -1537,7 +1532,7 @@ namespace Apple_24_Zones.Forms
             picYellow.Image = Resources.tc3on;
             picRed.Image.Dispose();
             picRed.Image = Resources.tc1on;
-            serialPort1.Write("#070007" + "\r");
+            serialPort2.Write("#070007" + "\r");
         }
 
         private void ApagarAllLeds()
@@ -1629,7 +1624,7 @@ namespace Apple_24_Zones.Forms
                     {
                         binaryData[i] = Convert.ToByte(hexBytes[i], 16);
                     }
-                    serialPort1.Write(binaryData, 0, binaryData.Length);
+                    serialPort2.Write(binaryData, 0, binaryData.Length);
                     
                 }
 
@@ -1707,7 +1702,7 @@ namespace Apple_24_Zones.Forms
                     {
                         binaryData[i] = Convert.ToByte(hexBytes[i], 16);
                     }
-                    serialPort1.Write(binaryData, 0, binaryData.Length);
+                    serialPort2.Write(binaryData, 0, binaryData.Length);
                 }
             }
         }
@@ -1716,7 +1711,7 @@ namespace Apple_24_Zones.Forms
         {
             try
             {
-                if (serialPort1.IsOpen)
+                if (serialPort1.IsOpen && serialPort2.IsOpen)
                 {
                     string input = txtPutSetpoint2.Text;
                     if (int.TryParse(input, out int number))
@@ -3898,9 +3893,9 @@ namespace Apple_24_Zones.Forms
                     binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
 
                 }
-                if (serialPort1.IsOpen)
+                if (serialPort2.IsOpen)
                 {
-                    serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
+                    serialPort2.Write(binaryDataOn, 0, binaryDataOn.Length);
                 }
             }
             catch (Exception ex)
@@ -3936,9 +3931,9 @@ namespace Apple_24_Zones.Forms
                 {
                     binaryDataOn[i] = Convert.ToByte(hexBytesOn[i], 16);
                 }
-                if (serialPort1.IsOpen)
+                if (serialPort2.IsOpen)
                 {
-                    serialPort1.Write(binaryDataOn, 0, binaryDataOn.Length);
+                    serialPort2.Write(binaryDataOn, 0, binaryDataOn.Length);
                 }
             }
             catch (Exception ex)
