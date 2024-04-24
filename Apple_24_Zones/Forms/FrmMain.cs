@@ -50,15 +50,15 @@ namespace Apple_24_Zones.Forms
             txtView11.Paint += TextBox_Paint;
             txtView12.Paint += TextBox_Paint;
 
-           txtPutSetpoint1.Paint += txtRealsBorder;
-           txtPutSetpoint2.Paint += TextBox_Paint;
-           lbC1.Paint += TextBox_Paint;
-           lbC2.Paint += TextBox_Paint;
+            txtPutSetpoint1.Paint += txtRealsBorder;
+            txtPutSetpoint2.Paint += TextBox_Paint;
+            lbC1.Paint += TextBox_Paint;
+            lbC2.Paint += TextBox_Paint;
         }
 
         //ZONE TO VARIABLES
         private StreamWriter streamWriterZone1;
-        private string tempFileName1; 
+        private string tempFileName1;
 
         private StreamWriter streamWriterZone2;
         private string tempFileName2;
@@ -74,11 +74,11 @@ namespace Apple_24_Zones.Forms
 
         string viewChart = "Both";
 
-        double rt1 = 0;                              
+        double rt1 = 0;
         double temp1 = 0;
-        double rt2 = 0;                              
+        double rt2 = 0;
         double temp2 = 0;
-        double rtView = 0;                            
+        double rtView = 0;
         double tempView = 0;
 
         double AVGZona1, AVGZona2;
@@ -543,8 +543,8 @@ namespace Apple_24_Zones.Forms
         {
             viewChart = "Both";
             ChangeViewChartZone();
-            rt1 = 0;temp1 = 0;
-            rt2 = 0;temp2 = 0;
+            rt1 = 0; temp1 = 0;
+            rt2 = 0; temp2 = 0;
             rtView = 0; tempView = 0;
         }
 
@@ -697,8 +697,8 @@ namespace Apple_24_Zones.Forms
                         inicioRecordZone2 = DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss");
                         firstEntranceZone2 = false;
                     }
-                        streamWriterZone2.WriteLine(DateTime.Now.ToString("MM/dd/yyyy") + "," + DateTime.Now.ToString("HH:mm:ss") + "," + TFO13 + ","
-                         + TFO14 + "," + TFO15 + "," + TFO16 + "," + TFO17 + "," + TFO18 + "," + TFO19 + "," + TFO20 + "," + TFO21 + "," + TFO22 + "," + TFO23 + "," + TFO24);
+                    streamWriterZone2.WriteLine(DateTime.Now.ToString("MM/dd/yyyy") + "," + DateTime.Now.ToString("HH:mm:ss") + "," + TFO13 + ","
+                     + TFO14 + "," + TFO15 + "," + TFO16 + "," + TFO17 + "," + TFO18 + "," + TFO19 + "," + TFO20 + "," + TFO21 + "," + TFO22 + "," + TFO23 + "," + TFO24);
                 }
 
             }
@@ -721,7 +721,7 @@ namespace Apple_24_Zones.Forms
             //Record
 
             btnRecordZone1.Text = "Record"; btnRecordZone1.ForeColor = Color.Black; btnRecordZone1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
-            btnRecordZone1.Size = new Size(109,33); btnRecordZone1.Location = new Point(409,234);
+            btnRecordZone1.Size = new Size(109, 33); btnRecordZone1.Location = new Point(409, 234);
             btnRecordZone2.Text = "Record"; btnRecordZone2.ForeColor = Color.Black; btnRecordZone2.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
             btnRecordZone2.Size = new Size(109, 33); btnRecordZone2.Location = new Point(409, 234);
 
@@ -872,7 +872,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-       
+
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
@@ -961,57 +961,57 @@ namespace Apple_24_Zones.Forms
 
             if (viewChart == "Both")
             {
-               /* double numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone2.Series["T-13"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC13.Text = numeroAleatorio.ToString() + " °C";
+                /* double numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone2.Series["T-13"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC13.Text = numeroAleatorio.ToString() + " °C";
 
-                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone1.Series["T-1"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC1.Text = numeroAleatorio.ToString() + " °C";
+                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone1.Series["T-1"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC1.Text = numeroAleatorio.ToString() + " °C";
 
-                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone1.Series["T-2"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC2.Text = numeroAleatorio.ToString() + " °C";
+                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone1.Series["T-2"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC2.Text = numeroAleatorio.ToString() + " °C";
 
-                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone1.Series["T-3"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC3.Text = numeroAleatorio.ToString() + " °C";
+                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone1.Series["T-3"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC3.Text = numeroAleatorio.ToString() + " °C";
 
-                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone1.Series["T-4"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC4.Text = numeroAleatorio.ToString() + " °C";
+                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone1.Series["T-4"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC4.Text = numeroAleatorio.ToString() + " °C";
 
-                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone1.Series["T-5"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC5.Text = numeroAleatorio.ToString() + " °C";
+                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone1.Series["T-5"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC5.Text = numeroAleatorio.ToString() + " °C";
 
-                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone1.Series["T-6"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC6.Text = numeroAleatorio.ToString() + " °C";
+                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone1.Series["T-6"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC6.Text = numeroAleatorio.ToString() + " °C";
 
-                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone1.Series["T-7"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC7.Text = numeroAleatorio.ToString() + " °C";
+                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone1.Series["T-7"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC7.Text = numeroAleatorio.ToString() + " °C";
 
-                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone1.Series["T-8"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC8.Text = numeroAleatorio.ToString() + " °C";
+                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone1.Series["T-8"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC8.Text = numeroAleatorio.ToString() + " °C";
 
-                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone1.Series["T-9"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC9.Text = numeroAleatorio.ToString() + " °C";
+                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone1.Series["T-9"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC9.Text = numeroAleatorio.ToString() + " °C";
 
-                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone1.Series["T-10"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC10.Text = numeroAleatorio.ToString() + " °C";
+                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone1.Series["T-10"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC10.Text = numeroAleatorio.ToString() + " °C";
 
-                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone1.Series["T-11"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC11.Text = numeroAleatorio.ToString() + " °C";
+                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone1.Series["T-11"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC11.Text = numeroAleatorio.ToString() + " °C";
 
-                numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
-                chartZone1.Series["T-12"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
-                txtTC12.Text = numeroAleatorio.ToString() + " °C";*/
+                 numeroAleatorio = random.NextDouble() * (2 * margen) + (setpoint - margen);
+                 chartZone1.Series["T-12"].Points.AddXY(temp.ToString(), numeroAleatorio.ToString());
+                 txtTC12.Text = numeroAleatorio.ToString() + " °C";*/
 
                 List<double> temperaturas = new List<double>();
 
@@ -1105,77 +1105,77 @@ namespace Apple_24_Zones.Forms
 
         }
 
-      /*  private void checkT1_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone1.Series["T-1"].Enabled = checkT1.Checked ? true : false;
-            chartZone1.Series["T-1"].Enabled = checkT1.Checked ? (TAVG1 = true) : (TAVG1 = false);
-        }
+        /*  private void checkT1_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone1.Series["T-1"].Enabled = checkT1.Checked ? true : false;
+              chartZone1.Series["T-1"].Enabled = checkT1.Checked ? (TAVG1 = true) : (TAVG1 = false);
+          }
 
-        private void checkT2_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone1.Series["T-2"].Enabled = checkT2.Checked ? true : false;
-            chartZone1.Series["T-2"].Enabled = checkT2.Checked ? (TAVG2 = true) : (TAVG2 = false);
-        }
+          private void checkT2_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone1.Series["T-2"].Enabled = checkT2.Checked ? true : false;
+              chartZone1.Series["T-2"].Enabled = checkT2.Checked ? (TAVG2 = true) : (TAVG2 = false);
+          }
 
-        private void checkT3_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone1.Series["T-3"].Enabled = checkT3.Checked ? true : false;
-            chartZone1.Series["T-3"].Enabled = checkT3.Checked ? (TAVG3 = true) : (TAVG3 = false);
-        }
+          private void checkT3_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone1.Series["T-3"].Enabled = checkT3.Checked ? true : false;
+              chartZone1.Series["T-3"].Enabled = checkT3.Checked ? (TAVG3 = true) : (TAVG3 = false);
+          }
 
-        private void checkT4_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone1.Series["T-4"].Enabled = checkT4.Checked ? true : false;
-            chartZone1.Series["T-4"].Enabled = checkT4.Checked ? (TAVG4 = true) : (TAVG4 = false);
-        }
+          private void checkT4_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone1.Series["T-4"].Enabled = checkT4.Checked ? true : false;
+              chartZone1.Series["T-4"].Enabled = checkT4.Checked ? (TAVG4 = true) : (TAVG4 = false);
+          }
 
-        private void checkT5_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone1.Series["T-5"].Enabled = checkT5.Checked ? true : false;
-            chartZone1.Series["T-5"].Enabled = checkT5.Checked ? (TAVG5 = true) : (TAVG5 = false);
-        }
+          private void checkT5_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone1.Series["T-5"].Enabled = checkT5.Checked ? true : false;
+              chartZone1.Series["T-5"].Enabled = checkT5.Checked ? (TAVG5 = true) : (TAVG5 = false);
+          }
 
-        private void checkT6_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone1.Series["T-6"].Enabled = checkT6.Checked ? true : false;
-            chartZone1.Series["T-6"].Enabled = checkT6.Checked ? (TAVG6 = true) : (TAVG6 = false);
-        }
+          private void checkT6_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone1.Series["T-6"].Enabled = checkT6.Checked ? true : false;
+              chartZone1.Series["T-6"].Enabled = checkT6.Checked ? (TAVG6 = true) : (TAVG6 = false);
+          }
 
-        private void checkT7_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone1.Series["T-7"].Enabled = checkT7.Checked ? true : false;
-            chartZone1.Series["T-7"].Enabled = checkT7.Checked ? (TAVG7 = true) : (TAVG7 = false);
-        }
+          private void checkT7_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone1.Series["T-7"].Enabled = checkT7.Checked ? true : false;
+              chartZone1.Series["T-7"].Enabled = checkT7.Checked ? (TAVG7 = true) : (TAVG7 = false);
+          }
 
-        private void checkT8_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone1.Series["T-8"].Enabled = checkT8.Checked ? true : false;
-            chartZone1.Series["T-8"].Enabled = checkT8.Checked ? (TAVG8 = true) : (TAVG8 = false);
-        }
+          private void checkT8_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone1.Series["T-8"].Enabled = checkT8.Checked ? true : false;
+              chartZone1.Series["T-8"].Enabled = checkT8.Checked ? (TAVG8 = true) : (TAVG8 = false);
+          }
 
-        private void checkT9_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone1.Series["T-9"].Enabled = checkT9.Checked ? true : false;
-            chartZone1.Series["T-9"].Enabled = checkT9.Checked ? (TAVG9 = true) : (TAVG9 = false);
-        }
+          private void checkT9_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone1.Series["T-9"].Enabled = checkT9.Checked ? true : false;
+              chartZone1.Series["T-9"].Enabled = checkT9.Checked ? (TAVG9 = true) : (TAVG9 = false);
+          }
 
-        private void checkT10_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone1.Series["T-10"].Enabled = checkT10.Checked ? true : false;
-            chartZone1.Series["T-10"].Enabled = checkT10.Checked ? (TAVG10 = true) : (TAVG10 = false);
-        }
+          private void checkT10_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone1.Series["T-10"].Enabled = checkT10.Checked ? true : false;
+              chartZone1.Series["T-10"].Enabled = checkT10.Checked ? (TAVG10 = true) : (TAVG10 = false);
+          }
 
-        private void checkT11_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone1.Series["T-11"].Enabled = checkT11.Checked ? true : false;
-            chartZone1.Series["T-11"].Enabled = checkT11.Checked ? (TAVG11 = true) : (TAVG11 = false);
-        }
+          private void checkT11_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone1.Series["T-11"].Enabled = checkT11.Checked ? true : false;
+              chartZone1.Series["T-11"].Enabled = checkT11.Checked ? (TAVG11 = true) : (TAVG11 = false);
+          }
 
-        private void checkT12_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone1.Series["T-12"].Enabled = checkT12.Checked ? true : false;
-            chartZone1.Series["T-12"].Enabled = checkT12.Checked ? (TAVG12 = true) : (TAVG12 = false);
-        }*/
+          private void checkT12_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone1.Series["T-12"].Enabled = checkT12.Checked ? true : false;
+              chartZone1.Series["T-12"].Enabled = checkT12.Checked ? (TAVG12 = true) : (TAVG12 = false);
+          }*/
 
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1336,143 +1336,7 @@ namespace Apple_24_Zones.Forms
             CreateBorderPanel(sender, e);
         }
 
-        private void btnApplySetpoint1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (serialPort1.IsOpen && serialPort2.IsOpen)
-                {
-                    string input = txtPutSetpoint1.Text;
 
-                    if (int.TryParse(input, out int number))
-                    {
-                        // Comprueba si el número está en el rango de 5 a 85
-                        if (number >= 5 && number <= 85)
-                        {
-                            int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
-
-                            if (setpoint >= 27 && setpoint <= 85)
-                            {
-                                try
-                                {
-                                    SendSetTempHeaterAndTurnItOn(1);
-                                    CountOmronUse(1);
-
-                                    picProcess1.Image.Dispose();
-                                    picProcess1.Image = Resources.LedRedHeating2;
-                                    picUpDown1.Image.Dispose();
-                                    picUpDown1.Image = Resources.arrowUpRed21;
-
-                                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
-                                    if (customForm.ShowDialog() == DialogResult.OK)
-                                    {
-                                        ApagarChillerZone(1);
-
-                                        Thread.Sleep(50);
-
-                                        EncenderVerde();
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
-                            else if (setpoint >= 21 && setpoint <= 26)
-                            {
-                                try
-                                {
-
-                                    SendSetTempHeaterAndTurnItOn(1);
-                                    CountOmronUse(1);
-
-                                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
-                                    if (customForm.ShowDialog() == DialogResult.OK)
-                                    {
-                                        EncenderChillerZone(1);
-                                        CountChillerUse(1);
-
-                                        Thread.Sleep(100);
-                                        SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
-
-                                        // Tenemos que dejar a temperatura ambiente
-                                        picUpDown1.Image.Dispose();
-                                        picUpDown1.Image = Resources.neutroWhite;
-                                        picProcess1.Image.Dispose();
-                                        picProcess1.Image = Resources.LedWhite1;
-
-                                        EncenderVerde();
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-
-                            }
-                            else if (setpoint >= 5 && setpoint <= 20)
-                            {
-                                try
-                                {
-                                    SendSetTempHeaterAndTurnItOn(1);
-                                    CountOmronUse(1);
-
-                                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
-                                    if (customForm.ShowDialog() == DialogResult.OK)
-                                    {
-                                        EncenderChillerZone(1);
-                                        CountChillerUse(1);
-
-                                        Thread.Sleep(100);
-                                        SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
-
-                                        picUpDown1.Image.Dispose();
-                                        picUpDown1.Image = Resources.arrowDownBlue2;
-                                        picProcess1.Image.Dispose();
-                                        picProcess1.Image = Resources.LedBlueCooling2;
-
-                                        EncenderVerde();
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-
-                            }
-                            Zona1Encendida = true;
-                            if (Zona2Encendida && Zona1Encendida)
-                            {
-                                ThereIsTwoProcessRN = true;
-                            }
-                            else
-                            {
-                                ThereIsTwoProcessRN = false;
-                            }
-
-                            lbStartDate1.Text = DateTime.Now.ToString("MM/dd/yyyy  HH:mm");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Please enter a number between 5 and 85", "Number out of range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Please enter a valid number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("SERIAL PORT IS CLOSE.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
-        }
 
         private void SetConfigSerialPortForChiller()
         {
@@ -1490,7 +1354,7 @@ namespace Apple_24_Zones.Forms
         }
 
         private void EncenderRojo()
-        { 
+        {
             setConfigSerialPortLeds();
             picGreen.Image.Dispose();
             picGreen.Image = Resources.tc8off;
@@ -1626,7 +1490,7 @@ namespace Apple_24_Zones.Forms
                         binaryData[i] = Convert.ToByte(hexBytes[i], 16);
                     }
                     serialPort2.Write(binaryData, 0, binaryData.Length);
-                    
+
                 }
 
             }
@@ -1708,6 +1572,140 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        private void btnApplySetpoint1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (serialPort1.IsOpen && serialPort2.IsOpen)
+                {
+                    string input = txtPutSetpoint1.Text;
+
+                    if (int.TryParse(input, out int number))
+                    {
+                        // Comprueba si el número está en el rango de 5 a 85
+                        if (number >= 5 && number <= 85)
+                        {
+                            int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
+
+                            if (setpoint >= 27 && setpoint <= 85)
+                            {
+                                try
+                                {
+                                    // QUE HACE EL OMRON
+                                    SendSetTempHeaterAndTurnItOn(1);
+                                    CountOmronUse(1);
+
+                                    // SE CAMBIAN LOS INDICADORES DEL PROCESO
+                                    picProcess1.Image.Dispose();
+                                    picProcess1.Image = Resources.LedRedHeating2;
+                                    picUpDown1.Image.Dispose();
+                                    picUpDown1.Image = Resources.arrowUpRed21;
+
+                                    // QUE HACE EL CHILLER
+                                    ApagarChillerZone(1);
+                                    Thread.Sleep(50);
+
+                                    // QUE HACEN LOS LEDS
+                                    EncenderVerde();
+
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else if (setpoint >= 21 && setpoint <= 26)
+                            {
+                                try
+                                {
+                                    // QUE HACE EL OMRON
+                                    SendSetTempHeaterAndTurnItOn(1);
+                                    CountOmronUse(1);
+
+                                    // QUE HACE EL CHILLER
+                                    EncenderChillerZone(1);
+                                    CountChillerUse(1);
+                                    Thread.Sleep(100);
+                                    SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+
+                                    // SE CAMBIAN LOS INDICADORES DEL PROCESO
+                                    picUpDown1.Image.Dispose();
+                                    picUpDown1.Image = Resources.neutroWhite;
+                                    picProcess1.Image.Dispose();
+                                    picProcess1.Image = Resources.LedWhite1;
+
+                                    // QUE HACEN LOS LEDS
+                                    EncenderVerde();
+
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
+                            }
+                            else if (setpoint >= 5 && setpoint <= 20)
+                            {
+                                try
+                                {
+                                    // QUE HACE EL OMRON
+                                    SendSetTempHeaterAndTurnItOn(1);
+                                    CountOmronUse(1);
+
+                                    // QUE HACE EL CHILLER
+                                    EncenderChillerZone(1);
+                                    CountChillerUse(1);
+                                    Thread.Sleep(100);
+                                    SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+
+                                    // SE CAMBIAN LOS INDICADORES DEL PROCESO
+                                    picUpDown1.Image.Dispose();
+                                    picUpDown1.Image = Resources.arrowDownBlue2;
+                                    picProcess1.Image.Dispose();
+                                    picProcess1.Image = Resources.LedBlueCooling2;
+
+                                    // QUE HACEN LOS LEDS
+                                    EncenderVerde();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
+                            }
+                            Zona1Encendida = true;
+                            if (Zona2Encendida && Zona1Encendida)
+                            {
+                                ThereIsTwoProcessRN = true;
+                            }
+                            else
+                            {
+                                ThereIsTwoProcessRN = false;
+                            }
+
+                            lbStartDate1.Text = DateTime.Now.ToString("MM/dd/yyyy  HH:mm");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please enter a number between 5 and 85", "Number out of range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a valid number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("SERIAL PORT IS CLOSE.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
         private void btnApplySetpoint2_Click(object sender, EventArgs e)
         {
             try
@@ -1721,29 +1719,28 @@ namespace Apple_24_Zones.Forms
                         if (number >= 5 && number <= 85)
                         {
                             int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
-                            // HEATING
+
+                            // HEATING RANGE
                             if (setpoint >= 27 && setpoint <= 85)
                             {
                                 try
                                 {
+                                    // QUE HACE EL OMRON
                                     SendSetTempHeaterAndTurnItOn(2);
                                     CountOmronUse(2);
 
+                                    // CAMBIAN LOS INDICADORES
                                     picProcess2.Image.Dispose();
                                     picProcess2.Image = Resources.LedRedHeating2;
                                     picUpDown2.Image.Dispose();
                                     picUpDown2.Image = Resources.arrowUpRed21;
 
-                                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+                                    // QUE HACE EL CHILLER
+                                    ApagarChillerZone(2);
+                                    Thread.Sleep(50);
 
-                                    if (customForm.ShowDialog() == DialogResult.OK)
-                                    {
-                                        ApagarChillerZone(2);
-
-                                        Thread.Sleep(50);
-
-                                        EncenderVerde();
-                                    }
+                                    // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                    EncenderVerde();
 
                                 }
                                 catch (Exception ex)
@@ -1756,28 +1753,25 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-
+                                    // QUE HACE EL OMRON
                                     SendSetTempHeaterAndTurnItOn(2);
                                     CountOmronUse(2);
 
-                                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+                                    // QUE HACE EL CHILLER
+                                    EncenderChillerZone(2);
+                                    CountChillerUse(2);
+                                    Thread.Sleep(100);
+                                    SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
 
-                                    if (customForm.ShowDialog() == DialogResult.OK)
-                                    {
-                                        EncenderChillerZone(2);
-                                        CountChillerUse(2);
+                                    // CAMBIAN LOS INDICADORES
+                                    picUpDown2.Image.Dispose();
+                                    picUpDown2.Image = Resources.neutroWhite;
+                                    picProcess2.Image.Dispose();
+                                    picProcess2.Image = Resources.LedWhite1;
 
-                                        Thread.Sleep(100);
+                                    // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                    EncenderVerde();
 
-                                        SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
-
-                                        picUpDown2.Image.Dispose();
-                                        picUpDown2.Image = Resources.neutroWhite;
-                                        picProcess2.Image.Dispose();
-                                        picProcess2.Image = Resources.LedWhite1;
-
-                                        EncenderVerde();
-                                    }
                                 }
                                 catch (Exception ex)
                                 {
@@ -1789,27 +1783,25 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
+                                    // QUE HACE EL OMRON
                                     SendSetTempHeaterAndTurnItOn(2);
                                     CountOmronUse(2);
 
-                                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
+                                    // QUE HACE EL CHILLER
+                                    EncenderChillerZone(2);
+                                    CountChillerUse(2);
+                                    Thread.Sleep(100);
+                                    SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
 
-                                    if (customForm.ShowDialog() == DialogResult.OK)
-                                    {
-                                        EncenderChillerZone(2);
-                                        CountChillerUse(2);
+                                    // CAMBIAN LOS INDICADORES
+                                    picUpDown2.Image.Dispose();
+                                    picUpDown2.Image = Resources.arrowDownBlue2;
+                                    picProcess2.Image.Dispose();
+                                    picProcess2.Image = Resources.LedBlueCooling2;
 
-                                        Thread.Sleep(100);
+                                    // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                    EncenderVerde();
 
-                                        SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
-
-                                        picUpDown2.Image.Dispose();
-                                        picUpDown2.Image = Resources.arrowDownBlue2;
-                                        picProcess2.Image.Dispose();
-                                        picProcess2.Image = Resources.LedBlueCooling2;
-
-                                        EncenderVerde();
-                                    }
                                 }
                                 catch (Exception ex)
                                 {
@@ -1849,7 +1841,6 @@ namespace Apple_24_Zones.Forms
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
 
         private void SetConfigSerialPortForHeater()
@@ -3649,7 +3640,7 @@ namespace Apple_24_Zones.Forms
                         break;
                 }
             }
-           
+
         }
 
         private void txtPutSetpoint1_KeyPress(object sender, KeyPressEventArgs e)
@@ -3657,7 +3648,7 @@ namespace Apple_24_Zones.Forms
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 MessageBox.Show("Only numbers are allowed to be entered", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Handled = true; 
+                e.Handled = true;
             }
         }
 
@@ -3666,7 +3657,7 @@ namespace Apple_24_Zones.Forms
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 MessageBox.Show("Only numbers are allowed to be entered", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Handled = true; 
+                e.Handled = true;
             }
         }
 
@@ -3674,7 +3665,7 @@ namespace Apple_24_Zones.Forms
         {
             string input = txtPutSetpoint2.Text;
             if (int.TryParse(input, out int number))
-            { 
+            {
                 if (number < 85)
                 {
                     number++;
@@ -3784,7 +3775,7 @@ namespace Apple_24_Zones.Forms
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        
+
         }
 
         private void btnStop2_Click(object sender, EventArgs e)
@@ -4097,7 +4088,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-       
+
 
         private void btnRecordZone1_Click(object sender, EventArgs e)
         {
@@ -4105,7 +4096,7 @@ namespace Apple_24_Zones.Forms
             {
                 btnRecordZone1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
                 RecordZone1 = true;
-                btnRecordZone1.Text = "Recording...";btnRecordZone1.ForeColor = Color.Red;
+                btnRecordZone1.Text = "Recording..."; btnRecordZone1.ForeColor = Color.Red;
                 btnRecordZone1.Size = new Size(145, 33); btnRecordZone1.Location = new Point(373, 234);
             }
             else
@@ -4217,7 +4208,7 @@ namespace Apple_24_Zones.Forms
                     MessageBox.Show("Error: " + sms.Message);
                 }
 
-              
+
             }
         }
 
@@ -4261,7 +4252,7 @@ namespace Apple_24_Zones.Forms
                     TAVG13 = false;
                 }
             }
-           
+
         }
 
         private void checkView2_CheckedChanged(object sender, EventArgs e)
@@ -4606,7 +4597,7 @@ namespace Apple_24_Zones.Forms
 
         private void panelGhost_Paint(object sender, PaintEventArgs e)
         {
-            CreateBorderPanel(sender,e);
+            CreateBorderPanel(sender, e);
         }
 
         private void txtPutSetpoint1_Leave_1(object sender, EventArgs e)
@@ -4651,9 +4642,9 @@ namespace Apple_24_Zones.Forms
                 // Se desactiva la flag, para que se deje de escribir dentro del StreamWriter que se ejecuta en el Timer.
                 RecordZone2 = false;
                 streamWriterZone2.Close();
-                
+
                 // Se define el nombre y ruta del archivo con el distintivo [AUTO-RECOVERY]
-                string recoveryFileName = "[AUTO-RECOVERY] ELEN II SOFTWARE RECORD ZONE 2 STARTED " + inicioRecordZone2 + " ENDED " + DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss")+".txt";
+                string recoveryFileName = "[AUTO-RECOVERY] ELEN II SOFTWARE RECORD ZONE 2 STARTED " + inicioRecordZone2 + " ENDED " + DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss") + ".txt";
                 string recoveryFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "ELEN II SOFTWARE");
 
                 // Creamos el subfolder si este no existe
@@ -4667,22 +4658,22 @@ namespace Apple_24_Zones.Forms
                 {
                     File.Delete(completeSafeFileName);
                 }
-                
+
                 // Tomamos los datos del archivo temporal donde hemos venido almacenando la información y lo copiamos en la ruta absoluta
                 File.Move(tempFileName2, completeSafeFileName);
 
                 // Eliminamos el archivo temporal
                 File.Delete(tempFileName2);
             }
-             
+
             if (btnRecordZone1.IconChar == FontAwesome.Sharp.IconChar.ToggleOn)
             {
                 // Se desactiva la flag, para que se deje de escribir dentro del StreamWriter que se ejecuta en el Timer.
                 RecordZone1 = false;
                 streamWriterZone1.Close();
-                
+
                 // Se define el nombre y ruta del archivo con el distintivo [AUTO-RECOVERY]
-                string recoveryFileName = "[AUTO-RECOVERY] ELEN II SOFTWARE RECORD ZONE 1 STARTED " + inicioRecordZone1 + " ENDED " + DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss")+".txt";
+                string recoveryFileName = "[AUTO-RECOVERY] ELEN II SOFTWARE RECORD ZONE 1 STARTED " + inicioRecordZone1 + " ENDED " + DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss") + ".txt";
                 string recoveryFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "ELEN II SOFTWARE");
 
                 // Creamos el subfolder si este no existe
@@ -4690,50 +4681,50 @@ namespace Apple_24_Zones.Forms
 
                 //Creamos una variable con nuestra ruta absoluta
                 string completeSafeFileName = Path.Combine(recoveryFilePath, recoveryFileName);
-                
+
                 //Si el archivo ya existe, lo eliminamos
                 if (File.Exists(completeSafeFileName))
                 {
                     File.Delete(completeSafeFileName);
                 }
-                
+
                 //Tomamos los datos del archivo temporal donde hemos venido almacenando la información y lo copiamos en la ruta absoluta
                 File.Move(tempFileName1, completeSafeFileName);
-                
+
                 //Eliminamos el archivo temporal
                 File.Delete(tempFileName1);
             }
         }
 
-        private void ResetTAVG() 
+        private void ResetTAVG()
         {
-             TAVG1 = true;
-             TAVG2 = true;
-             TAVG3 = true;
-             TAVG4 = true;
-             TAVG5 = true;
-             TAVG6 = true;
-             TAVG7 = true;
-             TAVG8 = true;
-             TAVG9 = true;
-             TAVG10 = true;
-             TAVG11 = true;
-             TAVG12 = true;
-             TAVG13 = true;
-             TAVG14 = true;
-             TAVG15 = true;
-             TAVG16 = true;
-             TAVG17 = true;
-             TAVG18 = true;
-             TAVG19 = true;
-             TAVG20 = true;
-             TAVG21 = true;
-             TAVG22 = true;
-             TAVG23 = true;
-             TAVG24 = true;
+            TAVG1 = true;
+            TAVG2 = true;
+            TAVG3 = true;
+            TAVG4 = true;
+            TAVG5 = true;
+            TAVG6 = true;
+            TAVG7 = true;
+            TAVG8 = true;
+            TAVG9 = true;
+            TAVG10 = true;
+            TAVG11 = true;
+            TAVG12 = true;
+            TAVG13 = true;
+            TAVG14 = true;
+            TAVG15 = true;
+            TAVG16 = true;
+            TAVG17 = true;
+            TAVG18 = true;
+            TAVG19 = true;
+            TAVG20 = true;
+            TAVG21 = true;
+            TAVG22 = true;
+            TAVG23 = true;
+            TAVG24 = true;
         }
 
-      
+
 
         private void FrmMain_KeyDown(object sender, KeyEventArgs e)
         {
@@ -4756,7 +4747,8 @@ namespace Apple_24_Zones.Forms
         }
 
 
-        private void AlterarOffSets() {
+        private void AlterarOffSets()
+        {
 
             double AT1 = Convert.ToDouble(TF1);
             double AT2 = Convert.ToDouble(TF2);
@@ -4883,8 +4875,9 @@ namespace Apple_24_Zones.Forms
             foreach (var kvp in rangosYValoresARestar2)
             {
                 double valorARestar = kvp.Value;
-               
-                if (AT18 >= kvp.Key.Item1 && AT18 < kvp.Key.Item2) { 
+
+                if (AT18 >= kvp.Key.Item1 && AT18 < kvp.Key.Item2)
+                {
                     AT13 -= valorARestar;
                     AT14 -= valorARestar;
                     AT15 -= valorARestar;
@@ -4942,7 +4935,7 @@ namespace Apple_24_Zones.Forms
 
                     txtZONE1Testing.Text = TF1 + " | " + TF2 + " | " + TF3 + " | " + TF4 + " | " + TF5 + " | " + TF6 + " | " + TF7 + " | " + TF8 + " | " + TF9 + " | " +
                     TF10 + " | " + TF11 + " | " + TF12;
-                   
+
                     txtZONE2Testing.Text = TF13 + " | " + TF14 + " | " + TF15 + " | " + TF16 + " | " + TF17 + " | " + TF18 + " | " + TF19 + " | " + TF20 + " | " + TF21 + " | " +
                     TF22 + " | " + TF23 + " | " + TF24;
                 }
@@ -4953,37 +4946,37 @@ namespace Apple_24_Zones.Forms
                 }
 
                 AlterarOffSets();
-                
+
                 if (viewChart == "Both")
                 {
                     // ZONA 1 
                     rt1 = rt1 + 100;
                     temp1 = rt1 / 1000;
 
-                  /*  chartZone1.Series["T-1"].Points.AddXY(temp1.ToString(), TFO1.ToString());
-                    txtTC1.Text = TFO1;
-                    chartZone1.Series["T-2"].Points.AddXY(temp1.ToString(), TFO2.ToString());
-                    txtTC2.Text = TFO2;
-                    chartZone1.Series["T-3"].Points.AddXY(temp1.ToString(), TFO3.ToString());
-                    txtTC3.Text = TFO3;
-                    chartZone1.Series["T-4"].Points.AddXY(temp1.ToString(), TFO4.ToString());
-                    txtTC4.Text = TFO4;
-                    chartZone1.Series["T-5"].Points.AddXY(temp1.ToString(), TFO5.ToString());
-                    txtTC5.Text = TFO5;
-                    chartZone1.Series["T-6"].Points.AddXY(temp1.ToString(), TFO6.ToString());
-                    txtTC6.Text = TFO6;
-                    chartZone1.Series["T-7"].Points.AddXY(temp1.ToString(), TFO7.ToString());
-                    txtTC7.Text = TFO7;
-                    chartZone1.Series["T-8"].Points.AddXY(temp1.ToString(), TFO8.ToString());
-                    txtTC8.Text = TFO8;
-                    chartZone1.Series["T-9"].Points.AddXY(temp1.ToString(), TFO9.ToString());
-                    txtTC9.Text = TFO9;
-                    chartZone1.Series["T-10"].Points.AddXY(temp1.ToString(), TFO10.ToString());
-                    txtTC10.Text = TFO10;
-                    chartZone1.Series["T-11"].Points.AddXY(temp1.ToString(), TFO11.ToString());
-                    txtTC11.Text = TFO11;
-                    chartZone1.Series["T-12"].Points.AddXY(temp1.ToString(), TFO12.ToString());
-                    txtTC12.Text = TFO12;*/
+                    /*  chartZone1.Series["T-1"].Points.AddXY(temp1.ToString(), TFO1.ToString());
+                      txtTC1.Text = TFO1;
+                      chartZone1.Series["T-2"].Points.AddXY(temp1.ToString(), TFO2.ToString());
+                      txtTC2.Text = TFO2;
+                      chartZone1.Series["T-3"].Points.AddXY(temp1.ToString(), TFO3.ToString());
+                      txtTC3.Text = TFO3;
+                      chartZone1.Series["T-4"].Points.AddXY(temp1.ToString(), TFO4.ToString());
+                      txtTC4.Text = TFO4;
+                      chartZone1.Series["T-5"].Points.AddXY(temp1.ToString(), TFO5.ToString());
+                      txtTC5.Text = TFO5;
+                      chartZone1.Series["T-6"].Points.AddXY(temp1.ToString(), TFO6.ToString());
+                      txtTC6.Text = TFO6;
+                      chartZone1.Series["T-7"].Points.AddXY(temp1.ToString(), TFO7.ToString());
+                      txtTC7.Text = TFO7;
+                      chartZone1.Series["T-8"].Points.AddXY(temp1.ToString(), TFO8.ToString());
+                      txtTC8.Text = TFO8;
+                      chartZone1.Series["T-9"].Points.AddXY(temp1.ToString(), TFO9.ToString());
+                      txtTC9.Text = TFO9;
+                      chartZone1.Series["T-10"].Points.AddXY(temp1.ToString(), TFO10.ToString());
+                      txtTC10.Text = TFO10;
+                      chartZone1.Series["T-11"].Points.AddXY(temp1.ToString(), TFO11.ToString());
+                      txtTC11.Text = TFO11;
+                      chartZone1.Series["T-12"].Points.AddXY(temp1.ToString(), TFO12.ToString());
+                      txtTC12.Text = TFO12;*/
 
                     List<double> temperaturas1 = new List<double>();
                     string[] temperaturasF1 = { TFO1, TFO2, TFO3, TFO4, TFO5, TFO6, TFO7, TFO8, TFO9, TFO10, TFO11, TFO12 };
@@ -5011,42 +5004,42 @@ namespace Apple_24_Zones.Forms
 
                     if (chartZone1.Series["T-1"].Points.Count == 101)
                     {
-                        chartZone1.Series["T-1"].Points.RemoveAt(0);chartZone1.Series["T-2"].Points.RemoveAt(0);
-                        chartZone1.Series["T-3"].Points.RemoveAt(0);chartZone1.Series["T-4"].Points.RemoveAt(0);
-                        chartZone1.Series["T-5"].Points.RemoveAt(0);chartZone1.Series["T-6"].Points.RemoveAt(0);
-                        chartZone1.Series["T-7"].Points.RemoveAt(0);chartZone1.Series["T-8"].Points.RemoveAt(0);
-                        chartZone1.Series["T-9"].Points.RemoveAt(0);chartZone1.Series["T-10"].Points.RemoveAt(0);
-                        chartZone1.Series["T-11"].Points.RemoveAt(0);chartZone1.Series["T-12"].Points.RemoveAt(0);
+                        chartZone1.Series["T-1"].Points.RemoveAt(0); chartZone1.Series["T-2"].Points.RemoveAt(0);
+                        chartZone1.Series["T-3"].Points.RemoveAt(0); chartZone1.Series["T-4"].Points.RemoveAt(0);
+                        chartZone1.Series["T-5"].Points.RemoveAt(0); chartZone1.Series["T-6"].Points.RemoveAt(0);
+                        chartZone1.Series["T-7"].Points.RemoveAt(0); chartZone1.Series["T-8"].Points.RemoveAt(0);
+                        chartZone1.Series["T-9"].Points.RemoveAt(0); chartZone1.Series["T-10"].Points.RemoveAt(0);
+                        chartZone1.Series["T-11"].Points.RemoveAt(0); chartZone1.Series["T-12"].Points.RemoveAt(0);
                     }
 
                     //ZONA 2
                     rt2 = rt2 + 100;
                     temp2 = rt2 / 1000;
 
-                 /*   chartZone2.Series["T-13"].Points.AddXY(temp2.ToString(), TFO13.ToString());
-                    txtTC13.Text = TFO13;
-                    chartZone2.Series["T-14"].Points.AddXY(temp2.ToString(), TFO14.ToString());
-                    txtTC14.Text = TFO14;
-                    chartZone2.Series["T-15"].Points.AddXY(temp2.ToString(), TFO15.ToString());
-                    txtTC15.Text = TFO15;
-                    chartZone2.Series["T-16"].Points.AddXY(temp2.ToString(), TFO16.ToString());
-                    txtTC16.Text = TFO16;
-                    chartZone2.Series["T-17"].Points.AddXY(temp2.ToString(), TFO17.ToString());
-                    txtTC17.Text = TFO17;
-                    chartZone2.Series["T-18"].Points.AddXY(temp2.ToString(), TFO18.ToString());
-                    txtTC18.Text = TFO18;
-                    chartZone2.Series["T-19"].Points.AddXY(temp2.ToString(), TFO19.ToString());
-                    txtTC19.Text = TFO19;
-                    chartZone2.Series["T-20"].Points.AddXY(temp2.ToString(), TFO20.ToString());
-                    txtTC20.Text = TFO20;
-                    chartZone2.Series["T-21"].Points.AddXY(temp2.ToString(), TFO21.ToString());
-                    txtTC21.Text = TFO21;
-                    chartZone2.Series["T-22"].Points.AddXY(temp2.ToString(), TFO22.ToString());
-                    txtTC22.Text = TFO22;
-                    chartZone2.Series["T-23"].Points.AddXY(temp2.ToString(), TFO23.ToString());
-                    txtTC23.Text = TFO23;
-                    chartZone2.Series["T-24"].Points.AddXY(temp2.ToString(), TFO24.ToString());
-                    txtTC24.Text = TFO24;*/
+                    /*   chartZone2.Series["T-13"].Points.AddXY(temp2.ToString(), TFO13.ToString());
+                       txtTC13.Text = TFO13;
+                       chartZone2.Series["T-14"].Points.AddXY(temp2.ToString(), TFO14.ToString());
+                       txtTC14.Text = TFO14;
+                       chartZone2.Series["T-15"].Points.AddXY(temp2.ToString(), TFO15.ToString());
+                       txtTC15.Text = TFO15;
+                       chartZone2.Series["T-16"].Points.AddXY(temp2.ToString(), TFO16.ToString());
+                       txtTC16.Text = TFO16;
+                       chartZone2.Series["T-17"].Points.AddXY(temp2.ToString(), TFO17.ToString());
+                       txtTC17.Text = TFO17;
+                       chartZone2.Series["T-18"].Points.AddXY(temp2.ToString(), TFO18.ToString());
+                       txtTC18.Text = TFO18;
+                       chartZone2.Series["T-19"].Points.AddXY(temp2.ToString(), TFO19.ToString());
+                       txtTC19.Text = TFO19;
+                       chartZone2.Series["T-20"].Points.AddXY(temp2.ToString(), TFO20.ToString());
+                       txtTC20.Text = TFO20;
+                       chartZone2.Series["T-21"].Points.AddXY(temp2.ToString(), TFO21.ToString());
+                       txtTC21.Text = TFO21;
+                       chartZone2.Series["T-22"].Points.AddXY(temp2.ToString(), TFO22.ToString());
+                       txtTC22.Text = TFO22;
+                       chartZone2.Series["T-23"].Points.AddXY(temp2.ToString(), TFO23.ToString());
+                       txtTC23.Text = TFO23;
+                       chartZone2.Series["T-24"].Points.AddXY(temp2.ToString(), TFO24.ToString());
+                       txtTC24.Text = TFO24;*/
 
                     List<double> temperaturas2 = new List<double>();
                     string[] temperaturasF = { TFO13, TFO14, TFO15, TFO16, TFO17, TFO18, TFO19, TFO20, TFO21, TFO22, TFO23, TFO24 };
@@ -5257,76 +5250,76 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-      /*  private void checkT24_CheckedChanged(object sender, EventArgs e)
-        {
-            chartZone2.Series["T-24"].Enabled = checkT24.Checked ? (TAVG24 = true) : (TAVG24 = false);
-            //chartZone2.Series["T-24"].Enabled = checkT24.Checked ? true : false;
-        }
+        /*  private void checkT24_CheckedChanged(object sender, EventArgs e)
+          {
+              chartZone2.Series["T-24"].Enabled = checkT24.Checked ? (TAVG24 = true) : (TAVG24 = false);
+              //chartZone2.Series["T-24"].Enabled = checkT24.Checked ? true : false;
+          }
 
-        private void checkT23_CheckedChanged(object sender, EventArgs e)
-        {
-            chartZone2.Series["T-23"].Enabled = checkT23.Checked ? (TAVG23 = true) : (TAVG23 = false);
-            //chartZone2.Series["T-23"].Enabled = checkT23.Checked ? true : false;
-        }
+          private void checkT23_CheckedChanged(object sender, EventArgs e)
+          {
+              chartZone2.Series["T-23"].Enabled = checkT23.Checked ? (TAVG23 = true) : (TAVG23 = false);
+              //chartZone2.Series["T-23"].Enabled = checkT23.Checked ? true : false;
+          }
 
-        private void checkT22_CheckedChanged(object sender, EventArgs e)
-        {
-            chartZone2.Series["T-22"].Enabled = checkT22.Checked ? (TAVG22 = true) : (TAVG22 = false);
-            //chartZone2.Series["T-22"].Enabled = checkT22.Checked ? true : false;
-        }
+          private void checkT22_CheckedChanged(object sender, EventArgs e)
+          {
+              chartZone2.Series["T-22"].Enabled = checkT22.Checked ? (TAVG22 = true) : (TAVG22 = false);
+              //chartZone2.Series["T-22"].Enabled = checkT22.Checked ? true : false;
+          }
 
-        private void checkT21_CheckedChanged(object sender, EventArgs e)
-        {
-            chartZone2.Series["T-21"].Enabled = checkT21.Checked ? (TAVG21 = true) : (TAVG21 = false);
-            //chartZone2.Series["T-21"].Enabled = checkT21.Checked ? true : false;
-        }
+          private void checkT21_CheckedChanged(object sender, EventArgs e)
+          {
+              chartZone2.Series["T-21"].Enabled = checkT21.Checked ? (TAVG21 = true) : (TAVG21 = false);
+              //chartZone2.Series["T-21"].Enabled = checkT21.Checked ? true : false;
+          }
 
-        private void checkT20_CheckedChanged(object sender, EventArgs e)
-        {
-            chartZone2.Series["T-20"].Enabled = checkT20.Checked ? (TAVG20 = true) : (TAVG20 = false);
-            //chartZone2.Series["T-20"].Enabled = checkT20.Checked ? true : false;
-        }
+          private void checkT20_CheckedChanged(object sender, EventArgs e)
+          {
+              chartZone2.Series["T-20"].Enabled = checkT20.Checked ? (TAVG20 = true) : (TAVG20 = false);
+              //chartZone2.Series["T-20"].Enabled = checkT20.Checked ? true : false;
+          }
 
-        private void checkT19_CheckedChanged(object sender, EventArgs e)
-        {
-            chartZone2.Series["T-19"].Enabled = checkT19.Checked ? (TAVG19 = true) : (TAVG19 = false);
-            //chartZone2.Series["T-19"].Enabled = checkT19.Checked ? true : false;
-        }
+          private void checkT19_CheckedChanged(object sender, EventArgs e)
+          {
+              chartZone2.Series["T-19"].Enabled = checkT19.Checked ? (TAVG19 = true) : (TAVG19 = false);
+              //chartZone2.Series["T-19"].Enabled = checkT19.Checked ? true : false;
+          }
 
-        private void checkT18_CheckedChanged(object sender, EventArgs e)
-        {
-            chartZone2.Series["T-18"].Enabled = checkT18.Checked ? (TAVG18 = true) : (TAVG18 = false);
-            // chartZone2.Series["T-18"].Enabled = checkT18.Checked ? true : false;
-        }
+          private void checkT18_CheckedChanged(object sender, EventArgs e)
+          {
+              chartZone2.Series["T-18"].Enabled = checkT18.Checked ? (TAVG18 = true) : (TAVG18 = false);
+              // chartZone2.Series["T-18"].Enabled = checkT18.Checked ? true : false;
+          }
 
-        private void checkT17_CheckedChanged(object sender, EventArgs e)
-        {
-            chartZone2.Series["T-17"].Enabled = checkT17.Checked ? (TAVG17 = true) : (TAVG17 = false);
-            //chartZone2.Series["T-17"].Enabled = checkT17.Checked ? true : false;
-        }
+          private void checkT17_CheckedChanged(object sender, EventArgs e)
+          {
+              chartZone2.Series["T-17"].Enabled = checkT17.Checked ? (TAVG17 = true) : (TAVG17 = false);
+              //chartZone2.Series["T-17"].Enabled = checkT17.Checked ? true : false;
+          }
 
-        private void checkT16_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone2.Series["T-16"].Enabled = checkT16.Checked ? true : false;
-            chartZone2.Series["T-16"].Enabled = checkT16.Checked ? (TAVG16 = true) : (TAVG16 = false);
-        }
+          private void checkT16_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone2.Series["T-16"].Enabled = checkT16.Checked ? true : false;
+              chartZone2.Series["T-16"].Enabled = checkT16.Checked ? (TAVG16 = true) : (TAVG16 = false);
+          }
 
-        private void checkT15_CheckedChanged(object sender, EventArgs e)
-        {
-            //chartZone2.Series["T-15"].Enabled = checkT15.Checked ? true : false;
-            chartZone2.Series["T-15"].Enabled = checkT15.Checked ? (TAVG15 = true) : (TAVG15 = false);
-        }
+          private void checkT15_CheckedChanged(object sender, EventArgs e)
+          {
+              //chartZone2.Series["T-15"].Enabled = checkT15.Checked ? true : false;
+              chartZone2.Series["T-15"].Enabled = checkT15.Checked ? (TAVG15 = true) : (TAVG15 = false);
+          }
 
-        private void checkT14_CheckedChanged(object sender, EventArgs e)
-        {
-            chartZone2.Series["T-14"].Enabled = checkT14.Checked ? (TAVG14 = true) : (TAVG14 = false);
-        }
+          private void checkT14_CheckedChanged(object sender, EventArgs e)
+          {
+              chartZone2.Series["T-14"].Enabled = checkT14.Checked ? (TAVG14 = true) : (TAVG14 = false);
+          }
 
-        private void checkT13_CheckedChanged(object sender, EventArgs e)
-        {
-           // chartZone2.Series["T-13"].Enabled = checkT13.Checked ? true : false;
-            chartZone2.Series["T-13"].Enabled = checkT13.Checked ? (TAVG13 = true) : (TAVG13 = false);
-        }*/
+          private void checkT13_CheckedChanged(object sender, EventArgs e)
+          {
+             // chartZone2.Series["T-13"].Enabled = checkT13.Checked ? true : false;
+              chartZone2.Series["T-13"].Enabled = checkT13.Checked ? (TAVG13 = true) : (TAVG13 = false);
+          }*/
 
         bool toggleScaleZone2 = true;
         private void btnScaleToggleZone2_Click(object sender, EventArgs e)
@@ -5355,7 +5348,7 @@ namespace Apple_24_Zones.Forms
             btnScaleToggleZone1.BackColor = Color.DarkGray;
         }
 
-      
+
 
         bool toggleScaleZone1 = true;
         private void btnScaleToggleZone1_Click(object sender, EventArgs e)
@@ -5364,7 +5357,7 @@ namespace Apple_24_Zones.Forms
             {
                 chartZone1.ChartAreas[0].AxisY.Maximum = double.NaN;
                 chartZone1.ChartAreas[0].AxisY.Minimum = 0;
-                toggleScaleZone1 = false;           
+                toggleScaleZone1 = false;
             }
             else
             {
@@ -5406,7 +5399,7 @@ namespace Apple_24_Zones.Forms
             panelTitleZone2.BackColor = Color.White;
         }
 
-    
+
 
         string cosaADescifrar = "3E2B3032352E31382B393939392E392B393939392E392B393939392E392B393939392E392B393939392E390D";
 
@@ -5466,14 +5459,14 @@ namespace Apple_24_Zones.Forms
                 case 1:
                     TF1 = HexStringToAscii(T1);
                     TF2 = HexStringToAscii(T2);
-                    TF3 = HexStringToAscii(T3);   
+                    TF3 = HexStringToAscii(T3);
                     TF4 = HexStringToAscii(T4);
                     TF5 = HexStringToAscii(T5);
                     TF6 = HexStringToAscii(T6);
                     whichRequestToSend = 2;
                     sendAgainRequest = true;
                     break;
-                    case 2:
+                case 2:
                     TF7 = HexStringToAscii(T6);
                     TF8 = HexStringToAscii(T5);
                     TF9 = HexStringToAscii(T4);
@@ -5483,7 +5476,7 @@ namespace Apple_24_Zones.Forms
                     whichRequestToSend = 3;
                     sendAgainRequest = true;
                     break;
-                    case 3:
+                case 3:
                     TF13 = HexStringToAscii(T1);
                     TF14 = HexStringToAscii(T2);
                     TF15 = HexStringToAscii(T3);
@@ -5493,7 +5486,7 @@ namespace Apple_24_Zones.Forms
                     whichRequestToSend = 4;
                     sendAgainRequest = true;
                     break;
-                    case 4:
+                case 4:
                     TF19 = HexStringToAscii(T6);
                     TF20 = HexStringToAscii(T5);
                     TF21 = HexStringToAscii(T4);
@@ -5540,7 +5533,7 @@ namespace Apple_24_Zones.Forms
 
         private void CountChillerUse(int whichChiller)
         {
-            if (whichChiller == 1) 
+            if (whichChiller == 1)
             {
                 Settings.Default.CountCool1++;
                 Settings.Default.Save();
