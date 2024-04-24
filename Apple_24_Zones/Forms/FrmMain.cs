@@ -3794,14 +3794,11 @@ namespace Apple_24_Zones.Forms
                     picProcess2.Image.Dispose();
                     picProcess2.Image = Resources.LedWhite1;
 
-                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
-                    if (customForm.ShowDialog() == DialogResult.OK)
-                    {
-                        ApagarChillerZone(2);
+                   
+                    ApagarChillerZone(2);
 
-                        txtPutSetpoint2.Text = "--";
-                        lbStartDate2.Text = "--/--/--  --:--";
-                    }
+                    txtPutSetpoint2.Text = "--";
+                    lbStartDate2.Text = "--/--/--  --:--";
 
                     PressButtonStop = true;
                     VengoZona2 = true;
@@ -3834,14 +3831,11 @@ namespace Apple_24_Zones.Forms
                     picProcess1.Image.Dispose();
                     picProcess1.Image = Resources.LedWhite1;
 
-                    FrmMessageAlertChiller customForm = new FrmMessageAlertChiller();
-                    if (customForm.ShowDialog() == DialogResult.OK)
-                    {
-                        ApagarChillerZone(1);
+                    ApagarChillerZone(1);
 
-                        txtPutSetpoint1.Text = "--";
-                        lbStartDate1.Text = "--/--/--  --:--";
-                    }
+                    txtPutSetpoint1.Text = "--";
+                    lbStartDate1.Text = "--/--/--  --:--";
+
                     PressButtonStop = true;
                     VengoZona1 = true;
                 }
