@@ -3979,29 +3979,20 @@ namespace Apple_24_Zones.Forms
             {
                 if (sendAgainRequest)
                 {
-                    serialPort2.BaudRate = 9600;
-                    serialPort2.DataBits = 8;
-                    serialPort2.StopBits = StopBits.One;
-                    serialPort2.Parity = Parity.None;
-                    serialPort2.ReceivedBytesThreshold = 44;
-                    serialPort2.Encoding = Encoding.UTF8;
+                    serialPort1.BaudRate = 9600;
+                    serialPort1.DataBits = 8;
+                    serialPort1.StopBits = StopBits.One;
+                    serialPort1.Parity = Parity.Even;
+                    serialPort1.ReceivedBytesThreshold = 14;
 
                     switch (whichRequestToSend)
                     {
                         case 1:
-                            serialPort2.Write("#03" + "\r");
+                            sendRequestTCTemp(1);
                             sendAgainRequest = false;
                             break;
                         case 2:
-                            serialPort2.Write("#04" + "\r");
-                            sendAgainRequest = false;
-                            break;
-                        case 3:
-                            serialPort2.Write("#05" + "\r");
-                            sendAgainRequest = false;
-                            break;
-                        case 4:
-                            serialPort2.Write("#06" + "\r");
+                            sendRequestTCTemp(2);
                             sendAgainRequest = false;
                             break;
                     }
@@ -4009,7 +4000,7 @@ namespace Apple_24_Zones.Forms
             }
             catch (Exception)
             {
-                throw;
+             
             }
         }
 
