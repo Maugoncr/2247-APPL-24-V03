@@ -873,10 +873,49 @@ namespace Apple_24_Zones.Forms
         }
 
 
+        // Variable to store temperature value
+        private double temperatureValue = 0.0;
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
+            // Nunca olvides que si no existe un codigo que reciba una respuesta, entonces no se enviará nada como respuesta
+            // Read data from the serial port
+            int bytesToRead = serialPort1.BytesToRead;
+            byte[] buffer = new byte[bytesToRead];
+            serialPort1.Read(buffer, 0, bytesToRead);
 
+            string receivedData = BitConverter.ToString(buffer);
+            string[] hexValues = receivedData.Split('-');
+
+            if (hexValues.Length >= 5)
+            {
+                // Assuming the temperature value is represented by the bytes "02-00"
+                string temperatureHex = $"{hexValues[3]}-{hexValues[4]}"; // Combine the bytes representing the temperature value
+                int temperatureValueInt = Convert.ToInt32(temperatureHex.Replace("-", ""), 16);
+                temperatureValue = temperatureValueInt;
+
+                // Update the label with the temperature value
+                UpdateTemperatureLabel();
+            }
+            else
+            {
+                Console.WriteLine("incomplete data received");
+            }
+        }
+
+        // Method to update the temperature label
+        private void UpdateTemperatureLabel()
+        {
+            // Check if the UI update is required to be done on the UI thread
+            if (InvokeRequired)
+            {
+                Invoke(new MethodInvoker(UpdateTemperatureLabel));
+            }
+            else
+            {
+                // Update the label text with the temperature value
+                lbTemperatureOmrons.Text = $"Temperature: {temperatureValue} °C";
+            }
         }
 
 
@@ -1848,7 +1887,7 @@ namespace Apple_24_Zones.Forms
             serialPort1.DataBits = 8;
             serialPort1.Parity = Parity.Even;
             serialPort1.StopBits = StopBits.One;
-            serialPort1.WriteTimeout = 100;
+            serialPort1.WriteTimeout = -1; //Distinto a la entrega de Najab, era 100
         }
 
 
@@ -4562,6 +4601,44 @@ namespace Apple_24_Zones.Forms
                     chartView.Series["T-24"].Enabled = false;
                 }
             }
+        }
+
+        private void sendRequestTCTemp(int which)
+        {
+            if (which == 1)
+            {
+                SetConfigSerialPortForHeater();
+                string hexCommand = "01 03 20 00 00 01 8F CA";
+                SendHexCommand(hexCommand);
+            }
+            else if (which == 2)
+            {
+                SetConfigSerialPortForHeater();
+                string hexCommand = "02 03 20 00 00 01 8F F9";
+                SendHexCommand(hexCommand);
+            }
+        }
+
+        // Helper method to send a hexadecimal command
+        private void SendHexCommand(string hexCommand)
+        {
+            string[] hexBytes = hexCommand.Split(' ');
+            byte[] binaryData = new byte[hexBytes.Length];
+            for (int i = 0; i < hexBytes.Length; i++)
+            {
+                binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+            }
+            serialPort1.Write(binaryData, 0, binaryData.Length);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            sendRequestTCTemp(1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            sendRequestTCTemp(2);
         }
 
         private void iconButton1_Click_1(object sender, EventArgs e)
