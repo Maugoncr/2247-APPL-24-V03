@@ -1474,6 +1474,7 @@ namespace Apple_24_Zones.Forms
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series3.Name = "Series1";
+            series3.YValuesPerPoint = 2;
             series4.ChartArea = "ChartArea1";
             series4.Name = "Series2";
             series4.Points.Add(dataPoint2);
