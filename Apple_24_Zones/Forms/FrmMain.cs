@@ -872,6 +872,41 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        private void TranslateResponse(string[] hexvalues) 
+        {
+            if (hexvalues.Length >= 5)
+            {
+                // Assuming the temperature value is represented by the bytes "02-00"
+                string temperatureHex = $"{hexvalues[3]}-{hexvalues[4]}"; // Combine the bytes representing the temperature value
+                int temperatureValueInt = Convert.ToInt32(temperatureHex.Replace("-", ""), 16);
+
+                switch (whichRequestToSend)
+                {
+                    case 1:
+
+                        temperatureValueOmron1 = temperatureValueInt;
+                        whichRequestToSend = 2;
+                        sendAgainRequest = true;
+                        break;
+                    case 2:
+
+                        temperatureValueOmron2 = temperatureValueInt;
+                        whichRequestToSend = 1;
+                        sendAgainRequest = true;
+                        break;
+                }
+
+                // Update the label with the temperature value
+                UpdateTemperatureLabel();
+            }
+            else
+            {
+                sendAgainRequest = true;
+                Console.WriteLine("incomplete data received");
+            }
+
+        }
+
 
         // Variable to store temperature value
         private double temperatureValueOmron1 = 0.0;
@@ -888,34 +923,7 @@ namespace Apple_24_Zones.Forms
             string receivedData = BitConverter.ToString(buffer);
             string[] hexValues = receivedData.Split('-');
 
-            if (hexValues.Length >= 5)
-            {
-                // Assuming the temperature value is represented by the bytes "02-00"
-                string temperatureHex = $"{hexValues[3]}-{hexValues[4]}"; // Combine the bytes representing the temperature value
-                int temperatureValueInt = Convert.ToInt32(temperatureHex.Replace("-", ""), 16);
-
-                switch (whichRequestToSend)
-                {
-                    case 1:
-                        
-                        temperatureValueOmron1 = temperatureValueInt;
-                        
-                        sendAgainRequest = true;
-                        break;
-                    case 2:
-                      
-                        temperatureValueOmron2 = temperatureValueInt;
-                        sendAgainRequest = true;
-                        break;
-                }
-
-                // Update the label with the temperature value
-                UpdateTemperatureLabel();
-            }
-            else
-            {
-                Console.WriteLine("incomplete data received");
-            }
+            TranslateResponse(hexValues);
         }
 
         // Method to update the temperature label
