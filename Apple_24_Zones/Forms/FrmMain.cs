@@ -897,17 +897,14 @@ namespace Apple_24_Zones.Forms
                 switch (whichRequestToSend)
                 {
                     case 1:
-                        if (Math.Abs(temperatureValueInt) < 100)
-                        {
-                            temperatureValueOmron1 = temperatureValueInt;
-                        }
+                        
+                        temperatureValueOmron1 = temperatureValueInt;
+                        
                         sendAgainRequest = true;
                         break;
                     case 2:
-                        if (Math.Abs(temperatureValueInt) < 100)
-                        {
-                            temperatureValueOmron2 = temperatureValueInt;
-                        }
+                      
+                        temperatureValueOmron2 = temperatureValueInt;
                         sendAgainRequest = true;
                         break;
                 }
