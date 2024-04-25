@@ -877,34 +877,22 @@ namespace Apple_24_Zones.Forms
             if (hexvalues.Length >= 5)
             {
                 // Assuming the temperature value is represented by the bytes "02-00"
-                string temperatureHex = $"{hexvalues[3]}-{hexvalues[4]}"; // Combine the bytes representing the temperature value
+                string temperatureHex = $"{hexvalues[3]}-{hexvalues[4]}";
                 int temperatureValueInt = Convert.ToInt32(temperatureHex.Replace("-", ""), 16);
 
                 switch (whichRequestToSend)
                 {
                     case 1:
-
                         temperatureValueOmron1 = temperatureValueInt;
                         whichRequestToSend = 2;
-                        sendAgainRequest = true;
                         break;
                     case 2:
-
                         temperatureValueOmron2 = temperatureValueInt;
                         whichRequestToSend = 1;
-                        sendAgainRequest = true;
                         break;
                 }
-
-                // Update the label with the temperature value
                 UpdateTemperatureLabel();
             }
-            else
-            {
-                sendAgainRequest = true;
-                Console.WriteLine("incomplete data received");
-            }
-
         }
 
 
@@ -912,31 +900,27 @@ namespace Apple_24_Zones.Forms
         private double temperatureValueOmron1 = 0.0;
         private double temperatureValueOmron2 = 0.0;
 
+        // Nunca olvides (OMRON) que si no existe un codigo que reciba una respuesta, entonces no se enviará nada como respuesta
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            // Nunca olvides que si no existe un codigo que reciba una respuesta, entonces no se enviará nada como respuesta
             // Read data from the serial port
             int bytesToRead = serialPort1.BytesToRead;
             byte[] buffer = new byte[bytesToRead];
             serialPort1.Read(buffer, 0, bytesToRead);
-
             string receivedData = BitConverter.ToString(buffer);
             string[] hexValues = receivedData.Split('-');
-
             TranslateResponse(hexValues);
         }
+      
 
-        // Method to update the temperature label
         private void UpdateTemperatureLabel()
         {
-            // Check if the UI update is required to be done on the UI thread
             if (InvokeRequired)
             {
                 Invoke(new MethodInvoker(UpdateTemperatureLabel));
             }
             else
             {
-                // Update the label text with the temperature value
                 lbTemperatureOmrons.Text = $"Temperature: {temperatureValueOmron1} °C || {temperatureValueOmron2}";
             }
         }
@@ -1166,78 +1150,6 @@ namespace Apple_24_Zones.Forms
 
 
         }
-
-        /*  private void checkT1_CheckedChanged(object sender, EventArgs e)
-          {
-              //chartZone1.Series["T-1"].Enabled = checkT1.Checked ? true : false;
-              chartZone1.Series["T-1"].Enabled = checkT1.Checked ? (TAVG1 = true) : (TAVG1 = false);
-          }
-
-          private void checkT2_CheckedChanged(object sender, EventArgs e)
-          {
-              //chartZone1.Series["T-2"].Enabled = checkT2.Checked ? true : false;
-              chartZone1.Series["T-2"].Enabled = checkT2.Checked ? (TAVG2 = true) : (TAVG2 = false);
-          }
-
-          private void checkT3_CheckedChanged(object sender, EventArgs e)
-          {
-              //chartZone1.Series["T-3"].Enabled = checkT3.Checked ? true : false;
-              chartZone1.Series["T-3"].Enabled = checkT3.Checked ? (TAVG3 = true) : (TAVG3 = false);
-          }
-
-          private void checkT4_CheckedChanged(object sender, EventArgs e)
-          {
-              //chartZone1.Series["T-4"].Enabled = checkT4.Checked ? true : false;
-              chartZone1.Series["T-4"].Enabled = checkT4.Checked ? (TAVG4 = true) : (TAVG4 = false);
-          }
-
-          private void checkT5_CheckedChanged(object sender, EventArgs e)
-          {
-              //chartZone1.Series["T-5"].Enabled = checkT5.Checked ? true : false;
-              chartZone1.Series["T-5"].Enabled = checkT5.Checked ? (TAVG5 = true) : (TAVG5 = false);
-          }
-
-          private void checkT6_CheckedChanged(object sender, EventArgs e)
-          {
-              //chartZone1.Series["T-6"].Enabled = checkT6.Checked ? true : false;
-              chartZone1.Series["T-6"].Enabled = checkT6.Checked ? (TAVG6 = true) : (TAVG6 = false);
-          }
-
-          private void checkT7_CheckedChanged(object sender, EventArgs e)
-          {
-              //chartZone1.Series["T-7"].Enabled = checkT7.Checked ? true : false;
-              chartZone1.Series["T-7"].Enabled = checkT7.Checked ? (TAVG7 = true) : (TAVG7 = false);
-          }
-
-          private void checkT8_CheckedChanged(object sender, EventArgs e)
-          {
-              //chartZone1.Series["T-8"].Enabled = checkT8.Checked ? true : false;
-              chartZone1.Series["T-8"].Enabled = checkT8.Checked ? (TAVG8 = true) : (TAVG8 = false);
-          }
-
-          private void checkT9_CheckedChanged(object sender, EventArgs e)
-          {
-              //chartZone1.Series["T-9"].Enabled = checkT9.Checked ? true : false;
-              chartZone1.Series["T-9"].Enabled = checkT9.Checked ? (TAVG9 = true) : (TAVG9 = false);
-          }
-
-          private void checkT10_CheckedChanged(object sender, EventArgs e)
-          {
-              //chartZone1.Series["T-10"].Enabled = checkT10.Checked ? true : false;
-              chartZone1.Series["T-10"].Enabled = checkT10.Checked ? (TAVG10 = true) : (TAVG10 = false);
-          }
-
-          private void checkT11_CheckedChanged(object sender, EventArgs e)
-          {
-              //chartZone1.Series["T-11"].Enabled = checkT11.Checked ? true : false;
-              chartZone1.Series["T-11"].Enabled = checkT11.Checked ? (TAVG11 = true) : (TAVG11 = false);
-          }
-
-          private void checkT12_CheckedChanged(object sender, EventArgs e)
-          {
-              //chartZone1.Series["T-12"].Enabled = checkT12.Checked ? true : false;
-              chartZone1.Series["T-12"].Enabled = checkT12.Checked ? (TAVG12 = true) : (TAVG12 = false);
-          }*/
 
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3993,9 +3905,7 @@ namespace Apple_24_Zones.Forms
 
         // Banderas
 
-        bool sendAgainRequest = true;
         int whichRequestToSend = 1;
-
         private void timerRequestTemps_Tick(object sender, EventArgs e)
         {
             try
@@ -4010,11 +3920,9 @@ namespace Apple_24_Zones.Forms
                     {
                         case 1:
                             sendRequestTCTemp(1);
-                            sendAgainRequest = false;
                             break;
                         case 2:
                             sendRequestTCTemp(2);
-                            sendAgainRequest = false;
                             break;
                     }
                 }            
@@ -4024,52 +3932,36 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-     
-
-        private void button1_Click(object sender, EventArgs e)
+        private void sendRequestTCTemp(int which)
         {
-            // WRITELINE X
-            // WRITE \R •
-            // WRITE \N X
-            // WRITE ENVIO.NEWLINE X
-
-            /* Medio funciono! pero sin respuesta!!!*/
-            try
+            if (which == 1)
             {
-                serialPort2.BaudRate = 9600;
-                serialPort2.DataBits = 8;
-                serialPort2.StopBits = StopBits.One;
-                serialPort2.Parity = Parity.None;
-                serialPort2.ReceivedBytesThreshold = 44;
-
-                // ASCII Igual, Default Igual, UFT8 Igual
-
-                serialPort2.Encoding = Encoding.UTF8;
-
-                serialPort2.Write("#03" + "\r");
-
+                SetConfigSerialPortForHeater();
+                string hexCommand = "01 03 20 00 00 01 8F CA";
+                SendHexCommand(hexCommand);
             }
-            catch (Exception)
+            else if (which == 2)
             {
-
-                throw;
+                SetConfigSerialPortForHeater();
+                string hexCommand = "02 03 20 00 00 01 8F F9";
+                SendHexCommand(hexCommand);
             }
         }
 
         private void serialPort2_DataReceived_1(object sender, SerialDataReceivedEventArgs e)
         {
-            int bytesToRead = serialPort2.BytesToRead;
-            byte[] buffer = new byte[bytesToRead];
-            serialPort2.Read(buffer, 0, bytesToRead);
-            // Verifica si los datos recibidos no están vacíos
-            if (bytesToRead > 0)
-            {
-                // Convierte los datos a una cadena hexadecimal
-                string hexData = BitConverter.ToString(buffer).Replace("-", "");
-                // Guarda la cadena hexadecimal en la variable "temp"
-                responseModule03Address = hexData;
-                ProcesarCadena(responseModule03Address);
-            }
+            //int bytesToRead = serialPort2.BytesToRead;
+            //byte[] buffer = new byte[bytesToRead];
+            //serialPort2.Read(buffer, 0, bytesToRead);
+            //// Verifica si los datos recibidos no están vacíos
+            //if (bytesToRead > 0)
+            //{
+            //    // Convierte los datos a una cadena hexadecimal
+            //    string hexData = BitConverter.ToString(buffer).Replace("-", "");
+            //    // Guarda la cadena hexadecimal en la variable "temp"
+            //    responseModule03Address = hexData;
+            //    ProcesarCadena(responseModule03Address);
+            //}
         }
         // Variable que toma la respuesta sin procesar al comando que solicita la cadena de las 6 temps segun a que modulo pregunta
         string responseModule03Address;
@@ -4616,21 +4508,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        private void sendRequestTCTemp(int which)
-        {
-            if (which == 1)
-            {
-                SetConfigSerialPortForHeater();
-                string hexCommand = "01 03 20 00 00 01 8F CA";
-                SendHexCommand(hexCommand);
-            }
-            else if (which == 2)
-            {
-                SetConfigSerialPortForHeater();
-                string hexCommand = "02 03 20 00 00 01 8F F9";
-                SendHexCommand(hexCommand);
-            }
-        }
+      
 
         // Helper method to send a hexadecimal command
         private void SendHexCommand(string hexCommand)
@@ -5558,7 +5436,6 @@ namespace Apple_24_Zones.Forms
                     TF5 = HexStringToAscii(T5);
                     TF6 = HexStringToAscii(T6);
                     whichRequestToSend = 2;
-                    sendAgainRequest = true;
                     break;
                 case 2:
                     TF7 = HexStringToAscii(T6);
@@ -5568,7 +5445,6 @@ namespace Apple_24_Zones.Forms
                     TF11 = HexStringToAscii(T2);
                     TF12 = HexStringToAscii(T1);
                     whichRequestToSend = 3;
-                    sendAgainRequest = true;
                     break;
                 case 3:
                     TF13 = HexStringToAscii(T1);
@@ -5578,7 +5454,6 @@ namespace Apple_24_Zones.Forms
                     TF17 = HexStringToAscii(T5);
                     TF18 = HexStringToAscii(T6);
                     whichRequestToSend = 4;
-                    sendAgainRequest = true;
                     break;
                 case 4:
                     TF19 = HexStringToAscii(T6);
@@ -5588,7 +5463,6 @@ namespace Apple_24_Zones.Forms
                     TF23 = HexStringToAscii(T2);
                     TF24 = HexStringToAscii(T1);
                     whichRequestToSend = 1;
-                    sendAgainRequest = true;
                     break;
             }
         }
