@@ -4823,14 +4823,14 @@ namespace Apple_24_Zones.Forms
                     temp1 = rt1 / 1000;
 
                       chartZone1.Series["T-1"].Points.AddXY(temp1.ToString(), temperatureValueOmron1.ToString());
-                      lbAVGTemp1.Text = temperatureValueOmron1.ToString("00.00") + " °C";
+                      lbAVGTemp1.Text = temperatureValueOmron1.ToString("00") + " °C";
                    
 
                     chartZone1.ChartAreas[0].RecalculateAxesScale();
 
                     if (chartZone1.Series["T-1"].Points.Count == 101)
                     {
-                        chartZone1.Series["T-1"].Points.RemoveAt(0); chartZone1.Series["T-2"].Points.RemoveAt(0);
+                        chartZone1.Series["T-1"].Points.RemoveAt(0); chartZone1.Series["T-1"].Points.RemoveAt(0);
                     }
 
                     //ZONA 2
@@ -4838,14 +4838,14 @@ namespace Apple_24_Zones.Forms
                     temp2 = rt2 / 1000;
 
                        chartZone2.Series["T-2"].Points.AddXY(temp2.ToString(), temperatureValueOmron2.ToString());
-                       lbAVGTemp2.Text = temperatureValueOmron2.ToString("00.00") + " °C";
+                       lbAVGTemp2.Text = temperatureValueOmron2.ToString("00") + " °C";
                    
 
                     chartZone2.ChartAreas[0].RecalculateAxesScale();
 
                     if (chartZone2.Series["T-2"].Points.Count == 101)
                     {
-                        chartZone2.Series["T-2"].Points.RemoveAt(0); chartZone2.Series["T-14"].Points.RemoveAt(0);
+                        chartZone2.Series["T-2"].Points.RemoveAt(0); chartZone2.Series["T-2"].Points.RemoveAt(0);
                     }
                 }
                 else if (viewChart == "Zone1")
