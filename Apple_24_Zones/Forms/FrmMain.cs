@@ -586,13 +586,12 @@ namespace Apple_24_Zones.Forms
                     {
                         tempFileName1 = Path.Combine(Path.GetTempPath(), "ELEN II_" + Guid.NewGuid().ToString() + ".txt");
                         streamWriterZone1 = new StreamWriter(tempFileName1, true);
-                        streamWriterZone1.WriteLine("DateTime,RunningTime,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12");
+                        streamWriterZone1.WriteLine("DateTime,RunningTime,Zone1");
                         inicioRecordZone1 = DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss");
                         firstEntranceZone1 = false;
                     }
 
-                    streamWriterZone1.WriteLine(DateTime.Now.ToString("MM/dd/yyyy") + "," + DateTime.Now.ToString("HH:mm:ss") + "," + TFO1 + ","
-                        + TFO2 + "," + TFO3 + "," + TFO4 + "," + TFO5 + "," + TFO6 + "," + TFO7 + "," + TFO8 + "," + TFO9 + "," + TFO10 + "," + TFO11 + "," + TFO12);
+                    streamWriterZone1.WriteLine(DateTime.Now.ToString("MM/dd/yyyy") + "," + DateTime.Now.ToString("HH:mm:ss") + "," + temperatureValueOmron1);
                 }
             }
             catch (Exception MS)
@@ -609,12 +608,11 @@ namespace Apple_24_Zones.Forms
                     {
                         tempFileName2 = Path.Combine(Path.GetTempPath(), "ELEN II_" + Guid.NewGuid().ToString() + ".txt");
                         streamWriterZone2 = new StreamWriter(tempFileName2, true);
-                        streamWriterZone2.WriteLine("DateTime,RunningTime,T13,T14,T15,T16,T17,T18,T19,T20,T21,T22,T23,T24");
+                        streamWriterZone2.WriteLine("DateTime,RunningTime,Zone2");
                         inicioRecordZone2 = DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss");
                         firstEntranceZone2 = false;
                     }
-                    streamWriterZone2.WriteLine(DateTime.Now.ToString("MM/dd/yyyy") + "," + DateTime.Now.ToString("HH:mm:ss") + "," + TFO13 + ","
-                     + TFO14 + "," + TFO15 + "," + TFO16 + "," + TFO17 + "," + TFO18 + "," + TFO19 + "," + TFO20 + "," + TFO21 + "," + TFO22 + "," + TFO23 + "," + TFO24);
+                    streamWriterZone2.WriteLine(DateTime.Now.ToString("MM/dd/yyyy") + "," + DateTime.Now.ToString("HH:mm:ss") + "," + temperatureValueOmron2);
                 }
 
             }
@@ -4830,7 +4828,7 @@ namespace Apple_24_Zones.Forms
 
                     if (chartZone1.Series["T-1"].Points.Count == 101)
                     {
-                        chartZone1.Series["T-1"].Points.RemoveAt(0); chartZone1.Series["T-1"].Points.RemoveAt(0);
+                        chartZone1.Series["T-1"].Points.RemoveAt(0); 
                     }
 
                     //ZONA 2
@@ -4845,7 +4843,7 @@ namespace Apple_24_Zones.Forms
 
                     if (chartZone2.Series["T-2"].Points.Count == 101)
                     {
-                        chartZone2.Series["T-2"].Points.RemoveAt(0); chartZone2.Series["T-2"].Points.RemoveAt(0);
+                        chartZone2.Series["T-2"].Points.RemoveAt(0); 
                     }
                 }
                 else if (viewChart == "Zone1")
