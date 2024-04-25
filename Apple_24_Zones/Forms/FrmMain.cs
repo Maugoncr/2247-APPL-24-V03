@@ -874,7 +874,8 @@ namespace Apple_24_Zones.Forms
 
 
         // Variable to store temperature value
-        private double temperatureValue = 0.0;
+        private double temperatureValueOmron1 = 0.0;
+        private double temperatureValueOmron2 = 0.0;
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
@@ -892,7 +893,24 @@ namespace Apple_24_Zones.Forms
                 // Assuming the temperature value is represented by the bytes "02-00"
                 string temperatureHex = $"{hexValues[3]}-{hexValues[4]}"; // Combine the bytes representing the temperature value
                 int temperatureValueInt = Convert.ToInt32(temperatureHex.Replace("-", ""), 16);
-                temperatureValue = temperatureValueInt;
+
+                switch (whichRequestToSend)
+                {
+                    case 1:
+                        if (Math.Abs(temperatureValueInt) < 100)
+                        {
+                            temperatureValueOmron1 = temperatureValueInt;
+                        }
+                        sendAgainRequest = true;
+                        break;
+                    case 2:
+                        if (Math.Abs(temperatureValueInt) < 100)
+                        {
+                            temperatureValueOmron2 = temperatureValueInt;
+                        }
+                        sendAgainRequest = true;
+                        break;
+                }
 
                 // Update the label with the temperature value
                 UpdateTemperatureLabel();
@@ -914,7 +932,7 @@ namespace Apple_24_Zones.Forms
             else
             {
                 // Update the label text with the temperature value
-                lbTemperatureOmrons.Text = $"Temperature: {temperatureValue} °C";
+                lbTemperatureOmrons.Text = $"Temperature: {temperatureValueOmron1} °C || {temperatureValueOmron2}";
             }
         }
 
@@ -4004,6 +4022,8 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+     
+
         private void button1_Click(object sender, EventArgs e)
         {
             // WRITELINE X
@@ -4036,7 +4056,7 @@ namespace Apple_24_Zones.Forms
 
         private void serialPort2_DataReceived_1(object sender, SerialDataReceivedEventArgs e)
         {
-            /*int bytesToRead = serialPort2.BytesToRead;
+            int bytesToRead = serialPort2.BytesToRead;
             byte[] buffer = new byte[bytesToRead];
             serialPort2.Read(buffer, 0, bytesToRead);
             // Verifica si los datos recibidos no están vacíos
@@ -4047,7 +4067,7 @@ namespace Apple_24_Zones.Forms
                 // Guarda la cadena hexadecimal en la variable "temp"
                 responseModule03Address = hexData;
                 ProcesarCadena(responseModule03Address);
-            }*/
+            }
         }
         // Variable que toma la respuesta sin procesar al comando que solicita la cadena de las 6 temps segun a que modulo pregunta
         string responseModule03Address;
@@ -4630,6 +4650,16 @@ namespace Apple_24_Zones.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             sendRequestTCTemp(2);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            timerRequestTemps.Start();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            timerRequestTemps.Stop();
         }
 
         private void iconButton1_Click_1(object sender, EventArgs e)
