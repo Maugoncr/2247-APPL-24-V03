@@ -4000,8 +4000,6 @@ namespace Apple_24_Zones.Forms
         {
             try
             {
-                if (sendAgainRequest)
-                {
                     serialPort1.BaudRate = 9600;
                     serialPort1.DataBits = 8;
                     serialPort1.StopBits = StopBits.One;
@@ -4019,8 +4017,7 @@ namespace Apple_24_Zones.Forms
                             sendAgainRequest = false;
                             break;
                     }
-                }
-            }
+                }            
             catch (Exception)
             {
              
