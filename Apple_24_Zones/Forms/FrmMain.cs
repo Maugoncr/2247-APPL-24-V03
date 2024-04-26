@@ -245,7 +245,7 @@ namespace Apple_24_Zones.Forms
                         firstEntranceZone1 = false;
                     }
 
-                    streamWriterZone1.WriteLine(DateTime.Now.ToString("MM:dd:yyyy") + "," + DateTime.Now.ToString("HH:mm:ss") + "," + temperatureValueOmron1);
+                    streamWriterZone1.WriteLine(DateTime.Now.ToString("MM/dd/yyyy") + "," + DateTime.Now.ToString("HH:mm:ss") + "," + temperatureValueOmron1);
                 }
             }
             catch (Exception MS)
@@ -266,7 +266,7 @@ namespace Apple_24_Zones.Forms
                         inicioRecordZone2 = DateTime.Now.ToString("MM-dd-yyyy HH-mm-ss");
                         firstEntranceZone2 = false;
                     }
-                    streamWriterZone2.WriteLine(DateTime.Now.ToString("MM:dd:yyyy") + "," + DateTime.Now.ToString("HH:mm:ss") + "," + temperatureValueOmron2);
+                    streamWriterZone2.WriteLine(DateTime.Now.ToString("MM/dd/yyyy") + "," + DateTime.Now.ToString("HH:mm:ss") + "," + temperatureValueOmron2);
                 }
 
             }
