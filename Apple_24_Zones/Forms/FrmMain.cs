@@ -852,22 +852,48 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-                                    // QUE HACE EL OMRON
-                                    SendSetTempHeaterAndTurnItOn(1);
-                                    CountOmronUse(1);
+                                    if ((temperatureValueOmron1 - setpoint) <= 6)
+                                    {
+                                        // QUE HACE EL OMRON
+                                        SendSetTempHeaterAndTurnItOn(1);
+                                        CountOmronUse(1);
 
-                                    // SE CAMBIAN LOS INDICADORES DEL PROCESO
-                                    picProcess1.Image.Dispose();
-                                    picProcess1.Image = Resources.LedRedHeating2;
-                                    picUpDown1.Image.Dispose();
-                                    picUpDown1.Image = Resources.arrowUpRed21;
+                                        // SE CAMBIAN LOS INDICADORES DEL PROCESO
+                                        picProcess1.Image.Dispose();
+                                        picProcess1.Image = Resources.LedRedHeating2;
+                                        picUpDown1.Image.Dispose();
+                                        picUpDown1.Image = Resources.arrowUpRed21;
 
-                                    // QUE HACE EL CHILLER
-                                    ApagarChillerZone(1);
-                                    Thread.Sleep(50);
+                                        // QUE HACE EL CHILLER
+                                        ApagarChillerZone(1);
+                                        Thread.Sleep(50);
 
-                                    // QUE HACEN LOS LEDS
-                                    EncenderVerde();
+                                        // QUE HACEN LOS LEDS
+                                        EncenderVerde();
+                                    }
+                                    else 
+                                    {
+                                        // QUE HACE EL OMRON
+                                        SendSetTempHeaterAndTurnItOn(1);
+                                        CountOmronUse(1);
+
+                                        // QUE HACE EL CHILLER
+                                        EncenderChillerZone(1);
+                                        CountChillerUse(1);
+                                        Thread.Sleep(100);
+                                        SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+
+                                        // SE CAMBIAN LOS INDICADORES DEL PROCESO
+                                        picUpDown1.Image.Dispose();
+                                        picUpDown1.Image = Resources.arrowDownBlue2;
+                                        picProcess1.Image.Dispose();
+                                        picProcess1.Image = Resources.LedBlueCooling2;
+
+                                        // QUE HACEN LOS LEDS
+                                        EncenderVerde();
+                                    }
+
+                                   
 
                                 }
                                 catch (Exception ex)
@@ -986,22 +1012,48 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-                                    // QUE HACE EL OMRON
-                                    SendSetTempHeaterAndTurnItOn(2);
-                                    CountOmronUse(2);
+                                    if ((temperatureValueOmron2 - setpoint) <= 6)
+                                    {
+                                        // QUE HACE EL OMRON
+                                        SendSetTempHeaterAndTurnItOn(2);
+                                        CountOmronUse(2);
 
-                                    // CAMBIAN LOS INDICADORES
-                                    picProcess2.Image.Dispose();
-                                    picProcess2.Image = Resources.LedRedHeating2;
-                                    picUpDown2.Image.Dispose();
-                                    picUpDown2.Image = Resources.arrowUpRed21;
+                                        // CAMBIAN LOS INDICADORES
+                                        picProcess2.Image.Dispose();
+                                        picProcess2.Image = Resources.LedRedHeating2;
+                                        picUpDown2.Image.Dispose();
+                                        picUpDown2.Image = Resources.arrowUpRed21;
 
-                                    // QUE HACE EL CHILLER
-                                    ApagarChillerZone(2);
-                                    Thread.Sleep(50);
+                                        // QUE HACE EL CHILLER
+                                        ApagarChillerZone(2);
+                                        Thread.Sleep(50);
 
-                                    // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                    EncenderVerde();
+                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                        EncenderVerde();
+                                    }
+                                    else
+                                    {
+                                        // turn ON chiller when SP is lower than TC by 5-6 degrees or more (for SP in heating range only)
+                                        // QUE HACE EL OMRON
+                                        SendSetTempHeaterAndTurnItOn(2);
+                                        CountOmronUse(2);
+
+                                        // QUE HACE EL CHILLER
+                                        EncenderChillerZone(2);
+                                        CountChillerUse(2);
+                                        Thread.Sleep(100);
+                                        SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+
+                                        // CAMBIAN LOS INDICADORES
+                                        picUpDown2.Image.Dispose();
+                                        picUpDown2.Image = Resources.arrowDownBlue2;
+                                        picProcess2.Image.Dispose();
+                                        picProcess2.Image = Resources.LedBlueCooling2;
+
+                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                        EncenderVerde();
+                                    }
+                                    
 
                                 }
                                 catch (Exception ex)
