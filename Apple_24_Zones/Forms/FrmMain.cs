@@ -3364,6 +3364,21 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmYScalesZone2);
+            if (frm == null)
+            {
+                FrmYScalesZone2 nt = new FrmYScalesZone2();
+                nt.ShowDialog();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
+        }
+
         private void btnRecordZone2_Click(object sender, EventArgs e)
         {
             if (btnRecordZone2.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
