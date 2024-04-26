@@ -3425,28 +3425,6 @@ namespace Apple_24_Zones.Forms
             serialPort1.Write(binaryData, 0, binaryData.Length);
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            sendRequestTCTemp(1);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            sendRequestTCTemp(2);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            timerRequestTemps.Start();
-            timerGraficarCharts.Start();
-        }
-
-    
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            timerRequestTemps.Stop();
-        }
 
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
