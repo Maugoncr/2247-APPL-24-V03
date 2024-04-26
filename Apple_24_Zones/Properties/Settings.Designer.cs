@@ -82,5 +82,53 @@ namespace Apple_24_Zones.Properties {
                 this["CountHeat2"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int YZone2Upper {
+            get {
+                return ((int)(this["YZone2Upper"]));
+            }
+            set {
+                this["YZone2Upper"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int YZone2Lower {
+            get {
+                return ((int)(this["YZone2Lower"]));
+            }
+            set {
+                this["YZone2Lower"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int YZone1Upper {
+            get {
+                return ((int)(this["YZone1Upper"]));
+            }
+            set {
+                this["YZone1Upper"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int YZone1Lower {
+            get {
+                return ((int)(this["YZone1Lower"]));
+            }
+            set {
+                this["YZone1Lower"] = value;
+            }
+        }
     }
 }

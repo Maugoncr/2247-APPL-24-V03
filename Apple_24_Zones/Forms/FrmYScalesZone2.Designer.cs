@@ -51,6 +51,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(289, 36);
             this.panel1.TabIndex = 32;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label3
             // 
@@ -79,6 +80,7 @@
             this.IconClose.Size = new System.Drawing.Size(35, 36);
             this.IconClose.TabIndex = 41;
             this.IconClose.UseVisualStyleBackColor = true;
+            this.IconClose.Click += new System.EventHandler(this.IconClose_Click);
             // 
             // txtYUpperZ2
             // 
@@ -87,6 +89,7 @@
             this.txtYUpperZ2.Name = "txtYUpperZ2";
             this.txtYUpperZ2.Size = new System.Drawing.Size(73, 30);
             this.txtYUpperZ2.TabIndex = 234;
+            this.txtYUpperZ2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYUpperZ2_KeyPress);
             // 
             // label2
             // 
@@ -121,6 +124,7 @@
             this.txtYLowerZ2.Name = "txtYLowerZ2";
             this.txtYLowerZ2.Size = new System.Drawing.Size(73, 30);
             this.txtYLowerZ2.TabIndex = 236;
+            this.txtYLowerZ2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYLowerZ2_KeyPress);
             // 
             // btnSaveYUZ2
             // 
@@ -136,6 +140,7 @@
             this.btnSaveYUZ2.Size = new System.Drawing.Size(39, 30);
             this.btnSaveYUZ2.TabIndex = 243;
             this.btnSaveYUZ2.UseVisualStyleBackColor = false;
+            this.btnSaveYUZ2.Click += new System.EventHandler(this.btnSaveYUZ2_Click);
             // 
             // btnSaveYLZ2
             // 
@@ -151,6 +156,7 @@
             this.btnSaveYLZ2.Size = new System.Drawing.Size(39, 30);
             this.btnSaveYLZ2.TabIndex = 244;
             this.btnSaveYLZ2.UseVisualStyleBackColor = false;
+            this.btnSaveYLZ2.Click += new System.EventHandler(this.btnSaveYLZ2_Click);
             // 
             // FrmYScalesZone2
             // 

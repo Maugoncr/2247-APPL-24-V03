@@ -3590,6 +3590,11 @@ namespace Apple_24_Zones.Forms
             if (temperatureValueOmron1 != 0 && temperatureValueOmron2 != 0)
             {
 
+                chartZone1.ChartAreas[0].AxisY.Minimum = Settings.Default.YZone1Lower;
+                chartZone1.ChartAreas[0].AxisY.Maximum = Settings.Default.YZone1Upper;
+                chartZone2.ChartAreas[0].AxisY.Maximum = Settings.Default.YZone2Upper;
+                chartZone2.ChartAreas[0].AxisY.Minimum = Settings.Default.YZone2Lower;
+
                 if (viewChart == "Both")
                 {
                     // ZONA 1 
