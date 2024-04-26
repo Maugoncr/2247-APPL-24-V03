@@ -189,13 +189,52 @@ namespace Apple_24_Zones.Forms
         bool VengoZona1 = false;
         bool VengoZona2 = false;
 
+        private void cbMaxTime_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            // 86400 24H
+            // 43200 12H
+            // 21600 6H
+            // 3600 1H
+            if (cbMaxTime.SelectedIndex == 0)
+            {
+                chartStaticZone2.ChartAreas[0].AxisX.Maximum = 3600;
+            }
+            else if (cbMaxTime.SelectedIndex == 1)
+            {
+                chartStaticZone2.ChartAreas[0].AxisX.Maximum = 21600;
+            }
+            else if (cbMaxTime.SelectedIndex == 2)
+            {
+                chartStaticZone2.ChartAreas[0].AxisX.Maximum = 43200;
+            }
+            else if (cbMaxTime.SelectedIndex == 3)
+            {
+                chartStaticZone2.ChartAreas[0].AxisX.Maximum = 86400;
+            }
+        }
+
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
             string fecha = DateTime.Now.ToString("dddd, MM/dd/yyyy");
             lbTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             lbDate.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(fecha);
 
-            if (PressButtonStop)
+            //Si todas las Temperaturas ya tienen un valor
+            if (temperatureValueOmron1 != 0 && temperatureValueOmron2 != 0)
+            {
+
+                chartStaticZone2.ChartAreas[0].AxisY.Minimum = Settings.Default.YZone1Lower;
+                chartStaticZone2.ChartAreas[0].AxisY.Maximum = Settings.Default.YZone1Upper;
+                chartZone2.ChartAreas[0].AxisY.Maximum = Settings.Default.YZone2Upper;
+                chartZone2.ChartAreas[0].AxisY.Minimum = Settings.Default.YZone2Lower;
+
+              
+
+                chartStaticZone2.Series["T-2"].Points.AddXY(DateTime.Now.ToString("HH:mm:ss"), temperatureValueOmron2.ToString());
+                chartStaticZone2.ChartAreas[0].RecalculateAxesScale();
+            }
+
+                if (PressButtonStop)
             {
                 if (serialPort1.IsOpen)
                 {
@@ -308,6 +347,34 @@ namespace Apple_24_Zones.Forms
             chartZone2.ChartAreas[0].AxisX.Minimum = 0;
             chartZone2.ChartAreas[0].BackColor = Color.FromArgb(30, Color.LightGreen);
 
+            // Chart Settings Static Ones
+
+            chartStaticZone2.Series.Clear();
+            chartStaticZone2.Series.Add("T-2");
+            chartStaticZone2.Series["T-2"].IsVisibleInLegend = false;
+            chartStaticZone2.Series["T-2"].Color = Color.Black;
+            chartStaticZone2.Series["T-2"].ChartType = SeriesChartType.Spline;
+            chartStaticZone2.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
+            chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.Enabled = true;
+            chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.IsPositionedInside = false;
+            chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.Size = 15; //
+            chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.ButtonStyle = ScrollBarButtonStyles.All; //
+            chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.BackColor = Color.SteelBlue;
+            chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.ButtonColor = Color.DarkGray;
+            chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.LineColor = Color.Black;
+            chartStaticZone2.ChartAreas[0].AxisX.IntervalAutoMode = IntervalAutoMode.VariableCount;
+            chartStaticZone2.ChartAreas[0].CursorX.Interval = 1;
+            chartStaticZone2.ChartAreas[0].CursorX.AutoScroll = true;
+            chartStaticZone2.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
+            chartStaticZone2.ChartAreas[0].AxisY.Minimum = 0;
+            chartStaticZone2.ChartAreas[0].AxisX.Maximum = 3600;
+            chartStaticZone2.ChartAreas[0].AxisY.Maximum = 100;
+            chartStaticZone2.ChartAreas[0].AxisX.Minimum = 0;
+            // 86400 24H
+            // 43200 12H
+            // 21600 6H
+            // 3600 1H
+            cbMaxTime.SelectedIndex = 0;
 
             // Disconectar
 
@@ -323,7 +390,6 @@ namespace Apple_24_Zones.Forms
             // Default variables
             rt = 0;
             temp = 0;
-            ResetTAVG();
 
             //Reset Images
 
@@ -3416,6 +3482,16 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        private void btnResetCharStatic2_Click(object sender, EventArgs e)
+        {
+            chartStaticZone2.Series["TC-2"].Points.Clear();
+        }
+
+        private void btnChangeChartStatic2_Click(object sender, EventArgs e)
+        {
+            pChartStaticZ2.Visible = false;
+        }
+
         private void iconButton5_Click(object sender, EventArgs e)
         {
             Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmYScalesZone2);
@@ -3635,33 +3711,6 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        private void ResetTAVG()
-        {
-            TAVG1 = true;
-            TAVG2 = true;
-            TAVG3 = true;
-            TAVG4 = true;
-            TAVG5 = true;
-            TAVG6 = true;
-            TAVG7 = true;
-            TAVG8 = true;
-            TAVG9 = true;
-            TAVG10 = true;
-            TAVG11 = true;
-            TAVG12 = true;
-            TAVG13 = true;
-            TAVG14 = true;
-            TAVG15 = true;
-            TAVG16 = true;
-            TAVG17 = true;
-            TAVG18 = true;
-            TAVG19 = true;
-            TAVG20 = true;
-            TAVG21 = true;
-            TAVG22 = true;
-            TAVG23 = true;
-            TAVG24 = true;
-        }
 
 
 
