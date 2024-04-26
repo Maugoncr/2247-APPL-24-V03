@@ -3776,7 +3776,7 @@ namespace Apple_24_Zones.Forms
             TFO24 = AT24.ToString(System.Globalization.CultureInfo.InvariantCulture);
 
         }
-
+        private int puntosAgregados = 0;
         private void timerGraficarCharts_Tick(object sender, EventArgs e)
         {
             //Si todas las TF con formula ya se encuentran con su respectivo valor 4 segundos despues de conectar!
@@ -3804,9 +3804,14 @@ namespace Apple_24_Zones.Forms
                     rt2 = rt2 + 100;
                     temp2 = rt2 / 1000;
 
-                       chartZone2.Series["T-2"].Points.AddXY(temp2.ToString(), temperatureValueOmron2.ToString());
-                       lbAVGTemp2.Text = temperatureValueOmron2.ToString("00") + " °C";
-                   
+                    chartZone2.ChartAreas[0].AxisX.ScrollBar.Enabled = true;
+
+                    chartZone2.Series["T-2"].Points.AddXY(temp2.ToString(), temperatureValueOmron2.ToString());
+                    puntosAgregados++;
+                    lbAVGTemp2.Text = temperatureValueOmron2.ToString("00") + " °C";
+
+                    
+
 
                     chartZone2.ChartAreas[0].RecalculateAxesScale();
 
