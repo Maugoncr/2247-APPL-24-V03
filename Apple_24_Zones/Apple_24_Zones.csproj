@@ -131,11 +131,17 @@
     <Compile Include="Forms\FrmPanelExample.Designer.cs">
       <DependentUpon>FrmPanelExample.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmYScales.cs">
+    <Compile Include="Forms\FrmYScalesZone1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmYScales.Designer.cs">
-      <DependentUpon>FrmYScales.cs</DependentUpon>
+    <Compile Include="Forms\FrmYScalesZone1.Designer.cs">
+      <DependentUpon>FrmYScalesZone1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmYScalesZone2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmYScalesZone2.Designer.cs">
+      <DependentUpon>FrmYScalesZone2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -160,8 +166,11 @@
     <EmbeddedResource Include="Forms\FrmPanelExample.resx">
       <DependentUpon>FrmPanelExample.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmYScales.resx">
-      <DependentUpon>FrmYScales.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmYScalesZone1.resx">
+      <DependentUpon>FrmYScalesZone1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmYScalesZone2.resx">
+      <DependentUpon>FrmYScalesZone2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

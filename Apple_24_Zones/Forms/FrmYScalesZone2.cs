@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Apple_24_Zones.Forms
 {
-    public partial class FrmYScales : Form
+    public partial class FrmYScalesZone2 : Form
     {
-        public FrmYScales()
+        public FrmYScalesZone2()
         {
             InitializeComponent();
         }
