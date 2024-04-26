@@ -458,7 +458,6 @@ namespace Apple_24_Zones.Forms
                         }
                         break;
                 }
-                UpdateTemperatureLabel();
             }
         }
 
@@ -478,25 +477,7 @@ namespace Apple_24_Zones.Forms
             string[] hexValues = receivedData.Split('-');
             TranslateResponse(hexValues);
         }
-      
-
-        private void UpdateTemperatureLabel()
-        {
-            try
-            {
-                if (InvokeRequired)
-                {
-                    Invoke(new MethodInvoker(UpdateTemperatureLabel));
-                }
-                else
-                {
-                    lbTemperatureOmrons.Text = $"Temperature: {temperatureValueOmron1} °C || {temperatureValueOmron2}";
-                }
-            }
-            catch (Exception)
-            {
-            }
-        }
+        
 
         private void txtRealsBorder(object sender, PaintEventArgs e)
         {
