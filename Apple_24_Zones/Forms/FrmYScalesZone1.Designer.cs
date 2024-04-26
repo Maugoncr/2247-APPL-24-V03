@@ -175,6 +175,7 @@
             this.Name = "FrmYScalesZone1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Y Scales";
+            this.Load += new System.EventHandler(this.FrmYScalesZone1_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

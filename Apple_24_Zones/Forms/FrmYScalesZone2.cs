@@ -81,5 +81,11 @@ namespace Apple_24_Zones.Forms
                 MessageBox.Show("Warning: The scale range for the Y-axis is within 0 - 100.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void FrmYScalesZone2_Load(object sender, EventArgs e)
+        {
+            txtYUpperZ2.Text = Settings.Default.YZone2Upper.ToString();
+            txtYLowerZ2.Text = Settings.Default.YZone2Lower.ToString();
+        }
     }
 }
