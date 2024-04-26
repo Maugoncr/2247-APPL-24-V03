@@ -4452,6 +4452,8 @@ namespace Apple_24_Zones.Forms
             timerGraficarCharts.Start();
         }
 
+    
+
         private void button4_Click(object sender, EventArgs e)
         {
             timerRequestTemps.Stop();
@@ -5091,21 +5093,23 @@ namespace Apple_24_Zones.Forms
              // chartZone2.Series["T-13"].Enabled = checkT13.Checked ? true : false;
               chartZone2.Series["T-13"].Enabled = checkT13.Checked ? (TAVG13 = true) : (TAVG13 = false);
           }*/
+        private void btnReduceScale2_Click(object sender, EventArgs e)
+        {
+            // Reducir la escala en -10, asegurándose de no ser menor que 10
+            int nuevaEscala = (int)(chartZone2.ChartAreas[0].AxisY.Maximum - 10);
+            if (nuevaEscala >= 10)
+            {
+                chartZone2.ChartAreas[0].AxisY.Maximum = nuevaEscala;
+            }
+        }
 
-        bool toggleScaleZone2 = true;
         private void btnScaleToggleZone2_Click(object sender, EventArgs e)
         {
-            if (toggleScaleZone2)
+            // Aumentar la escala en +10, asegurándose de no exceder el límite de 100
+            int nuevaEscala = (int)(chartZone2.ChartAreas[0].AxisY.Maximum + 10);
+            if (nuevaEscala <= 100)
             {
-                chartZone2.ChartAreas[0].AxisY.Maximum = double.NaN;
-                chartZone2.ChartAreas[0].AxisY.Minimum = 0;
-                toggleScaleZone2 = false;
-            }
-            else
-            {
-                chartZone2.ChartAreas[0].AxisY.Maximum = 100;
-                chartZone2.ChartAreas[0].AxisY.Minimum = 0;
-                toggleScaleZone2 = true;
+                chartZone2.ChartAreas[0].AxisY.Maximum = nuevaEscala;
             }
         }
 
