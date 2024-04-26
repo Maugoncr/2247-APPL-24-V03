@@ -562,12 +562,16 @@ namespace Apple_24_Zones.Forms
                 {
                     btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
                     btnRefreshCOM1.Enabled = false;
+                    timerRequestTemps.Start();
+                    timerGraficarCharts.Start();
                 }
             }
             else
             {
                 if (serialPort1.IsOpen)
                 {
+                    timerGraficarCharts.Stop();
+                    timerRequestTemps.Stop();
                     serialPort1.Close();
                     btnConnectCOM1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
                     btnRefreshCOM1.Enabled = true;
