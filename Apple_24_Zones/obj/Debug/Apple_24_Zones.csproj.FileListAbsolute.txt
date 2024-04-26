@@ -163,3 +163,5 @@ C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Z
 C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24.4717FA0A.Up2Date
 C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Zones.exe
 C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Zones.pdb
+C:\Users\maugo\source\repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmYScalesZone1.resources
+C:\Users\maugo\source\repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmYScalesZone2.resources

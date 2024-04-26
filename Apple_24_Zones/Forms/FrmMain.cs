@@ -3379,6 +3379,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+
         private void btnRecordZone2_Click(object sender, EventArgs e)
         {
             if (btnRecordZone2.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
