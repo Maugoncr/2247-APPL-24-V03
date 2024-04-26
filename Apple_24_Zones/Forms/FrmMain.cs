@@ -482,13 +482,19 @@ namespace Apple_24_Zones.Forms
 
         private void UpdateTemperatureLabel()
         {
-            if (InvokeRequired)
+            try
             {
-                Invoke(new MethodInvoker(UpdateTemperatureLabel));
+                if (InvokeRequired)
+                {
+                    Invoke(new MethodInvoker(UpdateTemperatureLabel));
+                }
+                else
+                {
+                    lbTemperatureOmrons.Text = $"Temperature: {temperatureValueOmron1} °C || {temperatureValueOmron2}";
+                }
             }
-            else
+            catch (Exception)
             {
-                lbTemperatureOmrons.Text = $"Temperature: {temperatureValueOmron1} °C || {temperatureValueOmron2}";
             }
         }
 
