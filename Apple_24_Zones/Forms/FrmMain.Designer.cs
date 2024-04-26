@@ -2381,7 +2381,7 @@ namespace Apple_24_Zones.Forms
             this.Text = "ELEN II Software Rev 1.000.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmMain_KeyDown);
+            
             ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();

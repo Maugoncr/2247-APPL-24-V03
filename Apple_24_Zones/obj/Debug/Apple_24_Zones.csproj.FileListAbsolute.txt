@@ -130,9 +130,7 @@ C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Z
 C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\AppleSoftware.Forms.FrmModbus.resources
 C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmFilterCSVFile.resources
 C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmMain.resources
-C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmOffsets.resources
 C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Zones.Forms.FrmPanelExample.resources
-C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\MidoriValveTest.Forms.FrmVisualizadorCrystalReport.resources
 C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Zones.Properties.Resources.resources
 C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.GenerateResource.cache
 C:\Users\maugo\Source\Repos\2247-APPL-24-V03\Apple_24_Zones\obj\Debug\Apple_24_Zones.csproj.CoreCompileInputs.cache
