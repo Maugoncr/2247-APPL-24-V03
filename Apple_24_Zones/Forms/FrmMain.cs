@@ -441,16 +441,21 @@ namespace Apple_24_Zones.Forms
                 // Assuming the temperature value is represented by the bytes "02-00"
                 string temperatureHex = $"{hexvalues[3]}-{hexvalues[4]}";
                 int temperatureValueInt = Convert.ToInt32(temperatureHex.Replace("-", ""), 16);
-
                 switch (whichRequestToSend)
                 {
                     case 1:
-                        temperatureValueOmron1 = temperatureValueInt;
-                        whichRequestToSend = 2;
+                        if (temperatureValueInt < 120)
+                        {
+                            temperatureValueOmron1 = temperatureValueInt;
+                            whichRequestToSend = 2;
+                        }
                         break;
                     case 2:
-                        temperatureValueOmron2 = temperatureValueInt;
-                        whichRequestToSend = 1;
+                        if (temperatureValueInt < 120)
+                        {
+                            temperatureValueOmron2 = temperatureValueInt;
+                            whichRequestToSend = 1;
+                        }
                         break;
                 }
                 UpdateTemperatureLabel();
