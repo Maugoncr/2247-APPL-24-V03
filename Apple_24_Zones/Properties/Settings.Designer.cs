@@ -110,18 +110,6 @@ namespace Apple_24_Zones.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public double Offset10_15 {
-            get {
-                return ((double)(this["Offset10_15"]));
-            }
-            set {
-                this["Offset10_15"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public double Offset15_20 {
             get {
                 return ((double)(this["Offset15_20"]));

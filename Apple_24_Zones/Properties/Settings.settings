@@ -23,9 +23,6 @@
     <Setting Name="Offset5_10" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="Offset10_15" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
     <Setting Name="Offset15_20" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
