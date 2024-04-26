@@ -40,10 +40,6 @@ namespace Apple_24_Zones.Forms
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
@@ -124,8 +120,7 @@ namespace Apple_24_Zones.Forms
             this.btnReduceScale2 = new FontAwesome.Sharp.IconButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnScaleToggleZone2 = new FontAwesome.Sharp.IconButton();
-            this.btnScaleToggleZone1 = new FontAwesome.Sharp.IconButton();
+            this.btnUpScale2 = new FontAwesome.Sharp.IconButton();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
@@ -181,69 +176,6 @@ namespace Apple_24_Zones.Forms
             this.label68 = new System.Windows.Forms.Label();
             this.lbC2 = new System.Windows.Forms.Label();
             this.btnRecordZone2 = new FontAwesome.Sharp.IconButton();
-            this.panelGhost = new System.Windows.Forms.Panel();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.btnScaleToggleZoneViewSingle = new FontAwesome.Sharp.IconButton();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.chartView = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panelCheckView = new System.Windows.Forms.Panel();
-            this.lbRed = new System.Windows.Forms.Label();
-            this.checkView12 = new System.Windows.Forms.CheckBox();
-            this.lbPurple = new System.Windows.Forms.Label();
-            this.checkView11 = new System.Windows.Forms.CheckBox();
-            this.lbGreen = new System.Windows.Forms.Label();
-            this.checkView10 = new System.Windows.Forms.CheckBox();
-            this.lbYellow = new System.Windows.Forms.Label();
-            this.checkView9 = new System.Windows.Forms.CheckBox();
-            this.lbSky = new System.Windows.Forms.Label();
-            this.checkView8 = new System.Windows.Forms.CheckBox();
-            this.lbBlue = new System.Windows.Forms.Label();
-            this.checkView7 = new System.Windows.Forms.CheckBox();
-            this.lbOrange = new System.Windows.Forms.Label();
-            this.checkView6 = new System.Windows.Forms.CheckBox();
-            this.lbLightGreen = new System.Windows.Forms.Label();
-            this.checkView5 = new System.Windows.Forms.CheckBox();
-            this.lbMaroon = new System.Windows.Forms.Label();
-            this.checkView4 = new System.Windows.Forms.CheckBox();
-            this.lbMag = new System.Windows.Forms.Label();
-            this.checkView3 = new System.Windows.Forms.CheckBox();
-            this.lbBlack = new System.Windows.Forms.Label();
-            this.checkView2 = new System.Windows.Forms.CheckBox();
-            this.lbOlive = new System.Windows.Forms.Label();
-            this.checkView1 = new System.Windows.Forms.CheckBox();
-            this.panelViewZone = new System.Windows.Forms.Panel();
-            this.txtView12 = new System.Windows.Forms.Label();
-            this.txtView11 = new System.Windows.Forms.Label();
-            this.txtView10 = new System.Windows.Forms.Label();
-            this.txtView9 = new System.Windows.Forms.Label();
-            this.txtView8 = new System.Windows.Forms.Label();
-            this.txtView7 = new System.Windows.Forms.Label();
-            this.txtView6 = new System.Windows.Forms.Label();
-            this.txtView5 = new System.Windows.Forms.Label();
-            this.txtView4 = new System.Windows.Forms.Label();
-            this.txtView3 = new System.Windows.Forms.Label();
-            this.txtView2 = new System.Windows.Forms.Label();
-            this.txtView1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.lbZoneView = new System.Windows.Forms.Label();
-            this.lbView1 = new System.Windows.Forms.Label();
-            this.lbView2 = new System.Windows.Forms.Label();
-            this.lbView3 = new System.Windows.Forms.Label();
-            this.lbView4 = new System.Windows.Forms.Label();
-            this.lbView5 = new System.Windows.Forms.Label();
-            this.lbView6 = new System.Windows.Forms.Label();
-            this.lbView7 = new System.Windows.Forms.Label();
-            this.lbView8 = new System.Windows.Forms.Label();
-            this.lbView9 = new System.Windows.Forms.Label();
-            this.lbView10 = new System.Windows.Forms.Label();
-            this.lbView11 = new System.Windows.Forms.Label();
-            this.lbView12 = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.label73 = new System.Windows.Forms.Label();
             this.timerDateTimeAndRecord = new System.Windows.Forms.Timer(this.components);
@@ -298,12 +230,6 @@ namespace Apple_24_Zones.Forms
             ((System.ComponentModel.ISupportInitialize)(this.picUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProcess2)).BeginInit();
             this.panelTitleZone2.SuspendLayout();
-            this.panelGhost.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartView)).BeginInit();
-            this.panelCheckView.SuspendLayout();
-            this.panelViewZone.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panelControlZone1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProcess1)).BeginInit();
@@ -1175,8 +1101,7 @@ namespace Apple_24_Zones.Forms
             this.panelBoth.Controls.Add(this.btnReduceScale2);
             this.panelBoth.Controls.Add(this.pictureBox4);
             this.panelBoth.Controls.Add(this.pictureBox3);
-            this.panelBoth.Controls.Add(this.btnScaleToggleZone2);
-            this.panelBoth.Controls.Add(this.btnScaleToggleZone1);
+            this.panelBoth.Controls.Add(this.btnUpScale2);
             this.panelBoth.Controls.Add(this.panel18);
             this.panelBoth.Controls.Add(this.panel19);
             this.panelBoth.Controls.Add(this.label14);
@@ -1208,7 +1133,7 @@ namespace Apple_24_Zones.Forms
             this.btnReduceScale2.IconColor = System.Drawing.Color.Black;
             this.btnReduceScale2.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnReduceScale2.IconSize = 25;
-            this.btnReduceScale2.Location = new System.Drawing.Point(62, 421);
+            this.btnReduceScale2.Location = new System.Drawing.Point(29, 405);
             this.btnReduceScale2.Name = "btnReduceScale2";
             this.btnReduceScale2.Size = new System.Drawing.Size(43, 30);
             this.btnReduceScale2.TabIndex = 337;
@@ -1230,50 +1155,29 @@ namespace Apple_24_Zones.Forms
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = global::Apple_24_Zones.Properties.Resources.labelTempAxisY;
-            this.pictureBox3.Location = new System.Drawing.Point(32, 205);
+            this.pictureBox3.Location = new System.Drawing.Point(37, 153);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 117);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 335;
             this.pictureBox3.TabStop = false;
             // 
-            // btnScaleToggleZone2
+            // btnUpScale2
             // 
-            this.btnScaleToggleZone2.BackColor = System.Drawing.Color.DarkGray;
-            this.btnScaleToggleZone2.FlatAppearance.BorderSize = 2;
-            this.btnScaleToggleZone2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnScaleToggleZone2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScaleToggleZone2.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnScaleToggleZone2.IconColor = System.Drawing.Color.Black;
-            this.btnScaleToggleZone2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnScaleToggleZone2.IconSize = 25;
-            this.btnScaleToggleZone2.Location = new System.Drawing.Point(14, 421);
-            this.btnScaleToggleZone2.Name = "btnScaleToggleZone2";
-            this.btnScaleToggleZone2.Size = new System.Drawing.Size(43, 30);
-            this.btnScaleToggleZone2.TabIndex = 334;
-            this.btnScaleToggleZone2.UseVisualStyleBackColor = false;
-            this.btnScaleToggleZone2.Click += new System.EventHandler(this.btnScaleToggleZone2_Click);
-            // 
-            // btnScaleToggleZone1
-            // 
-            this.btnScaleToggleZone1.BackColor = System.Drawing.Color.DarkGray;
-            this.btnScaleToggleZone1.FlatAppearance.BorderSize = 2;
-            this.btnScaleToggleZone1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnScaleToggleZone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScaleToggleZone1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnScaleToggleZone1.IconColor = System.Drawing.Color.Black;
-            this.btnScaleToggleZone1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnScaleToggleZone1.IconSize = 16;
-            this.btnScaleToggleZone1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScaleToggleZone1.Location = new System.Drawing.Point(14, 920);
-            this.btnScaleToggleZone1.Name = "btnScaleToggleZone1";
-            this.btnScaleToggleZone1.Size = new System.Drawing.Size(91, 24);
-            this.btnScaleToggleZone1.TabIndex = 328;
-            this.btnScaleToggleZone1.Text = "Toggle Scale";
-            this.btnScaleToggleZone1.UseVisualStyleBackColor = false;
-            this.btnScaleToggleZone1.Click += new System.EventHandler(this.btnScaleToggleZone1_Click);
-            this.btnScaleToggleZone1.MouseEnter += new System.EventHandler(this.btnScaleToggleZone1_MouseEnter);
-            this.btnScaleToggleZone1.MouseLeave += new System.EventHandler(this.btnScaleToggleZone1_MouseLeave);
+            this.btnUpScale2.BackColor = System.Drawing.Color.DarkGray;
+            this.btnUpScale2.FlatAppearance.BorderSize = 2;
+            this.btnUpScale2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpScale2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpScale2.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnUpScale2.IconColor = System.Drawing.Color.Black;
+            this.btnUpScale2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUpScale2.IconSize = 25;
+            this.btnUpScale2.Location = new System.Drawing.Point(29, 369);
+            this.btnUpScale2.Name = "btnUpScale2";
+            this.btnUpScale2.Size = new System.Drawing.Size(43, 30);
+            this.btnUpScale2.TabIndex = 334;
+            this.btnUpScale2.UseVisualStyleBackColor = false;
+            this.btnUpScale2.Click += new System.EventHandler(this.btnScaleToggleZone2_Click);
             // 
             // panel18
             // 
@@ -1309,7 +1213,7 @@ namespace Apple_24_Zones.Forms
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.ForeColor = System.Drawing.Color.Teal;
-            this.panel4.Location = new System.Drawing.Point(44, 325);
+            this.panel4.Location = new System.Drawing.Point(49, 273);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(2, 90);
             this.panel4.TabIndex = 321;
@@ -1318,7 +1222,7 @@ namespace Apple_24_Zones.Forms
             // 
             this.panel16.BackColor = System.Drawing.Color.Black;
             this.panel16.ForeColor = System.Drawing.Color.Teal;
-            this.panel16.Location = new System.Drawing.Point(44, 120);
+            this.panel16.Location = new System.Drawing.Point(49, 68);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(2, 80);
             this.panel16.TabIndex = 320;
@@ -1461,7 +1365,7 @@ namespace Apple_24_Zones.Forms
             this.panelConexion.Controls.Add(this.btnConnectCOM1);
             this.panelConexion.Controls.Add(this.cbCOMSelect1);
             this.panelConexion.Controls.Add(this.label32);
-            this.panelConexion.Location = new System.Drawing.Point(550, 79);
+            this.panelConexion.Location = new System.Drawing.Point(718, 79);
             this.panelConexion.Name = "panelConexion";
             this.panelConexion.Size = new System.Drawing.Size(514, 145);
             this.panelConexion.TabIndex = 275;
@@ -2046,822 +1950,6 @@ namespace Apple_24_Zones.Forms
             this.btnRecordZone2.MouseEnter += new System.EventHandler(this.panelControlZone2_MouseEnter);
             this.btnRecordZone2.MouseLeave += new System.EventHandler(this.panelControlZone2_MouseLeave);
             // 
-            // panelGhost
-            // 
-            this.panelGhost.BackColor = System.Drawing.Color.DimGray;
-            this.panelGhost.Controls.Add(this.panel28);
-            this.panelGhost.Controls.Add(this.panel27);
-            this.panelGhost.Controls.Add(this.panel25);
-            this.panelGhost.Controls.Add(this.panel26);
-            this.panelGhost.Controls.Add(this.label6);
-            this.panelGhost.Controls.Add(this.panel24);
-            this.panelGhost.Controls.Add(this.panel23);
-            this.panelGhost.Controls.Add(this.btnScaleToggleZoneViewSingle);
-            this.panelGhost.Controls.Add(this.pictureBox5);
-            this.panelGhost.Controls.Add(this.chartView);
-            this.panelGhost.Controls.Add(this.panelCheckView);
-            this.panelGhost.Controls.Add(this.panelViewZone);
-            this.panelGhost.Location = new System.Drawing.Point(457, 1062);
-            this.panelGhost.Name = "panelGhost";
-            this.panelGhost.Size = new System.Drawing.Size(1352, 958);
-            this.panelGhost.TabIndex = 273;
-            this.panelGhost.Visible = false;
-            this.panelGhost.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGhost_Paint);
-            // 
-            // panel28
-            // 
-            this.panel28.BackColor = System.Drawing.Color.Black;
-            this.panel28.ForeColor = System.Drawing.Color.Black;
-            this.panel28.Location = new System.Drawing.Point(106, 853);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(1082, 2);
-            this.panel28.TabIndex = 344;
-            // 
-            // panel27
-            // 
-            this.panel27.BackColor = System.Drawing.Color.Black;
-            this.panel27.ForeColor = System.Drawing.Color.Black;
-            this.panel27.Location = new System.Drawing.Point(106, 182);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(1082, 2);
-            this.panel27.TabIndex = 343;
-            // 
-            // panel25
-            // 
-            this.panel25.BackColor = System.Drawing.Color.Black;
-            this.panel25.ForeColor = System.Drawing.Color.Black;
-            this.panel25.Location = new System.Drawing.Point(693, 902);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(470, 2);
-            this.panel25.TabIndex = 342;
-            // 
-            // panel26
-            // 
-            this.panel26.BackColor = System.Drawing.Color.Black;
-            this.panel26.ForeColor = System.Drawing.Color.Black;
-            this.panel26.Location = new System.Drawing.Point(129, 902);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(470, 2);
-            this.panel26.TabIndex = 341;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(606, 892);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 20);
-            this.label6.TabIndex = 340;
-            this.label6.Text = "Time [s]";
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.Black;
-            this.panel24.ForeColor = System.Drawing.Color.Teal;
-            this.panel24.Location = new System.Drawing.Point(55, 182);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(2, 250);
-            this.panel24.TabIndex = 339;
-            // 
-            // panel23
-            // 
-            this.panel23.BackColor = System.Drawing.Color.Black;
-            this.panel23.ForeColor = System.Drawing.Color.Teal;
-            this.panel23.Location = new System.Drawing.Point(55, 600);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(2, 260);
-            this.panel23.TabIndex = 338;
-            // 
-            // btnScaleToggleZoneViewSingle
-            // 
-            this.btnScaleToggleZoneViewSingle.BackColor = System.Drawing.Color.DarkGray;
-            this.btnScaleToggleZoneViewSingle.FlatAppearance.BorderSize = 2;
-            this.btnScaleToggleZoneViewSingle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnScaleToggleZoneViewSingle.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScaleToggleZoneViewSingle.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnScaleToggleZoneViewSingle.IconColor = System.Drawing.Color.Black;
-            this.btnScaleToggleZoneViewSingle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnScaleToggleZoneViewSingle.IconSize = 16;
-            this.btnScaleToggleZoneViewSingle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScaleToggleZoneViewSingle.Location = new System.Drawing.Point(21, 910);
-            this.btnScaleToggleZoneViewSingle.Name = "btnScaleToggleZoneViewSingle";
-            this.btnScaleToggleZoneViewSingle.Size = new System.Drawing.Size(91, 24);
-            this.btnScaleToggleZoneViewSingle.TabIndex = 337;
-            this.btnScaleToggleZoneViewSingle.Text = "Toggle Scale";
-            this.btnScaleToggleZoneViewSingle.UseVisualStyleBackColor = false;
-            this.btnScaleToggleZoneViewSingle.Click += new System.EventHandler(this.btnScaleToggleZoneViewSingle_Click);
-            this.btnScaleToggleZoneViewSingle.MouseEnter += new System.EventHandler(this.btnScaleToggleZoneViewSingle_MouseEnter);
-            this.btnScaleToggleZoneViewSingle.MouseLeave += new System.EventHandler(this.btnScaleToggleZoneViewSingle_MouseLeave);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.Image = global::Apple_24_Zones.Properties.Resources.labelTempAxisY;
-            this.pictureBox5.Location = new System.Drawing.Point(44, 442);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 150);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 336;
-            this.pictureBox5.TabStop = false;
-            // 
-            // chartView
-            // 
-            this.chartView.BorderlineColor = System.Drawing.Color.Gray;
-            this.chartView.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            this.chartView.BorderlineWidth = 2;
-            chartArea3.AxisX.Interval = 10D;
-            chartArea3.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea3.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea3.AxisX.Maximum = 100D;
-            chartArea3.AxisX.Minimum = 0D;
-            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.Interval = 10D;
-            chartArea3.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea3.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea3.AxisY.MinorTickMark.Enabled = true;
-            chartArea3.AxisY.MinorTickMark.Interval = 5D;
-            chartArea3.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea3.AxisY.MinorTickMark.Size = 0.6F;
-            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.BackColor = System.Drawing.Color.White;
-            chartArea3.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea3.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea3.BorderWidth = 0;
-            chartArea3.InnerPlotPosition.Auto = false;
-            chartArea3.InnerPlotPosition.Height = 88.4641F;
-            chartArea3.InnerPlotPosition.Width = 93.2662F;
-            chartArea3.InnerPlotPosition.X = 6.11536F;
-            chartArea3.InnerPlotPosition.Y = 2.79255F;
-            chartArea3.Name = "ChartArea1";
-            this.chartView.ChartAreas.Add(chartArea3);
-            this.chartView.Location = new System.Drawing.Point(11, 138);
-            this.chartView.Name = "chartView";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Name = "Series1";
-            series6.ChartArea = "ChartArea1";
-            series6.Name = "Series2";
-            series6.Points.Add(dataPoint3);
-            this.chartView.Series.Add(series5);
-            this.chartView.Series.Add(series6);
-            this.chartView.Size = new System.Drawing.Size(1221, 806);
-            this.chartView.TabIndex = 268;
-            this.chartView.Text = "chart1";
-            // 
-            // panelCheckView
-            // 
-            this.panelCheckView.BackColor = System.Drawing.Color.DarkGray;
-            this.panelCheckView.Controls.Add(this.lbRed);
-            this.panelCheckView.Controls.Add(this.checkView12);
-            this.panelCheckView.Controls.Add(this.lbPurple);
-            this.panelCheckView.Controls.Add(this.checkView11);
-            this.panelCheckView.Controls.Add(this.lbGreen);
-            this.panelCheckView.Controls.Add(this.checkView10);
-            this.panelCheckView.Controls.Add(this.lbYellow);
-            this.panelCheckView.Controls.Add(this.checkView9);
-            this.panelCheckView.Controls.Add(this.lbSky);
-            this.panelCheckView.Controls.Add(this.checkView8);
-            this.panelCheckView.Controls.Add(this.lbBlue);
-            this.panelCheckView.Controls.Add(this.checkView7);
-            this.panelCheckView.Controls.Add(this.lbOrange);
-            this.panelCheckView.Controls.Add(this.checkView6);
-            this.panelCheckView.Controls.Add(this.lbLightGreen);
-            this.panelCheckView.Controls.Add(this.checkView5);
-            this.panelCheckView.Controls.Add(this.lbMaroon);
-            this.panelCheckView.Controls.Add(this.checkView4);
-            this.panelCheckView.Controls.Add(this.lbMag);
-            this.panelCheckView.Controls.Add(this.checkView3);
-            this.panelCheckView.Controls.Add(this.lbBlack);
-            this.panelCheckView.Controls.Add(this.checkView2);
-            this.panelCheckView.Controls.Add(this.lbOlive);
-            this.panelCheckView.Controls.Add(this.checkView1);
-            this.panelCheckView.Location = new System.Drawing.Point(1238, 140);
-            this.panelCheckView.Name = "panelCheckView";
-            this.panelCheckView.Size = new System.Drawing.Size(108, 803);
-            this.panelCheckView.TabIndex = 267;
-            // 
-            // lbRed
-            // 
-            this.lbRed.AutoSize = true;
-            this.lbRed.BackColor = System.Drawing.Color.Red;
-            this.lbRed.Location = new System.Drawing.Point(12, 30);
-            this.lbRed.Name = "lbRed";
-            this.lbRed.Size = new System.Drawing.Size(19, 13);
-            this.lbRed.TabIndex = 241;
-            this.lbRed.Text = "    ";
-            // 
-            // checkView12
-            // 
-            this.checkView12.AutoSize = true;
-            this.checkView12.Checked = true;
-            this.checkView12.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkView12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkView12.ForeColor = System.Drawing.Color.White;
-            this.checkView12.Location = new System.Drawing.Point(37, 756);
-            this.checkView12.Name = "checkView12";
-            this.checkView12.Size = new System.Drawing.Size(71, 28);
-            this.checkView12.TabIndex = 264;
-            this.checkView12.Text = "T-24";
-            this.checkView12.UseVisualStyleBackColor = true;
-            this.checkView12.CheckedChanged += new System.EventHandler(this.checkView12_CheckedChanged);
-            // 
-            // lbPurple
-            // 
-            this.lbPurple.AutoSize = true;
-            this.lbPurple.BackColor = System.Drawing.Color.Purple;
-            this.lbPurple.Location = new System.Drawing.Point(12, 300);
-            this.lbPurple.Name = "lbPurple";
-            this.lbPurple.Size = new System.Drawing.Size(19, 13);
-            this.lbPurple.TabIndex = 245;
-            this.lbPurple.Text = "    ";
-            // 
-            // checkView11
-            // 
-            this.checkView11.AutoSize = true;
-            this.checkView11.Checked = true;
-            this.checkView11.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkView11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkView11.ForeColor = System.Drawing.Color.White;
-            this.checkView11.Location = new System.Drawing.Point(37, 690);
-            this.checkView11.Name = "checkView11";
-            this.checkView11.Size = new System.Drawing.Size(71, 28);
-            this.checkView11.TabIndex = 263;
-            this.checkView11.Text = "T-23";
-            this.checkView11.UseVisualStyleBackColor = true;
-            this.checkView11.CheckedChanged += new System.EventHandler(this.checkView11_CheckedChanged);
-            // 
-            // lbGreen
-            // 
-            this.lbGreen.AutoSize = true;
-            this.lbGreen.BackColor = System.Drawing.Color.Green;
-            this.lbGreen.Location = new System.Drawing.Point(12, 234);
-            this.lbGreen.Name = "lbGreen";
-            this.lbGreen.Size = new System.Drawing.Size(19, 13);
-            this.lbGreen.TabIndex = 244;
-            this.lbGreen.Text = "    ";
-            // 
-            // checkView10
-            // 
-            this.checkView10.AutoSize = true;
-            this.checkView10.Checked = true;
-            this.checkView10.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkView10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkView10.ForeColor = System.Drawing.Color.White;
-            this.checkView10.Location = new System.Drawing.Point(37, 624);
-            this.checkView10.Name = "checkView10";
-            this.checkView10.Size = new System.Drawing.Size(71, 28);
-            this.checkView10.TabIndex = 262;
-            this.checkView10.Text = "T-22";
-            this.checkView10.UseVisualStyleBackColor = true;
-            this.checkView10.CheckedChanged += new System.EventHandler(this.checkView10_CheckedChanged);
-            // 
-            // lbYellow
-            // 
-            this.lbYellow.AutoSize = true;
-            this.lbYellow.BackColor = System.Drawing.Color.Yellow;
-            this.lbYellow.Location = new System.Drawing.Point(12, 168);
-            this.lbYellow.Name = "lbYellow";
-            this.lbYellow.Size = new System.Drawing.Size(19, 13);
-            this.lbYellow.TabIndex = 243;
-            this.lbYellow.Text = "    ";
-            // 
-            // checkView9
-            // 
-            this.checkView9.AutoSize = true;
-            this.checkView9.Checked = true;
-            this.checkView9.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkView9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkView9.ForeColor = System.Drawing.Color.White;
-            this.checkView9.Location = new System.Drawing.Point(37, 558);
-            this.checkView9.Name = "checkView9";
-            this.checkView9.Size = new System.Drawing.Size(71, 28);
-            this.checkView9.TabIndex = 261;
-            this.checkView9.Text = "T-21";
-            this.checkView9.UseVisualStyleBackColor = true;
-            this.checkView9.CheckedChanged += new System.EventHandler(this.checkView9_CheckedChanged);
-            // 
-            // lbSky
-            // 
-            this.lbSky.AutoSize = true;
-            this.lbSky.BackColor = System.Drawing.Color.Cyan;
-            this.lbSky.Location = new System.Drawing.Point(12, 366);
-            this.lbSky.Name = "lbSky";
-            this.lbSky.Size = new System.Drawing.Size(19, 13);
-            this.lbSky.TabIndex = 246;
-            this.lbSky.Text = "    ";
-            // 
-            // checkView8
-            // 
-            this.checkView8.AutoSize = true;
-            this.checkView8.Checked = true;
-            this.checkView8.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkView8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkView8.ForeColor = System.Drawing.Color.White;
-            this.checkView8.Location = new System.Drawing.Point(37, 492);
-            this.checkView8.Name = "checkView8";
-            this.checkView8.Size = new System.Drawing.Size(71, 28);
-            this.checkView8.TabIndex = 260;
-            this.checkView8.Text = "T-20";
-            this.checkView8.UseVisualStyleBackColor = true;
-            this.checkView8.CheckedChanged += new System.EventHandler(this.checkView8_CheckedChanged);
-            // 
-            // lbBlue
-            // 
-            this.lbBlue.AutoSize = true;
-            this.lbBlue.BackColor = System.Drawing.Color.Blue;
-            this.lbBlue.Location = new System.Drawing.Point(12, 102);
-            this.lbBlue.Name = "lbBlue";
-            this.lbBlue.Size = new System.Drawing.Size(19, 13);
-            this.lbBlue.TabIndex = 242;
-            this.lbBlue.Text = "    ";
-            // 
-            // checkView7
-            // 
-            this.checkView7.AutoSize = true;
-            this.checkView7.Checked = true;
-            this.checkView7.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkView7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkView7.ForeColor = System.Drawing.Color.White;
-            this.checkView7.Location = new System.Drawing.Point(37, 426);
-            this.checkView7.Name = "checkView7";
-            this.checkView7.Size = new System.Drawing.Size(71, 28);
-            this.checkView7.TabIndex = 259;
-            this.checkView7.Text = "T-19";
-            this.checkView7.UseVisualStyleBackColor = true;
-            this.checkView7.CheckedChanged += new System.EventHandler(this.checkView7_CheckedChanged);
-            // 
-            // lbOrange
-            // 
-            this.lbOrange.AutoSize = true;
-            this.lbOrange.BackColor = System.Drawing.Color.Orange;
-            this.lbOrange.Location = new System.Drawing.Point(12, 432);
-            this.lbOrange.Name = "lbOrange";
-            this.lbOrange.Size = new System.Drawing.Size(19, 13);
-            this.lbOrange.TabIndex = 247;
-            this.lbOrange.Text = "    ";
-            // 
-            // checkView6
-            // 
-            this.checkView6.AutoSize = true;
-            this.checkView6.Checked = true;
-            this.checkView6.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkView6.ForeColor = System.Drawing.Color.White;
-            this.checkView6.Location = new System.Drawing.Point(37, 360);
-            this.checkView6.Name = "checkView6";
-            this.checkView6.Size = new System.Drawing.Size(71, 28);
-            this.checkView6.TabIndex = 258;
-            this.checkView6.Text = "T-18";
-            this.checkView6.UseVisualStyleBackColor = true;
-            this.checkView6.CheckedChanged += new System.EventHandler(this.checkView6_CheckedChanged);
-            // 
-            // lbLightGreen
-            // 
-            this.lbLightGreen.AutoSize = true;
-            this.lbLightGreen.BackColor = System.Drawing.Color.Lime;
-            this.lbLightGreen.Location = new System.Drawing.Point(12, 564);
-            this.lbLightGreen.Name = "lbLightGreen";
-            this.lbLightGreen.Size = new System.Drawing.Size(19, 13);
-            this.lbLightGreen.TabIndex = 248;
-            this.lbLightGreen.Text = "    ";
-            // 
-            // checkView5
-            // 
-            this.checkView5.AutoSize = true;
-            this.checkView5.Checked = true;
-            this.checkView5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkView5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkView5.ForeColor = System.Drawing.Color.White;
-            this.checkView5.Location = new System.Drawing.Point(37, 294);
-            this.checkView5.Name = "checkView5";
-            this.checkView5.Size = new System.Drawing.Size(71, 28);
-            this.checkView5.TabIndex = 257;
-            this.checkView5.Text = "T-17";
-            this.checkView5.UseVisualStyleBackColor = true;
-            this.checkView5.CheckedChanged += new System.EventHandler(this.checkView5_CheckedChanged);
-            // 
-            // lbMaroon
-            // 
-            this.lbMaroon.AutoSize = true;
-            this.lbMaroon.BackColor = System.Drawing.Color.Maroon;
-            this.lbMaroon.Location = new System.Drawing.Point(12, 498);
-            this.lbMaroon.Name = "lbMaroon";
-            this.lbMaroon.Size = new System.Drawing.Size(19, 13);
-            this.lbMaroon.TabIndex = 249;
-            this.lbMaroon.Text = "    ";
-            // 
-            // checkView4
-            // 
-            this.checkView4.AutoSize = true;
-            this.checkView4.Checked = true;
-            this.checkView4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkView4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkView4.ForeColor = System.Drawing.Color.White;
-            this.checkView4.Location = new System.Drawing.Point(37, 227);
-            this.checkView4.Name = "checkView4";
-            this.checkView4.Size = new System.Drawing.Size(71, 28);
-            this.checkView4.TabIndex = 256;
-            this.checkView4.Text = "T-16";
-            this.checkView4.UseVisualStyleBackColor = true;
-            this.checkView4.CheckedChanged += new System.EventHandler(this.checkView4_CheckedChanged);
-            // 
-            // lbMag
-            // 
-            this.lbMag.AutoSize = true;
-            this.lbMag.BackColor = System.Drawing.Color.Magenta;
-            this.lbMag.Location = new System.Drawing.Point(12, 630);
-            this.lbMag.Name = "lbMag";
-            this.lbMag.Size = new System.Drawing.Size(19, 13);
-            this.lbMag.TabIndex = 250;
-            this.lbMag.Text = "    ";
-            // 
-            // checkView3
-            // 
-            this.checkView3.AutoSize = true;
-            this.checkView3.Checked = true;
-            this.checkView3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkView3.ForeColor = System.Drawing.Color.White;
-            this.checkView3.Location = new System.Drawing.Point(37, 162);
-            this.checkView3.Name = "checkView3";
-            this.checkView3.Size = new System.Drawing.Size(71, 28);
-            this.checkView3.TabIndex = 255;
-            this.checkView3.Text = "T-15";
-            this.checkView3.UseVisualStyleBackColor = true;
-            this.checkView3.CheckedChanged += new System.EventHandler(this.checkView3_CheckedChanged);
-            // 
-            // lbBlack
-            // 
-            this.lbBlack.AutoSize = true;
-            this.lbBlack.BackColor = System.Drawing.Color.Black;
-            this.lbBlack.Location = new System.Drawing.Point(12, 762);
-            this.lbBlack.Name = "lbBlack";
-            this.lbBlack.Size = new System.Drawing.Size(19, 13);
-            this.lbBlack.TabIndex = 251;
-            this.lbBlack.Text = "    ";
-            // 
-            // checkView2
-            // 
-            this.checkView2.AutoSize = true;
-            this.checkView2.Checked = true;
-            this.checkView2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkView2.ForeColor = System.Drawing.Color.White;
-            this.checkView2.Location = new System.Drawing.Point(37, 95);
-            this.checkView2.Name = "checkView2";
-            this.checkView2.Size = new System.Drawing.Size(71, 28);
-            this.checkView2.TabIndex = 254;
-            this.checkView2.Text = "T-14";
-            this.checkView2.UseVisualStyleBackColor = true;
-            this.checkView2.CheckedChanged += new System.EventHandler(this.checkView2_CheckedChanged);
-            // 
-            // lbOlive
-            // 
-            this.lbOlive.AutoSize = true;
-            this.lbOlive.BackColor = System.Drawing.Color.Olive;
-            this.lbOlive.Location = new System.Drawing.Point(12, 696);
-            this.lbOlive.Name = "lbOlive";
-            this.lbOlive.Size = new System.Drawing.Size(19, 13);
-            this.lbOlive.TabIndex = 252;
-            this.lbOlive.Text = "    ";
-            // 
-            // checkView1
-            // 
-            this.checkView1.AutoSize = true;
-            this.checkView1.Checked = true;
-            this.checkView1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkView1.ForeColor = System.Drawing.Color.White;
-            this.checkView1.Location = new System.Drawing.Point(35, 24);
-            this.checkView1.Name = "checkView1";
-            this.checkView1.Size = new System.Drawing.Size(71, 28);
-            this.checkView1.TabIndex = 253;
-            this.checkView1.Text = "T-13";
-            this.checkView1.UseVisualStyleBackColor = true;
-            this.checkView1.CheckedChanged += new System.EventHandler(this.checkView1_CheckedChanged);
-            // 
-            // panelViewZone
-            // 
-            this.panelViewZone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelViewZone.BackColor = System.Drawing.Color.DarkGray;
-            this.panelViewZone.Controls.Add(this.txtView12);
-            this.panelViewZone.Controls.Add(this.txtView11);
-            this.panelViewZone.Controls.Add(this.txtView10);
-            this.panelViewZone.Controls.Add(this.txtView9);
-            this.panelViewZone.Controls.Add(this.txtView8);
-            this.panelViewZone.Controls.Add(this.txtView7);
-            this.panelViewZone.Controls.Add(this.txtView6);
-            this.panelViewZone.Controls.Add(this.txtView5);
-            this.panelViewZone.Controls.Add(this.txtView4);
-            this.panelViewZone.Controls.Add(this.txtView3);
-            this.panelViewZone.Controls.Add(this.txtView2);
-            this.panelViewZone.Controls.Add(this.txtView1);
-            this.panelViewZone.Controls.Add(this.panel6);
-            this.panelViewZone.Controls.Add(this.lbView1);
-            this.panelViewZone.Controls.Add(this.lbView2);
-            this.panelViewZone.Controls.Add(this.lbView3);
-            this.panelViewZone.Controls.Add(this.lbView4);
-            this.panelViewZone.Controls.Add(this.lbView5);
-            this.panelViewZone.Controls.Add(this.lbView6);
-            this.panelViewZone.Controls.Add(this.lbView7);
-            this.panelViewZone.Controls.Add(this.lbView8);
-            this.panelViewZone.Controls.Add(this.lbView9);
-            this.panelViewZone.Controls.Add(this.lbView10);
-            this.panelViewZone.Controls.Add(this.lbView11);
-            this.panelViewZone.Controls.Add(this.lbView12);
-            this.panelViewZone.Location = new System.Drawing.Point(11, 6);
-            this.panelViewZone.Name = "panelViewZone";
-            this.panelViewZone.Size = new System.Drawing.Size(1335, 128);
-            this.panelViewZone.TabIndex = 239;
-            // 
-            // txtView12
-            // 
-            this.txtView12.BackColor = System.Drawing.Color.White;
-            this.txtView12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView12.Location = new System.Drawing.Point(1229, 80);
-            this.txtView12.Name = "txtView12";
-            this.txtView12.Size = new System.Drawing.Size(82, 40);
-            this.txtView12.TabIndex = 324;
-            this.txtView12.Text = "0 °C";
-            this.txtView12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtView11
-            // 
-            this.txtView11.BackColor = System.Drawing.Color.White;
-            this.txtView11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView11.Location = new System.Drawing.Point(1119, 80);
-            this.txtView11.Name = "txtView11";
-            this.txtView11.Size = new System.Drawing.Size(82, 40);
-            this.txtView11.TabIndex = 323;
-            this.txtView11.Text = "0 °C";
-            this.txtView11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtView10
-            // 
-            this.txtView10.BackColor = System.Drawing.Color.White;
-            this.txtView10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView10.Location = new System.Drawing.Point(1009, 80);
-            this.txtView10.Name = "txtView10";
-            this.txtView10.Size = new System.Drawing.Size(82, 40);
-            this.txtView10.TabIndex = 322;
-            this.txtView10.Text = "0 °C";
-            this.txtView10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtView9
-            // 
-            this.txtView9.BackColor = System.Drawing.Color.White;
-            this.txtView9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView9.Location = new System.Drawing.Point(899, 80);
-            this.txtView9.Name = "txtView9";
-            this.txtView9.Size = new System.Drawing.Size(82, 40);
-            this.txtView9.TabIndex = 321;
-            this.txtView9.Text = "0 °C";
-            this.txtView9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtView8
-            // 
-            this.txtView8.BackColor = System.Drawing.Color.White;
-            this.txtView8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView8.Location = new System.Drawing.Point(789, 80);
-            this.txtView8.Name = "txtView8";
-            this.txtView8.Size = new System.Drawing.Size(82, 40);
-            this.txtView8.TabIndex = 320;
-            this.txtView8.Text = "0 °C";
-            this.txtView8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtView7
-            // 
-            this.txtView7.BackColor = System.Drawing.Color.White;
-            this.txtView7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView7.Location = new System.Drawing.Point(679, 80);
-            this.txtView7.Name = "txtView7";
-            this.txtView7.Size = new System.Drawing.Size(82, 40);
-            this.txtView7.TabIndex = 319;
-            this.txtView7.Text = "0 °C";
-            this.txtView7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtView6
-            // 
-            this.txtView6.BackColor = System.Drawing.Color.White;
-            this.txtView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView6.Location = new System.Drawing.Point(569, 80);
-            this.txtView6.Name = "txtView6";
-            this.txtView6.Size = new System.Drawing.Size(82, 40);
-            this.txtView6.TabIndex = 318;
-            this.txtView6.Text = "0 °C";
-            this.txtView6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtView5
-            // 
-            this.txtView5.BackColor = System.Drawing.Color.White;
-            this.txtView5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView5.Location = new System.Drawing.Point(459, 80);
-            this.txtView5.Name = "txtView5";
-            this.txtView5.Size = new System.Drawing.Size(82, 40);
-            this.txtView5.TabIndex = 317;
-            this.txtView5.Text = "0 °C";
-            this.txtView5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtView4
-            // 
-            this.txtView4.BackColor = System.Drawing.Color.White;
-            this.txtView4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView4.Location = new System.Drawing.Point(349, 80);
-            this.txtView4.Name = "txtView4";
-            this.txtView4.Size = new System.Drawing.Size(82, 40);
-            this.txtView4.TabIndex = 316;
-            this.txtView4.Text = "0 °C";
-            this.txtView4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtView3
-            // 
-            this.txtView3.BackColor = System.Drawing.Color.White;
-            this.txtView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView3.Location = new System.Drawing.Point(239, 80);
-            this.txtView3.Name = "txtView3";
-            this.txtView3.Size = new System.Drawing.Size(82, 40);
-            this.txtView3.TabIndex = 315;
-            this.txtView3.Text = "0 °C";
-            this.txtView3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtView2
-            // 
-            this.txtView2.BackColor = System.Drawing.Color.White;
-            this.txtView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView2.Location = new System.Drawing.Point(129, 80);
-            this.txtView2.Name = "txtView2";
-            this.txtView2.Size = new System.Drawing.Size(82, 40);
-            this.txtView2.TabIndex = 314;
-            this.txtView2.Text = "0 °C";
-            this.txtView2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtView1
-            // 
-            this.txtView1.BackColor = System.Drawing.Color.White;
-            this.txtView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtView1.Location = new System.Drawing.Point(19, 80);
-            this.txtView1.Name = "txtView1";
-            this.txtView1.Size = new System.Drawing.Size(82, 40);
-            this.txtView1.TabIndex = 313;
-            this.txtView1.Text = "0 °C";
-            this.txtView1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.lbZoneView);
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1335, 33);
-            this.panel6.TabIndex = 312;
-            // 
-            // lbZoneView
-            // 
-            this.lbZoneView.AutoSize = true;
-            this.lbZoneView.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbZoneView.ForeColor = System.Drawing.Color.Black;
-            this.lbZoneView.Location = new System.Drawing.Point(500, 0);
-            this.lbZoneView.Name = "lbZoneView";
-            this.lbZoneView.Size = new System.Drawing.Size(219, 33);
-            this.lbZoneView.TabIndex = 260;
-            this.lbZoneView.Text = "TEMP ZONE 2";
-            // 
-            // lbView1
-            // 
-            this.lbView1.AutoSize = true;
-            this.lbView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView1.ForeColor = System.Drawing.Color.Black;
-            this.lbView1.Location = new System.Drawing.Point(16, 44);
-            this.lbView1.Name = "lbView1";
-            this.lbView1.Size = new System.Drawing.Size(79, 33);
-            this.lbView1.TabIndex = 25;
-            this.lbView1.Text = "T-13";
-            // 
-            // lbView2
-            // 
-            this.lbView2.AutoSize = true;
-            this.lbView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView2.ForeColor = System.Drawing.Color.Black;
-            this.lbView2.Location = new System.Drawing.Point(129, 44);
-            this.lbView2.Name = "lbView2";
-            this.lbView2.Size = new System.Drawing.Size(79, 33);
-            this.lbView2.TabIndex = 25;
-            this.lbView2.Text = "T-14";
-            // 
-            // lbView3
-            // 
-            this.lbView3.AutoSize = true;
-            this.lbView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView3.ForeColor = System.Drawing.Color.Black;
-            this.lbView3.Location = new System.Drawing.Point(239, 44);
-            this.lbView3.Name = "lbView3";
-            this.lbView3.Size = new System.Drawing.Size(79, 33);
-            this.lbView3.TabIndex = 25;
-            this.lbView3.Text = "T-15";
-            // 
-            // lbView4
-            // 
-            this.lbView4.AutoSize = true;
-            this.lbView4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView4.ForeColor = System.Drawing.Color.Black;
-            this.lbView4.Location = new System.Drawing.Point(349, 44);
-            this.lbView4.Name = "lbView4";
-            this.lbView4.Size = new System.Drawing.Size(79, 33);
-            this.lbView4.TabIndex = 25;
-            this.lbView4.Text = "T-16";
-            // 
-            // lbView5
-            // 
-            this.lbView5.AutoSize = true;
-            this.lbView5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView5.ForeColor = System.Drawing.Color.Black;
-            this.lbView5.Location = new System.Drawing.Point(459, 44);
-            this.lbView5.Name = "lbView5";
-            this.lbView5.Size = new System.Drawing.Size(79, 33);
-            this.lbView5.TabIndex = 25;
-            this.lbView5.Text = "T-17";
-            // 
-            // lbView6
-            // 
-            this.lbView6.AutoSize = true;
-            this.lbView6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView6.ForeColor = System.Drawing.Color.Black;
-            this.lbView6.Location = new System.Drawing.Point(569, 44);
-            this.lbView6.Name = "lbView6";
-            this.lbView6.Size = new System.Drawing.Size(79, 33);
-            this.lbView6.TabIndex = 25;
-            this.lbView6.Text = "T-18";
-            // 
-            // lbView7
-            // 
-            this.lbView7.AutoSize = true;
-            this.lbView7.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView7.ForeColor = System.Drawing.Color.Black;
-            this.lbView7.Location = new System.Drawing.Point(679, 44);
-            this.lbView7.Name = "lbView7";
-            this.lbView7.Size = new System.Drawing.Size(79, 33);
-            this.lbView7.TabIndex = 25;
-            this.lbView7.Text = "T-19";
-            // 
-            // lbView8
-            // 
-            this.lbView8.AutoSize = true;
-            this.lbView8.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView8.ForeColor = System.Drawing.Color.Black;
-            this.lbView8.Location = new System.Drawing.Point(789, 44);
-            this.lbView8.Name = "lbView8";
-            this.lbView8.Size = new System.Drawing.Size(79, 33);
-            this.lbView8.TabIndex = 25;
-            this.lbView8.Text = "T-20";
-            // 
-            // lbView9
-            // 
-            this.lbView9.AutoSize = true;
-            this.lbView9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView9.ForeColor = System.Drawing.Color.Black;
-            this.lbView9.Location = new System.Drawing.Point(899, 44);
-            this.lbView9.Name = "lbView9";
-            this.lbView9.Size = new System.Drawing.Size(79, 33);
-            this.lbView9.TabIndex = 25;
-            this.lbView9.Text = "T-21";
-            // 
-            // lbView10
-            // 
-            this.lbView10.AutoSize = true;
-            this.lbView10.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView10.ForeColor = System.Drawing.Color.Black;
-            this.lbView10.Location = new System.Drawing.Point(1009, 44);
-            this.lbView10.Name = "lbView10";
-            this.lbView10.Size = new System.Drawing.Size(79, 33);
-            this.lbView10.TabIndex = 25;
-            this.lbView10.Text = "T-22";
-            // 
-            // lbView11
-            // 
-            this.lbView11.AutoSize = true;
-            this.lbView11.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView11.ForeColor = System.Drawing.Color.Black;
-            this.lbView11.Location = new System.Drawing.Point(1119, 44);
-            this.lbView11.Name = "lbView11";
-            this.lbView11.Size = new System.Drawing.Size(79, 33);
-            this.lbView11.TabIndex = 25;
-            this.lbView11.Text = "T-23";
-            // 
-            // lbView12
-            // 
-            this.lbView12.AutoSize = true;
-            this.lbView12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView12.ForeColor = System.Drawing.Color.Black;
-            this.lbView12.Location = new System.Drawing.Point(1229, 44);
-            this.lbView12.Name = "lbView12";
-            this.lbView12.Size = new System.Drawing.Size(79, 33);
-            this.lbView12.TabIndex = 25;
-            this.lbView12.Text = "T-24";
-            // 
             // serialPort1
             // 
             this.serialPort1.ReceivedBytesThreshold = 14;
@@ -3358,7 +2446,6 @@ namespace Apple_24_Zones.Forms
             this.Controls.Add(this.label73);
             this.Controls.Add(this.picDrawMachine);
             this.Controls.Add(this.panelControlZone2);
-            this.Controls.Add(this.panelGhost);
             this.Controls.Add(this.panelBoth);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -3399,16 +2486,6 @@ namespace Apple_24_Zones.Forms
             ((System.ComponentModel.ISupportInitialize)(this.picUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProcess2)).EndInit();
             this.panelTitleZone2.ResumeLayout(false);
-            this.panelGhost.ResumeLayout(false);
-            this.panelGhost.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartView)).EndInit();
-            this.panelCheckView.ResumeLayout(false);
-            this.panelCheckView.PerformLayout();
-            this.panelViewZone.ResumeLayout(false);
-            this.panelViewZone.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panelControlZone1.ResumeLayout(false);
             this.panelControlZone1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUpDown1)).EndInit();
@@ -3492,46 +2569,6 @@ namespace Apple_24_Zones.Forms
         private FontAwesome.Sharp.IconButton IconMinima;
         private FontAwesome.Sharp.IconButton IconMaxin;
         private FontAwesome.Sharp.IconButton IconClose;
-        private Panel panelGhost;
-        private Panel panelCheckView;
-        private Label lbRed;
-        private CheckBox checkView12;
-        private Label lbPurple;
-        private CheckBox checkView11;
-        private Label lbGreen;
-        private CheckBox checkView10;
-        private Label lbYellow;
-        private CheckBox checkView9;
-        private Label lbSky;
-        private CheckBox checkView8;
-        private Label lbBlue;
-        private CheckBox checkView7;
-        private Label lbOrange;
-        private CheckBox checkView6;
-        private Label lbLightGreen;
-        private CheckBox checkView5;
-        private Label lbMaroon;
-        private CheckBox checkView4;
-        private Label lbMag;
-        private CheckBox checkView3;
-        private Label lbBlack;
-        private CheckBox checkView2;
-        private Label lbOlive;
-        private CheckBox checkView1;
-        private Panel panelViewZone;
-        private Label lbZoneView;
-        private Label lbView1;
-        private Label lbView2;
-        private Label lbView3;
-        private Label lbView4;
-        private Label lbView5;
-        private Label lbView6;
-        private Label lbView7;
-        private Label lbView8;
-        private Label lbView9;
-        private Label lbView10;
-        private Label lbView11;
-        private Label lbView12;
         private Panel panelConexion;
         private Label label99;
         private Label label33;
@@ -3570,19 +2607,6 @@ namespace Apple_24_Zones.Forms
         private Label lbDate;
         private Label lbTime;
         private TextBox txtCrono2;
-        private Panel panel6;
-        private Label txtView1;
-        private Label txtView4;
-        private Label txtView3;
-        private Label txtView2;
-        private Label txtView6;
-        private Label txtView5;
-        private Label txtView12;
-        private Label txtView11;
-        private Label txtView10;
-        private Label txtView9;
-        private Label txtView8;
-        private Label txtView7;
         private Panel panel7;
         private Panel panel12;
         private Label label17;
@@ -3625,21 +2649,10 @@ namespace Apple_24_Zones.Forms
         private Label label14;
         private Panel panel4;
         private Panel panel16;
-        private FontAwesome.Sharp.IconButton btnScaleToggleZone1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartZone2;
-        private FontAwesome.Sharp.IconButton btnScaleToggleZone2;
+        private FontAwesome.Sharp.IconButton btnUpScale2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartView;
-        private FontAwesome.Sharp.IconButton btnScaleToggleZoneViewSingle;
-        private Panel panel23;
-        private Panel panel24;
-        private Panel panel25;
-        private Panel panel26;
-        private Label label6;
-        private Panel panel27;
-        private Panel panel28;
         private Timer timerGraficarCharts;
         private FontAwesome.Sharp.IconButton btnRecordZone2;
         private FontAwesome.Sharp.IconButton btnRecordZone1;
