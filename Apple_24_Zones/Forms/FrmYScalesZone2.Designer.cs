@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.IconClose = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtYUpperZ2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,7 +62,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(196, 25);
             this.label3.TabIndex = 232;
-            this.label3.Text = "Y SCALES";
+            this.label3.Text = "Y-SCALE ZONE 2";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // IconClose
@@ -81,23 +80,10 @@
             this.IconClose.TabIndex = 41;
             this.IconClose.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(16, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 25);
-            this.label1.TabIndex = 233;
-            this.label1.Text = "Y Scales Zone 2";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // txtYUpperZ2
             // 
             this.txtYUpperZ2.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYUpperZ2.Location = new System.Drawing.Point(126, 104);
+            this.txtYUpperZ2.Location = new System.Drawing.Point(141, 52);
             this.txtYUpperZ2.Name = "txtYUpperZ2";
             this.txtYUpperZ2.Size = new System.Drawing.Size(73, 30);
             this.txtYUpperZ2.TabIndex = 234;
@@ -108,11 +94,11 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(17, 104);
+            this.label2.Location = new System.Drawing.Point(32, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 25);
             this.label2.TabIndex = 235;
-            this.label2.Text = "Y-Upper = ";
+            this.label2.Text = "y-upper = ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
@@ -121,17 +107,17 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(17, 142);
+            this.label4.Location = new System.Drawing.Point(32, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 25);
             this.label4.TabIndex = 237;
-            this.label4.Text = "Y-Lower = ";
+            this.label4.Text = "y-lower = ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtYLowerZ2
             // 
             this.txtYLowerZ2.Font = new System.Drawing.Font("Bodoni MT Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYLowerZ2.Location = new System.Drawing.Point(126, 142);
+            this.txtYLowerZ2.Location = new System.Drawing.Point(141, 90);
             this.txtYLowerZ2.Name = "txtYLowerZ2";
             this.txtYLowerZ2.Size = new System.Drawing.Size(73, 30);
             this.txtYLowerZ2.TabIndex = 236;
@@ -145,7 +131,7 @@
             this.btnSaveYUZ2.IconColor = System.Drawing.Color.White;
             this.btnSaveYUZ2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSaveYUZ2.IconSize = 30;
-            this.btnSaveYUZ2.Location = new System.Drawing.Point(205, 104);
+            this.btnSaveYUZ2.Location = new System.Drawing.Point(220, 52);
             this.btnSaveYUZ2.Name = "btnSaveYUZ2";
             this.btnSaveYUZ2.Size = new System.Drawing.Size(39, 30);
             this.btnSaveYUZ2.TabIndex = 243;
@@ -160,7 +146,7 @@
             this.btnSaveYLZ2.IconColor = System.Drawing.Color.White;
             this.btnSaveYLZ2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSaveYLZ2.IconSize = 30;
-            this.btnSaveYLZ2.Location = new System.Drawing.Point(205, 142);
+            this.btnSaveYLZ2.Location = new System.Drawing.Point(220, 90);
             this.btnSaveYLZ2.Name = "btnSaveYLZ2";
             this.btnSaveYLZ2.Size = new System.Drawing.Size(39, 30);
             this.btnSaveYLZ2.TabIndex = 244;
@@ -170,14 +156,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 188);
+            this.ClientSize = new System.Drawing.Size(289, 137);
             this.Controls.Add(this.btnSaveYLZ2);
             this.Controls.Add(this.btnSaveYUZ2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtYLowerZ2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtYUpperZ2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -195,7 +180,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton IconClose;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtYUpperZ2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
