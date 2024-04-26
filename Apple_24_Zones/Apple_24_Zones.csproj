@@ -137,20 +137,8 @@
     <Compile Include="Forms\FrmPanelExample.Designer.cs">
       <DependentUpon>FrmPanelExample.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmVisualizadorCrystalReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmVisualizadorCrystalReport.Designer.cs">
-      <DependentUpon>FrmVisualizadorCrystalReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\RptCyclesComplete.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RptCyclesComplete.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <None Include="Properties\app.manifest" />
     <None Include="Resources\STOP2.png" />
     <EmbeddedResource Include="Forms\FrmInformation.resx">
@@ -175,9 +163,6 @@
     <EmbeddedResource Include="Forms\FrmPanelExample.resx">
       <DependentUpon>FrmPanelExample.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmVisualizadorCrystalReport.resx">
-      <DependentUpon>FrmVisualizadorCrystalReport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -188,10 +173,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reports\RptCyclesComplete.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RptCyclesComplete.cs</LastGenOutput>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

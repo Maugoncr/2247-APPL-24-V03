@@ -1,7 +1,6 @@
 ﻿using Apple_24_Zones.Properties;
 using AppleSoftware.Forms;
 using CrystalDecisions.CrystalReports.Engine;
-using MidoriValveTest.Forms;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -1035,68 +1034,6 @@ namespace Apple_24_Zones.Forms
 
         }
 
-
-        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GenerarReporte("Example");
-        }
-
-        private void GenerarReporte(string NombreReport)
-        {
-            // Llamar el aumentador del contador
-            //AumentarContadorReportesGenerados();
-
-            Bitmap screenCapture = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-            Graphics g = Graphics.FromImage(screenCapture);
-            g.CopyFromScreen(0, 0, 0, 0, screenCapture.Size);
-            string tempPath = Path.Combine(Path.GetTempPath(), "screenshot.jpg");
-            screenCapture.Save(tempPath, System.Drawing.Imaging.ImageFormat.Jpeg);
-            ReportDocument MiReporte = new ReportDocument();
-            FrmVisualizadorCrystalReport Visualizador = new FrmVisualizadorCrystalReport();
-
-            MiReporte.Load("../../Reports/RptCyclesComplete.rpt");
-
-            MiReporte.SetParameterValue("AVGTempZone1", lbAVGTemp1.Text);
-            MiReporte.SetParameterValue("AVGTempZone2", lbAVGTemp2.Text);
-            MiReporte.SetParameterValue("ExecutionTimeZone1", lbStartDate1.Text);
-            MiReporte.SetParameterValue("ExecutionTimeZone2", lbStartDate2.Text);
-            MiReporte.SetParameterValue("HeatingCounterZone1", Settings.Default.CountHeat1.ToString());
-            MiReporte.SetParameterValue("HeatingCounterZone2", Settings.Default.CountHeat2.ToString());
-            MiReporte.SetParameterValue("CoolingCounterZone1", Settings.Default.CountCool1.ToString());
-            MiReporte.SetParameterValue("CoolingCounterZone2", Settings.Default.CountCool2.ToString());
-            MiReporte.SetParameterValue("ImagePath", tempPath);
-
-            // string k = DateStartedTest.Text;
-            //string j = k.Replace("\n", " - ");
-
-            //MiReporte.SetParameterValue("DateTimeStartedTest", /*j*/"XXXX");
-
-            // k = DateEndedTest.Text;
-            // j = k.Replace("\n", " - ");
-
-            //MiReporte.SetParameterValue("DateTimeFinishTest", /*j*/"XXXX");
-
-            // if (TestToRun == 1)
-            //{
-            //    MiReporte.SetParameterValue("PhaseName", "[1] Pretest System Calibration");
-            //}
-            // else if (TestToRun == 2)
-            //{
-            //    MiReporte.SetParameterValue("PhaseName", "[2] Stability Test");
-            //}
-            //else if (TestToRun == 3)
-            //{
-            //    MiReporte.SetParameterValue("PhaseName", "[3] Valve Leak Test");
-            //}
-            //else
-            //{
-            //MiReporte.SetParameterValue("PhaseName", "Phase not selected yet");
-            //}
-
-            Visualizador.crystalReportViewer1.ReportSource = MiReporte;
-            Visualizador.crystalReportViewer1.Zoom(125);
-            Visualizador.Show();
-        }
 
         // Chiller & Leds COM PORT
         private void btnConnectCOM2_Click(object sender, EventArgs e)
