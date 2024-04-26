@@ -3508,6 +3508,21 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        private void btnCharStatic2YScale_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmYScalesZone2);
+            if (frm == null)
+            {
+                FrmYScalesZone2 nt = new FrmYScalesZone2();
+                nt.ShowDialog();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
+        }
+
         private void iconButton5_Click(object sender, EventArgs e)
         {
             Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmYScalesZone2);
