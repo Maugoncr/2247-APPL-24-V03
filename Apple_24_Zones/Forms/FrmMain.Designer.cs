@@ -32,16 +32,16 @@ namespace Apple_24_Zones.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
             this.chartZone1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -210,6 +210,9 @@ namespace Apple_24_Zones.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pChartStaticZ2 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnStartStopChart = new FontAwesome.Sharp.IconButton();
+            this.label16 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnResetCharStatic2 = new FontAwesome.Sharp.IconButton();
             this.btnChangeChartStatic2 = new FontAwesome.Sharp.IconButton();
@@ -218,8 +221,6 @@ namespace Apple_24_Zones.Forms
             this.chartStaticZone2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnStopChartStatic2 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -279,43 +280,43 @@ namespace Apple_24_Zones.Forms
             this.chartZone1.BorderlineColor = System.Drawing.Color.Gray;
             this.chartZone1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartZone1.BorderlineWidth = 2;
-            chartArea7.AxisX.Interval = 10D;
-            chartArea7.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea7.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea7.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea7.AxisX.Maximum = 100D;
-            chartArea7.AxisX.Minimum = 0D;
-            chartArea7.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea7.AxisY.Interval = 10D;
-            chartArea7.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea7.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea7.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea7.AxisY.MinorTickMark.Enabled = true;
-            chartArea7.AxisY.MinorTickMark.Interval = 5D;
-            chartArea7.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea7.AxisY.MinorTickMark.Size = 0.6F;
-            chartArea7.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea7.BackColor = System.Drawing.Color.White;
-            chartArea7.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea7.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea7.BorderWidth = 0;
-            chartArea7.InnerPlotPosition.Auto = false;
-            chartArea7.InnerPlotPosition.Height = 88.4641F;
-            chartArea7.InnerPlotPosition.Width = 93.2662F;
-            chartArea7.InnerPlotPosition.X = 6.11536F;
-            chartArea7.InnerPlotPosition.Y = 2.79255F;
-            chartArea7.Name = "ChartArea1";
-            this.chartZone1.ChartAreas.Add(chartArea7);
+            chartArea1.AxisX.Interval = 10D;
+            chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea1.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea1.AxisX.Maximum = 100D;
+            chartArea1.AxisX.Minimum = 0D;
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Interval = 10D;
+            chartArea1.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea1.AxisY.MinorTickMark.Enabled = true;
+            chartArea1.AxisY.MinorTickMark.Interval = 5D;
+            chartArea1.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea1.AxisY.MinorTickMark.Size = 0.6F;
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.BackColor = System.Drawing.Color.White;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea1.BorderWidth = 0;
+            chartArea1.InnerPlotPosition.Auto = false;
+            chartArea1.InnerPlotPosition.Height = 88.4641F;
+            chartArea1.InnerPlotPosition.Width = 93.2662F;
+            chartArea1.InnerPlotPosition.X = 6.11536F;
+            chartArea1.InnerPlotPosition.Y = 2.79255F;
+            chartArea1.Name = "ChartArea1";
+            this.chartZone1.ChartAreas.Add(chartArea1);
             this.chartZone1.Location = new System.Drawing.Point(10, 528);
             this.chartZone1.Name = "chartZone1";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series9.Name = "Series1";
-            series10.ChartArea = "ChartArea1";
-            series10.Name = "Series2";
-            series10.Points.Add(dataPoint5);
-            this.chartZone1.Series.Add(series9);
-            this.chartZone1.Series.Add(series10);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Name = "Series1";
+            series2.ChartArea = "ChartArea1";
+            series2.Name = "Series2";
+            series2.Points.Add(dataPoint1);
+            this.chartZone1.Series.Add(series1);
+            this.chartZone1.Series.Add(series2);
             this.chartZone1.Size = new System.Drawing.Size(1303, 420);
             this.chartZone1.TabIndex = 238;
             this.chartZone1.Text = "chart1";
@@ -1286,42 +1287,42 @@ namespace Apple_24_Zones.Forms
             this.chartZone2.BorderlineColor = System.Drawing.Color.Gray;
             this.chartZone2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartZone2.BorderlineWidth = 2;
-            chartArea8.AxisX.Interval = 10D;
-            chartArea8.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea8.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea8.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea8.AxisX.Maximum = 100D;
-            chartArea8.AxisX.Minimum = 0D;
-            chartArea8.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea8.AxisY.Interval = 10D;
-            chartArea8.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea8.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea8.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea8.AxisY.MinorTickMark.Enabled = true;
-            chartArea8.AxisY.MinorTickMark.Interval = 5D;
-            chartArea8.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea8.AxisY.MinorTickMark.Size = 0.6F;
-            chartArea8.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea8.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea8.BorderWidth = 0;
-            chartArea8.InnerPlotPosition.Auto = false;
-            chartArea8.InnerPlotPosition.Height = 88.4641F;
-            chartArea8.InnerPlotPosition.Width = 93.2662F;
-            chartArea8.InnerPlotPosition.X = 6.11536F;
-            chartArea8.InnerPlotPosition.Y = 2.79255F;
-            chartArea8.Name = "ChartArea1";
-            this.chartZone2.ChartAreas.Add(chartArea8);
+            chartArea2.AxisX.Interval = 10D;
+            chartArea2.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea2.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea2.AxisX.Maximum = 100D;
+            chartArea2.AxisX.Minimum = 0D;
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Interval = 10D;
+            chartArea2.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
+            chartArea2.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea2.AxisY.MinorTickMark.Enabled = true;
+            chartArea2.AxisY.MinorTickMark.Interval = 5D;
+            chartArea2.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea2.AxisY.MinorTickMark.Size = 0.6F;
+            chartArea2.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea2.BorderWidth = 0;
+            chartArea2.InnerPlotPosition.Auto = false;
+            chartArea2.InnerPlotPosition.Height = 88.4641F;
+            chartArea2.InnerPlotPosition.Width = 93.2662F;
+            chartArea2.InnerPlotPosition.X = 6.11536F;
+            chartArea2.InnerPlotPosition.Y = 2.79255F;
+            chartArea2.Name = "ChartArea1";
+            this.chartZone2.ChartAreas.Add(chartArea2);
             this.chartZone2.Location = new System.Drawing.Point(10, 36);
             this.chartZone2.Name = "chartZone2";
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series11.Name = "Series1";
-            series11.YValuesPerPoint = 2;
-            series12.ChartArea = "ChartArea1";
-            series12.Name = "Series2";
-            series12.Points.Add(dataPoint6);
-            this.chartZone2.Series.Add(series11);
-            this.chartZone2.Series.Add(series12);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Name = "Series1";
+            series3.YValuesPerPoint = 2;
+            series4.ChartArea = "ChartArea1";
+            series4.Name = "Series2";
+            series4.Points.Add(dataPoint2);
+            this.chartZone2.Series.Add(series3);
+            this.chartZone2.Series.Add(series4);
             this.chartZone2.Size = new System.Drawing.Size(1303, 419);
             this.chartZone2.TabIndex = 333;
             this.chartZone2.Text = "chart1";
@@ -2367,7 +2368,8 @@ namespace Apple_24_Zones.Forms
             // 
             // pChartStaticZ2
             // 
-            this.pChartStaticZ2.Controls.Add(this.btnStopChartStatic2);
+            this.pChartStaticZ2.Controls.Add(this.label18);
+            this.pChartStaticZ2.Controls.Add(this.btnStartStopChart);
             this.pChartStaticZ2.Controls.Add(this.label16);
             this.pChartStaticZ2.Controls.Add(this.label10);
             this.pChartStaticZ2.Controls.Add(this.btnResetCharStatic2);
@@ -2380,6 +2382,44 @@ namespace Apple_24_Zones.Forms
             this.pChartStaticZ2.Name = "pChartStaticZ2";
             this.pChartStaticZ2.Size = new System.Drawing.Size(1319, 468);
             this.pChartStaticZ2.TabIndex = 328;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(438, 429);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(111, 24);
+            this.label18.TabIndex = 323;
+            this.label18.Text = "Start / Stop";
+            // 
+            // btnStartStopChart
+            // 
+            this.btnStartStopChart.BackColor = System.Drawing.Color.Transparent;
+            this.btnStartStopChart.FlatAppearance.BorderSize = 0;
+            this.btnStartStopChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStartStopChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+            this.btnStartStopChart.IconColor = System.Drawing.Color.White;
+            this.btnStartStopChart.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnStartStopChart.Location = new System.Drawing.Point(554, 426);
+            this.btnStartStopChart.Name = "btnStartStopChart";
+            this.btnStartStopChart.Size = new System.Drawing.Size(48, 33);
+            this.btnStartStopChart.TabIndex = 322;
+            this.btnStartStopChart.UseVisualStyleBackColor = false;
+            this.btnStartStopChart.Click += new System.EventHandler(this.btnStartStopChart_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(1128, 429);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(141, 24);
+            this.label16.TabIndex = 320;
+            this.label16.Text = "Change View:";
             // 
             // label10
             // 
@@ -2453,8 +2493,8 @@ namespace Apple_24_Zones.Forms
             // 
             // chartStaticZone2
             // 
-            chartArea9.Name = "ChartArea1";
-            this.chartStaticZone2.ChartAreas.Add(chartArea9);
+            chartArea3.Name = "ChartArea1";
+            this.chartStaticZone2.ChartAreas.Add(chartArea3);
             this.chartStaticZone2.Location = new System.Drawing.Point(10, 36);
             this.chartStaticZone2.Name = "chartStaticZone2";
             this.chartStaticZone2.Size = new System.Drawing.Size(1303, 374);
@@ -2481,40 +2521,14 @@ namespace Apple_24_Zones.Forms
             this.label5.TabIndex = 260;
             this.label5.Text = "TEMP ZONE 2";
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(1128, 429);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(141, 24);
-            this.label16.TabIndex = 320;
-            this.label16.Text = "Change View:";
-            // 
-            // btnStopChartStatic2
-            // 
-            this.btnStopChartStatic2.BackColor = System.Drawing.Color.Transparent;
-            this.btnStopChartStatic2.FlatAppearance.BorderSize = 0;
-            this.btnStopChartStatic2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStopChartStatic2.IconChar = FontAwesome.Sharp.IconChar.Stop;
-            this.btnStopChartStatic2.IconColor = System.Drawing.Color.White;
-            this.btnStopChartStatic2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnStopChartStatic2.IconSize = 30;
-            this.btnStopChartStatic2.Location = new System.Drawing.Point(577, 424);
-            this.btnStopChartStatic2.Name = "btnStopChartStatic2";
-            this.btnStopChartStatic2.Size = new System.Drawing.Size(38, 33);
-            this.btnStopChartStatic2.TabIndex = 321;
-            this.btnStopChartStatic2.UseVisualStyleBackColor = false;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.pChartStaticZ2);
             this.Controls.Add(this.panelConexion);
+            this.Controls.Add(this.pChartStaticZ2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -2761,6 +2775,7 @@ namespace Apple_24_Zones.Forms
         private Label label10;
         private FontAwesome.Sharp.IconButton btnResetCharStatic2;
         private Label label16;
-        private FontAwesome.Sharp.IconButton btnStopChartStatic2;
+        private Label label18;
+        private FontAwesome.Sharp.IconButton btnStartStopChart;
     }
 }

@@ -213,6 +213,8 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        bool graficarChartStatic2 = false;
+
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
             string fecha = DateTime.Now.ToString("dddd, MM/dd/yyyy");
@@ -220,7 +222,7 @@ namespace Apple_24_Zones.Forms
             lbDate.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(fecha);
 
             //Si todas las Temperaturas ya tienen un valor
-            if (temperatureValueOmron1 != 0 && temperatureValueOmron2 != 0)
+            if (temperatureValueOmron1 != 0 && temperatureValueOmron2 != 0 && graficarChartStatic2)
             {
 
                 chartStaticZone2.ChartAreas[0].AxisY.Minimum = Settings.Default.YZone1Lower;
@@ -3484,12 +3486,26 @@ namespace Apple_24_Zones.Forms
 
         private void btnResetCharStatic2_Click(object sender, EventArgs e)
         {
-            chartStaticZone2.Series["TC-2"].Points.Clear();
+            chartStaticZone2.Series["T-2"].Points.Clear();
         }
 
         private void btnChangeChartStatic2_Click(object sender, EventArgs e)
         {
             pChartStaticZ2.Visible = false;
+        }
+
+        private void btnStartStopChart_Click(object sender, EventArgs e)
+        {
+            if (btnStartStopChart.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
+            {
+                btnStartStopChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+                graficarChartStatic2 = true;
+            }
+            else
+            {
+                btnStartStopChart.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+                graficarChartStatic2 = false;
+            }
         }
 
         private void iconButton5_Click(object sender, EventArgs e)
