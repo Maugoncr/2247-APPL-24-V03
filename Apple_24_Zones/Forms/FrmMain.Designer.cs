@@ -247,8 +247,6 @@ namespace Apple_24_Zones.Forms
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.label73 = new System.Windows.Forms.Label();
             this.timerDateTimeAndRecord = new System.Windows.Forms.Timer(this.components);
-            this.timerSimulationCharts = new System.Windows.Forms.Timer(this.components);
-            this.timerSimulationDownUp = new System.Windows.Forms.Timer(this.components);
             this.timerRequestTemps = new System.Windows.Forms.Timer(this.components);
             this.panelControlZone1 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
@@ -2885,14 +2883,6 @@ namespace Apple_24_Zones.Forms
             this.timerDateTimeAndRecord.Interval = 1000;
             this.timerDateTimeAndRecord.Tick += new System.EventHandler(this.timerDateTime_Tick);
             // 
-            // timerSimulationCharts
-            // 
-            this.timerSimulationCharts.Tick += new System.EventHandler(this.timerSimulationCharts_Tick);
-            // 
-            // timerSimulationDownUp
-            // 
-            this.timerSimulationDownUp.Tick += new System.EventHandler(this.timerSimulationDownUp_Tick);
-            // 
             // timerRequestTemps
             // 
             this.timerRequestTemps.Tick += new System.EventHandler(this.timerRequestTemps_Tick);
@@ -3596,7 +3586,6 @@ namespace Apple_24_Zones.Forms
         private Panel panel7;
         private Panel panel12;
         private Label label17;
-        private Timer timerSimulationCharts;
         private Panel panel11;
         private Panel panel13;
         private Label label2;
@@ -3604,7 +3593,6 @@ namespace Apple_24_Zones.Forms
         private Panel panel15;
         private TextBox txtPutSetpoint2;
         private Panel panel8;
-        private Timer timerSimulationDownUp;
         private Timer timerRequestTemps;
         private Label lb487;
         private Button btnStop2;
