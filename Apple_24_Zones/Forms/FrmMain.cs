@@ -195,19 +195,25 @@ namespace Apple_24_Zones.Forms
             // 43200 12H
             // 21600 6H
             // 3600 1H
+            // 1800 30M
+
             if (cbMaxTime.SelectedIndex == 0)
             {
-                chartStaticZone2.ChartAreas[0].AxisX.Maximum = 3600;
+                chartStaticZone2.ChartAreas[0].AxisX.Maximum = 1800;
             }
             else if (cbMaxTime.SelectedIndex == 1)
             {
-                chartStaticZone2.ChartAreas[0].AxisX.Maximum = 21600;
+                chartStaticZone2.ChartAreas[0].AxisX.Maximum = 3600;
             }
             else if (cbMaxTime.SelectedIndex == 2)
             {
-                chartStaticZone2.ChartAreas[0].AxisX.Maximum = 43200;
+                chartStaticZone2.ChartAreas[0].AxisX.Maximum = 21600;
             }
             else if (cbMaxTime.SelectedIndex == 3)
+            {
+                chartStaticZone2.ChartAreas[0].AxisX.Maximum = 43200;
+            }
+            else if (cbMaxTime.SelectedIndex == 4)
             {
                 chartStaticZone2.ChartAreas[0].AxisX.Maximum = 86400;
             }
@@ -225,8 +231,9 @@ namespace Apple_24_Zones.Forms
             if (temperatureValueOmron1 != 0 && temperatureValueOmron2 != 0 && graficarChartStatic2)
             {
 
-                chartStaticZone2.ChartAreas[0].AxisY.Minimum = Settings.Default.YZone1Lower;
-                chartStaticZone2.ChartAreas[0].AxisY.Maximum = Settings.Default.YZone1Upper;
+                chartStaticZone2.ChartAreas[0].AxisY.Minimum = Settings.Default.YZone2Lower;
+                chartStaticZone2.ChartAreas[0].AxisY.Maximum = Settings.Default.YZone2Upper;
+
                 chartZone2.ChartAreas[0].AxisY.Maximum = Settings.Default.YZone2Upper;
                 chartZone2.ChartAreas[0].AxisY.Minimum = Settings.Default.YZone2Lower;
 
@@ -369,13 +376,9 @@ namespace Apple_24_Zones.Forms
             chartStaticZone2.ChartAreas[0].CursorX.AutoScroll = true;
             chartStaticZone2.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
             chartStaticZone2.ChartAreas[0].AxisY.Minimum = 0;
-            chartStaticZone2.ChartAreas[0].AxisX.Maximum = 3600;
+            chartStaticZone2.ChartAreas[0].AxisX.Maximum = 1800;
             chartStaticZone2.ChartAreas[0].AxisY.Maximum = 100;
             chartStaticZone2.ChartAreas[0].AxisX.Minimum = 0;
-            // 86400 24H
-            // 43200 12H
-            // 21600 6H
-            // 3600 1H
             cbMaxTime.SelectedIndex = 0;
 
             // Disconectar
@@ -3521,6 +3524,27 @@ namespace Apple_24_Zones.Forms
                 frm.BringToFront();
                 return;
             }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnChangeCharStatic2_Click(object sender, EventArgs e)
+        {
+            pChartStaticZ2.Visible = true;
+            pChartStaticZ2.Location = new Point(566, 90);
+        }
+
+        private void pChartStaticZ2_Paint(object sender, PaintEventArgs e)
+        {
+            CreateBorderPanel(sender, e);
         }
 
         private void iconButton5_Click(object sender, EventArgs e)
