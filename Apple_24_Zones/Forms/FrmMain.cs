@@ -3682,6 +3682,11 @@ namespace Apple_24_Zones.Forms
             pChartStaticZ2.Location = new Point(566, 580);
         }
 
+        private void pChartStaticZ1_Paint(object sender, PaintEventArgs e)
+        {
+            CreateBorderPanel(sender, e);
+        }
+
         private void iconButton5_Click(object sender, EventArgs e)
         {
             Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmYScalesZone2);
