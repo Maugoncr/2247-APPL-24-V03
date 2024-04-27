@@ -393,6 +393,8 @@ namespace Apple_24_Zones.Forms
             chartStaticZone2.ChartAreas[0].AxisY.Maximum = 100;
             chartStaticZone2.ChartAreas[0].AxisX.Minimum = 0;
             chartStaticZone2.ChartAreas[0].BackColor = Color.FromArgb(30, Color.LightGreen);
+            chartStaticZone2.ChartAreas[0].AxisX.Title = "Time [HH:mm:ss]";
+            chartStaticZone2.ChartAreas[0].AxisX.TitleFont = new Font("Arial", 12, FontStyle.Bold);
             cbMaxTime.SelectedIndex = 0;
 
             limitPointZ2 = 1800;

@@ -225,6 +225,9 @@ namespace Apple_24_Zones.Forms
             this.chartStaticZone2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -253,6 +256,7 @@ namespace Apple_24_Zones.Forms
             this.pChartStaticZ2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartStaticZone2)).BeginInit();
             this.panel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // lbFecha
@@ -2392,6 +2396,9 @@ namespace Apple_24_Zones.Forms
             // pChartStaticZ2
             // 
             this.pChartStaticZ2.BackColor = System.Drawing.Color.DimGray;
+            this.pChartStaticZ2.Controls.Add(this.pictureBox5);
+            this.pChartStaticZ2.Controls.Add(this.panel6);
+            this.pChartStaticZ2.Controls.Add(this.panel24);
             this.pChartStaticZ2.Controls.Add(this.label19);
             this.pChartStaticZ2.Controls.Add(this.btnCharStatic2YScale);
             this.pChartStaticZ2.Controls.Add(this.label18);
@@ -2596,6 +2603,35 @@ namespace Apple_24_Zones.Forms
             this.label5.TabIndex = 260;
             this.label5.Text = "TEMP ZONE 2";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.Image = global::Apple_24_Zones.Properties.Resources.labelTempAxisY;
+            this.pictureBox5.Location = new System.Drawing.Point(37, 154);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(25, 117);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 343;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Black;
+            this.panel6.ForeColor = System.Drawing.Color.Teal;
+            this.panel6.Location = new System.Drawing.Point(49, 274);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(2, 90);
+            this.panel6.TabIndex = 342;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.Black;
+            this.panel24.ForeColor = System.Drawing.Color.Teal;
+            this.panel24.Location = new System.Drawing.Point(49, 69);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(2, 80);
+            this.panel24.TabIndex = 341;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2667,6 +2703,7 @@ namespace Apple_24_Zones.Forms
             ((System.ComponentModel.ISupportInitialize)(this.chartStaticZone2)).EndInit();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2855,5 +2892,8 @@ namespace Apple_24_Zones.Forms
         private FontAwesome.Sharp.IconButton btnCharStatic2YScale;
         private Label label19;
         private FontAwesome.Sharp.IconButton btnChangeCharStatic2;
+        private PictureBox pictureBox5;
+        private Panel panel6;
+        private Panel panel24;
     }
 }
