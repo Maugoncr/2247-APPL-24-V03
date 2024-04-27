@@ -379,9 +379,9 @@ namespace Apple_24_Zones.Forms
             chartStaticZone2.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
             chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.Enabled = true;
             chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.IsPositionedInside = false;
-            chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.Size = 15; //
+            chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.Size = 20; //
             chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.ButtonStyle = ScrollBarButtonStyles.All; //
-            chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.BackColor = Color.SteelBlue;
+            chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.BackColor = Color.LightGray;
             chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.ButtonColor = Color.DarkGray;
             chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.LineColor = Color.Black;
             chartStaticZone2.ChartAreas[0].AxisX.IntervalAutoMode = IntervalAutoMode.VariableCount;
