@@ -243,10 +243,22 @@ namespace Apple_24_Zones.Forms
                     if (serialPort2.IsOpen)
                     {
                         ApagarChillerZone(1);
+                        RevisarChiller1SiDebeApagarseYa = false;
                     }
                 }
+            }
 
-
+            if (temperatureValueOmron2 >= 27 && temperatureValueOmron2 <= 100 && RevisarChiller1SiDebeApagarseYa)
+            {
+                int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
+                if ((temperatureValueOmron2 - setpoint) >= 2 && (temperatureValueOmron2 - setpoint) <= 4)
+                {
+                    if (serialPort2.IsOpen)
+                    {
+                        ApagarChillerZone(2);
+                        RevisarChiller2SiDebeApagarseYa = false;
+                    }
+                }
             }
 
             //Si todas las Temperaturas ya tienen un valor
@@ -1196,6 +1208,7 @@ namespace Apple_24_Zones.Forms
 
                                         // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
                                         EncenderVerde();
+                                        RevisarChiller2SiDebeApagarseYa = true;
                                     }
                                     
 
