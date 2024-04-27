@@ -370,7 +370,7 @@ namespace Apple_24_Zones.Forms
             chartZone2.ChartAreas[0].BackColor = Color.FromArgb(30, Color.LightGreen);
 
             // Chart Settings Static Ones
-
+            
             chartStaticZone2.Series.Clear();
             chartStaticZone2.Series.Add("T-2");
             chartStaticZone2.Series["T-2"].IsVisibleInLegend = false;
@@ -392,6 +392,7 @@ namespace Apple_24_Zones.Forms
             chartStaticZone2.ChartAreas[0].AxisX.Maximum = 1800;
             chartStaticZone2.ChartAreas[0].AxisY.Maximum = 100;
             chartStaticZone2.ChartAreas[0].AxisX.Minimum = 0;
+            chartStaticZone2.ChartAreas[0].BackColor = Color.FromArgb(30, Color.LightGreen);
             cbMaxTime.SelectedIndex = 0;
 
             limitPointZ2 = 1800;

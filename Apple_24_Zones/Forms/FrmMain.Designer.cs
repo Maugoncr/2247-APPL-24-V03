@@ -42,6 +42,7 @@ namespace Apple_24_Zones.Forms
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 85D);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lbFecha = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
             this.chartZone1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -115,6 +116,7 @@ namespace Apple_24_Zones.Forms
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.panelBoth = new System.Windows.Forms.Panel();
+            this.btnChangeCharStatic2 = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -210,6 +212,8 @@ namespace Apple_24_Zones.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pChartStaticZ2 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.btnCharStatic2YScale = new FontAwesome.Sharp.IconButton();
             this.label18 = new System.Windows.Forms.Label();
             this.btnStartStopChart = new FontAwesome.Sharp.IconButton();
             this.label16 = new System.Windows.Forms.Label();
@@ -221,9 +225,6 @@ namespace Apple_24_Zones.Forms
             this.chartStaticZone2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnCharStatic2YScale = new FontAwesome.Sharp.IconButton();
-            this.label19 = new System.Windows.Forms.Label();
-            this.btnChangeCharStatic2 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.chartZone1)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1102,6 +1103,24 @@ namespace Apple_24_Zones.Forms
             this.panelBoth.Size = new System.Drawing.Size(1320, 958);
             this.panelBoth.TabIndex = 271;
             this.panelBoth.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBoth_Paint);
+            // 
+            // btnChangeCharStatic2
+            // 
+            this.btnChangeCharStatic2.BackColor = System.Drawing.Color.DarkGray;
+            this.btnChangeCharStatic2.FlatAppearance.BorderSize = 2;
+            this.btnChangeCharStatic2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangeCharStatic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangeCharStatic2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnChangeCharStatic2.IconColor = System.Drawing.Color.Black;
+            this.btnChangeCharStatic2.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnChangeCharStatic2.IconSize = 25;
+            this.btnChangeCharStatic2.Location = new System.Drawing.Point(18, 418);
+            this.btnChangeCharStatic2.Name = "btnChangeCharStatic2";
+            this.btnChangeCharStatic2.Size = new System.Drawing.Size(85, 28);
+            this.btnChangeCharStatic2.TabIndex = 342;
+            this.btnChangeCharStatic2.Text = "Change View";
+            this.btnChangeCharStatic2.UseVisualStyleBackColor = false;
+            this.btnChangeCharStatic2.Click += new System.EventHandler(this.btnChangeCharStatic2_Click);
             // 
             // iconButton5
             // 
@@ -2391,6 +2410,35 @@ namespace Apple_24_Zones.Forms
             this.pChartStaticZ2.TabIndex = 328;
             this.pChartStaticZ2.Paint += new System.Windows.Forms.PaintEventHandler(this.pChartStaticZ2_Paint);
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(976, 429);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(88, 24);
+            this.label19.TabIndex = 340;
+            this.label19.Text = "Y-Scale:";
+            // 
+            // btnCharStatic2YScale
+            // 
+            this.btnCharStatic2YScale.BackColor = System.Drawing.Color.Transparent;
+            this.btnCharStatic2YScale.FlatAppearance.BorderSize = 0;
+            this.btnCharStatic2YScale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCharStatic2YScale.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCharStatic2YScale.IconChar = FontAwesome.Sharp.IconChar.RulerCombined;
+            this.btnCharStatic2YScale.IconColor = System.Drawing.Color.White;
+            this.btnCharStatic2YScale.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnCharStatic2YScale.IconSize = 35;
+            this.btnCharStatic2YScale.Location = new System.Drawing.Point(1070, 422);
+            this.btnCharStatic2YScale.Name = "btnCharStatic2YScale";
+            this.btnCharStatic2YScale.Size = new System.Drawing.Size(42, 37);
+            this.btnCharStatic2YScale.TabIndex = 339;
+            this.btnCharStatic2YScale.UseVisualStyleBackColor = false;
+            this.btnCharStatic2YScale.Click += new System.EventHandler(this.btnCharStatic2YScale_Click);
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -2506,12 +2554,24 @@ namespace Apple_24_Zones.Forms
             // 
             chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
             chartArea3.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea3.AxisY.Interval = 10D;
+            chartArea3.AxisY.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
             chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
             chartArea3.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea3.AxisY.Maximum = 100D;
+            chartArea3.AxisY.Minimum = 0D;
+            chartArea3.AxisY.MinorTickMark.Enabled = true;
+            chartArea3.AxisY.MinorTickMark.Interval = 5D;
+            chartArea3.AxisY.MinorTickMark.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea3.AxisY.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea3.AxisY.MinorTickMark.Size = 0.5F;
             chartArea3.Name = "ChartArea1";
             this.chartStaticZone2.ChartAreas.Add(chartArea3);
             this.chartStaticZone2.Location = new System.Drawing.Point(10, 36);
             this.chartStaticZone2.Name = "chartStaticZone2";
+            series5.ChartArea = "ChartArea1";
+            series5.Name = "Series1";
+            this.chartStaticZone2.Series.Add(series5);
             this.chartStaticZone2.Size = new System.Drawing.Size(1303, 374);
             this.chartStaticZone2.TabIndex = 314;
             this.chartStaticZone2.Text = "chart1";
@@ -2535,53 +2595,6 @@ namespace Apple_24_Zones.Forms
             this.label5.Size = new System.Drawing.Size(130, 20);
             this.label5.TabIndex = 260;
             this.label5.Text = "TEMP ZONE 2";
-            // 
-            // btnCharStatic2YScale
-            // 
-            this.btnCharStatic2YScale.BackColor = System.Drawing.Color.Transparent;
-            this.btnCharStatic2YScale.FlatAppearance.BorderSize = 0;
-            this.btnCharStatic2YScale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCharStatic2YScale.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCharStatic2YScale.IconChar = FontAwesome.Sharp.IconChar.RulerCombined;
-            this.btnCharStatic2YScale.IconColor = System.Drawing.Color.White;
-            this.btnCharStatic2YScale.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnCharStatic2YScale.IconSize = 35;
-            this.btnCharStatic2YScale.Location = new System.Drawing.Point(1070, 422);
-            this.btnCharStatic2YScale.Name = "btnCharStatic2YScale";
-            this.btnCharStatic2YScale.Size = new System.Drawing.Size(42, 37);
-            this.btnCharStatic2YScale.TabIndex = 339;
-            this.btnCharStatic2YScale.UseVisualStyleBackColor = false;
-            this.btnCharStatic2YScale.Click += new System.EventHandler(this.btnCharStatic2YScale_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(976, 429);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(88, 24);
-            this.label19.TabIndex = 340;
-            this.label19.Text = "Y-Scale:";
-            // 
-            // btnChangeCharStatic2
-            // 
-            this.btnChangeCharStatic2.BackColor = System.Drawing.Color.DarkGray;
-            this.btnChangeCharStatic2.FlatAppearance.BorderSize = 2;
-            this.btnChangeCharStatic2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangeCharStatic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangeCharStatic2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnChangeCharStatic2.IconColor = System.Drawing.Color.Black;
-            this.btnChangeCharStatic2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnChangeCharStatic2.IconSize = 25;
-            this.btnChangeCharStatic2.Location = new System.Drawing.Point(18, 418);
-            this.btnChangeCharStatic2.Name = "btnChangeCharStatic2";
-            this.btnChangeCharStatic2.Size = new System.Drawing.Size(85, 28);
-            this.btnChangeCharStatic2.TabIndex = 342;
-            this.btnChangeCharStatic2.Text = "Change View";
-            this.btnChangeCharStatic2.UseVisualStyleBackColor = false;
-            this.btnChangeCharStatic2.Click += new System.EventHandler(this.btnChangeCharStatic2_Click);
             // 
             // FrmMain
             // 
