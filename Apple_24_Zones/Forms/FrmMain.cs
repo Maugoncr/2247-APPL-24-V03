@@ -3678,8 +3678,8 @@ namespace Apple_24_Zones.Forms
 
         private void btnChangeCharStatic1_Click(object sender, EventArgs e)
         {
-            pChartStaticZ2.Visible = true;
-            pChartStaticZ2.Location = new Point(566, 580);
+            pChartStaticZ1.Visible = true;
+            pChartStaticZ1.Location = new Point(566, 580);
         }
 
         private void pChartStaticZ1_Paint(object sender, PaintEventArgs e)
