@@ -128,7 +128,7 @@ namespace Apple_24_Zones.Forms
 
                 chartZone2.Series["T-2"].IsVisibleInLegend = false;
 
-                chartZone2.Series["T-2"].Color = Color.Black;
+                chartZone2.Series["T-2"].Color = Color.Red;
 
                 chartZone2.Series["T-2"].ChartType = SeriesChartType.Spline;
             }
@@ -384,8 +384,9 @@ namespace Apple_24_Zones.Forms
             chartStaticZone2.Series.Clear();
             chartStaticZone2.Series.Add("T-2");
             chartStaticZone2.Series["T-2"].IsVisibleInLegend = false;
-            chartStaticZone2.Series["T-2"].Color = Color.Black;
+            chartStaticZone2.Series["T-2"].Color = Color.Red;
             chartStaticZone2.Series["T-2"].ChartType = SeriesChartType.Spline;
+            chartStaticZone2.Series["T-2"].BorderWidth = 2;
             chartStaticZone2.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
             chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.Enabled = true;
             chartStaticZone2.ChartAreas[0].AxisX.ScrollBar.IsPositionedInside = false;
@@ -415,6 +416,7 @@ namespace Apple_24_Zones.Forms
             chartStaticZone1.Series["T-1"].IsVisibleInLegend = false;
             chartStaticZone1.Series["T-1"].Color = Color.Red;
             chartStaticZone1.Series["T-1"].ChartType = SeriesChartType.Spline;
+            chartStaticZone1.Series["T-1"].BorderWidth = 2;
             chartStaticZone1.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
             chartStaticZone1.ChartAreas[0].AxisX.ScrollBar.Enabled = true;
             chartStaticZone1.ChartAreas[0].AxisX.ScrollBar.IsPositionedInside = false;
