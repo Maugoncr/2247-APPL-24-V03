@@ -59,6 +59,8 @@ namespace Apple_24_Zones.Forms
         private string inicioRecordZone2;
 
         string viewChart = "Both";
+        int limitPointZ2 = 1800;
+        int limitPointZ1 = 1800;
 
         double rt1 = 0;
         double temp1 = 0;
@@ -200,26 +202,32 @@ namespace Apple_24_Zones.Forms
             if (cbMaxTime.SelectedIndex == 0)
             {
                 chartStaticZone2.ChartAreas[0].AxisX.Maximum = 1800;
+                limitPointZ2 = 1800;
             }
             else if (cbMaxTime.SelectedIndex == 1)
             {
                 chartStaticZone2.ChartAreas[0].AxisX.Maximum = 3600;
+                limitPointZ2 = 3600;
             }
             else if (cbMaxTime.SelectedIndex == 2)
             {
                 chartStaticZone2.ChartAreas[0].AxisX.Maximum = 21600;
+                limitPointZ2 = 21600;
             }
             else if (cbMaxTime.SelectedIndex == 3)
             {
                 chartStaticZone2.ChartAreas[0].AxisX.Maximum = 43200;
+                limitPointZ2 = 43200;
             }
             else if (cbMaxTime.SelectedIndex == 4)
             {
                 chartStaticZone2.ChartAreas[0].AxisX.Maximum = 86400;
+                limitPointZ2 = 86400;
             }
         }
 
         bool graficarChartStatic2 = false;
+        bool graficarChartStatic1 = false;
 
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
@@ -241,6 +249,11 @@ namespace Apple_24_Zones.Forms
 
                 chartStaticZone2.Series["T-2"].Points.AddXY(DateTime.Now.ToString("HH:mm:ss"), temperatureValueOmron2.ToString());
                 chartStaticZone2.ChartAreas[0].RecalculateAxesScale();
+
+                if (chartStaticZone2.Series["T-2"].Points.Count == limitPointZ2)
+                {
+                    chartStaticZone2.Series["T-2"].Points.RemoveAt(0);
+                }
             }
 
                 if (PressButtonStop)
@@ -380,6 +393,9 @@ namespace Apple_24_Zones.Forms
             chartStaticZone2.ChartAreas[0].AxisY.Maximum = 100;
             chartStaticZone2.ChartAreas[0].AxisX.Minimum = 0;
             cbMaxTime.SelectedIndex = 0;
+
+            limitPointZ2 = 1800;
+            limitPointZ1 = 1800;
 
             // Disconectar
 
@@ -3489,7 +3505,7 @@ namespace Apple_24_Zones.Forms
 
         private void btnResetCharStatic2_Click(object sender, EventArgs e)
         {
-            chartStaticZone2.Series["T-2"].Points.Clear();
+            chartStaticZone2.ChartAreas[0].AxisX.ScaleView.ZoomReset();
         }
 
         private void btnChangeChartStatic2_Click(object sender, EventArgs e)
