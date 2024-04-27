@@ -235,6 +235,20 @@ namespace Apple_24_Zones.Forms
             lbTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             lbDate.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(fecha);
 
+            if (temperatureValueOmron1 >= 27 && temperatureValueOmron1 <= 100 && RevisarChiller1SiDebeApagarseYa)
+            {
+                int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
+                if ((temperatureValueOmron1 - setpoint) >= 2 && (temperatureValueOmron1 - setpoint) <= 4)
+                {
+                    if (serialPort2.IsOpen)
+                    {
+                        ApagarChillerZone(1);
+                    }
+                }
+
+
+            }
+
             //Si todas las Temperaturas ya tienen un valor
             if (temperatureValueOmron1 != 0 && temperatureValueOmron2 != 0 && graficarChartStatic2)
             {
@@ -960,7 +974,8 @@ namespace Apple_24_Zones.Forms
                 }
             }
         }
-
+        bool RevisarChiller1SiDebeApagarseYa = false;
+        bool RevisarChiller2SiDebeApagarseYa = false;
         private void btnApplySetpoint1_Click(object sender, EventArgs e)
         {
             try
@@ -1019,6 +1034,7 @@ namespace Apple_24_Zones.Forms
 
                                         // QUE HACEN LOS LEDS
                                         EncenderVerde();
+                                        RevisarChiller1SiDebeApagarseYa = true;
                                     }
 
                                    
