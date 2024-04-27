@@ -242,11 +242,6 @@ namespace Apple_24_Zones.Forms
                 chartStaticZone2.ChartAreas[0].AxisY.Minimum = Settings.Default.YZone2Lower;
                 chartStaticZone2.ChartAreas[0].AxisY.Maximum = Settings.Default.YZone2Upper;
 
-                chartZone2.ChartAreas[0].AxisY.Maximum = Settings.Default.YZone2Upper;
-                chartZone2.ChartAreas[0].AxisY.Minimum = Settings.Default.YZone2Lower;
-
-              
-
                 chartStaticZone2.Series["T-2"].Points.AddXY(DateTime.Now.ToString("HH:mm:ss"), temperatureValueOmron2.ToString());
                 chartStaticZone2.ChartAreas[0].RecalculateAxesScale();
 
@@ -256,7 +251,22 @@ namespace Apple_24_Zones.Forms
                 }
             }
 
-                if (PressButtonStop)
+            if (temperatureValueOmron1 != 0 && temperatureValueOmron2 != 0 && graficarChartStatic1)
+            {
+
+                chartStaticZone1.ChartAreas[0].AxisY.Minimum = Settings.Default.YZone1Lower;
+                chartStaticZone1.ChartAreas[0].AxisY.Maximum = Settings.Default.YZone1Upper;
+
+                chartStaticZone1.Series["T-1"].Points.AddXY(DateTime.Now.ToString("HH:mm:ss"), temperatureValueOmron1.ToString());
+                chartStaticZone1.ChartAreas[0].RecalculateAxesScale();
+
+                if (chartStaticZone1.Series["T-1"].Points.Count == limitPointZ1)
+                {
+                    chartStaticZone1.Series["T-1"].Points.RemoveAt(0);
+                }
+            }
+
+            if (PressButtonStop)
             {
                 if (serialPort1.IsOpen)
                 {
@@ -399,6 +409,32 @@ namespace Apple_24_Zones.Forms
 
             limitPointZ2 = 1800;
             limitPointZ1 = 1800;
+
+            chartStaticZone1.Series.Clear();
+            chartStaticZone1.Series.Add("T-1");
+            chartStaticZone1.Series["T-1"].IsVisibleInLegend = false;
+            chartStaticZone1.Series["T-1"].Color = Color.Red;
+            chartStaticZone1.Series["T-1"].ChartType = SeriesChartType.Spline;
+            chartStaticZone1.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
+            chartStaticZone1.ChartAreas[0].AxisX.ScrollBar.Enabled = true;
+            chartStaticZone1.ChartAreas[0].AxisX.ScrollBar.IsPositionedInside = false;
+            chartStaticZone1.ChartAreas[0].AxisX.ScrollBar.Size = 20; //
+            chartStaticZone1.ChartAreas[0].AxisX.ScrollBar.ButtonStyle = ScrollBarButtonStyles.All; //
+            chartStaticZone1.ChartAreas[0].AxisX.ScrollBar.BackColor = Color.LightGray;
+            chartStaticZone1.ChartAreas[0].AxisX.ScrollBar.ButtonColor = Color.DarkGray;
+            chartStaticZone1.ChartAreas[0].AxisX.ScrollBar.LineColor = Color.Black;
+            chartStaticZone1.ChartAreas[0].AxisX.IntervalAutoMode = IntervalAutoMode.VariableCount;
+            chartStaticZone1.ChartAreas[0].CursorX.Interval = 1;
+            chartStaticZone1.ChartAreas[0].CursorX.AutoScroll = true;
+            chartStaticZone1.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
+            chartStaticZone1.ChartAreas[0].AxisY.Minimum = 0;
+            chartStaticZone1.ChartAreas[0].AxisX.Maximum = 1800;
+            chartStaticZone1.ChartAreas[0].AxisY.Maximum = 100;
+            chartStaticZone1.ChartAreas[0].AxisX.Minimum = 0;
+            chartStaticZone1.ChartAreas[0].BackColor = Color.FromArgb(30, Color.LightGreen);
+            chartStaticZone1.ChartAreas[0].AxisX.Title = "Time [HH:mm:ss]";
+            chartStaticZone1.ChartAreas[0].AxisX.TitleFont = new Font("Arial", 12, FontStyle.Bold);
+            cbMaxTime1.SelectedIndex = 0;
 
             // Disconectar
 
@@ -3564,6 +3600,86 @@ namespace Apple_24_Zones.Forms
         private void pChartStaticZ2_Paint(object sender, PaintEventArgs e)
         {
             CreateBorderPanel(sender, e);
+        }
+
+        private void btnStartStopChart1_Click(object sender, EventArgs e)
+        {
+            if (btnStartStopChart1.IconChar == FontAwesome.Sharp.IconChar.ToggleOff)
+            {
+                btnStartStopChart1.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
+                graficarChartStatic1 = true;
+            }
+            else
+            {
+                btnStartStopChart1.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
+                graficarChartStatic1 = false;
+            }
+        }
+
+        private void btnResetCharStatic1_Click(object sender, EventArgs e)
+        {
+            chartStaticZone1.ChartAreas[0].AxisX.ScaleView.ZoomReset();
+        }
+
+        private void cbMaxTime1_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            // 86400 24H
+            // 43200 12H
+            // 21600 6H
+            // 3600 1H
+            // 1800 30M
+
+            if (cbMaxTime1.SelectedIndex == 0)
+            {
+                chartStaticZone1.ChartAreas[0].AxisX.Maximum = 1800;
+                limitPointZ1 = 1800;
+            }
+            else if (cbMaxTime1.SelectedIndex == 1)
+            {
+                chartStaticZone1.ChartAreas[0].AxisX.Maximum = 3600;
+                limitPointZ1 = 3600;
+            }
+            else if (cbMaxTime1.SelectedIndex == 2)
+            {
+                chartStaticZone1.ChartAreas[0].AxisX.Maximum = 21600;
+                limitPointZ1 = 21600;
+            }
+            else if (cbMaxTime1.SelectedIndex == 3)
+            {
+                chartStaticZone1.ChartAreas[0].AxisX.Maximum = 43200;
+                limitPointZ1 = 43200;
+            }
+            else if (cbMaxTime1.SelectedIndex == 4)
+            {
+                chartStaticZone1.ChartAreas[0].AxisX.Maximum = 86400;
+                limitPointZ1 = 86400;
+            }
+        }
+
+        private void btnCharStatic1YScale_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmYScalesZone1);
+            if (frm == null)
+            {
+                FrmYScalesZone1 nt = new FrmYScalesZone1();
+                nt.ShowDialog();
+            }
+            else
+            {
+                frm.BringToFront();
+                return;
+            }
+        }
+
+        private void btnChangeChartStatic1_Click(object sender, EventArgs e)
+        {
+            pChartStaticZ1.Visible = false;
+        }
+
+        private void btnChangeCharStatic1_Click(object sender, EventArgs e)
+        {
+            pChartStaticZ2.Visible = true;
+            pChartStaticZ2.Location = new Point(566, 580);
         }
 
         private void iconButton5_Click(object sender, EventArgs e)
