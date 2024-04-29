@@ -235,10 +235,10 @@ namespace Apple_24_Zones.Forms
             lbTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             lbDate.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(fecha);
 
-            if (temperatureValueOmron1 >= 27 && temperatureValueOmron1 <= 100 && RevisarChiller1SiDebeApagarseYa)
+            if (temperatureValueOmron1 >= 22 && temperatureValueOmron1 <= 100 && RevisarChiller1SiDebeApagarseYa)
             {
                 int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
-                if ((temperatureValueOmron1 - setpoint) >= 2 && (temperatureValueOmron1 - setpoint) <= 4)
+                if ((temperatureValueOmron1 - setpoint) <= -4)
                 {
                     if (serialPort2.IsOpen)
                     {
@@ -248,10 +248,10 @@ namespace Apple_24_Zones.Forms
                 }
             }
 
-            if (temperatureValueOmron2 >= 27 && temperatureValueOmron2 <= 100 && RevisarChiller1SiDebeApagarseYa)
+            if (temperatureValueOmron2 >= 22 && temperatureValueOmron2 <= 100 && RevisarChiller1SiDebeApagarseYa)
             {
                 int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
-                if ((temperatureValueOmron2 - setpoint) >= 2 && (temperatureValueOmron2 - setpoint) <= 4)
+                if ((temperatureValueOmron2 - setpoint) <= -4)
                 {
                     if (serialPort2.IsOpen)
                     {
