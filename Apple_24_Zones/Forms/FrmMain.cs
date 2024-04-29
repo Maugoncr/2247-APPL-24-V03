@@ -109,22 +109,22 @@ namespace Apple_24_Zones.Forms
             {
                 chartZone1.Series.Clear();
                 chartZone1.Series.Add("T-1");
-            
+
 
                 chartZone1.Series["T-1"].IsVisibleInLegend = false;
-               
+
 
                 chartZone1.Series["T-1"].Color = Color.Red;
-               
+
 
                 chartZone1.Series["T-1"].ChartType = SeriesChartType.Spline;
-             
+
             }
             else if (which == 2)
             {
                 chartZone2.Series.Clear();
                 chartZone2.Series.Add("T-2");
-               
+
 
                 chartZone2.Series["T-2"].IsVisibleInLegend = false;
 
@@ -135,7 +135,7 @@ namespace Apple_24_Zones.Forms
 
         }
 
-      
+
 
 
         private void informationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -241,7 +241,7 @@ namespace Apple_24_Zones.Forms
                 {
                     if ((temperatureValueOmron2 - LastSetpointSentZone2) <= 0)
                     {
-                        if (LastSetpointSentZone2 >= 27)
+                        if (LastSetpointSentZone2 > 27)
                         {
                             if (serialPort1.IsOpen && serialPort2.IsOpen)
                             {
@@ -252,7 +252,7 @@ namespace Apple_24_Zones.Forms
                         }
                         else
                         {
-                            if (serialPort1.IsOpen && serialPort2.IsOpen) 
+                            if (serialPort1.IsOpen && serialPort2.IsOpen)
                             {
                                 SendSetTempHeaterAndTurnItOn(2, LastSetpointSentZone2.ToString());
                                 RevisarChiller2SiDebeApagarseYa = false;
@@ -435,7 +435,7 @@ namespace Apple_24_Zones.Forms
             chartZone2.ChartAreas[0].BackColor = Color.FromArgb(30, Color.LightGreen);
 
             // Chart Settings Static Ones
-            
+
             chartStaticZone2.Series.Clear();
             chartStaticZone2.Series.Add("T-2");
             chartStaticZone2.Series["T-2"].IsVisibleInLegend = false;
@@ -617,7 +617,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-        private void TranslateResponse(string[] hexvalues) 
+        private void TranslateResponse(string[] hexvalues)
         {
             if (hexvalues.Length >= 5)
             {
@@ -660,7 +660,7 @@ namespace Apple_24_Zones.Forms
             string[] hexValues = receivedData.Split('-');
             TranslateResponse(hexValues);
         }
-        
+
 
         private void txtRealsBorder(object sender, PaintEventArgs e)
         {
@@ -677,7 +677,7 @@ namespace Apple_24_Zones.Forms
         double temp = 0;                            // Time in ms
         double setpoint = 25;
 
-     
+
 
 
         // Chiller & Leds COM PORT
@@ -1032,174 +1032,68 @@ namespace Apple_24_Zones.Forms
                         {
                             int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
 
-                            if (setpoint >= 27 && setpoint <= 85)
+
+                            if ((temperatureValueOmron1 - setpoint) <= 0)
                             {
-                                try
+                                if (setpoint > 27)
                                 {
-                                    if ((temperatureValueOmron1 - setpoint) <= 0)
-                                    {
-                                        // QUE HACE EL OMRON
-                                        SendSetTempHeaterAndTurnItOn(1);
-                                        CountOmronUse(1);
+                                    SendSetTempHeaterAndTurnItOn(1);
+                                    CountOmronUse(1);
 
-                                        // CAMBIAN LOS INDICADORES
-                                        picProcess1.Image.Dispose();
-                                        picProcess1.Image = Resources.LedRedHeating2;
-                                        picUpDown1.Image.Dispose();
-                                        picUpDown1.Image = Resources.arrowUpRed21;
+                                    picProcess1.Image.Dispose();
+                                    picProcess1.Image = Resources.LedRedHeating2;
+                                    picUpDown1.Image.Dispose();
+                                    picUpDown1.Image = Resources.arrowUpRed21;
 
-                                        // QUE HACE EL CHILLER
-                                        ApagarChillerZone(1);
-                                        Thread.Sleep(50);
+                                    ApagarChillerZone(1);
+                                    Thread.Sleep(50);
 
-                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                        EncenderVerde();
-                                        LastSetpointSentZone1 = setpoint;
-                                        RevisarChiller1SiDebeApagarseYa = false;
-                                    }
-                                    else
-                                    {
-                                        // Ponemos el Omron a 0 ya que vamos a enfriar un poco
-                                        //SendSetTempHeaterAndTurnItOn(2);
-                                        OffOmron(1);
-                                        CountOmronUse(1);
-
-                                        // QUE HACE EL CHILLER
-                                        EncenderChillerZone(1);
-                                        CountChillerUse(1);
-                                        Thread.Sleep(100);
-                                        SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
-
-                                        // CAMBIAN LOS INDICADORES
-                                        picUpDown1.Image.Dispose();
-                                        picUpDown1.Image = Resources.arrowDownBlue2;
-                                        picProcess1.Image.Dispose();
-                                        picProcess1.Image = Resources.LedBlueCooling2;
-
-                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                        EncenderVerde();
-                                        LastSetpointSentZone1 = setpoint;
-                                        RevisarChiller1SiDebeApagarseYa = true;
-                                    }
-                                    
+                                    EncenderVerde();
+                                    LastSetpointSentZone1 = setpoint;
+                                    RevisarChiller1SiDebeApagarseYa = false;
                                 }
-                                catch (Exception ex)
+                                else if (setpoint <= 27)
                                 {
-                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    SendSetTempHeaterAndTurnItOn(1);
+                                    CountOmronUse(1);
+
+                                    picProcess1.Image.Dispose();
+                                    picProcess1.Image = Resources.LedRedHeating2;
+                                    picUpDown1.Image.Dispose();
+                                    picUpDown1.Image = Resources.arrowUpRed21;
+
+                                    // QUE HACE EL CHILLER
+                                    EncenderChillerZone(1);
+                                    CountChillerUse(1);
+                                    Thread.Sleep(100);
+                                    SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+
+                                    // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                    EncenderVerde();
+                                    LastSetpointSentZone1 = setpoint;
+                                    RevisarChiller1SiDebeApagarseYa = false;
                                 }
                             }
-                            else if (setpoint >= 21 && setpoint <= 26)
+                            else
                             {
-                                try
-                                {
-                                    if ((temperatureValueOmron1 - setpoint) <= 0)
-                                    {
-                                        // QUE HACE EL OMRON
-                                        SendSetTempHeaterAndTurnItOn(1);
-                                        CountOmronUse(1);
+                                OffOmron(1);
+                                CountOmronUse(1);
 
-                                        // CAMBIAN LOS INDICADORES
-                                        picProcess1.Image.Dispose();
-                                        picProcess1.Image = Resources.LedRedHeating2;
-                                        picUpDown1.Image.Dispose();
-                                        picUpDown1.Image = Resources.arrowUpRed21;
+                                EncenderChillerZone(1);
+                                CountChillerUse(1);
+                                Thread.Sleep(100);
+                                SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
 
-                                        // QUE HACE EL CHILLER
-                                        ApagarChillerZone(1);
-                                        Thread.Sleep(50);
+                                picUpDown1.Image.Dispose();
+                                picUpDown1.Image = Resources.arrowDownBlue2;
+                                picProcess1.Image.Dispose();
+                                picProcess1.Image = Resources.LedBlueCooling2;
 
-                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                        EncenderVerde();
-                                        LastSetpointSentZone1 = setpoint;
-                                        RevisarChiller1SiDebeApagarseYa = false;
-                                    }
-                                    else
-                                    {
-                                        // Ponemos el Omron a 0 ya que vamos a enfriar un poco
-                                        //SendSetTempHeaterAndTurnItOn(2);
-                                        OffOmron(1);
-                                        CountOmronUse(1);
-
-                                        // QUE HACE EL CHILLER
-                                        EncenderChillerZone(1);
-                                        CountChillerUse(1);
-                                        Thread.Sleep(100);
-                                        SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
-
-                                        // CAMBIAN LOS INDICADORES
-                                        picUpDown1.Image.Dispose();
-                                        picUpDown1.Image = Resources.arrowDownBlue2;
-                                        picProcess1.Image.Dispose();
-                                        picProcess1.Image = Resources.LedBlueCooling2;
-
-                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                        EncenderVerde();
-                                        LastSetpointSentZone1 = setpoint;
-                                        RevisarChiller1SiDebeApagarseYa = true;
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-
+                                EncenderVerde();
+                                LastSetpointSentZone1 = setpoint;
+                                RevisarChiller1SiDebeApagarseYa = true;
                             }
-                            else if (setpoint >= 5 && setpoint <= 20)
-                            {
-                                try
-                                {
-                                    if ((temperatureValueOmron1 - setpoint) <= 0)
-                                    {
-                                        // QUE HACE EL OMRON
-                                        SendSetTempHeaterAndTurnItOn(1);
-                                        CountOmronUse(1);
 
-                                        // CAMBIAN LOS INDICADORES
-                                        picProcess1.Image.Dispose();
-                                        picProcess1.Image = Resources.LedRedHeating2;
-                                        picUpDown1.Image.Dispose();
-                                        picUpDown1.Image = Resources.arrowUpRed21;
-
-                                        // QUE HACE EL CHILLER
-                                        ApagarChillerZone(1);
-                                        Thread.Sleep(50);
-
-                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                        EncenderVerde();
-                                        LastSetpointSentZone1 = setpoint;
-                                        RevisarChiller1SiDebeApagarseYa = false;
-                                    }
-                                    else
-                                    {
-                                        // Ponemos el Omron a 0 ya que vamos a enfriar un poco
-                                        //SendSetTempHeaterAndTurnItOn(2);
-                                        OffOmron(1);
-                                        CountOmronUse(1);
-
-                                        // QUE HACE EL CHILLER
-                                        EncenderChillerZone(1);
-                                        CountChillerUse(1);
-                                        Thread.Sleep(100);
-                                        SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
-
-                                        // CAMBIAN LOS INDICADORES
-                                        picUpDown1.Image.Dispose();
-                                        picUpDown1.Image = Resources.arrowDownBlue2;
-                                        picProcess1.Image.Dispose();
-                                        picProcess1.Image = Resources.LedBlueCooling2;
-
-                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                        EncenderVerde();
-                                        LastSetpointSentZone1 = setpoint;
-                                        RevisarChiller1SiDebeApagarseYa = true;
-                                    }
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-
-                            }
                             Zona1Encendida = true;
                             if (Zona2Encendida && Zona1Encendida)
                             {
@@ -1250,176 +1144,67 @@ namespace Apple_24_Zones.Forms
                         if (number >= 5 && number <= 85)
                         {
                             int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
-                            // HEATING RANGE
-                            if (setpoint >= 27 && setpoint <= 85)
+
+
+                            if ((temperatureValueOmron2 - setpoint) <= 0)
                             {
-                                try
+                                if (setpoint > 27)
                                 {
-                                    if ((temperatureValueOmron2 - setpoint) <= 0)
-                                    {
-                                        // QUE HACE EL OMRON
-                                        SendSetTempHeaterAndTurnItOn(2);
-                                        CountOmronUse(2);
+                                    SendSetTempHeaterAndTurnItOn(2);
+                                    CountOmronUse(2);
 
-                                        // CAMBIAN LOS INDICADORES
-                                        picProcess2.Image.Dispose();
-                                        picProcess2.Image = Resources.LedRedHeating2;
-                                        picUpDown2.Image.Dispose();
-                                        picUpDown2.Image = Resources.arrowUpRed21;
+                                    picProcess2.Image.Dispose();
+                                    picProcess2.Image = Resources.LedRedHeating2;
+                                    picUpDown2.Image.Dispose();
+                                    picUpDown2.Image = Resources.arrowUpRed21;
 
-                                        // QUE HACE EL CHILLER
-                                        ApagarChillerZone(2);
-                                        Thread.Sleep(50);
+                                    ApagarChillerZone(2);
+                                    Thread.Sleep(50);
 
-                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                        EncenderVerde();
-                                        LastSetpointSentZone2 = setpoint;
-                                        RevisarChiller2SiDebeApagarseYa = false;
-                                    }
-                                    else
-                                    {
-                                        // Ponemos el Omron a 0 ya que vamos a enfriar un poco
-                                        //SendSetTempHeaterAndTurnItOn(2);
-                                        OffOmron(2);
-                                        CountOmronUse(2);
-
-                                        // QUE HACE EL CHILLER
-                                        EncenderChillerZone(2);
-                                        CountChillerUse(2);
-                                        Thread.Sleep(100);
-                                        SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
-
-                                        // CAMBIAN LOS INDICADORES
-                                        picUpDown2.Image.Dispose();
-                                        picUpDown2.Image = Resources.arrowDownBlue2;
-                                        picProcess2.Image.Dispose();
-                                        picProcess2.Image = Resources.LedBlueCooling2;
-
-                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                        EncenderVerde();
-                                        LastSetpointSentZone2 = setpoint;
-                                        RevisarChiller2SiDebeApagarseYa = true;
-                                    }
+                                    EncenderVerde();
+                                    LastSetpointSentZone2 = setpoint;
+                                    RevisarChiller2SiDebeApagarseYa = false;
                                 }
-                                catch (Exception ex)
+                                else if (setpoint <= 27)
                                 {
-                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    SendSetTempHeaterAndTurnItOn(2);
+                                    CountOmronUse(2);
+
+                                    picProcess2.Image.Dispose();
+                                    picProcess2.Image = Resources.LedRedHeating2;
+                                    picUpDown2.Image.Dispose();
+                                    picUpDown2.Image = Resources.arrowUpRed21;
+
+                                    // QUE HACE EL CHILLER
+                                    EncenderChillerZone(2);
+                                    CountChillerUse(2);
+                                    Thread.Sleep(100);
+                                    SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+
+                                    // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                    EncenderVerde();
+                                    LastSetpointSentZone2 = setpoint;
+                                    RevisarChiller2SiDebeApagarseYa = false;
                                 }
                             }
-                            // NEUTRAL
-                            else if (setpoint >= 21 && setpoint <= 26)
+                            else
                             {
-                                try
-                                {
-                                    if ((temperatureValueOmron2 - setpoint) <= 0) 
-                                    {
-                                        // QUE HACE EL OMRON
-                                        SendSetTempHeaterAndTurnItOn(2);
-                                        CountOmronUse(2);
+                                OffOmron(2);
+                                CountOmronUse(2);
 
-                                        // CAMBIAN LOS INDICADORES
-                                        picProcess2.Image.Dispose();
-                                        picProcess2.Image = Resources.LedRedHeating2;
-                                        picUpDown2.Image.Dispose();
-                                        picUpDown2.Image = Resources.arrowUpRed21;
+                                EncenderChillerZone(2);
+                                CountChillerUse(2);
+                                Thread.Sleep(100);
+                                SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
 
-                                        // QUE HACE EL CHILLER
-                                        ApagarChillerZone(2);
-                                        Thread.Sleep(50);
+                                picUpDown2.Image.Dispose();
+                                picUpDown2.Image = Resources.arrowDownBlue2;
+                                picProcess2.Image.Dispose();
+                                picProcess2.Image = Resources.LedBlueCooling2;
 
-                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                        EncenderVerde();
-                                        LastSetpointSentZone2 = setpoint;
-                                        RevisarChiller2SiDebeApagarseYa = false;
-                                    }
-                                    else
-                                    {
-                                        // Ponemos el Omron a 0 ya que vamos a enfriar un poco
-                                        //SendSetTempHeaterAndTurnItOn(2);
-                                        OffOmron(2);
-                                        CountOmronUse(2);
-
-                                        // QUE HACE EL CHILLER
-                                        EncenderChillerZone(2);
-                                        CountChillerUse(2);
-                                        Thread.Sleep(100);
-                                        SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
-
-                                        // CAMBIAN LOS INDICADORES
-                                        picUpDown2.Image.Dispose();
-                                        picUpDown2.Image = Resources.arrowDownBlue2;
-                                        picProcess2.Image.Dispose();
-                                        picProcess2.Image = Resources.LedBlueCooling2;
-
-                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                        EncenderVerde();
-                                        LastSetpointSentZone2 = setpoint;
-                                        RevisarChiller2SiDebeApagarseYa = true;
-                                    }
-
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
-                            // COOLING
-                            else if (setpoint >= 5 && setpoint <= 20)
-                            {
-                                try
-                                {
-                                    if ((temperatureValueOmron2 - setpoint) <= 0)
-                                    {
-                                        // QUE HACE EL OMRON
-                                        SendSetTempHeaterAndTurnItOn(2);
-                                        CountOmronUse(2);
-
-                                        // CAMBIAN LOS INDICADORES
-                                        picProcess2.Image.Dispose();
-                                        picProcess2.Image = Resources.LedRedHeating2;
-                                        picUpDown2.Image.Dispose();
-                                        picUpDown2.Image = Resources.arrowUpRed21;
-
-                                        // QUE HACE EL CHILLER
-                                        ApagarChillerZone(2);
-                                        Thread.Sleep(50);
-
-                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                        EncenderVerde();
-                                        LastSetpointSentZone2 = setpoint;
-                                        RevisarChiller2SiDebeApagarseYa = false;
-                                    }
-                                    else
-                                    {
-                                        // Ponemos el Omron a 0 ya que vamos a enfriar un poco
-                                        //SendSetTempHeaterAndTurnItOn(2);
-                                        OffOmron(2);
-                                        CountOmronUse(2);
-
-                                        // QUE HACE EL CHILLER
-                                        EncenderChillerZone(2);
-                                        CountChillerUse(2);
-                                        Thread.Sleep(100);
-                                        SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
-
-                                        // CAMBIAN LOS INDICADORES
-                                        picUpDown2.Image.Dispose();
-                                        picUpDown2.Image = Resources.arrowDownBlue2;
-                                        picProcess2.Image.Dispose();
-                                        picProcess2.Image = Resources.LedBlueCooling2;
-
-                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                        EncenderVerde();
-                                        LastSetpointSentZone2 = setpoint;
-                                        RevisarChiller2SiDebeApagarseYa = true;
-                                    }
-                                  
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-
+                                EncenderVerde();
+                                LastSetpointSentZone2 = setpoint;
+                                RevisarChiller2SiDebeApagarseYa = true;
                             }
 
                             Zona2Encendida = true;
@@ -5196,7 +4981,7 @@ namespace Apple_24_Zones.Forms
                     picProcess2.Image.Dispose();
                     picProcess2.Image = Resources.LedWhite1;
 
-                   
+
                     ApagarChillerZone(2);
                     RevisarChiller2SiDebeApagarseYa = false;
 
@@ -5340,25 +5125,25 @@ namespace Apple_24_Zones.Forms
         {
             try
             {
-                    serialPort1.BaudRate = 9600;
-                    serialPort1.DataBits = 8;
-                    serialPort1.StopBits = StopBits.One;
-                    serialPort1.Parity = Parity.Even;
-                    serialPort1.ReceivedBytesThreshold = 14;
+                serialPort1.BaudRate = 9600;
+                serialPort1.DataBits = 8;
+                serialPort1.StopBits = StopBits.One;
+                serialPort1.Parity = Parity.Even;
+                serialPort1.ReceivedBytesThreshold = 14;
 
-                    switch (whichRequestToSend)
-                    {
-                        case 1:
-                            sendRequestTCTemp(1);
-                            break;
-                        case 2:
-                            sendRequestTCTemp(2);
-                            break;
-                    }
-                }            
+                switch (whichRequestToSend)
+                {
+                    case 1:
+                        sendRequestTCTemp(1);
+                        break;
+                    case 2:
+                        sendRequestTCTemp(2);
+                        break;
+                }
+            }
             catch (Exception)
             {
-             
+
             }
         }
 
@@ -5730,7 +5515,7 @@ namespace Apple_24_Zones.Forms
             }
         }
 
-       
+
 
         // Helper method to send a hexadecimal command
         private void SendHexCommand(string hexCommand)
@@ -5874,7 +5659,7 @@ namespace Apple_24_Zones.Forms
 
 
 
-       
+
         private int puntosAgregados = 0;
         private void timerGraficarCharts_Tick(object sender, EventArgs e)
         {
@@ -5893,15 +5678,15 @@ namespace Apple_24_Zones.Forms
                     rt1 = rt1 + 100;
                     temp1 = rt1 / 1000;
 
-                      chartZone1.Series["T-1"].Points.AddXY(temp1.ToString(), temperatureValueOmron1.ToString());
-                      lbAVGTemp1.Text = temperatureValueOmron1.ToString("00") + " °C";
-                   
+                    chartZone1.Series["T-1"].Points.AddXY(temp1.ToString(), temperatureValueOmron1.ToString());
+                    lbAVGTemp1.Text = temperatureValueOmron1.ToString("00") + " °C";
+
 
                     chartZone1.ChartAreas[0].RecalculateAxesScale();
 
                     if (chartZone1.Series["T-1"].Points.Count == 101)
                     {
-                        chartZone1.Series["T-1"].Points.RemoveAt(0); 
+                        chartZone1.Series["T-1"].Points.RemoveAt(0);
                     }
 
                     //ZONA 2
@@ -5914,19 +5699,19 @@ namespace Apple_24_Zones.Forms
                     puntosAgregados++;
                     lbAVGTemp2.Text = temperatureValueOmron2.ToString("00") + " °C";
 
-                    
+
 
 
                     chartZone2.ChartAreas[0].RecalculateAxesScale();
 
                     if (chartZone2.Series["T-2"].Points.Count == 101)
                     {
-                        chartZone2.Series["T-2"].Points.RemoveAt(0); 
+                        chartZone2.Series["T-2"].Points.RemoveAt(0);
                     }
                 }
             }
         }
-        
+
         private void btnReduceScale2_Click(object sender, EventArgs e)
         {
             // Reducir la escala en -10, asegurándose de no ser menor que 10
