@@ -229,7 +229,7 @@ namespace Apple_24_Zones.Forms
         private void StartWaitingAndExecuteFunction(int which)
         {
 
-            Thread.Sleep(5 * 60 * 1000);
+            Thread.Sleep(10 * 60 * 1000);
 
 
             if (which == 1)
