@@ -235,31 +235,45 @@ namespace Apple_24_Zones.Forms
             lbTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             lbDate.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(fecha);
 
-            if (temperatureValueOmron1 >= 25 && temperatureValueOmron1 <= 100 && RevisarChiller1SiDebeApagarseYa)
+            try
             {
-                int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
-                if ((temperatureValueOmron1 - setpoint) <= 0)
+                if (temperatureValueOmron1 >= 25 && temperatureValueOmron1 <= 100 && RevisarChiller1SiDebeApagarseYa)
                 {
-                    if (serialPort2.IsOpen)
+                    int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
+                    if ((temperatureValueOmron1 - setpoint) <= 0)
                     {
-                        ApagarChillerZone(1);
-                        RevisarChiller1SiDebeApagarseYa = false;
+                        if (serialPort2.IsOpen)
+                        {
+                            ApagarChillerZone(1);
+                            RevisarChiller1SiDebeApagarseYa = false;
+                        }
                     }
                 }
+            }
+            catch (Exception)
+            {
             }
 
-            if (temperatureValueOmron2 >= 25 && temperatureValueOmron2 <= 100 && RevisarChiller1SiDebeApagarseYa)
+            try
             {
-                int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
-                if ((temperatureValueOmron2 - setpoint) <= 0)
+                if (temperatureValueOmron2 >= 25 && temperatureValueOmron2 <= 100 && RevisarChiller1SiDebeApagarseYa)
                 {
-                    if (serialPort2.IsOpen)
+                    int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
+                    if ((temperatureValueOmron2 - setpoint) <= 0)
                     {
-                        ApagarChillerZone(2);
-                        RevisarChiller2SiDebeApagarseYa = false;
+                        if (serialPort2.IsOpen)
+                        {
+                            ApagarChillerZone(2);
+                            RevisarChiller2SiDebeApagarseYa = false;
+                        }
                     }
                 }
             }
+            catch (Exception)
+            {
+            }
+
+            
 
             //Si todas las Temperaturas ya tienen un valor
             if (temperatureValueOmron1 != 0 && temperatureValueOmron2 != 0 && graficarChartStatic2)
@@ -1025,6 +1039,8 @@ namespace Apple_24_Zones.Forms
 
                                         // QUE HACEN LOS LEDS
                                         EncenderVerde();
+                                        RevisarChiller1SiDebeApagarseYa = false;
+
                                     }
                                     else 
                                     {
@@ -1048,9 +1064,6 @@ namespace Apple_24_Zones.Forms
                                         EncenderVerde();
                                         RevisarChiller1SiDebeApagarseYa = true;
                                     }
-
-                                   
-
                                 }
                                 catch (Exception ex)
                                 {
@@ -1079,7 +1092,7 @@ namespace Apple_24_Zones.Forms
 
                                     // QUE HACEN LOS LEDS
                                     EncenderVerde();
-
+                                    RevisarChiller1SiDebeApagarseYa = false;
                                 }
                                 catch (Exception ex)
                                 {
@@ -1109,6 +1122,7 @@ namespace Apple_24_Zones.Forms
 
                                     // QUE HACEN LOS LEDS
                                     EncenderVerde();
+                                    RevisarChiller1SiDebeApagarseYa = false;
                                 }
                                 catch (Exception ex)
                                 {
@@ -1186,6 +1200,7 @@ namespace Apple_24_Zones.Forms
 
                                         // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
                                         EncenderVerde();
+                                        RevisarChiller2SiDebeApagarseYa = false;
                                     }
                                     else
                                     {
@@ -1241,6 +1256,7 @@ namespace Apple_24_Zones.Forms
 
                                     // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
                                     EncenderVerde();
+                                    RevisarChiller2SiDebeApagarseYa = false;
 
                                 }
                                 catch (Exception ex)
@@ -1271,7 +1287,7 @@ namespace Apple_24_Zones.Forms
 
                                     // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
                                     EncenderVerde();
-
+                                    RevisarChiller2SiDebeApagarseYa = false;
                                 }
                                 catch (Exception ex)
                                 {
@@ -3266,6 +3282,7 @@ namespace Apple_24_Zones.Forms
 
                    
                     ApagarChillerZone(2);
+                    RevisarChiller2SiDebeApagarseYa = false;
 
                     txtPutSetpoint2.Text = "--";
                     lbStartDate2.Text = "--/--/--  --:--";
@@ -3302,6 +3319,7 @@ namespace Apple_24_Zones.Forms
                     picProcess1.Image = Resources.LedWhite1;
 
                     ApagarChillerZone(1);
+                    RevisarChiller1SiDebeApagarseYa = false;
 
                     txtPutSetpoint1.Text = "--";
                     lbStartDate1.Text = "--/--/--  --:--";
@@ -3828,7 +3846,7 @@ namespace Apple_24_Zones.Forms
 
         private void txtPutSetpoint2_Leave(object sender, EventArgs e)
         {
-            txtPutSetpoint2.BackColor = Color.DarkGray;
+            txtPutSetpoint2.BackColor = Color.White;
         }
 
         private void txtPutSetpoint1_Enter(object sender, EventArgs e)
@@ -3843,7 +3861,7 @@ namespace Apple_24_Zones.Forms
 
         private void txtPutSetpoint1_Leave_1(object sender, EventArgs e)
         {
-            txtPutSetpoint1.BackColor = Color.DarkGray;
+            txtPutSetpoint1.BackColor = Color.White;
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
