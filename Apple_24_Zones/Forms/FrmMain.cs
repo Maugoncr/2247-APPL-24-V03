@@ -239,8 +239,7 @@ namespace Apple_24_Zones.Forms
             {
                 if (temperatureValueOmron1 >= 25 && temperatureValueOmron1 <= 100 && RevisarChiller1SiDebeApagarseYa)
                 {
-                    int setpoint = Convert.ToInt32(txtPutSetpoint1.Text);
-                    if ((temperatureValueOmron1 - setpoint) <= 0)
+                    if ((temperatureValueOmron1 - LastSetpointSentZone1) <= 0)
                     {
                         if (serialPort2.IsOpen)
                         {
@@ -258,8 +257,7 @@ namespace Apple_24_Zones.Forms
             {
                 if (temperatureValueOmron2 >= 25 && temperatureValueOmron2 <= 100 && RevisarChiller1SiDebeApagarseYa)
                 {
-                    int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
-                    if ((temperatureValueOmron2 - setpoint) <= 0)
+                    if ((temperatureValueOmron2 - LastSetpointSentZone2) <= 0)
                     {
                         if (serialPort2.IsOpen)
                         {
@@ -1039,6 +1037,7 @@ namespace Apple_24_Zones.Forms
 
                                         // QUE HACEN LOS LEDS
                                         EncenderVerde();
+                                        LastSetpointSentZone1 = setpoint;
                                         RevisarChiller1SiDebeApagarseYa = false;
 
                                     }
@@ -1062,6 +1061,7 @@ namespace Apple_24_Zones.Forms
 
                                         // QUE HACEN LOS LEDS
                                         EncenderVerde();
+                                        LastSetpointSentZone1 = setpoint;
                                         RevisarChiller1SiDebeApagarseYa = true;
                                     }
                                 }
@@ -1092,6 +1092,7 @@ namespace Apple_24_Zones.Forms
 
                                     // QUE HACEN LOS LEDS
                                     EncenderVerde();
+                                    LastSetpointSentZone1 = setpoint;
                                     RevisarChiller1SiDebeApagarseYa = false;
                                 }
                                 catch (Exception ex)
@@ -1122,6 +1123,7 @@ namespace Apple_24_Zones.Forms
 
                                     // QUE HACEN LOS LEDS
                                     EncenderVerde();
+                                    LastSetpointSentZone1 = setpoint;
                                     RevisarChiller1SiDebeApagarseYa = false;
                                 }
                                 catch (Exception ex)
@@ -1163,6 +1165,10 @@ namespace Apple_24_Zones.Forms
             }
 
         }
+
+        int LastSetpointSentZone2 = 0;
+        int LastSetpointSentZone1 = 0;
+
         private void btnApplySetpoint2_Click(object sender, EventArgs e)
         {
             try
@@ -1176,7 +1182,6 @@ namespace Apple_24_Zones.Forms
                         if (number >= 5 && number <= 85)
                         {
                             int setpoint = Convert.ToInt32(txtPutSetpoint2.Text);
-
                             // HEATING RANGE
                             if (setpoint >= 27 && setpoint <= 85)
                             {
@@ -1200,13 +1205,15 @@ namespace Apple_24_Zones.Forms
 
                                         // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
                                         EncenderVerde();
+                                        LastSetpointSentZone2 = setpoint;
                                         RevisarChiller2SiDebeApagarseYa = false;
                                     }
                                     else
                                     {
                                         // turn ON chiller when SP is lower than TC by 5-6 degrees or more (for SP in heating range only)
                                         // QUE HACE EL OMRON
-                                        SendSetTempHeaterAndTurnItOn(2);
+                                        //SendSetTempHeaterAndTurnItOn(2);
+                                        OffOmron(2);
                                         CountOmronUse(2);
 
                                         // QUE HACE EL CHILLER
@@ -1223,6 +1230,7 @@ namespace Apple_24_Zones.Forms
 
                                         // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
                                         EncenderVerde();
+                                        LastSetpointSentZone2 = setpoint;
                                         RevisarChiller2SiDebeApagarseYa = true;
                                     }
                                     
@@ -1256,6 +1264,7 @@ namespace Apple_24_Zones.Forms
 
                                     // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
                                     EncenderVerde();
+                                    LastSetpointSentZone2 = setpoint;
                                     RevisarChiller2SiDebeApagarseYa = false;
 
                                 }
@@ -1270,7 +1279,8 @@ namespace Apple_24_Zones.Forms
                                 try
                                 {
                                     // QUE HACE EL OMRON
-                                    SendSetTempHeaterAndTurnItOn(2);
+                                    //SendSetTempHeaterAndTurnItOn(2);
+                                    OffOmron(2);
                                     CountOmronUse(2);
 
                                     // QUE HACE EL CHILLER
@@ -1287,6 +1297,7 @@ namespace Apple_24_Zones.Forms
 
                                     // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
                                     EncenderVerde();
+                                    LastSetpointSentZone2 = setpoint;
                                     RevisarChiller2SiDebeApagarseYa = false;
                                 }
                                 catch (Exception ex)
@@ -1336,6 +1347,7 @@ namespace Apple_24_Zones.Forms
             serialPort1.StopBits = StopBits.One;
             serialPort1.WriteTimeout = -1; //Distinto a la entrega de Najab, era 100
         }
+
 
 
         private void SendSetTempHeaterAndTurnItOn(int which)
