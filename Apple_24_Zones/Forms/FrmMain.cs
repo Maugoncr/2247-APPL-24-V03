@@ -226,8 +226,36 @@ namespace Apple_24_Zones.Forms
             }
         }
 
+        private void StartWaitingAndExecuteFunction(int which)
+        {
+
+            Thread.Sleep(5 * 60 * 1000);
+
+
+            if (which == 1)
+            {
+                if (serialPort1.IsOpen && serialPort2.IsOpen && !cancelWaiting)
+                {
+                    ApagarChillerZone(1);
+                    cancelWaiting = false;
+                }
+            }
+            else if (which == 2)
+            {
+                if (serialPort1.IsOpen && serialPort2.IsOpen && !cancelWaiting2)
+                {
+                    ApagarChillerZone(2);
+                    cancelWaiting2 = false;
+                }
+            }
+
+        }
+
         bool graficarChartStatic2 = false;
         bool graficarChartStatic1 = false;
+
+        private bool cancelWaiting = false;
+        private bool cancelWaiting2 = false;
 
         private void timerDateTime_Tick(object sender, EventArgs e)
         {
@@ -245,7 +273,15 @@ namespace Apple_24_Zones.Forms
                         {
                             if (serialPort1.IsOpen && serialPort2.IsOpen)
                             {
-                                ApagarChillerZone(2);
+                                cancelWaiting2 = false;
+
+                                Thread waitThread = new Thread(delegate ()
+                                {
+                                    StartWaitingAndExecuteFunction(2);
+                                });
+                                waitThread.IsBackground = true;
+                                waitThread.Start();
+
                                 SendSetTempHeaterAndTurnItOn(2, LastSetpointSentZone2.ToString());
                                 RevisarChiller2SiDebeApagarseYa = false;
                             }
@@ -270,7 +306,14 @@ namespace Apple_24_Zones.Forms
                         {
                             if (serialPort1.IsOpen && serialPort2.IsOpen)
                             {
-                                ApagarChillerZone(1);
+                                cancelWaiting = false;
+
+                                Thread waitThread = new Thread(delegate ()
+                                {
+                                    StartWaitingAndExecuteFunction(1);
+                                });
+                                waitThread.IsBackground = true;
+                                waitThread.Start();
                                 SendSetTempHeaterAndTurnItOn(1, LastSetpointSentZone1.ToString());
                                 RevisarChiller1SiDebeApagarseYa = false;
                             }
@@ -707,6 +750,9 @@ namespace Apple_24_Zones.Forms
             {
                 if (serialPort2.IsOpen)
                 {
+                    cancelWaiting2 = true;
+                    cancelWaiting = true;
+
                     ApagarAllLeds();
 
                     serialPort2.Close();
@@ -734,6 +780,8 @@ namespace Apple_24_Zones.Forms
             {
                 if (serialPort1.IsOpen)
                 {
+                    cancelWaiting2 = true;
+                    cancelWaiting = true;
                     timerGraficarCharts.Stop();
                     timerRequestTemps.Stop();
                     serialPort1.Close();
@@ -1094,6 +1142,8 @@ namespace Apple_24_Zones.Forms
                                 RevisarChiller1SiDebeApagarseYa = true;
                             }
 
+                            cancelWaiting = true;
+
                             Zona1Encendida = true;
                             if (Zona2Encendida && Zona1Encendida)
                             {
@@ -1206,6 +1256,8 @@ namespace Apple_24_Zones.Forms
                                 LastSetpointSentZone2 = setpoint;
                                 RevisarChiller2SiDebeApagarseYa = true;
                             }
+
+                            cancelWaiting2 = true;
 
                             Zona2Encendida = true;
                             if (Zona2Encendida && Zona1Encendida)
@@ -4981,6 +5033,7 @@ namespace Apple_24_Zones.Forms
                     picProcess2.Image.Dispose();
                     picProcess2.Image = Resources.LedWhite1;
 
+                    cancelWaiting2 = true;
 
                     ApagarChillerZone(2);
                     RevisarChiller2SiDebeApagarseYa = false;
@@ -5018,6 +5071,8 @@ namespace Apple_24_Zones.Forms
                     picUpDown1.Image = Resources.neutroWhite;
                     picProcess1.Image.Dispose();
                     picProcess1.Image = Resources.LedWhite1;
+
+                    cancelWaiting = true;
 
                     ApagarChillerZone(1);
                     RevisarChiller1SiDebeApagarseYa = false;
