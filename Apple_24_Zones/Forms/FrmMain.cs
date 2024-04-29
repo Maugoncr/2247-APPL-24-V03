@@ -237,32 +237,51 @@ namespace Apple_24_Zones.Forms
 
             try
             {
-                if (temperatureValueOmron1 >= 25 && temperatureValueOmron1 <= 100 && RevisarChiller1SiDebeApagarseYa)
-                {
-                    if ((temperatureValueOmron1 - LastSetpointSentZone1) <= 0)
-                    {
-                        if (serialPort2.IsOpen)
-                        {
-                            ApagarChillerZone(1);
-                            RevisarChiller1SiDebeApagarseYa = false;
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-            }
-
-            try
-            {
-                if (temperatureValueOmron2 >= 25 && temperatureValueOmron2 <= 100 && RevisarChiller1SiDebeApagarseYa)
+                if (RevisarChiller2SiDebeApagarseYa)
                 {
                     if ((temperatureValueOmron2 - LastSetpointSentZone2) <= 0)
                     {
-                        if (serialPort2.IsOpen)
+                        if (LastSetpointSentZone2 >= 27)
                         {
-                            ApagarChillerZone(2);
-                            RevisarChiller2SiDebeApagarseYa = false;
+                            if (serialPort1.IsOpen && serialPort2.IsOpen)
+                            {
+                                ApagarChillerZone(2);
+                                SendSetTempHeaterAndTurnItOn(2, LastSetpointSentZone2.ToString());
+                                RevisarChiller2SiDebeApagarseYa = false;
+                            }
+                        }
+                        else
+                        {
+                            if (serialPort1.IsOpen && serialPort2.IsOpen) 
+                            {
+                                SendSetTempHeaterAndTurnItOn(2, LastSetpointSentZone2.ToString());
+                                RevisarChiller2SiDebeApagarseYa = false;
+                            }
+                        }
+                    }
+                }
+
+
+                if (RevisarChiller1SiDebeApagarseYa)
+                {
+                    if ((temperatureValueOmron1 - LastSetpointSentZone1) <= 0)
+                    {
+                        if (LastSetpointSentZone1 >= 27)
+                        {
+                            if (serialPort1.IsOpen && serialPort2.IsOpen)
+                            {
+                                ApagarChillerZone(1);
+                                SendSetTempHeaterAndTurnItOn(1, LastSetpointSentZone1.ToString());
+                                RevisarChiller1SiDebeApagarseYa = false;
+                            }
+                        }
+                        else
+                        {
+                            if (serialPort1.IsOpen && serialPort2.IsOpen)
+                            {
+                                SendSetTempHeaterAndTurnItOn(1, LastSetpointSentZone1.ToString());
+                                RevisarChiller1SiDebeApagarseYa = false;
+                            }
                         }
                     }
                 }
@@ -270,8 +289,6 @@ namespace Apple_24_Zones.Forms
             catch (Exception)
             {
             }
-
-            
 
             //Si todas las Temperaturas ya tienen un valor
             if (temperatureValueOmron1 != 0 && temperatureValueOmron2 != 0 && graficarChartStatic2)
@@ -1019,13 +1036,13 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-                                    if ((temperatureValueOmron1 - setpoint) <= 6)
+                                    if ((temperatureValueOmron1 - setpoint) <= 0)
                                     {
                                         // QUE HACE EL OMRON
                                         SendSetTempHeaterAndTurnItOn(1);
                                         CountOmronUse(1);
 
-                                        // SE CAMBIAN LOS INDICADORES DEL PROCESO
+                                        // CAMBIAN LOS INDICADORES
                                         picProcess1.Image.Dispose();
                                         picProcess1.Image = Resources.LedRedHeating2;
                                         picUpDown1.Image.Dispose();
@@ -1035,16 +1052,16 @@ namespace Apple_24_Zones.Forms
                                         ApagarChillerZone(1);
                                         Thread.Sleep(50);
 
-                                        // QUE HACEN LOS LEDS
+                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
                                         EncenderVerde();
                                         LastSetpointSentZone1 = setpoint;
                                         RevisarChiller1SiDebeApagarseYa = false;
-
                                     }
-                                    else 
+                                    else
                                     {
-                                        // QUE HACE EL OMRON
-                                        SendSetTempHeaterAndTurnItOn(1);
+                                        // Ponemos el Omron a 0 ya que vamos a enfriar un poco
+                                        //SendSetTempHeaterAndTurnItOn(2);
+                                        OffOmron(1);
                                         CountOmronUse(1);
 
                                         // QUE HACE EL CHILLER
@@ -1053,17 +1070,18 @@ namespace Apple_24_Zones.Forms
                                         Thread.Sleep(100);
                                         SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
 
-                                        // SE CAMBIAN LOS INDICADORES DEL PROCESO
+                                        // CAMBIAN LOS INDICADORES
                                         picUpDown1.Image.Dispose();
                                         picUpDown1.Image = Resources.arrowDownBlue2;
                                         picProcess1.Image.Dispose();
                                         picProcess1.Image = Resources.LedBlueCooling2;
 
-                                        // QUE HACEN LOS LEDS
+                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
                                         EncenderVerde();
                                         LastSetpointSentZone1 = setpoint;
                                         RevisarChiller1SiDebeApagarseYa = true;
                                     }
+                                    
                                 }
                                 catch (Exception ex)
                                 {
@@ -1074,26 +1092,51 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-                                    // QUE HACE EL OMRON
-                                    SendSetTempHeaterAndTurnItOn(1);
-                                    CountOmronUse(1);
+                                    if ((temperatureValueOmron1 - setpoint) <= 0)
+                                    {
+                                        // QUE HACE EL OMRON
+                                        SendSetTempHeaterAndTurnItOn(1);
+                                        CountOmronUse(1);
 
-                                    // QUE HACE EL CHILLER
-                                    EncenderChillerZone(1);
-                                    CountChillerUse(1);
-                                    Thread.Sleep(100);
-                                    SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+                                        // CAMBIAN LOS INDICADORES
+                                        picProcess1.Image.Dispose();
+                                        picProcess1.Image = Resources.LedRedHeating2;
+                                        picUpDown1.Image.Dispose();
+                                        picUpDown1.Image = Resources.arrowUpRed21;
 
-                                    // SE CAMBIAN LOS INDICADORES DEL PROCESO
-                                    picUpDown1.Image.Dispose();
-                                    picUpDown1.Image = Resources.neutroWhite;
-                                    picProcess1.Image.Dispose();
-                                    picProcess1.Image = Resources.LedWhite1;
+                                        // QUE HACE EL CHILLER
+                                        ApagarChillerZone(1);
+                                        Thread.Sleep(50);
 
-                                    // QUE HACEN LOS LEDS
-                                    EncenderVerde();
-                                    LastSetpointSentZone1 = setpoint;
-                                    RevisarChiller1SiDebeApagarseYa = false;
+                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                        EncenderVerde();
+                                        LastSetpointSentZone1 = setpoint;
+                                        RevisarChiller1SiDebeApagarseYa = false;
+                                    }
+                                    else
+                                    {
+                                        // Ponemos el Omron a 0 ya que vamos a enfriar un poco
+                                        //SendSetTempHeaterAndTurnItOn(2);
+                                        OffOmron(1);
+                                        CountOmronUse(1);
+
+                                        // QUE HACE EL CHILLER
+                                        EncenderChillerZone(1);
+                                        CountChillerUse(1);
+                                        Thread.Sleep(100);
+                                        SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+
+                                        // CAMBIAN LOS INDICADORES
+                                        picUpDown1.Image.Dispose();
+                                        picUpDown1.Image = Resources.arrowDownBlue2;
+                                        picProcess1.Image.Dispose();
+                                        picProcess1.Image = Resources.LedBlueCooling2;
+
+                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                        EncenderVerde();
+                                        LastSetpointSentZone1 = setpoint;
+                                        RevisarChiller1SiDebeApagarseYa = true;
+                                    }
                                 }
                                 catch (Exception ex)
                                 {
@@ -1105,26 +1148,51 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-                                    // QUE HACE EL OMRON
-                                    SendSetTempHeaterAndTurnItOn(1);
-                                    CountOmronUse(1);
+                                    if ((temperatureValueOmron1 - setpoint) <= 0)
+                                    {
+                                        // QUE HACE EL OMRON
+                                        SendSetTempHeaterAndTurnItOn(1);
+                                        CountOmronUse(1);
 
-                                    // QUE HACE EL CHILLER
-                                    EncenderChillerZone(1);
-                                    CountChillerUse(1);
-                                    Thread.Sleep(100);
-                                    SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+                                        // CAMBIAN LOS INDICADORES
+                                        picProcess1.Image.Dispose();
+                                        picProcess1.Image = Resources.LedRedHeating2;
+                                        picUpDown1.Image.Dispose();
+                                        picUpDown1.Image = Resources.arrowUpRed21;
 
-                                    // SE CAMBIAN LOS INDICADORES DEL PROCESO
-                                    picUpDown1.Image.Dispose();
-                                    picUpDown1.Image = Resources.arrowDownBlue2;
-                                    picProcess1.Image.Dispose();
-                                    picProcess1.Image = Resources.LedBlueCooling2;
+                                        // QUE HACE EL CHILLER
+                                        ApagarChillerZone(1);
+                                        Thread.Sleep(50);
 
-                                    // QUE HACEN LOS LEDS
-                                    EncenderVerde();
-                                    LastSetpointSentZone1 = setpoint;
-                                    RevisarChiller1SiDebeApagarseYa = false;
+                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                        EncenderVerde();
+                                        LastSetpointSentZone1 = setpoint;
+                                        RevisarChiller1SiDebeApagarseYa = false;
+                                    }
+                                    else
+                                    {
+                                        // Ponemos el Omron a 0 ya que vamos a enfriar un poco
+                                        //SendSetTempHeaterAndTurnItOn(2);
+                                        OffOmron(1);
+                                        CountOmronUse(1);
+
+                                        // QUE HACE EL CHILLER
+                                        EncenderChillerZone(1);
+                                        CountChillerUse(1);
+                                        Thread.Sleep(100);
+                                        SendCommandSetpointChiller(txtPutSetpoint1.Text, 8);
+
+                                        // CAMBIAN LOS INDICADORES
+                                        picUpDown1.Image.Dispose();
+                                        picUpDown1.Image = Resources.arrowDownBlue2;
+                                        picProcess1.Image.Dispose();
+                                        picProcess1.Image = Resources.LedBlueCooling2;
+
+                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                        EncenderVerde();
+                                        LastSetpointSentZone1 = setpoint;
+                                        RevisarChiller1SiDebeApagarseYa = true;
+                                    }
                                 }
                                 catch (Exception ex)
                                 {
@@ -1187,7 +1255,7 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-                                    if ((temperatureValueOmron2 - setpoint) <= 6)
+                                    if ((temperatureValueOmron2 - setpoint) <= 0)
                                     {
                                         // QUE HACE EL OMRON
                                         SendSetTempHeaterAndTurnItOn(2);
@@ -1210,8 +1278,7 @@ namespace Apple_24_Zones.Forms
                                     }
                                     else
                                     {
-                                        // turn ON chiller when SP is lower than TC by 5-6 degrees or more (for SP in heating range only)
-                                        // QUE HACE EL OMRON
+                                        // Ponemos el Omron a 0 ya que vamos a enfriar un poco
                                         //SendSetTempHeaterAndTurnItOn(2);
                                         OffOmron(2);
                                         CountOmronUse(2);
@@ -1233,8 +1300,6 @@ namespace Apple_24_Zones.Forms
                                         LastSetpointSentZone2 = setpoint;
                                         RevisarChiller2SiDebeApagarseYa = true;
                                     }
-                                    
-
                                 }
                                 catch (Exception ex)
                                 {
@@ -1246,26 +1311,51 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-                                    // QUE HACE EL OMRON
-                                    SendSetTempHeaterAndTurnItOn(2);
-                                    CountOmronUse(2);
+                                    if ((temperatureValueOmron2 - setpoint) <= 0) 
+                                    {
+                                        // QUE HACE EL OMRON
+                                        SendSetTempHeaterAndTurnItOn(2);
+                                        CountOmronUse(2);
 
-                                    // QUE HACE EL CHILLER
-                                    EncenderChillerZone(2);
-                                    CountChillerUse(2);
-                                    Thread.Sleep(100);
-                                    SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+                                        // CAMBIAN LOS INDICADORES
+                                        picProcess2.Image.Dispose();
+                                        picProcess2.Image = Resources.LedRedHeating2;
+                                        picUpDown2.Image.Dispose();
+                                        picUpDown2.Image = Resources.arrowUpRed21;
 
-                                    // CAMBIAN LOS INDICADORES
-                                    picUpDown2.Image.Dispose();
-                                    picUpDown2.Image = Resources.neutroWhite;
-                                    picProcess2.Image.Dispose();
-                                    picProcess2.Image = Resources.LedWhite1;
+                                        // QUE HACE EL CHILLER
+                                        ApagarChillerZone(2);
+                                        Thread.Sleep(50);
 
-                                    // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                    EncenderVerde();
-                                    LastSetpointSentZone2 = setpoint;
-                                    RevisarChiller2SiDebeApagarseYa = false;
+                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                        EncenderVerde();
+                                        LastSetpointSentZone2 = setpoint;
+                                        RevisarChiller2SiDebeApagarseYa = false;
+                                    }
+                                    else
+                                    {
+                                        // Ponemos el Omron a 0 ya que vamos a enfriar un poco
+                                        //SendSetTempHeaterAndTurnItOn(2);
+                                        OffOmron(2);
+                                        CountOmronUse(2);
+
+                                        // QUE HACE EL CHILLER
+                                        EncenderChillerZone(2);
+                                        CountChillerUse(2);
+                                        Thread.Sleep(100);
+                                        SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+
+                                        // CAMBIAN LOS INDICADORES
+                                        picUpDown2.Image.Dispose();
+                                        picUpDown2.Image = Resources.arrowDownBlue2;
+                                        picProcess2.Image.Dispose();
+                                        picProcess2.Image = Resources.LedBlueCooling2;
+
+                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                        EncenderVerde();
+                                        LastSetpointSentZone2 = setpoint;
+                                        RevisarChiller2SiDebeApagarseYa = true;
+                                    }
 
                                 }
                                 catch (Exception ex)
@@ -1278,27 +1368,52 @@ namespace Apple_24_Zones.Forms
                             {
                                 try
                                 {
-                                    // QUE HACE EL OMRON
-                                    //SendSetTempHeaterAndTurnItOn(2);
-                                    OffOmron(2);
-                                    CountOmronUse(2);
+                                    if ((temperatureValueOmron2 - setpoint) <= 0)
+                                    {
+                                        // QUE HACE EL OMRON
+                                        SendSetTempHeaterAndTurnItOn(2);
+                                        CountOmronUse(2);
 
-                                    // QUE HACE EL CHILLER
-                                    EncenderChillerZone(2);
-                                    CountChillerUse(2);
-                                    Thread.Sleep(100);
-                                    SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+                                        // CAMBIAN LOS INDICADORES
+                                        picProcess2.Image.Dispose();
+                                        picProcess2.Image = Resources.LedRedHeating2;
+                                        picUpDown2.Image.Dispose();
+                                        picUpDown2.Image = Resources.arrowUpRed21;
 
-                                    // CAMBIAN LOS INDICADORES
-                                    picUpDown2.Image.Dispose();
-                                    picUpDown2.Image = Resources.arrowDownBlue2;
-                                    picProcess2.Image.Dispose();
-                                    picProcess2.Image = Resources.LedBlueCooling2;
+                                        // QUE HACE EL CHILLER
+                                        ApagarChillerZone(2);
+                                        Thread.Sleep(50);
 
-                                    // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
-                                    EncenderVerde();
-                                    LastSetpointSentZone2 = setpoint;
-                                    RevisarChiller2SiDebeApagarseYa = false;
+                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                        EncenderVerde();
+                                        LastSetpointSentZone2 = setpoint;
+                                        RevisarChiller2SiDebeApagarseYa = false;
+                                    }
+                                    else
+                                    {
+                                        // Ponemos el Omron a 0 ya que vamos a enfriar un poco
+                                        //SendSetTempHeaterAndTurnItOn(2);
+                                        OffOmron(2);
+                                        CountOmronUse(2);
+
+                                        // QUE HACE EL CHILLER
+                                        EncenderChillerZone(2);
+                                        CountChillerUse(2);
+                                        Thread.Sleep(100);
+                                        SendCommandSetpointChiller(txtPutSetpoint2.Text, 9);
+
+                                        // CAMBIAN LOS INDICADORES
+                                        picUpDown2.Image.Dispose();
+                                        picUpDown2.Image = Resources.arrowDownBlue2;
+                                        picProcess2.Image.Dispose();
+                                        picProcess2.Image = Resources.LedBlueCooling2;
+
+                                        // QUE HACEN LOS LEDS (SE ENCIENDE EL VERDE POR UN PROCESO ACTIVO)
+                                        EncenderVerde();
+                                        LastSetpointSentZone2 = setpoint;
+                                        RevisarChiller2SiDebeApagarseYa = true;
+                                    }
+                                  
                                 }
                                 catch (Exception ex)
                                 {
@@ -1348,7 +1463,1796 @@ namespace Apple_24_Zones.Forms
             serialPort1.WriteTimeout = -1; //Distinto a la entrega de Najab, era 100
         }
 
+        private void SendSetTempHeaterAndTurnItOn(int which, string Setpoint)
+        {
+            SetConfigSerialPortForHeater();
+            string hexCommand;
+            string[] hexBytes;
+            byte[] binaryData;
 
+            if (which == 1)
+            {
+                switch (Setpoint)
+                {
+                    case "0":
+                        hexCommand = "01 06 21 03 00 00 73 F6";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "1":
+                        hexCommand = "01 06 21 03 00 01 B2";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "2":
+                        hexCommand = "01 06 21 03 00 02 F2";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "3":
+                        hexCommand = "01 06 21 03 00 03 33 F7";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "4":
+                        hexCommand = "01 06 21 03 00 04 72 35";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "5":
+                        hexCommand = "01 06 21 03 00 05 B3 F5";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "6":
+                        hexCommand = "01 06 21 03 00 06 F3 F4";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "7":
+                        hexCommand = "01 06 21 03 00 07 32 34";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "8":
+                        hexCommand = "01 06 21 03 00 08 72 30";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "9":
+                        hexCommand = "01 06 21 03 00 09 B3 F0";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "10":
+                        hexCommand = "01 06 21 03 00 0A F3 F1";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "11":
+                        hexCommand = "01 06 21 03 00 0B 32 31";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "12":
+                        hexCommand = "01 06 21 03 00 0C 73 F3";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "13":
+                        hexCommand = "01 06 21 03 00 0D B2 33";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "14":
+                        hexCommand = "01 06 21 03 00 0E F2 32";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "15":
+                        hexCommand = "01 06 21 03 00 0F 33 F2";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "16":
+                        hexCommand = "01 06 21 03 00 10 72 3A";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "17":
+                        hexCommand = "01 06 21 03 00 11 B3 FA";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "18":
+                        hexCommand = "01 06 21 03 00 12 F3 FB";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "19":
+                        hexCommand = "01 06 21 03 00 13 32 3B";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "20":
+                        hexCommand = "01 06 21 03 00 14 73 F9";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "21":
+                        hexCommand = "01 06 21 03 00 15 B2 39";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "22":
+                        hexCommand = "01 06 21 03 00 16 F2 38";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "23":
+                        hexCommand = "01 06 21 03 00 17 33 F8";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "24":
+                        hexCommand = "01 06 21 03 00 18 73 FC";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+
+                    case "25":
+                        hexCommand = "01 06 21 03 00 19 B2 3C";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "26":
+                        hexCommand = "01 06 21 03 00 1A F2 3D";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "27":
+                        hexCommand = "01 06 21 03 00 1B 33 FD";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "28":
+                        hexCommand = "01 06 21 03 00 1C 72 3F";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "29":
+                        hexCommand = "01 06 21 03 00 1D B3 FF";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "30":
+                        hexCommand = "01 06 21 03 00 1E F3 FE";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "31":
+                        hexCommand = "01 06 21 03 00 1F 32 3E";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "32":
+                        hexCommand = "01 06 21 03 00 20 72 2E";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "33":
+                        hexCommand = "01 06 21 03 00 21 B3 EE";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "34":
+                        hexCommand = "01 06 21 03 00 22 F3 EF";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "35":
+                        hexCommand = "01 06 21 03 00 23 32 2F";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "36":
+                        hexCommand = "01 06 21 03 00 24 73 ED";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "37":
+                        hexCommand = "01 06 21 03 00 25 B2 2D";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "38":
+                        hexCommand = "01 06 21 03 00 26 F2 2C";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "39":
+                        hexCommand = "01 06 21 03 00 27 33 EC";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "40":
+                        hexCommand = "01 06 21 03 00 28 73 E8";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "41":
+                        hexCommand = "01 06 21 03 00 29 B2 28";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "42":
+                        hexCommand = "01 06 21 03 00 2A F2 29";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "43":
+                        hexCommand = "01 06 21 03 00 2B 33 E9";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+
+                        break;
+                    case "44":
+                        hexCommand = "01 06 21 03 00 2C 72 2B";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "45":
+                        hexCommand = "01 06 21 03 00 2D B3 EB";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "46":
+                        hexCommand = "01 06 21 03 00 2E F3 EA";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "47":
+                        hexCommand = "01 06 21 03 00 2F 32 2A";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "48":
+                        hexCommand = "01 06 21 03 00 30 73 E2";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "49":
+                        hexCommand = "01 06 21 03 00 31 B2 22";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "50":
+                        hexCommand = "01 06 21 03 00 32 F2 23";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "51":
+                        hexCommand = "01 06 21 03 00 33 33 E3";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "52":
+                        hexCommand = "01 06 21 03 00 34 72 21";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "53":
+                        hexCommand = "01 06 21 03 00 35 B3 E1";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "54":
+                        hexCommand = "01 06 21 03 00 36 F3 E0";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "55":
+                        hexCommand = "01 06 21 03 00 37 32 20";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "56":
+                        hexCommand = "01 06 21 03 00 38 72 24";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "57":
+                        hexCommand = "01 06 21 03 00 39 B3 E4";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "58":
+                        hexCommand = "01 06 21 03 00 3A F3 E5";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "59":
+                        hexCommand = "01 06 21 03 00 3B 32 25";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "60":
+                        hexCommand = "01 06 21 03 00 3C 73 E7";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "61":
+                        hexCommand = "01 06 21 03 00 3D B2 27";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "62":
+                        hexCommand = "01 06 21 03 00 3E F2 26";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "63":
+                        hexCommand = "01 06 21 03 00 3F 33 E6";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "64":
+                        hexCommand = "01 06 21 03 00 40 72 06";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "65":
+                        hexCommand = "01 06 21 03 00 41 B3 C6";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "66":
+                        hexCommand = "01 06 21 03 00 42 F3 C7";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "67":
+                        hexCommand = "01 06 21 03 00 43 32 07";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "68":
+                        hexCommand = "01 06 21 03 00 44 73 C5";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "69":
+                        hexCommand = "01 06 21 03 00 45 B2 05";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "70":
+                        hexCommand = "01 06 21 03 00 46 F2 04";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "71":
+                        hexCommand = "01 06 21 03 00 47 33 C4";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "72":
+                        hexCommand = "01 06 21 03 00 48 73 C0";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "73":
+                        hexCommand = "01 06 21 03 00 49 B2 00";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "74":
+                        hexCommand = "01 06 21 03 00 4A F2 01";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "75":
+                        hexCommand = "01 06 21 03 00 4B 33 C1";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "76":
+                        hexCommand = "01 06 21 03 00 4C 72 03";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "77":
+                        hexCommand = "01 06 21 03 00 4D B3 C3";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "78":
+                        hexCommand = "01 06 21 03 00 4E F3 C2";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "79":
+                        hexCommand = "01 06 21 03 00 4F 32 02";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "80":
+                        hexCommand = "01 06 21 03 00 50 73 CA";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "81":
+                        hexCommand = "01 06 21 03 00 51 B2 0A";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "82":
+                        hexCommand = "01 06 21 03 00 52 F2 0B";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "83":
+                        hexCommand = "01 06 21 03 00 53 33 CB";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "84":
+                        hexCommand = "01 06 21 03 00 54 72 09";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "85":
+                        hexCommand = "01 06 21 03 00 55 B3 C9";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "86":
+
+                        break;
+                    case "87":
+
+                        break;
+                    case "88":
+
+                        break;
+                    case "89":
+
+                        break;
+                    case "90":
+
+                        break;
+                    case "91":
+
+                        break;
+                    case "92":
+
+                        break;
+                    case "93":
+
+                        break;
+                    case "94":
+
+                        break;
+                    case "95":
+
+                        break;
+                    case "96":
+
+                        break;
+                    case "97":
+
+                        break;
+                    case "98":
+
+                        break;
+                    case "99":
+
+                        break;
+                    case "100":
+
+                        break;
+
+                }
+            }
+            else if (which == 2)
+            {
+                switch (Setpoint)
+                {
+                    case "0":
+                        hexCommand = "02 06 21 03 00 00 73 C5";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "1":
+                        hexCommand = "01 06 21 03 00 01 B2";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "2":
+                        hexCommand = "01 06 21 03 00 02 F2";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "3":
+                        hexCommand = "01 06 21 03 00 03 33 F7";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "4":
+                        hexCommand = "01 06 21 03 00 04 72 35";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "5":
+                        hexCommand = "02 06 21 03 00 05 B3 C6";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "6":
+                        hexCommand = "02 06 21 03 00 06 F3 C7";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "7":
+                        hexCommand = "02 06 21 03 00 07 32 07";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "8":
+                        hexCommand = "02 06 21 03 00 08 72 03";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "9":
+                        hexCommand = "02 06 21 03 00 09 B3 C3";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "10":
+                        hexCommand = "02 06 21 03 00 0A F3 C2";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "11":
+                        hexCommand = "02 06 21 03 00 0B 32 02";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "12":
+                        hexCommand = "02 06 21 03 00 0C 73 C0";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "13":
+                        hexCommand = "02 06 21 03 00 0D B2 00";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "14":
+                        hexCommand = "02 06 21 03 00 0E F2 01";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "15":
+                        hexCommand = "02 06 21 03 00 0F 33 C1";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "16":
+                        hexCommand = "02 06 21 03 00 10 72 09";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "17":
+                        hexCommand = "02 06 21 03 00 11 B3 C9";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "18":
+                        hexCommand = "02 06 21 03 00 12 F3 C8";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "19":
+                        hexCommand = "02 06 21 03 00 13 32 08";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "20":
+                        hexCommand = "02 06 21 03 00 14 73 CA";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "21":
+                        hexCommand = "02 06 21 03 00 15 B2 0A";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "22":
+                        hexCommand = "02 06 21 03 00 16 F2 0B";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "23":
+                        hexCommand = "02 06 21 03 00 17 33 CB";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "24":
+                        hexCommand = "02 06 21 03 00 18 73 CF";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "25":
+                        hexCommand = "02 06 21 03 00 19 B2 0F";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "26":
+                        hexCommand = "02 06 21 03 00 1A F2 0E";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "27":
+                        hexCommand = "02 06 21 03 00 1B 33 CE";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "28":
+                        hexCommand = "02 06 21 03 00 1C 72 0C";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "29":
+                        hexCommand = "02 06 21 03 00 1D B3 CC";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "30":
+                        hexCommand = "02 06 21 03 00 1E F3 CD";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "31":
+                        hexCommand = "02 06 21 03 00 1F 32 0D";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "32":
+                        hexCommand = "02 06 21 03 00 20 72 1D";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "33":
+                        hexCommand = "02 06 21 03 00 21 B3 DD";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "34":
+                        hexCommand = "02 06 21 03 00 22 F3 DC";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "35":
+                        hexCommand = "02 06 21 03 00 23 32 1C";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "36":
+                        hexCommand = "02 06 21 03 00 24 73 DE";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "37":
+                        hexCommand = "02 06 21 03 00 25 B2 1E";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "38":
+                        hexCommand = "02 06 21 03 00 26 F2 1F";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "39":
+                        hexCommand = "02 06 21 03 00 27 33 DF";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "40":
+                        hexCommand = "02 06 21 03 00 28 73 DB";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "41":
+                        hexCommand = "02 06 21 03 00 29 B2 1B";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "42":
+                        hexCommand = "02 06 21 03 00 2A F2 1A";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "43":
+                        hexCommand = "02 06 21 03 00 2B 33 DA";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+
+                        break;
+                    case "44":
+                        hexCommand = "02 06 21 03 00 2C 72 18";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "45":
+                        hexCommand = "02 06 21 03 00 2D B3 D8";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "46":
+                        hexCommand = "02 06 21 03 00 2E F3 D9";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "47":
+                        hexCommand = "02 06 21 03 00 2F 32 19";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "48":
+                        hexCommand = "02 06 21 03 00 30 73 D1";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "49":
+                        hexCommand = "02 06 21 03 00 31 B2 11";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "50":
+                        hexCommand = "02 06 21 03 00 32 F2 10";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "51":
+                        hexCommand = "02 06 21 03 00 33 33 D0";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "52":
+                        hexCommand = "02 06 21 03 00 34 72 12";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "53":
+                        hexCommand = "02 06 21 03 00 35 B3 D2";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "54":
+                        hexCommand = "02 06 21 03 00 36 F3 D3";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "55":
+                        hexCommand = "02 06 21 03 00 37 32 13";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "56":
+                        hexCommand = "02 06 21 03 00 38 72 17";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "57":
+                        hexCommand = "02 06 21 03 00 39 B3 D7";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "58":
+                        hexCommand = "02 06 21 03 00 3A F3 D6";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "59":
+                        hexCommand = "02 06 21 03 00 3B 32 16";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "60":
+                        hexCommand = "02 06 21 03 00 3C 73 D4";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "61":
+                        hexCommand = "02 06 21 03 00 3D B2 14";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "62":
+                        hexCommand = "02 06 21 03 00 3E F2 15";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "63":
+                        hexCommand = "02 06 21 03 00 3F 33 D5";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "64":
+                        hexCommand = "02 06 21 03 00 40 72 35";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "65":
+                        hexCommand = "02 06 21 03 00 41 B3 F5";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "66":
+                        hexCommand = "02 06 21 03 00 42 F3 F4";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "67":
+                        hexCommand = "02 06 21 03 00 43 32 34";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "68":
+                        hexCommand = "02 06 21 03 00 44 73 F6";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "69":
+                        hexCommand = "02 06 21 03 00 45 B2 36";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "70":
+                        hexCommand = "02 06 21 03 00 46 F2 37";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "71":
+                        hexCommand = "02 06 21 03 00 47 33 F7";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "72":
+                        hexCommand = "02 06 21 03 00 48 73 F3";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "73":
+                        hexCommand = "02 06 21 03 00 49 B2 33";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "74":
+                        hexCommand = "02 06 21 03 00 4A F2 32";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "75":
+                        hexCommand = "02 06 21 03 00 4B 33 F2";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "76":
+                        hexCommand = "02 06 21 03 00 4C 72 30";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "77":
+                        hexCommand = "02 06 21 03 00 4D B3 F0";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "78":
+                        hexCommand = "02 06 21 03 00 4E F3 F1";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "79":
+                        hexCommand = "02 06 21 03 00 4F 32 31";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "80":
+                        hexCommand = "02 06 21 03 00 50 73 F9";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "81":
+                        hexCommand = "02 06 21 03 00 51 B2 39";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "82":
+                        hexCommand = "02 06 21 03 00 52 F2 38";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "83":
+                        hexCommand = "02 06 21 03 00 53 33 F8";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "84":
+                        hexCommand = "02 06 21 03 00 54 72 3A";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                    case "85":
+                        hexCommand = "02 06 21 03 00 55 B3 FA";
+                        hexBytes = hexCommand.Split(' ');
+                        binaryData = new byte[hexBytes.Length];
+                        for (int i = 0; i < hexBytes.Length; i++)
+                        {
+                            binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+                        }
+                        serialPort1.Write(binaryData, 0, binaryData.Length);
+                        break;
+                }
+            }
+
+        }
 
         private void SendSetTempHeaterAndTurnItOn(int which)
         {
