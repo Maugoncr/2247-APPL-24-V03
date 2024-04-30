@@ -45,7 +45,7 @@ namespace Apple_24_Zones.Forms
                 else
                     openFileDialog.InitialDirectory = documentsPath;
 
-                openFileDialog.Filter = "Archivos de texto (*.txt)|*.txt";
+                openFileDialog.Filter = "Text Files|*.txt";
                 openFileDialog.FilterIndex = 1;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -126,7 +126,7 @@ namespace Apple_24_Zones.Forms
                     saveFileDialog.InitialDirectory = defaultFolderPath;
                     saveFileDialog.FileName = Path.GetFileNameWithoutExtension(rutaArchivo) + " FILTERED FROM " + fechaInicial.ToString("MM-dd-yyyy HH-mm") + " TO " + fechaFinal.ToString("MM-dd-yyyy HH-mm");
                     saveFileDialog.DefaultExt = ".txt";
-                    saveFileDialog.Filter = "Archivos de texto|*.txt";
+                    saveFileDialog.Filter = "Text Files|*.txt";
 
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
